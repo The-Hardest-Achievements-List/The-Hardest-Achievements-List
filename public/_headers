@@ -1,0 +1,6 @@
+﻿# Force correct MIME types for JavaScript modules
+/*.js
+  Content-Type: application/javascript
+
+/*.mjs
+  Content-Type: application/javascript

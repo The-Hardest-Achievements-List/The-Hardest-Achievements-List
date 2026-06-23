@@ -1,0 +1,105 @@
+.grouped-achievement {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.grouped-achievement__main {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.grouped-achievement__main .card {
+  flex: 1;
+}
+
+.grouped-achievement__toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: oklch(18% 0.008 260 / 0.85);
+  color: var(--ink);
+  border: 2px solid var(--line-2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.grouped-achievement__toggle:hover {
+  background: oklch(22% 0.010 260 / 0.95);
+  border-color: var(--acc);
+  color: var(--acc);
+  transform: scale(1.05);
+}
+
+.grouped-achievement__toggle-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.grouped-achievement__toggle:hover .grouped-achievement__toggle-icon {
+  transform: scale(1.2);
+}
+
+.grouped-achievement__duplicates {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: oklch(18% 0.008 260 / 0.5);
+  border-left: 4px solid var(--acc-soft);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+.grouped-achievement__duplicate-item {
+  background: oklch(15% 0.005 260 / 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background 0.2s ease;
+  border: 1px solid var(--line);
+}
+
+.grouped-achievement__duplicate-item:hover {
+  background: oklch(22% 0.010 260 / 0.6);
+  border-color: var(--line-2);
+}
+
+.grouped-achievement__duplicate-item .card {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .grouped-achievement__toggle {
+    bottom: 8px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .grouped-achievement__duplicates {
+    padding: 8px;
+    gap: 6px;
+  }
+}
