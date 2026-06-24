@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import LevelCard from "./LevelCard";
 import "./GroupedLevelCard.css";
 
-export default function GroupedLevelCard({
+function GroupedLevelCard({
   achievement: mainAchievement,
   duplicates,
   index,
@@ -12,6 +12,11 @@ export default function GroupedLevelCard({
   layoutMode,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggleExpanded = useCallback((e) => {
+    e.stopPropagation();
+    setIsExpanded((prev) => !prev);
+  }, []);
 
   return (
     <div className="grouped-achievement">
@@ -27,10 +32,7 @@ export default function GroupedLevelCard({
         {duplicates && duplicates.length > 0 && (
           <button
             className="grouped-achievement__toggle"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsExpanded(!isExpanded);
-            }}
+            onClick={handleToggleExpanded}
             title={
               isExpanded
                 ? "Hide duplicates"
@@ -69,3 +71,5 @@ export default function GroupedLevelCard({
     </div>
   );
 }
+
+export default React.memo(GroupedLevelCard);
