@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import LevelCard from "./LevelCard";
 import GroupedLevelCard from "./GroupedLevelCard";
 import { groupAchievementsByDuplicates } from "../utils/groupDuplicates";
@@ -129,7 +129,7 @@ export default function LevelList({
                     <input
                       id="card-scale-y"
                       type="range"
-                      min="0.5"
+                      min="0.65"
                       max="1.25"
                       step="0.05"
                       value={cardScale}
