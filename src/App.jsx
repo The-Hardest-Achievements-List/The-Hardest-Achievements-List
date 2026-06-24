@@ -166,6 +166,17 @@ export default function App() {
   }, [cardWidth]);
 
   const rawData = NO_LIST.has(active) ? [] : DATA_MAP[mode][active] || [];
+  const rawDataWithListRank = useMemo(() => {
+    let rank = 0;
+    return rawData.map((achievement) => {
+      if (getDuplicateParentId(achievement)) {
+        return achievement;
+      }
+      rank += 1;
+      return { ...achievement, listRank: rank };
+    });
+  }, [rawData]);
+
   const allTags = (() => {
     const tags = new Set();
 
@@ -223,7 +234,7 @@ export default function App() {
   }, [active, mode]);
 
   const filteredData = useMemo(() => {
-    let data = [...rawData];
+    let data = [...rawDataWithListRank];
 
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -262,8 +273,8 @@ export default function App() {
     data.sort((a, b) => {
       let va, vb;
       if (sort === "rank") {
-        const ra = a.rank;
-        const rb = b.rank;
+        const ra = a.rank ?? a.listRank;
+        const rb = b.rank ?? b.listRank;
         const aIsRanked = ra != null;
         const bIsRanked = rb != null;
         if (!aIsRanked && !bIsRanked) return 0;
