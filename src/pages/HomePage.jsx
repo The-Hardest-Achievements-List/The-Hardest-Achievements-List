@@ -7,7 +7,7 @@ const EDITORS = [
   "Exiled_Shade — List Helper",
   "jak — List Helper",
   "Excryst — List Helper",
-  "SupremeSDB - Trial Moderator",
+  "SupremeSDB — Trial Moderator",
   "aytch008 — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
