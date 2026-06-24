@@ -1,13 +1,14 @@
 ﻿const EDITORS = [
   "Anceps — Owner",
+  "QwidziT - Developer"
   "stax — Elder List Moderator",
   "Arcadie — Elder List Moderator",
   "TYATYAPKA — List Moderator",
-  "rain — List Moderator",
-  "exiled_shade — List Helper",
+  "raine — List Moderator",
+  "Exiled_Shade — List Helper",
   "jak — List Helper",
-  "Qwidzit — List Helper",
-  "Excryst — Trial Moderator",
+  "Excryst - List Helper",
+  "SupremeSDB - Trial Moderator",
   "aytch008 — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
@@ -20,6 +21,7 @@ const ROLE_COLORS = {
   "List Helper": "#4fddff",
   "Trial Moderator": "#36e9b8",
   "Integrity Moderator": "#ffc963",
+  "Developer": "#6442cd",
 };
 
 const FILE_LABELS = {
