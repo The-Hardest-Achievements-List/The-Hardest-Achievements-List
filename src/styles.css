@@ -1,4 +1,4 @@
-﻿*,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -883,7 +883,7 @@ body {
 }
 
 .list--card {
-    --card-text-scale: calc((var(--card-height, 1) + var(--card-width, 1)) / 2);
+    --card-text-scale: calc(min(var(--card-height, 1), var(--card-width, 1)));
 }
 
 .list--list .card {
@@ -1033,8 +1033,8 @@ body {
 .card__rank-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 5px;
+    gap: calc(8px * var(--card-text-scale, 1));
+    margin-bottom: calc(5px * var(--card-text-scale, 1));
 }
 
 .card__rank-badge {
@@ -1160,18 +1160,18 @@ body {
 
 .card__tag {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: calc(10px * var(--card-text-scale, 1));
     letter-spacing: 0.06em;
     font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
+    padding: calc(3px * var(--card-text-scale, 1)) calc(8px * var(--card-text-scale, 1));
+    border-radius: calc(4px * var(--card-text-scale, 1));
     text-transform: uppercase;
     position: relative;
     color: var(--acc);
     background: var(--acc-soft);
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: calc(0.35rem * var(--card-text-scale, 1));
 }
 
 .card__thumb {
