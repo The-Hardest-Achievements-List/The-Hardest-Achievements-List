@@ -1,11 +1,14 @@
-﻿import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Header from "./components/Header";
 import LevelList from "./components/LevelList";
 import LevelModal from "./components/LevelModal";
 import HomePage from "./pages/HomePage";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import ModLeaderboardPage from "./pages/ModLeaderboardPage";
-import { getDuplicateParentId } from "./utils/groupDuplicates";
+import {
+  getDuplicateParentId,
+  getAchievementKey,
+} from "./utils/groupDuplicates";
 
 import achievementsData from "../data/achievements.json";
 import pendingData from "../data/pending.json";
@@ -109,6 +112,9 @@ export default function App() {
   const [activeTags, setActiveTags] = useState(new Map());
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [layoutMode, setLayoutMode] = useState("CARD");
+  const [cardScale, setCardScale] = useState(0.95);
+  const [cardWidth, setCardWidth] = useState(1);
 
   function navigate(newMode, newActive) {
     if (newActive === "HOME") {
@@ -159,6 +165,19 @@ export default function App() {
     return sourceTags.filter((tag) => tags.has(tag));
   })();
 
+  const getParentKey = (achievement) => {
+    const duplicateParent = getDuplicateParentId(achievement);
+    return duplicateParent
+      ? getAchievementKey({ name: duplicateParent })
+      : getAchievementKey(achievement);
+  };
+
+  const itemMatchesSearch = (achievement, q) =>
+    achievement.name?.toLowerCase().includes(q) ||
+    achievement.player?.toLowerCase().includes(q) ||
+    String(achievement.levelID ?? "").includes(q) ||
+    String(achievement.rank ?? "").includes(q);
+
   const toggleTag = (t) => {
     const next = new Map(activeTags);
     const current = next.get(t);
@@ -188,12 +207,16 @@ export default function App() {
 
     if (search.trim()) {
       const q = search.toLowerCase();
-      data = data.filter(
-        (a) =>
-          a.name?.toLowerCase().includes(q) ||
-          a.player?.toLowerCase().includes(q) ||
-          String(a.levelID ?? "").includes(q) ||
-          String(a.rank ?? "").includes(q),
+      const includedParentKeys = new Set();
+
+      rawData.forEach((achievement) => {
+        if (itemMatchesSearch(achievement, q)) {
+          includedParentKeys.add(getParentKey(achievement));
+        }
+      });
+
+      data = data.filter((achievement) =>
+        includedParentKeys.has(getParentKey(achievement)),
       );
     }
 
@@ -288,6 +311,12 @@ export default function App() {
         toggleTag={toggleTag}
         allTags={allTags}
         totalCount={ALL_LISTS_COUNT}
+        layoutMode={layoutMode}
+        setLayoutMode={setLayoutMode}
+        cardScale={cardScale}
+        setCardScale={setCardScale}
+        cardWidth={cardWidth}
+        setCardWidth={setCardWidth}
       />
 
       {active === "HOME" ? (
@@ -314,10 +343,23 @@ export default function App() {
           data={filteredData}
           totalCount={rawData.filter((a) => !getDuplicateParentId(a)).length}
           activeTags={activeTags}
+          allTags={allTags}
           toggleTag={toggleTag}
           isTimeline={active === "TIMELINE"}
           hideRank={active === "PENDING"}
           onCardClick={setSelectedLevel}
+          layoutMode={layoutMode}
+          setLayoutMode={setLayoutMode}
+          cardScale={cardScale}
+          setCardScale={setCardScale}
+          cardWidth={cardWidth}
+          setCardWidth={setCardWidth}
+          sort={sort}
+          setSort={setSort}
+          sortDir={sortDir}
+          setSortDir={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+          mode={mode}
+          setMode={(m) => navigate(m, active)}
         />
       )}
 
