@@ -81,6 +81,7 @@ export default function LevelList({
   mode,
   setMode,
 }) {
+  const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const { mainAchievements } = groupAchievementsByDuplicates(data);
   const includeTags = [];
   const excludeTags = [];
@@ -92,7 +93,7 @@ export default function LevelList({
   return (
     <>
       <main
-        className={`list list--${layoutMode.toLowerCase()}`}
+        className={`list list--${layoutMode.toLowerCase()}${sidebarCollapsed ? " is-sidebar-collapsed" : ""}`}
         style={
           layoutMode === "CARD"
             ? { "--card-height": cardScale, "--card-width": cardWidth }
@@ -100,7 +101,9 @@ export default function LevelList({
         }
       >
         {layoutMode === "CARD" && (
-          <aside className="list__sidebar">
+          <aside
+            className={`list__sidebar${sidebarCollapsed ? " is-collapsed" : ""}`}
+          >
             <div className="hd__mode-toggle">
               <button
                 className={mode === "classic" ? "is-active" : ""}
@@ -197,6 +200,15 @@ export default function LevelList({
                 })}
               </div>
             </div>
+            <button
+              className="sidebar__collapse-btn"
+              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+              title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+            >
+              <i
+                className={`fas ${sidebarCollapsed ? "fa-chevron-left" : "fa-chevron-right"}`}
+              />
+            </button>
           </aside>
         )}
         {data.length === 0 ? (
