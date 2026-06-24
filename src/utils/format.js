@@ -1,4 +1,21 @@
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+const memoCache = new Map()
+
+function memoize(fn, maxSize = 100) {
+    return (...args) => {
+        const key = JSON.stringify(args)
+        if (memoCache.has(key)) {
+            return memoCache.get(key)
+        }
+        const result = fn(...args)
+        if (memoCache.size >= maxSize) {
+            const firstKey = memoCache.keys().next().value
+            memoCache.delete(firstKey)
+        }
+        memoCache.set(key, result)
+        return result
+    }
+}
 
 export function formatDate(iso) {
     if (!iso) return '—'
@@ -46,7 +63,7 @@ export function getYouTubeThumbnailUrls(videoId) {
     ]
 }
 
-export function getThumbnailUrlSequence(thumbnail, showcaseVideo, playerVideo, levelID) {
+const memoizedGetThumbnailUrlSequence = memoize(function getThumbnailUrlSequenceImpl(thumbnail, showcaseVideo, playerVideo, levelID) {
     const urls = []
     if (thumbnail) return [thumbnail]
     if (levelID) {
@@ -63,4 +80,8 @@ export function getThumbnailUrlSequence(thumbnail, showcaseVideo, playerVideo, l
     }
 
     return urls
+}, 500)
+
+export function getThumbnailUrlSequence(thumbnail, showcaseVideo, playerVideo, levelID) {
+    return memoizedGetThumbnailUrlSequence(thumbnail, showcaseVideo, playerVideo, levelID)
 }
