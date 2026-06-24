@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import {
   formatDate,
   formatLength,
@@ -16,7 +16,7 @@ export default function LevelCard({
   layoutMode = "CARD",
 }) {
   const shouldShowRank = !hideRank && !isTimeline && index !== -1;
-  const podiumRank = shouldShowRank ? (a.rank ?? index + 1) : null;
+  const podiumRank = shouldShowRank ? (a.rank ?? a.listRank ?? index + 1) : null;
   const isPodium = !isTimeline && index < 3 && !hideRank;
   const isDuplicate = index === -1;
   const thumbnailUrlSequence = getThumbnailUrlSequence(
