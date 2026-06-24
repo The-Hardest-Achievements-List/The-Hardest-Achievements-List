@@ -24,7 +24,7 @@
   border: calc(2px * var(--card-text-scale, 1)) solid var(--line-2);
   border-radius: calc(6px * var(--card-text-scale, 1));
   padding: calc(8px * var(--card-text-scale, 1)) calc(12px * var(--card-text-scale, 1));
-  font-size: 0.9em;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
