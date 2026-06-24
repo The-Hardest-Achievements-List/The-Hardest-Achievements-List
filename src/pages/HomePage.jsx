@@ -1,14 +1,13 @@
-const EDITORS = [
+﻿const EDITORS = [
   "Anceps — Owner",
-  "QwidziT — Developer",
+  "Qwidzit — Developer",
   "Arcadie — Elder List Moderator",
   "TYATYAPKA — List Moderator",
-  "raine — List Moderator",
-  "Exiled_Shade — List Helper",
+  "rain — List Moderator",
+  "exiled_shade — List Helper",
   "jak — List Helper",
-  "Excryst — List Helper",
-  "SupremeSDB — Trial Moderator",
-  "aytch0008 — Trial Moderator",
+  "Excryst — Trial Moderator",
+  "aytch008 — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
 ];

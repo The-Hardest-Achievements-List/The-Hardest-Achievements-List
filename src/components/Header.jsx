@@ -211,186 +211,201 @@ export default function Header({
   activeTags,
   toggleTag,
   allTags,
+  totalCount,
+  layoutMode,
+  setLayoutMode,
+  cardScale,
+  setCardScale,
+  cardWidth,
+  setCardWidth,
 }) {
   if (active === "HOME") return null;
 
   const [showFilters, setShowFilters] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
 
   return (
     <>
-      <header className="hd">
-        <div className="hd__row">
-          {active !== "HOME" && (
-            <div className="hd__brand">
-              <div
-                className="hd__logo hd__logo--home"
-                onClick={() => setActive("HOME")}
-              >
-                <img src="/THAL.png" alt="" className="hd__logo-square" />
-              </div>
-              <div className="hd__brand-meta">
-                <div className="hd__brand-title">
-                  The Hardest Achievements List
+      <header className={`hd${showHeader ? "" : " hd--compact"}`}>
+        <div className="hd__layout">
+          <div className="hd__row">
+            {active !== "HOME" && (
+              <div className="hd__brand">
+                <div
+                  className="hd__logo hd__logo--home"
+                  onClick={() => setActive("HOME")}
+                >
+                  <img src="/THAL.png" alt="" className="hd__logo-square" />
+                </div>
+                <div className="hd__brand-meta">
+                  <div className="hd__brand-title">
+                    The Hardest Achievements List
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
-          <div className="hd__center">
-            <a
-              href="https://discord.gg/zp4mfdsguA"
-              className="hd__discord"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Discord"
-            >
-              <DiscordIcon />
-            </a>
-            <nav className="hd__nav">
-              {TABS.map((t) => (
-                <button
-                  key={t}
-                  className={`hd__nav-btn${active === t ? " is-active" : ""}`}
-                  onClick={() => setActive(t)}
-                >
-                  <i
-                    className={`fas ${TAB_ICONS[t]}`}
-                    style={{ marginRight: "0.5rem" }}
-                  />
-                  {t}
-                </button>
-              ))}
-            </nav>
-          </div>
+            {showHeader && !isListless(active) && (
+              <>
+                <div className="hd__controls-wrapper">
+                  <div className="hd__search">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                      placeholder="Search by name, player, level ID"
+                    />
+                  </div>
 
-          <button
-            className="hd__nav-mobile-btn"
-            onClick={() => setShowNav(true)}
-          >
-            <span>{active}</span>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path
-                d="M2.5 4.5L6 8L9.5 4.5"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-        </div>
+                  <div className="hd__right-group">
+                    <a
+                      href="https://discord.gg/zp4mfdsguA"
+                      className="hd__discord"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Discord"
+                    >
+                      <DiscordIcon />
+                    </a>
 
-        {!isListless(active) && (
-          <div className="hd__controls">
-            <div className="hd__search">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search by name, player, level ID"
-              />
-            </div>
+                    <div className="hd__sort-group">
+                      <span className="hd__sort-lbl">SORT</span>
+                      <SortSelect sort={sort} setSort={setSort} />
+                      <button className="hd__sort-dir" onClick={setSortDir}>
+                        <i
+                          className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
+                          style={{ marginRight: "0.5rem" }}
+                        />
+                      </button>
+                    </div>
 
-            <div className="hd__sort-group">
-              <span className="hd__sort-lbl">SORT</span>
-              <SortSelect sort={sort} setSort={setSort} />
-              <button className="hd__sort-dir" onClick={setSortDir}>
-                <i
-                  className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
-                  style={{ marginRight: "0.5rem" }}
-                />
-              </button>
-            </div>
+                    <div className="hd__layout-group">
+                      {layoutMode === "CARD" && (
+                        <>
+                          <div className="hd__scale-control">
+                            <label htmlFor="card-scale-y">Scale Y</label>
+                            <input
+                              id="card-scale-y"
+                              type="range"
+                              min="0.5"
+                              max="1.25"
+                              step="0.05"
+                              value={cardScale}
+                              onChange={(e) =>
+                                setCardScale(Number(e.target.value))
+                              }
+                            />
+                          </div>
+                          <div className="hd__scale-control">
+                            <label htmlFor="card-scale-x">Scale X</label>
+                            <input
+                              id="card-scale-x"
+                              type="range"
+                              min="0.5"
+                              max="1.0"
+                              step="0.05"
+                              value={cardWidth}
+                              onChange={(e) =>
+                                setCardWidth(Number(e.target.value))
+                              }
+                            />
+                          </div>
+                        </>
+                      )}
+                    </div>
 
-            <div className="hd__mode-toggle">
-              <button
-                className={mode === "classic" ? "is-active" : ""}
-                onClick={() => setMode("classic")}
-              >
-                <i className="fas fa-cube" style={{ marginRight: "0.5rem" }} />{" "}
-                Classic
-              </button>
-              <button
-                className={mode === "platformer" ? "is-active" : ""}
-                onClick={() => setMode("platformer")}
-              >
-                <i
-                  className="fas fa-running"
-                  style={{ marginRight: "0.5rem" }}
-                />{" "}
-                Platformer
-              </button>
-            </div>
+                    <div className="hd__mode-toggle">
+                      <button
+                        className={mode === "classic" ? "is-active" : ""}
+                        onClick={() => setMode("classic")}
+                      >
+                        <i
+                          className="fas fa-cube"
+                          style={{ marginRight: "0.5rem" }}
+                        />{" "}
+                        Classic
+                      </button>
+                      <button
+                        className={mode === "platformer" ? "is-active" : ""}
+                        onClick={() => setMode("platformer")}
+                      >
+                        <i
+                          className="fas fa-running"
+                          style={{ marginRight: "0.5rem" }}
+                        />{" "}
+                        Platformer
+                      </button>
+                    </div>
+
+                    <button
+                      className="hd__filter-btn"
+                      onClick={() => setShowFilters(true)}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                      >
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                        <line x1="11" y1="18" x2="13" y2="18" />
+                      </svg>
+                      {activeTags.size > 0 && (
+                        <span className="hd__filter-badge">
+                          {activeTags.size}
+                        </span>
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                <nav className="hd__nav-right">
+                  {TABS.map((t) => (
+                    <button
+                      key={t}
+                      className={`hd__nav-btn${active === t ? " is-active" : ""}`}
+                      onClick={() => setActive(t)}
+                    >
+                      <i className={`fas ${TAB_ICONS[t]}`} />
+                      <span className="hd__nav-label">{t}</span>
+                    </button>
+                  ))}
+                </nav>
+              </>
+            )}
 
             <button
-              className="hd__filter-btn"
-              onClick={() => setShowFilters(true)}
+              className="hd__nav-mobile-btn"
+              onClick={() => setShowNav(true)}
             >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-              >
-                <line x1="4" y1="6" x2="20" y2="6" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-                <line x1="11" y1="18" x2="13" y2="18" />
+              <i className={`fas ${TAB_ICONS[active]}`} />
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path
+                  d="M2.5 4.5L6 8L9.5 4.5"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                />
               </svg>
-              {activeTags.size > 0 && (
-                <span className="hd__filter-badge">{activeTags.size}</span>
-              )}
             </button>
           </div>
-        )}
 
-        {!isListless(active) && (
-          <div className="hd__filters">
-            <span className="hd__fgroup-lbl">FILTER</span>
-            <div className="hd__chips">
-              {allTags.map((t) => {
-                const state = activeTags.get(t);
-                const def = TAG_DEFINITIONS[t] || {};
-                return (
-                  <button
-                    key={t}
-                    className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""} ${def.className || ""}`}
-                    onClick={() => toggleTag(t)}
-                  >
-                    <Tooltip text={def.tooltip}>
-                      {def.icon ? (
-                        <img
-                          src={def.icon}
-                          alt=""
-                          style={{ marginRight: "0.35rem", height: 12 }}
-                        />
-                      ) : (
-                        TAG_ICONS[t] && (
-                          <i
-                            className={`fas ${TAG_ICONS[t]}`}
-                            style={{ marginRight: "0.35rem" }}
-                          />
-                        )
-                      )}
-                      {def.text || t}
-                    </Tooltip>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
+          {}
+        </div>
       </header>
 
       {}
@@ -398,6 +413,28 @@ export default function Header({
         <div className="flt-overlay" onClick={() => setShowNav(false)}>
           <div className="flt-drawer" onClick={(e) => e.stopPropagation()}>
             <div className="flt-drawer__handle" />
+
+            <div className="flt-section">
+              <span className="flt-lbl">SEARCH</span>
+              <div className="hd__search hd__search--mobile">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
+                </svg>
+                <input
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Search by name, player, level ID"
+                />
+              </div>
+            </div>
 
             <div className="flt-section">
               <span className="flt-lbl">MODE</span>
@@ -426,20 +463,56 @@ export default function Header({
             </div>
 
             <div className="flt-section">
-              <span className="flt-lbl">PAGE</span>
-              <div className="flt-tabs">
-                {TABS.map((t) => (
-                  <button
-                    key={t}
-                    className={`flt-tab${active === t ? " is-active" : ""}`}
-                    onClick={() => {
-                      setActive(t);
-                      setShowNav(false);
-                    }}
-                  >
-                    {t}
-                  </button>
-                ))}
+              <span className="flt-lbl">SORT</span>
+              <div className="hd__sort-group hd__sort-group--mobile">
+                <SortSelect sort={sort} setSort={setSort} />
+                <button className="hd__sort-dir" onClick={setSortDir}>
+                  <i
+                    className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
+                    style={{ marginRight: "0.5rem" }}
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div className="flt-section">
+              <span className="flt-lbl">FILTER</span>
+              <div className="hd__chips hd__chips--mobile">
+                {allTags.map((t) => {
+                  const state = activeTags.get(t);
+                  const def = TAG_DEFINITIONS[t] || {};
+                  return (
+                    <button
+                      key={t}
+                      className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""} ${def.className || ""}`}
+                      onClick={() => toggleTag(t)}
+                      title={
+                        def.tooltip ||
+                        (state === "include"
+                          ? "Include only"
+                          : state === "exclude"
+                            ? "Exclude"
+                            : "Not filtering")
+                      }
+                    >
+                      {def.icon ? (
+                        <img
+                          src={def.icon}
+                          alt=""
+                          style={{ marginRight: "0.35rem", height: 12 }}
+                        />
+                      ) : (
+                        TAG_ICONS[t] && (
+                          <i
+                            className={`fas ${TAG_ICONS[t]}`}
+                            style={{ marginRight: "0.35rem" }}
+                          />
+                        )
+                      )}
+                      {def.text || t}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>

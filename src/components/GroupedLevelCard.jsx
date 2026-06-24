@@ -9,6 +9,7 @@ export default function GroupedLevelCard({
   isTimeline,
   hideRank,
   onClick,
+  layoutMode,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -21,6 +22,7 @@ export default function GroupedLevelCard({
           isTimeline={isTimeline}
           hideRank={hideRank}
           onClick={onClick}
+          layoutMode={layoutMode}
         />
         {duplicates && duplicates.length > 0 && (
           <button
@@ -58,6 +60,7 @@ export default function GroupedLevelCard({
                 isTimeline={isTimeline}
                 hideRank={hideRank}
                 onClick={onClick}
+                layoutMode={layoutMode}
               />
             </div>
           ))}

@@ -13,6 +13,7 @@ export default function LevelCard({
   isTimeline,
   hideRank,
   onClick,
+  layoutMode = "CARD",
 }) {
   const shouldShowRank = !hideRank && !isTimeline && index !== -1;
   const podiumRank = shouldShowRank ? (a.rank ?? index + 1) : null;
@@ -42,15 +43,16 @@ export default function LevelCard({
 
   return (
     <article
-      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}`}
+      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
       onClick={() => onClick(a)}
     >
       <div
         className="card__content"
         style={{
-          backgroundImage: currentThumbnailUrl
-            ? `url(${currentThumbnailUrl})`
-            : undefined,
+          backgroundImage:
+            layoutMode === "CARD" && currentThumbnailUrl
+              ? `url(${currentThumbnailUrl})`
+              : undefined,
         }}
       >
         <div className="card__detail">
@@ -127,21 +129,23 @@ export default function LevelCard({
         </div>
       </div>
 
-      <div className="card__thumb">
-        {currentThumbnailUrl ? (
-          <img
-            src={currentThumbnailUrl}
-            alt=""
-            loading="lazy"
-            onError={handleImageError}
-            onLoad={handleImageLoad}
-          />
-        ) : (
-          <div className="card__thumb-placeholder" />
-        )}
-        <div className="card__thumb-fade" />
-        {a.notes && <div className="card__notes-overlay">{a.notes}</div>}
-      </div>
+      {layoutMode === "CARD" && (
+        <div className="card__thumb">
+          {currentThumbnailUrl ? (
+            <img
+              src={currentThumbnailUrl}
+              alt=""
+              loading="lazy"
+              onError={handleImageError}
+              onLoad={handleImageLoad}
+            />
+          ) : (
+            <div className="card__thumb-placeholder" />
+          )}
+          <div className="card__thumb-fade" />
+          {a.notes && <div className="card__notes-overlay">{a.notes}</div>}
+        </div>
+      )}
     </article>
   );
 }

@@ -11,24 +11,25 @@
 }
 
 .grouped-achievement__main .card {
-  flex: 1;
+  flex: 0 0 auto;
+  width: calc(100% * var(--card-width, 1));
 }
 
 .grouped-achievement__toggle {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: calc(10px * var(--card-text-scale, 1));
+  right: calc(10px * var(--card-text-scale, 1));
   background: oklch(18% 0.008 260 / 0.85);
   color: var(--ink);
-  border: 2px solid var(--line-2);
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 14px;
+  border: calc(2px * var(--card-text-scale, 1)) solid var(--line-2);
+  border-radius: calc(6px * var(--card-text-scale, 1));
+  padding: calc(8px * var(--card-text-scale, 1)) calc(12px * var(--card-text-scale, 1));
+  font-size: 0.9em;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: calc(6px * var(--card-text-scale, 1));
   transition: all 0.2s ease;
   z-index: 10;
   backdrop-filter: blur(10px);
@@ -53,10 +54,10 @@
 .grouped-achievement__duplicates {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px;
+  gap: calc(8px * var(--card-text-scale, 1));
+  padding: calc(12px * var(--card-text-scale, 1));
   background: oklch(18% 0.008 260 / 0.5);
-  border-left: 4px solid var(--acc-soft);
+  border-left: calc(4px * var(--card-text-scale, 1)) solid var(--acc-soft);
   animation: slideDown 0.2s ease;
 }
 
@@ -75,10 +76,10 @@
 
 .grouped-achievement__duplicate-item {
   background: oklch(15% 0.005 260 / 0.5);
-  border-radius: 4px;
+  border-radius: calc(4px * var(--card-text-scale, 1));
   overflow: hidden;
   transition: background 0.2s ease;
-  border: 1px solid var(--line);
+  border: calc(1px * var(--card-text-scale, 1)) solid var(--line);
 }
 
 .grouped-achievement__duplicate-item:hover {
