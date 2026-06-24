@@ -8,7 +8,7 @@ const EDITORS = [
   "jak — List Helper",
   "Excryst — List Helper",
   "SupremeSDB — Trial Moderator",
-  "aytch008 — Trial Moderator",
+  "aytch0008 — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
 ];
