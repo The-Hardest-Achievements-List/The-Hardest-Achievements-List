@@ -1,4 +1,4 @@
-﻿import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Header from "./components/Header";
 import LevelList from "./components/LevelList";
 import LevelModal from "./components/LevelModal";
@@ -113,8 +113,16 @@ export default function App() {
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [layoutMode, setLayoutMode] = useState("CARD");
-  const [cardScale, setCardScale] = useState(0.95);
-  const [cardWidth, setCardWidth] = useState(1);
+  const [cardScale, setCardScale] = useState(() => {
+    if (typeof window === "undefined") return 0.95;
+    const stored = window.localStorage.getItem("hd-card-scale");
+    return stored != null ? Number(stored) : 0.95;
+  });
+  const [cardWidth, setCardWidth] = useState(() => {
+    if (typeof window === "undefined") return 1;
+    const stored = window.localStorage.getItem("hd-card-width");
+    return stored != null ? Number(stored) : 1;
+  });
 
   function navigate(newMode, newActive) {
     if (newActive === "HOME") {
@@ -144,6 +152,18 @@ export default function App() {
     window.addEventListener("popstate", handler);
     return () => window.removeEventListener("popstate", handler);
   }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("hd-card-scale", String(cardScale));
+    } catch (error) {}
+  }, [cardScale]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("hd-card-width", String(cardWidth));
+    } catch (error) {}
+  }, [cardWidth]);
 
   const rawData = NO_LIST.has(active) ? [] : DATA_MAP[mode][active] || [];
   const allTags = (() => {
