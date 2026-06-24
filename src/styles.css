@@ -652,6 +652,11 @@ body {
 
 .list--card {
     padding-right: 460px;
+    transition: padding-right 0.3s ease;
+}
+
+.list.is-sidebar-collapsed.list--card {
+    padding-right: 100px;
 }
 
 .list__sidebar {
@@ -667,6 +672,39 @@ body {
     gap: 14px;
     overflow: hidden;
     z-index: 50;
+    transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.list__sidebar.is-collapsed {
+    width: 60px;
+    padding: 12px 8px;
+}
+
+.list__sidebar.is-collapsed> :not(.sidebar__collapse-btn) {
+    display: none;
+}
+
+.sidebar__collapse-btn {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    color: var(--ink-2);
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+    align-self: center;
+    margin-top: auto;
+}
+
+.sidebar__collapse-btn:hover {
+    background: var(--bg-3);
+    color: var(--ink);
 }
 
 .list__sidebar .hd__mode-toggle {
@@ -970,6 +1008,8 @@ body {
     background: var(--bg-2);
     border: 1px solid var(--line);
     overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 180px;
     border-radius: 12px;
     cursor: pointer;
     transition: border-color 0.2s;
@@ -1179,6 +1219,7 @@ body {
     position: relative;
     background: var(--bg-3);
     overflow: hidden;
+    contain: layout style paint;
 }
 
 .card__thumb img {
@@ -1187,6 +1228,8 @@ body {
     object-fit: cover;
     filter: saturate(1.1);
     transition: transform 0.5s;
+    will-change: transform;
+    display: block;
 }
 
 .card:hover .card__thumb img {
@@ -1849,6 +1892,10 @@ body {
     .flt-drawer .hd__mode-toggle {
         display: flex;
         width: fit-content;
+    }
+
+    .flt-drawer .hd__sort-group {
+        display: flex;
     }
 
     .hd__filter-btn {
