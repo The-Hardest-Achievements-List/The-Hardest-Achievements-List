@@ -5,7 +5,7 @@
   "Arcadie — Elder List Moderator",
   "TYATYAPKA — List Moderator",
   "raine — List Moderator",
-  "Exiled_Shade — List Helper",
+  "exiled_shade — List Helper",
   "jak — List Helper",
   "Excryst - List Helper",
   "SupremeSDB - Trial Moderator",
