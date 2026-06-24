@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import {
   formatDate,
   formatLength,
@@ -7,7 +7,7 @@ import {
 import { TAG_ICONS, TAG_DEFINITIONS } from "./Header";
 import Tooltip from "./Tooltip";
 
-export default function LevelCard({
+function LevelCard({
   achievement: a,
   index,
   isTimeline,
@@ -16,35 +16,44 @@ export default function LevelCard({
   layoutMode = "CARD",
 }) {
   const shouldShowRank = !hideRank && !isTimeline && index !== -1;
-  const podiumRank = shouldShowRank ? (a.rank ?? a.listRank ?? index + 1) : null;
+  const podiumRank = shouldShowRank
+    ? (a.rank ?? a.listRank ?? index + 1)
+    : null;
   const isPodium = !isTimeline && index < 3 && !hideRank;
   const isDuplicate = index === -1;
-  const thumbnailUrlSequence = getThumbnailUrlSequence(
-    a.thumbnail,
-    a.showcaseVideo,
-    a.video,
-    a.levelID,
-  );
-  const [urlIndex, setUrlIndex] = useState(0);
 
+  const thumbnailUrlSequence = useMemo(
+    () =>
+      getThumbnailUrlSequence(a.thumbnail, a.showcaseVideo, a.video, a.levelID),
+    [a.thumbnail, a.showcaseVideo, a.video, a.levelID],
+  );
+
+  const [urlIndex, setUrlIndex] = useState(0);
   const currentThumbnailUrl = thumbnailUrlSequence[urlIndex] || null;
 
-  const handleImageError = () => {
-    if (urlIndex < thumbnailUrlSequence.length - 1) {
-      setUrlIndex(urlIndex + 1);
-    }
-  };
+  const handleImageError = useCallback(() => {
+    setUrlIndex((prev) =>
+      prev < thumbnailUrlSequence.length - 1 ? prev + 1 : prev,
+    );
+  }, [thumbnailUrlSequence.length]);
 
-  const handleImageLoad = (e) => {
-    if (e.target.naturalWidth === 0 || e.target.naturalHeight === 0) {
-      handleImageError();
-    }
-  };
+  const handleImageLoad = useCallback(
+    (e) => {
+      if (e.target.naturalWidth === 0 || e.target.naturalHeight === 0) {
+        handleImageError();
+      }
+    },
+    [handleImageError],
+  );
+
+  const handleCardClick = useCallback(() => {
+    onClick(a);
+  }, [onClick, a]);
 
   return (
     <article
       className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
-      onClick={() => onClick(a)}
+      onClick={handleCardClick}
     >
       <div
         className="card__content"
@@ -136,8 +145,11 @@ export default function LevelCard({
               src={currentThumbnailUrl}
               alt=""
               loading="lazy"
+              decoding="async"
               onError={handleImageError}
               onLoad={handleImageLoad}
+              width="100%"
+              height="100%"
             />
           ) : (
             <div className="card__thumb-placeholder" />
@@ -149,3 +161,5 @@ export default function LevelCard({
     </article>
   );
 }
+
+export default React.memo(LevelCard);
