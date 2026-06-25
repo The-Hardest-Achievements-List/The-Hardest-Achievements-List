@@ -82,7 +82,9 @@ export default function LevelList({
   setMode,
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
-  const { mainAchievements } = groupAchievementsByDuplicates(data);
+  const safeData = Array.isArray(data) ? data : [];
+  const { mainAchievements } = groupAchievementsByDuplicates(safeData);
+  const safeAllTags = Array.isArray(allTags) ? allTags : [];
   const includeTags = [];
   const excludeTags = [];
   activeTags.forEach((state, tag) => {
@@ -169,7 +171,7 @@ export default function LevelList({
             <div className="hd__filters list__filters">
               <span className="hd__fgroup-lbl">FILTER</span>
               <div className="hd__chips">
-                {allTags.map((t) => {
+                {safeAllTags.map((t) => {
                   const state = activeTags.get(t);
                   const def = TAG_DEFINITIONS[t] || {};
                   return (
@@ -211,7 +213,7 @@ export default function LevelList({
             </button>
           </aside>
         )}
-        {data.length === 0 ? (
+        {safeData.length === 0 ? (
           <div className="list__empty">No entries found.</div>
         ) : (
           mainAchievements.map((a, i) =>
