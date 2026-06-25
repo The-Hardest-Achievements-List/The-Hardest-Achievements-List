@@ -53,7 +53,7 @@ function GroupedLevelCard({
         <div className="grouped-achievement__duplicates">
           {duplicates.map((duplicate, i) => (
             <div
-              key={duplicate.id || i}
+              key={duplicate.id != null ? `${duplicate.id}-${i}` : `duplicate-${i}`}
               className="grouped-achievement__duplicate-item"
             >
               <LevelCard
