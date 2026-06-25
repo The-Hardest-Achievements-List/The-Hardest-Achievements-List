@@ -165,8 +165,9 @@ export default function App() {
     } catch (error) {}
   }, [cardWidth]);
 
-  const rawData = NO_LIST.has(active) ? [] : DATA_MAP[mode][active] || [];
+  const rawData = NO_LIST.has(active) ? [] : (Array.isArray(DATA_MAP[mode]?.[active]) ? DATA_MAP[mode][active] : []);
   const rawDataWithListRank = useMemo(() => {
+    if (!Array.isArray(rawData)) return [];
     let rank = 0;
     return rawData.map((achievement) => {
       if (getDuplicateParentId(achievement)) {
@@ -180,17 +181,19 @@ export default function App() {
   const allTags = (() => {
     const tags = new Set();
 
-    rawData.forEach((item) => {
-      const itemTags = Array.isArray(item.tags)
-        ? item.tags
-        : typeof item.tags === "string" && item.tags
-          ? [item.tags]
-          : [];
+    if (Array.isArray(rawData)) {
+      rawData.forEach((item) => {
+        const itemTags = Array.isArray(item.tags)
+          ? item.tags
+          : typeof item.tags === "string" && item.tags
+            ? [item.tags]
+            : [];
 
-      itemTags.forEach((tag) => {
-        if (tag) tags.add(tag);
+        itemTags.forEach((tag) => {
+          if (tag) tags.add(tag);
+        });
       });
-    });
+    }
 
     const sourceTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
     return sourceTags.filter((tag) => tags.has(tag));
@@ -234,17 +237,20 @@ export default function App() {
   }, [active, mode]);
 
   const filteredData = useMemo(() => {
+    if (!Array.isArray(rawDataWithListRank)) return [];
     let data = [...rawDataWithListRank];
 
     if (search.trim()) {
       const q = search.toLowerCase();
       const includedParentKeys = new Set();
 
-      rawData.forEach((achievement) => {
-        if (itemMatchesSearch(achievement, q)) {
-          includedParentKeys.add(getParentKey(achievement));
-        }
-      });
+      if (Array.isArray(rawData)) {
+        rawData.forEach((achievement) => {
+          if (itemMatchesSearch(achievement, q)) {
+            includedParentKeys.add(getParentKey(achievement));
+          }
+        });
+      }
 
       data = data.filter((achievement) =>
         includedParentKeys.has(getParentKey(achievement)),
