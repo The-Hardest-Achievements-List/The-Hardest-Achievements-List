@@ -216,10 +216,11 @@ export default function LevelList({
         {safeData.length === 0 ? (
           <div className="list__empty">No entries found.</div>
         ) : (
-          mainAchievements.map((a, i) =>
-            a.hasDuplicates ? (
+          mainAchievements.map((a, i) => {
+            const listKey = a.id != null ? `${a.id}-${i}` : `achievement-${i}`;
+            return a.hasDuplicates ? (
               <GroupedLevelCard
-                key={a.id ?? i}
+                key={listKey}
                 achievement={a}
                 duplicates={a.duplicates}
                 index={i}
@@ -230,7 +231,7 @@ export default function LevelList({
               />
             ) : (
               <LevelCard
-                key={a.id ?? i}
+                key={listKey}
                 achievement={a}
                 index={i}
                 isTimeline={isTimeline}
@@ -238,8 +239,8 @@ export default function LevelList({
                 onClick={onCardClick}
                 layoutMode={layoutMode}
               />
-            ),
-          )
+            );
+          })
         )}
       </main>
     </>
