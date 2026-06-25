@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   formatDate,
   formatLength,
@@ -8,6 +8,11 @@ import {
 
 export default function LevelModal({ level: a, onClose, hideRank }) {
   const [copiedValue, setCopiedValue] = useState(null);
+  const tags = Array.isArray(a?.tags)
+    ? a.tags
+    : typeof a?.tags === "string"
+    ? a.tags.split(/\s*,\s*/).filter(Boolean)
+    : [];
   const thumbnailUrlSequence = getThumbnailUrlSequence(
     a.thumbnail,
     a.showcaseVideo,
@@ -72,7 +77,7 @@ export default function LevelModal({ level: a, onClose, hideRank }) {
               <span className="modal__rank">#{a.rank}</span>
             )}
             <div className="modal__tags">
-              {(a.tags ?? []).map((t) => (
+              {tags.map((t) => (
                 <span key={t} className="modal__tag" data-tag={t}>
                   {t}
                 </span>
