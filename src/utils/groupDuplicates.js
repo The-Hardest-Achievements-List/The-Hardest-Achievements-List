@@ -14,6 +14,10 @@ export function getAchievementKey(achievement) {
   return normalizeDuplicateKey(achievement?.name);
 }
 export function groupAchievementsByDuplicates(achievements) {
+  if (!Array.isArray(achievements)) {
+    return { mainAchievements: [] };
+  }
+
   const duplicatesByParent = new Map();
   achievements.forEach(achievement => {
     const parentRef = getDuplicateParentId(achievement);
