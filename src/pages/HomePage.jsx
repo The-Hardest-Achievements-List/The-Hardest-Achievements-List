@@ -7,7 +7,7 @@
   "Exiled_Shade — List Helper",
   "Excryst — List Helper",
   "aytch008 — Trial Moderator",
-   "SupremeSDB - Trial Moderator",
+   "SupremeSDB — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
 ];
