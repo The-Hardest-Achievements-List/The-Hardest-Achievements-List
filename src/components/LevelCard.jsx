@@ -22,6 +22,12 @@ function LevelCard({
   const isPodium = !isTimeline && index < 3 && !hideRank;
   const isDuplicate = index === -1;
 
+  const tags = React.useMemo(() => {
+    if (Array.isArray(a.tags)) return a.tags;
+    if (typeof a.tags === "string") return a.tags.split(/\s*,\s*/).filter(Boolean);
+    return [];
+  }, [a.tags]);
+
   const thumbnailUrlSequence = useMemo(
     () =>
       getThumbnailUrlSequence(a.thumbnail, a.showcaseVideo, a.video, a.levelID),
@@ -109,7 +115,7 @@ function LevelCard({
               </div>
             </div>
             <div className="card__tags">
-              {(a.tags ?? []).map((t) => {
+              {tags.map((t) => {
                 const def = TAG_DEFINITIONS[t] || {};
                 return (
                   <span key={t} className={`card__tag ${def.className || ""}`}>
