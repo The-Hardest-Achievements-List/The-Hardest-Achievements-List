@@ -4,7 +4,7 @@
     "player": "wPopoff",
     "levelID": 127323087,
     "date": "2026-06-21",
-    "length": 281,
+    "length": "281",
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/3CoEaH1CM7o",
@@ -24,7 +24,8 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/pBJ5oV-0lmc?t=11714",
     "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
-    "tags": "Level, Progress, 2P"
+    "tags": "Level, Progress, 2P",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708/high"
   },
   {
     "name": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
@@ -81,7 +82,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e5b71445564f793271f715f180d22e74426fb316/thumbnails/Sweeping%20Demon%202.png"
   },
   {
     "name": "Heliopolis 24%, (0%), 47% in a row",
@@ -95,7 +97,8 @@
     "tags": [
       "Level",
       "Consistency"
-    ]
+    ],
+    "id": "136530685"
   },
   {
     "name": "KOCMOC UNLEASHED 68%",
@@ -109,8 +112,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "levelID": null
+    ]
   },
   {
     "name": "Amethyst 59%, 54% in a row",
@@ -140,7 +142,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223/high"
   },
   {
     "name": "GRIEF 25-100%",
@@ -151,7 +154,8 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/fwAdUZ_TabE?t=1449",
     "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
-    "tags": "Level, Progress, 2P"
+    "tags": "Level, Progress, 2P",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708/high"
   },
   {
     "name": "Flamewall 73%, (0%), 100% in a row",
@@ -219,7 +223,7 @@
       "Level",
       "Progress"
     ],
-    "id": 136530685
+    "id": "136530685"
   },
   {
     "name": "Amethyst",
@@ -231,7 +235,6 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/4lfkzz1VCbA",
     "showcaseVideo": "https://youtu.be/2Z7NGo83ZnU",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/amethyst-trick1.avif",
     "tags": [
       "Level",
       "Verified",
@@ -242,7 +245,7 @@
   {
     "name": "Eternal Silence 31%, (1%), 65% in a row",
     "player": "noname228gg",
-    "levelID": 139730171,
+    "levelID": "83476262",
     "date": "2026-05-27",
     "length": 87,
     "version": 2.2,
@@ -253,7 +256,7 @@
       "Level",
       "Consistency"
     ],
-    "id": 139730171
+    "id": "83476262"
   },
   {
     "name": "Vehemence 24-79%",
@@ -267,7 +270,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223/high"
   },
   {
     "name": "Vehemence 41%",
@@ -281,7 +285,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223/high"
   },
   {
     "name": "KOCMOC UNLEASHED (Nerfed) 57%, 48%, 69%, 77% in a row",
@@ -294,7 +299,8 @@
     "tags": [
       "Level",
       "Consistency"
-    ]
+    ],
+    "thumbnail": "https://cdn.discordapp.com/attachments/1322007707900973088/1519199819178967120/image.png?ex=6a3f5396&is=6a3e0216&hm=d3664b0d9481a4a51435d5262adb97256b31b16124e4658def9a17e9accd86c8&"
   },
   {
     "name": "Sakupen Circles 69%, 67%, 69%, 80%, (52%), 81%, 69% in a row",
@@ -339,7 +345,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://cdn.discordapp.com/attachments/1322007707900973088/1519199819178967120/image.png?ex=6a3f5396&is=6a3e0216&hm=d3664b0d9481a4a51435d5262adb97256b31b16124e4658def9a17e9accd86c8&"
   },
   {
     "name": "Vehemence 40-100%",
@@ -353,7 +360,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223/high"
   },
   {
     "name": "Sweeping Demon 2 (Taiago) 21-87%",
@@ -364,7 +372,7 @@
     "submitter": "kittycatiscute",
     "video": "https://youtu.be/SrE8yuRymEY",
     "showcaseVideo": "https://youtu.be/J73lxPI-9dI",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/81842690",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e5b71445564f793271f715f180d22e74426fb316/thumbnails/Sweeping%20Demon%202.png",
     "tags": [
       "Level",
       "Progress"
@@ -379,7 +387,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/XIGcx28OEUE",
     "showcaseVideo": "https://youtu.be/J73lxPI-9dI",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/81842690",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e5b71445564f793271f715f180d22e74426fb316/thumbnails/Sweeping%20Demon%202.png",
     "tags": [
       "Level",
       "Progress"
@@ -393,7 +401,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/YHH5CFQidU4",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/grief-unbuffed2.avif",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/53d7ba1bb75ed60bbdbf46f621300491901259e6/thumbnails/GRIEF%20madness.png",
     "tags": "Level, Progress, 2P"
   },
   {
@@ -450,7 +458,7 @@
   {
     "name": "Africa Circles (ChopBlox Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
     "player": "ChopBlox",
-    "levelID": 68549629,
+    "levelID": "68549629",
     "date": "2026-05-18",
     "length": 203,
     "version": 2.2,
@@ -488,7 +496,7 @@
     "version": 2.2,
     "submitter": "raine",
     "video": "https://youtu.be/bRY7fFGqNBI?t=3750s",
-    "thumbnail": "https://github.com/AncepsGD/the-hardest-achievements-list/blob/main/thumbnails/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_2025-12-17_190450485.png?raw=true",
+    "thumbnail": "https://cdn.discordapp.com/attachments/1322007707900973088/1519199819178967120/image.png?ex=6a3f5396&is=6a3e0216&hm=d3664b0d9481a4a51435d5262adb97256b31b16124e4658def9a17e9accd86c8&",
     "tags": [
       "Level",
       "Verified",
@@ -514,7 +522,7 @@
   {
     "name": "Eternal Silence 1 death, 100% noclip accuracy",
     "player": "noname228gg",
-    "levelID": 139730171,
+    "levelID": "83476262",
     "date": "2026-05-03",
     "length": 90,
     "version": 2.2,
@@ -525,7 +533,7 @@
       "Level",
       "Progress"
     ],
-    "id": 139730171
+    "id": "83476262"
   },
   {
     "name": "Tidal Wave buffed",
@@ -604,7 +612,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://cdn.discordapp.com/attachments/1322007707900973088/1519199819178967120/image.png?ex=6a3f5396&is=6a3e0216&hm=d3664b0d9481a4a51435d5262adb97256b31b16124e4658def9a17e9accd86c8&"
   },
   {
     "name": "Acheron 60hz 50%",
@@ -627,14 +636,13 @@
   {
     "name": "VSC x2",
     "player": "-",
-    "levelID": 126120466,
     "date": "2025-08-25",
     "length": 42,
     "version": 2.2,
     "submitter": "nensa",
     "video": "https://youtu.be/WBBPfgnuGaw",
     "showcaseVideo": "https://youtu.be/TPnljyNS7Dg",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/91159750",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/125131485/high",
     "tags": [
       "Level",
       "Verified",
@@ -651,7 +659,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/dckUEM7QwRE?t=1592",
     "showcaseVideo": "https://youtu.be/h14lmGH31_M",
-    "thumbnail": "https://i.ytimg.com/vi/i8TGgQNAzDg/maxresdefault.jpg",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/240988313a8795bd101365c1340b4f921429ac03/thumbnails/Banshee.png",
     "tags": [
       "Level",
       "Progress",
@@ -667,7 +675,7 @@
     "submitter": "rook_saneless",
     "video": "https://youtu.be/i5Xd9I4Zx1w",
     "showcaseVideo": "https://youtu.be/h14lmGH31_M",
-    "thumbnail": "https://i.ytimg.com/vi/i8TGgQNAzDg/maxresdefault.jpg",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/240988313a8795bd101365c1340b4f921429ac03/thumbnails/Banshee.png",
     "tags": [
       "Level",
       "Progress",
@@ -741,7 +749,7 @@
   {
     "name": "Eternal Silence 74%",
     "player": "noname228gg",
-    "levelID": 139730171,
+    "levelID": "83476262",
     "date": "2026-04-14",
     "length": 69,
     "version": 2.2,
@@ -752,7 +760,7 @@
       "Level",
       "Progress"
     ],
-    "id": 139730171
+    "id": "83476262"
   },
   {
     "name": "KOCMOC 224%",
@@ -860,12 +868,8 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/AkAcvx32BII",
-    "thumbnail": "https://i.ytimg.com/vi/i8TGgQNAzDg/maxresdefault.jpg",
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/240988313a8795bd101365c1340b4f921429ac03/thumbnails/Banshee.png",
+    "tags": "Level, Progress, Tentative"
   },
   {
     "name": "Anathema 156%",
@@ -898,8 +902,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "Old Orochi 40%, (4%), 40%, 43% in a row",
@@ -977,12 +980,10 @@
     "submitter": "tmtsps12",
     "video": "https://youtu.be/JZ10Un4EXYo",
     "showcaseVideo": "https://youtu.be/5dH4Vvp-GTc",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223",
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "BOOBAWAMBA",
@@ -1087,7 +1088,8 @@
     "version": 2.2,
     "submitter": "benjiwii",
     "video": "https://youtu.be/pwh6xknCu_w?t=3607",
-    "tags": "Level, Progress, 2P"
+    "tags": "Level, Progress, 2P",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708/high"
   },
   {
     "name": "Every End",
@@ -1690,11 +1692,11 @@
     "submitter": "Exiled_Shade",
     "video": "https://youtu.be/uOqCeiU1ocg?t=4638",
     "showcaseVideo": "https://youtu.be/5dH4Vvp-GTc",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96572223",
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "levelID": "96572223"
   },
   {
     "name": "Unnerfed SLH (ROZE)",
@@ -1922,7 +1924,7 @@
     "submitter": "gdspeedcuber",
     "video": "https://youtu.be/G08eCti1e68",
     "showcaseVideo": "https://youtu.be/7yaKGl_2Dsw",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/heliopolis1.avif",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/136548016/high",
     "tags": [
       "Level",
       "Progress"
@@ -2224,7 +2226,7 @@
     "submitter": "jak",
     "video": "https://youtu.be/hGRJKeBB14k?t=1149",
     "showcaseVideo": "https://youtu.be/h14lmGH31_M",
-    "thumbnail": "https://i.ytimg.com/vi/i8TGgQNAzDg/maxresdefault.jpg",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/240988313a8795bd101365c1340b4f921429ac03/thumbnails/Banshee.png",
     "tags": [
       "Level",
       "Progress",
@@ -2240,7 +2242,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/R-hg3r25hMs?t=13963",
     "showcaseVideo": "https://youtu.be/7yaKGl_2Dsw",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/heliopolis2.webp",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/136548016/high",
     "tags": [
       "Level",
       "Progress"
@@ -2255,7 +2257,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/IQLEFiJ9a98?t=4678s",
     "showcaseVideo": "https://youtu.be/7yaKGl_2Dsw",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/heliopolis2.webp",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/136548016/high",
     "tags": [
       "Level",
       "Progress"
@@ -4531,7 +4533,7 @@
     "submitter": "tmtsps12",
     "video": "https://youtu.be/bRPVDAmmzlw",
     "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
-    "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/grief-unbuffed1.avif",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708/high",
     "tags": "Level, Speedhack, Progress, 2P"
   },
   {
@@ -5780,7 +5782,7 @@
       "Level",
       "Progress"
     ],
-    "id": 96572223
+    "thumbnail": "—"
   },
   {
     "name": "Silent RealistiK 22",
@@ -6331,7 +6333,7 @@
   {
     "name": "Vehemence (Wpopoff old) 24-55%",
     "player": "wPopoff",
-    "levelID": 96572223,
+    "levelID": "96572223",
     "date": "2025-07-21",
     "length": 32,
     "version": 2.2,
@@ -6341,8 +6343,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "Eyes in the Water",
