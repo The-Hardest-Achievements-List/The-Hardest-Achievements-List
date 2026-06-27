@@ -602,6 +602,19 @@
     "id": 4125776
   },
   {
+    "name": "Green Bullet",
+    "player": "nickname",
+    "levelID": 142896409,
+    "date": "2026-05-17",
+    "length": 105,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/JG-qcvVkZFw",
+    "showcaseVideo": "https://youtu.be/zfTqKYeqhTo",
+    "id": 142896409,
+    "tags": "Level, Verified, Rated"
+  },
+  {
     "name": "KOCMOC Unleashed (Nerfed II) 73%",
     "player": "Arshadow",
     "date": "2026-02-19",
@@ -902,7 +915,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "id": 96572223
   },
   {
     "name": "Old Orochi 40%, (4%), 40%, 43% in a row",
@@ -983,7 +997,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "id": 96572223
   },
   {
     "name": "BOOBAWAMBA",
@@ -1696,7 +1711,8 @@
       "Level",
       "Progress"
     ],
-    "levelID": "96572223"
+    "levelID": "96572223",
+    "id": "96572223"
   },
   {
     "name": "Unnerfed SLH (ROZE)",
@@ -5782,7 +5798,8 @@
       "Level",
       "Progress"
     ],
-    "thumbnail": "—"
+    "thumbnail": "—",
+    "id": 96572223
   },
   {
     "name": "Silent RealistiK 22",
@@ -6344,7 +6361,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "id": "96572223"
   },
   {
     "name": "Eyes in the Water",
