@@ -1,6 +1,6 @@
 ﻿const EDITORS = [
   "Anceps — Owner",
-  "Qwidzit — Developer",
+  "QwidziT — Developer",
   "Arcadie — Elder List Moderator",
   "TYATYAPKA — List Moderator",
   "raine — List Moderator",
