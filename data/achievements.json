@@ -478,6 +478,7 @@
     "version": 2.2,
     "submitter": "raine",
     "video": "https://youtu.be/bRY7fFGqNBI?t=3750s",
+    "showcaseVideo": "https://youtu.be/UCr5JNvdy4c",
     "thumbnail": "https://cdn.discordapp.com/attachments/1322007707900973088/1519199819178967120/image.png?ex=6a3f5396&is=6a3e0216&hm=d3664b0d9481a4a51435d5262adb97256b31b16124e4658def9a17e9accd86c8&",
     "tags": [
       "Level",
@@ -1278,6 +1279,16 @@
     "id": 120478542
   },
   {
+    "name": "Tunnel of Despair 18-100%; (0%), 100% 3 deaths, 99.98% Accuracy in a row",
+    "player": "lanx",
+    "date": "91351939",
+    "length": 185,
+    "version": 2.1,
+    "submitter": "lanx",
+    "video": "https://youtu.be/ZyeN6M-0Q9s",
+    "showcaseVideo": "https://youtu.be/hpy-lGthQ2Y"
+  },
+  {
     "name": "Azure Flare (VERTOP) 49%",
     "player": "VERTOP",
     "levelID": 97429207,
@@ -1633,7 +1644,11 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/H8GPB9L97Cs?t=6748",
     "showcaseVideo": "https://youtu.be/8TmYVTC3ywo",
-    "tags": "Level, Verified, Rated",
+    "tags": [
+      "Level", 
+      "Verified", 
+      "Rated"
+    ],
     "id": 135661111
   },
   {
@@ -5528,6 +5543,7 @@
   {
     "name": "ET3RN4L TORM3NT",
     "player": "violet",
+    "levelID": 140241137,
     "date": "2025-02-11",
     "length": 27,
     "version": 2.2,
@@ -5975,6 +5991,23 @@
       "Progress"
     ],
     "id": 60805571
+  },
+  {
+    "name": "Lunatic Eyes",
+    "player": "DNM121",
+    "levelID": 123417713,
+    "date": "2025-07-23",
+    "length": 85,
+    "version": 2.2,
+    "submitter": "Arcadie",
+    "video": "https://youtu.be/0M1sMbchs68",
+    "showcaseVideo": "https://youtu.be/DiOnJLAyJfU",
+    "tags": [
+      "Level",
+      "Verified"
+    ],
+    "id": 123417713,
+    "originalName": "123417713"
   },
   {
     "name": "ace",
