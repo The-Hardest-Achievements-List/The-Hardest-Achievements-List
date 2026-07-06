@@ -1766,7 +1766,7 @@
     "id": "96572223"
   },
   {
-    "name": "Slaughterhouse  (Unnerfed, ROZE)",
+    "name": "Slaughterhouse  (Unnerfed, ROZE)",
     "player": "ROZE GD",
     "levelID": 131185518,
     "date": "2026-01-10",
@@ -6381,6 +6381,23 @@
       "Progress"
     ],
     "id": 86191664
+  },
+  {
+    "name": "unknown (True Unnerfed) 11-47%",
+    "player": "Emp",
+    "levelID": 128587204,
+    "date": "2025-11-18",
+    "length": 13,
+    "version": 2.2,
+    "submitter": "Emp",
+    "video": "https://youtu.be/mar_iC4fUso",
+    "showcaseVideo": "https://youtu.be/KqGCwPgrIsk",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/70003258/high",
+    "tags": [
+      "Level",
+      "Progress"
+    ],
+    "id": 128587204
   },
   {
     "name": "The Yangire 144hz",
