@@ -1766,7 +1766,7 @@
     "id": "96572223"
   },
   {
-    "name": "Slaughterhouse  (Unnerfed, ROZE)",
+    "name": "Slaughterhouse  (Unnerfed, ROZE)",
     "player": "ROZE GD",
     "levelID": 131185518,
     "date": "2026-01-10",
@@ -6030,41 +6030,22 @@
       "Mobile"
     ],
     "id": 57600307
-      },
-  {
-    "name": "Cognition 60hz Mobile 82%",
-    "player": "Siaxid",
-    "levelID": 57600307,
-    "date": "2025-12-28",
-    "length": 62,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/VHlMLSaSfbM",
-    "showcaseVideo": "https://youtu.be/_fY_jzKmBuU",
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated",
-      "Mobile"
-    ],
-    "id": 
   },
   {
-    "name": "unknown (True Unnerfed) 43%",
-    "player": "ffzer",
-    "levelID": 128587204,
-    "date": "2025-11-19",
-    "length": 18,
+    "name": "SADOMASOCHISM 60%, 85% in a row",
+    "player": "NucGDStuff",
+    "levelID": 76213334,
+    "date": "2025-04-14",
+    "length": 25,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/iaxzmWgbqjM",
-    "showcaseVideo": "https://youtu.be/KqGCwPgrIsk",
+    "submitter": "NucGDStuff",
+    "video": "https://youtu.be/Sfxv1RfJ0sc",
+    "showcaseVideo": "https://youtu.be/VPXub8NAKPU",
     "tags": [
-      "Level",
-      "Progress"
+      "Challenge",
+      "Consistency"
     ],
-    "id": 128587204
+    "id": 76213334
   },
   {
     "name": "Flashbang 46%",
@@ -6400,6 +6381,23 @@
       "Progress"
     ],
     "id": 86191664
+  },
+  {
+    "name": "unknown (True Unnerfed) 11-47%",
+    "player": "Emp",
+    "levelID": 128587204,
+    "date": "2025-11-18",
+    "length": 13,
+    "version": 2.2,
+    "submitter": "Emp",
+    "video": "https://youtu.be/mar_iC4fUso",
+    "showcaseVideo": "https://youtu.be/KqGCwPgrIsk",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/70003258/high",
+    "tags": [
+      "Level",
+      "Progress"
+    ],
+    "id": 128587204
   },
   {
     "name": "The Yangire 144hz",
