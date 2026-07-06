@@ -12,7 +12,12 @@ const SORT_OPTS = [
   { value: "date", label: "Date" },
 ];
 
-function SortSelect({ sort, setSort }) {
+const SORT_DIR_OPTS = [
+  { value: "asc", label: "Ascending" },
+  { value: "desc", label: "Descending" },
+];
+
+function SidebarSelect({ value, options, onChange, ariaLabel }) {
   const [open, setOpen] = React.useState(false);
   const ref = React.useRef(null);
 
@@ -24,13 +29,18 @@ function SortSelect({ sort, setSort }) {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const label = SORT_OPTS.find((o) => o.value === sort)?.label ?? "Rank";
+  const label = options.find((o) => o.value === value)?.label ?? value;
 
   return (
-    <div className="hd__sel" ref={ref}>
-      <button className="hd__sel-btn" onClick={() => setOpen((o) => !o)}>
+    <div className="hd__sel hd__sel--compact" ref={ref}>
+      <button
+        type="button"
+        className="hd__sel-btn"
+        aria-label={ariaLabel}
+        onClick={() => setOpen((o) => !o)}
+      >
         {label}
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
           <path
             d="M2 3.5L5 6.5L8 3.5"
             stroke="currentColor"
@@ -41,12 +51,13 @@ function SortSelect({ sort, setSort }) {
       </button>
       {open && (
         <div className="hd__sel-menu">
-          {SORT_OPTS.map((o) => (
+          {options.map((o) => (
             <button
               key={o.value}
-              className={`hd__sel-item${sort === o.value ? " is-active" : ""}`}
+              type="button"
+              className={`hd__sel-item${value === o.value ? " is-active" : ""}`}
               onClick={() => {
-                setSort(o.value);
+                onChange(o.value);
                 setOpen(false);
               }}
             >
@@ -67,6 +78,10 @@ export default function LevelList({
   toggleTag,
   isTimeline,
   hideRank,
+  isPendingEstimate,
+  projectionAvailable,
+  showProjectedRanks,
+  setShowProjectedRanks,
   onCardClick,
   layoutMode,
   setLayoutMode,
@@ -157,15 +172,32 @@ export default function LevelList({
               )}
             </div>
 
-            <div className="hd__sort-group">
+            <div className="hd__sort-group list__sort-group">
               <span className="hd__sort-lbl">SORT</span>
-              <SortSelect sort={sort} setSort={setSort} />
-              <button className="hd__sort-dir" onClick={setSortDir}>
-                <i
-                  className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
-                  style={{ marginRight: "0.5rem" }}
+              <div className="list__sort-controls">
+                <SidebarSelect
+                  value={sort}
+                  options={SORT_OPTS}
+                  onChange={setSort}
+                  ariaLabel="Sort by"
                 />
-              </button>
+                <SidebarSelect
+                  value={sortDir}
+                  options={SORT_DIR_OPTS}
+                  onChange={setSortDir}
+                  ariaLabel="Sort direction"
+                />
+              </div>
+              {projectionAvailable && (
+                <label className="hd__toggle hd__toggle--inline">
+                  <input
+                    type="checkbox"
+                    checked={showProjectedRanks}
+                    onChange={(e) => setShowProjectedRanks(e.target.checked)}
+                  />
+                  <span className="hd__toggle-label">Projected ranks</span>
+                </label>
+              )}
             </div>
 
             <div className="hd__filters list__filters">
@@ -203,13 +235,19 @@ export default function LevelList({
               </div>
             </div>
             <button
+              type="button"
               className="sidebar__collapse-btn"
               onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
               title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+              aria-expanded={!sidebarCollapsed}
             >
               <i
                 className={`fas ${sidebarCollapsed ? "fa-chevron-left" : "fa-chevron-right"}`}
+                aria-hidden="true"
               />
+              <span className="sidebar__collapse-btn-label">
+                {sidebarCollapsed ? "Show panel" : "Hide panel"}
+              </span>
             </button>
           </aside>
         )}
@@ -226,6 +264,8 @@ export default function LevelList({
                 index={i}
                 isTimeline={isTimeline}
                 hideRank={hideRank}
+                isPendingEstimate={isPendingEstimate}
+                showProjectedRanks={showProjectedRanks}
                 onClick={onCardClick}
                 layoutMode={layoutMode}
               />
@@ -236,6 +276,8 @@ export default function LevelList({
                 index={i}
                 isTimeline={isTimeline}
                 hideRank={hideRank}
+                isPendingEstimate={isPendingEstimate}
+                showProjectedRanks={showProjectedRanks}
                 onClick={onCardClick}
                 layoutMode={layoutMode}
               />

@@ -7,6 +7,8 @@
     "length": 34,
     "version": 2.2,
     "submitter": "Arcadie",
+    "estimateLower": 1,
+    "estimateUpper": 11,
     "video": "https://youtu.be/d3D0FDfhoRc",
     "showcaseVideo": "https://youtu.be/YQElFvT5ynk"
   },
@@ -18,6 +20,8 @@
     "length": 29,
     "version": 2.2,
     "submitter": "Exiled_Shade",
+    "estimateLower": 2,
+    "estimateUpper": 2,
     "video": "https://youtu.be/ALoWrBGPDyw",
     "showcaseVideo": "https://youtu.be/YQElFvT5ynk"
   },

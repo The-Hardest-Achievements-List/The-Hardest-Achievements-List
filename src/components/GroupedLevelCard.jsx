@@ -8,6 +8,8 @@ function GroupedLevelCard({
   index,
   isTimeline,
   hideRank,
+  isPendingEstimate,
+  showProjectedRanks,
   onClick,
   layoutMode,
 }) {
@@ -26,6 +28,8 @@ function GroupedLevelCard({
           index={index}
           isTimeline={isTimeline}
           hideRank={hideRank}
+          isPendingEstimate={isPendingEstimate}
+          showProjectedRanks={showProjectedRanks}
           onClick={onClick}
           layoutMode={layoutMode}
         />
@@ -61,6 +65,7 @@ function GroupedLevelCard({
                 index={-1}
                 isTimeline={isTimeline}
                 hideRank={hideRank}
+                isPendingEstimate={isPendingEstimate}
                 onClick={onClick}
                 layoutMode={layoutMode}
               />

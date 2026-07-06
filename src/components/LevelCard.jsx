@@ -5,21 +5,35 @@ import {
   getThumbnailUrlSequence,
 } from "../utils/format";
 import { TAG_ICONS, TAG_DEFINITIONS } from "./Header";
-import Tooltip from "./Tooltip";
+import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
+import {
+  formatEstimateDisplay,
+  hasEstimate,
+  hasProjectedShift,
+} from "../utils/estimateRank";
 
 function LevelCard({
   achievement: a,
   index,
   isTimeline,
   hideRank,
+  isPendingEstimate,
+  showProjectedRanks = false,
   onClick,
   layoutMode = "CARD",
 }) {
-  const shouldShowRank = !hideRank && !isTimeline && index !== -1;
-  const podiumRank = shouldShowRank
+  const shouldShowRank =
+    !isTimeline && index !== -1 && (isPendingEstimate || !hideRank);
+  const officialRank = shouldShowRank
     ? (a.rank ?? a.listRank ?? index + 1)
     : null;
-  const isPodium = !isTimeline && index < 3 && !hideRank;
+  const pendingRankBadge = isPendingEstimate ? formatEstimateDisplay(a) : null;
+  const showProjectedShift =
+    showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
+  const isPodium =
+    !isTimeline &&
+    index < 3 &&
+    (isPendingEstimate ? hasEstimate(a) : !hideRank);
   const isDuplicate = index === -1;
 
   const tags = React.useMemo(() => {
@@ -76,9 +90,29 @@ function LevelCard({
               {!isDuplicate &&
                 (isTimeline ? (
                   <span className="card__rank-badge">{formatDate(a.date)}</span>
+                ) : isPendingEstimate ? (
+                  pendingRankBadge != null && (
+                    <span
+                      className={`card__rank-badge${!hasEstimate(a) ? " card__rank-badge--unknown" : ""}`}
+                    >
+                      {pendingRankBadge}
+                    </span>
+                  )
+                ) : showProjectedShift ? (
+                  <Tooltip content={<ProjectedRankTooltipContent entry={a} />}>
+                    <span className="card__rank-badge rank-projection">
+                      <span className="rank-projection__current">#{officialRank}</span>
+                      <span className="rank-projection__arrow" aria-hidden="true">
+                        →
+                      </span>
+                      <span className="rank-projection__projected">
+                        #{a.projectedRank}
+                      </span>
+                    </span>
+                  </Tooltip>
                 ) : (
-                  podiumRank != null && (
-                    <span className="card__rank-badge">#{podiumRank}</span>
+                  officialRank != null && (
+                    <span className="card__rank-badge">#{officialRank}</span>
                   )
                 ))}
             </div>

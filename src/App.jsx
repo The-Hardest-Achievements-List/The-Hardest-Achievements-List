@@ -9,6 +9,11 @@ import {
   getDuplicateParentId,
   getAchievementKey,
 } from "./utils/groupDuplicates";
+import {
+  comparePendingEstimate,
+  matchesEstimateSearch,
+  buildMainProjection,
+} from "./utils/estimateRank";
 
 import achievementsData from "../data/achievements.json";
 import pendingData from "../data/pending.json";
@@ -123,6 +128,10 @@ export default function App() {
     const stored = window.localStorage.getItem("hd-card-width");
     return stored != null ? Number(stored) : 1;
   });
+  const [showProjectedRanks, setShowProjectedRanks] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.localStorage.getItem("hd-show-projected-ranks") === "true";
+  });
 
   function navigate(newMode, newActive) {
     if (newActive === "HOME") {
@@ -165,6 +174,26 @@ export default function App() {
     } catch (error) {}
   }, [cardWidth]);
 
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(
+        "hd-show-projected-ranks",
+        String(showProjectedRanks),
+      );
+    } catch (error) {}
+  }, [showProjectedRanks]);
+
+  const isClassicPending = mode === "classic" && active === "PENDING";
+  const isClassicMain = mode === "classic" && active === "MAIN";
+  const mainProjectionByKey = useMemo(() => {
+    if (!isClassicMain) return null;
+    return buildMainProjection(
+      achievementsData,
+      pendingData,
+      getAchievementKey,
+    );
+  }, [isClassicMain]);
+  const projectionAvailable = mainProjectionByKey != null;
   const rawData = NO_LIST.has(active) ? [] : (Array.isArray(DATA_MAP[mode]?.[active]) ? DATA_MAP[mode][active] : []);
   const rawDataWithListRank = useMemo(() => {
     if (!Array.isArray(rawData)) return [];
@@ -174,9 +203,14 @@ export default function App() {
         return achievement;
       }
       rank += 1;
-      return { ...achievement, listRank: rank };
+      const key = getAchievementKey(achievement);
+      const projectedRank =
+        mainProjectionByKey != null
+          ? (mainProjectionByKey.get(key) ?? null)
+          : null;
+      return { ...achievement, listRank: rank, projectedRank };
     });
-  }, [rawData]);
+  }, [rawData, mainProjectionByKey]);
 
   const allTags = (() => {
     const tags = new Set();
@@ -210,7 +244,8 @@ export default function App() {
     achievement.name?.toLowerCase().includes(q) ||
     achievement.player?.toLowerCase().includes(q) ||
     String(achievement.levelID ?? "").includes(q) ||
-    String(achievement.rank ?? "").includes(q);
+    String(achievement.rank ?? "").includes(q) ||
+    (isClassicPending && matchesEstimateSearch(achievement, q));
 
   const toggleTag = (t) => {
     const next = new Map(activeTags);
@@ -277,6 +312,10 @@ export default function App() {
     }
 
     data.sort((a, b) => {
+      if (sort === "rank" && isClassicPending) {
+        return comparePendingEstimate(a, b, sortDir);
+      }
+
       let va, vb;
       if (sort === "rank") {
         const ra = a.rank ?? a.listRank;
@@ -304,7 +343,7 @@ export default function App() {
     });
 
     return data;
-  }, [rawData, search, activeTags, sort, sortDir]);
+  }, [rawData, search, activeTags, sort, sortDir, isClassicPending]);
 
   useEffect(() => {
     const update = () => {
@@ -383,7 +422,11 @@ export default function App() {
           allTags={allTags}
           toggleTag={toggleTag}
           isTimeline={active === "TIMELINE"}
-          hideRank={active === "PENDING"}
+          hideRank={active === "PENDING" && !isClassicPending}
+          isPendingEstimate={isClassicPending}
+          projectionAvailable={projectionAvailable}
+          showProjectedRanks={showProjectedRanks}
+          setShowProjectedRanks={setShowProjectedRanks}
           onCardClick={setSelectedLevel}
           layoutMode={layoutMode}
           setLayoutMode={setLayoutMode}
@@ -394,7 +437,7 @@ export default function App() {
           sort={sort}
           setSort={setSort}
           sortDir={sortDir}
-          setSortDir={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+          setSortDir={setSortDir}
           mode={mode}
           setMode={(m) => navigate(m, active)}
         />
@@ -404,7 +447,9 @@ export default function App() {
         <LevelModal
           level={selectedLevel}
           onClose={() => setSelectedLevel(null)}
-          hideRank={active === "PENDING"}
+          hideRank={active === "PENDING" && !isClassicPending}
+          isPendingEstimate={isClassicPending}
+          showProjectedRanks={showProjectedRanks && isClassicMain}
         />
       )}
 

@@ -5,14 +5,33 @@ import {
   getYouTubeEmbedUrl,
   getThumbnailUrlSequence,
 } from "../utils/format";
+import {
+  formatEstimateDisplay,
+  hasEstimate,
+  hasProjectedShift,
+} from "../utils/estimateRank";
+import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
 
-export default function LevelModal({ level: a, onClose, hideRank }) {
+export default function LevelModal({
+  level: a,
+  onClose,
+  hideRank,
+  isPendingEstimate,
+  showProjectedRanks = false,
+}) {
   const [copiedValue, setCopiedValue] = useState(null);
+  const officialRank =
+    !isPendingEstimate && (a.listRank != null || a.rank != null)
+      ? a.listRank ?? a.rank
+      : null;
+  const pendingRankLabel = isPendingEstimate ? formatEstimateDisplay(a) : null;
+  const showProjectedShift =
+    showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
   const tags = Array.isArray(a?.tags)
     ? a.tags
     : typeof a?.tags === "string"
-    ? a.tags.split(/\s*,\s*/).filter(Boolean)
-    : [];
+      ? a.tags.split(/\s*,\s*/).filter(Boolean)
+      : [];
   const thumbnailUrlSequence = getThumbnailUrlSequence(
     a.thumbnail,
     a.showcaseVideo,
@@ -73,8 +92,31 @@ export default function LevelModal({ level: a, onClose, hideRank }) {
 
         <div className="modal__body">
           <div className="modal__top-row">
-            {!hideRank && a.rank != null && (
-              <span className="modal__rank">#{a.rank}</span>
+            {!hideRank && isPendingEstimate && pendingRankLabel != null && (
+              <span
+                className={`modal__rank${!hasEstimate(a) ? " modal__rank--unknown" : ""}`}
+              >
+                {pendingRankLabel}
+              </span>
+            )}
+            {!hideRank && !isPendingEstimate && officialRank != null && (
+              showProjectedShift ? (
+                <Tooltip content={<ProjectedRankTooltipContent entry={a} />}>
+                  <span className="modal__rank rank-projection">
+                    <span className="rank-projection__current">#{officialRank}</span>
+                    <span className="rank-projection__arrow" aria-hidden="true">
+                      →
+                    </span>
+                    <span className="rank-projection__projected">
+                      #{a.projectedRank}
+                    </span>
+                  </span>
+                </Tooltip>
+              ) : (
+                <span className="modal__rank modal__rank--official">
+                  #{officialRank}
+                </span>
+              )
             )}
             <div className="modal__tags">
               {tags.map((t) => (
