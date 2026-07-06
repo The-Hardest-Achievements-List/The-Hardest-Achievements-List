@@ -21,7 +21,6 @@ import platformerpendingData from "../data/platformerpending.json";
 const CLASSIC_TAGS = [
   "Level",
   "Challenge",
-  "2P",
   "Low Hertz",
   "Progress",
   "Consistency",
@@ -34,6 +33,7 @@ const CLASSIC_TAGS = [
   "Noclip",
   "Speedhack",
   "Mobile",
+  "2P",
   "Miscellaneous",
 ];
 
