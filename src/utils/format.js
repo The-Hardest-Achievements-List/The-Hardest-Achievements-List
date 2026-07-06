@@ -42,6 +42,7 @@ export function getYouTubeVideoId(url) {
     if (!url) return null
     const patterns = [
         /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/live\/([a-zA-Z0-9_-]{11})/,
         /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/,
         /^([a-zA-Z0-9_-]{11})$/
     ]
@@ -52,6 +53,45 @@ export function getYouTubeVideoId(url) {
     }
 
     return null
+}
+
+function parseYouTubeTimeParam(value) {
+    if (!value) return null
+    const normalized = value.replace(/s$/i, '')
+    if (/^\d+$/.test(normalized)) return parseInt(normalized, 10)
+
+    const hours = normalized.match(/(\d+)h/i)?.[1]
+    const minutes = normalized.match(/(\d+)m/i)?.[1]
+    const seconds = normalized.match(/(\d+)s/i)?.[1] ?? normalized.match(/(\d+)$/)?.[1]
+    let total = 0
+    if (hours) total += parseInt(hours, 10) * 3600
+    if (minutes) total += parseInt(minutes, 10) * 60
+    if (seconds) total += parseInt(seconds, 10)
+    return total > 0 ? total : null
+}
+
+export function getYouTubeStartSeconds(url) {
+    if (!url) return null
+
+    try {
+        const parsed = new URL(url)
+        const timeParam = parsed.searchParams.get('t') ?? parsed.searchParams.get('start')
+        if (timeParam) return parseYouTubeTimeParam(timeParam)
+    } catch {
+        // fall through to regex for non-standard URLs
+    }
+
+    const match = url.match(/[?&#](?:t|start)=([^&#]+)/i)
+    return match ? parseYouTubeTimeParam(match[1]) : null
+}
+
+export function getYouTubeEmbedUrl(url) {
+    const videoId = getYouTubeVideoId(url)
+    if (!videoId) return null
+
+    const start = getYouTubeStartSeconds(url)
+    const base = `https://www.youtube.com/embed/${videoId}`
+    return start != null ? `${base}?start=${start}` : base
 }
 
 export function getYouTubeThumbnailUrls(videoId) {

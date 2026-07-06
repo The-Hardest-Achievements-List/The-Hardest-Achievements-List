@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   formatDate,
   formatLength,
-  getYouTubeVideoId,
+  getYouTubeEmbedUrl,
   getThumbnailUrlSequence,
 } from "../utils/format";
 
@@ -165,15 +165,15 @@ export default function LevelModal({ level: a, onClose, hideRank }) {
             <div className="modal__embed-section">
               {a.video &&
                 (() => {
-                  const videoId = getYouTubeVideoId(a.video);
-                  return videoId ? (
+                  const embedUrl = getYouTubeEmbedUrl(a.video);
+                  return embedUrl ? (
                     <div key="achievement-video">
                       <span className="modal__embed-label">
                         Achievement Video
                       </span>
                       <div className="modal__embed">
                         <iframe
-                          src={`https://www.youtube.com/embed/${videoId}`}
+                          src={embedUrl}
                           title="Achievement Video"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -184,8 +184,8 @@ export default function LevelModal({ level: a, onClose, hideRank }) {
                 })()}
               {a.showcaseVideo &&
                 (() => {
-                  const videoId = getYouTubeVideoId(a.showcaseVideo);
-                  return videoId ? (
+                  const embedUrl = getYouTubeEmbedUrl(a.showcaseVideo);
+                  return embedUrl ? (
                     <div
                       key="showcase-video"
                       style={{ marginTop: a.video ? "16px" : 0 }}
@@ -193,7 +193,7 @@ export default function LevelModal({ level: a, onClose, hideRank }) {
                       <span className="modal__embed-label">Level Showcase</span>
                       <div className="modal__embed">
                         <iframe
-                          src={`https://www.youtube.com/embed/${videoId}`}
+                          src={embedUrl}
                           title="Level Showcase"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
