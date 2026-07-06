@@ -217,7 +217,7 @@ export default function LevelList({
           <div className="list__empty">No entries found.</div>
         ) : (
           mainAchievements.map((a, i) => {
-            const listKey = a.id != null ? `${a.id}-${i}` : `achievement-${i}`;
+            const listKey = a.levelID != null ? `${a.levelID}-${i}` : `${a.name}-${i}`;
             return a.hasDuplicates ? (
               <GroupedLevelCard
                 key={listKey}

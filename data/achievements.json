@@ -13,8 +13,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 127323087
+    ]
   },
   {
     "name": "GRIEF 97%",
@@ -60,8 +59,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 119544028
+    ]
   },
   {
     "name": "Society",
@@ -77,8 +75,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 127323087
+    ]
   },
   {
     "name": "Sweeping Demon 2 (Taiago) 86%",
@@ -98,6 +95,7 @@
   {
     "name": "Heliopolis 24%, (0%), 47% in a row",
     "player": "Zoink",
+    "levelID": 136530685,
     "date": "2026-05-15",
     "length": 103,
     "version": 2.2,
@@ -107,8 +105,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": "136530685"
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED 68%",
@@ -138,8 +135,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 119550490
+    ]
   },
   {
     "name": "Vehemence 13-72%",
@@ -186,8 +182,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 126242564
+    ]
   },
   {
     "name": "Thinking Space II",
@@ -204,8 +199,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 119544028
+    ]
   },
   {
     "name": "Flamewall",
@@ -222,8 +216,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 126242564
+    ]
   },
   {
     "name": "Heliopolis 51%",
@@ -238,8 +231,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": "136530685"
+    ]
   },
   {
     "name": "Amethyst",
@@ -255,8 +247,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 119550490
+    ]
   },
   {
     "name": "Eternal Silence 31%, (1%), 65% in a row",
@@ -271,8 +262,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": "83476262"
+    ]
   },
   {
     "name": "Vehemence 24-79%",
@@ -332,8 +322,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED (May 2025) 14-78%",
@@ -439,8 +428,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 27690100
+    ]
   },
   {
     "name": "Subsuming Vortex 80%, 71% in a row",
@@ -458,8 +446,7 @@
       "Consistency",
       "Rated",
       "Tentative"
-    ],
-    "id": 127997391
+    ]
   },
   {
     "name": "Legoshi Dance 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
@@ -473,8 +460,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 107008664
+    ]
   },
   {
     "name": "Africa Circles (ChopBlox Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
@@ -488,8 +474,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 68549629
+    ]
   },
   {
     "name": "Acheron 60hz 17-67%",
@@ -506,8 +491,7 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED (Nerfed)",
@@ -539,8 +523,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 116174063
+    ]
   },
   {
     "name": "Eternal Silence 1 death, 100% accuracy",
@@ -556,8 +539,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": "83476262"
+    ]
   },
   {
     "name": "Tidal Wave buffed",
@@ -567,14 +549,13 @@
     "length": 181,
     "version": 2.2,
     "submitter": "tmtsps12",
-    "duplicateOf": "Tidal Wave",
     "video": "https://youtu.be/1-ihSeRCpds",
     "showcaseVideo": "https://youtu.be/IObH78Nln2U",
+    "duplicateOf": "Tidal Wave",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 116732736
+    ]
   },
   {
     "name": "Tidal Wave",
@@ -590,8 +571,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 86407629
+    ]
   },
   {
     "name": "Heliopolis 37-100%",
@@ -606,8 +586,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 136530685
+    ]
   },
   {
     "name": "Silent clubstep 14%, 18%, 40%, 19%, 62%, 63% in a row",
@@ -623,8 +602,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 4125776
+    ]
   },
   {
     "name": "Green Bullet",
@@ -640,8 +618,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 142896409
+    ]
   },
   {
     "name": "KOCMOC Unleashed (Nerfed II) 73%",
@@ -672,12 +649,12 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "VSC x2",
     "player": "-",
+    "levelID": 126120466,
     "date": "2025-08-25",
     "length": 42,
     "version": 2.2,
@@ -689,8 +666,7 @@
       "Level",
       "Verified",
       "Tentative"
-    ],
-    "id": 126120466
+    ]
   },
   {
     "name": "Banshee (Aug. 2025) 10-79%",
@@ -737,8 +713,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 10887708
+    ]
   },
   {
     "name": "Avernus 77%, 98% in a row",
@@ -754,8 +729,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 89496627
+    ]
   },
   {
     "name": "Africa Circles (ChopBlox Unnerfed) 14-100%",
@@ -770,8 +744,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 68549629
+    ]
   },
   {
     "name": "ORBIT",
@@ -787,8 +760,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 133175713
+    ]
   },
   {
     "name": "Eternal Silence 74%",
@@ -803,8 +775,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": "83476262"
+    ]
   },
   {
     "name": "KOCMOC 224%",
@@ -820,8 +791,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 87665224
+    ]
   },
   {
     "name": "Silent clubstep (Old) 72%",
@@ -836,8 +806,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 38692301
+    ]
   },
   {
     "name": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
@@ -852,8 +821,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 609629
+    ]
   },
   {
     "name": "Nullscapes",
@@ -869,8 +837,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 109780665
+    ]
   },
   {
     "name": "Heliopolis 27-73%",
@@ -885,8 +852,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 136530685
+    ]
   },
   {
     "name": "Angelicide 48-95%",
@@ -901,8 +867,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Banshee (May 2024) 86%",
@@ -934,8 +899,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 112313819
+    ]
   },
   {
     "name": "Vehemence (Wpopoff old) 47-100%",
@@ -950,8 +914,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "Old Orochi 40%, (4%), 40%, 43% in a row",
@@ -966,8 +929,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 136742562
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING 33-75%, 37% in a row",
@@ -982,8 +944,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 106165639
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING (Quivert) 21-97%",
@@ -998,8 +959,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 108239680
+    ]
   },
   {
     "name": "Quanteuse processing",
@@ -1016,8 +976,7 @@
       "Verified",
       "Rated",
       "Tentative"
-    ],
-    "id": 117692518
+    ]
   },
   {
     "name": "Vehemence (wPopoff old) 39%",
@@ -1032,8 +991,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "BOOBAWAMBA",
@@ -1049,8 +1007,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 110816181
+    ]
   },
   {
     "name": "LESOPOWAL",
@@ -1077,8 +1034,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 68549629
+    ]
   },
   {
     "name": "Exasperation 67%",
@@ -1094,8 +1050,7 @@
       "Level",
       "Progress",
       "Tentative"
-    ],
-    "id": 31325851
+    ]
   },
   {
     "name": "Angelicide 37-100% 7 deaths, 99.83% accuracy",
@@ -1111,8 +1066,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Azure Flare (VERTOP) 36-91%",
@@ -1128,8 +1082,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 97429207
+    ]
   },
   {
     "name": "GRIEF (Triplash buffed) 25-64%",
@@ -1160,8 +1113,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 116174063
+    ]
   },
   {
     "name": "Eternal Silence 14-100%",
@@ -1176,8 +1128,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 83476262
+    ]
   },
   {
     "name": "Angelicide 56-98%",
@@ -1192,8 +1143,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Penumbral",
@@ -1209,8 +1159,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 134942736
+    ]
   },
   {
     "name": "Silent clubstep (Old) 4 deaths, 99.98% accuracy",
@@ -1226,8 +1175,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 38692301
+    ]
   },
   {
     "name": "Silent clubstep 5-25% x2, 5-64% in a row 2.1",
@@ -1243,8 +1191,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 4125776
+    ]
   },
   {
     "name": "Eternal silence (Decorated) 25%",
@@ -1259,8 +1206,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 83476262
+    ]
   },
   {
     "name": "SARY NEVER CLEAR (Optic Sunflow) 88%",
@@ -1275,8 +1221,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 609629
+    ]
   },
   {
     "name": "Antarctic Lights 90%",
@@ -1306,8 +1251,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 4125776
+    ]
   },
   {
     "name": "Ashley Wave Trials",
@@ -1324,8 +1268,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 123119196
+    ]
   },
   {
     "name": "andromeda",
@@ -1341,8 +1284,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 114283297
+    ]
   },
   {
     "name": "Angelicide 53-100% 2 deaths, 99.98% accuracy",
@@ -1358,8 +1300,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Tunnel of Despair 18-100%; (0%), 100% 3 deaths, 99.98% Accuracy in a row",
@@ -1392,8 +1333,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 97429207
+    ]
   },
   {
     "name": "Amethyst (Trick) 61%",
@@ -1409,8 +1349,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 119530462
+    ]
   },
   {
     "name": "Acheron (Riot) 91%",
@@ -1425,8 +1364,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 82758705
+    ]
   },
   {
     "name": "Acheron (Riot) 17-92%",
@@ -1442,8 +1380,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 82758705
+    ]
   },
   {
     "name": "VSC 72%, 100% in a row",
@@ -1458,8 +1395,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "Angelicide 37-82%",
@@ -1474,8 +1410,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Old Orochi",
@@ -1490,8 +1425,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 136742562
+    ]
   },
   {
     "name": "Ultra Paracosm",
@@ -1506,8 +1440,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 138704906
+    ]
   },
   {
     "name": "Renevant 60hz",
@@ -1523,8 +1456,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 58161496
+    ]
   },
   {
     "name": "Sakupen circles (Old)",
@@ -1539,8 +1471,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 10887708
+    ]
   },
   {
     "name": "KILLSTEALER",
@@ -1556,8 +1487,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 138781722
+    ]
   },
   {
     "name": "Subsuming Vortex",
@@ -1573,8 +1503,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 127997391
+    ]
   },
   {
     "name": "Unnerfed Slaughterhouse",
@@ -1589,8 +1518,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 70436808
+    ]
   },
   {
     "name": "Slaughterhouse (ChopBlox)",
@@ -1599,8 +1527,8 @@
     "length": 70,
     "version": 2.2,
     "submitter": "goofygdplayer",
-    "duplicateOf": "Unnerfed Slaughterhouse",
     "video": "https://youtu.be/vGF7PvQCsJc",
+    "duplicateOf": "Unnerfed Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
@@ -1628,13 +1556,12 @@
     "length": 30,
     "version": 2.2,
     "submitter": "iloveliliesxoxo",
-    "duplicateOf": "Sakupen Circles (Old)",
     "video": "https://youtu.be/ODeHCi4lczc?t=3478",
+    "duplicateOf": "Sakupen Circles (Old)",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 17884447
+    ]
   },
   {
     "name": "Aquamarine",
@@ -1649,8 +1576,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 77331805
+    ]
   },
   {
     "name": "Exasperation 65-100%",
@@ -1665,8 +1591,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 31325851
+    ]
   },
   {
     "name": "Silent Acropolis unn 31%, 54% in a row",
@@ -1681,8 +1606,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 83143127
+    ]
   },
   {
     "name": "Acheron 24-100%, 17-96% in a row",
@@ -1698,8 +1622,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "Silent Oppenheimer (Old) 67%",
@@ -1729,8 +1652,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 112313819
+    ]
   },
   {
     "name": "The Bloop",
@@ -1746,8 +1668,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 135661111
+    ]
   },
   {
     "name": "Vehemence (Wpopoff) 27%",
@@ -1762,8 +1683,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": "96572223"
+    ]
   },
   {
     "name": "Unnerfed SLH (ROZE)",
@@ -1777,8 +1697,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 131185518
+    ]
   },
   {
     "name": "Acheron 97 challenge 2.1",
@@ -1788,15 +1707,14 @@
     "length": 67,
     "version": 2.1,
     "submitter": "SeptaGon7",
-    "duplicateOf": "Acheron 2.1",
     "video": "https://youtu.be/YueacvC98cU",
     "showcaseVideo": "https://youtu.be/V_XGGfefoeg",
+    "duplicateOf": "Acheron 2.1",
     "thumbnail": "https://raw.githubusercontent.com/AncepsGD/the-hardest-achievements-list/refs/heads/main/thumbnails/acheron-97-challenge.webp",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 124037650
+    ]
   },
   {
     "name": "Acheron buffed 2.1",
@@ -1806,14 +1724,13 @@
     "length": 67,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "Acheron 2.1",
     "video": "https://youtu.be/06ADbkaBDz4",
     "showcaseVideo": "https://youtu.be/i6vcmdupm0g",
+    "duplicateOf": "Acheron 2.1",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 88201288
+    ]
   },
   {
     "name": "Acheron 2.1",
@@ -1829,8 +1746,7 @@
       "Level",
       "Verified",
       "Outdated Version"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "Angelicide 10-48%",
@@ -1845,8 +1761,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Tunnel of Despair 59%, 100% in a row",
@@ -1862,8 +1777,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 91351939
+    ]
   },
   {
     "name": "surface (Old) 40-100%",
@@ -1878,8 +1792,7 @@
     "tags": [
       "Challenge",
       "Progress"
-    ],
-    "id": 81683082
+    ]
   },
   {
     "name": "Misanthrope 22-90%",
@@ -1894,8 +1807,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 60284876
+    ]
   },
   {
     "name": "avenus copy",
@@ -1905,14 +1817,13 @@
     "length": 78,
     "version": 2.2,
     "submitter": "goofygdplayer",
-    "duplicateOf": "Avernus",
     "video": "https://youtu.be/vefvpRl0Kd4",
     "showcaseVideo": "https://youtu.be/DDCBZBTY5sA",
+    "duplicateOf": "Avernus",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 131075784
+    ]
   },
   {
     "name": "Blue Avernus",
@@ -1922,15 +1833,14 @@
     "length": 78,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Avernus",
     "video": "https://youtu.be/GcJLo5sz_EM",
     "showcaseVideo": "https://youtu.be/-vCTk0BVMUg",
+    "duplicateOf": "Avernus",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/125795798",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 125795798
+    ]
   },
   {
     "name": "Avernus",
@@ -1946,8 +1856,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 89496627
+    ]
   },
   {
     "name": "Avernus green (klimk)",
@@ -1957,13 +1866,12 @@
     "length": 78,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Avernus",
     "video": "https://youtu.be/vD-bTz0zOD0",
+    "duplicateOf": "Avernus",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 130867589
+    ]
   },
   {
     "name": "Avernus green (VanterGez) 95%",
@@ -1973,14 +1881,13 @@
     "length": 74,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Avernus",
     "video": "https://youtu.be/WfnaiwqDHaE",
     "showcaseVideo": "https://youtu.be/8lNHaYbvQE0",
+    "duplicateOf": "Avernus",
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 113341338
+    ]
   },
   {
     "name": "Heliopolis (Thnnder old) 60-100%",
@@ -2010,8 +1917,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 102647436
+    ]
   },
   {
     "name": "Angelicide 68-100%",
@@ -2026,8 +1932,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Angelicide 68-100% (Kaza)",
@@ -2041,8 +1946,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 114002031
+    ]
   },
   {
     "name": "Firework 144hz Mobile",
@@ -2060,8 +1964,7 @@
       "Low Hertz",
       "Rated",
       "Mobile"
-    ],
-    "id": 105547415
+    ]
   },
   {
     "name": "Sinister Silence 75hz",
@@ -2077,8 +1980,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 82249742
+    ]
   },
   {
     "name": "Crimson Planet 60hz Mobile",
@@ -2095,8 +1997,7 @@
       "Low Hertz",
       "Rated",
       "Mobile"
-    ],
-    "id": 45866767
+    ]
   },
   {
     "name": "Firework 120hz 95%",
@@ -2114,8 +2015,7 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 105547415
+    ]
   },
   {
     "name": "Menace 65%, 100% in a row",
@@ -2131,8 +2031,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 107805281
+    ]
   },
   {
     "name": "Silent clubstep (Old) 14-100% 2.1",
@@ -2147,8 +2046,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 38692301
+    ]
   },
   {
     "name": "Silent clubstep 2.1",
@@ -2164,8 +2062,7 @@
       "Level",
       "Verified",
       "Outdated Version"
-    ],
-    "id": 4125776
+    ]
   },
   {
     "name": "ANTARCTIC LIGHTS 25-100%",
@@ -2197,8 +2094,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "Sakupen Circles 144hz Mobile 70%",
@@ -2216,8 +2112,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "Angelicide 37%",
@@ -2232,8 +2127,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "surface (Old) 66%",
@@ -2248,8 +2142,7 @@
     "tags": [
       "Challenge",
       "Progress"
-    ],
-    "id": 81683082
+    ]
   },
   {
     "name": "Acheron",
@@ -2265,8 +2158,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "vsc infinity 79%, 100% in a row",
@@ -2281,8 +2173,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 78765594
+    ]
   },
   {
     "name": "Banshee 21-100%",
@@ -2343,8 +2234,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 132854166
+    ]
   },
   {
     "name": "OUROBOROS 73%",
@@ -2377,8 +2267,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 91351939
+    ]
   },
   {
     "name": "Azure Flare (VERTOP) 44-100%",
@@ -2394,8 +2283,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 97429207
+    ]
   },
   {
     "name": "Aerial Gleam (Unnerfed) 144hz Mobile",
@@ -2412,8 +2300,7 @@
       "Low Hertz",
       "Outdated Version",
       "Mobile"
-    ],
-    "id": 83074352
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING 61%",
@@ -2428,8 +2315,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 106165639
+    ]
   },
   {
     "name": "Silent Acropolis unn 66%",
@@ -2444,8 +2330,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 83143127
+    ]
   },
   {
     "name": "Silent Acropolis unn 3 deaths, 99.98% accuracy",
@@ -2461,8 +2346,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 83143127
+    ]
   },
   {
     "name": "Buffed Misanthrope 44-100%",
@@ -2522,8 +2406,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126279500
+    ]
   },
   {
     "name": "Bloodlust 72hz 95%",
@@ -2540,8 +2423,7 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 42584142
+    ]
   },
   {
     "name": "Bloodlust 75hz",
@@ -2557,8 +2439,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 42584142
+    ]
   },
   {
     "name": "Aquamarine (deco) 70%",
@@ -2588,8 +2469,7 @@
       "Challenge",
       "Verified",
       "Outdated Version"
-    ],
-    "id": 38230726
+    ]
   },
   {
     "name": "Subconscious",
@@ -2603,8 +2483,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 134379544
+    ]
   },
   {
     "name": "Angelicide 37-74% (Kaza)",
@@ -2618,8 +2497,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 114002031
+    ]
   },
   {
     "name": "Angelicide 30-66%",
@@ -2634,8 +2512,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Spectre",
@@ -2651,8 +2528,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 110815379
+    ]
   },
   {
     "name": "Avernus green (VanterGez) 15-100%",
@@ -2662,14 +2538,13 @@
     "length": 65,
     "version": 2.2,
     "submitter": "Arcadie",
-    "duplicateOf": "Avernus",
     "video": "https://youtu.be/WfnaiwqDHaE",
     "showcaseVideo": "https://youtu.be/8lNHaYbvQE0",
+    "duplicateOf": "Avernus",
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 113341338
+    ]
   },
   {
     "name": "Acheron (-) 31-89%",
@@ -2726,8 +2601,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 57828784
+    ]
   },
   {
     "name": "Tunnel of Serpentical 39-100%",
@@ -2757,8 +2631,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 107805281
+    ]
   },
   {
     "name": "Exens limit 165%",
@@ -2773,8 +2646,7 @@
     "tags": [
       "Level",
       "Consistency"
-    ],
-    "id": 97338077
+    ]
   },
   {
     "name": "Abyss of Darkness",
@@ -2790,8 +2662,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 49896559
+    ]
   },
   {
     "name": "Old AoD",
@@ -2806,8 +2677,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 76680844
+    ]
   },
   {
     "name": "OUROBOROS 27-100%",
@@ -2852,8 +2722,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 69289606
+    ]
   },
   {
     "name": "Sakupen Circles Infinity (Layout) 37-100%",
@@ -2868,8 +2737,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 124312219
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED (Layout Aug. 2024) 48-89%",
@@ -2884,8 +2752,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 124702724
+    ]
   },
   {
     "name": "Tidal Wave (Ultrabuffed) 22-61%",
@@ -2928,8 +2795,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 75277673
+    ]
   },
   {
     "name": "Firework (Unnerfed)",
@@ -2944,8 +2810,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 97139950
+    ]
   },
   {
     "name": "Acheron (Riot) 47-100%",
@@ -2960,8 +2825,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 82758705
+    ]
   },
   {
     "name": "Illusion of Hell",
@@ -2976,8 +2840,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 38230726
+    ]
   },
   {
     "name": "The Golden 80hz 94%",
@@ -2995,8 +2858,7 @@
       "Progress",
       "Rated",
       "Tentative"
-    ],
-    "id": 60978746
+    ]
   },
   {
     "name": "Slaughterhouse 1.1x",
@@ -3012,8 +2874,7 @@
       "Level",
       "Rated",
       "Speedhack"
-    ],
-    "id": 27690100
+    ]
   },
   {
     "name": "Trueffet 1.3x",
@@ -3029,8 +2890,7 @@
       "Level",
       "Rated",
       "Speedhack"
-    ],
-    "id": 71434979
+    ]
   },
   {
     "name": "SWI Slithium",
@@ -3046,8 +2906,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129774598
+    ]
   },
   {
     "name": "3sh on Pointercrate 76%, 69% in a row",
@@ -3063,8 +2922,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 127534241
+    ]
   },
   {
     "name": "Maniacal Chains",
@@ -3080,8 +2938,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 129492846
+    ]
   },
   {
     "name": "Angelicide (Kaza) 31%",
@@ -3095,8 +2952,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 114002031
+    ]
   },
   {
     "name": "surface 62%",
@@ -3142,8 +2998,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 93091893
+    ]
   },
   {
     "name": "Unnerfed Diabolic ClubStep",
@@ -3160,8 +3015,7 @@
       "Level",
       "Verified",
       "Tentative"
-    ],
-    "id": 78149361
+    ]
   },
   {
     "name": "Ouroboros 60hz Mobile 83%",
@@ -3180,8 +3034,7 @@
       "Rated",
       "Tentative",
       "Mobile"
-    ],
-    "id": 56703691
+    ]
   },
   {
     "name": "Defeated Circles",
@@ -3197,8 +3050,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 120012581
+    ]
   },
   {
     "name": "Tunnel of Despair",
@@ -3214,8 +3066,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 91351939
+    ]
   },
   {
     "name": "Akashic Records 60hz",
@@ -3231,8 +3082,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 58150142
+    ]
   },
   {
     "name": "Aeternus 20%",
@@ -3247,8 +3097,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 102647436
+    ]
   },
   {
     "name": "Kyouki",
@@ -3264,8 +3113,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 86018142
+    ]
   },
   {
     "name": "Slaughterhouse 1.25x 25-100% 2 deaths, 99.86% accuracy",
@@ -3283,8 +3131,7 @@
       "Rated",
       "Noclip",
       "Speedhack"
-    ],
-    "id": 27690100
+    ]
   },
   {
     "name": "The Golden 367%",
@@ -3300,8 +3147,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 60978746
+    ]
   },
   {
     "name": "Apollyon 97%",
@@ -3331,8 +3177,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 110534288
+    ]
   },
   {
     "name": "Firework 174%",
@@ -3348,8 +3193,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 75206202
+    ]
   },
   {
     "name": "Bloodlust 60hz Mobile 63%",
@@ -3367,8 +3211,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 42584142
+    ]
   },
   {
     "name": "Zero Factorial (LAMINGTON) 84%",
@@ -3398,8 +3241,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 113989022
+    ]
   },
   {
     "name": "Misanthrope 44-95%",
@@ -3414,8 +3256,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 60284876
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING (Quivert) 38-100%",
@@ -3430,8 +3271,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 108239680
+    ]
   },
   {
     "name": "FINAL FANTASY 73%, 67% in a row",
@@ -3446,8 +3286,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 76767195
+    ]
   },
   {
     "name": "Tunnel of Despair 144hz Mobile 46-100%",
@@ -3465,8 +3304,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 91351939
+    ]
   },
   {
     "name": "Sakupen Circles Nerfdate 76%",
@@ -3498,8 +3336,7 @@
       "Rated",
       "Noclip",
       "Speedhack"
-    ],
-    "id": 27690100
+    ]
   },
   {
     "name": "Angelicide 13 deaths, 99.75% accuracy",
@@ -3515,8 +3352,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 120478542
+    ]
   },
   {
     "name": "Labyrinth 46%",
@@ -3573,8 +3409,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 141320499
+    ]
   },
   {
     "name": "Subterminal Point",
@@ -3590,8 +3425,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 113599729
+    ]
   },
   {
     "name": "Like if you camt bea 92%",
@@ -3619,8 +3453,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 79312442
+    ]
   },
   {
     "name": "Flamewall (OneAlphaHelix) 60%",
@@ -3650,8 +3483,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 113989022
+    ]
   },
   {
     "name": "Demotivation Dance",
@@ -3666,8 +3498,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 98446627
+    ]
   },
   {
     "name": "Silent Circles 27-53%",
@@ -3682,8 +3513,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 12169905
+    ]
   },
   {
     "name": "Silent Circles (Thebacon_gamer) 27-53%",
@@ -3706,14 +3536,13 @@
     "length": 70,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/5rUPUAyQtWc",
     "showcaseVideo": "https://youtu.be/G4PhC4FvrFU",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 84117769
+    ]
   },
   {
     "name": "Slaughterhouse",
@@ -3729,8 +3558,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 27690100
+    ]
   },
   {
     "name": "Blue Slaughterhouse (The_Bat0)",
@@ -3740,15 +3568,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/QFGAZJ5IFS4",
     "showcaseVideo": "https://youtu.be/vAcru8i0A0M",
+    "duplicateOf": "Slaughterhouse",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88104589",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 88104589
+    ]
   },
   {
     "name": "Bluehouse",
@@ -3757,8 +3584,8 @@
     "length": 70,
     "version": 2.2,
     "submitter": "Anceps",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/iMgMHfQ_WsY",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
@@ -3772,14 +3599,13 @@
     "length": 70,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/YpIxYngsUJs",
     "showcaseVideo": "https://youtu.be/CR4NfAr23wc",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129783341
+    ]
   },
   {
     "name": "Green Slaughterhouse",
@@ -3789,15 +3615,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/BXHCVB2ZRIw",
     "showcaseVideo": "https://youtu.be/R5GoIVEqmo8",
+    "duplicateOf": "Slaughterhouse",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/91131797",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129783330
+    ]
   },
   {
     "name": "Blue Slaughterhouse (Viwi)",
@@ -3807,15 +3632,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/Ond52P3gE9I",
     "showcaseVideo": "https://youtu.be/F4TUsKuXWg4",
+    "duplicateOf": "Slaughterhouse",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/92905701",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129783335
+    ]
   },
   {
     "name": "Yellow Slaughterhouse",
@@ -3825,15 +3649,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/k0h3tliGlEI",
     "showcaseVideo": "https://youtu.be/oNY9im0870I",
+    "duplicateOf": "Slaughterhouse",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/84550931",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129783338
+    ]
   },
   {
     "name": "Pinkhouse",
@@ -3842,8 +3665,8 @@
     "length": 70,
     "version": 2.2,
     "submitter": "Anceps",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/A_3D-Dz2GB4",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
@@ -3857,15 +3680,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/FN_6rxa8oyg",
     "showcaseVideo": "https://youtu.be/J--tYr5HbQ0",
+    "duplicateOf": "Slaughterhouse",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/81376890",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129783324
+    ]
   },
   {
     "name": "Goldenhouse",
@@ -3875,14 +3697,13 @@
     "length": 70,
     "version": 2.2,
     "submitter": "raine",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://youtu.be/k0TciNmGJ_M",
     "showcaseVideo": "https://youtu.be/wP0dDU0eMuY",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 129175939
+    ]
   },
   {
     "name": "Invisible Slaughterhouse 49-91%",
@@ -3898,8 +3719,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 89216381
+    ]
   },
   {
     "name": "Sonic Wave (Enlil) 1.9 60hz",
@@ -3915,8 +3735,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 102063440
+    ]
   },
   {
     "name": "Acheron 60hz 69-100%",
@@ -3933,8 +3752,7 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 73667628
+    ]
   },
   {
     "name": "Silent Acropolis unn 27-100%",
@@ -3949,8 +3767,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 83143127
+    ]
   },
   {
     "name": "Silent Acropolis (Fixed) 31-100%",
@@ -3965,8 +3782,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 13918016
+    ]
   },
   {
     "name": "Acheron (serpentical)",
@@ -3982,8 +3798,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 122490465
+    ]
   },
   {
     "name": "last stop 31%, 15%, 25%, 31%, 15%, 25% in a row",
@@ -3999,8 +3814,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 64815983
+    ]
   },
   {
     "name": "vsc superbuff 3 deaths, 99.87% accuracy",
@@ -4016,8 +3830,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 74130902
+    ]
   },
   {
     "name": "VSC 144hz 24-100%",
@@ -4033,8 +3846,7 @@
       "Challenge",
       "Low Hertz",
       "Progress"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "VSC42X2",
@@ -4050,8 +3862,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126120773
+    ]
   },
   {
     "name": "j0nahh challenge",
@@ -4067,8 +3878,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126120826
+    ]
   },
   {
     "name": "VSC 20p is dead",
@@ -4084,8 +3894,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126120766
+    ]
   },
   {
     "name": "VSC Nev Finale 25-68%",
@@ -4101,8 +3910,7 @@
     "tags": [
       "Challenge",
       "Progress"
-    ],
-    "id": 126120486
+    ]
   },
   {
     "name": "VSC Madness",
@@ -4112,15 +3920,14 @@
     "length": 105,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/LlAxByDjSvQ",
     "showcaseVideo": "https://youtu.be/u9O1OHE20fw",
+    "duplicateOf": "VSC 2.1",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/126120741",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 126120741
+    ]
   },
   {
     "name": "VSC on Track",
@@ -4130,15 +3937,14 @@
     "length": 100,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/jZ4JkZ0NpHs",
     "showcaseVideo": "https://youtu.be/USXvXPKulKw",
+    "duplicateOf": "VSC 2.1",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/126120734",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 126120734
+    ]
   },
   {
     "name": "vsc infinity",
@@ -4148,14 +3954,13 @@
     "length": 16,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/TfcOfD47itU",
     "showcaseVideo": "https://youtu.be/OqF6C0m5VcQ",
+    "duplicateOf": "VSC 2.1",
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 78765594
+    ]
   },
   {
     "name": "VSC 2.1",
@@ -4171,8 +3976,7 @@
       "Challenge",
       "Verified",
       "Outdated Version"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "VSC red",
@@ -4182,15 +3986,14 @@
     "length": 16,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/8mEMOrg3RZc",
     "showcaseVideo": "https://youtu.be/pBxYLz2Q-ak",
+    "duplicateOf": "VSC 2.1",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/60805571",
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126120613
+    ]
   },
   {
     "name": "VSC nerfed",
@@ -4200,14 +4003,13 @@
     "length": 16,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/p3NdbRErpoA",
     "showcaseVideo": "https://youtu.be/gTmHcwyymX0",
+    "duplicateOf": "VSC 2.1",
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 126120596
+    ]
   },
   {
     "name": "VSC 1.1x 2 deaths, 99.84% accuracy",
@@ -4224,8 +4026,7 @@
       "Progress",
       "Noclip",
       "Speedhack"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "VSC layout",
@@ -4235,14 +4036,13 @@
     "length": 16,
     "version": 2.1,
     "submitter": "Excryst",
-    "duplicateOf": "VSC 2.1",
     "video": "https://youtu.be/SGT-I-lGIIA",
     "showcaseVideo": "https://youtu.be/ZFjjdfEqwhQ",
+    "duplicateOf": "VSC 2.1",
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 60811038
+    ]
   },
   {
     "name": "VSC 144hz 54%",
@@ -4258,8 +4058,7 @@
       "Challenge",
       "Low Hertz",
       "Progress"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "Forgotten Maiden",
@@ -4274,8 +4073,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 130217575
+    ]
   },
   {
     "name": "3sh on Pointercrate",
@@ -4291,8 +4089,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 127534241
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED layout 41%",
@@ -4307,8 +4104,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 69196070
+    ]
   },
   {
     "name": "Azure Flare 46%",
@@ -4323,8 +4119,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 112752025
+    ]
   },
   {
     "name": "Ragnarok 60hz",
@@ -4340,8 +4135,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 55624478
+    ]
   },
   {
     "name": "MINUS WORLD 67-91%",
@@ -4356,8 +4150,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 77875682
+    ]
   },
   {
     "name": "Extra Mile 77%, 69%, 53% in a row",
@@ -4372,8 +4165,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 68766469
+    ]
   },
   {
     "name": "Paraballa 60hz Mobile",
@@ -4389,8 +4181,7 @@
       "Challenge",
       "Low Hertz",
       "Mobile"
-    ],
-    "id": 68963370
+    ]
   },
   {
     "name": "FINAL FANTASY",
@@ -4405,8 +4196,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 76767195
+    ]
   },
   {
     "name": "my backyard",
@@ -4421,8 +4211,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 116528569
+    ]
   },
   {
     "name": "anodyne",
@@ -4437,8 +4226,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 105191372
+    ]
   },
   {
     "name": "vsc superbuff 48%",
@@ -4454,8 +4242,7 @@
     "tags": [
       "Challenge",
       "Progress"
-    ],
-    "id": 74130902
+    ]
   },
   {
     "name": "INTERCONNECTED",
@@ -4471,8 +4258,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 121310778
+    ]
   },
   {
     "name": "Saul Goodman 92%, 100% in a row",
@@ -4488,8 +4274,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 90477539
+    ]
   },
   {
     "name": "Im Hard 92%",
@@ -4512,8 +4297,8 @@
     "length": 78,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "Kyouki",
     "video": "https://youtu.be/x9h7QPWNGsg",
+    "duplicateOf": "Kyouki",
     "tags": [
       "Level",
       "Progress"
@@ -4534,8 +4319,7 @@
       "Low Hertz",
       "Rated",
       "Mobile"
-    ],
-    "id": 63996127
+    ]
   },
   {
     "name": "Lithium 60hz Mobile",
@@ -4553,8 +4337,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 97364686
+    ]
   },
   {
     "name": "Ouroboros 60hz Mobile 10-100%",
@@ -4573,8 +4356,7 @@
       "Rated",
       "Tentative",
       "Mobile"
-    ],
-    "id": 56703691
+    ]
   },
   {
     "name": "if FF was lvl 1",
@@ -4590,8 +4372,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 92787811
+    ]
   },
   {
     "name": "last stop 5 deaths, 99.80% accuracy",
@@ -4607,8 +4388,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 64815983
+    ]
   },
   {
     "name": "GRIEF 1.1x 69-92%",
@@ -4641,8 +4421,7 @@
       "Level",
       "Progress",
       "Speedhack"
-    ],
-    "id": 97338077
+    ]
   },
   {
     "name": "Operation Evolution 97%, 100% in a row",
@@ -4658,8 +4437,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 114999625
+    ]
   },
   {
     "name": "KOCMOC",
@@ -4675,8 +4453,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 87665224
+    ]
   },
   {
     "name": "Master of Puppets",
@@ -4692,8 +4469,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 136396693
+    ]
   },
   {
     "name": "The Lightning Rod",
@@ -4709,8 +4485,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 93917076
+    ]
   },
   {
     "name": "CHIL",
@@ -4726,8 +4501,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 114281093
+    ]
   },
   {
     "name": "Sakupen Circles 1.1x",
@@ -4743,8 +4517,7 @@
       "Level",
       "Rated",
       "Speedhack"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "Barely Visible SKC 37-100%",
@@ -4785,8 +4558,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 102647436
+    ]
   },
   {
     "name": "zorin",
@@ -4801,8 +4573,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 134541844
+    ]
   },
   {
     "name": "limbo but uwu ig idk 60hz Mobile 80%",
@@ -4820,8 +4591,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 110705712
+    ]
   },
   {
     "name": "Exens limit",
@@ -4836,8 +4606,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 97338077
+    ]
   },
   {
     "name": "Sakupen Circles (Exen)",
@@ -4852,8 +4621,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 57546619
+    ]
   },
   {
     "name": "Sakupen Circles buff",
@@ -4868,8 +4636,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 116790129
+    ]
   },
   {
     "name": "Sakupen Circles (Kritoss)",
@@ -4883,8 +4650,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 109644667
+    ]
   },
   {
     "name": "Sakupen Circles (Diamond)",
@@ -4899,8 +4665,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 116790129
+    ]
   },
   {
     "name": "Sakupen circles (Old) 1.1x 64%",
@@ -4916,8 +4681,7 @@
       "Level",
       "Progress",
       "Speedhack"
-    ],
-    "id": 10887708
+    ]
   },
   {
     "name": "Sakupen Denouement",
@@ -4927,14 +4691,13 @@
     "length": 52,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/7Plzij-GNw4",
     "showcaseVideo": "https://youtu.be/R6dZmmemZpg",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 133261698
+    ]
   },
   {
     "name": "Inverted Colors SKC",
@@ -4944,13 +4707,12 @@
     "length": 50,
     "version": 2.2,
     "submitter": "ad3usgmd",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/8XfSW0AXgAg",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 141889312
+    ]
   },
   {
     "name": "Sakupen Madness",
@@ -4960,14 +4722,13 @@
     "length": 135,
     "version": 2.2,
     "submitter": "stax",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/oNaP_yoE7VI",
     "showcaseVideo": "https://youtu.be/1bEqYuh6oeA",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 113814202
+    ]
   },
   {
     "name": "Sakupen Circles (ROZE)",
@@ -4977,13 +4738,12 @@
     "length": 50,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/xNATnkAvzFw",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 141351180
+    ]
   },
   {
     "name": "Sakupen Circles",
@@ -4999,8 +4759,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "lgbt circles",
@@ -5010,14 +4769,13 @@
     "length": 50,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/40qdK8T6gL0",
     "showcaseVideo": "https://youtu.be/zvczRYrvmr4",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 113421585
+    ]
   },
   {
     "name": "inv skc 10 op",
@@ -5027,15 +4785,14 @@
     "length": 50,
     "version": 2.2,
     "submitter": "ad3usgmd",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/QiSXKeLonkw",
     "showcaseVideo": "https://youtu.be/7WgD_7Z0Emg",
+    "duplicateOf": "Sakupen Circles",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120546085",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 120546085
+    ]
   },
   {
     "name": "Sakupen Circles (Full Detail)",
@@ -5045,15 +4802,14 @@
     "length": 50,
     "version": 2.1,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/DGGw5T1CcbA",
     "showcaseVideo": "https://youtu.be/g-2GELOo-Xc",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 76962930
+    ]
   },
   {
     "name": "Sakupen Time",
@@ -5063,13 +4819,12 @@
     "length": 50,
     "version": 2.2,
     "submitter": "goofygdplayer",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/kgp67D14rc8",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 75071346
+    ]
   },
   {
     "name": "Magentahouse 25-86%",
@@ -5078,8 +4833,8 @@
     "length": 30,
     "version": 2.2,
     "submitter": "raine",
-    "duplicateOf": "Slaughterhouse",
     "video": "https://x.com/nswishfr/status/2032009677249335407",
+    "duplicateOf": "Slaughterhouse",
     "tags": [
       "Level",
       "Progress"
@@ -5098,8 +4853,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 100420930
+    ]
   },
   {
     "name": "wocky circles (Elysium) 34-88%",
@@ -5114,8 +4868,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 84722782
+    ]
   },
   {
     "name": "Sakupen Circles (Criedex)",
@@ -5129,8 +4882,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 120000106
+    ]
   },
   {
     "name": "WOKE CIRCLES",
@@ -5140,14 +4892,13 @@
     "length": 50,
     "version": 2.1,
     "submitter": "Anceps",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/MKFeLVaBdoE",
     "showcaseVideo": "https://youtu.be/o626AFlYzoI",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 88318424
+    ]
   },
   {
     "name": "BONUS LEVEL",
@@ -5162,8 +4913,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 81287932
+    ]
   },
   {
     "name": "Unnerfed Zodiac",
@@ -5179,8 +4929,7 @@
       "Level",
       "Verified",
       "Tentative"
-    ],
-    "id": 54441585
+    ]
   },
   {
     "name": "i n j u r y 74%",
@@ -5210,8 +4959,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 112752025
+    ]
   },
   {
     "name": "RANDOM WAVE 516%",
@@ -5226,8 +4974,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 116760828
+    ]
   },
   {
     "name": "OUROBOROS (Unbuffed) 27-100%",
@@ -5257,8 +5004,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 92199224
+    ]
   },
   {
     "name": "last stop 37-100%",
@@ -5275,8 +5021,7 @@
       "Challenge",
       "Progress",
       "Tentative"
-    ],
-    "id": 64815983
+    ]
   },
   {
     "name": "Denouement USKC 67%",
@@ -5285,8 +5030,8 @@
     "length": 40,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles (Old)",
     "video": "https://youtu.be/4Q9iZX8gauM",
+    "duplicateOf": "Sakupen Circles (Old)",
     "tags": [
       "Level",
       "Progress"
@@ -5305,8 +5050,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 95259962
+    ]
   },
   {
     "name": "brownupen circles 67%",
@@ -5316,13 +5060,12 @@
     "length": 36,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Sakupen Circles",
     "video": "https://youtu.be/lOIIYvJ31M0",
+    "duplicateOf": "Sakupen Circles",
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 102356371
+    ]
   },
   {
     "name": "EXPIRATION DATE",
@@ -5337,8 +5080,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 95357570
+    ]
   },
   {
     "name": "BRITNEY NO SCLEARS 82%, (0%, 0%), 100% in a row",
@@ -5354,8 +5096,7 @@
       "Level",
       "Consistency",
       "Rated"
-    ],
-    "id": 125317359
+    ]
   },
   {
     "name": "Justin Camp",
@@ -5371,8 +5112,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 119160569
+    ]
   },
   {
     "name": "Triplusion",
@@ -5387,8 +5127,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 92910288
+    ]
   },
   {
     "name": "uskc deco 43-91% 2 deaths, 99.76% accuracy",
@@ -5404,8 +5143,7 @@
       "Level",
       "Progress",
       "Noclip"
-    ],
-    "id": 93094123
+    ]
   },
   {
     "name": "CorroZ B",
@@ -5420,8 +5158,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 67044214
+    ]
   },
   {
     "name": "Oblivers",
@@ -5436,8 +5173,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 85042202
+    ]
   },
   {
     "name": "Delirium (Unnerfed)",
@@ -5452,8 +5188,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 104605416
+    ]
   },
   {
     "name": "VSC Nev Finale (Old) 60%",
@@ -5482,8 +5217,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 28224824
+    ]
   },
   {
     "name": "True Innards",
@@ -5498,8 +5232,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 88216956
+    ]
   },
   {
     "name": "leaky faucet",
@@ -5514,8 +5247,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 98235192
+    ]
   },
   {
     "name": "Sonic Wave Infinity 120hz",
@@ -5531,8 +5263,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 69685815
+    ]
   },
   {
     "name": "Element 111 Rg",
@@ -5547,8 +5278,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 61775814
+    ]
   },
   {
     "name": "Sakupen Silhouette 54-100%",
@@ -5563,8 +5293,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 92199224
+    ]
   },
   {
     "name": "Cognition 60hz Mobile 15-96%",
@@ -5582,8 +5311,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 57600307
+    ]
   },
   {
     "name": "Leaves 77-100%, 65-80%, 65-78%, 65-86%, 65-80%, 65-100%, 65-91%, 65-78%, 65-79%x4, 65-86%, 65-84%, 65-87%, 65-79% in a row",
@@ -5600,8 +5328,7 @@
       "Level",
       "Consistency",
       "Tentative"
-    ],
-    "id": 82602651
+    ]
   },
   {
     "name": "Deimos",
@@ -5617,8 +5344,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 93091893
+    ]
   },
   {
     "name": "brownupen circles 58-100%",
@@ -5632,8 +5358,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 102356371
+    ]
   },
   {
     "name": "VSC Out",
@@ -5643,15 +5368,14 @@
     "length": 99,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "VSC",
     "video": "https://youtu.be/SVHsQz-bwqU",
     "showcaseVideo": "https://youtu.be/FTJEXVRizyo",
+    "duplicateOf": "VSC",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/126120756",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 126120756
+    ]
   },
   {
     "name": "VSC Geist",
@@ -5661,15 +5385,14 @@
     "length": 108,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "VSC",
     "video": "https://youtu.be/FJnOov1Y7PE",
     "showcaseVideo": "https://youtu.be/Vdk0TvRbTZs",
+    "duplicateOf": "VSC",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/90775826",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 90775826
+    ]
   },
   {
     "name": "VSC Lost Sense Deco",
@@ -5679,15 +5402,14 @@
     "length": 16,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "duplicateOf": "VSC",
     "video": "https://youtu.be/WO5kCdWHvR4",
     "showcaseVideo": "https://youtu.be/ncrjA6pmrZI",
+    "duplicateOf": "VSC",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82200638",
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 82200638
+    ]
   },
   {
     "name": "VSC",
@@ -5702,8 +5424,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "ET3RN4L TORM3NT",
@@ -5734,8 +5455,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 87817698
+    ]
   },
   {
     "name": "Formosa 54hz 2.73%, 1.46% in a row",
@@ -5753,8 +5473,7 @@
       "Low Hertz",
       "Consistency",
       "Tentative"
-    ],
-    "id": 79120639
+    ]
   },
   {
     "name": "Zero Factorial (LAMINGTON) 36-100%",
@@ -5784,8 +5503,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 109814681
+    ]
   },
   {
     "name": "VSC 1.1x 16-86%",
@@ -5801,8 +5519,7 @@
       "Challenge",
       "Progress",
       "Speedhack"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "Zodiac 75hz",
@@ -5818,8 +5535,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 52374843
+    ]
   },
   {
     "name": "Flashbang 45-100%",
@@ -5848,8 +5564,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 109814681
+    ]
   },
   {
     "name": "Vehemence (wPopoff old) 33-60%",
@@ -5865,8 +5580,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 96572223
+    ]
   },
   {
     "name": "Silent RealistiK 22",
@@ -5881,8 +5595,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 133065676
+    ]
   },
   {
     "name": "Thinking Redux II 91%",
@@ -5898,8 +5611,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 126692371
+    ]
   },
   {
     "name": "Sevvend Clubstep (Full Detail)",
@@ -5916,8 +5628,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 120255728
+    ]
   },
   {
     "name": "Leaves 33-91%",
@@ -5934,8 +5645,7 @@
       "Level",
       "Progress",
       "Tentative"
-    ],
-    "id": 82602651
+    ]
   },
   {
     "name": "Leaves 25-82%",
@@ -5952,8 +5662,7 @@
       "Level",
       "Progress",
       "Tentative"
-    ],
-    "id": 82602651
+    ]
   },
   {
     "name": "Ex Vacuo 72%",
@@ -5982,8 +5691,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 73765413
+    ]
   },
   {
     "name": "Snowblind",
@@ -6016,8 +5724,7 @@
       "Progress",
       "Rated",
       "Mobile"
-    ],
-    "id": 57600307
+    ]
   },
   {
     "name": "Buffed unknown 43%",
@@ -6033,8 +5740,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 128587204
+    ]
   },
   {
     "name": "SADOMASOCHISM 60%, 85% in a row",
@@ -6049,8 +5755,7 @@
     "tags": [
       "Challenge",
       "Consistency"
-    ],
-    "id": 76213334
+    ]
   },
   {
     "name": "Flashbang 46%",
@@ -6080,8 +5785,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 86084399
+    ]
   },
   {
     "name": "Im Deaf (superbuffed) 2 deaths, 99.69% accuracy",
@@ -6110,8 +5814,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 91901757
+    ]
   },
   {
     "name": "Avernus 1.2x 58-100%",
@@ -6128,8 +5831,7 @@
       "Progress",
       "Rated",
       "Speedhack"
-    ],
-    "id": 89496627
+    ]
   },
   {
     "name": "Unnerfed Natural Disaster 54-100%",
@@ -6144,8 +5846,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 85176381
+    ]
   },
   {
     "name": "VSC 1.1x 61%",
@@ -6161,8 +5862,7 @@
       "Challenge",
       "Progress",
       "Speedhack"
-    ],
-    "id": 60805571
+    ]
   },
   {
     "name": "Lunatic Eyes",
@@ -6178,7 +5878,6 @@
       "Level",
       "Verified"
     ],
-    "id": 123417713,
     "originalName": "123417713"
   },
   {
@@ -6194,8 +5893,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 138215607
+    ]
   },
   {
     "name": "Snowblind (Old) 59%",
@@ -6225,8 +5923,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 73798874
+    ]
   },
   {
     "name": "Im Deaf",
@@ -6241,8 +5938,7 @@
     "tags": [
       "Challenge",
       "Verified"
-    ],
-    "id": 75584822
+    ]
   },
   {
     "name": "Graceful 67%, 250% in a row",
@@ -6301,8 +5997,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 13173489
+    ]
   },
   {
     "name": "Sakupen Circles fi",
@@ -6317,8 +6012,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 118680356
+    ]
   },
   {
     "name": "Formosa 54hz 3.13%",
@@ -6336,8 +6030,7 @@
       "Low Hertz",
       "Progress",
       "Tentative"
-    ],
-    "id": 79120639
+    ]
   },
   {
     "name": "Element 111 Rg (Hack-Nerfed)",
@@ -6347,14 +6040,13 @@
     "length": 97,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Element 111 Rg",
     "video": "https://youtu.be/mXoaMklDNmg",
     "showcaseVideo": "https://youtu.be/ENc_q7C7W04",
+    "duplicateOf": "Element 111 Rg",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 106084668
+    ]
   },
   {
     "name": "MUD 63%",
@@ -6383,8 +6075,7 @@
     "tags": [
       "Challenge",
       "Progress"
-    ],
-    "id": 86191664
+    ]
   },
   {
     "name": "Buffed unknown 11-47%",
@@ -6400,8 +6091,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 128587204
+    ]
   },
   {
     "name": "The Yangire 144hz",
@@ -6418,8 +6108,7 @@
       "Low Hertz",
       "Rated",
       "Tentative"
-    ],
-    "id": 110500920
+    ]
   },
   {
     "name": "Vehemence (Wpopoff old) 24-55%",
@@ -6434,8 +6123,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": "96572223"
+    ]
   },
   {
     "name": "Eyes in the Water",
@@ -6451,8 +6139,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 95851008
+    ]
   },
   {
     "name": "Eyes in the Water (Netermind)",
@@ -6484,8 +6171,7 @@
       "Low Hertz",
       "Progress",
       "Rated"
-    ],
-    "id": 76543324
+    ]
   },
   {
     "name": "FAIRY KNIFE HELL 37%",
@@ -6500,8 +6186,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 111680151
+    ]
   },
   {
     "name": "Voltage",
@@ -6517,8 +6202,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 131599104
+    ]
   },
   {
     "name": "Esfera 75hz",
@@ -6534,8 +6218,7 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ],
-    "id": 78435955
+    ]
   },
   {
     "name": "The Golden 75hz 54%",
@@ -6553,8 +6236,7 @@
       "Progress",
       "Rated",
       "Tentative"
-    ],
-    "id": 60978746
+    ]
   },
   {
     "name": "KOSETSU",
@@ -6570,8 +6252,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 109439644
+    ]
   },
   {
     "name": "Through the Gates",
@@ -6587,8 +6268,7 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 49072489
+    ]
   },
   {
     "name": "Acheron (OneAlphaHelix) 79%",
@@ -6603,8 +6283,7 @@
     "tags": [
       "Level",
       "Progress"
-    ],
-    "id": 82709695
+    ]
   },
   {
     "name": "naksugwork",
@@ -6619,8 +6298,7 @@
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 133304117
+    ]
   },
   {
     "name": "Redwork",
@@ -6630,14 +6308,13 @@
     "length": 127,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "duplicateOf": "Firework",
     "video": "https://youtu.be/sHFY_vOMLCo",
     "showcaseVideo": "https://youtu.be/RHmVk0pUIPI",
+    "duplicateOf": "Firework",
     "tags": [
       "Level",
       "Verified"
-    ],
-    "id": 113640015
+    ]
   },
   {
     "name": "Firework",
@@ -6654,7 +6331,6 @@
       "Level",
       "Verified",
       "Rated"
-    ],
-    "id": 75206202
+    ]
   }
 ]

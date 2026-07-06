@@ -1,7 +1,6 @@
 [
   {
     "name": "Waterfall",
-    "id": "waterfall",
     "player": "LordVadercraft",
     "levelID": 110991117,
     "date": "2024-10-11",
@@ -18,7 +17,6 @@
   },
   {
     "name": "Avernus 480hz Mobile 75-100%",
-    "id": "avernus-480hz-mobile-75-100",
     "player": "Prmak",
     "length": 23,
     "version": 2.2,
@@ -36,7 +34,6 @@
   },
   {
     "name": "Spectrum Cyclone 60hz Mobile",
-    "id": "spectrum-cyclone-60hz-mobile",
     "player": "Cedric22",
     "date": "2025-09-07",
     "length": 124,
@@ -54,7 +51,6 @@
   },
   {
     "name": "Widestep 60hz 31-91%",
-    "id": "widestep-60hz-31-91",
     "player": "Th3on3C",
     "date": "2025-03-31",
     "length": 52,
@@ -72,7 +68,6 @@
   },
   {
     "name": "Silent Clubstep II 27-42%",
-    "id": "silent-clubstep-ii-27-42",
     "player": "SkittleCatastrophe",
     "date": "2025-08-30",
     "length": 15,
@@ -88,7 +83,6 @@
   },
   {
     "name": "SAND SAILOR 60hz",
-    "id": "sand-sailor-60hz",
     "player": "Cejelost",
     "levelID": 88868682,
     "date": "2024-08-19",
@@ -105,7 +99,6 @@
   },
   {
     "name": "Coalescence",
-    "id": "coalescence",
     "player": "Amplitron",
     "levelID": 108708033,
     "date": "2024-08-05",
@@ -122,7 +115,6 @@
   },
   {
     "name": "The Salt Factory (Layout) 54-100%",
-    "id": "the-salt-factory-layout-54-100",
     "player": "nickname",
     "date": "2024-06-01",
     "length": 43,
@@ -137,7 +129,6 @@
   },
   {
     "name": "NEUTRA 120hz Mobile 16-80%",
-    "id": "neutra-120hz-mobile-16-80",
     "player": "DENISKA",
     "levelID": 88611404,
     "date": "2024-09-18",
@@ -156,7 +147,6 @@
   },
   {
     "name": "Crystal Crusher",
-    "id": "crystal-crusher",
     "player": "GuitGuit",
     "levelID": 93732702,
     "date": "2025-01-13",
@@ -174,7 +164,6 @@
   },
   {
     "name": "Unnerfed BoJ 67%, 100% in a row",
-    "id": "unnerfed-boj-67-100-in-a-row",
     "player": "MostDefinitelyAlbert",
     "levelID": 35497549,
     "date": "2024-03-07",
@@ -190,7 +179,6 @@
   },
   {
     "name": "Cosmic Cyclone (Meatius) 10 deaths, 99.94 accuracy",
-    "id": "cosmic-cyclone-meatius-10-deaths-99-94-accuracy",
     "player": "Meatius",
     "date": "2025-08-22",
     "levelID": 108671100,
@@ -207,7 +195,6 @@
   },
   {
     "name": "Cosmic Cyclone (Meatius) 52%",
-    "id": "cosmic-cyclone-meatius-52",
     "player": "Meatius",
     "date": "2025-08-22",
     "levelID": 108671100,
@@ -223,7 +210,6 @@
   },
   {
     "name": "ROCKBOTTOM",
-    "id": "rockbottom",
     "player": "ZazaGD",
     "date": "2025-07-02",
     "length": 64,
@@ -239,7 +225,6 @@
   },
   {
     "name": "ULTRA PARACOSM 22-100%",
-    "id": "ultra-paracosm-22-100",
     "player": "Wity",
     "levelID": null,
     "date": "2025-10-07",
@@ -255,7 +240,6 @@
   },
   {
     "name": "Blooming Blossoms 67%",
-    "id": "blooming-blossoms-67",
     "player": "piesy",
     "date": "2025-07-12",
     "length": 65,
@@ -271,7 +255,6 @@
   },
   {
     "name": "Slaughterhouse (Buffed) 60-100%",
-    "id": "slaughterhouse-buffed-60-100",
     "player": "Doggie",
     "date": "2025-02-21",
     "length": 24,
@@ -285,7 +268,6 @@
   },
   {
     "name": "Labyrinth 37%",
-    "id": "labyrinth-37",
     "player": "GGonop",
     "length": 31,
     "version": 2.2,
@@ -302,7 +284,6 @@
   },
   {
     "name": "LIMBO 240hz Mobile 34-100%",
-    "id": "limbo-240hz-mobile-34-100",
     "player": "GYTO",
     "levelID": 86084399,
     "date": "2025-09-08",
@@ -320,7 +301,6 @@
   },
   {
     "name": "Gumi 86%",
-    "id": "gumi-86",
     "player": "Thnnder",
     "date": "2025-07-19",
     "length": 40,
@@ -336,7 +316,6 @@
   },
   {
     "name": "Silent Circles (Starchman) 53-83%",
-    "id": "silent-circles-starchman-53-83",
     "player": "Juls",
     "levelID": null,
     "date": "2025-10-25",
@@ -352,7 +331,6 @@
   },
   {
     "name": "Rusted Retinas 50-100%",
-    "id": "rusted-retinas-50-100",
     "player": "MyntiFresh",
     "date": "2024-02-13",
     "length": 42,
@@ -369,7 +347,6 @@
   },
   {
     "name": "Cimmerian Shade 142%",
-    "id": "cimmerian-shade-142",
     "player": "Zoink",
     "date": "2025-06-06",
     "length": 120,
@@ -386,7 +363,6 @@
   },
   {
     "name": "green tartarus",
-    "id": "green-tartarus",
     "player": "breakcore11",
     "levelID": 110190624,
     "date": "2024-09-16",
@@ -402,7 +378,6 @@
   },
   {
     "name": "Subsuming Vortex 49%",
-    "id": "subsuming-vortex-49",
     "player": "Cursed",
     "levelID": 66422816,
     "date": "2025-04-10",
@@ -418,7 +393,6 @@
   },
   {
     "name": "Subterminal buffed 23-60%",
-    "id": "subterminal-buffed-23-60",
     "player": "ChopBlox",
     "date": "2025-05-23",
     "length": "21",
@@ -434,7 +408,6 @@
   },
   {
     "name": "Triathlon 67%",
-    "id": "triathlon-67",
     "player": "ZygisDij",
     "levelID": 116430752,
     "date": "2025-01-19",
@@ -450,7 +423,6 @@
   },
   {
     "name": "Heliopolis (Jif) 46%",
-    "id": "heliopolis-jif-46",
     "player": "Jif",
     "date": "2024-02-16",
     "length": 65,
@@ -466,7 +438,6 @@
   },
   {
     "name": "KOCMOC publicrelease 32-76%",
-    "id": "kocmoc-publicrelease-32-76",
     "player": "goldix",
     "date": "2024-11-01",
     "length": 26,
@@ -482,7 +453,6 @@
   },
   {
     "name": "KOCMOC (Bacon) 14-82% 2 deaths, 99.88 accuracy",
-    "id": "kocmoc-bacon-14-82-2-deaths-99-88-accuracy",
     "player": "Bacon",
     "length": 41,
     "version": 2.2,
@@ -499,7 +469,6 @@
   },
   {
     "name": "KOCMOC publicrelease 14-63%",
-    "id": "kocmoc-publicrelease-14-63",
     "player": "goldix",
     "date": "2024-11-01",
     "length": 29,
@@ -515,7 +484,6 @@
   },
   {
     "name": "Sonic Wave Infinity 120hz Mobile 42%",
-    "id": "sonic-wave-infinity-120hz-mobile-42",
     "player": "russoboy",
     "levelID": 69685815,
     "date": "2023-11-08",
@@ -534,7 +502,6 @@
   },
   {
     "name": "Deep Bass 1.25x 98%",
-    "id": "deep-bass-1-25x-98",
     "player": "FlinGuSPluNkuS",
     "levelID": 96383663,
     "date": "2025-08-16",
@@ -553,7 +520,6 @@
   },
   {
     "name": "Mayhem 144hz Mobile 43-100%",
-    "id": "mayhem-144hz-mobile-43-100",
     "player": "Mateex",
     "date": "2025-06-04",
     "length": "40",
@@ -572,7 +538,6 @@
   },
   {
     "name": "Sonic Wave Infinity 120hz Mobile 41-100%",
-    "id": "sonic-wave-infinity-120hz-mobile-41-100",
     "player": "russoboy",
     "levelID": 69685815,
     "date": "2023-10-28",
@@ -591,7 +556,6 @@
   },
   {
     "name": "Congregation 60hz 65%",
-    "id": "congregation-60hz-65",
     "player": "Clutter",
     "levelID": 68668045,
     "date": "2023-03-29",
@@ -609,7 +573,6 @@
   },
   {
     "name": "Congregation 60hz Mobile 42-100%",
-    "id": "congregation-60hz-42-100",
     "player": "ForcedDragon",
     "levelID": 68668045,
     "date": "2022-11-23",
@@ -628,7 +591,6 @@
   },
   {
     "name": "KOCMOC (ROZE GD) 51%",
-    "id": "kocmoc-ROZE-GD-51",
     "player": "ROZE GD",
     "date": "2025-08-03",
     "length": 42,
@@ -642,7 +604,6 @@
   },
   {
     "name": "Calculator Core 120hz Mobile",
-    "id": "calculator-core-120hz-mobile",
     "player": "Prmak",
     "date": "2025-07-07",
     "length": "204",
@@ -660,7 +621,6 @@
   },
   {
     "name": "Silent Club Plus 55-100%",
-    "id": "silent-club-plus-55-100",
     "player": "Whizkid05",
     "date": "2025-09-14",
     "length": 48,
@@ -675,7 +635,6 @@
   },
   {
     "name": "Misanthrope 65-100%",
-    "id": "misanthrope-65-100",
     "player": "BigMacGD",
     "levelID": 60284876,
     "date": "2022-08-28",
@@ -691,7 +650,6 @@
   },
   {
     "name": "Death Corridor Easy 64%",
-    "id": "death-corridor-easy-64",
     "player": "KugelBlitZ",
     "date": "2024-10-30",
     "length": 86,
@@ -706,7 +664,6 @@
   },
   {
     "name": "Extra Mile",
-    "id": "extra-mile",
     "player": "parker",
     "levelID": 68766469,
     "date": "2021-05-01",
@@ -722,7 +679,6 @@
   },
   {
     "name": "True Unnerfed Slaughterhouse 57-100%",
-    "id": "true-unnerfed-slaughterhouse-57-100",
     "player": "Doggie",
     "levelID": 77618325,
     "date": "2024-05-15",
@@ -738,7 +694,6 @@
   },
   {
     "name": "FINXLE 34%",
-    "id": "finxle-34",
     "player": "MoonFrost",
     "date": "2024-10-01",
     "length": 6,
@@ -753,7 +708,6 @@
   },
   {
     "name": "Tremor 50-100%",
-    "id": "tremor-50-100",
     "player": "VoltrixAce",
     "levelID": 79823052,
     "date": "2024-07-01",
@@ -769,7 +723,6 @@
   },
   {
     "name": "Torrent 86%, 81%",
-    "id": "torrent-86-81",
     "player": "sydno",
     "levelID": 80993342,
     "date": "2025-09-15",
@@ -785,7 +738,6 @@
   },
   {
     "name": "Blood Echo 85%, 53%x2",
-    "id": "blood-echo-85-53x2",
     "player": "GuillExprex52",
     "length": 130,
     "version": 2.2,
@@ -802,7 +754,6 @@
   },
   {
     "name": "True evil",
-    "id": "true-evil",
     "player": "dizbro",
     "length": 94,
     "version": 2.2,
@@ -818,7 +769,6 @@
   },
   {
     "name": "IRIS 82%, 100%",
-    "id": "iris-82-100",
     "player": "Timy",
     "levelID": 123853954,
     "date": "2025-09-09",
@@ -835,7 +785,6 @@
   },
   {
     "name": "Delta",
-    "id": "delta",
     "player": "Doggie",
     "date": "2023-08-30",
     "length": 145,
@@ -852,7 +801,6 @@
   },
   {
     "name": "Sides Of My Mind 60hz Mobile",
-    "id": "sides-of-my-mind-60hz-mobile",
     "player": "Batle",
     "levelID": 91042484,
     "date": "2024-06-01",
@@ -870,7 +818,6 @@
   },
   {
     "name": "THE JET ENGINE",
-    "id": "the-jet-engine",
     "player": "eviljoe",
     "date": "2025-07-15",
     "length": 86,
@@ -887,7 +834,6 @@
   },
   {
     "name": "Theory Of Darkness (Old)",
-    "id": "theory-of-darkness-old",
     "player": "Glow",
     "levelID": 68243886,
     "date": "2024-12-14",
@@ -904,7 +850,6 @@
   },
   {
     "name": "Silent Helheim 50%",
-    "id": "silent-helheim-50",
     "player": "Kopyedz",
     "levelID": 80469799,
     "date": "2024-02-07",
@@ -920,7 +865,6 @@
   },
   {
     "name": "Gumi 32-96%",
-    "id": "gumi-32-96",
     "player": "lolwut",
     "date": "2025-07-19",
     "length": "30",
@@ -936,7 +880,6 @@
   },
   {
     "name": "abocto",
-    "id": "abocto",
     "player": "Raluca",
     "length": "111",
     "version": "2.2",
@@ -952,7 +895,6 @@
   },
   {
     "name": "Frost Spirit 76%, 100%",
-    "id": "frost-spirit-76-100",
     "player": "Superjavicon",
     "levelID": 95767653,
     "date": "2024-06-15",
@@ -969,7 +911,6 @@
   },
   {
     "name": "Tenkai 60hz Mobile",
-    "id": "tenkai-60hz-mobile",
     "player": "batle",
     "length": 146,
     "version": 2.2,
@@ -988,7 +929,6 @@
   },
   {
     "name": "Peaceful Mode",
-    "id": "peaceful-mode",
     "player": "SoggyDash",
     "date": "2025-06-18",
     "length": 45,
@@ -1004,7 +944,6 @@
   },
   {
     "name": "Glass Chapel (Layout) 65-100%",
-    "id": "glass-chapel-layout-65-100",
     "player": "iliLaserili",
     "date": "2025-07-09",
     "length": 68,
@@ -1020,7 +959,6 @@
   },
   {
     "name": "Jigsaw",
-    "id": "jigsaw",
     "player": "Gokill",
     "levelID": 95031870,
     "date": "2023-10-01",
@@ -1037,7 +975,6 @@
   },
   {
     "name": "Wasureta 60hz",
-    "id": "wasureta-60hz",
     "player": "shaggy712",
     "levelID": 64658786,
     "date": "2024-08-29",
@@ -1054,7 +991,6 @@
   },
   {
     "name": "Sakupen Circles fi (TrotskyGD)",
-    "id": "sakupen-circles-fi-trotskygd",
     "player": "Brian_Cheese",
     "date": "2025-06-12",
     "length": 50,
@@ -1070,7 +1006,6 @@
   },
   {
     "name": "Death Corridor Easy 16-100%",
-    "id": "death-corridor-easy-16-100",
     "player": "KugelBlitZ",
     "date": "2024-10-30",
     "length": 105,
@@ -1085,7 +1020,6 @@
   },
   {
     "name": "UNKNOWN",
-    "id": "unknown",
     "player": "Diamond",
     "levelID": 88203501,
     "date": "2023-01-30",
@@ -1102,7 +1036,6 @@
   },
   {
     "name": "UNKNOWN (Old)",
-    "id": "unknown-old",
     "player": "Emp",
     "levelID": 83580111,
     "date": "2024-01-07",
@@ -1118,7 +1051,6 @@
   },
   {
     "name": "Unnerfed Cyclone Machine",
-    "id": "unnerfed-cyclone-machine",
     "player": "SeptaGon7",
     "length": 97,
     "version": 2.2,
@@ -1134,7 +1066,6 @@
   },
   {
     "name": "BPATA MPAKA",
-    "id": "bpata-mpaka",
     "player": "Maybee",
     "date": "2024-10-26",
     "length": 107,
@@ -1151,7 +1082,6 @@
   },
   {
     "name": "Shadow Illusion 48-100%",
-    "id": "shadow-illusion-48-100",
     "player": "Yossarian",
     "date": "2024-12-23",
     "length": 8,
@@ -1166,7 +1096,6 @@
   },
   {
     "name": "Cimmerian Shade",
-    "id": "cimmerian-shade",
     "player": "Laniakea",
     "date": "2025-04-28",
     "length": 77,
@@ -1183,7 +1112,6 @@
   },
   {
     "name": "ZAPHKIEL 60hz",
-    "id": "zaphkiel-60hz",
     "player": "Sevant",
     "date": "2024-08-13",
     "length": "76",
@@ -1200,7 +1128,6 @@
   },
   {
     "name": "Disturb",
-    "id": "disturb",
     "player": "fusion425",
     "date": "2025-05-15",
     "length": 70,
@@ -1216,7 +1143,6 @@
   },
   {
     "name": "Slaughterhouse Redux 93%",
-    "id": "slaughterhouse-redux-93",
     "player": "liamkn08",
     "length": "65",
     "version": "2.1",
@@ -1231,7 +1157,6 @@
   },
   {
     "name": "Torrent",
-    "id": "torrent",
     "player": "Fossa",
     "levelID": 80993342,
     "date": "2022-06-13",
@@ -1247,7 +1172,6 @@
   },
   {
     "name": "Perpetual 55-100% 1 death, 99.92% accuracy",
-    "id": "perpetual-55-100-1-death-99-92-accuracy",
     "player": "f65",
     "date": "2025-03-26",
     "length": 6,
@@ -1262,7 +1186,6 @@
   },
   {
     "name": "Old Cautious 52-100%",
-    "id": "old-cautious-52-100",
     "player": "Sashozz",
     "levelID": 67894396,
     "date": "2025-03-06",
@@ -1278,7 +1201,6 @@
   },
   {
     "name": "Eternal Night 51-83%",
-    "id": "eternal-night-51-83",
     "player": "Thnnder",
     "date": "2022-09-08",
     "length": 28,
@@ -1294,7 +1216,6 @@
   },
   {
     "name": "Oblivion",
-    "id": "oblivion",
     "player": "Dice88",
     "levelID": 71025973,
     "date": "2021-07-05",
@@ -1311,7 +1232,6 @@
   },
   {
     "name": "Aronia 60hz",
-    "id": "aronia-60hz",
     "player": "Lavaclaw",
     "levelID": 60564010,
     "date": "2021-02-21",
@@ -1328,7 +1248,6 @@
   },
   {
     "name": "Lotus Flower 60hz Mobile 62%",
-    "id": "lotus-flower-60hz-mobile-62",
     "player": "SanctumGD",
     "levelID": 75813671,
     "date": "2025-08-18",
@@ -1347,7 +1266,6 @@
   },
   {
     "name": "Fragile 60hz 46-100%",
-    "id": "fragile-60hz-46-100",
     "player": "lappwv",
     "levelID": 65588448,
     "date": "2021-05-29",
@@ -1365,7 +1283,6 @@
   },
   {
     "name": "Sweeping Demon 2 59-100%",
-    "id": "sweeping-demon-2-59-100",
     "player": "Helix",
     "date": "2022-09-10",
     "length": "29",
@@ -1381,7 +1298,6 @@
   },
   {
     "name": "Viprin UFO",
-    "id": "viprin-ufo",
     "player": "TheGoldenBo",
     "date": "2024-06-30",
     "length": 97,
@@ -1398,7 +1314,6 @@
   },
   {
     "name": "Erebus 60hz",
-    "id": "erebus-60hz",
     "player": "Exyl",
     "levelID": 31462941,
     "date": "2020-07-14",
@@ -1415,7 +1330,6 @@
   },
   {
     "name": "Sweeping Demon II 47-74%",
-    "id": "sweeping-demon-ii-47-74",
     "player": "Bradenbowl",
     "date": "2025-01-16",
     "length": "19",
@@ -1431,7 +1345,6 @@
   },
   {
     "name": "Sweeping Demon II 50%",
-    "id": "sweeping-demon-ii-50",
     "player": "Bradenbowl",
     "levelID": 81842690,
     "date": "2025-01-16",
@@ -1447,7 +1360,6 @@
   },
   {
     "name": "Sweeping Demon 2 (Thnnder) 59-92%",
-    "id": "sweeping-demon-2-thnnder-59-92",
     "player": "Thnnder",
     "date": "2022-07-20",
     "length": "22",
@@ -1462,7 +1374,6 @@
   },
   {
     "name": "Zapped Balls",
-    "id": "zapped-balls",
     "player": "Revenant",
     "levelID": 90589855,
     "date": "2023-05-07",
@@ -1478,7 +1389,6 @@
   },
   {
     "name": "NEUTRA 120hz Mobile 53%",
-    "id": "neutra-120hz-mobile-53",
     "player": "DENISKA",
     "levelID": 88611404,
     "date": "2025-03-27",
@@ -1497,7 +1407,6 @@
   },
   {
     "name": "Apocalypse",
-    "id": "apocalypse",
     "player": "torn",
     "levelID": 114661373,
     "date": "2025-01-30",
@@ -1513,7 +1422,6 @@
   },
   {
     "name": "cry me a river",
-    "id": "cry-me-a-river",
     "player": "Doggie",
     "levelID": 76403850,
     "date": "2022-08-11",
@@ -1529,7 +1437,6 @@
   },
   {
     "name": "Deimos (GDSkele) 57-100%",
-    "id": "deimos-gdskele-57-100",
     "player": "swiborg",
     "date": "2023-05-22",
     "length": 75,
@@ -1544,7 +1451,6 @@
   },
   {
     "name": "THE ROCK HOUSE (Unnerfed) 88%",
-    "id": "the-rock-house-unnerfed-88",
     "player": "DragoonGD",
     "date": "2022-09-30",
     "length": 43,
@@ -1559,7 +1465,6 @@
   },
   {
     "name": "THE ROCK HOUSE",
-    "id": "the-rock-house",
     "player": "DragoonGD",
     "levelID": 83828637,
     "date": "2022-12-23",
@@ -1575,7 +1480,6 @@
   },
   {
     "name": "Katarsis",
-    "id": "katarsis",
     "player": "LordVadercraft",
     "date": "2025-05-18",
     "length": 304,
@@ -1591,7 +1495,6 @@
   },
   {
     "name": "last memory is dead 70%",
-    "id": "last-memory-is-dead-70",
     "player": "Thnnder",
     "date": "2025-06-17",
     "length": "33",
@@ -1605,7 +1508,6 @@
   },
   {
     "name": "Fracture",
-    "id": "fracture",
     "player": "Dezstro",
     "date": "2025-06-02",
     "length": 85,
@@ -1621,7 +1523,6 @@
   },
   {
     "name": "Acid Rain",
-    "id": "acid-rain",
     "player": "ShadowMyth",
     "levelID": 125150457,
     "date": "2025-08-25",
@@ -1637,7 +1538,6 @@
   },
   {
     "name": "Doublusion",
-    "id": "doublusion",
     "player": "Cursed",
     "levelID": 86028961,
     "date": "2023-01-08",
@@ -1653,7 +1553,6 @@
   },
   {
     "name": "Plastic Death",
-    "id": "plastic-death",
     "player": "zLevii",
     "levelID": 112788538,
     "date": "2024-12-05",
@@ -1669,7 +1568,6 @@
   },
   {
     "name": "p00p",
-    "id": "p00p",
     "player": "SpaceLIII",
     "levelID": 78503480,
     "date": "2022-03-02",
@@ -1685,7 +1583,6 @@
   },
   {
     "name": "Death Corridor 38-100%",
-    "id": "death-corridor-38-100",
     "player": "KugelBlitZ",
     "date": "2020-11-23",
     "length": 72,
@@ -1700,7 +1597,6 @@
   },
   {
     "name": "ECHO 42-95%",
-    "id": "echo-42-95",
     "player": "Bigthunder556",
     "date": "2025-02-21",
     "length": 74,
@@ -1715,7 +1611,6 @@
   },
   {
     "name": "Abandoned Corridor",
-    "id": "abandoned-corridor",
     "player": "Mentrillum",
     "levelID": 96017914,
     "date": "2024-08-07",
@@ -1731,7 +1626,6 @@
   },
   {
     "name": "Cosmic Cyclone (Meatius) 54-100%",
-    "id": "cosmic-cyclone-meatius-54-100",
     "player": "Meatius",
     "date": "2024-10-05",
     "length": 49,
@@ -1747,7 +1641,6 @@
   },
   {
     "name": "Exens limit 1.2x 53%",
-    "id": "exens-limit-12x-53",
     "player": "Skylar",
     "date": "2025-05-13",
     "length": "24",
@@ -1764,7 +1657,6 @@
   },
   {
     "name": "Hitorigoto",
-    "id": "hitorigoto",
     "player": "takma",
     "levelID": 90444470,
     "date": "2023-05-01",
@@ -1780,7 +1672,6 @@
   },
   {
     "name": "Zodiac 144hz Mobile 33-100%",
-    "id": "zodiac-144hz-mobile-33-100",
     "player": "Noxop",
     "levelID": 52374843,
     "date": "2023-07-17",
@@ -1799,7 +1690,6 @@
   },
   {
     "name": "Wasureta 875%",
-    "id": "wasureta-875",
     "player": "Trick",
     "levelID": 64658786,
     "date": "2024-09-22",
@@ -1816,7 +1706,6 @@
   },
   {
     "name": "True Unnerfed Slaughterhouse 49-81%",
-    "id": "true-unnerfed-slaughterhouse-49-81",
     "player": "Doggie",
     "levelID": 77618325,
     "date": "2023-11-29",
@@ -1832,7 +1721,6 @@
   },
   {
     "name": "Spectrolux (Old)",
-    "id": "spectrolux-old",
     "player": "fusion425",
     "date": "2023-03-08",
     "length": 76,
@@ -1848,7 +1736,6 @@
   },
   {
     "name": "Delusion 144hz Mobile",
-    "id": "delusion-144hz-mobile",
     "player": "ATaMAn",
     "date": "2024-04-26",
     "length": "15",
@@ -1865,7 +1752,6 @@
   },
   {
     "name": "Herr Machine 40-90%",
-    "id": "herr-machine-40-90",
     "player": "GreenZz",
     "date": "2025-08-09",
     "length": "52",
@@ -1880,7 +1766,6 @@
   },
   {
     "name": "Achenus",
-    "id": "achenus",
     "player": "serpentical",
     "levelID": 111249217,
     "date": "2024-10-18",
@@ -1896,7 +1781,6 @@
   },
   {
     "name": "lure in ohio",
-    "id": "lure-in-ohio",
     "player": "aytch0008",
     "levelID": 106582700,
     "date": "2024-06-15",
@@ -1912,7 +1796,6 @@
   },
   {
     "name": "Codependence 60hz 62%",
-    "id": "codependence-60hz-62",
     "player": "Aurorae",
     "levelID": 62556400,
     "date": "2024-10-04",
@@ -1931,7 +1814,6 @@
   },
   {
     "name": "Oblivion 60hz Mobile 49-100%",
-    "id": "oblivion-60hz-mobile-49-100",
     "player": "Bigthunder556",
     "date": "2022-06-27",
     "length": 31,
@@ -1951,7 +1833,6 @@
   },
   {
     "name": "Deimos (Tygrysek)",
-    "id": "deimos-tygrysek",
     "player": "SebasLopez",
     "levelID": 73729784,
     "date": "2021-07-26",
@@ -1967,7 +1848,6 @@
   },
   {
     "name": "kowareta 60hz",
-    "id": "kowareta-60hz",
     "player": "lappwv",
     "levelID": 46763581,
     "date": "2020-12-30",
@@ -1984,7 +1864,6 @@
   },
   {
     "name": "Judgement Knights (Old)",
-    "id": "judgement-knights-old",
     "player": "fusion425",
     "date": "2024-10-07",
     "length": 69,
@@ -2000,7 +1879,6 @@
   },
   {
     "name": "SWI Slithium Version 45-93%",
-    "id": "swi-slithium-version-45-93",
     "player": "Jevan",
     "date": "2025-07-21",
     "length": "42",
@@ -2016,7 +1894,6 @@
   },
   {
     "name": "No Love",
-    "id": "no-love",
     "player": "rinjello",
     "levelID": 113587240,
     "date": "2024-12-28",
@@ -2033,7 +1910,6 @@
   },
   {
     "name": "Fragile 60hz 44%",
-    "id": "fragile-60hz-44",
     "player": "lappwv",
     "levelID": 65588448,
     "date": "2021-06-01",
@@ -2051,7 +1927,6 @@
   },
   {
     "name": "Terminal Rampancy",
-    "id": "terminal-rampancy",
     "player": "Bigthunder556",
     "levelID": 90057148,
     "date": "2023-04-14",
@@ -2068,7 +1943,6 @@
   },
   {
     "name": "ORDINARY 120hz Mobile 49%",
-    "id": "ordinary-120hz-mobile-49",
     "player": "Mobileplayer0623",
     "date": "2025-04-24",
     "length": "37",
@@ -2087,7 +1961,6 @@
   },
   {
     "name": "EXCEPTIONAL",
-    "id": "exceptional",
     "player": "Ronrjkw",
     "levelID": 115485164,
     "date": "2025-02-25",
@@ -2103,7 +1976,6 @@
   },
   {
     "name": "Zodiac 60hz Mobile 58%",
-    "id": "zodiac-60hz-mobile-58",
     "player": "Bigthunder556",
     "date": "2024-11-02",
     "length": 124,
@@ -2123,7 +1995,6 @@
   },
   {
     "name": "Flyleaf 18-73%",
-    "id": "flyleaf-18-73",
     "player": "lolwut",
     "levelID": 61776215,
     "date": "2024-08-20",
@@ -2139,7 +2010,6 @@
   },
   {
     "name": "Kenos 120hz Mobile 55%",
-    "id": "kenos-120hz-mobile-55",
     "player": "DashY",
     "levelID": 58673581,
     "date": "2022-11-29",
@@ -2158,7 +2028,6 @@
   },
   {
     "name": "Na2SiF6",
-    "id": "na2sif6",
     "player": "MoonFrost",
     "levelID": 114372969,
     "date": "2025-01-21",
@@ -2174,7 +2043,6 @@
   },
   {
     "name": "Buffed Misanthrope 34-70%",
-    "id": "buffed-misanthrope-34-70",
     "player": "BigMacGD",
     "date": "2025-02-09",
     "length": 117,
@@ -2190,7 +2058,6 @@
   },
   {
     "name": "Zodiac 60hz Mobile 54-100%",
-    "id": "zodiac-60hz-mobile-54-100",
     "player": "Bigthunder556",
     "date": "2024-11-17",
     "length": 124,
@@ -2210,7 +2077,6 @@
   },
   {
     "name": "Zirconium Misery",
-    "id": "zirconium-misery",
     "player": "BONN",
     "levelID": 97380378,
     "date": "2023-12-16",
@@ -2226,7 +2092,6 @@
   },
   {
     "name": "racketeering v2",
-    "id": "racketeering-v2",
     "player": "seels",
     "levelID": 114046961,
     "date": "2025-01-14",
@@ -2242,7 +2107,6 @@
   },
   {
     "name": "Eudemonic 62-100%",
-    "id": "eudemonic-62-100",
     "player": "seels",
     "date": "2025-07-12",
     "length": "53",
@@ -2258,7 +2122,6 @@
   },
   {
     "name": "HAZARD",
-    "id": "hazard",
     "player": "finleyy",
     "date": "2025-03-25",
     "length": 16,
@@ -2274,7 +2137,6 @@
   },
   {
     "name": "Henken",
-    "id": "henken",
     "player": "Gokill",
     "date": "2022-06-03",
     "length": 76,
@@ -2290,7 +2152,6 @@
   },
   {
     "name": "Eudemonic 60%",
-    "id": "eudemonic-60",
     "player": "seels",
     "date": "2025-07-10",
     "length": "81",
@@ -2306,7 +2167,6 @@
   },
   {
     "name": "The Golden",
-    "id": "the-golden",
     "player": "nSwish",
     "levelID": 60978746,
     "date": "2020-04-18",
@@ -2323,7 +2183,6 @@
   },
   {
     "name": "The Golden 60hz Mobile 49-82%",
-    "id": "the-golden-60hz-mobile-49-82",
     "player": "Bigthunder556",
     "date": "2023-05-31",
     "length": 25,
@@ -2343,7 +2202,6 @@
   },
   {
     "name": "Murder Mitten",
-    "id": "murder-mitten",
     "player": "mark.",
     "levelID": 81973761,
     "date": "2022-07-18",
@@ -2359,7 +2217,6 @@
   },
   {
     "name": "ANTIUTOPIA 25-38%",
-    "id": "antitopia-25-38",
     "player": "f65",
     "levelID": 78662821,
     "date": "2025-02-18",
@@ -2375,7 +2232,6 @@
   },
   {
     "name": "Natural Disaster",
-    "id": "natural-disaster",
     "player": "iliLaserili",
     "levelID": 107741051,
     "date": "2024-07-12",
@@ -2392,7 +2248,6 @@
   },
   {
     "name": "WATER 57-100%",
-    "id": "water-57-100",
     "player": "dewbbs",
     "date": "2025-08-09",
     "length": "30",
@@ -2407,7 +2262,6 @@
   },
   {
     "name": "Flyleaf 49-100%",
-    "id": "flyleaf-49-100",
     "player": "lolwut",
     "levelID": 61776215,
     "date": "2024-03-21",
@@ -2423,7 +2277,6 @@
   },
   {
     "name": "SILENT HELHEIM (FinleyGG) 52-100%",
-    "id": "silent-helheim-finleygg-52-100",
     "player": "FinleyGG",
     "date": "2023-03-13",
     "length": 24,
@@ -2438,7 +2291,6 @@
   },
   {
     "name": "The Golden (Unnerfed) 62%",
-    "id": "the-golden-unnerfed-62",
     "player": "swiborg",
     "levelID": 66030276,
     "date": "2020-12-28",
@@ -2454,7 +2306,6 @@
   },
   {
     "name": "Graceful",
-    "id": "graceful",
     "player": "D a G",
     "levelID": 71885708,
     "date": "2025-01-24",
@@ -2470,7 +2321,6 @@
   },
   {
     "name": "Silent Circles 30-100% (Zynvire Unnerfed)",
-    "id": "silent-circles-30-100-zynvire-unnerfed",
     "player": "-",
     "date": "2020-12-28",
     "length": 84,
@@ -2485,7 +2335,6 @@
   },
   {
     "name": "Slaughterhouse (noxell) 23-75%",
-    "id": "slaughterhouse-noxell-23-75",
     "player": "noxell",
     "date": "2025-05-29",
     "length": "28",
@@ -2499,7 +2348,6 @@
   },
   {
     "name": "Unnerfed BoJ",
-    "id": "unnerfed-boj",
     "player": "MostDefinitelyAlbert",
     "levelID": 35497549,
     "date": "2024-03-07",
@@ -2515,7 +2363,6 @@
   },
   {
     "name": "Misanthrope 32-59%",
-    "id": "misanthrope-32-59",
     "player": "LordVadercraft",
     "levelID": 60284876,
     "date": "2024-12-03",
@@ -2531,7 +2378,6 @@
   },
   {
     "name": "Silent clubstep 144hz 15-65%",
-    "id": "silent-clubstep-144hz-15-65",
     "player": "zMythicc",
     "length": "43",
     "version": "2.1",
@@ -2548,7 +2394,6 @@
   },
   {
     "name": "Verdant Landscape",
-    "id": "verdant-landscape",
     "player": "Nisha",
     "levelID": 76543324,
     "date": "2021-12-14",
@@ -2565,7 +2410,6 @@
   },
   {
     "name": "Anathema (rori) 38-74%",
-    "id": "anathema-rori-38-74",
     "player": "rori",
     "date": "2024-04-06",
     "length": 142,
@@ -2581,7 +2425,6 @@
   },
   {
     "name": "Visible Ray 75hz",
-    "id": "visible-ray-75hz",
     "player": "wwdonut",
     "levelID": 48267315,
     "date": "2021-08-27",
@@ -2597,7 +2440,6 @@
   },
   {
     "name": "Tartarus 1.1x 52%",
-    "id": "tartarus-1-1x-52",
     "player": "Cursed",
     "levelID": 59075347,
     "date": "2022-01-16",
@@ -2615,7 +2457,6 @@
   },
   {
     "name": "Blissful",
-    "id": "blissful",
     "player": "Helix",
     "levelID": 110934881,
     "date": "2024-10-08",
@@ -2631,7 +2472,6 @@
   },
   {
     "name": "Silent Circles (skeletonlol) 39-67%",
-    "id": "silent-circles-skeletonlol-39-67",
     "player": "tricklength",
     "levelID": 80856489,
     "date": "2025-04-08",
@@ -2647,7 +2487,6 @@
   },
   {
     "name": "ECHO 65-100%",
-    "id": "echo-65-100",
     "player": "Bigthunder556",
     "date": "2025-02-09",
     "length": 56,
@@ -2662,7 +2501,6 @@
   },
   {
     "name": "The Yandere 75hz",
-    "id": "the-yandere-75hz",
     "player": "wwdonut",
     "levelID": 54615662,
     "date": "2022-07-16",
@@ -2678,7 +2516,6 @@
   },
   {
     "name": "Vehemence (Unbuffed) 23-55%",
-    "id": "vehemence-unbuffed-23-55",
     "player": "polterghast",
     "levelID": 96572223,
     "date": "2023-10-07",
@@ -2694,7 +2531,6 @@
   },
   {
     "name": "FAIRY KNIFE HELL 42-59%",
-    "id": "fairy-knife-hell-42-59",
     "player": "enzollz",
     "date": "2025-04-25",
     "length": "40",
@@ -2710,7 +2546,6 @@
   },
   {
     "name": "ATOMIC CANNON Mk III",
-    "id": "atomic-cannon-mk-iii",
     "player": "Zeronium",
     "levelID": 104672501,
     "date": "2024-05-01",
@@ -2727,7 +2562,6 @@
   },
   {
     "name": "Slaughterhouse (noxell) 45-100%",
-    "id": "slaughterhouse-noxell-45-100",
     "player": "noxell",
     "date": "2025-05-29",
     "length": "31",
@@ -2741,7 +2575,6 @@
   },
   {
     "name": "Bellatrix 52-100%",
-    "id": "bellatrix-52-100",
     "player": "Dan2D",
     "date": "2024-08-14",
     "length": 39,
@@ -2756,7 +2589,6 @@
   },
   {
     "name": "Azure Flare (Old) 10-84%",
-    "id": "azure-flare-old-10-84",
     "player": "Axinity",
     "date": "2023-10-09",
     "length": 47,
@@ -2771,7 +2603,6 @@
   },
   {
     "name": "FAIRY KNIFE HELL 78-100%",
-    "id": "fairy-knife-hell-78-100",
     "player": "enzollz",
     "levelID": 111680151,
     "date": "2024-12-22",
@@ -2787,7 +2618,6 @@
   },
   {
     "name": "The Golden 120hz Mobile 49-84%",
-    "id": "the-golden-120hz-mobile-49-84",
     "player": "Abstract",
     "date": "2025-05-24",
     "length": "26",
@@ -2806,7 +2636,6 @@
   },
   {
     "name": "ConClusion 120hz Mobile",
-    "id": "conclusion-120hz-mobile",
     "player": "Que2Yo",
     "date": "2025-07-04",
     "length": "85",
@@ -2824,7 +2653,6 @@
   },
   {
     "name": "Titan Complex 75hz",
-    "id": "titan-complex-75hz",
     "player": "wwdonut",
     "levelID": 44022701,
     "date": "2021-03-15",
@@ -2841,7 +2669,6 @@
   },
   {
     "name": "Hazardous Haste",
-    "id": "hazardous-haste",
     "player": "SnowBallerr",
     "levelID": 86212494,
     "date": "2023-04-02",
@@ -2857,7 +2684,6 @@
   },
   {
     "name": "Cabbage Chamber 35-100%",
-    "id": "cabbage-chamber-35-100",
     "player": "DenseCabbage",
     "date": "2023-01-20",
     "length": 8,
@@ -2872,7 +2698,6 @@
   },
   {
     "name": "CITRA 60hz 73%",
-    "id": "citra-60hz-73",
     "player": "Clock0822",
     "date": "2025-05-27",
     "length": "28",
@@ -2890,7 +2715,6 @@
   },
   {
     "name": "abicto (Old)",
-    "id": "abicto-old",
     "player": "Raluca",
     "date": "2023-07-14",
     "length": 70,
@@ -2904,7 +2728,6 @@
   },
   {
     "name": "Azure Flare (Old) 77%",
-    "id": "azure-flare-old-77",
     "player": "Aeden",
     "date": "2020-02-09",
     "length": 49,
@@ -2919,7 +2742,6 @@
   },
   {
     "name": "FINGERDASH V5 44%",
-    "id": "fingerdash-v5-44",
     "player": "Frice",
     "date": "2024-04-12",
     "length": 37,
@@ -2934,7 +2756,6 @@
   },
   {
     "name": "Cobalt Phosphate",
-    "id": "cobalt-phosphate",
     "player": "NucGDstuff",
     "levelID": 100849725,
     "date": "2025-01-21",
@@ -2950,7 +2771,6 @@
   },
   {
     "name": "Firework (Artify) 49%",
-    "id": "firework-artify-49",
     "player": "Artify8",
     "date": "2021-10-10",
     "length": 62,
@@ -2965,7 +2785,6 @@
   },
   {
     "name": "Silent Acropolis 50-100%",
-    "id": "silent-acropolis-50-100",
     "player": "RaeveZ",
     "levelID": 111237270,
     "date": "2023-10-26",
@@ -2981,7 +2800,6 @@
   },
   {
     "name": "NETWORK",
-    "id": "network",
     "player": "vulcanium4",
     "levelID": 95176417,
     "date": "2023-10-06",
@@ -2998,7 +2816,6 @@
   },
   {
     "name": "Firework (Kurumi) 64-100%",
-    "id": "firework-kurumi-64-100",
     "player": "Kurumi",
     "levelID": 77346565,
     "date": "2020-12-30",
@@ -3015,7 +2832,6 @@
   },
   {
     "name": "Widestep 120hz Mobile",
-    "id": "widestep-120hz-mobile",
     "player": "Prmak",
     "levelID": 69289606,
     "date": "2025-01-16",
@@ -3033,7 +2849,6 @@
   },
   {
     "name": "Labyrinth 61-100%",
-    "id": "labyrinth-61-100",
     "player": "HamiltonHqmy",
     "date": "2025-03-01",
     "length": 30,
@@ -3049,7 +2864,6 @@
   },
   {
     "name": "BLEED",
-    "id": "bleed",
     "player": "LAMINGTON",
     "levelID": 91685903,
     "date": "2024-05-02",
@@ -3065,7 +2879,6 @@
   },
   {
     "name": "Apocalyptic Trilogy (Old) 39-100%",
-    "id": "apocalyptic-trilogy-old-39-100",
     "player": "ViZeris",
     "date": "2025-01-24",
     "length": 172,
@@ -3081,7 +2894,6 @@
   },
   {
     "name": "THE ROCK HOUSE (Old)",
-    "id": "the-rock-house-old",
     "player": "violet",
     "date": "2024-07-14",
     "length": 49,
@@ -3095,7 +2907,6 @@
   },
   {
     "name": "Acheron 2.1 120hz Mobile 32%",
-    "id": "acheron-21-120hz-mobile-32",
     "player": "VERTOP",
     "date": "2023-08-14",
     "length": "24",
@@ -3114,7 +2925,6 @@
   },
   {
     "name": "Shukketsu",
-    "id": "shukketsu",
     "player": "Baeru",
     "levelID": 75286957,
     "date": "2022-04-03",
@@ -3131,7 +2941,6 @@
   },
   {
     "name": "Oblivers (D3lteX) 59%",
-    "id": "oblivers-d3ltx-59",
     "player": "D3lteX",
     "date": "2021-06-25",
     "length": 9,
@@ -3146,7 +2955,6 @@
   },
   {
     "name": "Zodiac 1.25x 38-100%",
-    "id": "zodiac-1-25x-38-100",
     "player": "ScoffGD",
     "levelID": 52374843,
     "date": "2025-04-16",
@@ -3164,7 +2972,6 @@
   },
   {
     "name": "lavender",
-    "id": "lavender",
     "player": "alex",
     "levelID": 67251367,
     "date": "2023-06-08",
@@ -3180,7 +2987,6 @@
   },
   {
     "name": "ReTraY WaVe 44-100%",
-    "id": "retray-wave-44-100",
     "player": "Caleger",
     "date": "2024-12-29",
     "length": 10,
@@ -3195,7 +3001,6 @@
   },
   {
     "name": "CorroZ (NcaT) 35%",
-    "id": "corroz-ncat-35",
     "player": "NcaT",
     "date": "2021-08-23",
     "length": 14,
@@ -3210,7 +3015,6 @@
   },
   {
     "name": "lightposts",
-    "id": "lightposts",
     "player": "Acratic",
     "levelID": 73199960,
     "date": "2023-02-03",
@@ -3225,7 +3029,6 @@
   },
   {
     "name": "IT MEANS EVERYTHING 54-80%",
-    "id": "it-means-everything-54-80",
     "player": "Vel",
     "date": "2025-05-16",
     "length": "16",
@@ -3241,7 +3044,6 @@
   },
   {
     "name": "626c7572 51%",
-    "id": "626c7572-51",
     "player": "Hellfire",
     "levelID": 113790443,
     "date": "2025-08-20",
@@ -3257,7 +3059,6 @@
   },
   {
     "name": "Checked Steam",
-    "id": "checked-steam",
     "player": "Whizkid05",
     "levelID": 105748155,
     "date": "2024-05-27",
@@ -3274,7 +3075,6 @@
   },
   {
     "name": "Acheron 2.1 120hz Mobile 51-85%",
-    "id": "acheron-21-120hz-mobile-51-85",
     "player": "VERTOP",
     "date": "2023-04-30",
     "length": "24",
@@ -3293,7 +3093,6 @@
   },
   {
     "name": "misfortune 48%",
-    "id": "misfortune-48",
     "player": "zXdasfsa",
     "date": "2025-02-09",
     "length": 14,
@@ -3308,7 +3107,6 @@
   },
   {
     "name": "Thinking Space 91%, 100%",
-    "id": "thinking-space-91-100",
     "player": "syrcx",
     "date": "2025-08-28",
     "length": "150",
@@ -3325,7 +3123,6 @@
   },
   {
     "name": "Sad Chamber",
-    "id": "sad-chamber",
     "player": "nobbbin",
     "levelID": 100242794,
     "date": "2024-02-03",
@@ -3341,7 +3138,6 @@
   },
   {
     "name": "andromeda 480hz Mobile 65-100%",
-    "id": "andromeda-480hz-mobile-65-100",
     "player": "VERTOP",
     "length": 28,
     "version": 2.2,
@@ -3359,7 +3155,6 @@
   },
   {
     "name": "C Sharp",
-    "id": "c-sharp",
     "player": "ALiveWizard",
     "levelID": 90342920,
     "date": "2023-04-27",
@@ -3375,7 +3170,6 @@
   },
   {
     "name": "Death Corridor (icedcave) 65%",
-    "id": "death-corridor-icedcave-65",
     "player": "icedcave",
     "date": "2023-10-05",
     "length": 89,
@@ -3390,7 +3184,6 @@
   },
   {
     "name": "PigStep 40%",
-    "id": "pigstep-40",
     "player": "Cryonix",
     "levelID": 104984889,
     "date": "2024-06-28",
@@ -3406,7 +3199,6 @@
   },
   {
     "name": "H U R T",
-    "id": "h-u-r-t",
     "player": "serpentical",
     "levelID": 116548933,
     "date": "2025-03-27",
@@ -3423,7 +3215,6 @@
   },
   {
     "name": "Sakupen Trials",
-    "id": "sakupen-trials",
     "player": "Xanii",
     "length": "53",
     "version": "2.1",
@@ -3440,7 +3231,6 @@
   },
   {
     "name": "Cromatic Varius",
-    "id": "cromatic-varius",
     "player": "BreadGuy",
     "levelID": 110469415,
     "date": "2024-09-24",
@@ -3457,7 +3247,6 @@
   },
   {
     "name": "Flutterwonder 60%, 59%, 52%",
-    "id": "flutterwonder-60-59-52",
     "player": "nensa",
     "length": 29,
     "version": 22,
@@ -3473,7 +3262,6 @@
   },
   {
     "name": "misfortune 39-100%",
-    "id": "misfortune-39-100",
     "player": "zXdasfsa",
     "date": "2024-09-28",
     "length": 14,
@@ -3488,7 +3276,6 @@
   },
   {
     "name": "Escalator (Slithium) 39-73%",
-    "id": "escalator-slithium-39-73",
     "player": "Slithium",
     "date": "2023-12-07",
     "length": 24,
@@ -3503,7 +3290,6 @@
   },
   {
     "name": "nepotism",
-    "id": "nepotism",
     "player": "finleyy",
     "levelID": 114953261,
     "date": "2025-02-09",
@@ -3519,7 +3305,6 @@
   },
   {
     "name": "Oblivers (D3lteX) 40-100%",
-    "id": "oblivers-d3ltx-40-100",
     "player": "D3lteX",
     "date": "2021-06-25",
     "length": 9,
@@ -3534,7 +3319,6 @@
   },
   {
     "name": "Broken Tube",
-    "id": "broken-tube",
     "player": "Goanga",
     "levelID": 110787692,
     "date": "2024-10-04",
@@ -3550,7 +3334,6 @@
   },
   {
     "name": "Triathlon 52-100%",
-    "id": "triathlon-52-100",
     "player": "ZygisDij",
     "levelID": 116430752,
     "date": "2024-08-18",
@@ -3566,7 +3349,6 @@
   },
   {
     "name": "Nostalgia",
-    "id": "nostalgia",
     "player": "BONN",
     "levelID": 93619038,
     "date": "2023-08-20",
@@ -3582,7 +3364,6 @@
   },
   {
     "name": "BREAKCORE",
-    "id": "breakcore",
     "player": "breakcore11",
     "length": 64,
     "version": 2.2,
@@ -3598,7 +3379,6 @@
   },
   {
     "name": "unnerfed VR",
-    "id": "unnerfed-vr",
     "player": "Yumira",
     "levelID": 48336706,
     "date": "2025-03-04",
@@ -3615,7 +3395,6 @@
   },
   {
     "name": "paranoia",
-    "id": "paranoia",
     "player": "Amplitron",
     "length": 74,
     "version": 2.2,
@@ -3631,7 +3410,6 @@
   },
   {
     "name": "Sonic Wave 30hz 54%",
-    "id": "sonic-wave-30hz-54",
     "player": "Bread",
     "levelID": 26681070,
     "date": "2023-01-27",
@@ -3649,7 +3427,6 @@
   },
   {
     "name": "Diabolic ClubStep",
-    "id": "diabolic-clubstep",
     "player": "Sevant",
     "levelID": 73214186,
     "date": "2021-09-01",
@@ -3665,7 +3442,6 @@
   },
   {
     "name": "Invisible Trueffet 28-61%",
-    "id": "invisible-trueffet-28-61",
     "player": "Arshadow",
     "date": "2023-02-03",
     "length": 24,
@@ -3681,7 +3457,6 @@
   },
   {
     "name": "Critical Heat",
-    "id": "critical-heat",
     "player": "hstorm",
     "levelID": 88442157,
     "date": "2023-02-08",
@@ -3698,7 +3473,6 @@
   },
   {
     "name": "Graceful (swiborg) 88%",
-    "id": "graceful-swiborg-88",
     "player": "swiborg",
     "date": "2024-12-02",
     "length": 105,
@@ -3713,7 +3487,6 @@
   },
   {
     "name": "Philly",
-    "id": "philly",
     "player": "Yossarian",
     "levelID": 90059503,
     "date": "2023-04-14",
@@ -3729,7 +3502,6 @@
   },
   {
     "name": "limbo but uwu ig idk",
-    "id": "limbo-but-uwu-ig-idk",
     "player": "ViperVenom95",
     "date": "2024-10-02",
     "length": 89,
@@ -3746,7 +3518,6 @@
   },
   {
     "name": "Cobwebs (blazenik) 62%",
-    "id": "cobwebs-blazenik-62",
     "player": "blazenik",
     "date": "2025-01-08",
     "length": 18,
@@ -3761,7 +3532,6 @@
   },
   {
     "name": "The Nautical",
-    "id": "the-nautical",
     "player": "Timo",
     "levelID": 68567516,
     "date": "2022-01-01",
@@ -3777,7 +3547,6 @@
   },
   {
     "name": "The Paroxysm of Rage",
-    "id": "the-paroxysm-of-rage",
     "player": "turtl",
     "levelID": 87071894,
     "date": "2022-12-24",
@@ -3794,7 +3563,6 @@
   },
   {
     "name": "Silent Club Plus (Layout) 43-100%",
-    "id": "silent-club-plus-layout-43-100",
     "player": "Whizkid05",
     "date": "2023-04-19",
     "length": 51,
@@ -3808,7 +3576,6 @@
   },
   {
     "name": "Sonic Wave 1.5x 28-96%",
-    "id": "sonic-wave-15x-28-96",
     "player": "HipoAR",
     "date": "2024-07-01",
     "length": "52",
@@ -3826,7 +3593,6 @@
   },
   {
     "name": "Aerial Gleam",
-    "id": "aerial-gleam",
     "player": "Doggie",
     "levelID": 79771070,
     "date": "2022-08-24",
@@ -3843,7 +3609,6 @@
   },
   {
     "name": "Blood Echo",
-    "id": "blood-echo",
     "player": "swiborg",
     "length": 81,
     "version": 2.2,
@@ -3860,7 +3625,6 @@
   },
   {
     "name": "Starlit Stroll",
-    "id": "starlit-stroll",
     "player": "Nocta XI",
     "length": 123,
     "version": 2.2,
@@ -3877,7 +3641,6 @@
   },
   {
     "name": "Trueffet",
-    "id": "trueffet",
     "player": "Baeru",
     "levelID": 71434979,
     "date": "2021-07-16",
@@ -3894,7 +3657,6 @@
   },
   {
     "name": "Night of the Melons 35-100%",
-    "id": "night-of-the-melons-35-100",
     "player": "Fabricorn",
     "levelID": 55056612,
     "date": "2024-10-06",
@@ -3910,7 +3672,6 @@
   },
   {
     "name": "wpopoff challenge",
-    "id": "wpopoff-challenge",
     "player": "okaysobasically",
     "levelID": 108938762,
     "date": "2024-08-11",
@@ -3926,7 +3687,6 @@
   },
   {
     "name": "IT MEANS EVERYTHING 65-100%",
-    "id": "it-means-everything-65-100",
     "player": "Vel",
     "date": "2025-05-16",
     "length": 24,
@@ -3943,7 +3703,6 @@
   },
   {
     "name": "NEUTRA 160%",
-    "id": "neutra-160",
     "player": "Zoink",
     "levelID": 88611404,
     "date": "2023-03-25",
@@ -3960,7 +3719,6 @@
   },
   {
     "name": "Silent Machine 39%",
-    "id": "silent-machine-39",
     "player": "SeptaGon7",
     "levelID": 90261044,
     "date": "2025-09-13",
@@ -3976,7 +3734,6 @@
   },
   {
     "name": "VOID",
-    "id": "void",
     "player": "Whizkid05",
     "length": 64,
     "version": 2.1,
@@ -3993,7 +3750,6 @@
   },
   {
     "name": "Destruction 19",
-    "id": "destruction-19",
     "player": "razta4ax",
     "levelID": 99495619,
     "date": "2024-01-21",
@@ -4010,7 +3766,6 @@
   },
   {
     "name": "Silent Machine 36-66%",
-    "id": "silent-machine-36-66",
     "player": "SeptaGon7",
     "levelID": 90261044,
     "date": "2025-09-13",
@@ -4026,7 +3781,6 @@
   },
   {
     "name": "Axinie 144hz Mobile 43-100%",
-    "id": "axinie-144hz-mobile-43-100",
     "player": "Mateex",
     "levelID": 107299600,
     "date": "2025-05-01",
@@ -4045,7 +3799,6 @@
   },
   {
     "name": "Cosmic Cyclone",
-    "id": "cosmic-cyclone",
     "player": "HipoAR",
     "levelID": 63319515,
     "date": "2022-09-25",
@@ -4061,7 +3814,6 @@
   },
   {
     "name": "Storming Summit 60hz Mobile 64%",
-    "id": "storming-summit-60hz-mobile-64",
     "player": "Hydrus73",
     "date": "2024-05-17",
     "length": 106,
@@ -4081,7 +3833,6 @@
   },
   {
     "name": "FACESHOPPING 95%, 96%",
-    "id": "faceshopping-95-96",
     "player": "HipoAR",
     "date": "2024-09-15",
     "length": "120",
@@ -4097,7 +3848,6 @@
   },
   {
     "name": "ATOMIC CANNON 60hz Mobile",
-    "id": "atomic-cannon-60hz-mobile",
     "player": "Biprex",
     "length": "59",
     "version": "2.1",
@@ -4115,7 +3865,6 @@
   },
   {
     "name": "ExtraSonic",
-    "id": "extrasonic",
     "player": "Sevant",
     "levelID": 71254276,
     "date": "2023-12-15",
@@ -4131,7 +3880,6 @@
   },
   {
     "name": "Zero Factorial (lMarro) 42-91%",
-    "id": "zero-factorial-lmarro-42-91",
     "player": "Cat enthusiast",
     "levelID": 71132224,
     "date": "2024-06-04",
@@ -4147,7 +3895,6 @@
   },
   {
     "name": "MINUS WORLD 44%",
-    "id": "minus-world-44",
     "player": "seels",
     "levelID": 77875682,
     "date": "2024-10-25",
@@ -4163,7 +3910,6 @@
   },
   {
     "name": "Dark Realm 39%",
-    "id": "dark-realm-39",
     "player": "Striker GD",
     "date": "2025-02-07",
     "length": 31,
@@ -4177,7 +3923,6 @@
   },
   {
     "name": "Shardscapes 60hz Mobile",
-    "id": "shardscapes-60hz-mobile",
     "player": "danielcookie",
     "length": "78",
     "version": "2.2",
@@ -4195,7 +3940,6 @@
   },
   {
     "name": "Cannon Bay",
-    "id": "cannon-bay",
     "player": "LordVadercraft",
     "levelID": 83403926,
     "date": "2022-09-04",
@@ -4211,7 +3955,6 @@
   },
   {
     "name": "Plasma Pulse Finale 60hz",
-    "id": "plasma-pulse-finale-60hz",
     "player": "Luqualizer",
     "date": "2020-06-21",
     "length": "127",
@@ -4228,7 +3971,6 @@
   },
   {
     "name": "Starlight Summit",
-    "id": "starlight-summit",
     "player": "Pengi1",
     "levelID": 114530859,
     "date": "2025-01-26",
@@ -4245,7 +3987,6 @@
   },
   {
     "name": "Acheron 144hz Mobile 68-100%",
-    "id": "acheron-144hz-mobile-68-100",
     "player": "TYATYAPKA",
     "date": "2024-11-11",
     "length": "21",
@@ -4263,7 +4004,6 @@
   },
   {
     "name": "Benevolence 50%",
-    "id": "benevolence-50",
     "player": "Caleger",
     "date": "2025-06-05",
     "length": 6,
@@ -4279,7 +4019,6 @@
   },
   {
     "name": "Sweeping Demon 2 (Thnnder) 71-100%",
-    "id": "sweeping-demon-2-thnnder-71-100",
     "player": "Thnnder",
     "date": "2023-05-27",
     "length": 20,
@@ -4294,7 +4033,6 @@
   },
   {
     "name": "IRIS",
-    "id": "iris",
     "player": "bnuuy",
     "levelID": 123853954,
     "date": "2025-07-31",
@@ -4311,7 +4049,6 @@
   },
   {
     "name": "Dilute 54%",
-    "id": "dilute-54",
     "player": "Esoteric Hydra",
     "levelID": 74247385,
     "date": "2024-06-10",
@@ -4327,7 +4064,6 @@
   },
   {
     "name": "Judgement Knights",
-    "id": "judgement-knights",
     "player": "Helix",
     "levelID": 110913375,
     "date": "2025-01-16",
@@ -4344,7 +4080,6 @@
   },
   {
     "name": "poocubed 120hz Mobile 19-55%",
-    "id": "poocubed-120hz-mobile-19-55",
     "player": "DENISKA",
     "date": "2025-06-04",
     "length": "30",
@@ -4363,7 +4098,6 @@
   },
   {
     "name": "Wavterminal 33-100%",
-    "id": "wavterminal-33-100",
     "player": "Frice",
     "date": "2025-03-20",
     "length": 47,
@@ -4378,7 +4112,6 @@
   },
   {
     "name": "Every End 120hz Mobile 33-68%",
-    "id": "every-end-120hz-mobile-33-68",
     "player": "SarTiZ",
     "length": "156",
     "version": "2.2",
@@ -4397,7 +4130,6 @@
   },
   {
     "name": "Every End 120hz Mobile 67-100%",
-    "id": "every-end-120hz-mobile-67-100",
     "player": "SarTiZ",
     "length": "145",
     "version": "2.2",
@@ -4416,7 +4148,6 @@
   },
   {
     "name": "Benevolence 19-100%",
-    "id": "benevolence-19-100",
     "player": "Caleger",
     "date": "2025-06-05",
     "length": 11,
@@ -4431,7 +4162,6 @@
   },
   {
     "name": "Silent Circles (skeletonlol) 27-70% 7 deaths, 99.66 accuracy",
-    "id": "silent-circles-skeletonlol-27-70-7-deaths-99-66-accuracy",
     "player": "tricklength",
     "date": "2025-02-28",
     "length": "25",
@@ -4448,7 +4178,6 @@
   },
   {
     "name": "LESOPOWAL 78% (Abstract)",
-    "id": "lesopowal-78-abstract",
     "player": "Abstract",
     "date": "2025-03-15",
     "length": 53,
@@ -4463,7 +4192,6 @@
   },
   {
     "name": "poocubed 120hz Mobile 33%",
-    "id": "poocubed-120hz-mobile-33",
     "player": "DENISKA",
     "levelID": "85133223",
     "date": "2025-06-09",
@@ -4482,7 +4210,6 @@
   },
   {
     "name": "Lust 57%",
-    "id": "lust-57",
     "player": "DenseCabbage",
     "date": "2025-07-04",
     "length": "11",
@@ -4497,7 +4224,6 @@
   },
   {
     "name": "FAIRY KNIFE HELL 32-48%",
-    "id": "fairy-knife-hell-32-48",
     "player": "enzollz",
     "levelID": 111680151,
     "date": "2024-12-22",
@@ -4513,7 +4239,6 @@
   },
   {
     "name": "Unnerfed Titan Complex",
-    "id": "unnerfed-titan-complex",
     "player": "Dustabounds",
     "levelID": 72900436,
     "date": "2025-09-11",
@@ -4529,7 +4254,6 @@
   },
   {
     "name": "Frost Pass",
-    "id": "frost-pass",
     "player": "CyroFox",
     "levelID": 126436495,
     "length": 57,
@@ -4544,7 +4268,6 @@
   },
   {
     "name": "Kenos",
-    "id": "kenos",
     "player": "npesta",
     "levelID": 58673581,
     "date": "2019-12-14",
@@ -4561,7 +4284,6 @@
   },
   {
     "name": "WOBBLING MACHINE",
-    "id": "wobbling-machine",
     "player": "conski",
     "length": 60,
     "version": 2.2,
@@ -4579,7 +4301,6 @@
   },
   {
     "name": "Eternal Silence (Old) 24-100%",
-    "id": "eternal-silence-old-24-100",
     "player": "Diamond",
     "levelID": 77496005,
     "date": "2022-01-28",
@@ -4595,7 +4316,6 @@
   },
   {
     "name": "Escalator (swiborg) 31%",
-    "id": "escalator-swiborg-31",
     "player": "swiborg",
     "length": 31,
     "version": 2.2,
@@ -4610,7 +4330,6 @@
   },
   {
     "name": "Firework (OverGD) 5-51%",
-    "id": "firework-overgd-5-51",
     "player": "OverGD",
     "length": 58,
     "version": 2.1,
@@ -4625,7 +4344,6 @@
   },
   {
     "name": "Multiplicity",
-    "id": "multiplicity",
     "player": "cobrablitz",
     "length": 201,
     "version": 2.2,
@@ -4641,7 +4359,6 @@
   },
   {
     "name": "Sonic Wave Rebirth 60hz 27-100%",
-    "id": "sonic-wave-rebirth-60hz-27-100",
     "player": "Cedric22",
     "length": 91,
     "version": 2.2,
@@ -4659,7 +4376,6 @@
   },
   {
     "name": "Delusion 1.2x",
-    "id": "delusion-12x",
     "player": "Nintenfox",
     "length": 13,
     "version": 2.1,
@@ -4675,7 +4391,6 @@
   },
   {
     "name": "Moscow Moment",
-    "id": "moscow-moment",
     "player": "coakmuffer",
     "length": 14,
     "version": 2.1,
@@ -4691,7 +4406,6 @@
   },
   {
     "name": "Edge of the Blade 75hz",
-    "id": "edge-of-the-blade-75hz",
     "player": "wwdonut",
     "length": 146,
     "version": 2.1,
@@ -4708,7 +4422,6 @@
   },
   {
     "name": "Graceful (enzbro) 78%",
-    "id": "graceful-enzbro-78",
     "player": "enzbro",
     "length": 112,
     "version": 2.2,
@@ -4723,7 +4436,6 @@
   },
   {
     "name": "Ganja Guay",
-    "id": "ganja-guay",
     "player": "nintenfox",
     "length": 16,
     "version": 2.1,
@@ -4739,7 +4451,6 @@
   },
   {
     "name": "Mega Epic Theory",
-    "id": "mega-epic-theory",
     "player": "Paranoiac",
     "length": 89,
     "version": 2.2,
@@ -4755,7 +4466,6 @@
   },
   {
     "name": "tartartus spaceuk",
-    "id": "tartartus-spaceuk",
     "player": "Sevant",
     "length": 87,
     "version": 2.2,
@@ -4771,7 +4481,6 @@
   },
   {
     "name": "Forsaken Hell",
-    "id": "forsaken-hell",
     "player": "SpirteX",
     "length": 83,
     "version": 2.1,
@@ -4787,7 +4496,6 @@
   },
   {
     "name": "Delirium (Buter) 45-100%",
-    "id": "delirium-buter-45-100",
     "player": "Buter",
     "length": 8,
     "version": 2.1,
@@ -4801,7 +4509,6 @@
   },
   {
     "name": "LESOPOWAL (Layout) 48-100%",
-    "id": "lesopowal-layout-48-100",
     "player": "Kopyedz",
     "length": 53,
     "version": 2.2,
@@ -4816,7 +4523,6 @@
   },
   {
     "name": "DeathCorridor Oldest 47%",
-    "id": "deathcorridor-oldest-47",
     "player": "Hover",
     "length": 62,
     "version": 2.2,
@@ -4832,7 +4538,6 @@
   },
   {
     "name": "Invisible Slaughterhouse 25-51%",
-    "id": "invisible-slaughterhouse-25-51",
     "player": "enfix",
     "length": 14,
     "version": 2.1,
@@ -4846,7 +4551,6 @@
   },
   {
     "name": "DOOM",
-    "id": "doom",
     "player": "Hover",
     "length": 102,
     "version": 2.1,
@@ -4862,7 +4566,6 @@
   },
   {
     "name": "angels trumpet",
-    "id": "angels-trumpet",
     "player": "Karmakaze",
     "length": "87",
     "version": "2.1",
@@ -4878,7 +4581,6 @@
   },
   {
     "name": "Lust 31-100%",
-    "id": "lust-31-100",
     "player": "Meatius",
     "length": 14,
     "version": 2.1,
@@ -4893,7 +4595,6 @@
   },
   {
     "name": "Silent Circles (Xanii old) 41-100%",
-    "id": "silent-circles-xanii-old-41-100",
     "player": "Xanii",
     "length": 58,
     "version": 2.1,
@@ -4908,7 +4609,6 @@
   },
   {
     "name": "Cyclone Machine",
-    "id": "cyclone-machine",
     "player": "exsii",
     "length": 97,
     "version": 2.1,
@@ -4924,7 +4624,6 @@
   },
   {
     "name": "vortex",
-    "id": "vortex",
     "player": "exsii",
     "length": "84",
     "version": "2.1",
@@ -4941,7 +4640,6 @@
   },
   {
     "name": "Demons",
-    "id": "demons",
     "player": "JohnLikesDiamond",
     "length": "90",
     "version": "2.2",
@@ -4957,7 +4655,6 @@
   },
   {
     "name": "Anemesis (Old) 21-95%",
-    "id": "anemesis-old-21-95",
     "player": "The Nixuz GD",
     "length": "69",
     "version": "2.1",
@@ -4972,7 +4669,6 @@
   },
   {
     "name": "Enjoy",
-    "id": "enjoy",
     "player": "HipoAR",
     "length": "60",
     "version": "2.1",
@@ -4988,7 +4684,6 @@
   },
   {
     "name": "Fate",
-    "id": "Fate",
     "player": "paranoiacAK",
     "length": 98,
     "version": 2.2,
@@ -5004,7 +4699,6 @@
   },
   {
     "name": "Sephiroth",
-    "id": "sephiroth",
     "player": "ElEek",
     "length": "33",
     "version": "2.2",
@@ -5020,7 +4714,6 @@
   },
   {
     "name": "Sweeping Demon 2 (Thnnder) 21-55%",
-    "id": "sweeping-demon-2-thnnder-21-55",
     "player": "Thnnder",
     "length": "19",
     "version": "2.1",
@@ -5035,7 +4728,6 @@
   },
   {
     "name": "Zero Factorial (lMarro) 31%",
-    "id": "zero-factorial-lmarro-31",
     "player": "Cat enthusiast",
     "length": "9",
     "version": "2.2",
@@ -5051,7 +4743,6 @@
   },
   {
     "name": "Surface",
-    "id": "surface",
     "player": "yolettuce",
     "length": "144",
     "version": "2.2",
@@ -5067,7 +4758,6 @@
   },
   {
     "name": "Snowblind (Old) 49-100%",
-    "id": "snowblind-old-49-100",
     "player": "Hippo",
     "length": "35",
     "version": "2.2",
@@ -5082,7 +4772,6 @@
   },
   {
     "name": "Haunted Corridor",
-    "id": "haunted-corridor",
     "player": "fusion425",
     "length": "102",
     "version": "2.1",
@@ -5098,7 +4787,6 @@
   },
   {
     "name": "Haunted Corridor (Old)",
-    "id": "haunted-corridor-old",
     "player": "Axinity",
     "length": "102",
     "version": "2.1",
@@ -5111,7 +4799,6 @@
   },
   {
     "name": "beruliam",
-    "id": "beruliam",
     "player": "toonm",
     "length": 10,
     "version": 2.2,
@@ -5126,7 +4813,6 @@
   },
   {
     "name": "Iceberg (Old)",
-    "id": "iceberg-old",
     "player": "fusion425",
     "length": "71",
     "version": "2.1",
@@ -5140,7 +4826,6 @@
   },
   {
     "name": "Iceberg",
-    "id": "iceberg",
     "player": "fusion425",
     "length": "71",
     "version": "2.1",
@@ -5156,7 +4841,6 @@
   },
   {
     "name": "Sonic Wave 30hz 64-100%",
-    "id": "sonic-wave-30hz-64-100",
     "player": "Bread",
     "length": "43",
     "version": "2.1",
@@ -5174,7 +4858,6 @@
   },
   {
     "name": "Esfera",
-    "id": "esfera",
     "player": "Baeru",
     "length": "266",
     "version": "2.1",
@@ -5191,7 +4874,6 @@
   },
   {
     "name": "Heliopolis (Pablohh) 36%",
-    "id": "heliopolis-pablohh-36",
     "player": "Pablohh",
     "length": "65",
     "version": "2.1",
@@ -5206,7 +4888,6 @@
   },
   {
     "name": "521 MINIONS",
-    "id": "521-minions",
     "player": "OverGD",
     "length": "6",
     "version": "2.1",
@@ -5222,7 +4903,6 @@
   },
   {
     "name": "521",
-    "id": "521",
     "player": "NcaT",
     "length": "6",
     "version": "2.1",
@@ -5237,7 +4917,6 @@
   },
   {
     "name": "Silent Circles (-) 42-100%",
-    "id": "silent-circles---42-100",
     "player": "-",
     "length": "58",
     "version": "2.2",
@@ -5251,7 +4930,6 @@
   },
   {
     "name": "Omega 60hz",
-    "id": "omega-60hz",
     "player": "JudeRB",
     "length": "156",
     "version": "2.1",
@@ -5268,7 +4946,6 @@
   },
   {
     "name": "chesnok",
-    "id": "chesnok",
     "player": "Rub1d1um",
     "length": 15,
     "version": "2.2",
@@ -5284,7 +4961,6 @@
   },
   {
     "name": "cooked",
-    "id": "cooked",
     "player": "seels",
     "length": "27",
     "version": "2.1",
@@ -5300,7 +4976,6 @@
   },
   {
     "name": "Romeo",
-    "id": "romeo",
     "player": "iamfinley",
     "length": 18,
     "version": "2.1",
@@ -5316,7 +4991,6 @@
   },
   {
     "name": "Aeternus 15%",
-    "id": "aeternus-15",
     "player": "Chill Guy",
     "length": "11",
     "version": "2.2",
@@ -5332,7 +5006,6 @@
   },
   {
     "name": "Glaz Diavola",
-    "id": "glaz-diavola-1",
     "player": "cring",
     "length": "9",
     "version": "2.1",
@@ -5348,7 +5021,6 @@
   },
   {
     "name": "Axinie",
-    "id": "axinie-1",
     "player": "SaturMan",
     "length": "119",
     "version": "2.2",
@@ -5365,7 +5037,6 @@
   },
   {
     "name": "ktw",
-    "id": "ktw",
     "player": "zRoud",
     "length": "18",
     "version": "2.1",
@@ -5381,7 +5052,6 @@
   },
   {
     "name": "NEUTRA",
-    "id": "neutra",
     "player": "AeonAir",
     "length": "87",
     "version": "2.1",
@@ -5398,7 +5068,6 @@
   },
   {
     "name": "Zodiac",
-    "id": "zodiac",
     "player": "Technical",
     "levelID": 52374843,
     "date": "2019-04-10",
@@ -5415,7 +5084,6 @@
   },
   {
     "name": "Aeternus 15%",
-    "id": "aeternus-15-1",
     "player": "Chill Guy",
     "length": "11",
     "version": "2.2",
@@ -5430,7 +5098,6 @@
   },
   {
     "name": "WarCora Challenge",
-    "id": "warcora-challenge",
     "player": "GD!Frisk",
     "length": "9",
     "version": "2.1",
@@ -5444,7 +5111,6 @@
   },
   {
     "name": "Glaz Diavola",
-    "id": "glaz-diavola",
     "player": "cring",
     "length": "9",
     "version": "2.1",
@@ -5458,7 +5124,6 @@
   },
   {
     "name": "Axinie",
-    "id": "axinie",
     "player": "SaturMan",
     "length": "119",
     "version": "2.2",
@@ -5473,7 +5138,6 @@
   },
   {
     "name": "TriCk no extend",
-    "id": "trick-no-extend",
     "player": "Ray131",
     "length": "8",
     "version": "2.1",
@@ -5487,7 +5151,6 @@
   },
   {
     "name": "invisareta drop x2 79%",
-    "id": "invisareta-drop-x2-79",
     "player": "lappwv",
     "length": "21",
     "version": "2.1",
@@ -5500,7 +5163,6 @@
   },
   {
     "name": "Feelings",
-    "id": "feelings",
     "player": "microforest",
     "length": "20",
     "version": "2.2",
@@ -5514,7 +5176,6 @@
   },
   {
     "name": "DISSONANCE",
-    "id": "dissonance",
     "player": "zSquidKnight",
     "length": "106",
     "version": "2.2",
@@ -5529,7 +5190,6 @@
   },
   {
     "name": "Buffed Delusion",
-    "id": "buffed-delusion",
     "player": "AdrienXL",
     "length": "16",
     "version": "2.2",
@@ -5543,7 +5203,6 @@
   },
   {
     "name": "VSC Nev Finale X 15-38%",
-    "id": "vsc-nev-finale-x-15-38",
     "player": "tricklength",
     "length": "3",
     "version": "2.2",
@@ -5558,7 +5217,6 @@
   },
   {
     "name": "Scream Machine",
-    "id": "scream-machine",
     "player": "WatchPiggy",
     "length": "194",
     "version": "2.1",
@@ -5573,7 +5231,6 @@
   },
   {
     "name": "Sonicyataebus 45-100%",
-    "id": "sonicyataebus-45-100",
     "player": "GeometryJosh",
     "length": "368",
     "version": "2.2",
@@ -5587,7 +5244,6 @@
   },
   {
     "name": "Firework (Bradenbowl) 59-100%",
-    "id": "firework-bradenbowl-59-100",
     "player": "Bradenbowl",
     "length": "51",
     "version": "2.1",
@@ -5601,7 +5257,6 @@
   },
   {
     "name": "Keres",
-    "id": "keres",
     "player": "Crisis",
     "length": "99",
     "version": "2.1",
@@ -5616,7 +5271,6 @@
   },
   {
     "name": "Les Rouleax",
-    "id": "les-rouleax",
     "player": "seels",
     "length": "12",
     "version": "2.2",
@@ -5630,7 +5284,6 @@
   },
   {
     "name": "Silent Circles (-) 32%",
-    "id": "silent-circles---32",
     "player": "-",
     "length": "32",
     "version": "2.2",
@@ -5643,7 +5296,6 @@
   },
   {
     "name": "Ascent",
-    "id": "ascent",
     "player": "LordVadercraft",
     "length": "87",
     "version": "2.2",
@@ -5658,7 +5310,6 @@
   },
   {
     "name": "SADOMASOCHISM 1.1x 21-68%",
-    "id": "sadomasochism-11x-21-68",
     "player": "zXdasfsa",
     "length": "7",
     "version": "2.1",
@@ -5674,7 +5325,6 @@
   },
   {
     "name": "Fragile (Old)",
-    "id": "fragile-old",
     "player": "R. Kelly",
     "length": "101",
     "version": "2.1",
@@ -5688,7 +5338,6 @@
   },
   {
     "name": "Fragile",
-    "id": "fragile",
     "player": "vaen",
     "length": "101",
     "version": "2.1",
@@ -5703,7 +5352,6 @@
   },
   {
     "name": "Zero Factorial (lMarro) 18-44%",
-    "id": "zero-factorial-lmarro-18-44",
     "player": "Cat enthusiast",
     "length": "8",
     "version": "2.2",
@@ -5718,7 +5366,6 @@
   },
   {
     "name": "Cybernetic Crescent 60hz",
-    "id": "cybernetic-crescent-60hz",
     "player": "Cobrablitz",
     "length": "113",
     "version": "2.1",
@@ -5734,7 +5381,6 @@
   },
   {
     "name": "Widestep",
-    "id": "widestep",
     "player": "{出見塩} Demishio",
     "length": "75",
     "version": "2.1",
@@ -5749,7 +5395,6 @@
   },
   {
     "name": "BIMS MADNESS V47",
-    "id": "bims-madness-v47",
     "player": "Bims",
     "length": "129",
     "version": "2.2",
@@ -5762,7 +5407,6 @@
   },
   {
     "name": "Time Lapse",
-    "id": "time-lapse",
     "player": "Arshadow",
     "length": "69",
     "version": "2.1",
@@ -5776,7 +5420,6 @@
   },
   {
     "name": "Alpha Never Clear 39%",
-    "id": "alpha-never-clear-39",
     "player": "OneAlphaHelix",
     "length": "40",
     "version": "2.1",
@@ -5790,7 +5433,6 @@
   },
   {
     "name": "Toxic Blades x2",
-    "id": "toxic-blades-x2",
     "player": "GMDomy",
     "length": "27",
     "version": "2.1",
@@ -5804,7 +5446,6 @@
   },
   {
     "name": "D lirium",
-    "id": "d-lirium",
     "player": "Adrienxl",
     "length": "10",
     "version": "2.1",
@@ -5818,7 +5459,6 @@
   },
   {
     "name": "Graceful (Old)",
-    "id": "graceful-old",
     "player": "D a G",
     "length": "145",
     "version": "2.1",
@@ -5832,7 +5472,6 @@
   },
   {
     "name": "Juggernaut",
-    "id": "juggernaut",
     "player": "nintenfox",
     "length": "60",
     "version": "2.1",
@@ -5846,7 +5485,6 @@
   },
   {
     "name": "CHEMICAL HEAD",
-    "id": "chemical-head",
     "player": "Zosmic",
     "length": "92",
     "version": "2.2",
@@ -5860,7 +5498,6 @@
   },
   {
     "name": "FACESHOPPING",
-    "id": "faceshopping",
     "player": "WatchPiggy",
     "length": "77",
     "version": "2.1",
@@ -5874,7 +5511,6 @@
   },
   {
     "name": "IMFACTORY",
-    "id": "imfactory",
     "player": "Shyv",
     "length": "80",
     "version": "2.1",
@@ -5888,7 +5524,6 @@
   },
   {
     "name": "Stacker Ultimate",
-    "id": "stacker-ultimate",
     "player": "Blanket Addict",
     "length": "60",
     "version": "2.1",
@@ -5902,7 +5537,6 @@
   },
   {
     "name": "Avernus 1.2x 35-49%",
-    "id": "avernus-12x-35-49",
     "player": "Arshadow",
     "length": "8",
     "version": "2.2",
@@ -5919,7 +5553,6 @@
   },
   {
     "name": "Delusion",
-    "id": "delusion",
     "player": "Zamasu",
     "length": "15",
     "version": "2.1",
@@ -5933,7 +5566,6 @@
   },
   {
     "name": "WOODKID",
-    "id": "woodkid",
     "player": "Joaquemix",
     "length": "115",
     "version": "2.1",
@@ -5947,7 +5579,6 @@
   },
   {
     "name": "meow hard",
-    "id": "meow-hard",
     "player": "Jenath",
     "length": "92",
     "version": "2.2",
@@ -5961,7 +5592,6 @@
   },
   {
     "name": "Avernus 1.2x 7-37%",
-    "id": "avernus-12x-7-37",
     "player": "Arshadow",
     "length": "21",
     "version": "2.2",
@@ -5978,7 +5608,6 @@
   },
   {
     "name": "Cerise Cavern",
-    "id": "cerise-cavern",
     "player": "Surpl3x",
     "length": "77",
     "version": "2.2",
@@ -5992,7 +5621,6 @@
   },
   {
     "name": "sadrisE",
-    "id": "sadrise",
     "player": "EatingBabies",
     "length": "13",
     "version": "2.2",
@@ -6006,7 +5634,6 @@
   },
   {
     "name": "Unnerfed Hostage",
-    "id": "unnerfed-hostage",
     "player": "mark",
     "length": "12",
     "version": "2.1",
@@ -6020,7 +5647,6 @@
   },
   {
     "name": "Demons (Old)",
-    "id": "demons-old",
     "player": "JohnLikesDiamond",
     "length": "90",
     "version": "2.2",
@@ -6033,7 +5659,6 @@
   },
   {
     "name": "Crackhead Circles",
-    "id": "crackhead-circles",
     "player": "teraaa",
     "length": "85",
     "version": "2.1",
@@ -6048,7 +5673,6 @@
   },
   {
     "name": "Old Blade of Justice 48-100%",
-    "id": "old-blade-of-justice-48-100",
     "player": "AGSEcho",
     "length": "38",
     "version": "2.2",
@@ -6063,7 +5687,6 @@
   },
   {
     "name": "Lotus Flower",
-    "id": "lotus-flower",
     "player": "BrianTheBurger",
     "length": "93",
     "version": "2.1",
@@ -6078,7 +5701,6 @@
   },
   {
     "name": "swi rori version 61-100%",
-    "id": "swi-rori-version-61-100",
     "player": "rori",
     "length": "61",
     "version": "2.1",
@@ -6093,7 +5715,6 @@
   },
   {
     "name": "ingrown toenail 3",
-    "id": "ingrown-toenail-3",
     "player": "Eclipse",
     "length": "15",
     "version": "2.1",
@@ -6107,7 +5728,6 @@
   },
   {
     "name": "GLITZY BOZO LAND",
-    "id": "glitzy-bozo-land",
     "player": "lazer",
     "length": "91",
     "version": "2.1",
@@ -6121,7 +5741,6 @@
   },
   {
     "name": "Frost Spirit",
-    "id": "frost-spirit",
     "player": "Varium",
     "length": "171",
     "version": "2.1",
@@ -6136,7 +5755,6 @@
   },
   {
     "name": "Dry Out Copyable 2",
-    "id": "dry-out-copyable-2",
     "player": "s3batr0nic",
     "length": "201",
     "version": "2.2",
@@ -6151,7 +5769,6 @@
   },
   {
     "name": "Arctic Twice",
-    "id": "arctic-twice",
     "player": "Axinity",
     "length": "122",
     "version": "2.1",
@@ -6165,7 +5782,6 @@
   },
   {
     "name": "Deimos (GDSkele) 50%",
-    "id": "deimos-gdskele-50",
     "player": "swiborg",
     "length": "87",
     "version": "2.1",
@@ -6179,7 +5795,6 @@
   },
   {
     "name": "birde",
-    "id": "birde",
     "player": "ViperVenom95",
     "length": "65",
     "version": "2.1",
@@ -6193,7 +5808,6 @@
   },
   {
     "name": "Bloodlust 60hz 48-91%",
-    "id": "bloodlust-60hz-48-91",
     "player": "LaChataigne",
     "length": "67",
     "version": "2.2",
@@ -6209,7 +5823,6 @@
   },
   {
     "name": "Acrise (Old)",
-    "id": "acrise-old",
     "player": "Nexel",
     "length": "60",
     "version": "2.1",
@@ -6222,7 +5835,6 @@
   },
   {
     "name": "anodyne 1.1x 39%",
-    "id": "anodyne-11x-39",
     "player": "zXdasfsa",
     "length": "4",
     "version": "2.2",
@@ -6238,7 +5850,6 @@
   },
   {
     "name": "granola bar",
-    "id": "granola-bar",
     "player": "seels",
     "length": "13",
     "version": "2.2",
@@ -6252,7 +5863,6 @@
   },
   {
     "name": "miniodyne 45%",
-    "id": "miniodyne-45",
     "player": "zXdasfsa",
     "length": "5",
     "version": "2.2",
@@ -6265,7 +5875,6 @@
   },
   {
     "name": "Psychotogenic",
-    "id": "psychotogenic",
     "player": "TFIBB",
     "length": "42",
     "version": "2.1",
@@ -6279,7 +5888,6 @@
   },
   {
     "name": "HEAVY MACHINERY",
-    "id": "heavy-machinery",
     "player": "kakol",
     "length": "49",
     "version": "2.1",
@@ -6293,7 +5901,6 @@
   },
   {
     "name": "Unnerfed Joyous Serration ",
-    "id": "unnerfed-joyous-serration-",
     "player": "UFokinWotM8",
     "length": "35",
     "version": "2.2",
@@ -6307,7 +5914,6 @@
   },
   {
     "name": "Joyous Serration",
-    "id": "joyous-serration",
     "player": "D a G",
     "length": "35",
     "version": "2.1",
@@ -6321,7 +5927,6 @@
   },
   {
     "name": "Parpassucus Clubstep",
-    "id": "parpassucus-clubstep",
     "player": "Raluca",
     "length": "64",
     "version": "2.2",
@@ -6335,7 +5940,6 @@
   },
   {
     "name": "Cold Sweat 1.1x",
-    "id": "cold-sweat-11x",
     "player": "lukz",
     "length": "102",
     "version": "2.1",
@@ -6351,7 +5955,6 @@
   },
   {
     "name": "Aerial Gleam (Old)",
-    "id": "aerial-gleam-old",
     "player": "Raluca",
     "length": "65",
     "version": "2.1",
@@ -6364,7 +5967,6 @@
   },
   {
     "name": "Promethean",
-    "id": "promethean",
     "player": "RicoLP",
     "length": "52",
     "version": "2.1",
@@ -6379,7 +5981,6 @@
   },
   {
     "name": "Vigorous Verdict (Old)",
-    "id": "vigorous-verdict-old",
     "player": "Taiago",
     "length": "13",
     "version": "2.1",
@@ -6393,7 +5994,6 @@
   },
   {
     "name": "Vigorous Verdict",
-    "id": "vigorous-verdict",
     "player": "Fergon",
     "length": "13",
     "version": "2.1",
@@ -6407,7 +6007,6 @@
   },
   {
     "name": "Invisible UNKNOWN 35-60%",
-    "id": "invisible-unknown-35-60",
     "player": "Cryostaz",
     "length": "10",
     "version": "2.2",
@@ -6420,7 +6019,6 @@
   },
   {
     "name": "Buffed Piano Man",
-    "id": "buffed-piano-man",
     "player": "Pukklez",
     "length": "98",
     "version": "2.1",
@@ -6435,7 +6033,6 @@
   },
   {
     "name": "Old Blade of Justice 29%",
-    "id": "old-blade-of-justice-29",
     "player": "AGSEcho",
     "length": "38",
     "version": "2.2",
@@ -6450,7 +6047,6 @@
   },
   {
     "name": "Cold Sweat",
-    "id": "cold-sweat",
     "player": "Kapinapi",
     "length": "113",
     "version": "2.1",
@@ -6465,7 +6061,6 @@
   },
   {
     "name": "SILENT HELHEIM (blazenik) 75%",
-    "id": "silent-helheim-blazenik-75",
     "player": "blazenik",
     "length": "38",
     "version": "2.1",
@@ -6479,7 +6074,6 @@
   },
   {
     "name": "Shardscapes 60hz",
-    "id": "shardscapes-60hz",
     "player": "Bread",
     "length": "78",
     "version": "2.1",
@@ -6495,7 +6089,6 @@
   },
   {
     "name": "Thinking Space",
-    "id": "thinking-space",
     "player": "Atomic",
     "length": "99",
     "version": "2.1",
@@ -6510,7 +6103,6 @@
   },
   {
     "name": "Digital Descent 60hz",
-    "id": "digital-descent-60hz",
     "player": "Jaeger",
     "length": "137",
     "version": "2.1",
@@ -6526,7 +6118,6 @@
   },
   {
     "name": "Wasureta 1.25x",
-    "id": "wasureta-125x",
     "player": "goldix",
     "length": "44",
     "version": "2.2",
@@ -6542,7 +6133,6 @@
   },
   {
     "name": "buffed qoueo",
-    "id": "buffed-qoueo",
     "player": "NucGDStuff",
     "length": "52",
     "version": "2.2",
@@ -6556,7 +6146,6 @@
   },
   {
     "name": "qoUEO",
-    "id": "qoueo",
     "player": "Franzy",
     "length": "52",
     "version": "2.1",
@@ -6571,7 +6160,6 @@
   },
   {
     "name": "Silent Circles (Cursed) 48%",
-    "id": "silent-circles-cursed-48",
     "player": "Cursed",
     "length": "47",
     "version": "2.1",
@@ -6585,7 +6173,6 @@
   },
   {
     "name": "GONER 60hz",
-    "id": "goner-60hz",
     "player": "Cejelost",
     "length": "76",
     "version": "2.1",
@@ -6601,7 +6188,6 @@
   },
   {
     "name": "Spectrum Cyclone 216%",
-    "id": "spectrum-cyclone-216",
     "player": "Trick",
     "length": "272",
     "version": "2.1",
@@ -6617,7 +6203,6 @@
   },
   {
     "name": "Nhelv 60hz",
-    "id": "nhelv-60hz",
     "player": "Flolepro",
     "length": "156",
     "version": "2.1",
@@ -6633,7 +6218,6 @@
   },
   {
     "name": "Cabbage Chamber 48%",
-    "id": "cabbage-chamber-48",
     "player": "DenseCabbage",
     "length": "6",
     "version": "2.1",
@@ -6647,7 +6231,6 @@
   },
   {
     "name": "mestupid challenger",
-    "id": "mestupid-challenger",
     "player": "Acratic",
     "length": "11",
     "version": "2.1",
@@ -6661,7 +6244,6 @@
   },
   {
     "name": "Cobwebs (Cursed) 1.1x 33-100%",
-    "id": "cobwebs-cursed-11x-33-100",
     "player": "goldix",
     "length": "17",
     "version": "2.2",
@@ -6678,7 +6260,6 @@
   },
   {
     "name": "Cobwebs (Cursed)",
-    "id": "cobwebs-cursed",
     "player": "Cursed",
     "length": "30",
     "version": "2.1",
@@ -6693,7 +6274,6 @@
   },
   {
     "name": "Renevant",
-    "id": "renevant",
     "player": "rori",
     "length": "98",
     "version": "2.1",
@@ -6708,7 +6288,6 @@
   },
   {
     "name": "SUPERHATEMEWORLD",
-    "id": "superhatemeworld",
     "player": "Cursed",
     "length": "66",
     "version": "2.1",
@@ -6723,7 +6302,6 @@
   },
   {
     "name": "Sadism",
-    "id": "sadism",
     "player": "V453C70M14",
     "length": "9",
     "version": "2.1",
@@ -6737,7 +6315,6 @@
   },
   {
     "name": "Invisible VSC 38%",
-    "id": "invisible-vsc-38",
     "player": "Diamond",
     "length": "5",
     "version": "2.2",
@@ -6750,7 +6327,6 @@
   },
   {
     "name": "disruption",
-    "id": "disruption",
     "player": "Syrcx",
     "length": "69",
     "version": "2.2",
@@ -6764,7 +6340,6 @@
   },
   {
     "name": "Silent Circles (Xanii old) 44%",
-    "id": "silent-circles-xanii-old-44",
     "player": "Xanii",
     "length": "45",
     "version": "2.1",
@@ -6778,7 +6353,6 @@
   },
   {
     "name": "Lithium (Old)",
-    "id": "lithium-old",
     "player": "kloone",
     "length": "124",
     "version": "2.1",
@@ -6791,7 +6365,6 @@
   },
   {
     "name": "Lithium",
-    "id": "lithium",
     "player": "Bamvie",
     "length": "124",
     "version": "2.2",
@@ -6806,7 +6379,6 @@
   },
   {
     "name": "The JanuS Miracle2p1",
-    "id": "the-janus-miracle2p1",
     "player": "SeptaGon7",
     "length": "97",
     "version": "2.1",
@@ -6821,7 +6393,6 @@
   },
   {
     "name": "ConClusion",
-    "id": "conclusion",
     "player": "BrowarKedawar",
     "length": "85",
     "version": "2.1",
@@ -6836,7 +6407,6 @@
   },
   {
     "name": "Akuma",
-    "id": "akuma",
     "player": "LordVadercraft",
     "length": "53",
     "version": "2.2",
@@ -6850,7 +6420,6 @@
   },
   {
     "name": "Bloodbath In Hell",
-    "id": "bloodbath-in-hell",
     "player": "Mewtwo557",
     "length": "682",
     "version": "2.2",
@@ -6864,7 +6433,6 @@
   },
   {
     "name": "Invisible UNKNOWN 66-93%",
-    "id": "invisible-unknown-66-93",
     "player": "Cryostaz",
     "length": "11",
     "version": "2.2",
@@ -6877,7 +6445,6 @@
   },
   {
     "name": "twocu",
-    "id": "twocu",
     "player": "Baeru",
     "length": "70",
     "version": "2.1",
@@ -6891,7 +6458,6 @@
   },
   {
     "name": "Spacial Rend 80hz",
-    "id": "spacial-rend-80hz",
     "player": "CuTTeR",
     "length": "126",
     "version": "2.1",
@@ -6908,7 +6474,6 @@
   },
   {
     "name": "Last Prism",
-    "id": "last-prism",
     "player": "VoltrixAce",
     "length": "15",
     "version": "2.2",
@@ -6922,7 +6487,6 @@
   },
   {
     "name": "Galeforce",
-    "id": "galeforce",
     "player": "Blitzer",
     "length": "69",
     "version": "2.2",
@@ -6936,7 +6500,6 @@
   },
   {
     "name": "CataSonicBath",
-    "id": "catasonicbath",
     "player": "GeometryJosh",
     "length": "315",
     "version": "2.2",
@@ -6950,7 +6513,6 @@
   },
   {
     "name": "GodZilla vs KingKong",
-    "id": "godzilla-vs-kingkong",
     "player": "Cyronix",
     "length": "65",
     "version": "2.2",
@@ -6964,7 +6526,6 @@
   },
   {
     "name": "Burnout",
-    "id": "burnout",
     "player": "OverGD",
     "length": "19",
     "version": "2.2",
@@ -6978,7 +6539,6 @@
   },
   {
     "name": "Old Death Corridor (Fixed) 46-50%",
-    "id": "old-death-corridor-fixed-46-50",
     "player": "Lele",
     "length": "4",
     "version": "2.2",
@@ -6992,7 +6552,6 @@
   },
   {
     "name": "Instinct",
-    "id": "instinct",
     "player": "Blitzer",
     "length": "104",
     "version": "2.1",
@@ -7007,7 +6566,6 @@
   },
   {
     "name": "UNKNOWN Mobile 35-81%",
-    "id": "unknown-mobile-35-81",
     "player": "cicii",
     "length": "17",
     "version": "2.1",
@@ -7024,7 +6582,6 @@
   },
   {
     "name": "Sky Shredder",
-    "id": "sky-shredder",
     "player": "Dorvict",
     "length": "62",
     "version": "2.1",
@@ -7039,7 +6596,6 @@
   },
   {
     "name": "Gluttony 36-100%",
-    "id": "gluttony-36-100",
     "player": "NucGDStuff",
     "length": "11",
     "version": "2.2",
@@ -7053,7 +6609,6 @@
   },
   {
     "name": "Calculator Core",
-    "id": "calculator-core",
     "player": "TheShadowRealm",
     "length": "204",
     "version": "2.1",
@@ -7068,7 +6623,6 @@
   },
   {
     "name": "JENOVA",
-    "id": "jenova",
     "player": "anixlol",
     "length": "13",
     "version": "2.1",
@@ -7082,7 +6636,6 @@
   },
   {
     "name": "Spirit House 60hz Mobile",
-    "id": "spirit-house-60hz-mobile",
     "player": "Hydrus73",
     "length": "93",
     "version": "2.1",
@@ -7099,7 +6652,6 @@
   },
   {
     "name": "Trotil",
-    "id": "trotil",
     "player": "ItzTayfun",
     "length": "83",
     "version": "2.1",
@@ -7114,7 +6666,6 @@
   },
   {
     "name": "shimmer",
-    "id": "shimmer",
     "player": "Amplitron",
     "length": "74",
     "version": "2.1",
@@ -7129,7 +6680,6 @@
   },
   {
     "name": "Doodkey to Zhirdow",
-    "id": "doodkey-to-zhirdow",
     "player": "Arshadow",
     "length": "10",
     "version": "2.2",
@@ -7143,7 +6693,6 @@
   },
   {
     "name": "Crimson Planet (Unnerfed)",
-    "id": "crimson-planet-unnerfed",
     "player": "Saltoulious",
     "length": "67",
     "version": "2.1",
@@ -7156,7 +6705,6 @@
   },
   {
     "name": "Cripson Planet",
-    "id": "cripson-planet",
     "player": "Saltoulious",
     "length": "67",
     "version": "2.1",
@@ -7170,7 +6718,6 @@
   },
   {
     "name": "Crimson Planet",
-    "id": "crimson-planet",
     "player": "Wooshi",
     "length": "67",
     "version": "2.1",
@@ -7185,7 +6732,6 @@
   },
   {
     "name": "Unnerfed TORN",
-    "id": "unnerfed-torn",
     "player": "DiamondSplash",
     "length": "72",
     "version": "2.1",
@@ -7200,7 +6746,6 @@
   },
   {
     "name": "Silent Acropolis 28-55%",
-    "id": "silent-acropolis-28-55",
     "player": "RaeveZ",
     "length": "23",
     "version": "2.1",
@@ -7215,7 +6760,6 @@
   },
   {
     "name": "DIRECTIONS",
-    "id": "directions",
     "player": "SwordBx",
     "length": "120",
     "version": "2.1",
@@ -7230,7 +6774,6 @@
   },
   {
     "name": "Old Mayhem 26-98%",
-    "id": "old-mayhem-26-98",
     "player": "teraaa",
     "length": "64",
     "version": "2.1",
@@ -7244,7 +6787,6 @@
   },
   {
     "name": "Viridescent",
-    "id": "viridescent",
     "player": "Diamond",
     "length": "15",
     "version": "2.1",
@@ -7258,7 +6800,6 @@
   },
   {
     "name": "Original Cognition",
-    "id": "original-cognition",
     "player": "lolwut",
     "length": "62",
     "version": "2.2",
@@ -7272,7 +6813,6 @@
   },
   {
     "name": "Santa Cognition",
-    "id": "santa-cognition",
     "player": "JohnLikesDiamond",
     "length": "70",
     "version": "2.1",
@@ -7286,7 +6826,6 @@
   },
   {
     "name": "Cognition",
-    "id": "cognition",
     "player": "nSwish",
     "length": "62",
     "version": "2.1",
@@ -7301,7 +6840,6 @@
   },
   {
     "name": "greasy ass 6",
-    "id": "greasy-ass-6",
     "player": "fusion425",
     "length": "63",
     "version": "2.1",
@@ -7315,7 +6853,6 @@
   },
   {
     "name": "The Apocalyptic Trilogy (Trick) 68-100%",
-    "id": "the-apocalyptic-trilogy-trick-68-100",
     "player": "Trick",
     "length": "86",
     "version": "2.1",
@@ -7329,7 +6866,6 @@
   },
   {
     "name": "Buff Out",
-    "id": "buff-out",
     "player": "Esoteric Hydra",
     "length": "82",
     "version": "2.1",
@@ -7343,7 +6879,6 @@
   },
   {
     "name": "Jumper X",
-    "id": "jumper-x",
     "player": "Esoteric Hydra",
     "length": "88",
     "version": "2.2",
@@ -7357,7 +6892,6 @@
   },
   {
     "name": "blindcheron 49-75%",
-    "id": "blindcheron-49-75",
     "player": "zXdasfsa",
     "length": "17",
     "version": "2.2",
@@ -7371,7 +6905,6 @@
   },
   {
     "name": "Uneswarc",
-    "id": "uneswarc",
     "player": "HipoAR",
     "length": "121",
     "version": "2.2",
@@ -7384,7 +6917,6 @@
   },
   {
     "name": "Sound wave destroyer",
-    "id": "sound-wave-destroyer",
     "player": "HipoAR",
     "length": "121",
     "version": "2.1",
@@ -7398,7 +6930,6 @@
   },
   {
     "name": "Sakupen Trials",
-    "id": "sakupen-trials-1",
     "player": "Xanii",
     "length": "53",
     "version": "2.1",
@@ -7412,7 +6943,6 @@
   },
   {
     "name": "Naraction Diablo X",
-    "id": "naraction-diablo-x",
     "player": "AidanTR",
     "length": "60",
     "version": "2.1",
@@ -7426,7 +6956,6 @@
   },
   {
     "name": "Lavender Caverns",
-    "id": "lavender-caverns",
     "player": "DarkTD",
     "length": "69",
     "version": "2.1",
@@ -7440,7 +6969,6 @@
   },
   {
     "name": "The Abyss",
-    "id": "the-abyss",
     "player": "Arshadow",
     "length": "88",
     "version": "2.1",
@@ -7454,7 +6982,6 @@
   },
   {
     "name": "Volcanic Gleam",
-    "id": "volcanic-gleam",
     "player": "NotNickOk",
     "length": "94",
     "version": "2.1",
@@ -7468,7 +6995,6 @@
   },
   {
     "name": "Sonic Wave Eternity 48-100%",
-    "id": "sonic-wave-eternity-48-100",
     "player": "DubDee",
     "length": "67",
     "version": "2.2",
@@ -7482,7 +7008,6 @@
   },
   {
     "name": "Xenolith",
-    "id": "xenolith",
     "player": "Clutter",
     "length": "59",
     "version": "2.1",
@@ -7496,7 +7021,6 @@
   },
   {
     "name": "Unnerfed WOBBLING MACHINE 48%",
-    "id": "unnerfed-wobbling-machine-48",
     "player": "ATF",
     "length": "28",
     "version": "2.1",
@@ -7513,7 +7037,6 @@
   },
   {
     "name": "Hugh Fish",
-    "id": "hugh-fish",
     "player": "zilucy",
     "length": "217",
     "version": "2.2",
@@ -7527,7 +7050,6 @@
   },
   {
     "name": "Ringy Paracosm",
-    "id": "ringy-paracosm",
     "player": "SpeedyMuffin",
     "length": "78",
     "version": "2.1",
@@ -7541,7 +7063,6 @@
   },
   {
     "name": "Monke",
-    "id": "monke",
     "player": "Circle",
     "length": "76",
     "version": "2.1",
@@ -7555,7 +7076,6 @@
   },
   {
     "name": "SARY CANT PASS",
-    "id": "sary-cant-pass",
     "player": "Zaphe",
     "length": "95",
     "version": "2.1",
@@ -7569,7 +7089,6 @@
   },
   {
     "name": "Void of Thought",
-    "id": "void-of-thought",
     "player": "Victurkey",
     "length": "99",
     "version": "2.1",
@@ -7583,7 +7102,6 @@
   },
   {
     "name": "poocu",
-    "id": "poocu",
     "player": "Baeru",
     "length": "70",
     "version": "2.1",
@@ -7598,7 +7116,6 @@
   },
   {
     "name": "ConTroller 60hz Mobile",
-    "id": "controller-60hz-mobile",
     "player": "Dominionxx",
     "length": "73",
     "version": "2.2",
@@ -7615,7 +7132,6 @@
   },
   {
     "name": "Savage Snowstorm",
-    "id": "savage-snowstorm",
     "player": "Bradenbowl",
     "length": "78",
     "version": "2.1",
@@ -7629,7 +7145,6 @@
   },
   {
     "name": "Sadism 1.1x 52%",
-    "id": "sadism-11x-52",
     "player": "zXdasfsa",
     "length": "4",
     "version": "2.2",
@@ -7644,7 +7159,6 @@
   },
   {
     "name": "TideStep",
-    "id": "tidestep",
     "player": "hawkyre",
     "length": "104",
     "version": "2.1",
@@ -7658,7 +7172,6 @@
   },
   {
     "name": "ATOMIC CANNON Mk II",
-    "id": "atomic-cannon-mk-ii",
     "player": "Zeronium",
     "length": "74",
     "version": "2.1",
@@ -7673,7 +7186,6 @@
   },
   {
     "name": "Jasmine",
-    "id": "jasmine",
     "player": "Zeronium",
     "length": "138",
     "version": "2.1",
@@ -7687,7 +7199,6 @@
   },
   {
     "name": "why 80%",
-    "id": "why-80",
     "player": "BrutalSword",
     "length": "1796",
     "version": "2.2",
@@ -7702,7 +7213,6 @@
   },
   {
     "name": "Cosmic Cyclone",
-    "id": "cosmic-cyclone-1",
     "player": "DoSh7t",
     "length": "117",
     "version": "2.1",
@@ -7717,7 +7227,6 @@
   },
   {
     "name": "Scorch",
-    "id": "scorch",
     "player": "Lobster",
     "length": "103",
     "version": "2.1",
@@ -7731,7 +7240,6 @@
   },
   {
     "name": "JENOVA 1.1x 56%",
-    "id": "jenova-11x-56",
     "player": "zXdasfsa",
     "length": "6",
     "version": "2.2",
@@ -7747,7 +7255,6 @@
   },
   {
     "name": "Tenkai",
-    "id": "tenkai",
     "player": "Motor",
     "length": "146",
     "version": "2.1",
@@ -7763,7 +7270,6 @@
   },
   {
     "name": "Frost Pass 71%",
-    "id": "frost-pass-71",
     "player": "FaDoLog",
     "length": "40",
     "version": "2.2",
@@ -7777,7 +7283,6 @@
   },
   {
     "name": "SKWAD Cypher",
-    "id": "skwad-cypher",
     "player": "Slithium",
     "length": "67",
     "version": "2.1",
@@ -7791,7 +7296,6 @@
   },
   {
     "name": "Rage 60hz Mobile",
-    "id": "rage-60hz-mobile",
     "player": "Nontypical",
     "length": "59",
     "version": "2.1",
@@ -7808,7 +7312,6 @@
   },
   {
     "name": "Villain Virus",
-    "id": "villain-virus",
     "player": "Astrala",
     "length": "90",
     "version": "2.1",
@@ -7822,7 +7325,6 @@
   },
   {
     "name": "Punchdrunk 1.5x",
-    "id": "punchdrunk-15x",
     "player": "UFokinWotM8",
     "length": "61",
     "version": "2.1",
@@ -7837,7 +7339,6 @@
   },
   {
     "name": "Deceptive Brilliance",
-    "id": "deceptive-brilliance",
     "player": "VERTOP",
     "length": "68",
     "version": "2.2",
@@ -7851,7 +7352,6 @@
   },
   {
     "name": "Silent Circus",
-    "id": "silent-circus",
     "player": "Tuggy75",
     "length": "91",
     "version": "2.1",
@@ -7865,7 +7365,6 @@
   },
   {
     "name": "Stereo Demoness",
-    "id": "stereo-demoness",
     "player": "KPGDylan",
     "length": "87",
     "version": "2.1",
@@ -7880,7 +7379,6 @@
   },
   {
     "name": "Satanic Clubstep",
-    "id": "satanic-clubstep",
     "player": "kiseta",
     "length": "86",
     "version": "2.1",
@@ -7894,7 +7392,6 @@
   },
   {
     "name": "LUMINA Old",
-    "id": "lumina-old",
     "player": "LunarSpark",
     "length": "142",
     "version": "2.1",
@@ -7909,7 +7406,6 @@
   },
   {
     "name": "Murk 46-100%",
-    "id": "murk-46-100",
     "player": "Caleger",
     "length": "8",
     "version": "2.1",
@@ -7923,7 +7419,6 @@
   },
   {
     "name": "Azure Flare",
-    "id": "azure-flare",
     "player": "Axinity",
     "length": "64",
     "version": "2.1",
@@ -7937,7 +7432,6 @@
   },
   {
     "name": "Sadism 1.1x 43-100%",
-    "id": "sadism-11x-43-100",
     "player": "zXdasfsa",
     "length": "4",
     "version": "2.2",
@@ -7953,7 +7447,6 @@
   },
   {
     "name": "Silent Club Minus",
-    "id": "silent-club-minus",
     "player": "Whizkid05",
     "length": "83",
     "version": "2.2",
@@ -7967,7 +7460,6 @@
   },
   {
     "name": "Plasma Doom Machine",
-    "id": "plasma-doom-machine",
     "player": "HipoAR",
     "length": "50",
     "version": "2.1",
@@ -7981,7 +7473,6 @@
   },
   {
     "name": "Bloody Knuckles",
-    "id": "bloody-knuckles",
     "player": "Enzbro",
     "length": "74",
     "version": "2.1",
@@ -7995,7 +7486,6 @@
   },
   {
     "name": "Xtreme DoggieGD Map",
-    "id": "xtreme-doggiegd-map",
     "player": "Sigma",
     "length": "63",
     "version": "2.2",
@@ -8009,7 +7499,6 @@
   },
   {
     "name": "Elysium Universe",
-    "id": "elysium-universe",
     "player": "LkWavs",
     "length": "85",
     "version": "2.1",
@@ -8023,7 +7512,6 @@
   },
   {
     "name": "MUTINY",
-    "id": "mutiny",
     "player": "TFIBB",
     "length": "65",
     "version": "2.1",
@@ -8037,7 +7525,6 @@
   },
   {
     "name": "Dead Petals",
-    "id": "dead-petals",
     "player": "Whizkid05",
     "length": "92",
     "version": "2.1",
@@ -8051,7 +7538,6 @@
   },
   {
     "name": "Element 111 Rg (Trick) 41%",
-    "id": "element-111-rg-trick-41",
     "player": "Trick",
     "length": "39",
     "version": "2.1",
@@ -8064,7 +7550,6 @@
   },
   {
     "name": "Flutterwonder",
-    "id": "flutterwonder",
     "player": "D a G",
     "length": "19",
     "version": "2.1",
@@ -8078,7 +7563,6 @@
   },
   {
     "name": "Grains of Sand",
-    "id": "grains-of-sand",
     "player": "Whizkid05",
     "length": "180",
     "version": "2.1",
@@ -8092,7 +7576,6 @@
   },
   {
     "name": "Grains of Sand (Remake)",
-    "id": "grains-of-sand-remake",
     "player": "Harchok",
     "length": "180",
     "version": "2.1",
@@ -8105,7 +7588,6 @@
   },
   {
     "name": "Abandoned Corridor (Old)",
-    "id": "abandoned-corridor-old",
     "player": "Mentrillum",
     "length": "98",
     "version": "2.1",
@@ -8117,7 +7599,6 @@
   },
   {
     "name": "Crauhanari",
-    "id": "crauhanari",
     "player": "Syrcx",
     "length": "62",
     "version": "2.1",
@@ -8131,7 +7612,6 @@
   },
   {
     "name": "UNKNOWN 120hz Mobile 41%",
-    "id": "unknown-120hz-mobile-41",
     "player": "KAAPZZ!",
     "length": "20",
     "version": "2.1",
@@ -8150,7 +7630,6 @@
   },
   {
     "name": "Y2P",
-    "id": "y2p",
     "player": "enzollz",
     "length": "404",
     "version": "2.1",
@@ -8164,7 +7643,6 @@
   },
   {
     "name": "Return 420",
-    "id": "return-420",
     "player": "ZygisDij",
     "length": "1014",
     "version": "2.2",
@@ -8178,7 +7656,6 @@
   },
   {
     "name": "Return 420 (Old)",
-    "id": "return-420-old",
     "player": "BrutalSword",
     "length": "1014",
     "version": "2.1",
@@ -8190,7 +7667,6 @@
   },
   {
     "name": "Guideless Goobering",
-    "id": "guideless-goobering",
     "player": "Zytrox",
     "length": "98",
     "version": "2.2",
@@ -8205,7 +7681,6 @@
   },
   {
     "name": "SARY NEVER CLEAR",
-    "id": "sary-never-clear",
     "player": "Spamdrew128",
     "length": "79",
     "version": "2.1",
@@ -8220,7 +7695,6 @@
   },
   {
     "name": "habit",
-    "id": "habit",
     "player": "seels",
     "length": "10",
     "version": "2.1",
@@ -8234,7 +7708,6 @@
   },
   {
     "name": "Requiem 60hz",
-    "id": "requiem-60hz",
     "player": "WOO HWANG",
     "length": "74",
     "version": "2.1",
@@ -8250,7 +7723,6 @@
   },
   {
     "name": "Old Rigel",
-    "id": "old-rigel",
     "player": "Dan2D",
     "length": "73",
     "version": "2.1",
@@ -8264,7 +7736,6 @@
   },
   {
     "name": "Rigel",
-    "id": "rigel",
     "player": "Dan2D",
     "length": "73",
     "version": "2.2",
@@ -8279,7 +7750,6 @@
   },
   {
     "name": "The Yandere (Unnerfed) 94%",
-    "id": "the-yandere-unnerfed-94",
     "player": "ItzMira",
     "length": "151",
     "version": "2.1",
@@ -8294,7 +7764,6 @@
   },
   {
     "name": "Fusion Z",
-    "id": "fusion-z",
     "player": "Cuatrocientos",
     "length": "185",
     "version": "2.1",
@@ -8308,7 +7777,6 @@
   },
   {
     "name": "Ourwa 60hz Mobile",
-    "id": "ourwa-60hz-mobile",
     "player": "timmydog",
     "length": "96",
     "version": "2.2",
@@ -8325,7 +7793,6 @@
   },
   {
     "name": "Phasmvola",
-    "id": "phasmvola",
     "player": "ignDoom",
     "length": "62",
     "version": "2.2",
@@ -8339,7 +7806,6 @@
   },
   {
     "name": "Ykds1479ymdppr",
-    "id": "ykds1479ymdppr",
     "player": "BONN",
     "length": "60",
     "version": "2.2",
@@ -8354,7 +7820,6 @@
   },
   {
     "name": "Akashic Records",
-    "id": "akashic-records",
     "player": "VoTcHi",
     "length": "144",
     "version": "2.1",
@@ -8369,7 +7834,6 @@
   },
   {
     "name": "RUST",
-    "id": "rust",
     "player": "Keir",
     "length": "84",
     "version": "2.1",
@@ -8384,7 +7848,6 @@
   },
   {
     "name": "Envenomed",
-    "id": "envenomed",
     "player": "VO1DX",
     "length": "15",
     "version": "2.2",
@@ -8398,7 +7861,6 @@
   },
   {
     "name": "ReTraYsiS",
-    "id": "retraysis",
     "player": "finleyy",
     "length": "18",
     "version": "2.2",
@@ -8412,7 +7874,6 @@
   },
   {
     "name": "Nine Circles 2.2x",
-    "id": "nine-circles-22x",
     "player": "PureL",
     "length": "41",
     "version": "2.2",
@@ -8428,7 +7889,6 @@
   },
   {
     "name": "Cannon Bay (Old)",
-    "id": "cannon-bay-old",
     "player": "teraaa",
     "length": "80",
     "version": "2.1",
@@ -8441,7 +7901,6 @@
   },
   {
     "name": "Silent clubstep (buffed) 25-67%",
-    "id": "silent-clubstep-buffed-25-67",
     "player": "Diamond",
     "length": "36",
     "version": "2.2",
@@ -8455,7 +7914,6 @@
   },
   {
     "name": "CORRODERE",
-    "id": "corrodere",
     "player": "Gzeee",
     "length": "114",
     "version": "2.1",
@@ -8470,7 +7928,6 @@
   },
   {
     "name": "Amalgam 164%",
-    "id": "amalgam-164",
     "player": "Zoink",
     "length": "110",
     "version": "2.2",
@@ -8485,7 +7942,6 @@
   },
   {
     "name": "Darkness is coming 87%",
-    "id": "darkness-is-coming-87",
     "player": "Lucy",
     "length": "129",
     "version": "2.1",
@@ -8500,7 +7956,6 @@
   },
   {
     "name": "The Apocalyptic Trilogy (Trick) 30%",
-    "id": "the-apocalyptic-trilogy-trick-30",
     "player": "Trick",
     "length": "80",
     "version": "2.1",
@@ -8514,7 +7969,6 @@
   },
   {
     "name": "Launchpad Labyrinth",
-    "id": "launchpad-labyrinth",
     "player": "skzyl",
     "length": "107",
     "version": "2.1",
@@ -8529,7 +7983,6 @@
   },
   {
     "name": "Foolsong",
-    "id": "foolsong",
     "player": "NucGDStuff",
     "length": "15",
     "version": "2.2",
@@ -8543,7 +7996,6 @@
   },
   {
     "name": "Cyberpunk",
-    "id": "cyberpunk",
     "player": "zcylix",
     "length": "62",
     "version": "2.2",
@@ -8557,7 +8009,6 @@
   },
   {
     "name": "Lost Sense",
-    "id": "lost-sense",
     "player": "KyuPlays",
     "length": "16",
     "version": "2.1",
@@ -8571,7 +8022,6 @@
   },
   {
     "name": "Lucid Nightmares",
-    "id": "lucid-nightmares",
     "player": "Wooshi",
     "length": "91",
     "version": "2.1",
@@ -8586,7 +8036,6 @@
   },
   {
     "name": "Cobwebs",
-    "id": "cobwebs",
     "player": "Cursed",
     "length": "30",
     "version": "2.2",
@@ -8601,7 +8050,6 @@
   },
   {
     "name": "Coral Cave",
-    "id": "coral-cave",
     "player": "Washed",
     "length": "100",
     "version": "2.1",
@@ -8616,7 +8064,6 @@
   },
   {
     "name": "Shardscapes",
-    "id": "shardscapes",
     "player": "kiseta",
     "length": "78",
     "version": "2.1",
@@ -8631,7 +8078,6 @@
   },
   {
     "name": "Froop World",
-    "id": "froop-world",
     "player": "Blathers",
     "length": "84",
     "version": "2.2",
@@ -8645,7 +8091,6 @@
   },
   {
     "name": "woopie",
-    "id": "woopie",
     "player": "Cidiam",
     "length": "12",
     "version": "2.2",
@@ -8659,7 +8104,6 @@
   },
   {
     "name": "Nerftarus",
-    "id": "nerftarus",
     "player": "Dolphy",
     "length": "87",
     "version": "2.1",
@@ -8673,7 +8117,6 @@
   },
   {
     "name": "Final Clear",
-    "id": "final-clear",
     "player": "PPPixel",
     "length": "139",
     "version": "2.1",
@@ -8687,7 +8130,6 @@
   },
   {
     "name": "AOKA",
-    "id": "aoka",
     "player": "Cubercube",
     "length": "21",
     "version": "2.2",
@@ -8701,7 +8143,6 @@
   },
   {
     "name": "Steel",
-    "id": "steel",
     "player": "finleyy",
     "length": "17",
     "version": "2.2",
@@ -8715,7 +8156,6 @@
   },
   {
     "name": "invisible kowareta 40%",
-    "id": "invisible-kowareta-40",
     "player": "lappwv",
     "length": "24",
     "version": "2.1",
@@ -8728,7 +8168,6 @@
   },
   {
     "name": "Sonic Wave 1.35x",
-    "id": "sonic-wave-135x",
     "player": "Zoink",
     "length": "89",
     "version": "2.2",
@@ -8744,7 +8183,6 @@
   },
   {
     "name": "Amalgam",
-    "id": "amalgam",
     "player": "Wooshi",
     "length": "67",
     "version": "2.2",
@@ -8759,7 +8197,6 @@
   },
   {
     "name": "Indivine",
-    "id": "indivine",
     "player": "Bigthunder556",
     "length": "122",
     "version": "2.2",
@@ -8774,7 +8211,6 @@
   },
   {
     "name": "Cataclysm 1.5x",
-    "id": "cataclysm-15x",
     "player": "HipoAR",
     "length": "58",
     "version": "2.2",
@@ -8790,7 +8226,6 @@
   },
   {
     "name": "FENT CHALLENGE",
-    "id": "fent-challenge",
     "player": "Hover",
     "length": "18",
     "version": "2.2",
@@ -8804,7 +8239,6 @@
   },
   {
     "name": "Horros 134%",
-    "id": "horros-134",
     "player": "Whizkid05",
     "length": "95",
     "version": "2.1",
@@ -8820,7 +8254,6 @@
   },
   {
     "name": "RUTHLESS",
-    "id": "ruthless",
     "player": "vaen",
     "length": "125",
     "version": "2.1",
@@ -8835,7 +8268,6 @@
   },
   {
     "name": "Unnerfed Trotil 47%",
-    "id": "unnerfed-trotil-47",
     "player": "squinset",
     "length": "39",
     "version": "2.1",
@@ -8850,7 +8282,6 @@
   },
   {
     "name": "Sides Of My Mind",
-    "id": "sides-of-my-mind",
     "player": "Rqd",
     "length": "61",
     "version": "2.1",
@@ -8866,7 +8297,6 @@
   },
   {
     "name": "cube challenge btw",
-    "id": "cube-challenge-btw",
     "player": "Caleger",
     "length": "14",
     "version": "2.2",
@@ -8880,7 +8310,6 @@
   },
   {
     "name": "Horros",
-    "id": "horros",
     "player": "Ryclix",
     "length": "71",
     "version": "2.1",
@@ -8896,7 +8325,6 @@
   },
   {
     "name": "Sakupen Circles (Iris) 48-80%",
-    "id": "sakupen-circles-iris-48-80",
     "player": "Alphanetic",
     "length": "16",
     "version": "2.1",
@@ -8911,7 +8339,6 @@
   },
   {
     "name": "Omega Interface",
-    "id": "omega-interface",
     "player": "RG",
     "length": "69",
     "version": "2.1",
@@ -8926,7 +8353,6 @@
   },
   {
     "name": "Delirium (sydno) 53%",
-    "id": "delirium-sydno-53",
     "player": "sydno",
     "length": "8",
     "version": "2.2",
@@ -8939,7 +8365,6 @@
   },
   {
     "name": "Escape Room",
-    "id": "escape-room",
     "player": "MiniShoey",
     "length": "97",
     "version": "2.1",
@@ -8954,7 +8379,6 @@
   },
   {
     "name": "hateoul loves robot",
-    "id": "hateoul-loves-robot",
     "player": "EatingBabies",
     "length": "19",
     "version": "2.2",
@@ -8968,7 +8392,6 @@
   },
   {
     "name": "Axiom Asterism",
-    "id": "axiom-asterism",
     "player": "fusion425",
     "length": "72",
     "version": "2.2",
@@ -8983,7 +8406,6 @@
   },
   {
     "name": "Ragnarok",
-    "id": "ragnarok",
     "player": "Technical",
     "length": "191",
     "version": "2.1",
@@ -8998,7 +8420,6 @@
   },
   {
     "name": "Call Me Maybe",
-    "id": "call-me-maybe",
     "player": "LordVadercraft",
     "length": "65",
     "version": "2.1",
@@ -9012,7 +8433,6 @@
   },
   {
     "name": "Stratus",
-    "id": "stratus",
     "player": "finleyy",
     "length": "20",
     "version": "2.2",
@@ -9026,7 +8446,6 @@
   },
   {
     "name": "Unnerfed Dark Maze",
-    "id": "unnerfed-dark-maze",
     "player": "snowspike",
     "length": "77",
     "version": "2.2",
@@ -9040,7 +8459,6 @@
   },
   {
     "name": "Hallowave 60-94%",
-    "id": "hallowave-60-94",
     "player": "DNTop1Bust",
     "length": "61",
     "version": "2.2",
@@ -9053,7 +8471,6 @@
   },
   {
     "name": "TORN",
-    "id": "torn",
     "player": "Slijee",
     "length": "72",
     "version": "2.1",
@@ -9068,7 +8485,6 @@
   },
   {
     "name": "Hector Samalanca 74%",
-    "id": "hector-samalanca-74",
     "player": "Fluxit",
     "length": "37",
     "version": "2.2",
@@ -9081,7 +8497,6 @@
   },
   {
     "name": "swi unnerfed 73-100%",
-    "id": "swi-unnerfed-73-100",
     "player": "Clare",
     "length": "41",
     "version": "2.2",
@@ -9096,7 +8511,6 @@
   },
   {
     "name": "aloe",
-    "id": "aloe",
     "player": "cripz",
     "length": "14",
     "version": "2.2",
@@ -9110,7 +8524,6 @@
   },
   {
     "name": "me when machine gang",
-    "id": "me-when-machine-gang",
     "player": "Motor",
     "length": "79",
     "version": "2.1",
@@ -9126,7 +8539,6 @@
   },
   {
     "name": "Africa Circles 71-100%",
-    "id": "africa-circles-71-100",
     "player": "Helix",
     "length": "28",
     "version": "2.1",
@@ -9141,7 +8553,6 @@
   },
   {
     "name": "Silent Club",
-    "id": "silent-club",
     "player": "Luqualizer",
     "length": "83",
     "version": "2.1",
@@ -9156,7 +8567,6 @@
   },
   {
     "name": "Aries",
-    "id": "aries",
     "player": "NucGDStuff",
     "length": "16",
     "version": "2.2",
@@ -9170,7 +8580,6 @@
   },
   {
     "name": "Tartarus 60hz 62-100%",
-    "id": "tartarus-60hz-62-100",
     "player": "Seany",
     "length": "32",
     "version": "2.1",
@@ -9187,7 +8596,6 @@
   },
   {
     "name": "SAND SAILOR",
-    "id": "sand-sailor",
     "player": "nei",
     "length": "83",
     "version": "2.1",
@@ -9202,7 +8610,6 @@
   },
   {
     "name": "Unnerfed Ithacropolis",
-    "id": "unnerfed-ithacropolis",
     "player": "mageman85",
     "length": "106",
     "version": "2.2",
@@ -9215,7 +8622,6 @@
   },
   {
     "name": "Apotheosis",
-    "id": "apotheosis",
     "player": "Cursed",
     "length": "14",
     "version": "2.1",
@@ -9229,7 +8635,6 @@
   },
   {
     "name": "ship it Layout",
-    "id": "ship-it-layout",
     "player": "Magmeta",
     "length": "114",
     "version": "2.2",
@@ -9243,7 +8648,6 @@
   },
   {
     "name": "The Art of the Blade (Pauseless)",
-    "id": "the-art-of-the-blade-pauseless",
     "player": "Whizkid05 ",
     "length": "81",
     "version": "2.1",
@@ -9258,7 +8662,6 @@
   },
   {
     "name": "Galeforce (Old) 65-100%",
-    "id": "galeforce-old-65-100",
     "player": "zYosh",
     "length": "23",
     "version": "2.2",
@@ -9272,7 +8675,6 @@
   },
   {
     "name": "Ignition (Layout) 71-97%",
-    "id": "ignition-layout-71-97",
     "player": "Slithium",
     "length": "16",
     "version": "2.2",
@@ -9285,7 +8687,6 @@
   },
   {
     "name": "Shmarley Ville 60hz Mobile",
-    "id": "shmarley-ville-60hz-mobile",
     "player": "WhiteEmerald",
     "length": "68",
     "version": "2.1",
@@ -9302,7 +8703,6 @@
   },
   {
     "name": "Crimson Dagger",
-    "id": "crimson-dagger",
     "player": "UFokinWotM8",
     "length": "63",
     "version": "2.1",
@@ -9316,7 +8716,6 @@
   },
   {
     "name": "Death Corridor Nocta",
-    "id": "death-corridor-nocta",
     "player": "dDom",
     "length": "131",
     "version": "2.1",
@@ -9330,7 +8729,6 @@
   },
   {
     "name": "Eye Of The Devil 16-100%",
-    "id": "eye-of-the-devil-16-100",
     "player": "GD!Frisk",
     "length": "5",
     "version": "2.1",
@@ -9344,7 +8742,6 @@
   },
   {
     "name": "DIAMOND BLADE",
-    "id": "diamond-blade",
     "player": "UFokinWotM8",
     "length": "141",
     "version": "2.1",
@@ -9358,7 +8755,6 @@
   },
   {
     "name": "CATALYST",
-    "id": "catalyst",
     "player": "kolzaru",
     "length": "43",
     "version": "2.2",
@@ -9372,7 +8768,6 @@
   },
   {
     "name": "Ignition (Layout) 39-74%",
-    "id": "ignition-layout-39-74",
     "player": "Slithium",
     "length": "22",
     "version": "2.2",
@@ -9385,7 +8780,6 @@
   },
   {
     "name": "Pandemonium",
-    "id": "pandemonium",
     "player": "TGM05",
     "length": "158",
     "version": "2.1",
@@ -9400,7 +8794,6 @@
   },
   {
     "name": "Ultra Death Note",
-    "id": "ultra-death-note",
     "player": "Sanni",
     "length": "234",
     "version": "2.1",
@@ -9414,7 +8807,6 @@
   },
   {
     "name": "reaver",
-    "id": "reaver",
     "player": "WaterBottle317",
     "length": "73",
     "version": "2.2",
@@ -9428,7 +8820,6 @@
   },
   {
     "name": "Kakol Never Clear",
-    "id": "kakol-never-clear",
     "player": "ChopBlox",
     "length": "59",
     "version": "2.2",
@@ -9442,7 +8833,6 @@
   },
   {
     "name": "SWI 2017",
-    "id": "swi-2017",
     "player": "HipoAR",
     "length": "125",
     "version": "2.2",
@@ -9456,7 +8846,6 @@
   },
   {
     "name": "ta1LSD0ll",
-    "id": "ta1lsd0ll",
     "player": "Arshadow",
     "length": "49",
     "version": "2.2",
@@ -9471,7 +8860,6 @@
   },
   {
     "name": "BLIGHTWAVE",
-    "id": "blightwave",
     "player": "Benji8080",
     "length": "47",
     "version": "2.2",
@@ -9485,7 +8873,6 @@
   },
   {
     "name": "wind",
-    "id": "wind",
     "player": "exsii",
     "length": "58",
     "version": "2.1",
@@ -9499,7 +8886,6 @@
   },
   {
     "name": "FARBIDI THEORY",
-    "id": "farbidi-theory",
     "player": "WatchPiggy",
     "length": "84",
     "version": "2.2",
@@ -9514,7 +8900,6 @@
   },
   {
     "name": "LED",
-    "id": "led",
     "player": "Dxst",
     "length": "32",
     "version": "2.1",
@@ -9528,7 +8913,6 @@
   },
   {
     "name": "EXTRA WALK 177%",
-    "id": "extra-walk-177",
     "player": "nook",
     "length": "36",
     "version": "2.2",
@@ -9543,7 +8927,6 @@
   },
   {
     "name": "Soulwind",
-    "id": "soulwind",
     "player": "NcaT",
     "length": "10",
     "version": "2.1",
@@ -9557,7 +8940,6 @@
   },
   {
     "name": "Descent Into Exile",
-    "id": "descent-into-exile",
     "player": "BGram",
     "length": "99",
     "version": "2.1",
@@ -9572,7 +8954,6 @@
   },
   {
     "name": "Neon Skyline",
-    "id": "neon-skyline",
     "player": "joeingly",
     "length": "109",
     "version": "2.1",
@@ -9587,7 +8968,6 @@
   },
   {
     "name": "CYCLONE 1.5x",
-    "id": "cyclone-15x",
     "player": "FlinGuSPluNkuS",
     "length": "37",
     "version": "2.2",
@@ -9603,7 +8983,6 @@
   },
   {
     "name": "Morbin",
-    "id": "morbin",
     "player": "GeoDom85YT",
     "length": "67",
     "version": "2.1",
@@ -9617,7 +8996,6 @@
   },
   {
     "name": "Lovers in Abyss 13%",
-    "id": "lovers-in-abyss-13",
     "player": "Helix",
     "length": "16",
     "version": "2.2",
@@ -9631,7 +9009,6 @@
   },
   {
     "name": "The Rupture",
-    "id": "the-rupture",
     "player": "Dolphy",
     "length": "85",
     "version": "2.1",
@@ -9646,7 +9023,6 @@
   },
   {
     "name": "Scrubbabingo force",
-    "id": "scrubbabingo-force",
     "player": "Popsi",
     "length": "94",
     "version": "2.2",
@@ -9661,7 +9037,6 @@
   },
   {
     "name": "Jupiter My Favourite",
-    "id": "jupiter-my-favourite",
     "player": "Leslie",
     "length": "96",
     "version": "2.1",
@@ -9676,7 +9051,6 @@
   },
   {
     "name": "Stellar",
-    "id": "stellar",
     "player": "kwezy",
     "length": "9",
     "version": "2.2",
@@ -9690,7 +9064,6 @@
   },
   {
     "name": "The Art of the Blade",
-    "id": "the-art-of-the-blade",
     "player": "kyoto",
     "length": "81",
     "version": "2.1",
@@ -9705,7 +9078,6 @@
   },
   {
     "name": "Kappa",
-    "id": "kappa",
     "player": "nSwish",
     "length": "106",
     "version": "2.1",
@@ -9720,7 +9092,6 @@
   },
   {
     "name": "Shiranai 60hz 65%",
-    "id": "shiranai-60hz-65",
     "player": "ZAX1",
     "length": "63",
     "version": "2.1",
@@ -9736,7 +9107,6 @@
   },
   {
     "name": "-critical error-",
-    "id": "-critical-error-",
     "player": "SpeedyMuffin",
     "length": "137",
     "version": "2.1",
@@ -9750,7 +9120,6 @@
   },
   {
     "name": "Gumi",
-    "id": "gumi",
     "player": "swooker",
     "length": "49",
     "version": "2.1",
@@ -9764,7 +9133,6 @@
   },
   {
     "name": "Tax evasion wave",
-    "id": "tax-evasion-wave",
     "player": "Wshock",
     "length": "14",
     "version": "2.2",
@@ -9779,7 +9147,6 @@
   },
   {
     "name": "ee",
-    "id": "ee",
     "player": "NcaT",
     "length": "9",
     "version": "2.1",
@@ -9793,7 +9160,6 @@
   },
   {
     "name": "maniac",
-    "id": "maniac",
     "player": "Kaza",
     "length": "91",
     "version": "2.1",
@@ -9807,7 +9173,6 @@
   },
   {
     "name": "Stellae Destiny",
-    "id": "stellae-destiny",
     "player": "sobot",
     "length": "131",
     "version": "2.1",
@@ -9821,7 +9186,6 @@
   },
   {
     "name": "Acu 1903%",
-    "id": "acu-1903",
     "player": "wwdonut",
     "length": "1582",
     "version": "2.2",
@@ -9836,7 +9200,6 @@
   },
   {
     "name": "no jokes",
-    "id": "no-jokes",
     "player": "Zeronium",
     "length": "39",
     "version": "2.1",
@@ -9851,7 +9214,6 @@
   },
   {
     "name": "Dark",
-    "id": "dark",
     "player": "pohgii",
     "length": "14",
     "version": "2.2",
@@ -9865,7 +9227,6 @@
   },
   {
     "name": "Spectre (ezvie) 66-100%",
-    "id": "spectre-ezvie-66-100",
     "player": "ezvie",
     "length": "57",
     "version": "2.1",
@@ -9878,7 +9239,6 @@
   },
   {
     "name": "Bloody Knuckles (Old)",
-    "id": "bloody-knuckles-old",
     "player": "Enzbro",
     "length": "60",
     "version": "2.1",
@@ -9891,7 +9251,6 @@
   },
   {
     "name": "Sonic Wave Unlimited (Coin Route)",
-    "id": "sonic-wave-unlimited-coin-route",
     "player": "zilucy",
     "length": "135",
     "version": "2.2",
@@ -9905,7 +9264,6 @@
   },
   {
     "name": "Aerial Gleam Layout 44-100%",
-    "id": "aerial-gleam-layout-44-100",
     "player": "Slithium",
     "length": "36",
     "version": "2.1",
@@ -9919,7 +9277,6 @@
   },
   {
     "name": "Crimson World 51%",
-    "id": "crimson-world-51",
     "player": "SeptaGon7",
     "length": "29",
     "version": "2.1",
@@ -9934,7 +9291,6 @@
   },
   {
     "name": "Invisible Aronia 60-100%",
-    "id": "invisible-aronia-60-100",
     "player": "lappwv",
     "length": "31",
     "version": "2.1",
@@ -9947,7 +9303,6 @@
   },
   {
     "name": "LD50",
-    "id": "ld50",
     "player": "Blitzer",
     "length": "89",
     "version": "2.2",
@@ -9962,7 +9317,6 @@
   },
   {
     "name": "IMMORTALtheory 9%",
-    "id": "immortaltheory-9",
     "player": "qwertyokbomb",
     "length": "8",
     "version": "2.2",
@@ -9977,7 +9331,6 @@
   },
   {
     "name": "Remxde 30%",
-    "id": "remxde-30",
     "player": "Whizkid05",
     "length": "23",
     "version": "2.1",
@@ -9992,7 +9345,6 @@
   },
   {
     "name": "invisible kowareta 32-85%",
-    "id": "invisible-kowareta-32-85",
     "player": "lappwv",
     "length": "25",
     "version": "2.1",
@@ -10005,7 +9357,6 @@
   },
   {
     "name": "World MINUS4 25%",
-    "id": "world-minus4-25",
     "player": "Septagon7",
     "length": "7",
     "version": "2.1",
@@ -10020,7 +9371,6 @@
   },
   {
     "name": "The National Anthem 37%",
-    "id": "the-national-anthem-37",
     "player": "Erzor",
     "length": "161",
     "version": "2.2",
@@ -10035,7 +9385,6 @@
   },
   {
     "name": "Prismatic Storm 1.25x 56%",
-    "id": "prismatic-storm-125x-56",
     "player": "zXdasfsa",
     "length": "6",
     "version": "2.2",
@@ -10051,7 +9400,6 @@
   },
   {
     "name": "Nabil Let Go",
-    "id": "nabil-let-go",
     "player": "VoltreN",
     "length": "87",
     "version": "2.2",
@@ -10066,7 +9414,6 @@
   },
   {
     "name": "INNARDS 611%",
-    "id": "innards-611",
     "player": "dddr",
     "length": "668",
     "version": "2.1",
@@ -10081,7 +9428,6 @@
   },
   {
     "name": "Bloodlust",
-    "id": "bloodlust",
     "player": "knobbelboy",
     "length": "170",
     "version": "2.1",
