@@ -109,7 +109,8 @@
       "Level",
       "Consistency"
     ],
-    "id": "136530685"
+    "id": "136530685",
+    "levelID": "136530685"
   },
   {
     "name": "KOCMOC UNLEASHED 68%",
@@ -228,7 +229,7 @@
   {
     "name": "Heliopolis 51%",
     "player": "Zoink",
-    "levelID": 136530685,
+    "levelID": "136530685",
     "date": "2026-06-07",
     "length": 72,
     "version": 2.2,
@@ -1063,7 +1064,8 @@
       "Level",
       "Verified"
     ],
-    "levelID": "137886942"
+    "levelID": "137886942",
+    "id": "137886942"
   },
   {
     "name": "Africa Circles (ChopBlox Unnerfed) 61%",
@@ -6030,6 +6032,23 @@
       "Mobile"
     ],
     "id": 57600307
+     },
+  {
+    "name": "unknown (True Unnerfed) 43%",
+    "player": "ffzer",
+    "levelID": 128587204,
+    "date": "2025-11-19",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/iaxzmWgbqjM",
+    "showcaseVideo": "https://youtu.be/KqGCwPgrIsk",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/70003258/high",
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ],
+    "id": 128587204
   },
   {
     "name": "SADOMASOCHISM 60%, 85% in a row",
@@ -6253,7 +6272,8 @@
       "Consistency",
       "Rated"
     ],
-    "levelID": "71885708"
+    "levelID": "71885708",
+    "id": "71885708"
   },
   {
     "name": "Firework (Sid125) 24-92%",
@@ -6381,23 +6401,6 @@
       "Progress"
     ],
     "id": 86191664
-  },
-  {
-    "name": "unknown (True Unnerfed) 11-47%",
-    "player": "Emp",
-    "levelID": 128587204,
-    "date": "2025-11-18",
-    "length": 13,
-    "version": 2.2,
-    "submitter": "Emp",
-    "video": "https://youtu.be/mar_iC4fUso",
-    "showcaseVideo": "https://youtu.be/KqGCwPgrIsk",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/70003258/high",
-    "tags": [
-      "Level",
-      "Progress"
-    ],
-    "id": 128587204
   },
   {
     "name": "The Yangire 144hz",
