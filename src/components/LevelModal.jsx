@@ -3,8 +3,8 @@ import {
   formatDate,
   formatLength,
   getYouTubeEmbedUrl,
-  getThumbnailUrlSequence,
 } from "../utils/format";
+import { useLevelThumbnail } from "./LevelCard";
 import {
   formatEstimateDisplay,
   hasEstimate,
@@ -33,27 +33,13 @@ export default function LevelModal({
       ? a.tags.split(/\s*,\s*/).filter(Boolean)
       : [];
   const pendingRemoval = tags.includes("Pending Removal");
-  const thumbnailUrlSequence = getThumbnailUrlSequence(
-    a.thumbnail,
-    a.showcaseVideo,
-    a.video,
-    a.levelID,
-  );
-  const [urlIndex, setUrlIndex] = useState(0);
-
-  const currentThumbnailUrl = thumbnailUrlSequence[urlIndex] || null;
-
-  const handleImageError = () => {
-    if (urlIndex < thumbnailUrlSequence.length - 1) {
-      setUrlIndex(urlIndex + 1);
-    }
-  };
-
-  const handleImageLoad = (e) => {
-    if (e.target.naturalWidth === 0 || e.target.naturalHeight === 0) {
-      handleImageError();
-    }
-  };
+  const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
+    thumbnail: a.thumbnail,
+    showcaseVideo: a.showcaseVideo,
+    video: a.video,
+    levelID: a.levelID,
+    lazy: false,
+  });
 
   const handleCopy = (value) => {
     navigator.clipboard.writeText(value);
@@ -80,13 +66,16 @@ export default function LevelModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal__thumb">
-          {currentThumbnailUrl && (
+          {currentUrl && (
             <img
-              src={currentThumbnailUrl}
+              src={currentUrl}
               alt={a.name}
-              onError={handleImageError}
-              onLoad={handleImageLoad}
+              onError={onError}
+              onLoad={onLoad}
             />
+          )}
+          {!loadedUrl && !currentUrl && (
+            <div className="card__thumb-placeholder" />
           )}
           <div className="modal__thumb-fade" />
           <button className="modal__close" onClick={onClose} aria-label="Close">

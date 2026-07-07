@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import Header from "./components/Header";
 import LevelList from "./components/LevelList";
 import LevelModal from "./components/LevelModal";
+import { useLevelThumbnail } from "./components/LevelCard";
 import HomePage from "./pages/HomePage";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import ModLeaderboardPage from "./pages/ModLeaderboardPage";
@@ -90,6 +91,38 @@ achievementsData.length +
   platformerTimelineData.length;
 
 const NO_LIST = new Set(["HOME", "LEADERBOARD", "MODLB"]);
+
+function AppBackground({ achievement }) {
+  const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
+    thumbnail: achievement?.thumbnail,
+    showcaseVideo: achievement?.showcaseVideo,
+    video: achievement?.video,
+    levelID: achievement?.levelID,
+    lazy: false,
+    enabled: Boolean(achievement),
+  });
+
+  return (
+    <>
+      {currentUrl && !loadedUrl && (
+        <img
+          src={currentUrl}
+          alt=""
+          aria-hidden
+          onError={onError}
+          onLoad={onLoad}
+          style={{ display: "none" }}
+        />
+      )}
+      {loadedUrl && (
+        <div
+          className="app-bg__img"
+          style={{ backgroundImage: `url(${loadedUrl})` }}
+        />
+      )}
+    </>
+  );
+}
 
 function parseRoute() {
   const parts = window.location.pathname.split("/").filter(Boolean);
@@ -359,17 +392,12 @@ export default function App() {
     return () => window.removeEventListener("scroll", update);
   }, [filteredData]);
 
-  const bgImage = !NO_LIST.has(active) ? (rawData[0]?.thumbnail ?? null) : null;
+  const topAchievement = !NO_LIST.has(active) ? rawData[0] : null;
 
   return (
     <div className="app">
       <div className="app-bg">
-        {bgImage && (
-          <div
-            className="app-bg__img"
-            style={{ backgroundImage: `url(${bgImage})` }}
-          />
-        )}
+        <AppBackground achievement={topAchievement} />
         <div className="app-bg__tint" />
         <div className="app-bg__grid" />
       </div>

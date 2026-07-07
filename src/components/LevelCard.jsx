@@ -1,4 +1,10 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   formatDate,
   formatLength,
@@ -12,8 +18,94 @@ import {
   hasProjectedShift,
 } from "../utils/estimateRank";
 
-function LevelCard({
-  achievement: a,
+const MIN_THUMBNAIL_DIMENSION = 200;
+
+export function useLevelThumbnail({
+  thumbnail,
+  showcaseVideo,
+  video,
+  levelID,
+  lazy = true,
+  enabled = true,
+}) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(!lazy);
+  const [urlIndex, setUrlIndex] = useState(0);
+  const [loadedUrl, setLoadedUrl] = useState(null);
+  const [exhausted, setExhausted] = useState(false);
+
+  const sequence = useMemo(() => {
+    if (!enabled) return [];
+    return getThumbnailUrlSequence(thumbnail, showcaseVideo, video, levelID);
+  }, [thumbnail, showcaseVideo, video, levelID, enabled]);
+
+  useEffect(() => {
+    setUrlIndex(0);
+    setLoadedUrl(null);
+    setExhausted(false);
+  }, [sequence]);
+
+  useEffect(() => {
+    if (!lazy || !enabled) {
+      setInView(true);
+      return undefined;
+    }
+
+    setInView(false);
+    const element = ref.current;
+    if (!element) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [lazy, enabled, sequence]);
+
+  const shouldLoad = enabled && inView && !exhausted;
+  const currentUrl = shouldLoad ? (sequence[urlIndex] ?? null) : null;
+
+  const onError = useCallback(() => {
+    setLoadedUrl(null);
+    setUrlIndex((prev) => {
+      if (prev < sequence.length - 1) return prev + 1;
+      setExhausted(true);
+      return prev;
+    });
+  }, [sequence.length]);
+
+  const onLoad = useCallback(
+    (e) => {
+      const { naturalWidth, naturalHeight } = e.target;
+      if (
+        naturalWidth === 0 ||
+        naturalHeight === 0 ||
+        (naturalWidth < MIN_THUMBNAIL_DIMENSION &&
+          naturalHeight < MIN_THUMBNAIL_DIMENSION)
+      ) {
+        onError();
+        return;
+      }
+
+      setLoadedUrl(e.target.currentSrc || e.target.src);
+    },
+    [onError],
+  );
+
+  return {
+    ref,
+    currentUrl,
+    loadedUrl,
+    onError,
+    onLoad,
+  };
+}
+
+function LevelCard({  achievement: a,
   index,
   isTimeline,
   hideRank,
@@ -42,30 +134,21 @@ function LevelCard({
     return [];
   }, [a.tags]);
   const pendingRemoval = tags.includes("Pending Removal");
+  const isCardLayout = layoutMode === "CARD";
 
-  const thumbnailUrlSequence = useMemo(
-    () =>
-      getThumbnailUrlSequence(a.thumbnail, a.showcaseVideo, a.video, a.levelID),
-    [a.thumbnail, a.showcaseVideo, a.video, a.levelID],
-  );
-
-  const [urlIndex, setUrlIndex] = useState(0);
-  const currentThumbnailUrl = thumbnailUrlSequence[urlIndex] || null;
-
-  const handleImageError = useCallback(() => {
-    setUrlIndex((prev) =>
-      prev < thumbnailUrlSequence.length - 1 ? prev + 1 : prev,
-    );
-  }, [thumbnailUrlSequence.length]);
-
-  const handleImageLoad = useCallback(
-    (e) => {
-      if (e.target.naturalWidth === 0 || e.target.naturalHeight === 0) {
-        handleImageError();
-      }
-    },
-    [handleImageError],
-  );
+  const {
+    ref: thumbnailRef,
+    currentUrl,
+    loadedUrl,
+    onError,
+    onLoad,
+  } = useLevelThumbnail({
+    thumbnail: a.thumbnail,
+    showcaseVideo: a.showcaseVideo,
+    video: a.video,
+    levelID: a.levelID,
+    enabled: isCardLayout,
+  });
 
   const handleCardClick = useCallback(() => {
     onClick(a);
@@ -73,18 +156,14 @@ function LevelCard({
 
   return (
     <article
+      ref={thumbnailRef}
       className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
+      style={
+        loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
+      }
       onClick={handleCardClick}
     >
-      <div
-        className="card__content"
-        style={{
-          backgroundImage:
-            layoutMode === "CARD" && currentThumbnailUrl
-              ? `url(${currentThumbnailUrl})`
-              : undefined,
-        }}
-      >
+      <div className="card__content">
         <div className="card__detail">
           <div className="card__detail-top">
             <div className="card__rank-row">
@@ -187,16 +266,15 @@ function LevelCard({
         </div>
       </div>
 
-      {layoutMode === "CARD" && (
+      {isCardLayout && (
         <div className="card__thumb">
-          {currentThumbnailUrl ? (
+          {currentUrl ? (
             <img
-              src={currentThumbnailUrl}
+              src={currentUrl}
               alt=""
-              loading="lazy"
               decoding="async"
-              onError={handleImageError}
-              onLoad={handleImageLoad}
+              onError={onError}
+              onLoad={onLoad}
               width="100%"
               height="100%"
             />

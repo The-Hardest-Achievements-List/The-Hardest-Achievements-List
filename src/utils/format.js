@@ -95,28 +95,53 @@ export function getYouTubeEmbedUrl(url) {
 }
 
 export function getYouTubeThumbnailUrls(videoId) {
-
     return [
-        `https://img.youtube.com/vi/${videoId}/hq2.jpg`,
-        `https://img.youtube.com/vi/${videoId}/hq1.jpg`,
-        `https://img.youtube.com/vi/${videoId}/hq3.jpg`
+        `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/default.jpg`,
     ]
+}
+
+export function normalizeThumbnail(thumbnail) {
+    if (!thumbnail || typeof thumbnail !== 'string') return null
+
+    const trimmed = thumbnail.trim()
+    if (!trimmed || trimmed === '—' || trimmed === '-') return null
+    if (!/^https?:\/\//i.test(trimmed)) return null
+
+    if (trimmed.includes('github.com') && trimmed.includes('/blob/')) {
+        return trimmed
+            .replace('https://github.com/', 'https://raw.githubusercontent.com/')
+            .replace('/blob', '')
+            .replace(/\?raw=true$/, '')
+    }
+
+    return trimmed
 }
 
 const memoizedGetThumbnailUrlSequence = memoize(function getThumbnailUrlSequenceImpl(thumbnail, showcaseVideo, playerVideo, levelID) {
     const urls = []
-    if (thumbnail) return [thumbnail]
-    if (levelID) {
-        urls.push(`https://levelthumbs.prevter.me/thumbnail/${levelID}/small`)
-        urls.push(`https://levelthumbs.prevter.me/thumbnail/${levelID}`)
+    const add = (url) => {
+        if (url && !urls.includes(url)) urls.push(url)
     }
+
+    const explicit = normalizeThumbnail(thumbnail)
+    if (explicit) add(explicit)
+
+    if (levelID) {
+        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/high`)
+        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/small`)
+        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}`)
+    }
+
     const showcaseVideoId = showcaseVideo ? getYouTubeVideoId(showcaseVideo) : null
     const playerVideoId = playerVideo ? getYouTubeVideoId(playerVideo) : null
     if (showcaseVideoId) {
-        urls.push(...getYouTubeThumbnailUrls(showcaseVideoId))
+        getYouTubeThumbnailUrls(showcaseVideoId).forEach(add)
     }
     if (playerVideoId && playerVideoId !== showcaseVideoId) {
-        urls.push(...getYouTubeThumbnailUrls(playerVideoId))
+        getYouTubeThumbnailUrls(playerVideoId).forEach(add)
     }
 
     return urls

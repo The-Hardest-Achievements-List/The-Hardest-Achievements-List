@@ -1148,6 +1148,7 @@ body {
 .card__content {
     position: relative;
     overflow: hidden;
+    background-image: var(--thumb-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
