@@ -1119,6 +1119,32 @@ body {
     border-color: var(--line-2);
 }
 
+.card.is-pending-removal {
+    border-color: oklch(65% 0.2 25 / 0.6);
+    box-shadow: inset 4px 0 0 oklch(62% 0.22 25);
+}
+
+.list--list .card.is-pending-removal {
+    background: oklch(55% 0.18 25 / 0.12);
+    box-shadow: none;
+    border-left: 4px solid oklch(62% 0.22 25);
+}
+
+.list--list .card.is-pending-removal:hover {
+    background: oklch(55% 0.18 25 / 0.18);
+    border-color: oklch(65% 0.2 25 / 0.6);
+}
+
+.card__tag.tag-pending-removal {
+    color: oklch(75% 0.18 25);
+    background: oklch(55% 0.18 25 / 0.15);
+    border-color: oklch(62% 0.2 25 / 0.4);
+}
+
+.card.is-pending-removal .card__name {
+    color: oklch(72% 0.2 25);
+}
+
 .card__content {
     position: relative;
     overflow: hidden;
@@ -1167,6 +1193,12 @@ body {
     align-items: center;
     gap: calc(8px * var(--card-text-scale, 1));
     margin-bottom: calc(5px * var(--card-text-scale, 1));
+    min-height: calc(0.857em * 1.35);
+}
+
+.card__rank-row .tooltip-container {
+    display: inline-flex;
+    align-items: center;
 }
 
 .card__rank-badge {
@@ -1176,6 +1208,7 @@ body {
     color: var(--ink);
     letter-spacing: 0.04em;
     text-shadow: 0 1px 3px oklch(0% 0 0 / 0.55);
+    font-variant-numeric: tabular-nums;
 }
 
 .card__rank-badge--unknown {
@@ -1202,6 +1235,15 @@ body {
     color: var(--ink-2);
     font-weight: 600;
     font-size: 0.92em;
+}
+
+.rank-projection--single {
+    cursor: default;
+}
+
+.rank-projection--single .rank-projection__arrow,
+.rank-projection--single .rank-projection__projected {
+    display: none;
 }
 
 .modal__rank.rank-projection {
@@ -1556,6 +1598,11 @@ body {
     font-size: 7px;
 }
 
+.modal__tag[data-tag="Pending Removal"]::before {
+    content: "✕";
+    font-size: 7px;
+}
+
 .modal__tag[data-tag="Verified"]::before {
     content: "✓";
     font-size: 7px;
@@ -1577,6 +1624,10 @@ body {
     line-height: 1.1;
     color: var(--ink);
     margin-bottom: 10px;
+}
+
+.modal.is-pending-removal .modal__name {
+    color: oklch(72% 0.2 25);
 }
 
 .modal__player {
@@ -2930,6 +2981,19 @@ body {
 
 .lb__ach:hover {
     background: var(--bg-3);
+}
+
+.lb__ach.is-pending-removal {
+    background: oklch(55% 0.18 25 / 0.1);
+    border-left: 3px solid oklch(62% 0.22 25);
+}
+
+.lb__ach.is-pending-removal:hover {
+    background: oklch(55% 0.18 25 / 0.16);
+}
+
+.lb__ach.is-pending-removal .lb__ach-name {
+    color: oklch(72% 0.2 25);
 }
 
 .lb__ach-rank {

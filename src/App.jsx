@@ -34,6 +34,7 @@ const CLASSIC_TAGS = [
   "Formerly Rated",
   "Tentative",
   "Outdated Version",
+  "Pending Removal",
   "Coin Route",
   "Noclip",
   "Speedhack",
@@ -54,6 +55,7 @@ const PLATFORMER_TAGS = [
   "Low Hertz",
   "Mobile",
   "Outdated Version",
+  "Pending Removal",
 ];
 
 const DATA_MAP = {

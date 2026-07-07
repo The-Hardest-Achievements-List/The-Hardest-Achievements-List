@@ -23,6 +23,7 @@ const TAG_ICONS = {
   "Formerly Rated": "fa-star-half-stroke",
   Tentative: "fa-hourglass-half",
   "Outdated Version": "fa-clock-rotate-left",
+  "Pending Removal": "fa-trash-can",
   "Coin Route": "fa-coins",
   Noclip: "fa-ghost",
   Speedhack: "fa-gauge-high",
@@ -115,6 +116,11 @@ const TAG_DEFINITIONS = {
     text: "Outdated Version",
     tooltip:
       "Achievement is on an older version of its level than the current one, or done on a version before the latest release.",
+  },
+  "Pending Removal": {
+    className: "tag-pending-removal",
+    text: "Pending Removal",
+    tooltip: "Levels set to be removed due to redundancy.",
   },
   Verified: {
     className: "tag-verified",

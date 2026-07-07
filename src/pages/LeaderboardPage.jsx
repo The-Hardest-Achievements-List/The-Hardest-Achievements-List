@@ -245,12 +245,13 @@ function DetailContent({ player, pos, mode }) {
       <div className="lb__achs">
         {player.achievements.map((e) => {
           const isDuplicate = !!getDuplicateParentId(e);
+          const pendingRemoval = e.tags?.includes("Pending Removal");
           const xpValue = e.points ?? 0;
 
           return (
             <div
               key={`${e.name}-${e.rank}-${e._src}`}
-              className={`lb__ach${isDuplicate ? " is-duplicate" : ""}`}
+              className={`lb__ach${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}`}
               title={e.notes || undefined}
             >
               <span className="lb__ach-rank">#{e.rank}</span>

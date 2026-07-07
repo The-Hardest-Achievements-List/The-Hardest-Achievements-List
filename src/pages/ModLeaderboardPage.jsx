@@ -78,7 +78,11 @@ function ModDetailContent({ mod, pos }) {
       </div>
       <div className="lb__achs">
         {mod.submissions.map((e, j) => (
-          <div key={j} className="lb__ach" title={e.notes || undefined}>
+          <div
+            key={j}
+            className={`lb__ach${e.tags?.includes("Pending Removal") ? " is-pending-removal" : ""}`}
+            title={e.notes || undefined}
+          >
             <span className="lb__ach-rank">
               {e.rank != null ? "#" + e.rank : "—"}
             </span>

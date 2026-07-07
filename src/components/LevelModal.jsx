@@ -32,6 +32,7 @@ export default function LevelModal({
     : typeof a?.tags === "string"
       ? a.tags.split(/\s*,\s*/).filter(Boolean)
       : [];
+  const pendingRemoval = tags.includes("Pending Removal");
   const thumbnailUrlSequence = getThumbnailUrlSequence(
     a.thumbnail,
     a.showcaseVideo,
@@ -74,7 +75,10 @@ export default function LevelModal({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`modal${pendingRemoval ? " is-pending-removal" : ""}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal__thumb">
           {currentThumbnailUrl && (
             <img
@@ -100,9 +104,17 @@ export default function LevelModal({
               </span>
             )}
             {!hideRank && !isPendingEstimate && officialRank != null && (
-              showProjectedShift ? (
-                <Tooltip content={<ProjectedRankTooltipContent entry={a} />}>
-                  <span className="modal__rank rank-projection">
+              hasProjectedShift(a) ? (
+                <Tooltip
+                  content={
+                    showProjectedShift ? (
+                      <ProjectedRankTooltipContent entry={a} />
+                    ) : null
+                  }
+                >
+                  <span
+                    className={`modal__rank modal__rank--official rank-projection${showProjectedShift ? "" : " rank-projection--single"}`}
+                  >
                     <span className="rank-projection__current">#{officialRank}</span>
                     <span className="rank-projection__arrow" aria-hidden="true">
                       →

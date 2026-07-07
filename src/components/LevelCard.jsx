@@ -41,6 +41,7 @@ function LevelCard({
     if (typeof a.tags === "string") return a.tags.split(/\s*,\s*/).filter(Boolean);
     return [];
   }, [a.tags]);
+  const pendingRemoval = tags.includes("Pending Removal");
 
   const thumbnailUrlSequence = useMemo(
     () =>
@@ -72,7 +73,7 @@ function LevelCard({
 
   return (
     <article
-      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
+      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
       onClick={handleCardClick}
     >
       <div
@@ -98,9 +99,17 @@ function LevelCard({
                       {pendingRankBadge}
                     </span>
                   )
-                ) : showProjectedShift ? (
-                  <Tooltip content={<ProjectedRankTooltipContent entry={a} />}>
-                    <span className="card__rank-badge rank-projection">
+                ) : hasProjectedShift(a) ? (
+                  <Tooltip
+                    content={
+                      showProjectedShift ? (
+                        <ProjectedRankTooltipContent entry={a} />
+                      ) : null
+                    }
+                  >
+                    <span
+                      className={`card__rank-badge rank-projection${showProjectedShift ? "" : " rank-projection--single"}`}
+                    >
                       <span className="rank-projection__current">#{officialRank}</span>
                       <span className="rank-projection__arrow" aria-hidden="true">
                         →
