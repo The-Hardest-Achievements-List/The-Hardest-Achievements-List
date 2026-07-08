@@ -218,16 +218,14 @@ export default function App() {
     } catch (error) {}
   }, [showProjectedRanks]);
 
-  const isClassicPending = mode === "classic" && active === "PENDING";
-  const isClassicMain = mode === "classic" && active === "MAIN";
+  const isPendingList = active === "PENDING";
+  const isMainList = active === "MAIN";
+  const mainEntries = mode === "classic" ? achievementsData : platformersData;
+  const pendingEntries = mode === "classic" ? pendingData : platformerpendingData;
   const mainProjectionByKey = useMemo(() => {
-    if (!isClassicMain) return null;
-    return buildMainProjection(
-      achievementsData,
-      pendingData,
-      getAchievementKey,
-    );
-  }, [isClassicMain]);
+    if (!isMainList) return null;
+    return buildMainProjection(mainEntries, pendingEntries, getAchievementKey);
+  }, [isMainList, mode, mainEntries, pendingEntries]);
   const projectionAvailable = mainProjectionByKey != null;
   const rawData = NO_LIST.has(active) ? [] : (Array.isArray(DATA_MAP[mode]?.[active]) ? DATA_MAP[mode][active] : []);
   const rawDataWithListRank = useMemo(() => {
@@ -261,7 +259,7 @@ export default function App() {
     achievement.player?.toLowerCase().includes(q) ||
     String(achievement.levelID ?? "").includes(q) ||
     String(achievement.rank ?? "").includes(q) ||
-    (isClassicPending && matchesEstimateSearch(achievement, q));
+    (isPendingList && matchesEstimateSearch(achievement, q));
 
   const toggleTag = (t) => {
     const next = new Map(activeTags);
@@ -328,7 +326,7 @@ export default function App() {
     }
 
     data.sort((a, b) => {
-      if (sort === "rank" && isClassicPending) {
+      if (sort === "rank" && isPendingList) {
         return comparePendingEstimate(a, b, sortDir);
       }
 
@@ -359,7 +357,7 @@ export default function App() {
     });
 
     return data;
-  }, [rawData, search, activeTags, sort, sortDir, isClassicPending]);
+  }, [rawData, search, activeTags, sort, sortDir, isPendingList]);
 
   useEffect(() => {
     const update = () => {
@@ -433,8 +431,8 @@ export default function App() {
           allTags={allTags}
           toggleTag={toggleTag}
           isTimeline={active === "TIMELINE"}
-          hideRank={active === "PENDING" && !isClassicPending}
-          isPendingEstimate={isClassicPending}
+          hideRank={active === "PENDING" && !isPendingList}
+          isPendingEstimate={isPendingList}
           projectionAvailable={projectionAvailable}
           showProjectedRanks={showProjectedRanks}
           setShowProjectedRanks={setShowProjectedRanks}
@@ -458,9 +456,9 @@ export default function App() {
         <LevelModal
           level={selectedLevel}
           onClose={() => setSelectedLevel(null)}
-          hideRank={active === "PENDING" && !isClassicPending}
-          isPendingEstimate={isClassicPending}
-          showProjectedRanks={showProjectedRanks && isClassicMain}
+          hideRank={active === "PENDING" && !isPendingList}
+          isPendingEstimate={isPendingList}
+          showProjectedRanks={showProjectedRanks && isMainList}
         />
       )}
 

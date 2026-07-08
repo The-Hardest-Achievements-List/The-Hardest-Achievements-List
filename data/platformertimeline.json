@@ -9,8 +9,7 @@
     "tags": [
       "Platformer",
       "Progress"
-    ],
-    "rank": 1
+    ]
   },
   {
     "name": "The Abyss (Deathless, 3rd Coin)",
@@ -27,7 +26,6 @@
     "showcaseVideo": "https://youtu.be/RKP5NVBdunc",
     "video": "https://www.youtube.com/watch?v=jD5BNFHF3Z8",
     "submitter": "Woachi",
-    "rank": 2,
     "length": 0
   },
   {
@@ -43,8 +41,7 @@
     "date": "2024-12-09",
     "showcaseVideo": "https://youtu.be/RKP5NVBdunc",
     "video": "https://youtu.be/Grw8DT3v8PA",
-    "submitter": "toolazytogetausername",
-    "rank": 3
+    "submitter": "toolazytogetausername"
   },
   {
     "name": "CONVOLUTION",
@@ -59,8 +56,7 @@
     "date": "2024-08-13",
     "showcaseVideo": "https://youtu.be/rcSQvDWvswI",
     "video": "https://www.youtube.com/watch?v=bfASf1-aK2M",
-    "submitter": "kyle1saurus",
-    "rank": 4
+    "submitter": "kyle1saurus"
   },
   {
     "name": "Closed Square X",
@@ -72,8 +68,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 5
+    ]
   },
   {
     "name": "Cl5u37r0ph0b1a",
@@ -87,8 +82,7 @@
     "date": "2024-03-14",
     "video": "https://www.youtube.com/watch?v=1Y0f-vEXw1Y",
     "showcaseVideo": "https://youtu.be/il1EO5KBhKM",
-    "submitter": "kyle1saurus",
-    "rank": 6
+    "submitter": "kyle1saurus"
   },
   {
     "name": "YiiK A PostAlbertRPG",
@@ -102,8 +96,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 7
+    ]
   },
   {
     "name": "GEETHINS II",
@@ -117,8 +110,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 8
+    ]
   },
   {
     "name": "Bramble Scramble",
@@ -132,8 +124,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 9
+    ]
   },
   {
     "name": "Whg3 Lv5 (Old)",
@@ -146,8 +137,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 10
+    ]
   },
   {
     "name": "HYPER GRAVITRON (All Coins)",
@@ -163,7 +153,6 @@
       "Verified",
       "Coin Route"
     ],
-    "rank": 11,
     "length": 0
   },
   {
@@ -178,8 +167,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 12
+    ]
   },
   {
     "name": "The Tower XXII (Old)",
@@ -194,8 +182,7 @@
       "Platformer",
       "Verified",
       "Outdated Version"
-    ],
-    "rank": 13
+    ]
   },
   {
     "name": "Infinity Trial",
@@ -207,7 +194,6 @@
     "date": "2023-07-26",
     "submitter": "Anceps",
     "tags": [],
-    "rank": 14,
     "levelID": 99978836
   },
   {
@@ -222,8 +208,7 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 15
+    ]
   },
   {
     "name": "Lava Trials",
@@ -237,7 +222,6 @@
       "Platformer",
       "Verified"
     ],
-    "rank": 16,
     "version": 2.2
   },
   {
@@ -251,7 +235,6 @@
       "Platformer",
       "Verified"
     ],
-    "rank": 17,
     "version": 2.2,
     "levelID": 97787386,
     "showcaseVideo": "https://www.youtube.com/watch?v=p2nl-fG6aas"
@@ -269,7 +252,6 @@
       "Platformer",
       "Verified"
     ],
-    "rank": 18,
     "levelID": 36523712
   },
   {
@@ -284,7 +266,6 @@
       "Platformer",
       "Verified"
     ],
-    "rank": 19,
     "version": 2.2
   },
   {
@@ -299,7 +280,6 @@
       "Platformer",
       "Verified"
     ],
-    "rank": 20,
     "version": 2.2
   },
   {
@@ -315,7 +295,6 @@
       "Verified",
       "Outdated Version"
     ],
-    "rank": 21,
     "version": 2.2
   },
   {
@@ -330,7 +309,6 @@
       "Verified",
       "Outdated Version"
     ],
-    "rank": 22,
     "version": 2.2,
     "levelID": 119262956
   },
@@ -346,7 +324,6 @@
     "tags": [
       "Platformer",
       "Verified"
-    ],
-    "rank": 23
+    ]
   }
 ]
