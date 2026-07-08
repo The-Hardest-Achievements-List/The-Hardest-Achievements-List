@@ -17,10 +17,60 @@ function memoize(fn, maxSize = 100) {
     }
 }
 
+export function isValidDate(iso) {
+    if (!iso || typeof iso !== 'string') return false
+    const d = new Date(iso)
+    return !Number.isNaN(d.getTime())
+}
+
 export function formatDate(iso) {
-    if (!iso) return '—'
+    if (!isValidDate(iso)) return '—'
     const d = new Date(iso)
     return `${d.getDate()} ${MONTHS[d.getMonth()]} ${String(d.getFullYear()).slice(2)}`
+}
+
+function findNeighborDate(entries, startIndex, direction) {
+    for (let i = startIndex + direction; i >= 0 && i < entries.length; i += direction) {
+        if (isValidDate(entries[i].date)) return entries[i].date
+    }
+    return null
+}
+
+export function getTimelineEntryKey(entry) {
+    return `${entry.levelID ?? ''}\0${entry.name ?? ''}\0${entry.date ?? ''}\0${entry.player ?? ''}`
+}
+
+function buildTimelineDateLabelAt(entries, index) {
+    const entry = entries[index]
+
+    if (isValidDate(entry.date)) {
+        return formatDate(entry.date)
+    }
+
+    const prevDate = findNeighborDate(entries, index, -1)
+    const nextDate = findNeighborDate(entries, index, 1)
+
+    if (prevDate && nextDate) {
+        return `${formatDate(prevDate)} – ${formatDate(nextDate)}`
+    }
+    if (prevDate) {
+        return `${formatDate(prevDate)} – ?`
+    }
+    if (nextDate) {
+        return `? – ${formatDate(nextDate)}`
+    }
+    return '—'
+}
+
+export function buildTimelineDateLabelMap(entries) {
+    const map = new Map()
+    if (!Array.isArray(entries)) return map
+
+    for (let i = 0; i < entries.length; i++) {
+        map.set(getTimelineEntryKey(entries[i]), buildTimelineDateLabelAt(entries, i))
+    }
+
+    return map
 }
 
 export function formatLength(seconds) {
@@ -43,6 +93,7 @@ export function getYouTubeVideoId(url) {
     const patterns = [
         /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
         /(?:https?:\/\/)?(?:www\.)?youtube\.com\/live\/([a-zA-Z0-9_-]{11})/,
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,
         /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/,
         /^([a-zA-Z0-9_-]{11})$/
     ]
@@ -53,6 +104,42 @@ export function getYouTubeVideoId(url) {
     }
 
     return null
+}
+
+function fixYouTubeUrlScheme(url) {
+    return url
+        .replace(/^https:\/(?!\/)/, 'https://')
+        .replace(/^http:\/(?!\/)/, 'http://')
+}
+
+export function normalizeYouTubeUrl(url) {
+    if (!url || typeof url !== 'string') return url
+
+    const trimmed = url.trim()
+    if (!trimmed) return url
+
+    const fixed = fixYouTubeUrlScheme(trimmed)
+    const videoId = getYouTubeVideoId(fixed)
+
+    if (videoId) {
+        const start = getYouTubeStartSeconds(fixed)
+        const base = `https://youtu.be/${videoId}`
+        return start != null ? `${base}?t=${start}` : base
+    }
+
+    try {
+        const parsed = new URL(fixed.startsWith('http') ? fixed : `https://${fixed}`)
+        const host = parsed.hostname.replace(/^www\./, '')
+        if (host !== 'youtube.com' && host !== 'youtu.be' && host !== 'm.youtube.com') {
+            return trimmed
+        }
+
+        const start = getYouTubeStartSeconds(fixed)
+        const base = `${parsed.protocol}//${parsed.host}${parsed.pathname}`
+        return start != null ? `${base}?t=${start}` : base
+    } catch {
+        return trimmed
+    }
 }
 
 function parseYouTubeTimeParam(value) {

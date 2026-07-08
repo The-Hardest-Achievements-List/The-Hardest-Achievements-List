@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "normalize:youtube": "node scripts/normalize-youtube-links.mjs",
+    "normalize:entries": "node scripts/normalize-entries.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

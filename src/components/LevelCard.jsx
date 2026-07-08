@@ -108,12 +108,14 @@ export function useLevelThumbnail({
 function LevelCard({  achievement: a,
   index,
   isTimeline,
+  timelineDateLabel,
   hideRank,
   isPendingEstimate,
   showProjectedRanks = false,
   onClick,
   layoutMode = "CARD",
 }) {
+  const displayedDate = timelineDateLabel ?? formatDate(a.date);
   const shouldShowRank =
     !isTimeline && index !== -1 && (isPendingEstimate || !hideRank);
   const officialRank = shouldShowRank
@@ -169,7 +171,7 @@ function LevelCard({  achievement: a,
             <div className="card__rank-row">
               {!isDuplicate &&
                 (isTimeline ? (
-                  <span className="card__rank-badge">{formatDate(a.date)}</span>
+                  <span className="card__rank-badge">{displayedDate}</span>
                 ) : isPendingEstimate ? (
                   pendingRankBadge != null && (
                     <span

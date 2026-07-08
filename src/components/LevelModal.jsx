@@ -3,6 +3,7 @@ import {
   formatDate,
   formatLength,
   getYouTubeEmbedUrl,
+  normalizeYouTubeUrl,
 } from "../utils/format";
 import { useLevelThumbnail } from "./LevelCard";
 import {
@@ -27,6 +28,7 @@ export default function LevelModal({
   const pendingRankLabel = isPendingEstimate ? formatEstimateDisplay(a) : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
+  const dateDisplay = a.timelineDateLabel ?? formatDate(a.date);
   const tags = Array.isArray(a?.tags)
     ? a.tags
     : typeof a?.tags === "string"
@@ -152,13 +154,13 @@ export default function LevelModal({
               <span className="lbl">DATE</span>
               <span
                 className="val"
-                onClick={() => handleCopy(formatDate(a.date))}
+                onClick={() => handleCopy(dateDisplay)}
                 style={{ cursor: "pointer" }}
                 title="Click to copy"
               >
-                {copiedValue === formatDate(a.date)
+                {copiedValue === dateDisplay
                   ? "✓ Copied"
-                  : formatDate(a.date)}
+                  : dateDisplay}
               </span>
             </div>
             {!!a.length && (
@@ -251,7 +253,7 @@ export default function LevelModal({
           <div className="modal__links">
             {a.video && (
               <a
-                href={a.video}
+                href={normalizeYouTubeUrl(a.video)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal__link modal__link--primary"
@@ -261,7 +263,7 @@ export default function LevelModal({
             )}
             {a.showcaseVideo && (
               <a
-                href={a.showcaseVideo}
+                href={normalizeYouTubeUrl(a.showcaseVideo)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal__link"

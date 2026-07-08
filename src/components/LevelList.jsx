@@ -2,6 +2,7 @@ import React from "react";
 import LevelCard from "./LevelCard";
 import GroupedLevelCard from "./GroupedLevelCard";
 import { groupAchievementsByDuplicates } from "../utils/groupDuplicates";
+import { buildTimelineDateLabelMap, getTimelineEntryKey } from "../utils/format";
 import { TAG_DEFINITIONS } from "./Header";
 import Tooltip from "./Tooltip";
 
@@ -99,6 +100,23 @@ export default function LevelList({
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const safeData = Array.isArray(data) ? data : [];
   const { mainAchievements } = groupAchievementsByDuplicates(safeData);
+  const timelineDateLabels = React.useMemo(
+    () => (isTimeline ? buildTimelineDateLabelMap(safeData) : null),
+    [isTimeline, safeData],
+  );
+  const getTimelineDateLabel = React.useCallback(
+    (achievement) => timelineDateLabels?.get(getTimelineEntryKey(achievement)),
+    [timelineDateLabels],
+  );
+  const handleCardClick = React.useCallback(
+    (achievement) => {
+      const label = getTimelineDateLabel(achievement);
+      onCardClick(
+        label ? { ...achievement, timelineDateLabel: label } : achievement,
+      );
+    },
+    [onCardClick, getTimelineDateLabel],
+  );
   const safeAllTags = Array.isArray(allTags) ? allTags : [];
   const includeTags = [];
   const excludeTags = [];
@@ -249,10 +267,11 @@ export default function LevelList({
                 duplicates={a.duplicates}
                 index={i}
                 isTimeline={isTimeline}
+                getTimelineDateLabel={getTimelineDateLabel}
                 hideRank={hideRank}
                 isPendingEstimate={isPendingEstimate}
                 showProjectedRanks={showProjectedRanks}
-                onClick={onCardClick}
+                onClick={handleCardClick}
                 layoutMode={layoutMode}
               />
             ) : (
@@ -261,10 +280,11 @@ export default function LevelList({
                 achievement={a}
                 index={i}
                 isTimeline={isTimeline}
+                timelineDateLabel={getTimelineDateLabel(a)}
                 hideRank={hideRank}
                 isPendingEstimate={isPendingEstimate}
                 showProjectedRanks={showProjectedRanks}
-                onClick={onCardClick}
+                onClick={handleCardClick}
                 layoutMode={layoutMode}
               />
             );
