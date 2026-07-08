@@ -942,7 +942,7 @@
     "id": 112313819
   },
   {
-    "name": "Vehemence (Wpopoff old) 47-100%",
+    "name": "Vehemence (wPopoff Old) 47-100%",
     "player": "wPopoff",
     "levelID": 96572223,
     "date": "2025-08-31",
@@ -1025,7 +1025,7 @@
     "id": 117692518
   },
   {
-    "name": "Vehemence (wPopoff old) 39%",
+    "name": "Vehemence (wPopoff Old) 39%",
     "player": "wPopoff",
     "levelID": 96572223,
     "date": "2025-07-26",
@@ -1761,7 +1761,7 @@
     "id": 135661111
   },
   {
-    "name": "Vehemence (Wpopoff) 27%",
+    "name": "Vehemence (wPopoff) 27%",
     "player": "wPopoff",
     "levelID": "96572223",
     "date": "2025-09-19",
@@ -1994,7 +1994,7 @@
     "id": 113341338
   },
   {
-    "name": "Heliopolis (Thnnder old) 60-100%",
+    "name": "Heliopolis (Thnnder Old) 60-100%",
     "player": "Thnnder",
     "date": "2024-11-13",
     "length": 78,
@@ -2328,7 +2328,7 @@
     ]
   },
   {
-    "name": "Heliopolis (Thnnder old) 17%",
+    "name": "Heliopolis (Thnnder Old) 17%",
     "player": "Thnnder",
     "date": "2024-11-15",
     "length": 20,
@@ -2808,7 +2808,7 @@
     "id": 49896559
   },
   {
-    "name": "Old AoD",
+    "name": "Abyss of Darkness (Old)",
     "player": "Dils thik",
     "levelID": 76680844,
     "date": "2023-03-20",
@@ -3047,7 +3047,7 @@
     "id": 71434979
   },
   {
-    "name": "SWI Slithium",
+    "name": "Sonic Wave Infinity (Slithium)",
     "player": "HipoAR",
     "levelID": 129774598,
     "date": "2025-12-19",
@@ -3055,7 +3055,7 @@
     "version": 2.2,
     "submitter": "bbv3 :3",
     "video": "https://youtu.be/av5D0_M6hso",
-    "showcaseVideo": "https://youtu.be/Ag381Ey-pWs",
+    "showcaseVideo": "https://youtu.be/yjou7fFK23w",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/72206188",
     "tags": [
       "Level",
@@ -3072,7 +3072,7 @@
     "version": 2.2,
     "submitter": "nensa",
     "video": "https://youtu.be/CweiVNgo9IY",
-    "showcaseVideo": "https://youtu.be/r0UUlgjrF2w",
+    "showcaseVideo": "https://youtu.be/8GL1FXb4W4U",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/127534241",
     "tags": [
       "Challenge",
@@ -3127,7 +3127,8 @@
       "Challenge",
       "Progress"
     ],
-    "levelID": "81683082"
+    "levelID": "81683082",
+    "id": "81683082"
   },
   {
     "name": "surface 17-86%",
@@ -3142,7 +3143,8 @@
       "Challenge",
       "Progress"
     ],
-    "levelID": "81683082"
+    "levelID": "81683082",
+    "id": "81683082"
   },
   {
     "name": "Deimos 57%, 100% in a row",
@@ -3153,7 +3155,7 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/N5efNNp1WMc",
-    "showcaseVideo": "https://youtu.be/CQJqSSBFHQ8",
+    "showcaseVideo": "https://youtu.be/tEm59VdSJGE",
     "tags": [
       "Level",
       "Consistency",
@@ -3170,7 +3172,7 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/WHOfO0OxbvM",
-    "showcaseVideo": "https://youtu.be/AgQeRMZw-t4",
+    "showcaseVideo": "https://youtu.be/G44BvYWvNVY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/78149361",
     "tags": [
       "Level",
@@ -3188,7 +3190,7 @@
     "version": 2.2,
     "submitter": "Excryst",
     "video": "https://youtu.be/1z0DqY4Pxqw",
-    "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
+    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
     "tags": [
       "Level",
       "Low Hertz",
@@ -3207,7 +3209,7 @@
     "length": 60,
     "version": 2.2,
     "video": "https://youtu.be/nU5AQPzd2YA",
-    "showcaseVideo": "https://youtu.be/R8BMscOkTrA",
+    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120012581",
     "tags": [
       "Level",
@@ -3252,7 +3254,7 @@
   },
   {
     "name": "Aeternus 20%",
-    "player": "Dewwbs",
+    "player": "dewbbs",
     "levelID": 102647436,
     "date": "2026-05-12",
     "length": 23,
@@ -3544,7 +3546,7 @@
     "version": 2.2,
     "submitter": "bbv3 :3",
     "video": "https://youtu.be/VHJ5PPCi8hY?t=168",
-    "showcaseVideo": "https://youtu.be/hcZWawS26hU",
+    "showcaseVideo": "https://youtu.be/PfPOih94r7c",
     "tags": [
       "Level",
       "Progress"
@@ -3559,7 +3561,7 @@
     "version": 2.2,
     "submitter": "bbv3 :3",
     "video": "https://youtu.be/VHJ5PPCi8hY?t=116s",
-    "showcaseVideo": "https://youtu.be/hcZWawS26hU",
+    "showcaseVideo": "https://youtu.be/PfPOih94r7c",
     "tags": [
       "Level",
       "Progress"
@@ -3574,7 +3576,7 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/hagtWNVNH8A?t=174",
-    "showcaseVideo": "https://youtu.be/hcZWawS26hU",
+    "showcaseVideo": "https://youtu.be/PfPOih94r7c",
     "tags": [
       "Level",
       "Progress"
@@ -3590,7 +3592,7 @@
     "version": 2.2,
     "submitter": "fwoggy",
     "video": "https://youtu.be/UFpfgXBQzhY",
-    "showcaseVideo": "https://youtu.be/UO9BubbAJtU",
+    "showcaseVideo": "https://youtu.be/GZRKrFeKXNU",
     "tags": [
       "Level",
       "Verified"
@@ -3606,7 +3608,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/h2wmRMgACH4",
-    "showcaseVideo": "https://youtu.be/sG8-KPIk-tk",
+    "showcaseVideo": "https://youtu.be/TwPQH9N8X_k",
     "tags": [
       "Level",
       "Verified",
@@ -3683,7 +3685,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/JlhBdtzL99A",
-    "showcaseVideo": "https://youtu.be/DUAjNqop_p8",
+    "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
     "tags": [
       "Level",
       "Verified"
@@ -3752,8 +3754,7 @@
       "Verified",
       "Rated"
     ],
-    "id": 27690100,
-    "thumbnail": "—"
+    "id": 27690100
   },
   {
     "name": "Blue Slaughterhouse (The_Bat0)",
@@ -4307,7 +4308,7 @@
     "version": 2.2,
     "submitter": "VovanPo",
     "video": "https://youtu.be/oY-rlZxhLUM",
-    "showcaseVideo": "https://youtu.be/r0UUlgjrF2w",
+    "showcaseVideo": "https://youtu.be/8GL1FXb4W4U",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/127534241",
     "tags": [
       "Challenge",
@@ -4405,7 +4406,7 @@
     "version": 2.1,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/AEEzvOBwPyw",
-    "showcaseVideo": "https://youtu.be/sWdgDpblGBU",
+    "showcaseVideo": "https://youtu.be/dTo3cTfxlJA",
     "tags": [
       "Challenge",
       "Low Hertz",
@@ -4438,7 +4439,7 @@
     "version": 2.1,
     "submitter": "notmaxwell",
     "video": "https://youtu.be/WVMOzhJlGrw",
-    "showcaseVideo": "https://youtu.be/draA4xdeFUE",
+    "showcaseVideo": "https://youtu.be/T9RhU3WsSEE",
     "tags": [
       "Challenge",
       "Verified"
@@ -4487,7 +4488,7 @@
     "version": 2.2,
     "submitter": "rainityyy",
     "video": "https://youtu.be/7Hb3g7aXsf8",
-    "showcaseVideo": "https://youtu.be/7kzhozGgHR8",
+    "showcaseVideo": "https://youtu.be/OCxDMerw81I",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/121310778",
     "tags": [
       "Challenge",
@@ -4549,7 +4550,7 @@
     "version": 2.1,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/TNqFHVrt2ng",
-    "showcaseVideo": "https://youtu.be/ozGsB1IBLEE",
+    "showcaseVideo": "https://youtu.be/HDzTmbnsR-o",
     "tags": [
       "Level",
       "Low Hertz",
@@ -4586,7 +4587,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/Wv_pGGGE8A8",
-    "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
+    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
     "tags": [
       "Level",
       "Low Hertz",
@@ -4709,7 +4710,7 @@
     "version": 2.2,
     "submitter": "Exiled_Shade",
     "video": "https://youtu.be/JBZ-lrBgkl0",
-    "showcaseVideo": "https://youtu.be/QcFo_jxsWbw",
+    "showcaseVideo": "https://youtu.be/gdv46xO8DRc",
     "tags": [
       "Level",
       "Verified",
@@ -4726,7 +4727,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/nQDTi077O6M",
-    "showcaseVideo": "https://youtu.be/dzVCMlRFPlc",
+    "showcaseVideo": "https://youtu.be/DCbXHYwW7r0",
     "tags": [
       "Level",
       "Verified",
@@ -4819,7 +4820,7 @@
     "version": 2.2,
     "submitter": "marleywave",
     "video": "https://youtu.be/U19vmpenb9g",
-    "showcaseVideo": "https://youtu.be/z7J-oNC9wnU",
+    "showcaseVideo": "https://youtu.be/1cEkCDN6aeQ",
     "tags": [
       "Level",
       "Verified"
@@ -4835,7 +4836,7 @@
     "version": 2.2,
     "submitter": "freedom",
     "video": "https://youtu.be/zuG5H-fbwZA",
-    "showcaseVideo": "https://youtu.be/-nja3I-CK50",
+    "showcaseVideo": "https://youtu.be/gO3eFNLz1Os",
     "tags": [
       "Level",
       "Low Hertz",
@@ -5257,7 +5258,6 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/m9y4rS_NNv4",
-    "showcaseVideo": "https://youtu.be/LptlyojZcNw",
     "tags": [
       "Level",
       "Progress"
@@ -5337,7 +5337,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/1nltyMOpLqI",
-    "showcaseVideo": "https://youtu.be/XO0v_VBieow",
+    "showcaseVideo": "https://youtu.be/fkZW-8baIQ4",
     "tags": [
       "Challenge",
       "Verified"
@@ -5452,7 +5452,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/jQlXNrJvlvw",
-    "showcaseVideo": "https://youtu.be/9LRSlvXekUE",
+    "showcaseVideo": "https://youtu.be/Te_yJ6F83jY",
     "tags": [
       "Challenge",
       "Verified"
@@ -5489,7 +5489,7 @@
     "id": 28224824
   },
   {
-    "name": "True Innards",
+    "name": "innards (Unnerfed)",
     "player": "eandis",
     "levelID": 88216956,
     "date": "2023-01-30",
@@ -5497,7 +5497,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/K77leSnLP0Y",
-    "showcaseVideo": "https://youtu.be/P5qLACDcdGg",
+    "showcaseVideo": "https://youtu.be/AzgEZQYm4Jw",
     "tags": [
       "Level",
       "Verified"
@@ -5546,7 +5546,7 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/ZcdiTGuIJ1k",
-    "showcaseVideo": "https://youtu.be/qDcewR4PUYY",
+    "showcaseVideo": "https://youtu.be/o-ahDrLbePg",
     "tags": [
       "Level",
       "Verified"
@@ -5562,7 +5562,6 @@
     "version": 2.2,
     "submitter": "raine",
     "video": "https://youtu.be/wMTwlk_1bno",
-    "showcaseVideo": "https://youtu.be/LptlyojZcNw",
     "tags": [
       "Level",
       "Progress"
@@ -5578,7 +5577,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/Q2C4tq_RJoI",
-    "showcaseVideo": "https://youtu.be/_fY_jzKmBuU",
+    "showcaseVideo": "https://youtu.be/XkKlOjww6aQ",
     "tags": [
       "Level",
       "Low Hertz",
@@ -5615,7 +5614,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/b2yHaIk5zio",
-    "showcaseVideo": "https://youtu.be/CQJqSSBFHQ8",
+    "showcaseVideo": "https://youtu.be/tEm59VdSJGE",
     "tags": [
       "Level",
       "Verified",
@@ -5731,7 +5730,6 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/LkA0JlLEwR0",
-    "showcaseVideo": "https://youtu.be/WRd6SCFXpMc",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/75584822",
     "tags": [
       "Challenge",
@@ -5855,7 +5853,7 @@
     "id": 109814681
   },
   {
-    "name": "Vehemence (wPopoff old) 33-60%",
+    "name": "Vehemence (wPopoff Old) 33-60%",
     "player": "wPopoff",
     "levelID": 96572223,
     "date": "2025-07-15",
@@ -5965,7 +5963,6 @@
     "version": 2.2,
     "submitter": "kittycatiscute",
     "video": "https:/youtu.be/S9_XXbq3j3Q?t=4815",
-    "showcaseVideo": "https://youtu.be/CVXC2_bveBQ",
     "tags": [
       "Level",
       "Progress"
@@ -6010,7 +6007,7 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/VHlMLSaSfbM",
-    "showcaseVideo": "https://youtu.be/_fY_jzKmBuU",
+    "showcaseVideo": "https://youtu.be/XkKlOjww6aQ",
     "tags": [
       "Level",
       "Low Hertz",
@@ -6046,11 +6043,7 @@
     "version": 2.2,
     "submitter": "NucGDStuff",
     "video": "https://youtu.be/Sfxv1RfJ0sc",
-    "showcaseVideo": "https://youtu.be/VPXub8NAKPU",
-    "tags": [
-      "Challenge",
-      "Consistency"
-    ],
+    "tags": "Challenge, Consistency",
     "id": 76213334
   },
   {
@@ -6077,7 +6070,7 @@
     "version": 2.1,
     "submitter": "Arcadie",
     "video": "https://youtu.be/3HKqUUySSrc",
-    "showcaseVideo": "https://youtu.be/gGz9rPR4pbw",
+    "showcaseVideo": "https://youtu.be/gO3eFNLz1Os",
     "tags": [
       "Level",
       "Low Hertz",
@@ -6260,7 +6253,8 @@
       "Rated"
     ],
     "levelID": "71885708",
-    "id": "71885708"
+    "id": "71885708",
+    "showcaseVideo": "https://youtu.be/OLi0Mk5l-d4"
   },
   {
     "name": "Firework (Sid125) 24-92%",
@@ -6365,7 +6359,6 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/wMNMo34DBcQ",
-    "showcaseVideo": "https://youtu.be/lY3CoqipRCs",
     "tags": [
       "Level",
       "Progress"
@@ -6396,7 +6389,7 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/rGDrOFExa38",
-    "showcaseVideo": "https://youtu.be/hkfdKYqQARA",
+    "showcaseVideo": "https://youtu.be/cvnsGG155gw",
     "tags": [
       "Level",
       "Low Hertz",
@@ -6406,7 +6399,7 @@
     "id": 110500920
   },
   {
-    "name": "Vehemence (Wpopoff old) 24-55%",
+    "name": "Vehemence (Wpopoff Old) 24-55%",
     "player": "wPopoff",
     "levelID": "96572223",
     "date": "2025-07-21",
@@ -6431,7 +6424,7 @@
     "version": 2.1,
     "submitter": "Anceps",
     "video": "https://youtu.be/yvLwiOy3KEA",
-    "showcaseVideo": "https://youtu.be/bqKgTzTZ7N4",
+    "showcaseVideo": "https://youtu.be/m-K_rTnRrLA",
     "tags": [
       "Level",
       "Verified",
@@ -6447,7 +6440,7 @@
     "version": 2.1,
     "submitter": "Tr1bto",
     "video": "https://youtu.be/UMOqidVTMmk",
-    "showcaseVideo": "https://youtu.be/bqKgTzTZ7N4",
+    "showcaseVideo": "https://youtu.be/Jy6UUkY_2aY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/95851008",
     "tags": [
       "Level",
@@ -6601,7 +6594,6 @@
     "version": 2.2,
     "submitter": "Cinder",
     "video": "https://youtu.be/BmRoiqUzxXw",
-    "showcaseVideo": "https://youtu.be/WHtEbScrUs8",
     "tags": [
       "Level",
       "Verified"
