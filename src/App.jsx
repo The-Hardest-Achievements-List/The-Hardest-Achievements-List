@@ -34,20 +34,19 @@ const CLASSIC_TAGS = [
   "Rated",
   "Formerly Rated",
   "Tentative",
-  "Outdated Version",
-  "Pending Removal",
-  "Coin Route",
   "Noclip",
   "Speedhack",
   "Mobile",
   "2P",
+  "Coin Route",
   "Miscellaneous",
+  "Outdated Version",
+  "Pending Removal",
 ];
 
 const PLATFORMER_TAGS = [
   "Platformer",
   "Deathless",
-  "Coin Route",
   "Rated",
   "Verified",
   "Consistency",
@@ -55,6 +54,8 @@ const PLATFORMER_TAGS = [
   "Speedrun",
   "Low Hertz",
   "Mobile",
+  "Coin Route",
+  "Miscellaneous",
   "Outdated Version",
   "Pending Removal",
 ];

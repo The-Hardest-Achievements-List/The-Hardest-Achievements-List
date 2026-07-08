@@ -4,7 +4,7 @@ import {
   hasProjectedShift,
   PROJECTION_TOOLTIP,
 } from "../utils/estimateRank";
-import "./tooltip.css";
+import "./Tooltip.css";
 
 export function ProjectedRankTooltipContent({ entry }) {
   if (!hasProjectedShift(entry)) {

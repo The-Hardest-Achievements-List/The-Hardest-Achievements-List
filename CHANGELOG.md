@@ -1,16 +1,16 @@
 # Changelog
 
-Changes from `79cbce0` (*Standardizing JSON field order and tag arrays format & order on achievement.json while also adding noclip and other tags to some entries*) through `c59a8b7` (*Minor UI Improvement on filter chips*).
+Changes from `79cbce0` (*Standardizing JSON field order and tag arrays format & order on achievement.json while also adding noclip and other tags to some entries*) through `7e49b75` (*Extending Classic list features to Pending and Timeline list*).
 
 **Range:** 2026-07-07 → 2026-07-08  
-**Commits:** 6  
-**Files changed:** 21 (+12,295 / −12,558 lines)
+**Commits:** 7  
+**Files changed:** 22 (+12,521 / −12,605 lines)
 
 ---
 
 ## Summary
 
-This period focused on data normalization (`id` → `levelID`), pending-submission rank projections, thumbnail loading improvements, a new **Pending Removal** tag, YouTube embed timestamp fixes, and several UI/UX refinements across cards, filters, tooltips, and the sidebar.
+This period focused on data normalization (`id` → `levelID`), pending-submission rank projections (now shared across Classic and Platformer lists), thumbnail loading improvements, a new **Pending Removal** tag, YouTube embed timestamp fixes, and several UI/UX refinements across cards, filters, tooltips, and the sidebar.
 
 ---
 
@@ -18,6 +18,7 @@ This period focused on data normalization (`id` → `levelID`), pending-submissi
 
 | Commit   | Date       | Description |
 |----------|------------|-------------|
+| `7e49b75` | 2026-07-08 | Extending Classic list features to Pending and Timeline list |
 | `c59a8b7` | 2026-07-08 | Minor UI improvement on filter chips |
 | `42a6077` | 2026-07-08 | Improving level thumbnail retrieval & loading system |
 | `b5114d5` | 2026-07-07 | Adding Pending Removal tags |
@@ -29,9 +30,20 @@ This period focused on data normalization (`id` → `levelID`), pending-submissi
 
 ## Features
 
-### Rank projection system (`be87c3d`)
+### Classic features extended to Platformer lists (`7e49b75`)
 
-A new rank projection system simulates how the **Classic Main** list would reorder once pending submissions are placed.
+Rank projection, pending estimate search/sort, and estimate badges — previously Classic-only — now apply to **Platformer Main** and **Platformer Pending** as well.
+
+- **`App.jsx`:** `isClassicMain` / `isClassicPending` replaced with mode-agnostic `isMainList` / `isPendingList`
+- **Projection:** `buildMainProjection()` selects `achievementsData` + `pendingData` (Classic) or `platformersData` + `platformerpendingData` (Platformer) based on the active mode
+- **Sidebar toggle:** "Projected ranks" now available on both Classic Main and Platformer Main
+- **Pending list:** estimate-based sort, estimate search, and estimate rank badges work on Platformer Pending (no longer hidden behind Classic-only checks)
+- **`data/pending.json`:** `estimateLower` / `estimateUpper` added to 12 additional Classic pending entries
+- **`data/platformertimeline.json`:** removed static `rank` fields from all 23 entries — timeline rank is now derived from list order, consistent with Classic Timeline
+
+### Rank projection system (`be87c3d`, extended in `7e49b75`)
+
+A rank projection system simulates how the **Main** list (Classic or Platformer) would reorder once pending submissions are placed.
 
 - **New utility:** `src/utils/estimateRank.js`
   - `buildMainProjection()` — merges main + pending entries by estimate midpoint and computes projected ranks for main-list items
@@ -39,7 +51,7 @@ A new rank projection system simulates how the **Classic Main** list would reord
   - `comparePendingEstimate()` — sorts the Classic Pending list by estimate range
   - `matchesEstimateSearch()` — lets search match estimate ranges (e.g. `#2`, `#1 to #11`, or "Unknown projection")
 - **Pending data:** `estimateLower` and `estimateUpper` fields added to pending entries in `data/pending.json`
-- **UI toggle:** "Projected ranks" checkbox in the sidebar (Classic Main only), persisted to `localStorage` as `hd-show-projected-ranks`
+- **UI toggle:** "Projected ranks" checkbox in the sidebar (Main list in either mode), persisted to `localStorage` as `hd-show-projected-ranks`
 - **Display:** Main-list cards/modals show `current → projected` rank badges when a shift is predicted; pending list shows estimate badges (e.g. `#2 to #11`) instead of hiding rank entirely
 - **Tooltip:** `ProjectedRankTooltipContent` explains the shift and delta
 
@@ -100,7 +112,8 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 - **`achievements.json`** — tag additions (including Pending Removal), field reordering, `id` removal (~1,069 line diff; mostly structural)
 - **`legacy.json`** — large structural normalization (~19,540 lines touched)
 - **`timeline.json`** / **`platformertimeline.json`** — field order and content updates
-- **`pending.json`** — `estimateLower` / `estimateUpper` on sample entries
+- **`pending.json`** — `estimateLower` / `estimateUpper` on additional entries (`7e49b75`)
+- **`platformertimeline.json`** — static `rank` fields removed; ordering is positional (`7e49b75`)
 
 ---
 
@@ -139,7 +152,7 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 ## Files changed by area
 
 ### Application core
-- `src/App.jsx` — projection state, `AppBackground`, pending estimate search/sort, tag list source
+- `src/App.jsx` — projection state, `AppBackground`, pending estimate search/sort, tag list source; mode-agnostic Main/Pending list handling (`7e49b75`)
 - `src/utils/estimateRank.js` — **new** projection logic
 - `src/utils/format.js` — YouTube timestamps, thumbnail memoization, levelthumbs API
 
@@ -161,16 +174,17 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 - `index.html` — preconnect + logo preload
 
 ### Data
-- `data/achievements.json`, `data/legacy.json`, `data/timeline.json`, `data/platformertimeline.json`, `data/pending.json`
+- `data/achievements.json`, `data/legacy.json`, `data/timeline.json`, `data/platformertimeline.json`, `data/pending.json` (estimate fields + timeline rank cleanup in `7e49b75`)
 
 ---
 
 ## Breaking / migration notes
 
 1. **Data schema:** Any code or scripts expecting an `id` field on level entries must use `levelID` instead.
-2. **Pending entries:** To participate in rank projection, entries need `estimateLower` and `estimateUpper` (finite numbers, `lower ≤ upper`). Missing estimates sort last and display as "Unknown projection".
-3. **Thumbnail sources:** The app now depends on `levelthumbs.prevter.me` as a fallback; network access to that host improves thumbnail coverage.
-4. **Local storage:** New key `hd-show-projected-ranks` (`"true"` / `"false"`).
+2. **Pending entries:** To participate in rank projection, entries need `estimateLower` and `estimateUpper` (finite numbers, `lower ≤ upper`). Missing estimates sort last and display as "Unknown projection". Applies to both Classic and Platformer pending lists.
+3. **Timeline data:** `platformertimeline.json` no longer stores per-entry `rank`; position in the array defines display order.
+4. **Thumbnail sources:** The app now depends on `levelthumbs.prevter.me` as a fallback; network access to that host improves thumbnail coverage.
+5. **Local storage:** New key `hd-show-projected-ranks` (`"true"` / `"false"`).
 
 ---
 

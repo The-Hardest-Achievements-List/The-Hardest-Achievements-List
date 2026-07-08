@@ -77,9 +77,9 @@
     "length": 70,
     "version": 2.2,
     "submitter": "stax",
+    "notes": "0.03 opacity",
     "video": "https://youtu.be/NCxbxNAVY20",
-    "showcaseVideo": "",
-    "notes": "0.03 opacity"
+    "showcaseVideo": ""
   },
   {
     "name": "Bellatrix 70%",
@@ -100,11 +100,11 @@
     "length": 47,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/HbKik90cGSA",
-    "showcaseVideo": "https://youtu.be/MtQCiCS7PDw",
-    "notes": "Top 10?",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10?",
+    "video": "https://youtu.be/HbKik90cGSA",
+    "showcaseVideo": "https://youtu.be/MtQCiCS7PDw"
   },
   {
     "name": "Boobawamba 67%, 86% in a row",
@@ -147,9 +147,9 @@
     "length": 30,
     "version": 2.2,
     "submitter": "kyle1saurus",
+    "notes": "Buffed Acheron",
     "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU",
-    "notes": "Buffed Acheron"
+    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU"
   },
   {
     "name": "Clubcheron 40-100%",
@@ -159,9 +159,9 @@
     "length": 38,
     "version": 2.2,
     "submitter": "kyle1saurus",
+    "notes": "Buffed Acheron",
     "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU?si=FdNFBVLcEQBU62g9",
-    "notes": "Buffed Acheron"
+    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU?si=FdNFBVLcEQBU62g9"
   },
   {
     "name": "Clubstep XYZ 47%",
@@ -237,11 +237,11 @@
     "length": 147,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/-yHGEIcr4d8",
-    "showcaseVideo": "https://youtu.be/ghJE29FsrE0",
-    "notes": "Top 15-30",
     "estimateLower": 15,
-    "estimateUpper": 30
+    "estimateUpper": 30,
+    "notes": "Top 15-30",
+    "video": "https://youtu.be/-yHGEIcr4d8",
+    "showcaseVideo": "https://youtu.be/ghJE29FsrE0"
   },
   {
     "name": "Edge of Destiny 180%",
@@ -317,11 +317,11 @@
     "length": 38,
     "version": 2.2,
     "submitter": "zFexty\n",
-    "video": "https://youtu.be/KIEoUQSoau8",
-    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
-    "notes": "Top 10?",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10?",
+    "video": "https://youtu.be/KIEoUQSoau8",
+    "showcaseVideo": "https://youtu.be/etS7_bCsTtI"
   },
   {
     "name": "EVISCERATE 65-100%",
@@ -331,11 +331,11 @@
     "length": 21,
     "version": 2.2,
     "submitter": "marleywave\n",
-    "video": "https://youtu.be/PQ2Y0K5uW9s",
-    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
-    "notes": "Top 10?",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10?",
+    "video": "https://youtu.be/PQ2Y0K5uW9s",
+    "showcaseVideo": "https://youtu.be/etS7_bCsTtI"
   },
   {
     "name": "Ex Vacuo 33-100%",
@@ -345,11 +345,11 @@
     "length": 94,
     "version": 2.2,
     "submitter": "marleyxd",
-    "video": "https://youtu.be/TnObKqv3hwc",
-    "showcaseVideo": "https://youtu.be/CVXC2_bveBQ",
-    "notes": "Top 15?",
     "estimateLower": 1,
-    "estimateUpper": 15
+    "estimateUpper": 15,
+    "notes": "Top 15?",
+    "video": "https://youtu.be/TnObKqv3hwc",
+    "showcaseVideo": "https://youtu.be/CVXC2_bveBQ"
   },
   {
     "name": "FAIRY KNIFE HELL (buffed) 78-100%",
@@ -425,9 +425,9 @@
     "length": 288,
     "version": 2.2,
     "submitter": "tmtsps12",
+    "notes": "Pending indefinitely until other opinion gathered",
     "video": "https://youtu.be/apmslJgRMow?t=11678",
-    "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
-    "notes": "Pending indefinitely until other opinion gathered"
+    "showcaseVideo": "https://youtu.be/jYXxoDywnAE"
   },
   {
     "name": "Herr Machine",
@@ -437,11 +437,11 @@
     "length": 106,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/CBcQqmqWFo4",
-    "showcaseVideo": "https://youtu.be/FmGmDZIih70",
-    "notes": "Top 6-15",
     "estimateLower": 6,
-    "estimateUpper": 15
+    "estimateUpper": 15,
+    "notes": "Top 6-15",
+    "video": "https://youtu.be/CBcQqmqWFo4",
+    "showcaseVideo": "https://youtu.be/FmGmDZIih70"
   },
   {
     "name": "Im Bleaf",
@@ -616,11 +616,11 @@
     "length": 64,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/qGEHWa9tkLY",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
-    "notes": "Top 20 version",
     "estimateLower": 1,
-    "estimateUpper": 20
+    "estimateUpper": 20,
+    "notes": "Top 20 version",
+    "video": "https://youtu.be/qGEHWa9tkLY",
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
   },
   {
     "name": "MAX NRG 40-100%",
@@ -630,11 +630,11 @@
     "length": 58,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/oN-9cJDRR2o",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
-    "notes": "Top 10",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10",
+    "video": "https://youtu.be/oN-9cJDRR2o",
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
   },
   {
     "name": "MAX NRG 29-85%",
@@ -644,11 +644,11 @@
     "length": 50,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/O4-7pvqIBR8",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
-    "notes": "Top 10",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10",
+    "video": "https://youtu.be/O4-7pvqIBR8",
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
   },
   {
     "name": "Murk 29-100%",
@@ -845,11 +845,11 @@
     "length": 40,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/49fZIFdlEac",
-    "showcaseVideo": "https://youtu.be/8qcBAcH8dhA",
-    "notes": "Top 5",
     "estimateLower": 1,
-    "estimateUpper": 5
+    "estimateUpper": 5,
+    "notes": "Top 5",
+    "video": "https://youtu.be/49fZIFdlEac",
+    "showcaseVideo": "https://youtu.be/8qcBAcH8dhA"
   },
   {
     "name": "Silent Oppenheimer 35-100%",
@@ -859,11 +859,11 @@
     "length": 80,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/NtiR00EMhfw",
-    "showcaseVideo": "https://youtu.be/Rx9ujjXK7N4",
-    "notes": "Top 10",
     "estimateLower": 1,
-    "estimateUpper": 10
+    "estimateUpper": 10,
+    "notes": "Top 10",
+    "video": "https://youtu.be/NtiR00EMhfw",
+    "showcaseVideo": "https://youtu.be/Rx9ujjXK7N4"
   },
   {
     "name": "Slaughterhouse 120hz Mobile 25-75%",
