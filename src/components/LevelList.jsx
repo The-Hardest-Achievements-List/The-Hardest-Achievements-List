@@ -2,7 +2,7 @@ import React from "react";
 import LevelCard from "./LevelCard";
 import GroupedLevelCard from "./GroupedLevelCard";
 import { groupAchievementsByDuplicates } from "../utils/groupDuplicates";
-import { TAG_ICONS, TAG_DEFINITIONS } from "./Header";
+import { TAG_DEFINITIONS } from "./Header";
 import Tooltip from "./Tooltip";
 
 const SORT_OPTS = [
@@ -213,20 +213,6 @@ export default function LevelList({
                       onClick={() => toggleTag(t)}
                     >
                       <Tooltip text={def.tooltip}>
-                        {def.icon ? (
-                          <img
-                            src={def.icon}
-                            alt=""
-                            style={{ marginRight: "0.35rem", height: 12 }}
-                          />
-                        ) : (
-                          TAG_ICONS[t] && (
-                            <i
-                              className={`fas ${TAG_ICONS[t]}`}
-                              style={{ marginRight: "0.35rem" }}
-                            />
-                          )
-                        )}
                         {def.text || t}
                       </Tooltip>
                     </button>

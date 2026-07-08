@@ -608,16 +608,29 @@ body {
 }
 
 .hd__chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    min-width: 95px;
     background: var(--bg-2);
     border: 1px solid var(--line);
     padding: 6px 12px;
     font-family: var(--sans);
     font-size: 12px;
     font-weight: 600;
+    line-height: 1;
     color: var(--ink-2);
+    text-align: center;
     cursor: pointer;
     border-radius: 6px;
     transition: border-color 0.12s, color 0.12s;
+}
+
+.hd__chip .tooltip-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hd__chip:hover {
@@ -1882,11 +1895,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-}
-
-.hd__chip {
-    min-width: 95px;
-    text-align: center;
 }
 
 .flt-done {

@@ -501,20 +501,6 @@ export default function Header({
                             : "Not filtering")
                       }
                     >
-                      {def.icon ? (
-                        <img
-                          src={def.icon}
-                          alt=""
-                          style={{ marginRight: "0.35rem", height: 12 }}
-                        />
-                      ) : (
-                        TAG_ICONS[t] && (
-                          <i
-                            className={`fas ${TAG_ICONS[t]}`}
-                            style={{ marginRight: "0.35rem" }}
-                          />
-                        )
-                      )}
                       {def.text || t}
                     </button>
                   );
@@ -585,20 +571,6 @@ export default function Header({
                             : "Not filtering")
                       }
                     >
-                      {def.icon ? (
-                        <img
-                          src={def.icon}
-                          alt=""
-                          style={{ marginRight: "0.35rem", height: 12 }}
-                        />
-                      ) : (
-                        TAG_ICONS[t] && (
-                          <i
-                            className={`fas ${TAG_ICONS[t]}`}
-                            style={{ marginRight: "0.35rem" }}
-                          />
-                        )
-                      )}
                       {def.text || t}
                     </button>
                   );

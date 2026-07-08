@@ -247,26 +247,7 @@ export default function App() {
     });
   }, [rawData, mainProjectionByKey]);
 
-  const allTags = (() => {
-    const tags = new Set();
-
-    if (Array.isArray(rawData)) {
-      rawData.forEach((item) => {
-        const itemTags = Array.isArray(item.tags)
-          ? item.tags
-          : typeof item.tags === "string" && item.tags
-            ? [item.tags]
-            : [];
-
-        itemTags.forEach((tag) => {
-          if (tag) tags.add(tag);
-        });
-      });
-    }
-
-    const sourceTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
-    return sourceTags.filter((tag) => tags.has(tag));
-  })();
+  const allTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
 
   const getParentKey = (achievement) => {
     const duplicateParent = getDuplicateParentId(achievement);
