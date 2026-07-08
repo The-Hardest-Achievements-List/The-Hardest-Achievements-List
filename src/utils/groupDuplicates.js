@@ -14,37 +14,63 @@ export function isDuplicateAchievement(achievement) {
 export function getAchievementKey(achievement) {
   return normalizeDuplicateKey(achievement?.name);
 }
+
+function getParentKeysInList(achievements) {
+  return new Set(
+    achievements
+      .filter((achievement) => !isDuplicateAchievement(achievement))
+      .map((achievement) => getAchievementKey(achievement)),
+  );
+}
+
+export function isGroupedDuplicate(achievement, achievements) {
+  const parentRef = getDuplicateParentId(achievement);
+  if (!parentRef) return false;
+  return getParentKeysInList(achievements).has(normalizeDuplicateKey(parentRef));
+}
+
 export function groupAchievementsByDuplicates(achievements) {
   if (!Array.isArray(achievements)) {
     return { mainAchievements: [] };
   }
 
+  const parentKeysInList = getParentKeysInList(achievements);
   const duplicatesByParent = new Map();
-  achievements.forEach(achievement => {
+
+  achievements.forEach((achievement) => {
     const parentRef = getDuplicateParentId(achievement);
-    if (parentRef) {
-      const normalizedParentRef = normalizeDuplicateKey(parentRef);
-      if (!duplicatesByParent.has(normalizedParentRef)) {
-        duplicatesByParent.set(normalizedParentRef, []);
-      }
-      duplicatesByParent.get(normalizedParentRef).push(achievement);
+    if (!parentRef) return;
+
+    const normalizedParentRef = normalizeDuplicateKey(parentRef);
+    if (!parentKeysInList.has(normalizedParentRef)) return;
+
+    if (!duplicatesByParent.has(normalizedParentRef)) {
+      duplicatesByParent.set(normalizedParentRef, []);
     }
+    duplicatesByParent.get(normalizedParentRef).push(achievement);
   });
+
   const mainAchievements = [];
 
-  achievements.forEach(achievement => {
-    const isDuplicate = isDuplicateAchievement(achievement);
-
-    if (!isDuplicate) {
+  achievements.forEach((achievement) => {
+    if (!isDuplicateAchievement(achievement)) {
       const parentKey = getAchievementKey(achievement);
       const children = duplicatesByParent.get(parentKey) || [];
-      const item = {
+      mainAchievements.push({
         ...achievement,
         duplicates: children,
         hasDuplicates: children.length > 0,
-      };
+      });
+      return;
+    }
 
-      mainAchievements.push(item);
+    const parentKey = normalizeDuplicateKey(getDuplicateParentId(achievement));
+    if (!parentKeysInList.has(parentKey)) {
+      mainAchievements.push({
+        ...achievement,
+        duplicates: [],
+        hasDuplicates: false,
+      });
     }
   });
 

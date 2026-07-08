@@ -100,7 +100,7 @@ const sortTags = (tags, tagOrder) => {
 };
 
 const normalizeTags = (tags, tagOrder) => {
-  if (tags == null) return null;
+  if (tags == null) return [];
   if (Array.isArray(tags)) return sortTags(tags, tagOrder);
   if (typeof tags === "string") {
     return sortTags(tags.split(/\s*,\s*/).filter(Boolean), tagOrder);
@@ -126,7 +126,7 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
 
   for (const key of fieldOrder) {
     if (!(key in entry)) {
-      result[key] = null;
+      result[key] = key === "tags" ? [] : null;
       addedFields.push(key);
       continue;
     }

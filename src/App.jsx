@@ -9,6 +9,7 @@ import ModLeaderboardPage from "./pages/ModLeaderboardPage";
 import {
   getDuplicateParentId,
   getAchievementKey,
+  isGroupedDuplicate,
 } from "./utils/groupDuplicates";
 import {
   comparePendingEstimate,
@@ -233,7 +234,7 @@ export default function App() {
     if (!Array.isArray(rawData)) return [];
     let rank = 0;
     return rawData.map((achievement) => {
-      if (getDuplicateParentId(achievement)) {
+      if (isGroupedDuplicate(achievement, rawData)) {
         return achievement;
       }
       rank += 1;
@@ -427,7 +428,7 @@ export default function App() {
       ) : (
         <LevelList
           data={filteredData}
-          totalCount={rawData.filter((a) => !getDuplicateParentId(a)).length}
+          totalCount={rawData.filter((a) => !isGroupedDuplicate(a, rawData)).length}
           activeTags={activeTags}
           allTags={allTags}
           toggleTag={toggleTag}
