@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useId } from "react";
 import LevelCard from "./LevelCard";
 import "./GroupedLevelCard.css";
 
@@ -14,6 +14,7 @@ function GroupedLevelCard({
   layoutMode,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const duplicatesRegionId = useId();
 
   const handleToggleExpanded = useCallback((e) => {
     e.stopPropagation();
@@ -35,12 +36,20 @@ function GroupedLevelCard({
         />
         {duplicates && duplicates.length > 0 && (
           <button
+            type="button"
             className="grouped-achievement__toggle"
             onClick={handleToggleExpanded}
             title={
               isExpanded
                 ? "Hide duplicates"
                 : `Show ${duplicates.length} duplicate(s)`
+            }
+            aria-expanded={isExpanded}
+            aria-controls={duplicatesRegionId}
+            aria-label={
+              isExpanded
+                ? `Hide ${duplicates.length} variant${duplicates.length !== 1 ? "s" : ""}`
+                : `Show ${duplicates.length} variant${duplicates.length !== 1 ? "s" : ""}`
             }
           >
             <span className="grouped-achievement__toggle-icon">
@@ -54,7 +63,10 @@ function GroupedLevelCard({
       </div>
 
       {isExpanded && duplicates && duplicates.length > 0 && (
-        <div className="grouped-achievement__duplicates">
+        <div
+          id={duplicatesRegionId}
+          className="grouped-achievement__duplicates"
+        >
           {duplicates.map((duplicate, i) => (
             <div
               key={duplicate.levelID != null ? `${duplicate.levelID}-${i}` : `${duplicate.name}-${i}`}

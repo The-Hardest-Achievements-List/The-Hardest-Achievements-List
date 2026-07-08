@@ -18,7 +18,10 @@
 .grouped-achievement__toggle {
   position: absolute;
   bottom: calc(10px * var(--card-text-scale, 1));
-  right: calc(10px * var(--card-text-scale, 1));
+  left: calc(40% - calc(10px * var(--card-text-scale, 1)));
+  right: auto;
+  top: auto;
+  transform: translateX(-100%);
   background: oklch(18% 0.008 260 / 0.85);
   color: var(--ink);
   border: calc(2px * var(--card-text-scale, 1)) solid var(--line-2);
@@ -39,7 +42,12 @@
   background: oklch(22% 0.010 260 / 0.95);
   border-color: var(--acc);
   color: var(--acc);
-  transform: scale(1.05);
+  transform: translateX(-100%) scale(1.05);
+}
+
+.grouped-achievement__toggle:focus-visible {
+  outline: calc(2px * var(--card-text-scale, 1)) solid var(--acc);
+  outline-offset: calc(2px * var(--card-text-scale, 1));
 }
 
 .grouped-achievement__toggle-icon {
@@ -94,7 +102,7 @@
 @media (max-width: 768px) {
   .grouped-achievement__toggle {
     bottom: 8px;
-    right: 8px;
+    left: calc(40% - 8px);
     padding: 6px 10px;
     font-size: 12px;
   }
