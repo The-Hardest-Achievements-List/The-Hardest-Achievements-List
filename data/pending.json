@@ -1,5 +1,22 @@
 [
   {
+    "name": "Acheron (Riot) 35-100%",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-08",
+    "length": 44,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/hRQE_TIXGl0",
+    "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
     "name": "Acheron 1.1x 40-100%",
     "player": "xalval",
     "levelID": 73667628,
@@ -10,7 +27,11 @@
     "estimateLower": 1,
     "estimateUpper": 11,
     "video": "https://youtu.be/d3D0FDfhoRc",
-    "showcaseVideo": "https://youtu.be/YQElFvT5ynk"
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Acheron 60hz 26-72%",
@@ -23,18 +44,11 @@
     "estimateLower": 2,
     "estimateUpper": 2,
     "video": "https://youtu.be/ALoWrBGPDyw",
-    "showcaseVideo": "https://youtu.be/YQElFvT5ynk"
-  },
-  {
-    "name": "Acheron (Riot) 35-100%",
-    "player": "klimk",
-    "levelID": 82758705,
-    "date": "2026-06-08",
-    "length": 44,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/hRQE_TIXGl0",
-    "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ"
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Aeternus 56-69%",
@@ -44,8 +58,14 @@
     "length": 10,
     "version": 2.2,
     "submitter": "Quinnsapian",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/K980prP9sD4",
-    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE"
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Angelicide (Kaza) 15-40%",
@@ -55,8 +75,14 @@
     "length": 24,
     "version": 2.2,
     "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/KKDmcMFs5w0",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Angelicide (Kaza) 22-52%",
@@ -66,8 +92,14 @@
     "length": 27,
     "version": 2.2,
     "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/idWQCCRfgzY",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "BARELY VISIBLE Slaughterhouse",
@@ -77,9 +109,14 @@
     "length": 70,
     "version": 2.2,
     "submitter": "stax",
-    "notes": "0.03 opacity",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/NCxbxNAVY20",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "0.03 opacity",
+    "tags": null
   },
   {
     "name": "Bellatrix 70%",
@@ -89,8 +126,14 @@
     "length": 50,
     "version": 2.2,
     "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/vIO9hAa-Koc",
-    "showcaseVideo": "https://youtu.be/r44ig4sxMww"
+    "showcaseVideo": "https://youtu.be/r44ig4sxMww",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "BloodEngine 57-100%",
@@ -102,9 +145,12 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 1,
     "estimateUpper": 10,
-    "notes": "Top 10?",
     "video": "https://youtu.be/HbKik90cGSA",
-    "showcaseVideo": "https://youtu.be/MtQCiCS7PDw"
+    "showcaseVideo": "https://youtu.be/MtQCiCS7PDw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10?",
+    "tags": null
   },
   {
     "name": "Boobawamba 67%, 86% in a row",
@@ -114,8 +160,14 @@
     "length": 243,
     "version": 2.2,
     "submitter": "stupidass_username / 0",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/szh-Z6eU3UU?t=4178",
-    "showcaseVideo": "https://youtu.be/qaz4M52CxWU"
+    "showcaseVideo": "https://youtu.be/qaz4M52CxWU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Cautious (Old) 43-89%",
@@ -125,8 +177,14 @@
     "length": 46,
     "version": 2.2,
     "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/T6_Qn1rAPB8",
-    "showcaseVideo": "https://youtu.be/4sHsPbM_kdI"
+    "showcaseVideo": "https://youtu.be/4sHsPbM_kdI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "CHIL 62%, 100% in a row",
@@ -136,20 +194,14 @@
     "length": 100,
     "version": 2.2,
     "submitter": "anduval",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/XdPVlvjgnh0",
-    "showcaseVideo": "https://youtu.be/us6UreV6Nnw"
-  },
-  {
-    "name": "Clubcheron 42%",
-    "player": "SpaceRS",
-    "levelID": 112310040,
-    "date": "2026-01-09",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "notes": "Buffed Acheron",
-    "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU"
+    "showcaseVideo": "https://youtu.be/us6UreV6Nnw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Clubcheron 40-100%",
@@ -159,20 +211,31 @@
     "length": 38,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "notes": "Buffed Acheron",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU"
+    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Buffed Acheron",
+    "tags": null
   },
   {
-    "name": "Clubstep XYZ 47%",
-    "player": "Streamy450",
-    "levelID": null,
-    "date": "2025-08-09",
-    "length": 42,
+    "name": "Clubcheron 42%",
+    "player": "SpaceRS",
+    "levelID": 112310040,
+    "date": "2026-01-09",
+    "length": 30,
     "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/UzYaZsBvOJU",
-    "showcaseVideo": "https://youtu.be/m4Bmh7kosWg"
+    "submitter": "kyle1saurus",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/M6wZdcbmKLo",
+    "showcaseVideo": "https://youtu.be/ODZXPR7SRyU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Buffed Acheron",
+    "tags": null
   },
   {
     "name": "Clubstep XYZ 42-92%",
@@ -182,8 +245,31 @@
     "length": 43,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/2Ia620MFWuU",
-    "showcaseVideo": "https://youtu.be/m4Bmh7kosWg"
+    "showcaseVideo": "https://youtu.be/m4Bmh7kosWg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Clubstep XYZ 47%",
+    "player": "Streamy450",
+    "levelID": null,
+    "date": "2025-08-09",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/UzYaZsBvOJU",
+    "showcaseVideo": "https://youtu.be/m4Bmh7kosWg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Cyber Raptor 93%",
@@ -193,8 +279,14 @@
     "length": 660,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/X0uqmrkzfHI",
-    "showcaseVideo": "https://youtu.be/zolzjLY7Mxs"
+    "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Defeated Circles 89%, 100% in a row",
@@ -204,8 +296,14 @@
     "length": 112,
     "version": 2.2,
     "submitter": "Vorten",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/S7azvS0TQts",
-    "showcaseVideo": "https://youtu.be/R8BMscOkTrA"
+    "showcaseVideo": "https://youtu.be/R8BMscOkTrA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Despair Code 35-100%",
@@ -215,8 +313,14 @@
     "length": 16,
     "version": 2.2,
     "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/Ahx_F-1DrZ4",
-    "showcaseVideo": "https://youtu.be/uJjqnGFupZQ"
+    "showcaseVideo": "https://youtu.be/uJjqnGFupZQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Dignity 47-90%",
@@ -226,8 +330,14 @@
     "length": 25,
     "version": 2.2,
     "submitter": "zFexty",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/cHCeprrReq8",
-    "showcaseVideo": "https://youtu.be/hsLxpiYR6B4"
+    "showcaseVideo": "https://youtu.be/hsLxpiYR6B4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "ECHO 86%",
@@ -239,9 +349,12 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 15,
     "estimateUpper": 30,
-    "notes": "Top 15-30",
     "video": "https://youtu.be/-yHGEIcr4d8",
-    "showcaseVideo": "https://youtu.be/ghJE29FsrE0"
+    "showcaseVideo": "https://youtu.be/ghJE29FsrE0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 15-30",
+    "tags": null
   },
   {
     "name": "Edge of Destiny 180%",
@@ -251,8 +364,14 @@
     "length": 230,
     "version": 2.2,
     "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/v3Q7uzaWBdk",
-    "showcaseVideo": "https://youtu.be/pD7Zc5x8JiE"
+    "showcaseVideo": "https://youtu.be/pD7Zc5x8JiE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Escalator 39-100%",
@@ -262,19 +381,14 @@
     "length": 59,
     "version": 2.2,
     "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/ed4RQUJvIrs",
-    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8"
-  },
-  {
-    "name": "Escalator 42%",
-    "player": "teraaa",
-    "levelID": null,
-    "date": "2026-02-15",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/1NbSXFdu8Qs",
-    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8"
+    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Escalator 4-73%",
@@ -284,8 +398,31 @@
     "length": 60,
     "version": 2.2,
     "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/wuh5wafLKvw",
-    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8"
+    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Escalator 42%",
+    "player": "teraaa",
+    "levelID": null,
+    "date": "2026-02-15",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1NbSXFdu8Qs",
+    "showcaseVideo": "https://youtu.be/wyGXMC2I-j8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Eternal Night 38-100%",
@@ -295,8 +432,14 @@
     "length": 59,
     "version": 2.2,
     "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/cD3o9bOf_0w",
-    "showcaseVideo": "https://youtu.be/03EwCewqZWo"
+    "showcaseVideo": "https://youtu.be/03EwCewqZWo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Eternal Silence 9-100%",
@@ -306,8 +449,14 @@
     "length": 81,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/9kKsgISwEtM",
-    "showcaseVideo": "https://youtu.be/gw213VIfxus"
+    "showcaseVideo": "https://youtu.be/gw213VIfxus",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "EVISCERATE 48%",
@@ -319,9 +468,12 @@
     "submitter": "zFexty\n",
     "estimateLower": 1,
     "estimateUpper": 10,
-    "notes": "Top 10?",
     "video": "https://youtu.be/KIEoUQSoau8",
-    "showcaseVideo": "https://youtu.be/etS7_bCsTtI"
+    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10?",
+    "tags": null
   },
   {
     "name": "EVISCERATE 65-100%",
@@ -333,9 +485,12 @@
     "submitter": "marleywave\n",
     "estimateLower": 1,
     "estimateUpper": 10,
-    "notes": "Top 10?",
     "video": "https://youtu.be/PQ2Y0K5uW9s",
-    "showcaseVideo": "https://youtu.be/etS7_bCsTtI"
+    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10?",
+    "tags": null
   },
   {
     "name": "Ex Vacuo 33-100%",
@@ -347,9 +502,12 @@
     "submitter": "marleyxd",
     "estimateLower": 1,
     "estimateUpper": 15,
-    "notes": "Top 15?",
     "video": "https://youtu.be/TnObKqv3hwc",
-    "showcaseVideo": "https://youtu.be/CVXC2_bveBQ"
+    "showcaseVideo": "https://youtu.be/CVXC2_bveBQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 15?",
+    "tags": null
   },
   {
     "name": "FAIRY KNIFE HELL (buffed) 78-100%",
@@ -359,8 +517,14 @@
     "length": 46,
     "version": 2.2,
     "submitter": "marleywave\n",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/DbCt-Rmv3L0",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Fronly Demise (Skylar)",
@@ -370,8 +534,14 @@
     "length": 50,
     "version": 2.2,
     "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/kqWSOP1hvM0",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Fronly Demise (uzuden)",
@@ -381,8 +551,14 @@
     "length": 50,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/PtIT4z-XCrU",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Gay Acheron 17-100%",
@@ -392,19 +568,14 @@
     "length": 55,
     "version": 2.2,
     "submitter": "kyle1saurus",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/C0ttHXp4dtM",
-    "showcaseVideo": ""
-  },
-  {
-    "name": "Green Acheron 17-100%",
-    "player": "-",
-    "levelID": null,
-    "date": "2024-12-16",
-    "length": 55,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/DX2cbUwT1Tg",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Goober Rage Stage 60Hz Mobile",
@@ -414,8 +585,31 @@
     "length": 59,
     "version": 2.2,
     "submitter": "some_person",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/KB47OxRmjfw",
-    "showcaseVideo": "https://youtu.be/NOrJXS6nkp4"
+    "showcaseVideo": "https://youtu.be/NOrJXS6nkp4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Green Acheron 17-100%",
+    "player": "-",
+    "levelID": null,
+    "date": "2024-12-16",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/DX2cbUwT1Tg",
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "GRIEF 68%, 72% in a row",
@@ -425,9 +619,14 @@
     "length": 288,
     "version": 2.2,
     "submitter": "tmtsps12",
-    "notes": "Pending indefinitely until other opinion gathered",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/apmslJgRMow?t=11678",
-    "showcaseVideo": "https://youtu.be/jYXxoDywnAE"
+    "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Pending indefinitely until other opinion gathered",
+    "tags": null
   },
   {
     "name": "Herr Machine",
@@ -439,20 +638,12 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 6,
     "estimateUpper": 15,
-    "notes": "Top 6-15",
     "video": "https://youtu.be/CBcQqmqWFo4",
-    "showcaseVideo": "https://youtu.be/FmGmDZIih70"
-  },
-  {
-    "name": "Im Bleaf",
-    "player": "ad3usgmd",
-    "levelID": 133056901,
-    "date": "2026-02-08",
-    "length": 25,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/XcQ44x_ZQiU",
-    "showcaseVideo": ""
+    "showcaseVideo": "https://youtu.be/FmGmDZIih70",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 6-15",
+    "tags": null
   },
   {
     "name": "i n j u r y (buffed) 59%",
@@ -462,19 +653,31 @@
     "length": 19,
     "version": 2.2,
     "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/QL5l70qKd60",
-    "showcaseVideo": "https://youtu.be/OzCGe5a5DTY"
+    "showcaseVideo": "https://youtu.be/OzCGe5a5DTY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
-    "name": "IT MEANS EVERYTHING 74%",
-    "player": "Waltty",
-    "levelID": 106165639,
-    "date": "2026-05-29",
-    "length": 52,
+    "name": "Im Bleaf",
+    "player": "ad3usgmd",
+    "levelID": 133056901,
+    "date": "2026-02-08",
+    "length": 25,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/HUvZzy00Rek",
-    "showcaseVideo": "https://youtu.be/9nSkkXZ628E"
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/XcQ44x_ZQiU",
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "IT MEANS EVERYTHING (Quivert) 54%",
@@ -484,8 +687,31 @@
     "length": 37,
     "version": 2.2,
     "submitter": "stupidass_username / 0",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/XQ0LYnTx6vY",
-    "showcaseVideo": "https://youtu.be/9nSkkXZ628E"
+    "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "IT MEANS EVERYTHING 74%",
+    "player": "Waltty",
+    "levelID": 106165639,
+    "date": "2026-05-29",
+    "length": 52,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/HUvZzy00Rek",
+    "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "KOCMOC 120hz Mobile 14-82%",
@@ -495,8 +721,14 @@
     "length": 45,
     "version": 2.2,
     "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/Gn66qOafzO4",
-    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk"
+    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "KOCMOC UNLEASHED (Tohupolko) 120hz Mobile 65-91%",
@@ -506,8 +738,14 @@
     "length": 20,
     "version": 2.2,
     "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/T1Y_7d124IY",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Labyrinth 29-100%",
@@ -517,8 +755,14 @@
     "length": 40,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/EhdQdrOAaWY?t=235",
-    "showcaseVideo": "https://youtu.be/hcZWawS26hU"
+    "showcaseVideo": "https://youtu.be/hcZWawS26hU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Labyrinth 68%",
@@ -528,19 +772,14 @@
     "length": 54,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/bvU88Sm5Naw",
-    "showcaseVideo": "https://youtu.be/hcZWawS26hU"
-  },
-  {
-    "name": "Limewire 58-100%",
-    "player": "finley",
-    "levelID": null,
-    "date": "2026-05-17",
-    "length": 31,
-    "version": 2.2,
-    "submitter": "anduval",
-    "video": "https://fxtwitter.com/iamfinleyy/status/2044841087852757268?s=46",
-    "showcaseVideo": "https://youtu.be/CN18I01OzWQ"
+    "showcaseVideo": "https://youtu.be/hcZWawS26hU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "last stop 15%, 14%, (4%), 55%, (7%), 15%, 13% in a row",
@@ -550,8 +789,14 @@
     "length": 28,
     "version": 2.2,
     "submitter": "aytch0008",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/VIzP6XkJSMU",
-    "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE"
+    "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "last stop 24%, 28%, 31% in a row",
@@ -561,19 +806,14 @@
     "length": 21,
     "version": 2.2,
     "submitter": "aytch0008",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "Submission",
-    "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE"
-  },
-  {
-    "name": "Leaves 48-100%",
-    "player": "Jszl_GMD",
-    "levelID": 82602651,
-    "date": "2026-03-02",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "notagood_username",
-    "video": "https://youtu.be/LSfUd_OQ-jo",
-    "showcaseVideo": "https://youtu.be/nVPNZIu0nhY"
+    "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Le Fishe 2x 75%",
@@ -583,8 +823,48 @@
     "length": 26,
     "version": 2.2,
     "submitter": "jak",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/IKb4nXholuc",
-    "showcaseVideo": "https://youtu.be/43rIzwU_by8"
+    "showcaseVideo": "https://youtu.be/43rIzwU_by8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Leaves 48-100%",
+    "player": "Jszl_GMD",
+    "levelID": 82602651,
+    "date": "2026-03-02",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "notagood_username",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LSfUd_OQ-jo",
+    "showcaseVideo": "https://youtu.be/nVPNZIu0nhY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Lesopowal 34-100%, 22-100% in a row",
+    "player": "lanx",
+    "levelID": 137886942,
+    "date": "2026-07-06",
+    "length": "TBA",
+    "version": 2.2,
+    "submitter": "lanx",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gqRYH66CfpE",
+    "showcaseVideo": "https://youtu.be/EwDAZUgVTS8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "LIMBO (Unnerfed) 90%",
@@ -594,8 +874,31 @@
     "length": 182,
     "version": 2.2,
     "submitter": "Gooba",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/CKJ4KfaF1u0",
-    "showcaseVideo": "https://youtu.be/ryBbuH_SPbs"
+    "showcaseVideo": "https://youtu.be/ryBbuH_SPbs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Limewire 58-100%",
+    "player": "finley",
+    "levelID": null,
+    "date": "2026-05-17",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "anduval",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://fxtwitter.com/iamfinleyy/status/2044841087852757268?s=46",
+    "showcaseVideo": "https://youtu.be/CN18I01OzWQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Lure Infinity 8.53%",
@@ -605,36 +908,14 @@
     "length": 7,
     "version": 2.2,
     "submitter": "aytch0008",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "Submission",
-    "showcaseVideo": ""
-  },
-  {
-    "name": "MAX NRG 66% (Feb. 2026)",
-    "player": "SaturMan",
-    "levelID": null,
-    "date": "2026-02-27",
-    "length": 64,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": 1,
-    "estimateUpper": 20,
-    "notes": "Top 20 version",
-    "video": "https://youtu.be/qGEHWa9tkLY",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
-  },
-  {
-    "name": "MAX NRG 40-100%",
-    "player": "SaturMan",
-    "levelID": null,
-    "date": "2026-05-02",
-    "length": 58,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": 1,
-    "estimateUpper": 10,
-    "notes": "Top 10",
-    "video": "https://youtu.be/oN-9cJDRR2o",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "MAX NRG 29-85%",
@@ -646,9 +927,46 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 1,
     "estimateUpper": 10,
-    "notes": "Top 10",
     "video": "https://youtu.be/O4-7pvqIBR8",
-    "showcaseVideo": "https://youtu.be/EUpbb96x7AI"
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10",
+    "tags": null
+  },
+  {
+    "name": "MAX NRG 40-100%",
+    "player": "SaturMan",
+    "levelID": null,
+    "date": "2026-05-02",
+    "length": 58,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": 1,
+    "estimateUpper": 10,
+    "video": "https://youtu.be/oN-9cJDRR2o",
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10",
+    "tags": null
+  },
+  {
+    "name": "MAX NRG 66% (Feb. 2026)",
+    "player": "SaturMan",
+    "levelID": null,
+    "date": "2026-02-27",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": 1,
+    "estimateUpper": 20,
+    "video": "https://youtu.be/qGEHWa9tkLY",
+    "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 20 version",
+    "tags": null
   },
   {
     "name": "Murk 29-100%",
@@ -658,8 +976,14 @@
     "length": 12,
     "version": 2.2,
     "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/kT0KBZvhcIo",
-    "showcaseVideo": "https://youtu.be/bNYWt_r9OmY"
+    "showcaseVideo": "https://youtu.be/bNYWt_r9OmY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Nullscapes 65%, (2%), 66% in a row",
@@ -669,8 +993,14 @@
     "length": 117,
     "version": 2.2,
     "submitter": "marleyxd",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/IeyIn6KH4ug",
-    "showcaseVideo": "https://youtu.be/C-KDhWkXlvI"
+    "showcaseVideo": "https://youtu.be/C-KDhWkXlvI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "ORBIT 61%, (1%), 99% in a row",
@@ -680,8 +1010,14 @@
     "length": 253,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/b-NzPLQDIWc?t=2493",
-    "showcaseVideo": "https://youtu.be/9oHv_cK84WI"
+    "showcaseVideo": "https://youtu.be/9oHv_cK84WI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "RARE 2.60%, 2.87%, 2.90%, 2.88%, 2.87%x2 in a row",
@@ -691,63 +1027,14 @@
     "length": 69,
     "version": 2.2,
     "submitter": "FlinGuSPluNkuS",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "Submission",
-    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4"
-  },
-  {
-    "name": "Sakupen Circles Nerfdate 37-100%",
-    "player": "Emp",
-    "levelID": null,
-    "date": "2026-05-10",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "Emp",
-    "video": "https://youtu.be/Pw6htA1gvXs",
-    "showcaseVideo": ""
-  },
-  {
-    "name": "Sakupen Circles 120hz Mobile 2 Deaths, 99.95% accuracy",
-    "player": "ItzAmethyst",
-    "levelID": 76962930,
-    "date": "2026-05-12",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "nensa",
-    "video": "https://youtu.be/sEtBCSg-Hqc",
-    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w"
-  },
-  {
-    "name": "Sakupen Circles 120hz Mobile 44-100%",
-    "player": "ItzAmethyst",
-    "levelID": 76962930,
-    "date": "2026-05-17",
-    "length": 25,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/uiL3QR91Lsw",
-    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w"
-  },
-  {
-    "name": "Sakupen Circles 120hz Mobile 69%",
-    "player": "ItzAmethyst",
-    "levelID": 76962930,
-    "date": "2026-05-26",
-    "length": 36,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/ZWIM4NASjoE",
-    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w"
-  },
-  {
-    "name": "Sakupen Circles (Old) 58-68%, 58-69%, 58-70%, 58-67% in a row",
-    "player": "Bacon",
-    "levelID": 10887708,
-    "date": "2026-05-13",
-    "length": 22,
-    "version": 2.2,
-    "submitter": "SeptaGon7",
-    "video": "https://youtu.be/i_NWZn3pTXk?t=36",
-    "showcaseVideo": "https://youtu.be/WX5RCDxobSA"
+    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Sakupen Circles (Old) 1 death; 99.97% accuracy, 100% in a row",
@@ -757,8 +1044,99 @@
     "length": 98,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/_ea8mbSfZvA",
-    "showcaseVideo": "https://youtu.be/WX5RCDxobSA"
+    "showcaseVideo": "https://youtu.be/WX5RCDxobSA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Sakupen Circles (Old) 58-68%, 58-69%, 58-70%, 58-67% in a row",
+    "player": "Bacon",
+    "levelID": 10887708,
+    "date": "2026-05-13",
+    "length": 22,
+    "version": 2.2,
+    "submitter": "SeptaGon7",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/i_NWZn3pTXk?t=36",
+    "showcaseVideo": "https://youtu.be/WX5RCDxobSA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Sakupen Circles 120hz Mobile 2 Deaths, 99.95% accuracy",
+    "player": "ItzAmethyst",
+    "levelID": 76962930,
+    "date": "2026-05-12",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/sEtBCSg-Hqc",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Sakupen Circles 120hz Mobile 44-100%",
+    "player": "ItzAmethyst",
+    "levelID": 76962930,
+    "date": "2026-05-17",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/uiL3QR91Lsw",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Sakupen Circles 120hz Mobile 69%",
+    "player": "ItzAmethyst",
+    "levelID": 76962930,
+    "date": "2026-05-26",
+    "length": 36,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ZWIM4NASjoE",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Sakupen Circles Nerfdate 37-100%",
+    "player": "Emp",
+    "levelID": null,
+    "date": "2026-05-10",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "Emp",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Pw6htA1gvXs",
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Acropolis (ThePurgatory + Hover) 35-100%",
@@ -768,8 +1146,14 @@
     "length": 56,
     "version": 2.2,
     "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/SrVT0dXdEig?t=74",
-    "showcaseVideo": "https://youtu.be/IvUkcfMWhQY"
+    "showcaseVideo": "https://youtu.be/IvUkcfMWhQY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Acropolis (ThePurgatory + Hover) 84%%",
@@ -779,8 +1163,14 @@
     "length": 62,
     "version": 2.2,
     "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/0M-cjzSJY7s",
-    "showcaseVideo": "https://youtu.be/IvUkcfMWhQY"
+    "showcaseVideo": "https://youtu.be/IvUkcfMWhQY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Circles (Starchman, Mar. 2026) 27-85%",
@@ -790,8 +1180,14 @@
     "length": 35,
     "version": 2.2,
     "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/llCZap9wVKU",
-    "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
+    "showcaseVideo": "https://youtu.be/uZsilHbMc2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Circles (Starchman) 38-87%",
@@ -801,8 +1197,14 @@
     "length": 31,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/6nIXM-mSiqs",
-    "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
+    "showcaseVideo": "https://youtu.be/uZsilHbMc2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Circles (Starchman) 47-100%",
@@ -812,8 +1214,14 @@
     "length": 36,
     "version": 2.2,
     "submitter": "Gooba",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/3ANI557EzW8?t=45",
-    "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
+    "showcaseVideo": "https://youtu.be/uZsilHbMc2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Circles (Starchman) 58%",
@@ -823,8 +1231,14 @@
     "length": 41,
     "version": 2.2,
     "submitter": "Gooba",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/3ANI557EzW8",
-    "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
+    "showcaseVideo": "https://youtu.be/uZsilHbMc2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Destep 12%, 25% in a row",
@@ -834,8 +1248,14 @@
     "length": 35,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/2zcCm6eBeEQ",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Silent Jumper 57-100%",
@@ -847,9 +1267,12 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 1,
     "estimateUpper": 5,
-    "notes": "Top 5",
     "video": "https://youtu.be/49fZIFdlEac",
-    "showcaseVideo": "https://youtu.be/8qcBAcH8dhA"
+    "showcaseVideo": "https://youtu.be/8qcBAcH8dhA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 5",
+    "tags": null
   },
   {
     "name": "Silent Oppenheimer 35-100%",
@@ -861,42 +1284,12 @@
     "submitter": "TYATYAPKA",
     "estimateLower": 1,
     "estimateUpper": 10,
-    "notes": "Top 10",
     "video": "https://youtu.be/NtiR00EMhfw",
-    "showcaseVideo": "https://youtu.be/Rx9ujjXK7N4"
-  },
-  {
-    "name": "Slaughterhouse 120hz Mobile 25-75%",
-    "player": "vowtz",
-    "levelID": 27690100,
-    "date": "2026-02-18",
-    "length": 25,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/GAk4j3sjn7U",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo"
-  },
-  {
-    "name": "Slaughterhouse 1.1x 120hz Mobile 25-66%",
-    "player": "vowtz",
-    "levelID": 27690100,
-    "date": "2026-05-27",
-    "length": 19,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/h8nzcNgALGw",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo"
-  },
-  {
-    "name": "Slaughterhouse 120hz Mobile 49-100%",
-    "player": "vowtz",
-    "levelID": 27690100,
-    "date": "2026/02/15",
-    "length": 25,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/MZGMVrpjino",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo"
+    "showcaseVideo": "https://youtu.be/Rx9ujjXK7N4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Top 10",
+    "tags": null
   },
   {
     "name": "Slaughterhouse (CoolRanchDoritos1055) 49-100%",
@@ -906,8 +1299,65 @@
     "length": 30,
     "version": 2.2,
     "submitter": "Gooba",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/JU03NGK2iDM",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Slaughterhouse 1.1x 120hz Mobile 25-66%",
+    "player": "vowtz",
+    "levelID": 27690100,
+    "date": "2026-05-27",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/h8nzcNgALGw",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Slaughterhouse 120hz Mobile 25-75%",
+    "player": "vowtz",
+    "levelID": 27690100,
+    "date": "2026-02-18",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/GAk4j3sjn7U",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Slaughterhouse 120hz Mobile 49-100%",
+    "player": "vowtz",
+    "levelID": 27690100,
+    "date": "2026/02/15",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/MZGMVrpjino",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Sonic Wave Infinity (Jevan) 24-70%",
@@ -917,8 +1367,14 @@
     "length": 64,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/3pFVbm4U0xM",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Sonic Wave Infinity (Jevan) 38-100%",
@@ -928,8 +1384,14 @@
     "length": 97,
     "version": 2.2,
     "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/dBQZlvm0Me4",
-    "showcaseVideo": ""
+    "showcaseVideo": "",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Subsuming Vortex 35-73%, 35-83%, 35-70% in a row",
@@ -939,8 +1401,14 @@
     "length": 77,
     "version": 2.2,
     "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "Link",
-    "showcaseVideo": "https://youtu.be/JJS65OMPbRo"
+    "showcaseVideo": "https://youtu.be/JJS65OMPbRo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Tidal Wave 1.2x 29-100% 27 deaths, 99.34% accuracy",
@@ -950,8 +1418,14 @@
     "length": 96,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/-DP4mNsombE",
-    "showcaseVideo": "https://youtu.be/YbyfDYChIYU"
+    "showcaseVideo": "https://youtu.be/YbyfDYChIYU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Tunnel of Despair 144Hz Mobile 44%",
@@ -961,8 +1435,14 @@
     "length": 52,
     "version": 2.2,
     "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/B4N6AM6nBJ0",
-    "showcaseVideo": "https://youtu.be/hpy-lGthQ2Y"
+    "showcaseVideo": "https://youtu.be/hpy-lGthQ2Y",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Tunnel of Serpentical 33-100%",
@@ -972,19 +1452,14 @@
     "length": 57,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/HXv_64ootSk",
-    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s"
-  },
-  {
-    "name": "Tunnel of Serpentical 58%",
-    "player": "serpentical",
-    "levelID": null,
-    "date": "2026-05-31",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/bkW3BbC19JY",
-    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s"
+    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Tunnel of Serpentical 4 deaths, 99.97% accuracy",
@@ -994,8 +1469,31 @@
     "length": 86,
     "version": 2.2,
     "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/bkW3BbC19JY",
-    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s"
+    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
+  },
+  {
+    "name": "Tunnel of Serpentical 58%",
+    "player": "serpentical",
+    "levelID": null,
+    "date": "2026-05-31",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/bkW3BbC19JY",
+    "showcaseVideo": "https://youtu.be/W8H_-KZG-1s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "Verdudous 43%",
@@ -1005,8 +1503,14 @@
     "length": 23,
     "version": 2.2,
     "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/GLJD0DBoyCw",
-    "showcaseVideo": "https://youtu.be/-W49BsRjZTk"
+    "showcaseVideo": "https://youtu.be/-W49BsRjZTk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "you when bee crusher 18-81%",
@@ -1016,8 +1520,14 @@
     "length": 92,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/-__1UXbUl3k",
-    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs"
+    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "you when bee crusher 54-100%",
@@ -1027,8 +1537,14 @@
     "length": 71,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/hX1sZ0s0swM",
-    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs"
+    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   },
   {
     "name": "you when bee crusher 63%",
@@ -1038,18 +1554,13 @@
     "length": 101,
     "version": 2.2,
     "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/-zOzdx9okK4",
-    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs"
-  },
-  {
-    "name": "Lesopowal 34-100%, 22-100% in a row",
-    "player": "lanx",
-    "levelID": 137886942,
-    "date": "2026-07-06",
-    "length": "TBA",
-    "version": 2.2,
-    "submitter": "lanx",
-    "video": "https://youtu.be/gqRYH66CfpE",
-    "showcaseVideo": "https://youtu.be/EwDAZUgVTS8"
+    "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": null
   }
 ]

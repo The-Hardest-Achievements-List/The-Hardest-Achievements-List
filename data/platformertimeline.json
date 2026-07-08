@@ -2,12 +2,14 @@
   {
     "name": "Monitoring 82%",
     "player": "Gabest",
+    "levelID": null,
     "date": "2025-09-28",
+    "length": null,
     "version": 2.2,
-    "submitter": "SirDoodle2920",
-    "video": "https://youtu.be/F2KPV78GMGE",
-    "date": "2025-09-28",
     "submitter": "Sirdoodle",
+    "video": "https://youtu.be/F2KPV78GMGE",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Progress"
@@ -23,6 +25,7 @@
     "submitter": "Woachi",
     "video": "https://youtu.be/jD5BNFHF3Z8",
     "showcaseVideo": "https://youtu.be/RKP5NVBdunc",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Deathless",
@@ -35,10 +38,12 @@
     "player": "GToast",
     "levelID": 98163412,
     "date": "2024-12-09",
+    "length": null,
     "version": 2.2,
     "submitter": "toolazytogetausername",
     "video": "https://youtu.be/Grw8DT3v8PA",
     "showcaseVideo": "https://youtu.be/RKP5NVBdunc",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Deathless",
@@ -50,10 +55,12 @@
     "player": "GToast",
     "levelID": 105724358,
     "date": "2024-08-13",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/bfASf1-aK2M",
     "showcaseVideo": "https://youtu.be/rcSQvDWvswI",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Rated",
@@ -65,8 +72,12 @@
     "player": "zXdasfsa",
     "levelID": 107457912,
     "date": "2024-07-09",
+    "length": null,
     "version": 2.2,
+    "submitter": null,
     "video": "https://youtu.be/mx_VDrBApiY",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -77,10 +88,12 @@
     "player": "Aibyou",
     "levelID": 112059085,
     "date": "2024-03-14",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/1Y0f-vEXw1Y",
     "showcaseVideo": "https://youtu.be/il1EO5KBhKM",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -91,10 +104,12 @@
     "player": "DrJoe",
     "levelID": 100353881,
     "date": "2024-02-05",
+    "length": null,
     "version": 2.2,
     "submitter": "BUGDAY BEY",
     "video": "https://youtu.be/Je4aJE50LjU",
     "showcaseVideo": "https://youtu.be/hzmu3JBfGc0",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -105,10 +120,12 @@
     "player": "cookie8r",
     "levelID": 99666837,
     "date": "2024-01-24",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/ECFouV4XA7w",
     "showcaseVideo": "https://youtu.be/nOjqgF33VUE",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -119,10 +136,12 @@
     "player": "Crerro",
     "levelID": 99126990,
     "date": "2024-01-14",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/CBGGtaIQUco",
     "showcaseVideo": "https://youtu.be/7bM6cvIcjeI",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -133,9 +152,12 @@
     "player": "FakeHATETAG",
     "levelID": 99022488,
     "date": "2024-01-12",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
+    "video": null,
     "showcaseVideo": "https://youtu.be/nOjqgF33VUE",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -151,6 +173,7 @@
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/og4iOb22elI",
     "showcaseVideo": "https://youtu.be/nOjqgF33VUE",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified",
@@ -162,10 +185,12 @@
     "player": "ninz",
     "levelID": 97730554,
     "date": "2023-12-23",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/FGtgXHk06E8",
     "showcaseVideo": "https://youtu.be/nOjqgF33VUE",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -176,10 +201,12 @@
     "player": "ninz",
     "levelID": 97692058,
     "date": "2023-12-23",
+    "length": null,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/graXf77CPKU",
     "showcaseVideo": "https://youtu.be/UIKaTKrWwdc",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified",
@@ -196,6 +223,7 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/rtJkHgDuZXM",
     "showcaseVideo": "https://youtu.be/h8zQDOil0tw",
+    "thumbnail": null,
     "tags": []
   },
   {
@@ -207,6 +235,8 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/nkAFYberbYo",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -221,6 +251,8 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/H8sMvZgEHYE",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -236,6 +268,7 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/AGFBYa19CmY",
     "showcaseVideo": "https://youtu.be/p2nl-fG6aas",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -251,6 +284,7 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/ZkdaEvccYok",
     "showcaseVideo": "https://youtu.be/0S1rthBdx9A",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -259,12 +293,14 @@
   {
     "name": "Desert Temple",
     "player": "pcarlos321r",
+    "levelID": null,
     "date": "2021-12-29",
     "length": 0,
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/48UdG7VtyJY",
     "showcaseVideo": "https://youtu.be/48UdG7VtyJY",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -273,12 +309,14 @@
   {
     "name": "Robot Trial",
     "player": "sanez",
+    "levelID": null,
     "date": "2021-07-25",
     "length": 0,
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/NglciNKDIUY",
     "showcaseVideo": "https://youtu.be/bLmuusOHi7k",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
@@ -287,12 +325,14 @@
   {
     "name": "Robot Trial (Old)",
     "player": "sanez",
+    "levelID": null,
     "date": "2021-05-08",
     "length": 0,
     "version": 2.2,
     "submitter": "lapitzlazuli",
     "video": "https://youtu.be/PdXVJ_sorgM",
     "showcaseVideo": "https://youtu.be/bLmuusOHi7k",
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified",
@@ -308,6 +348,8 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/qGfwBD2q1WM",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified",
@@ -323,10 +365,11 @@
     "version": 2.2,
     "submitter": "Anceps",
     "video": "https://youtu.be/g4r6BTdU2M0",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "tags": [
       "Platformer",
       "Verified"
     ]
   }
 ]
-

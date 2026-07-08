@@ -7,7 +7,8 @@ export function getDuplicateParentId(achievement) {
 }
 
 export function isDuplicateAchievement(achievement) {
-  return getDuplicateParentId(achievement) !== undefined;
+  const parentRef = getDuplicateParentId(achievement);
+  return parentRef != null && parentRef !== "";
 }
 
 export function getAchievementKey(achievement) {

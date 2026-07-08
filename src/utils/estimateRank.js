@@ -14,6 +14,14 @@ export function getEstimateMidpoint(entry) {
   return (entry.estimateLower + entry.estimateUpper) / 2;
 }
 
+export function getProjectionSlot(entry, lowestMainPosition, baselinePosition) {
+  if (!hasEstimate(entry)) return null;
+  if (entry.estimateLower <= lowestMainPosition) {
+    return getEstimateMidpoint(entry);
+  }
+  return baselinePosition - 1;
+}
+
 export function buildMainProjection(mainEntries, pendingEntries, getKey) {
   if (!Array.isArray(pendingEntries) || pendingEntries.length === 0) {
     return null;
@@ -34,15 +42,16 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
   }
 
   const mainCount = listRank;
+  const baselinePosition = mainCount + 1;
 
   for (const entry of pendingEntries) {
-    const midpoint = getEstimateMidpoint(entry);
+    const slot = getProjectionSlot(entry, mainCount, baselinePosition);
     items.push({
       type: "pending",
       key: getKey(entry),
-      slot: midpoint,
+      slot,
       name: entry.name ?? "",
-      unknown: midpoint == null,
+      unknown: slot == null,
     });
   }
 
