@@ -188,7 +188,7 @@ export default function HomePage({
     <div className="home">
       <section className="home__hero">
         <img
-          src="/THAL.png"
+          src="/https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d55e1e46b801e32f3a269004e7e9d12ff9c21485/public/favicon.svg"
           alt="Hardest Achievements logo"
           className="home__hero-logo"
         />

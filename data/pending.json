@@ -494,7 +494,7 @@
     "date": "2026-06-05",
     "length": 45,
     "version": 2.2,
-    "submitter": "Qwidzit",
+    "submitter": "QwidziT",
     "video": "https://youtu.be/Gn66qOafzO4",
     "showcaseVideo": "https://youtu.be/ulaXL0SdzZk"
   },
@@ -593,7 +593,7 @@
     "date": "2022-11-22",
     "length": 182,
     "version": 2.2,
-    "submitter": "goofygdplayer",
+    "submitter": "Gooba",
     "video": "https://youtu.be/CKJ4KfaF1u0",
     "showcaseVideo": "https://youtu.be/ryBbuH_SPbs"
   },
@@ -745,7 +745,7 @@
     "date": "2026-05-13",
     "length": 22,
     "version": 2.2,
-    "submitter": "Septagon7",
+    "submitter": "SeptaGon7",
     "video": "https://youtu.be/i_NWZn3pTXk?t=36",
     "showcaseVideo": "https://youtu.be/WX5RCDxobSA"
   },
@@ -772,7 +772,7 @@
     "showcaseVideo": "https://youtu.be/IvUkcfMWhQY"
   },
   {
-    "name": "Silent Acropolis (ThePurgatory + Hover) 69%",
+    "name": "Silent Acropolis (ThePurgatory + Hover) 84%%",
     "player": "Hover",
     "levelID": null,
     "date": "2026-05-26",
@@ -811,7 +811,7 @@
     "date": "2026-03-23",
     "length": 36,
     "version": 2.2,
-    "submitter": "goofygdplayer",
+    "submitter": "Gooba",
     "video": "https://youtu.be/3ANI557EzW8?t=45",
     "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
   },
@@ -822,7 +822,7 @@
     "date": "2026-03-23",
     "length": 41,
     "version": 2.2,
-    "submitter": "goofygdplayer",
+    "submitter": "Gooba",
     "video": "https://youtu.be/3ANI557EzW8",
     "showcaseVideo": "https://youtu.be/uZsilHbMc2s"
   },
@@ -905,7 +905,7 @@
     "date": "2025/05/31",
     "length": 30,
     "version": 2.2,
-    "submitter": "goofygdplayer",
+    "submitter": "Gooba",
     "video": "https://youtu.be/JU03NGK2iDM",
     "showcaseVideo": ""
   },
@@ -1004,7 +1004,7 @@
     "date": "2026-06-21",
     "length": 23,
     "version": 2.2,
-    "submitter": "megafwoggy",
+    "submitter": "fwoggy",
     "video": "https://youtu.be/GLJD0DBoyCw",
     "showcaseVideo": "https://youtu.be/-W49BsRjZTk"
   },
@@ -1040,5 +1040,16 @@
     "submitter": "Excryst",
     "video": "https://youtu.be/-zOzdx9okK4",
     "showcaseVideo": "https://youtu.be/LBJiK1Mr9Bs"
+  },
+  {
+    "name": "Lesopowal 34-100%, 22-100% in a row",
+    "player": "lanx",
+    "levelID": 137886942,
+    "date": "2026-07-06",
+    "length": "TBA",
+    "version": 2.2,
+    "submitter": "lanx",
+    "video": "https://youtu.be/gqRYH66CfpE",
+    "showcaseVideo": "https://youtu.be/EwDAZUgVTS8"
   }
 ]
