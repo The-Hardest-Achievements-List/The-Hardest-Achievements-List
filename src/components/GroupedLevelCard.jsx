@@ -10,6 +10,7 @@ function GroupedLevelCard({
   getTimelineDateLabel,
   hideRank,
   isPendingEstimate,
+  pendingMainCount = 0,
   showProjectedRanks,
   onClick,
   layoutMode,
@@ -32,6 +33,7 @@ function GroupedLevelCard({
           timelineDateLabel={getTimelineDateLabel(mainAchievement)}
           hideRank={hideRank}
           isPendingEstimate={isPendingEstimate}
+          pendingMainCount={pendingMainCount}
           showProjectedRanks={showProjectedRanks}
           onClick={onClick}
           layoutMode={layoutMode}
@@ -81,6 +83,7 @@ function GroupedLevelCard({
                 timelineDateLabel={getTimelineDateLabel(duplicate)}
                 hideRank={hideRank}
                 isPendingEstimate={isPendingEstimate}
+                pendingMainCount={pendingMainCount}
                 onClick={onClick}
                 layoutMode={layoutMode}
               />

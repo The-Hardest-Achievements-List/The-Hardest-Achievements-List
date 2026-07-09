@@ -1,25 +1,138 @@
+export const NLW_ESTIMATE = "NLW";
+export const NLW_ESTIMATE_LABEL = "Not List Worthy";
+export const PURE_NLW_ESTIMATE_LABEL = "Questionable to be List Worthy";
+
+export function normalizeEstimateField(value) {
+  if (value == null) return null;
+  if (typeof value === "string" && value.trim().toUpperCase() === NLW_ESTIMATE) {
+    return NLW_ESTIMATE;
+  }
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  return null;
+}
+
+export function isNlwEstimateField(value) {
+  return value === NLW_ESTIMATE;
+}
+
+export function isNlwEstimate(entry) {
+  return (
+    isNlwEstimateField(entry?.estimateLower) ||
+    isNlwEstimateField(entry?.estimateUpper)
+  );
+}
+
+export function isPureNlwEstimate(entry) {
+  return (
+    isNlwEstimateField(entry?.estimateLower) &&
+    isNlwEstimateField(entry?.estimateUpper)
+  );
+}
+
+export function getMainListCount(mainEntries) {
+  if (!Array.isArray(mainEntries)) return 0;
+  return mainEntries.reduce(
+    (count, entry) => count + (entry?.duplicateOf ? 0 : 1),
+    0,
+  );
+}
+
 export function hasEstimate(entry) {
   const lo = entry?.estimateLower;
   const hi = entry?.estimateUpper;
+  if (isNlwEstimateField(lo) || isNlwEstimateField(hi)) return false;
   return Number.isFinite(lo) && Number.isFinite(hi) && lo <= hi;
+}
+
+export function resolveEstimateBound(value, mainCount) {
+  if (isNlwEstimateField(value)) return getTailProjectionSlot(mainCount);
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  return null;
+}
+
+export function getResolvedBounds(entry, mainCount) {
+  const rawLower = resolveEstimateBound(entry?.estimateLower, mainCount);
+  const rawUpper = resolveEstimateBound(entry?.estimateUpper, mainCount);
+  if (rawLower == null || rawUpper == null) return null;
+  return {
+    lower: Math.min(rawLower, rawUpper),
+    upper: Math.max(rawLower, rawUpper),
+  };
+}
+
+export function hasResolvableEstimate(entry, mainCount) {
+  return getResolvedBounds(entry, mainCount) != null;
+}
+
+export function getResolvedMidpoint(entry, mainCount) {
+  const bounds = getResolvedBounds(entry, mainCount);
+  if (!bounds) return null;
+  return (bounds.lower + bounds.upper) / 2;
 }
 
 export const UNKNOWN_ESTIMATE_LABEL = "Unknown projection";
 
 export const PROJECTION_TOOLTIP =
-  "Rank after pending entries are placed. Unknown projections are placed last.";
+  "Rank after all pending entries are placed. Not list worthy resolves to just below the current list end; unknown projections are placed last.";
 
 export function getEstimateMidpoint(entry) {
   if (!hasEstimate(entry)) return null;
   return (entry.estimateLower + entry.estimateUpper) / 2;
 }
 
-export function getProjectionSlot(entry, lowestMainPosition, baselinePosition) {
-  if (!hasEstimate(entry)) return null;
-  if (entry.estimateLower <= lowestMainPosition) {
-    return getEstimateMidpoint(entry);
+export function getTailProjectionSlot(mainCount) {
+  return mainCount + 0.5;
+}
+
+export function getProjectionSlot(entry, mainCount) {
+  return getResolvedMidpoint(entry, mainCount);
+}
+
+/** Case-insensitive name tiebreaker for equal estimate ranges (always ascending). */
+export function compareEntryName(a, b) {
+  return (a?.name ?? "").toLowerCase().localeCompare((b?.name ?? "").toLowerCase());
+}
+
+function getResolvedSortKey(entry, mainCount) {
+  const bounds = getResolvedBounds(entry, mainCount);
+  if (!bounds) {
+    return { tier: 2, midpoint: Infinity, lower: Infinity, upper: Infinity };
   }
-  return baselinePosition - 1;
+  return {
+    tier: 0,
+    midpoint: (bounds.lower + bounds.upper) / 2,
+    lower: bounds.lower,
+    upper: bounds.upper,
+  };
+}
+
+export function comparePendingEstimate(a, b, sortDir = "asc", mainCount = 0) {
+  const ka = getResolvedSortKey(a, mainCount);
+  const kb = getResolvedSortKey(b, mainCount);
+  const dir = sortDir === "asc" ? 1 : -1;
+
+  if (ka.tier !== kb.tier) {
+    if (ka.tier === 2) return 1;
+    if (kb.tier === 2) return -1;
+    return ka.tier - kb.tier;
+  }
+
+  if (ka.tier === 0) {
+    if (ka.midpoint !== kb.midpoint) return (ka.midpoint - kb.midpoint) * dir;
+    if (ka.lower !== kb.lower) return (ka.lower - kb.lower) * dir;
+    if (ka.upper !== kb.upper) return (ka.upper - kb.upper) * dir;
+  }
+
+  return compareEntryName(a, b);
+}
+
+function compareProjectionItems(a, b, mainCount) {
+  if (a.slot !== b.slot) return a.slot - b.slot;
+  if (a.type !== b.type) return a.type === "pending" ? -1 : 1;
+  if (a.type === "pending" && b.type === "pending") {
+    return comparePendingEstimate(a.entry, b.entry, "asc", mainCount);
+  }
+  return compareEntryName(a, b);
 }
 
 export function buildMainProjection(mainEntries, pendingEntries, getKey) {
@@ -38,20 +151,22 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
       key: getKey(entry),
       slot: listRank,
       name: entry.name ?? "",
+      entry,
     });
   }
 
   const mainCount = listRank;
-  const baselinePosition = mainCount + 1;
 
   for (const entry of pendingEntries) {
-    const slot = getProjectionSlot(entry, mainCount, baselinePosition);
+    if (entry?.duplicateOf) continue;
+    const slot = getProjectionSlot(entry, mainCount);
     items.push({
       type: "pending",
       key: getKey(entry),
       slot,
       name: entry.name ?? "",
       unknown: slot == null,
+      entry,
     });
   }
 
@@ -66,11 +181,7 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
     if (item.unknown) item.slot = unknownSlot;
   }
 
-  items.sort((a, b) => {
-    if (a.slot !== b.slot) return a.slot - b.slot;
-    if (a.type !== b.type) return a.type === "pending" ? -1 : 1;
-    return a.name.localeCompare(b.name);
-  });
+  items.sort((a, b) => compareProjectionItems(a, b, mainCount));
 
   const projectionByKey = new Map();
   items.forEach((item, index) => {
@@ -90,7 +201,35 @@ export function hasProjectedShift(entry) {
   );
 }
 
-export function formatEstimate(entry) {
+export function formatEstimate(entry, mainCount = null) {
+  if (mainCount != null && hasResolvableEstimate(entry, mainCount)) {
+    if (isPureNlwEstimate(entry)) return PURE_NLW_ESTIMATE_LABEL;
+
+    const loField = entry.estimateLower;
+    const hiField = entry.estimateUpper;
+    const loNlw = isNlwEstimateField(loField);
+    const hiNlw = isNlwEstimateField(hiField);
+
+    if (!loNlw && hiNlw) return `#${loField} to ${NLW_ESTIMATE_LABEL}`;
+    if (loNlw && !hiNlw) return `${NLW_ESTIMATE_LABEL} to #${hiField}`;
+
+    if (loField === hiField) return `#${loField}`;
+    return `#${loField} to #${hiField}`;
+  }
+
+  if (isPureNlwEstimate(entry)) return PURE_NLW_ESTIMATE_LABEL;
+
+  if (isNlwEstimate(entry)) {
+    const loField = entry.estimateLower;
+    const hiField = entry.estimateUpper;
+    if (!isNlwEstimateField(loField) && isNlwEstimateField(hiField)) {
+      return `#${loField} to ${NLW_ESTIMATE_LABEL}`;
+    }
+    if (isNlwEstimateField(loField) && !isNlwEstimateField(hiField)) {
+      return `${NLW_ESTIMATE_LABEL} to #${hiField}`;
+    }
+  }
+
   if (!hasEstimate(entry)) return null;
   const lo = entry.estimateLower;
   const hi = entry.estimateUpper;
@@ -98,35 +237,35 @@ export function formatEstimate(entry) {
   return `#${lo} to #${hi}`;
 }
 
-export function formatEstimateDisplay(entry) {
-  return formatEstimate(entry) ?? UNKNOWN_ESTIMATE_LABEL;
+export function formatEstimateDisplay(entry, mainCount = null) {
+  return formatEstimate(entry, mainCount) ?? UNKNOWN_ESTIMATE_LABEL;
 }
 
-export function comparePendingEstimate(a, b, sortDir = "asc") {
-  const getKey = (entry) => {
-    if (!hasEstimate(entry)) {
-      return { known: false, lower: Infinity, upper: Infinity };
-    }
-    return {
-      known: true,
-      lower: entry.estimateLower,
-      upper: entry.estimateUpper,
-    };
-  };
-
-  const ka = getKey(a);
-  const kb = getKey(b);
-  const dir = sortDir === "asc" ? 1 : -1;
-
-  if (ka.known !== kb.known) return ka.known ? -1 * dir : 1 * dir;
-  if (ka.lower !== kb.lower) return (ka.lower - kb.lower) * dir;
-  if (ka.upper !== kb.upper) return (ka.upper - kb.upper) * dir;
-  return (a.name ?? "").localeCompare(b.name ?? "");
-}
-
-export function matchesEstimateSearch(entry, q) {
+export function matchesEstimateSearch(entry, q, mainCount = 0) {
   if (!q) return false;
-  if (UNKNOWN_ESTIMATE_LABEL.toLowerCase().includes(q)) return !hasEstimate(entry);
+  const pureLabel = PURE_NLW_ESTIMATE_LABEL.toLowerCase();
+  const mixedLabel = NLW_ESTIMATE_LABEL.toLowerCase();
+  const token = NLW_ESTIMATE.toLowerCase();
+
+  if (pureLabel.includes(q)) return isPureNlwEstimate(entry);
+  if (mixedLabel.includes(q)) return isNlwEstimate(entry) && !isPureNlwEstimate(entry);
+  if (token.includes(q) || q.includes(token)) return isNlwEstimate(entry);
+  if (UNKNOWN_ESTIMATE_LABEL.toLowerCase().includes(q)) {
+    return !hasResolvableEstimate(entry, mainCount);
+  }
+  if (hasResolvableEstimate(entry, mainCount)) {
+    const bounds = getResolvedBounds(entry, mainCount);
+    const lo = String(bounds.lower);
+    const hi = String(bounds.upper);
+    if (
+      lo.includes(q) ||
+      hi.includes(q) ||
+      `${lo}-${hi}`.includes(q) ||
+      `${lo} to ${hi}`.includes(q)
+    ) {
+      return true;
+    }
+  }
   if (!hasEstimate(entry)) return false;
   const lo = String(entry.estimateLower);
   const hi = String(entry.estimateUpper);

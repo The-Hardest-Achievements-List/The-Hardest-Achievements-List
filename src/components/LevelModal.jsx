@@ -10,6 +10,7 @@ import {
   formatEstimateDisplay,
   hasEstimate,
   hasProjectedShift,
+  hasResolvableEstimate,
 } from "../utils/estimateRank";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
 
@@ -18,6 +19,7 @@ export default function LevelModal({
   onClose,
   hideRank,
   isPendingEstimate,
+  pendingMainCount = 0,
   showProjectedRanks = false,
 }) {
   const [copiedValue, setCopiedValue] = useState(null);
@@ -25,7 +27,9 @@ export default function LevelModal({
     !isPendingEstimate && (a.listRank != null || a.rank != null)
       ? a.listRank ?? a.rank
       : null;
-  const pendingRankLabel = isPendingEstimate ? formatEstimateDisplay(a) : null;
+  const pendingRankLabel = isPendingEstimate
+    ? formatEstimateDisplay(a, pendingMainCount)
+    : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
   const dateDisplay = a.timelineDateLabel ?? formatDate(a.date);
@@ -89,7 +93,7 @@ export default function LevelModal({
           <div className="modal__top-row">
             {!hideRank && isPendingEstimate && pendingRankLabel != null && (
               <span
-                className={`modal__rank${!hasEstimate(a) ? " modal__rank--unknown" : ""}`}
+                className={`modal__rank${!hasResolvableEstimate(a, pendingMainCount) ? " modal__rank--unknown" : ""}`}
               >
                 {pendingRankLabel}
               </span>

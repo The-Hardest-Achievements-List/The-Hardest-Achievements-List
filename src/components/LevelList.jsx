@@ -3,7 +3,7 @@ import LevelCard from "./LevelCard";
 import GroupedLevelCard from "./GroupedLevelCard";
 import { groupAchievementsByDuplicates } from "../utils/groupDuplicates";
 import { buildTimelineDateLabelMap, getTimelineEntryKey } from "../utils/format";
-import { TAG_DEFINITIONS } from "./Header";
+import { TAG_DEFINITIONS, TAG_ICONS } from "./Header";
 import Tooltip from "./Tooltip";
 
 const SORT_OPTS = [
@@ -80,6 +80,7 @@ export default function LevelList({
   isTimeline,
   hideRank,
   isPendingEstimate,
+  pendingMainCount = 0,
   projectionAvailable,
   showProjectedRanks,
   setShowProjectedRanks,
@@ -152,7 +153,7 @@ export default function LevelList({
                 onClick={() => setMode("platformer")}
               >
                 <i
-                  className="fas fa-running"
+                  className="fas fa-person-running"
                   style={{ marginRight: "0.5rem" }}
                 />{" "}
                 Platformer
@@ -231,6 +232,9 @@ export default function LevelList({
                       onClick={() => toggleTag(t)}
                     >
                       <Tooltip text={def.tooltip}>
+                        {TAG_ICONS[t] && (
+                          <i className={`fas ${TAG_ICONS[t]}`} aria-hidden="true" />
+                        )}
                         {def.text || t}
                       </Tooltip>
                     </button>
@@ -270,6 +274,7 @@ export default function LevelList({
                 getTimelineDateLabel={getTimelineDateLabel}
                 hideRank={hideRank}
                 isPendingEstimate={isPendingEstimate}
+                pendingMainCount={pendingMainCount}
                 showProjectedRanks={showProjectedRanks}
                 onClick={handleCardClick}
                 layoutMode={layoutMode}
@@ -283,6 +288,7 @@ export default function LevelList({
                 timelineDateLabel={getTimelineDateLabel(a)}
                 hideRank={hideRank}
                 isPendingEstimate={isPendingEstimate}
+                pendingMainCount={pendingMainCount}
                 showProjectedRanks={showProjectedRanks}
                 onClick={handleCardClick}
                 layoutMode={layoutMode}

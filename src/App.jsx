@@ -15,6 +15,7 @@ import {
   comparePendingEstimate,
   matchesEstimateSearch,
   buildMainProjection,
+  getMainListCount,
 } from "./utils/estimateRank";
 
 import achievementsData from "../data/achievements.json";
@@ -224,6 +225,10 @@ export default function App() {
   const isMainList = active === "MAIN";
   const mainEntries = mode === "classic" ? achievementsData : platformersData;
   const pendingEntries = mode === "classic" ? pendingData : platformerpendingData;
+  const pendingMainCount = useMemo(
+    () => getMainListCount(mainEntries),
+    [mainEntries],
+  );
   const mainProjectionByKey = useMemo(() => {
     if (!isMainList) return null;
     return buildMainProjection(mainEntries, pendingEntries, getAchievementKey);
@@ -261,7 +266,7 @@ export default function App() {
     achievement.player?.toLowerCase().includes(q) ||
     String(achievement.levelID ?? "").includes(q) ||
     String(achievement.rank ?? "").includes(q) ||
-    (isPendingList && matchesEstimateSearch(achievement, q));
+    (isPendingList && matchesEstimateSearch(achievement, q, pendingMainCount));
 
   const toggleTag = (t) => {
     const next = new Map(activeTags);
@@ -285,6 +290,11 @@ export default function App() {
 
   useEffect(() => {
     setSearch("");
+  }, [active, mode]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setShowScrollTop(false);
   }, [active, mode]);
 
   const filteredData = useMemo(() => {
@@ -329,7 +339,7 @@ export default function App() {
 
     data.sort((a, b) => {
       if (sort === "rank" && isPendingList) {
-        return comparePendingEstimate(a, b, sortDir);
+        return comparePendingEstimate(a, b, sortDir, pendingMainCount);
       }
 
       let va, vb;
@@ -359,7 +369,7 @@ export default function App() {
     });
 
     return data;
-  }, [rawData, search, activeTags, sort, sortDir, isPendingList]);
+  }, [rawData, search, activeTags, sort, sortDir, isPendingList, pendingMainCount]);
 
   useEffect(() => {
     const update = () => {
@@ -438,6 +448,7 @@ export default function App() {
           isTimeline={active === "TIMELINE"}
           hideRank={active === "PENDING" && !isPendingList}
           isPendingEstimate={isPendingList}
+          pendingMainCount={pendingMainCount}
           projectionAvailable={projectionAvailable}
           showProjectedRanks={showProjectedRanks}
           setShowProjectedRanks={setShowProjectedRanks}
@@ -463,6 +474,7 @@ export default function App() {
           onClose={() => setSelectedLevel(null)}
           hideRank={active === "PENDING" && !isPendingList}
           isPendingEstimate={isPendingList}
+          pendingMainCount={pendingMainCount}
           showProjectedRanks={showProjectedRanks && isMainList}
         />
       )}

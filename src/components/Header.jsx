@@ -260,6 +260,111 @@ const DiscordIcon = () => (
 );
 
 const isListless = (t) => t === "HOME" || t === "LEADERBOARD" || t === "MODLB";
+const hasListFilters = (t) => t === "MAIN" || t === "PENDING" || t === "TIMELINE";
+
+const ChevronDown = () => (
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+    <path
+      d="M2 3.5L5 6.5L8 3.5"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const FiltersIcon = () => (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <path d="M4 21v-7" />
+    <path d="M4 10V3" />
+    <path d="M12 21v-9" />
+    <path d="M12 8V3" />
+    <path d="M20 21v-5" />
+    <path d="M20 12V3" />
+    <path d="M2 14h4" />
+    <path d="M10 8h4" />
+    <path d="M18 16h4" />
+  </svg>
+);
+
+function MobileNav({ active, setActive }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const activeTab = TABS.includes(active) ? active : TABS[0];
+
+  const handleSelect = (tab) => {
+    setActive(tab);
+    setOpen(false);
+  };
+
+  return (
+    <>
+      <nav className="hd__nav-mobile-tabs" aria-label="List navigation">
+        {TABS.map((t) => (
+          <button
+            key={t}
+            type="button"
+            className={`hd__nav-btn hd__nav-mobile-tab${active === t ? " is-active" : ""}`}
+            onClick={() => setActive(t)}
+            aria-current={active === t ? "page" : undefined}
+          >
+            <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
+            <span className="hd__nav-label">{t}</span>
+          </button>
+        ))}
+      </nav>
+
+      <div className="hd__nav-mobile-dropdown" ref={ref}>
+        <button
+          type="button"
+          className="hd__nav-mobile-dropdown-btn hd__nav-mobile-action-btn"
+          aria-label="Choose list"
+          aria-expanded={open}
+          aria-haspopup="menu"
+          onClick={() => setOpen((o) => !o)}
+        >
+          <i className={`fas ${TAB_ICONS[activeTab]}`} aria-hidden="true" />
+          <span className="hd__nav-mobile-dropdown-label">{activeTab}</span>
+          <ChevronDown />
+        </button>
+        {open && (
+          <div className="hd__nav-mobile-dropdown-menu" role="menu">
+            {TABS.map((t) => (
+              <button
+                key={t}
+                type="button"
+                role="menuitem"
+                className={`hd__nav-mobile-dropdown-item${active === t ? " is-active" : ""}`}
+                onClick={() => handleSelect(t)}
+              >
+                <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
+                {t}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
 
 export default function Header({
   mode,
@@ -412,7 +517,7 @@ export default function Header({
                         onClick={() => setMode("platformer")}
                       >
                         <i
-                          className="fas fa-running"
+                          className="fas fa-person-running"
                           style={{ marginRight: "0.5rem" }}
                         />{" "}
                         Platformer
@@ -437,26 +542,24 @@ export default function Header({
               </>
             )}
 
-            {!isListless(active) && (
-              <button
-                type="button"
-                className="hd__nav-mobile-btn"
-                onClick={() => setShowNav(true)}
-                aria-label="Open menu"
-              >
-                <i className={`fas ${TAB_ICONS[active]}`} />
-                {activeTags.size > 0 && (
-                  <span className="hd__filter-badge">{activeTags.size}</span>
+            {active !== "HOME" && (
+              <div className="hd__mobile-actions">
+                <MobileNav active={active} setActive={setActive} />
+                {hasListFilters(active) && (
+                  <button
+                    type="button"
+                    className="hd__nav-mobile-btn hd__nav-mobile-action-btn"
+                    onClick={() => setShowNav(true)}
+                    aria-label="Open filters"
+                  >
+                    <FiltersIcon />
+                    <span className="hd__nav-mobile-btn-label">Filters</span>
+                    {activeTags.size > 0 && (
+                      <span className="hd__filter-badge">{activeTags.size}</span>
+                    )}
+                  </button>
                 )}
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M2.5 4.5L6 8L9.5 4.5"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
+              </div>
             )}
           </div>
 
@@ -542,7 +645,7 @@ export default function Header({
                   onClick={() => setMode("platformer")}
                 >
                   <i
-                    className="fas fa-running"
+                    className="fas fa-person-running"
                     style={{ marginRight: "0.5rem" }}
                   />{" "}
                   Platformer
@@ -600,6 +703,9 @@ export default function Header({
                             : "Not filtering")
                       }
                     >
+                      {TAG_ICONS[t] && (
+                        <i className={`fas ${TAG_ICONS[t]}`} aria-hidden="true" />
+                      )}
                       {def.text || t}
                     </button>
                   );

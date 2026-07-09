@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { normalizeYouTubeUrl } from "../src/utils/format.js";
+import { normalizeEstimateField } from "../src/utils/estimateRank.js";
+
+const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
 
 const CLASSIC_TAGS = [
   "Level",
@@ -145,6 +148,11 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       continue;
     }
 
+    if (ESTIMATE_FIELDS.has(key)) {
+      result[key] = normalizeEstimateField(entry[key]);
+      continue;
+    }
+
     result[key] = entry[key];
   }
 
@@ -161,6 +169,8 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       previous[key] = normalizeTags(entry.tags, tagOrder);
     } else if (VIDEO_FIELDS.includes(key)) {
       previous[key] = normalizeVideoField(entry[key]);
+    } else if (ESTIMATE_FIELDS.has(key)) {
+      previous[key] = normalizeEstimateField(entry[key]);
     } else {
       previous[key] = entry[key];
     }

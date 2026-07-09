@@ -16,6 +16,7 @@ import {
   formatEstimateDisplay,
   hasEstimate,
   hasProjectedShift,
+  hasResolvableEstimate,
 } from "../utils/estimateRank";
 
 const MIN_THUMBNAIL_DIMENSION = 200;
@@ -111,6 +112,7 @@ function LevelCard({  achievement: a,
   timelineDateLabel,
   hideRank,
   isPendingEstimate,
+  pendingMainCount = 0,
   showProjectedRanks = false,
   onClick,
   layoutMode = "CARD",
@@ -121,7 +123,9 @@ function LevelCard({  achievement: a,
   const officialRank = shouldShowRank
     ? (a.rank ?? a.listRank ?? index + 1)
     : null;
-  const pendingRankBadge = isPendingEstimate ? formatEstimateDisplay(a) : null;
+  const pendingRankBadge = isPendingEstimate
+    ? formatEstimateDisplay(a, pendingMainCount)
+    : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
   const isPodium =
@@ -175,7 +179,7 @@ function LevelCard({  achievement: a,
                 ) : isPendingEstimate ? (
                   pendingRankBadge != null && (
                     <span
-                      className={`card__rank-badge${!hasEstimate(a) ? " card__rank-badge--unknown" : ""}`}
+                      className={`card__rank-badge${!hasResolvableEstimate(a, pendingMainCount) ? " card__rank-badge--unknown" : ""}`}
                     >
                       {pendingRankBadge}
                     </span>
@@ -245,16 +249,12 @@ function LevelCard({  achievement: a,
                   <span key={t} className={`card__tag ${def.className || ""}`}>
                     <Tooltip text={def.tooltip || t}>
                       {def.icon ? (
-                        <img
-                          src={def.icon}
-                          alt=""
-                          style={{ marginRight: "0.35rem", height: 12 }}
-                        />
+                        <img src={def.icon} alt="" />
                       ) : (
                         TAG_ICONS[t] && (
                           <i
                             className={`fas ${TAG_ICONS[t]}`}
-                            style={{ marginRight: "0.35rem" }}
+                            aria-hidden="true"
                           />
                         )
                       )}
