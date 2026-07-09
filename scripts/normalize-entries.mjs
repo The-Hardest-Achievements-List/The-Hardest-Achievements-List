@@ -197,13 +197,8 @@ export const FILES = [
   { file: "achievements.json", normalize: normalizeClassicEntry },
   { file: "pending.json", normalize: normalizePendingEntry, sortByName: true },
   { file: "timeline.json", normalize: normalizeClassicEntry },
-  { file: "legacy.json", normalize: normalizeClassicEntry },
   { file: "platformers.json", normalize: normalizePlatformerEntry },
-  {
-    file: "platformerpending.json",
-    normalize: normalizePlatformerEntry,
-    sortByName: true,
-  },
+  { file: "platformerpending.json", normalize: normalizePlatformerEntry, sortByName: true },
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
 ];
 

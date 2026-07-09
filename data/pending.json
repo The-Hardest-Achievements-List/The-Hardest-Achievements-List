@@ -12,9 +12,12 @@
     "video": "https://youtu.be/hRQE_TIXGl0",
     "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
     "thumbnail": null,
-    "duplicateOf": "Acheron 2.1",
+    "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Acheron 1.1x 40-100%",
@@ -31,7 +34,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "Rated",
+      "Speedhack"
+    ]
   },
   {
     "name": "Acheron 60hz 26-72%",
@@ -48,7 +56,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated"
+    ]
   },
   {
     "name": "Aeternus 56-69%",
@@ -65,7 +78,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Angelicide (Kaza) 15-40%",
@@ -82,7 +98,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Angelicide (Kaza) 22-52%",
@@ -99,7 +118,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "BARELY VISIBLE Slaughterhouse",
@@ -116,7 +138,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "0.03 opacity",
-    "tags": null
+    "tags": [
+      "Level",
+      "Verified"
+    ]
   },
   {
     "name": "Bellatrix 70%",
@@ -133,7 +158,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "BloodEngine 57-100%",
@@ -149,8 +177,11 @@
     "showcaseVideo": "https://youtu.be/MtQCiCS7PDw",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 10?",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Boobawamba 67%, 86% in a row",
@@ -167,7 +198,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "Cautious (Old) 43-89%",
@@ -184,7 +219,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "CHIL 62%, 100% in a row",
@@ -201,7 +239,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "Clubcheron 40-100%",
@@ -217,8 +259,11 @@
     "showcaseVideo": "https://youtu.be/ODZXPR7SRyU",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Buffed Acheron",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Clubcheron 42%",
@@ -234,8 +279,11 @@
     "showcaseVideo": "https://youtu.be/ODZXPR7SRyU",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Buffed Acheron",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Clubstep XYZ 42-92%",
@@ -252,7 +300,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Clubstep XYZ 47%",
@@ -269,7 +320,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Cyber Raptor 93%",
@@ -286,7 +340,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Defeated Circles 89%, 100% in a row",
@@ -303,7 +360,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "Despair Code 35-100%",
@@ -320,7 +381,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
   },
   {
     "name": "Dignity 47-90%",
@@ -337,7 +401,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "ECHO 86%",
@@ -353,8 +420,11 @@
     "showcaseVideo": "https://youtu.be/ghJE29FsrE0",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 15-30",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Edge of Destiny 180%",
@@ -371,7 +441,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "Escalator 39-100%",
@@ -388,7 +462,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Escalator 4-73%",
@@ -405,7 +482,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Escalator 42%",
@@ -422,7 +502,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Eternal Night 38-100%",
@@ -439,7 +522,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Eternal Silence 9-100%",
@@ -456,7 +542,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "EVISCERATE 48%",
@@ -465,15 +554,18 @@
     "date": "2026-05-01",
     "length": 38,
     "version": 2.2,
-    "submitter": "zFexty\n",
+    "submitter": "zFexty",
     "estimateLower": 1,
     "estimateUpper": 10,
     "video": "https://youtu.be/KIEoUQSoau8",
     "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 10?",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "EVISCERATE 65-100%",
@@ -482,7 +574,7 @@
     "date": "2026-03-04",
     "length": 21,
     "version": 2.2,
-    "submitter": "marleywave\n",
+    "submitter": "marleywave",
     "estimateLower": 1,
     "estimateUpper": 10,
     "video": "https://youtu.be/PQ2Y0K5uW9s",
@@ -490,7 +582,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Top 10?",
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Ex Vacuo 33-100%",
@@ -506,8 +601,11 @@
     "showcaseVideo": "https://youtu.be/CVXC2_bveBQ",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 15?",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "FAIRY KNIFE HELL (buffed) 78-100%",
@@ -516,7 +614,7 @@
     "date": "2026-02-24",
     "length": 46,
     "version": 2.2,
-    "submitter": "marleywave\n",
+    "submitter": "marleywave",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/DbCt-Rmv3L0",
@@ -524,7 +622,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Fronly Demise (Skylar)",
@@ -541,7 +642,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Verified"
+    ]
   },
   {
     "name": "Fronly Demise (uzuden)",
@@ -558,7 +662,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Verified"
+    ]
   },
   {
     "name": "Gay Acheron 17-100%",
@@ -575,7 +682,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Goober Rage Stage 60Hz Mobile",
@@ -592,7 +702,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Rated",
+      "Mobile"
+    ]
   },
   {
     "name": "Green Acheron 17-100%",
@@ -609,7 +724,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "GRIEF 68%, 72% in a row",
@@ -619,14 +737,17 @@
     "length": 288,
     "version": 2.2,
     "submitter": "tmtsps12",
-    "estimateLower": null,
-    "estimateUpper": null,
+    "estimateLower": 1,
+    "estimateUpper": 1,
     "video": "https://youtu.be/apmslJgRMow?t=11678",
     "showcaseVideo": "https://youtu.be/jYXxoDywnAE",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Pending indefinitely until other opinion gathered",
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
   },
   {
     "name": "Herr Machine",
@@ -642,8 +763,11 @@
     "showcaseVideo": "https://youtu.be/FmGmDZIih70",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 6-15",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
   },
   {
     "name": "i n j u r y (buffed) 59%",
@@ -660,7 +784,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Im Bleaf",
@@ -677,7 +804,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Verified"
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING (Quivert) 54%",
@@ -694,7 +824,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "IT MEANS EVERYTHING 74%",
@@ -711,7 +844,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "KOCMOC 120hz Mobile 14-82%",
@@ -728,7 +864,13 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
   },
   {
     "name": "KOCMOC UNLEASHED (Tohupolko) 120hz Mobile 65-91%",
@@ -745,7 +887,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
   },
   {
     "name": "Labyrinth 29-100%",
@@ -762,7 +909,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Labyrinth 68%",
@@ -779,7 +929,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "last stop 15%, 14%, (4%), 55%, (7%), 15%, 13% in a row",
@@ -796,7 +949,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
   },
   {
     "name": "last stop 24%, 28%, 31% in a row",
@@ -813,7 +969,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
   },
   {
     "name": "Le Fishe 2x 75%",
@@ -830,7 +989,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "Rated",
+      "Speedhack"
+    ]
   },
   {
     "name": "Leaves 48-100%",
@@ -847,14 +1011,17 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
-    "name": "Lesopowal 34-100%, 22-100% in a row",
+    "name": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
     "player": "lanx",
     "levelID": 137886942,
     "date": "2026-07-06",
-    "length": "TBA",
+    "length": 171,
     "version": 2.2,
     "submitter": "lanx",
     "estimateLower": null,
@@ -864,7 +1031,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
   },
   {
     "name": "LIMBO (Unnerfed) 90%",
@@ -881,7 +1051,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Limewire 58-100%",
@@ -898,7 +1071,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Lure Infinity 8.53%",
@@ -910,12 +1086,15 @@
     "submitter": "aytch0008",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "Submission",
-    "showcaseVideo": "",
+    "video": null,
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
   },
   {
     "name": "MAX NRG 29-85%",
@@ -931,8 +1110,11 @@
     "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 10",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "MAX NRG 40-100%",
@@ -948,8 +1130,11 @@
     "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 10",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "MAX NRG 66% (Feb. 2026)",
@@ -965,8 +1150,11 @@
     "showcaseVideo": "https://youtu.be/EUpbb96x7AI",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Top 20 version",
-    "tags": null
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Murk 29-100%",
@@ -983,7 +1171,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
   },
   {
     "name": "Nullscapes 65%, (2%), 66% in a row",
@@ -1000,7 +1191,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "ORBIT 61%, (1%), 99% in a row",
@@ -1017,7 +1212,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "RARE 2.60%, 2.87%, 2.90%, 2.88%, 2.87%x2 in a row",
@@ -1034,7 +1233,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
   },
   {
     "name": "Sakupen Circles (Old) 1 death; 99.97% accuracy, 100% in a row",
@@ -1051,7 +1253,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Noclip"
+    ]
   },
   {
     "name": "Sakupen Circles (Old) 58-68%, 58-69%, 58-70%, 58-67% in a row",
@@ -1068,7 +1274,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
   },
   {
     "name": "Sakupen Circles 120hz Mobile 2 Deaths, 99.95% accuracy",
@@ -1085,7 +1294,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Noclip",
+      "Mobile"
+    ]
   },
   {
     "name": "Sakupen Circles 120hz Mobile 44-100%",
@@ -1102,7 +1316,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
   },
   {
     "name": "Sakupen Circles 120hz Mobile 69%",
@@ -1119,7 +1338,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
   },
   {
     "name": "Sakupen Circles Nerfdate 37-100%",
@@ -1136,7 +1360,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Acropolis (ThePurgatory + Hover) 35-100%",
@@ -1153,7 +1380,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Acropolis (ThePurgatory + Hover) 84%%",
@@ -1170,7 +1400,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Circles (Starchman, Mar. 2026) 27-85%",
@@ -1187,7 +1420,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Circles (Starchman) 38-87%",
@@ -1204,7 +1440,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Circles (Starchman) 47-100%",
@@ -1221,7 +1460,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Circles (Starchman) 58%",
@@ -1238,7 +1480,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Destep 12%, 25% in a row",
@@ -1255,7 +1500,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
   },
   {
     "name": "Silent Jumper 57-100%",
@@ -1272,7 +1520,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Top 5",
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Silent Oppenheimer 35-100%",
@@ -1289,7 +1540,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Top 10",
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Slaughterhouse (CoolRanchDoritos1055) 49-100%",
@@ -1306,7 +1560,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Slaughterhouse 1.1x 120hz Mobile 25-66%",
@@ -1323,7 +1580,13 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Speedhack",
+      "Mobile"
+    ]
   },
   {
     "name": "Slaughterhouse 120hz Mobile 25-75%",
@@ -1340,7 +1603,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
   },
   {
     "name": "Slaughterhouse 120hz Mobile 49-100%",
@@ -1357,7 +1625,12 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
   },
   {
     "name": "Sonic Wave Infinity (Jevan) 24-70%",
@@ -1374,7 +1647,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Sonic Wave Infinity (Jevan) 38-100%",
@@ -1391,7 +1667,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Subsuming Vortex 35-73%, 35-83%, 35-70% in a row",
@@ -1408,7 +1687,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
   },
   {
     "name": "Tidal Wave 1.2x 29-100% 27 deaths, 99.34% accuracy",
@@ -1425,7 +1708,13 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "Rated",
+      "Noclip",
+      "Speedhack"
+    ]
   },
   {
     "name": "Tunnel of Despair 144Hz Mobile 44%",
@@ -1442,7 +1731,13 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
   },
   {
     "name": "Tunnel of Serpentical 33-100%",
@@ -1459,7 +1754,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Tunnel of Serpentical 4 deaths, 99.97% accuracy",
@@ -1476,7 +1774,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
   },
   {
     "name": "Tunnel of Serpentical 58%",
@@ -1493,7 +1794,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Verdudous 43%",
@@ -1510,7 +1814,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "you when bee crusher 18-81%",
@@ -1527,7 +1834,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "2P"
+    ]
   },
   {
     "name": "you when bee crusher 54-100%",
@@ -1544,7 +1855,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "2P"
+    ]
   },
   {
     "name": "you when bee crusher 63%",
@@ -1561,6 +1876,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null
+    "tags": [
+      "Level",
+      "Progress",
+      "2P"
+    ]
   }
 ]

@@ -534,7 +534,8 @@
       "Level",
       "Consistency",
       "Rated",
-      "Tentative"
+      "Tentative",
+      "Pending Removal"
     ]
   },
   {
@@ -617,7 +618,7 @@
     "player": "forewad",
     "levelID": 116174063,
     "date": "2026-05-20",
-    "length": "TBA",
+    "length": 749,
     "version": 2.2,
     "submitter": "stax",
     "video": "https://youtu.be/SYhBj0ditlI",
@@ -1352,7 +1353,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -1711,7 +1713,7 @@
     "player": "Wity",
     "levelID": 138704906,
     "date": "2026-04-21",
-    "length": "TBA",
+    "length": 71,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/4V24spYQWuE",
@@ -2126,7 +2128,8 @@
     "tags": [
       "Level",
       "Consistency",
-      "Rated"
+      "Rated",
+      "Pending Removal"
     ]
   },
   {
@@ -2761,7 +2764,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -2955,7 +2959,7 @@
     "player": "apu",
     "levelID": 134379544,
     "date": "2026-05-05",
-    "length": "TBA",
+    "length": 73,
     "version": 2.2,
     "submitter": "Exiled_Shade",
     "video": "https://youtu.be/lBXO2CTEMfs",
@@ -3129,7 +3133,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -3385,7 +3390,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -4029,7 +4035,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -4047,7 +4054,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -4065,7 +4073,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -5105,7 +5114,8 @@
     "notes": null,
     "tags": [
       "Challenge",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -5308,7 +5318,7 @@
     "player": "Scotchtape",
     "levelID": 136396693,
     "date": "2026-03-24",
-    "length": "TBA",
+    "length": 515,
     "version": 2.2,
     "submitter": "Exiled_Shade",
     "video": "https://youtu.be/JBZ-lrBgkl0",
@@ -6040,7 +6050,7 @@
     "player": "sawyer",
     "levelID": 125317359,
     "date": "2026-05-15",
-    "length": "TBA",
+    "length": 142,
     "version": 2.2,
     "submitter": "raine",
     "video": "https://youtu.be/f5a7N6siEiQ",
@@ -6308,7 +6318,8 @@
       "Low Hertz",
       "Progress",
       "Rated",
-      "Mobile"
+      "Mobile",
+      "Pending Removal"
     ]
   },
   {
@@ -6981,7 +6992,7 @@
     "player": "aidsen",
     "levelID": 138215607,
     "date": "2026-04-15",
-    "length": "TBA",
+    "length": 69,
     "version": 2.2,
     "submitter": "Gooba",
     "video": "https://youtu.be/7uYghOdos8I",

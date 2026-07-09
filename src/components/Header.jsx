@@ -148,6 +148,64 @@ const SORT_OPTS = [
   { value: "date", label: "Date" },
 ];
 
+const SORT_DIR_OPTS = [
+  { value: "asc", label: "Ascending" },
+  { value: "desc", label: "Descending" },
+];
+
+function DrawerSelect({ value, options, onChange, ariaLabel }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const label = options.find((o) => o.value === value)?.label ?? value;
+
+  return (
+    <div className="hd__sel hd__sel--drawer" ref={ref}>
+      <button
+        type="button"
+        className="hd__sel-btn"
+        aria-label={ariaLabel}
+        onClick={() => setOpen((o) => !o)}
+      >
+        {label}
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+          <path
+            d="M2 3.5L5 6.5L8 3.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      </button>
+      {open && (
+        <div className="hd__sel-menu">
+          {options.map((o) => (
+            <button
+              key={o.value}
+              type="button"
+              className={`hd__sel-item${value === o.value ? " is-active" : ""}`}
+              onClick={() => {
+                onChange(o.value);
+                setOpen(false);
+              }}
+            >
+              {o.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SortSelect({ sort, setSort }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -224,10 +282,12 @@ export default function Header({
   setCardScale,
   cardWidth,
   setCardWidth,
+  projectionAvailable = false,
+  showProjectedRanks = false,
+  setShowProjectedRanks,
 }) {
   if (active === "HOME") return null;
 
-  const [showFilters, setShowFilters] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
 
@@ -288,7 +348,12 @@ export default function Header({
                     <div className="hd__sort-group">
                       <span className="hd__sort-lbl">SORT</span>
                       <SortSelect sort={sort} setSort={setSort} />
-                      <button className="hd__sort-dir" onClick={setSortDir}>
+                      <button
+                        className="hd__sort-dir"
+                        onClick={() =>
+                          setSortDir(sortDir === "asc" ? "desc" : "asc")
+                        }
+                      >
                         <i
                           className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
                           style={{ marginRight: "0.5rem" }}
@@ -354,28 +419,6 @@ export default function Header({
                       </button>
                     </div>
 
-                    <button
-                      className="hd__filter-btn"
-                      onClick={() => setShowFilters(true)}
-                    >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.2"
-                      >
-                        <line x1="4" y1="6" x2="20" y2="6" />
-                        <line x1="8" y1="12" x2="16" y2="12" />
-                        <line x1="11" y1="18" x2="13" y2="18" />
-                      </svg>
-                      {activeTags.size > 0 && (
-                        <span className="hd__filter-badge">
-                          {activeTags.size}
-                        </span>
-                      )}
-                    </button>
                   </div>
                 </div>
 
@@ -394,20 +437,27 @@ export default function Header({
               </>
             )}
 
-            <button
-              className="hd__nav-mobile-btn"
-              onClick={() => setShowNav(true)}
-            >
-              <i className={`fas ${TAB_ICONS[active]}`} />
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path
-                  d="M2.5 4.5L6 8L9.5 4.5"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
+            {!isListless(active) && (
+              <button
+                type="button"
+                className="hd__nav-mobile-btn"
+                onClick={() => setShowNav(true)}
+                aria-label="Open menu"
+              >
+                <i className={`fas ${TAB_ICONS[active]}`} />
+                {activeTags.size > 0 && (
+                  <span className="hd__filter-badge">{activeTags.size}</span>
+                )}
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M2.5 4.5L6 8L9.5 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
 
           {}
@@ -442,6 +492,38 @@ export default function Header({
               </div>
             </div>
 
+            {layoutMode === "CARD" && (
+              <div className="flt-section">
+                <span className="flt-lbl">CARD SCALE</span>
+                <div className="hd__layout-group hd__layout-group--drawer">
+                  <div className="hd__scale-control">
+                    <label htmlFor="drawer-card-scale-y">Scale Y</label>
+                    <input
+                      id="drawer-card-scale-y"
+                      type="range"
+                      min="0.5"
+                      max="1.25"
+                      step="0.05"
+                      value={cardScale}
+                      onChange={(e) => setCardScale(Number(e.target.value))}
+                    />
+                  </div>
+                  <div className="hd__scale-control">
+                    <label htmlFor="drawer-card-scale-x">Scale X</label>
+                    <input
+                      id="drawer-card-scale-x"
+                      type="range"
+                      min="0.5"
+                      max="1.0"
+                      step="0.05"
+                      value={cardWidth}
+                      onChange={(e) => setCardWidth(Number(e.target.value))}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="flt-section">
               <span className="flt-lbl">MODE</span>
               <div className="hd__mode-toggle">
@@ -471,14 +553,31 @@ export default function Header({
             <div className="flt-section">
               <span className="flt-lbl">SORT</span>
               <div className="hd__sort-group hd__sort-group--mobile">
-                <SortSelect sort={sort} setSort={setSort} />
-                <button className="hd__sort-dir" onClick={setSortDir}>
-                  <i
-                    className={`fas ${sortDir === "asc" ? "fa-arrow-up" : "fa-arrow-down"}`}
-                    style={{ marginRight: "0.5rem" }}
+                <div className="flt-sort-row">
+                  <DrawerSelect
+                    value={sort}
+                    options={SORT_OPTS}
+                    onChange={setSort}
+                    ariaLabel="Sort by"
                   />
-                </button>
+                  <DrawerSelect
+                    value={sortDir}
+                    options={SORT_DIR_OPTS}
+                    onChange={setSortDir}
+                    ariaLabel="Sort direction"
+                  />
+                </div>
               </div>
+              {projectionAvailable && (
+                <label className="hd__toggle hd__toggle--drawer">
+                  <input
+                    type="checkbox"
+                    checked={showProjectedRanks}
+                    onChange={(e) => setShowProjectedRanks(e.target.checked)}
+                  />
+                  <span className="hd__toggle-label">Projected ranks</span>
+                </label>
+              )}
             </div>
 
             <div className="flt-section">
@@ -511,80 +610,6 @@ export default function Header({
         </div>
       )}
 
-      {}
-      {showFilters && (
-        <div className="flt-overlay" onClick={() => setShowFilters(false)}>
-          <div className="flt-drawer" onClick={(e) => e.stopPropagation()}>
-            <div className="flt-drawer__handle" />
-
-            <div className="flt-section">
-              <span className="flt-lbl">SORT</span>
-              <div className="flt-sort-btns">
-                {SORT_OPTS.map((o) => (
-                  <button
-                    key={o.value}
-                    className={`flt-sort-btn${sort === o.value ? " is-active" : ""}`}
-                    onClick={() => setSort(o.value)}
-                  >
-                    {o.label}
-                  </button>
-                ))}
-              </div>
-              <button className="flt-dir-btn" onClick={setSortDir}>
-                {sortDir === "asc" ? (
-                  <>
-                    <i
-                      className="fas fa-arrow-up"
-                      style={{ marginRight: "0.5rem" }}
-                    />{" "}
-                    Ascending
-                  </>
-                ) : (
-                  <>
-                    <i
-                      className="fas fa-arrow-down"
-                      style={{ marginRight: "0.5rem" }}
-                    />{" "}
-                    Descending
-                  </>
-                )}
-              </button>
-            </div>
-
-            <div className="flt-section">
-              <span className="flt-lbl">FILTER</span>
-              <div className="hd__chips">
-                {allTags.map((t) => {
-                  const state = activeTags.get(t);
-                  const def = TAG_DEFINITIONS[t] || {};
-                  return (
-                    <button
-                      key={t}
-                      className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""} ${def.className || ""}`}
-                      onClick={() => toggleTag(t)}
-                      title={
-                        def.tooltip ||
-                        (state === "include"
-                          ? "Include only"
-                          : state === "exclude"
-                            ? "Exclude"
-                            : "Not filtering")
-                      }
-                    >
-                      {def.text || t}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            <button className="flt-done" onClick={() => setShowFilters(false)}>
-              <i className="fas fa-check" style={{ marginRight: "0.5rem" }} />{" "}
-              Done
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }

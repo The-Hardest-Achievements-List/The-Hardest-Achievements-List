@@ -393,7 +393,7 @@ export default function App() {
         sort={sort}
         setSort={setSort}
         sortDir={sortDir}
-        setSortDir={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+        setSortDir={setSortDir}
         activeTags={activeTags}
         toggleTag={toggleTag}
         allTags={allTags}
@@ -404,6 +404,9 @@ export default function App() {
         setCardScale={setCardScale}
         cardWidth={cardWidth}
         setCardWidth={setCardWidth}
+        projectionAvailable={projectionAvailable}
+        showProjectedRanks={showProjectedRanks}
+        setShowProjectedRanks={setShowProjectedRanks}
       />
 
       {active === "HOME" ? (
