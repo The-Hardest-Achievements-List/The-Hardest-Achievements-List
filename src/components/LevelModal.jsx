@@ -210,6 +210,13 @@ export default function LevelModal({
             )}
           </div>
 
+          {a.notes && (
+            <div className="modal__notes">
+              <span className="modal__embed-label">Notes</span>
+              <p className="modal__notes-body">{a.notes}</p>
+            </div>
+          )}
+
           {(a.video || a.showcaseVideo) && (
             <div className="modal__embed-section">
               {a.video &&

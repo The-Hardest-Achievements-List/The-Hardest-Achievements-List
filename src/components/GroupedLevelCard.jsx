@@ -23,6 +23,41 @@ function GroupedLevelCard({
     setIsExpanded((prev) => !prev);
   }, []);
 
+  const hasVariants = duplicates && duplicates.length > 0;
+  const isCardLayout = layoutMode === "CARD";
+
+  const variantToggle =
+    hasVariants && isCardLayout ? (
+      <button
+        type="button"
+        className="grouped-achievement__toggle"
+        onClick={handleToggleExpanded}
+        title={
+          isExpanded
+            ? "Hide duplicates"
+            : `Show ${duplicates.length} duplicate(s)`
+        }
+        aria-expanded={isExpanded}
+        aria-controls={duplicatesRegionId}
+        aria-label={
+          isExpanded
+            ? `Hide ${duplicates.length} variant${duplicates.length !== 1 ? "s" : ""}`
+            : `Show ${duplicates.length} variant${duplicates.length !== 1 ? "s" : ""}`
+        }
+      >
+        <i
+          className={`fas fa-chevron-${isExpanded ? "down" : "right"} grouped-achievement__toggle-icon`}
+          aria-hidden="true"
+        />
+        <span className="grouped-achievement__toggle-text">
+          {duplicates.length} variant{duplicates.length !== 1 ? "s" : ""}
+        </span>
+        <span className="grouped-achievement__toggle-count" aria-hidden="true">
+          {duplicates.length}
+        </span>
+      </button>
+    ) : null;
+
   return (
     <div className="grouped-achievement">
       <div className="grouped-achievement__main">
@@ -37,11 +72,12 @@ function GroupedLevelCard({
           showProjectedRanks={showProjectedRanks}
           onClick={onClick}
           layoutMode={layoutMode}
+          cornerActions={variantToggle}
         />
-        {duplicates && duplicates.length > 0 && (
+        {hasVariants && !isCardLayout && (
           <button
             type="button"
-            className="grouped-achievement__toggle"
+            className="grouped-achievement__toggle grouped-achievement__toggle--list"
             onClick={handleToggleExpanded}
             title={
               isExpanded
@@ -56,9 +92,10 @@ function GroupedLevelCard({
                 : `Show ${duplicates.length} variant${duplicates.length !== 1 ? "s" : ""}`
             }
           >
-            <span className="grouped-achievement__toggle-icon">
-              {isExpanded ? "▼" : "▶"}
-            </span>
+            <i
+              className={`fas fa-chevron-${isExpanded ? "down" : "right"} grouped-achievement__toggle-icon`}
+              aria-hidden="true"
+            />
             <span className="grouped-achievement__toggle-text">
               {duplicates.length} variant{duplicates.length !== 1 ? "s" : ""}
             </span>
