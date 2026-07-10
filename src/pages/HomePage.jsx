@@ -6,8 +6,8 @@
   "raine — List Moderator",
   "Exiled_Shade — List Helper",
   "Excryst — List Helper",
+  "SupremeSDB — List Helper",
   "aytch0008 — Trial Moderator",
-   "SupremeSDB — Trial Moderator",
   "NucDev — Integrity Moderator",
   "Mentrillum — Integrity Moderator",
 ];
