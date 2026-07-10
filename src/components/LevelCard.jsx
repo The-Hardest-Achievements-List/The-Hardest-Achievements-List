@@ -8,8 +8,15 @@ import React, {
 } from "react";
 import {
   formatDate,
+  formatDisplayVersion,
   formatLength,
+  getNotesExtraCount,
+  getNotesPreview,
+  getNotesPreviewMaxLength,
   getThumbnailUrlSequence,
+  hasNotes,
+  hasNotesBeyondPreview,
+  isValidDate,
 } from "../utils/format";
 import { TAG_DEFINITIONS, TAG_ICONS } from "./Header";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
@@ -27,6 +34,28 @@ const ELLIPSIS = " … ";
 const MIN_TAIL_SEGMENTS = 1;
 const PREFERRED_TAIL_SEGMENTS = 2;
 const NAME_LINE_COUNT = 2;
+const DISPLAYABLE_TAGS = new Set(Object.keys(TAG_DEFINITIONS));
+const UNDEFINED_LABEL = "undefined";
+
+function asDisplayString(value) {
+  return typeof value === "string" && value.trim() ? value.trim() : UNDEFINED_LABEL;
+}
+
+function asDisplayNumber(value) {
+  return typeof value === "number" && Number.isFinite(value)
+    ? String(value)
+    : UNDEFINED_LABEL;
+}
+
+function asDisplayDate(value) {
+  return isValidDate(value) ? formatDate(value) : UNDEFINED_LABEL;
+}
+
+function asDisplayLength(value) {
+  return typeof value === "number" && Number.isFinite(value) && value > 0
+    ? formatLength(value)
+    : UNDEFINED_LABEL;
+}
 
 function parseCardNameSegments(name) {
   const suffixMatch = name.match(SUFFIX_RE);
@@ -189,13 +218,53 @@ function TruncatedCardName({ name, className }) {
   );
 }
 
-export function CardNoteButton({ notes }) {
-  if (!notes) return null;
+export function CardNoteButton({ notes, onOpen }) {
+  const [previewMaxLength, setPreviewMaxLength] = useState(getNotesPreviewMaxLength);
+
+  useEffect(() => {
+    const updatePreviewLimit = () => {
+      setPreviewMaxLength(getNotesPreviewMaxLength());
+    };
+    updatePreviewLimit();
+    window.addEventListener("resize", updatePreviewLimit);
+    return () => window.removeEventListener("resize", updatePreviewLimit);
+  }, []);
+
+  const preview = getNotesPreview(notes, previewMaxLength);
+  if (!preview) return null;
+
+  const hasMore = hasNotesBeyondPreview(notes, previewMaxLength);
+  const extraCount = getNotesExtraCount(notes);
+  const noteClassName = `card__note-tag${hasMore ? " card__note-tag--more" : ""}`;
+
+  const tooltipContent = (
+    <div className="note-tooltip">
+      <p className="note-tooltip__body">{preview}</p>
+      {hasMore ? (
+        <p className="note-tooltip__hint">Click card for full notes</p>
+      ) : null}
+    </div>
+  );
 
   return (
-    <Tooltip text={notes} className="card__note-tag">
-      <i className="fas fa-comment-dots" aria-hidden="true" />
-      <span className="card__note-tag__label">Note</span>
+    <Tooltip content={tooltipContent} className={noteClassName}>
+      <button
+        type="button"
+        className="card__note-tag__btn"
+        onClick={(e) => {
+          e.stopPropagation();
+          onOpen?.();
+        }}
+        aria-label={hasMore ? "Notes — click for full text" : "Notes"}
+      >
+        <i className="fas fa-comment-dots" aria-hidden="true" />
+        <span className="card__note-tag__label">Note</span>
+        {extraCount > 0 ? (
+          <span className="card__note-tag__more" aria-hidden="true">
+            +{extraCount}
+          </span>
+        ) : null}
+      </button>
     </Tooltip>
   );
 }
@@ -251,8 +320,8 @@ function CardTags({ tags, listNote }) {
   return (
     <div ref={containerRef} className="card__tags">
       {listNote}
-      {visibleTags.map((tag) => (
-        <CardTag key={tag} tag={tag} />
+      {visibleTags.map((tag, index) => (
+        <CardTag key={`${tag}-${index}`} tag={tag} />
       ))}
       {hiddenCount > 0 && (
         <span className="card__tag card__tag--overflow" title={hiddenLabel}>
@@ -362,6 +431,12 @@ function LevelCard({
   cornerActions = null,
 }) {
   const displayedDate = timelineDateLabel ?? formatDate(a.date);
+  const displayedName = asDisplayString(a.name);
+  const displayedPlayer = asDisplayString(a.player);
+  const displayedLevelID = asDisplayNumber(a.levelID);
+  const displayedLength = asDisplayLength(a.length);
+  const displayedVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
+  const displayedDateValue = asDisplayDate(a.date);
   const shouldShowRank =
     !isTimeline && index !== -1 && (isPendingEstimate || !hideRank);
   const officialRank = shouldShowRank
@@ -379,9 +454,21 @@ function LevelCard({
   const isDuplicate = index === -1;
 
   const tags = React.useMemo(() => {
-    if (Array.isArray(a.tags)) return a.tags;
-    if (typeof a.tags === "string") return a.tags.split(/\s*,\s*/).filter(Boolean);
-    return [];
+    const source = Array.isArray(a.tags)
+      ? a.tags
+      : typeof a.tags === "string"
+        ? a.tags.split(/\s*,\s*/)
+        : [];
+
+    return source
+      .filter((tag) => typeof tag === "string")
+      .map((tag) => tag.trim())
+      .filter((tag) => {
+        if (!tag) return false;
+        const lowered = tag.toLowerCase();
+        if (lowered === "undefined" || lowered === "null") return false;
+        return DISPLAYABLE_TAGS.has(tag);
+      });
   }, [a.tags]);
   const pendingRemoval = tags.includes("Pending Removal");
   const isCardLayout = layoutMode === "CARD";
@@ -404,7 +491,7 @@ function LevelCard({
     onClick(a);
   }, [onClick, a]);
 
-  const showCornerNote = isCardLayout && a.notes;
+  const showCornerNote = isCardLayout && hasNotes(a.notes);
   const showCornerActions = showCornerNote || Boolean(cornerActions);
 
   return (
@@ -457,43 +544,39 @@ function LevelCard({
                   )
                 ))}
             </div>
-            <TruncatedCardName name={a.name} className="card__name" />
+            <TruncatedCardName name={displayedName} className="card__name" />
             <div className="card__player">
               <span className="card__player-by">by</span>
-              <span className="card__player-name">{a.player}</span>
+              <span className="card__player-name">{displayedPlayer}</span>
             </div>
           </div>
 
           <div className="card__detail-bottom">
             <div className="card__stats">
-              {a.levelID != null && (
-                <div>
-                  <span className="lbl">ID</span>
-                  <span className="val">{a.levelID}</span>
-                </div>
-              )}
+              <div>
+                <span className="lbl">ID</span>
+                <span className="val">{displayedLevelID}</span>
+              </div>
               {!isTimeline && (
                 <div>
                   <span className="lbl">DATE</span>
-                  <span className="val">{formatDate(a.date)}</span>
-                </div>
-              )}
-              {!!a.length && (
-                <div>
-                  <span className="lbl">LEN</span>
-                  <span className="val">{formatLength(a.length)}</span>
+                  <span className="val">{displayedDateValue}</span>
                 </div>
               )}
               <div>
+                <span className="lbl">LEN</span>
+                <span className="val">{displayedLength}</span>
+              </div>
+              <div>
                 <span className="lbl">VER</span>
-                <span className="val">{a.version ?? "2.2"}</span>
+                <span className="val">{displayedVersion}</span>
               </div>
             </div>
             <CardTags
               tags={tags}
               listNote={
-                !isCardLayout && a.notes ? (
-                  <CardNoteButton notes={a.notes} />
+                !isCardLayout && hasNotes(a.notes) ? (
+                  <CardNoteButton notes={a.notes} onOpen={handleCardClick} />
                 ) : null
               }
             />
@@ -504,7 +587,9 @@ function LevelCard({
             className="card__corner-actions"
             onClick={(e) => e.stopPropagation()}
           >
-            {showCornerNote && <CardNoteButton notes={a.notes} />}
+            {showCornerNote && (
+              <CardNoteButton notes={a.notes} onOpen={handleCardClick} />
+            )}
             {cornerActions}
           </div>
         )}

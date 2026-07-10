@@ -1,5 +1,6 @@
 ﻿import { useState, useRef, useEffect, Fragment, useMemo } from "react";
 import { getDuplicateParentId } from "../utils/groupDuplicates";
+import { getNotesPreview } from "../utils/format";
 import achievementsData from "../../data/achievements.json";
 import pendingData from "../../data/pending.json";
 import legacyData from "../../data/legacy.json";
@@ -211,7 +212,7 @@ function DetailContent({ player, pos, mode }) {
             <div
               key={`${e.name}-${index}-${e._src}`}
               className="lb__ach"
-              title={e.notes || undefined}
+              title={getNotesPreview(e.notes) || undefined}
             >
               <span className="lb__ach-rank">
                 {e.rank != null ? `#${e.rank}` : "—"}
@@ -252,7 +253,7 @@ function DetailContent({ player, pos, mode }) {
             <div
               key={`${e.name}-${e.rank}-${e._src}`}
               className={`lb__ach${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}`}
-              title={e.notes || undefined}
+              title={getNotesPreview(e.notes) || undefined}
             >
               <span className="lb__ach-rank">#{e.rank}</span>
               <div className="lb__ach-info">

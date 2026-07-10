@@ -17,6 +17,116 @@ function memoize(fn, maxSize = 100) {
     }
 }
 
+export function formatDisplayVersion(value) {
+    if (typeof value === 'string') {
+        const trimmed = value.trim()
+        if (!trimmed) return null
+        if (trimmed === 'Alpha' || trimmed === 'Beta') return trimmed
+        if (!/^\d+(\.\d+)?$/.test(trimmed)) return null
+        const parsed = Number(trimmed)
+        if (!Number.isFinite(parsed) || parsed <= 0) return null
+        if (Number.isInteger(parsed)) return `${parsed}.0`
+        return String(parsed)
+    }
+    if (typeof value === 'number' && Number.isFinite(value) && value > 0) {
+        if (Number.isInteger(value)) return `${value}.0`
+        const asText = String(value)
+        if (/^\d+\.\d+$/.test(asText)) return asText
+    }
+    return null
+}
+
+/** Clean note parts from a string or string[]. */
+export function getNotesParts(notes) {
+    if (typeof notes === 'string') {
+        const trimmed = notes.trim()
+        return trimmed ? [trimmed] : []
+    }
+    if (Array.isArray(notes)) {
+        return notes
+            .filter((item) => typeof item === 'string')
+            .map((item) => item.trim())
+            .filter(Boolean)
+    }
+    return []
+}
+
+/** Max tooltip width in px, scaled to the viewport. */
+export function getNotesTooltipMaxWidth() {
+    if (typeof window === 'undefined') return 260
+    // Keep the hover panel modest vs screen: ~44vw, hard-capped.
+    return Math.max(180, Math.min(260, Math.floor(window.innerWidth * 0.44), window.innerWidth - 32))
+}
+
+/** Approx. chars that fit in the note tooltip at the current viewport width. */
+export function getNotesPreviewMaxLength() {
+    const tooltipMaxWidth = getNotesTooltipMaxWidth()
+    // ~6.5px per character at 12px; keep about 3–3.5 lines of preview.
+    return Math.max(72, Math.floor((tooltipMaxWidth / 6.5) * 3.25))
+}
+
+/**
+ * Truncate preview text. Breaks on whitespace when possible; only hard-cuts
+ * mid-"word" when there is no space/newline in the allowed window
+ * (e.g. a thousand-character unbroken string).
+ */
+export function truncateNotesPreview(text, maxLength) {
+    if (typeof text !== 'string') {
+        return { text: '', truncated: false }
+    }
+    if (text.length <= maxLength) {
+        return { text, truncated: false }
+    }
+
+    const sliceAt = Math.max(0, maxLength - 1)
+    const cut = text.slice(0, sliceAt)
+    const boundary = Math.max(
+        cut.lastIndexOf(' '),
+        cut.lastIndexOf('\n'),
+        cut.lastIndexOf('\t'),
+    )
+
+    // No whitespace in range → unbroken megastring; hard-cut is intentional.
+    if (boundary === -1) {
+        return { text: `${cut}…`, truncated: true }
+    }
+
+    return { text: `${cut.slice(0, boundary).trimEnd()}…`, truncated: true }
+}
+
+/**
+ * Hover/preview text: full string (possibly length-truncated), or only the
+ * first array element (also length-truncated when needed).
+ */
+export function getNotesPreview(notes, maxLength = getNotesPreviewMaxLength()) {
+    const parts = getNotesParts(notes)
+    if (!parts.length) return null
+    return truncateNotesPreview(parts[0], maxLength).text
+}
+
+/** True when hover preview hides more content than it shows. */
+export function hasNotesBeyondPreview(notes, maxLength = getNotesPreviewMaxLength()) {
+    const parts = getNotesParts(notes)
+    if (parts.length > 1) return true
+    if (parts.length === 1) return truncateNotesPreview(parts[0], maxLength).truncated
+    return false
+}
+
+/** Extra array items beyond the first previewed note. */
+export function getNotesExtraCount(notes) {
+    return Math.max(0, getNotesParts(notes).length - 1)
+}
+
+/** Modal/full text: full string, or all array elements joined. */
+export function getNotesFullText(notes) {
+    const parts = getNotesParts(notes)
+    return parts.length ? parts.join('\n\n') : null
+}
+
+export function hasNotes(notes) {
+    return getNotesParts(notes).length > 0
+}
+
 export function isValidDate(iso) {
     if (!iso || typeof iso !== 'string') return false
     const d = new Date(iso)

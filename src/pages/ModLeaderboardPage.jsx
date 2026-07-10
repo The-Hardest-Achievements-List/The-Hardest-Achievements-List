@@ -1,4 +1,5 @@
 ﻿import { useState, Fragment } from "react";
+import { getNotesPreview } from "../utils/format";
 import achievementsData from "../../data/achievements.json";
 import pendingData from "../../data/pending.json";
 import legacyData from "../../data/legacy.json";
@@ -81,7 +82,7 @@ function ModDetailContent({ mod, pos }) {
           <div
             key={j}
             className={`lb__ach${e.tags?.includes("Pending Removal") ? " is-pending-removal" : ""}`}
-            title={e.notes || undefined}
+            title={getNotesPreview(e.notes) || undefined}
           >
             <span className="lb__ach-rank">
               {e.rank != null ? "#" + e.rank : "—"}

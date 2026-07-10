@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import {
   formatDate,
+  formatDisplayVersion,
   formatLength,
+  getNotesFullText,
   getYouTubeEmbedUrl,
+  isValidDate,
   normalizeYouTubeUrl,
 } from "../utils/format";
 import { useLevelThumbnail } from "./LevelCard";
+import { TAG_DEFINITIONS } from "./Header";
 import {
   formatEstimateDisplay,
   hasEstimate,
@@ -13,6 +17,8 @@ import {
   hasResolvableEstimate,
 } from "../utils/estimateRank";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
+
+const DISPLAYABLE_TAGS = new Set(Object.keys(TAG_DEFINITIONS));
 
 export default function LevelModal({
   level: a,
@@ -22,6 +28,28 @@ export default function LevelModal({
   pendingMainCount = 0,
   showProjectedRanks = false,
 }) {
+  const UNDEFINED_LABEL = "undefined";
+  const asDisplayString = (value) =>
+    typeof value === "string" && value.trim() ? value.trim() : UNDEFINED_LABEL;
+  const asDisplayNumber = (value) =>
+    typeof value === "number" && Number.isFinite(value)
+      ? String(value)
+      : UNDEFINED_LABEL;
+  const asDisplayDate = (value) =>
+    isValidDate(value) ? formatDate(value) : UNDEFINED_LABEL;
+  const asDisplayLength = (value) =>
+    typeof value === "number" && Number.isFinite(value) && value > 0
+      ? formatLength(value)
+      : UNDEFINED_LABEL;
+  const displayName = asDisplayString(a.name);
+  const displayPlayer = asDisplayString(a.player);
+  const displayLevelID = asDisplayNumber(a.levelID);
+  const displayDate = a.timelineDateLabel ?? asDisplayDate(a.date);
+  const displayLength = asDisplayLength(a.length);
+  const displayVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
+  const displaySubmitter = asDisplayString(a.submitter);
+  const notesText = getNotesFullText(a.notes);
+
   const [copiedValue, setCopiedValue] = useState(null);
   const officialRank =
     !isPendingEstimate && (a.listRank != null || a.rank != null)
@@ -32,13 +60,21 @@ export default function LevelModal({
     : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
-  const dateDisplay = a.timelineDateLabel ?? formatDate(a.date);
   const tags = Array.isArray(a?.tags)
     ? a.tags
     : typeof a?.tags === "string"
-      ? a.tags.split(/\s*,\s*/).filter(Boolean)
+      ? a.tags.split(/\s*,\s*/)
       : [];
-  const pendingRemoval = tags.includes("Pending Removal");
+  const displayTags = tags
+    .filter((tag) => typeof tag === "string")
+    .map((tag) => tag.trim())
+    .filter((tag) => {
+      if (!tag) return false;
+      const lowered = tag.toLowerCase();
+      if (lowered === "undefined" || lowered === "null") return false;
+      return DISPLAYABLE_TAGS.has(tag);
+    });
+  const pendingRemoval = displayTags.includes("Pending Removal");
   const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
     thumbnail: a.thumbnail,
     showcaseVideo: a.showcaseVideo,
@@ -75,7 +111,7 @@ export default function LevelModal({
           {currentUrl && (
             <img
               src={currentUrl}
-              alt={a.name}
+              alt={displayName}
               onError={onError}
               onLoad={onLoad}
             />
@@ -126,94 +162,88 @@ export default function LevelModal({
               )
             )}
             <div className="modal__tags">
-              {tags.map((t) => (
-                <span key={t} className="modal__tag" data-tag={t}>
+              {displayTags.map((t, index) => (
+                <span key={`${t}-${index}`} className="modal__tag" data-tag={t}>
                   {t}
                 </span>
               ))}
             </div>
           </div>
 
-          <h2 className="modal__name">{a.name}</h2>
+          <h2 className="modal__name">{displayName}</h2>
           <div className="modal__player">
             <span className="modal__player-by">by</span>
-            <span className="modal__player-name">{a.player}</span>
+            <span className="modal__player-name">{displayPlayer}</span>
           </div>
 
           <div className="modal__stats">
-            {a.levelID && (
-              <div className="modal__stat">
-                <span className="lbl">LEVEL ID</span>
-                <span
-                  className="val"
-                  onClick={() => handleCopy(a.levelID)}
-                  style={{ cursor: "pointer" }}
-                  title="Click to copy"
-                >
-                  {copiedValue === a.levelID ? "✓ Copied" : a.levelID}
-                </span>
-              </div>
-            )}
+            <div className="modal__stat">
+              <span className="lbl">LEVEL ID</span>
+              <span
+                className="val"
+                onClick={() => handleCopy(displayLevelID)}
+                style={{ cursor: "pointer" }}
+                title="Click to copy"
+              >
+                {copiedValue === displayLevelID ? "✓ Copied" : displayLevelID}
+              </span>
+            </div>
             <div className="modal__stat">
               <span className="lbl">DATE</span>
               <span
                 className="val"
-                onClick={() => handleCopy(dateDisplay)}
+                onClick={() => handleCopy(displayDate)}
                 style={{ cursor: "pointer" }}
                 title="Click to copy"
               >
-                {copiedValue === dateDisplay
+                {copiedValue === displayDate
                   ? "✓ Copied"
-                  : dateDisplay}
+                  : displayDate}
               </span>
             </div>
-            {!!a.length && (
-              <div className="modal__stat">
-                <span className="lbl">LENGTH</span>
-                <span
-                  className="val"
-                  onClick={() => handleCopy(formatLength(a.length))}
-                  style={{ cursor: "pointer" }}
-                  title="Click to copy"
-                >
-                  {copiedValue === formatLength(a.length)
-                    ? "✓ Copied"
-                    : formatLength(a.length)}
-                </span>
-              </div>
-            )}
+            <div className="modal__stat">
+              <span className="lbl">LENGTH</span>
+              <span
+                className="val"
+                onClick={() => handleCopy(displayLength)}
+                style={{ cursor: "pointer" }}
+                title="Click to copy"
+              >
+                {copiedValue === displayLength
+                  ? "✓ Copied"
+                  : displayLength}
+              </span>
+            </div>
             <div className="modal__stat">
               <span className="lbl">VERSION</span>
               <span
                 className="val"
-                onClick={() => handleCopy(a.version ?? "2.2")}
+                onClick={() => handleCopy(displayVersion)}
                 style={{ cursor: "pointer" }}
                 title="Click to copy"
               >
-                {copiedValue === (a.version ?? "2.2")
+                {copiedValue === displayVersion
                   ? "✓ Copied"
-                  : (a.version ?? "2.2")}
+                  : displayVersion}
               </span>
             </div>
-            {a.submitter && (
-              <div className="modal__stat">
-                <span className="lbl">SUBMITTED BY</span>
-                <span
-                  className="val"
-                  onClick={() => handleCopy(a.submitter)}
-                  style={{ cursor: "pointer" }}
-                  title="Click to copy"
-                >
-                  {copiedValue === a.submitter ? "✓ Copied" : a.submitter}
-                </span>
-              </div>
-            )}
+            <div className="modal__stat">
+              <span className="lbl">SUBMITTED BY</span>
+              <span
+                className="val"
+                onClick={() => handleCopy(displaySubmitter)}
+                style={{ cursor: "pointer" }}
+                title="Click to copy"
+              >
+                {copiedValue === displaySubmitter ? "✓ Copied" : displaySubmitter}
+              </span>
+            </div>
           </div>
 
-          {a.notes && (
+          {notesText && (
             <div className="modal__notes">
               <span className="modal__embed-label">Notes</span>
-              <p className="modal__notes-body">{a.notes}</p>
+              <p className="modal__notes-body">{notesText}</p>
             </div>
           )}
 

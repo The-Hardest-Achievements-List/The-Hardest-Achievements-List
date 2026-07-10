@@ -4,7 +4,7 @@
     "player": "wPopoff",
     "levelID": 127323087,
     "date": "2026-06-21",
-    "length": "281",
+    "length": 281,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/3CoEaH1CM7o",
@@ -153,7 +153,7 @@
     "levelID": 119550490,
     "date": "2025-05-06",
     "length": 118,
-    "version": "2.2",
+    "version": 2.2,
     "submitter": "bigmacgd",
     "video": "https://youtu.be/lYtYOAYQqr8?t=1775",
     "showcaseVideo": "https://youtu.be/bcxqTbxhOe0",
@@ -263,7 +263,7 @@
   {
     "name": "Heliopolis 51%",
     "player": "Zoink",
-    "levelID": "136530685",
+    "levelID": 136530685,
     "date": "2026-06-07",
     "length": 72,
     "version": 2.2,
@@ -300,7 +300,7 @@
   {
     "name": "Eternal Silence 31%, (1%), 65% in a row",
     "player": "noname228gg",
-    "levelID": "83476262",
+    "levelID": 83476262,
     "date": "2026-05-27",
     "length": 87,
     "version": 2.2,
@@ -320,7 +320,7 @@
     "player": "A6",
     "levelID": null,
     "date": "2026-04-21",
-    "length": "66",
+    "length": 66,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/y5awcL6k6D4",
@@ -501,7 +501,7 @@
   {
     "name": "Slaughterhouse 300%",
     "player": "wPopoff",
-    "levelID": "27690100",
+    "levelID": 27690100,
     "date": "2024-04-27",
     "length": 210,
     "version": 2.1,
@@ -518,7 +518,7 @@
     ]
   },
   {
-    "name": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
+    "name": "Subsuming Vortex 80, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
     "date": "2025-12-14",
@@ -529,242 +529,19 @@
     "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "test3",
-    "tags": [
-      "Level",
-  "Challenge",
-  "Low Hertz",
-  "Progress",
-  "Consistency",
-  "Verified",
-  "Rated",
-  "Formerly Rated",
-  "Tentative",
-  "Noclip",
-  "Speedhack",
-  "Mobile",
-  "2P",
-  "Coin Route",
-  "Miscellaneous",
-  "Outdated Version",
-  "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 2",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
+    "notes": null,
     "tags": [
       "Level",
       "Consistency",
       "Rated",
-      "Tentative",
       "Pending Removal"
     ]
   },
   {
-    "name": "Subsuming Vortex 3",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 4",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 5",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 6",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 7",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 8",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 9",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 10",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Subsuming Vortex 11",
-    "player": "Zoink",
-    "levelID": 127997391,
-    "date": "2025-12-14",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "JoJogore",
-    "video": "https://youtu.be/ZyDiNv3sALI?t=5730",
-    "showcaseVideo": "https://youtu.be/rh15xLXAKpU",
-    "thumbnail": null,
-    "duplicateOf": "Subsuming Vortex 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36%,%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
-    "notes": "null",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Legoshi Dance 8%, 19%, 12%x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
+    "name": "Legoshi Dance 8%, 19%, 12% x3 19%, 8%, 41%, 16%, 8%, 9%, 12%, 36% in a row",
     "player": "foxyan17",
     "levelID": 107008664,
-    "date": "TBA",
+    "date": "2026-06-09",
     "length": 205,
     "version": 2.2,
     "submitter": "Emp",
@@ -772,7 +549,11 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": [
+      "Legoshi Dance is a level consisting of Sakupen Circles 37-100% x3 in a row.\n\n", 
+      "Conversion to Sakupen Circles percentage: 37-51%, 37-74%, 37-60% x2, 37-61%, 37-75%, 37-51%, 37-100%, 37-52%, 37-67%, 37-51%, 37-53%, 37-60%, and 37-100% in a row.\n\n",
+      "At the very least this runs equivalent to Diamond Dance (Sakupen Circles 37-49%) x14 in a row with 4 runs passing the spam & 66p and two runs beating the entire 37-100%."
+    ],
     "tags": [
       "Level",
       "Consistency"
@@ -781,7 +562,7 @@
   {
     "name": "Africa Circles (ChopBlox Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
     "player": "ChopBlox",
-    "levelID": "68549629",
+    "levelID": 68549629,
     "date": "2026-05-18",
     "length": 203,
     "version": 2.2,
@@ -857,7 +638,7 @@
   {
     "name": "Eternal Silence 1 death, 100% accuracy",
     "player": "noname228gg",
-    "levelID": "83476262",
+    "levelID": 83476262,
     "date": "2026-05-03",
     "length": 90,
     "version": 2.2,
@@ -866,7 +647,7 @@
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": "Rounding up by megahack, actual accuracy is between 99.995% to 99.999%",
     "tags": [
       "Level",
       "Progress",
@@ -885,7 +666,7 @@
     "showcaseVideo": "https://youtu.be/IObH78Nln2U",
     "thumbnail": null,
     "duplicateOf": "Tidal Wave",
-    "notes": "Test2",
+    "notes": null,
     "tags": [
       "Level",
       "Verified"
@@ -1066,7 +847,7 @@
     "player": "ad3usgmd",
     "levelID": 10887708,
     "date": "2025-06-27",
-    "length": "91",
+    "length": 91,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/QYs7UyGMrqw",
@@ -1138,7 +919,7 @@
   {
     "name": "Eternal Silence 74%",
     "player": "noname228gg",
-    "levelID": "83476262",
+    "levelID": 83476262,
     "date": "2026-04-14",
     "length": 69,
     "version": 2.2,
@@ -1358,7 +1139,7 @@
   {
     "name": "IT MEANS EVERYTHING (Quivert) 21-97%",
     "player": "Quivert",
-    "levelID": "108239680",
+    "levelID": 108239680,
     "date": "2025-09-20",
     "length": 48,
     "version": 2.2,
@@ -1433,7 +1214,7 @@
   {
     "name": "LESOPOWAL",
     "player": "Bacon",
-    "levelID": "137886942",
+    "levelID": 137886942,
     "date": null,
     "length": 101,
     "version": 2.2,
@@ -1787,7 +1568,7 @@
   {
     "name": "Tunnel of Despair 18-100%; (0%), 100% 3 deaths, 99.98% Accuracy in a row",
     "player": "lanx",
-    "levelID": "91351939",
+    "levelID": 91351939,
     "date": "2024-10-07",
     "length": 185,
     "version": 2.1,
@@ -2053,7 +1834,7 @@
     "video": "https://youtu.be/vGF7PvQCsJc",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": "Unnerfed Slaughterhouse",
+    "duplicateOf": "Slaughterhouse (Unnerfed)",
     "notes": null,
     "tags": [
       "Level",
@@ -2090,7 +1871,7 @@
     "showcaseVideo": "https://youtu.be/jsw9y19JZxo",
     "thumbnail": null,
     "duplicateOf": "Sakupen Circles (Old)",
-    "notes": null,
+    "notes": "Equivalent to Sakupen Circles (Old) 37-100%",
     "tags": [
       "Level",
       "Verified"
@@ -2228,7 +2009,7 @@
   {
     "name": "Vehemence (wPopoff) 27%",
     "player": "wPopoff",
-    "levelID": "96572223",
+    "levelID": 96572223,
     "date": "2025-09-19",
     "length": 48,
     "version": 2.2,
@@ -2375,7 +2156,7 @@
   {
     "name": "Misanthrope 22-90%",
     "player": "SaitamaGMD",
-    "levelID": "60284876",
+    "levelID": 60284876,
     "date": "2026-03-26",
     "length": 208,
     "version": 2.2,
@@ -2520,7 +2301,7 @@
   {
     "name": "Angelicide 68-100%",
     "player": "Druki",
-    "levelID": "120478542",
+    "levelID": 120478542,
     "date": "2025-10-20",
     "length": 24,
     "version": 2.2,
@@ -2556,7 +2337,7 @@
   {
     "name": "Firework 144hz Mobile",
     "player": "MAXDASH07",
-    "levelID": "105547415",
+    "levelID": 105547415,
     "date": "2025-05-24",
     "length": 127,
     "version": 2.2,
@@ -2769,7 +2550,7 @@
   {
     "name": "surface (Old) 66%",
     "player": "zXdasfsa",
-    "levelID": "81683082",
+    "levelID": 81683082,
     "date": "2024-10-28",
     "length": 20,
     "version": 2.2,
@@ -2991,7 +2772,7 @@
     ]
   },
   {
-    "name": "silent Acropolis (Unnerfed) 66%",
+    "name": "silent Acropolis (Unnerfed) 66%",
     "player": "SeptaGon7",
     "levelID": 83143127,
     "date": "2025-07-30",
@@ -3009,7 +2790,7 @@
     ]
   },
   {
-    "name": "silent Acropolis (Unnerfed) 3 deaths, 99.98% accuracy",
+    "name": "silent Acropolis (Unnerfed) 3 deaths, 99.98% accuracy",
     "player": "SeptaGon7",
     "levelID": 83143127,
     "date": "2025-04-07",
@@ -3510,7 +3291,7 @@
   {
     "name": "KOCMOC UNLEASHED (Layout Aug. 2024) 48-89%",
     "player": "Arshadow",
-    "levelID": "124702724",
+    "levelID": 124702724,
     "date": "2024-08-31",
     "length": 31,
     "version": 2.2,
@@ -3564,7 +3345,7 @@
   {
     "name": "Firework Ice Nation",
     "player": "Midgatal",
-    "levelID": "75277673",
+    "levelID": 75277673,
     "date": "2025-12-08",
     "length": 127,
     "version": 2.2,
@@ -3769,7 +3550,7 @@
   {
     "name": "surface 62%",
     "player": "zXdasfsa",
-    "levelID": "81683082",
+    "levelID": 81683082,
     "date": "2025-01-19",
     "length": 18,
     "version": 2.2,
@@ -3787,7 +3568,7 @@
   {
     "name": "surface 17-86%",
     "player": "zXdasfsa",
-    "levelID": "81683082",
+    "levelID": 81683082,
     "date": "2025-06-06",
     "length": 20,
     "version": 2.2,
@@ -4036,7 +3817,7 @@
   {
     "name": "Firework 174%",
     "player": "Midgatal",
-    "levelID": "105547415",
+    "levelID": 105547415,
     "date": "2026-01-14",
     "length": 257,
     "version": 2.2,
@@ -4420,7 +4201,7 @@
     "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x8 in a row",
     "tags": [
       "Level",
       "Verified"
@@ -4429,7 +4210,7 @@
   {
     "name": "Silent Circles 27-53%",
     "player": "SeptaGon7",
-    "levelID": "12169905",
+    "levelID": 12169905,
     "date": "2026-05-20",
     "length": 14,
     "version": 2.2,
@@ -4719,7 +4500,7 @@
     ]
   },
   {
-    "name": "silent Acropolis (Unnerfed) unn 27-100%",
+    "name": "silent Acropolis (Unnerfed) 27-100%",
     "player": "SeptaGon7",
     "levelID": 83143127,
     "date": "2025-04-16",
@@ -4737,7 +4518,7 @@
     ]
   },
   {
-    "name": "silent Acropolis (Unnerfed) 31-100%",
+    "name": "silent Acropolis (Unnerfed) 31-100%",
     "player": "bop",
     "levelID": 13918016,
     "date": "2024-10-25",
@@ -5105,7 +4886,7 @@
   {
     "name": "KOCMOC UNLEASHED layout 41%",
     "player": "Arshadow",
-    "levelID": "69196070",
+    "levelID": 69196070,
     "date": "2024-06-10",
     "length": 31,
     "version": 2.2,
@@ -5333,7 +5114,7 @@
     "showcaseVideo": null,
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/67051617",
     "duplicateOf": null,
-    "notes": null,
+    "notes": "Im Hard is a level consisting of sc66p (Sakupen Circles 66-71%) x8 in a row",
     "tags": [
       "Challenge",
       "Progress",
@@ -5623,7 +5404,7 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": "0.03% opacity",
     "tags": [
       "Level",
       "Progress"
@@ -5641,7 +5422,7 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": "0.03% opacity",
     "tags": [
       "Level",
       "Progress"
@@ -6675,7 +6456,7 @@
   {
     "name": "ET3RN4L TORM3NT",
     "player": "violet",
-    "levelID": "140241137",
+    "levelID": 140241137,
     "date": "2025-02-11",
     "length": 27,
     "version": 2.2,
@@ -6702,7 +6483,10 @@
     "showcaseVideo": null,
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/75584822",
     "duplicateOf": null,
-    "notes": null,
+    "notes": [
+      "6D6D is a level consisting of 4 set of randomized challenge in a row that could be either Diamond Dance or sc66p\n\n",
+      "Diamond Dance is equivalent to Sakupen Circles 37-49% and sc66p is equivalent to Sakupen Circles 66-71%"
+    ],
     "tags": [
       "Challenge",
       "Verified"
@@ -6877,7 +6661,7 @@
   {
     "name": "Thinking Redux II 91%",
     "player": "Liamkn08",
-    "levelID": "126692371",
+    "levelID": 126692371,
     "date": "2025-11-13",
     "length": 65,
     "version": 2.2,
@@ -7109,7 +6893,7 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
+    "notes": "Im Deaf is a level consisting of sc66p (Sakupen Circles 66-71%) x4 in a row",
     "tags": [
       "Level",
       "Progress",
@@ -7119,7 +6903,7 @@
   {
     "name": "KOCMOC (Trick)",
     "player": "Trick",
-    "levelID": "91901757",
+    "levelID": 91901757,
     "date": "2023-03-12",
     "length": 87,
     "version": 2.1,
@@ -7175,7 +6959,7 @@
   {
     "name": "VSC 1.1x 61%",
     "player": "-",
-    "levelID": "60805571",
+    "levelID": 60805571,
     "date": "2022-10-18",
     "length": 9,
     "version": 2.1,
@@ -7257,25 +7041,7 @@
     "showcaseVideo": "https://youtu.be/GJWk1vDVCgU",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Im Deaf",
-    "player": "Diamond",
-    "levelID": 75584822,
-    "date": "2021-11-09",
-    "length": 13,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/pWwF57-n6EY",
-    "showcaseVideo": "https://youtu.be/3oSj-75RkUY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
+    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x2 + sc66p (Sakupen Circles 66-71%) x2 in a row",
     "tags": [
       "Challenge",
       "Verified"
@@ -7284,7 +7050,7 @@
   {
     "name": "Graceful 67%, 250% in a row",
     "player": "Zoink",
-    "levelID": "71885708",
+    "levelID": 71885708,
     "date": "2026-05-05",
     "length": 610,
     "version": 2.2,
@@ -7469,7 +7235,7 @@
   {
     "name": "Vehemence (Wpopoff Old) 24-55%",
     "player": "wPopoff",
-    "levelID": "96572223",
+    "levelID": 96572223,
     "date": "2025-07-21",
     "length": 32,
     "version": 2.2,

@@ -1,13 +1,32 @@
 export const NLW_ESTIMATE = "NLW";
 export const NLW_ESTIMATE_LABEL = "Not List Worthy";
 export const PURE_NLW_ESTIMATE_LABEL = "Questionable to be List Worthy";
+export const INVALID_ESTIMATE_LABEL = "undefined";
+export const MAX_ESTIMATE_VALUE = 1000;
+
+function isEstimateNumber(value) {
+  return (
+    typeof value === "number" &&
+    Number.isFinite(value) &&
+    value > 0 &&
+    value <= MAX_ESTIMATE_VALUE
+  );
+}
 
 export function normalizeEstimateField(value) {
   if (value == null) return null;
-  if (typeof value === "string" && value.trim().toUpperCase() === NLW_ESTIMATE) {
-    return NLW_ESTIMATE;
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    if (/^nlw$/i.test(trimmed)) return NLW_ESTIMATE;
+    if (/^not\s+list\s+worthy$/i.test(trimmed)) return NLW_ESTIMATE;
+    const numericValue = Number(trimmed);
+    if (Number.isFinite(numericValue) && isEstimateNumber(numericValue)) {
+      return numericValue;
+    }
+    return null;
   }
-  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (isEstimateNumber(value)) return value;
   return null;
 }
 
@@ -41,23 +60,33 @@ export function hasEstimate(entry) {
   const lo = entry?.estimateLower;
   const hi = entry?.estimateUpper;
   if (isNlwEstimateField(lo) || isNlwEstimateField(hi)) return false;
-  return Number.isFinite(lo) && Number.isFinite(hi) && lo <= hi;
+  return isEstimateNumber(lo) && isEstimateNumber(hi) && lo <= hi;
 }
 
 export function resolveEstimateBound(value, mainCount) {
   if (isNlwEstimateField(value)) return getTailProjectionSlot(mainCount);
-  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (isEstimateNumber(value)) return value;
   return null;
 }
 
 export function getResolvedBounds(entry, mainCount) {
-  const rawLower = resolveEstimateBound(entry?.estimateLower, mainCount);
-  const rawUpper = resolveEstimateBound(entry?.estimateUpper, mainCount);
+  const lowerField = normalizeEstimateField(entry?.estimateLower);
+  const upperField = normalizeEstimateField(entry?.estimateUpper);
+  if (lowerField == null || upperField == null) return null;
+  if (isNlwEstimateField(lowerField) && isNlwEstimateField(upperField)) {
+    const tail = getTailProjectionSlot(mainCount);
+    return { lower: tail, upper: tail };
+  }
+  if (isNlwEstimateField(lowerField) && !isNlwEstimateField(upperField)) {
+    return null;
+  }
+
+  const rawLower = resolveEstimateBound(lowerField, mainCount);
+  const rawUpper = resolveEstimateBound(upperField, mainCount);
   if (rawLower == null || rawUpper == null) return null;
-  return {
-    lower: Math.min(rawLower, rawUpper),
-    upper: Math.max(rawLower, rawUpper),
-  };
+  if (rawLower > rawUpper) return null;
+
+  return { lower: rawLower, upper: rawUpper };
 }
 
 export function hasResolvableEstimate(entry, mainCount) {
@@ -238,6 +267,20 @@ export function formatEstimate(entry, mainCount = null) {
 }
 
 export function formatEstimateDisplay(entry, mainCount = null) {
+  const rawLower = entry?.estimateLower;
+  const rawUpper = entry?.estimateUpper;
+  const hasRawEstimate = rawLower != null || rawUpper != null;
+  const normalizedLower = normalizeEstimateField(rawLower);
+  const normalizedUpper = normalizeEstimateField(rawUpper);
+  const hasInvalidInput =
+    hasRawEstimate &&
+    (normalizedLower == null || normalizedUpper == null || !hasResolvableEstimate({
+      ...entry,
+      estimateLower: normalizedLower,
+      estimateUpper: normalizedUpper,
+    }, mainCount));
+
+  if (hasInvalidInput) return INVALID_ESTIMATE_LABEL;
   return formatEstimate(entry, mainCount) ?? UNKNOWN_ESTIMATE_LABEL;
 }
 

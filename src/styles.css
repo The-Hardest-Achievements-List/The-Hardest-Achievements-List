@@ -1540,8 +1540,11 @@ i[class*="fa-"]::before {
 @media (min-width: 641px) {
     .card__corner-actions .card__note-tag {
         min-height: calc(24px * var(--corner-btn-scale, 1));
-        padding: calc(3px * var(--corner-btn-scale, 1)) calc(8px * var(--corner-btn-scale, 1));
         font-size: calc(10px * var(--corner-btn-scale, 1));
+    }
+
+    .card__corner-actions .card__note-tag__btn {
+        padding: calc(3px * var(--corner-btn-scale, 1)) calc(8px * var(--corner-btn-scale, 1));
         gap: calc(4px * var(--corner-btn-scale, 1));
     }
 }
@@ -1556,7 +1559,7 @@ i[class*="fa-"]::before {
     font-size: calc(11px * var(--corner-btn-scale, 1));
     letter-spacing: 0.03em;
     font-weight: 600;
-    padding: calc(4px * var(--corner-btn-scale, 1)) calc(9px * var(--corner-btn-scale, 1));
+    padding: 0;
     border-radius: calc(6px * var(--corner-btn-scale, 1));
     text-transform: uppercase;
     color: oklch(88% 0.006 280);
@@ -1567,21 +1570,54 @@ i[class*="fa-"]::before {
         inset 0 1px 0 oklch(100% 0 0 / 0.06);
     display: inline-flex;
     align-items: center;
-    gap: calc(5px * var(--corner-btn-scale, 1));
-    cursor: help;
     flex-shrink: 0;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+    cursor: help;
+}
+
+.card__note-tag__btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    padding: calc(4px * var(--corner-btn-scale, 1)) calc(9px * var(--corner-btn-scale, 1));
+    display: inline-flex;
+    align-items: center;
+    gap: calc(5px * var(--corner-btn-scale, 1));
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    border-radius: inherit;
+}
+
+.card__note-tag--more {
+    cursor: pointer;
+}
+
+.card__note-tag__more {
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--acc);
+    opacity: 0.95;
+    flex-shrink: 0;
 }
 
 .card__tags .card__note-tag {
     font-size: calc(10px * var(--card-detail-bottom-scale, 1));
-    padding: calc(3px * var(--card-detail-bottom-scale, 1)) calc(8px * var(--card-detail-bottom-scale, 1));
     border-radius: calc(6px * var(--card-detail-bottom-scale, 1));
-    gap: calc(5px * var(--card-detail-bottom-scale, 1));
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
+}
+
+.card__tags .card__note-tag__btn {
+    padding: calc(3px * var(--card-detail-bottom-scale, 1)) calc(8px * var(--card-detail-bottom-scale, 1));
+    gap: calc(5px * var(--card-detail-bottom-scale, 1));
 }
 
 .card__note-tag i {
@@ -1591,7 +1627,7 @@ i[class*="fa-"]::before {
 }
 
 .card__note-tag:hover,
-.card__note-tag:focus-visible,
+.card__note-tag:focus-within,
 .card__corner-actions .grouped-achievement__toggle:hover {
     background: oklch(20% 0.012 260 / 0.88);
     border-color: oklch(78% 0.13 75 / 0.45);
@@ -1602,7 +1638,7 @@ i[class*="fa-"]::before {
         inset 0 1px 0 oklch(100% 0 0 / 0.08);
 }
 
-.card__note-tag:focus-visible {
+.card__note-tag:focus-within {
     outline: 2px solid var(--acc);
     outline-offset: 2px;
 }
@@ -2545,6 +2581,9 @@ i[class*="fa-"]::before {
 
     .card__note-tag {
         font-size: clamp(7px, 2.1vw, 8px);
+    }
+
+    .card__note-tag__btn {
         padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
     }
 
@@ -2555,8 +2594,11 @@ i[class*="fa-"]::before {
 
     .card__corner-actions .card__note-tag {
         min-height: clamp(18px, 5.2vw, 22px);
-        gap: clamp(2px, 0.9vw, 4px);
         border-radius: clamp(4px, 1.2vw, 5px);
+    }
+
+    .card__corner-actions .card__note-tag__btn {
+        gap: clamp(2px, 0.9vw, 4px);
     }
 
     .card__corner-actions .grouped-achievement__toggle {

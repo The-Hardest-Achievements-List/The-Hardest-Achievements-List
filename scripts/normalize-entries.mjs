@@ -5,6 +5,8 @@ import { normalizeYouTubeUrl } from "../src/utils/format.js";
 import { normalizeEstimateField } from "../src/utils/estimateRank.js";
 
 const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
+const hasEstimateFields = (fieldOrder) =>
+  fieldOrder.includes("estimateLower") && fieldOrder.includes("estimateUpper");
 
 const CLASSIC_TAGS = [
   "Level",
@@ -102,13 +104,123 @@ const sortTags = (tags, tagOrder) => {
   });
 };
 
+const normalizeTagValue = (tag) => {
+  if (typeof tag !== "string") return null;
+  const trimmed = tag.trim();
+  if (!trimmed) return null;
+
+  const lowered = trimmed.toLowerCase();
+  if (lowered === "undefined" || lowered === "null") return null;
+
+  return trimmed;
+};
+
+const normalizeNonEmptyStringField = (value) => {
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  return trimmed ? trimmed : null;
+};
+
+const normalizeNumberField = (value) => {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    if (!/^[+-]?\d+(\.\d+)?$/.test(trimmed)) return null;
+    const parsed = Number(trimmed);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+};
+
+const normalizeDateField = (value) => {
+  const normalized = normalizeNonEmptyStringField(value);
+  if (!normalized) return null;
+  const timestamp = Date.parse(normalized);
+  return Number.isNaN(timestamp) ? null : normalized;
+};
+
+const normalizeVersionAlias = (value) => {
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  if (!trimmed) return null;
+  if (/^alpha$/i.test(trimmed)) return "Alpha";
+  if (/^beta$/i.test(trimmed)) return "Beta";
+  return null;
+};
+
+const isValidNumericVersion = (value) =>
+  typeof value === "number" &&
+  Number.isFinite(value) &&
+  value > 0 &&
+  (Number.isInteger(value) || /^\d+\.\d+$/.test(String(value)));
+
+const normalizeVersionField = (value) => {
+  const alias = normalizeVersionAlias(value);
+  if (alias) return alias;
+
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    if (!/^\d+(\.\d+)?$/.test(trimmed)) return null;
+    const parsed = Number(trimmed);
+    return isValidNumericVersion(parsed) ? parsed : null;
+  }
+
+  if (isValidNumericVersion(value)) return value;
+
+  return null;
+};
+
+const normalizeEstimateNumber = (value) => {
+  const parsed = normalizeNumberField(value);
+  if (parsed == null) return null;
+  if (!Number.isFinite(parsed) || parsed <= 0 || parsed > 1000) return null;
+  return parsed;
+};
+
+const normalizeEstimateAlias = (value) => {
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  if (!trimmed) return null;
+  if (/^nlw$/i.test(trimmed)) return "NLW";
+  if (/^not\s+list\s+worthy$/i.test(trimmed)) return "NLW";
+  return null;
+};
+
 const normalizeTags = (tags, tagOrder) => {
   if (tags == null) return [];
-  if (Array.isArray(tags)) return sortTags(tags, tagOrder);
-  if (typeof tags === "string") {
-    return sortTags(tags.split(/\s*,\s*/).filter(Boolean), tagOrder);
+  const allowedTags = new Set(tagOrder);
+  const source =
+    Array.isArray(tags)
+      ? tags
+      : typeof tags === "string"
+        ? tags.split(/\s*,\s*/)
+        : [];
+
+  const cleaned = source
+    .map(normalizeTagValue)
+    .filter((tag) => Boolean(tag) && allowedTags.has(tag));
+
+  return sortTags([...new Set(cleaned)], tagOrder);
+};
+
+/** Accepts a string or string[]; empty / invalid values become null. */
+export const normalizeNotesField = (value) => {
+  if (value == null) return null;
+
+  if (typeof value === "string") {
+    return normalizeNonEmptyStringField(value);
   }
-  return tags;
+
+  if (Array.isArray(value)) {
+    const parts = value
+      .map(normalizeNonEmptyStringField)
+      .filter(Boolean);
+    return parts.length ? parts : null;
+  }
+
+  return null;
 };
 
 export const normalizeVideoField = (value) => {
@@ -117,6 +229,58 @@ export const normalizeVideoField = (value) => {
   if (!trimmed) return value;
   return normalizeYouTubeUrl(trimmed);
 };
+
+function validateEstimatePair(entry) {
+  const lower =
+    normalizeEstimateAlias(entry.estimateLower) ??
+    normalizeEstimateNumber(entry.estimateLower);
+  const upper =
+    normalizeEstimateAlias(entry.estimateUpper) ??
+    normalizeEstimateNumber(entry.estimateUpper);
+  entry.estimateLower = lower;
+  entry.estimateUpper = upper;
+
+  const hasEstimate = lower != null || upper != null;
+  if (!hasEstimate) return;
+
+  if (lower == null || upper == null) {
+    entry.estimateLower = null;
+    entry.estimateUpper = null;
+    return;
+  }
+
+  const bothNlw = lower === "NLW" && upper === "NLW";
+  const mixedUpperNlw = typeof lower === "number" && upper === "NLW";
+  const mixedLowerNlw = lower === "NLW" && typeof upper === "number";
+  const bothNumeric = typeof lower === "number" && typeof upper === "number";
+
+  if (bothNlw) return;
+
+  if (mixedLowerNlw) {
+    entry.estimateLower = null;
+    entry.estimateUpper = null;
+    return;
+  }
+
+  if (mixedUpperNlw) {
+    if (!normalizeEstimateNumber(lower)) {
+      entry.estimateLower = null;
+      entry.estimateUpper = null;
+    }
+    return;
+  }
+
+  if (!bothNumeric) {
+    entry.estimateLower = null;
+    entry.estimateUpper = null;
+    return;
+  }
+
+  if (lower > upper) {
+    entry.estimateLower = null;
+    entry.estimateUpper = null;
+  }
+}
 
 export const sortEntriesByName = (entries) =>
   [...entries].sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
@@ -139,6 +303,11 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       continue;
     }
 
+    if (key === "notes") {
+      result[key] = normalizeNotesField(entry.notes);
+      continue;
+    }
+
     if (VIDEO_FIELDS.includes(key)) {
       const normalized = normalizeVideoField(entry[key]);
       if (typeof entry[key] === "string" && normalized !== entry[key]) {
@@ -149,11 +318,41 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
     }
 
     if (ESTIMATE_FIELDS.has(key)) {
-      result[key] = normalizeEstimateField(entry[key]);
+      result[key] = entry[key];
+      continue;
+    }
+
+    if (key === "name" || key === "player" || key === "submitter") {
+      result[key] = normalizeNonEmptyStringField(entry[key]);
+      continue;
+    }
+
+    if (key === "video") {
+      const normalized = normalizeVideoField(entry[key]);
+      result[key] = normalizeNonEmptyStringField(normalized);
+      continue;
+    }
+
+    if (key === "levelID" || key === "length") {
+      result[key] = normalizeNumberField(entry[key]);
+      continue;
+    }
+
+    if (key === "date") {
+      result[key] = normalizeDateField(entry[key]);
+      continue;
+    }
+
+    if (key === "version") {
+      result[key] = normalizeVersionField(entry[key]);
       continue;
     }
 
     result[key] = entry[key];
+  }
+
+  if (hasEstimateFields(fieldOrder)) {
+    validateEstimatePair(result);
   }
 
   for (const key of Object.keys(entry)) {
@@ -167,6 +366,8 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
     if (!(key in entry)) continue;
     if (key === "tags") {
       previous[key] = normalizeTags(entry.tags, tagOrder);
+    } else if (key === "notes") {
+      previous[key] = normalizeNotesField(entry.notes);
     } else if (VIDEO_FIELDS.includes(key)) {
       previous[key] = normalizeVideoField(entry[key]);
     } else if (ESTIMATE_FIELDS.has(key)) {
@@ -211,6 +412,43 @@ export const FILES = [
   { file: "platformerpending.json", normalize: normalizePlatformerEntry, sortByName: true },
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
 ];
+
+const VERSION_FLOAT_MARKER = "__THAL_VERSION_FLOAT__:";
+
+const toVersionFloatToken = (value) => {
+  if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    if (Number.isInteger(value)) return `${VERSION_FLOAT_MARKER}${value}.0`;
+    const asText = String(value);
+    if (/^\d+\.\d+$/.test(asText)) return `${VERSION_FLOAT_MARKER}${asText}`;
+    return value;
+  }
+
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return value;
+    if (!/^\d+(\.\d+)?$/.test(trimmed)) return value;
+    const parsed = Number(trimmed);
+    if (!Number.isFinite(parsed) || parsed <= 0) return value;
+    if (Number.isInteger(parsed)) return `${VERSION_FLOAT_MARKER}${parsed}.0`;
+    return `${VERSION_FLOAT_MARKER}${trimmed.includes(".") ? trimmed : String(parsed)}`;
+  }
+
+  return value;
+};
+
+export const stringifyEntries = (entries) => {
+  // JSON.stringify drops the trailing .0 on whole numbers (1.0 -> 1).
+  // Use a temporary string token, then unquote it so the file keeps 1.0 / 2.0.
+  const json = JSON.stringify(
+    entries,
+    (key, value) => (key === "version" ? toVersionFloatToken(value) : value),
+    2,
+  );
+  return `${json.replace(
+    new RegExp(`"${VERSION_FLOAT_MARKER}(\\d+\\.\\d+)"`, "g"),
+    "$1",
+  )}\n`;
+};
 
 const summarize = (normalizedResults) => {
   const addedFieldCounts = {};
@@ -268,7 +506,7 @@ if (isMainModule) {
         namesBefore !== normalized.map((entry) => entry.name).join("\0");
     }
 
-    fs.writeFileSync(filePath, `${JSON.stringify(normalized, null, 2)}\n`);
+    fs.writeFileSync(filePath, stringifyEntries(normalized));
 
     totalModified += summary.modifiedEntries;
     totalVideoChanges += summary.videoChanges;
