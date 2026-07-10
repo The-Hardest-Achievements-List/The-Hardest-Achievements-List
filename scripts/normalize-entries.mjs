@@ -285,6 +285,16 @@ function validateEstimatePair(entry) {
 export const sortEntriesByName = (entries) =>
   [...entries].sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
 
+/** Rebuild a plain object with keys sorted alphabetically (localeCompare). */
+export const sortObjectKeys = (obj) => {
+  if (obj == null || typeof obj !== "object" || Array.isArray(obj)) return obj;
+  const sorted = {};
+  for (const key of Object.keys(obj).sort((a, b) => a.localeCompare(b))) {
+    sorted[key] = obj[key];
+  }
+  return sorted;
+};
+
 export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
   const result = {};
   const addedFields = [];
@@ -413,6 +423,11 @@ export const FILES = [
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
 ];
 
+/** Plain object maps (not entry arrays). Keys are sorted alphabetically on write. */
+export const OBJECT_FILES = [
+  { file: "playerCountries.json", sortKeys: true },
+];
+
 const VERSION_FLOAT_MARKER = "__THAL_VERSION_FLOAT__:";
 
 const toVersionFloatToken = (value) => {
@@ -449,6 +464,8 @@ export const stringifyEntries = (entries) => {
     "$1",
   )}\n`;
 };
+
+export const stringifyObject = (obj) => `${JSON.stringify(obj, null, 2)}\n`;
 
 const summarize = (normalizedResults) => {
   const addedFieldCounts = {};
@@ -531,6 +548,35 @@ if (isMainModule) {
     }
     if (Object.keys(summary.removedFieldCounts).length > 0) {
       console.log(`  fields removed: ${JSON.stringify(summary.removedFieldCounts)}`);
+    }
+  }
+
+  for (const { file, sortKeys = false } of OBJECT_FILES) {
+    const filePath = path.join(dataDir, file);
+    if (!fs.existsSync(filePath)) {
+      console.warn(`Skipped ${file} (not found)`);
+      continue;
+    }
+
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    if (data == null || typeof data !== "object" || Array.isArray(data)) {
+      console.warn(`Skipped ${file} (expected a plain object)`);
+      continue;
+    }
+
+    const keysBefore = Object.keys(data);
+    const normalized = sortKeys ? sortObjectKeys(data) : data;
+    const keysAfter = Object.keys(normalized);
+    const orderChanged =
+      keysBefore.length !== keysAfter.length ||
+      keysBefore.some((key, index) => key !== keysAfter[index]);
+
+    fs.writeFileSync(filePath, stringifyObject(normalized));
+
+    console.log(`Normalized ${file}:`);
+    console.log(`  keys: ${keysAfter.length}`);
+    if (sortKeys) {
+      console.log(`  order changed: ${orderChanged ? "yes" : "no"}`);
     }
   }
 

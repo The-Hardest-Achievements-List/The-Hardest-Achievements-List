@@ -5,7 +5,6 @@ import LevelModal from "./components/LevelModal";
 import { useLevelThumbnail } from "./components/LevelCard";
 import HomePage from "./pages/HomePage";
 import LeaderboardPage from "./pages/LeaderboardPage";
-import ModLeaderboardPage from "./pages/ModLeaderboardPage";
 import {
   getDuplicateParentId,
   getAchievementKey,
@@ -93,7 +92,7 @@ achievementsData.length +
   platformersData.length +
   platformerTimelineData.length;
 
-const NO_LIST = new Set(["HOME", "LEADERBOARD", "MODLB"]);
+const NO_LIST = new Set(["HOME", "LEADERBOARD"]);
 
 function AppBackground({ achievement }) {
   const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
@@ -131,9 +130,49 @@ function parseRoute() {
   const parts = window.location.pathname.split("/").filter(Boolean);
   if (parts.length === 0 || parts[0] === "home")
     return { mode: "classic", active: "HOME" };
-  if (parts[0] === "leaderboard")
-    return { mode: "classic", active: "LEADERBOARD" };
-  if (parts[0] === "mod-lb") return { mode: "classic", active: "MODLB" };
+  if (parts[0] === "leaderboard") {
+    const section = parts[1];
+    if (section === "players") {
+      return {
+        mode: "classic",
+        active: "LEADERBOARD",
+        lbMode: "players",
+        listSource: parts[2] === "platformer" ? "platformer" : "classic",
+      };
+    }
+    if (section === "platformer") {
+      return {
+        mode: "classic",
+        active: "LEADERBOARD",
+        lbMode: "players",
+        listSource: "platformer",
+      };
+    }
+    if (section === "countries") {
+      return {
+        mode: "classic",
+        active: "LEADERBOARD",
+        lbMode: "countries",
+        listSource: parts[2] === "platformer" ? "platformer" : "classic",
+      };
+    }
+    if (section === "submission" || section === "submissions") {
+      return {
+        mode: "classic",
+        active: "LEADERBOARD",
+        lbMode: "submissions",
+        listSource: parts[2] === "platformer" ? "platformer" : "classic",
+      };
+    }
+    return {
+      mode: "classic",
+      active: "LEADERBOARD",
+      lbMode: "players",
+      listSource: "classic",
+    };
+  }
+  if (parts[0] === "mod-lb" || parts[0] === "mod-leaderboard")
+    return { mode: "classic", active: "LEADERBOARD", lbMode: "submissions" };
   const modeMap = { classic: "classic", plat: "platformer" };
   const tabMap = {
     pending: "PENDING",
@@ -179,12 +218,12 @@ export default function App() {
     }
     if (newActive === "LEADERBOARD") {
       history.pushState({}, "", "/leaderboard");
-      setRoute({ mode: newMode, active: "LEADERBOARD" });
-      return;
-    }
-    if (newActive === "MODLB") {
-      history.pushState({}, "", "/mod-leaderboard");
-      setRoute({ mode: newMode, active: "MODLB" });
+      setRoute({
+        mode: newMode,
+        active: "LEADERBOARD",
+        lbMode: "players",
+        listSource: "classic",
+      });
       return;
     }
     const modeSlug = newMode === "platformer" ? "plat" : "classic";
@@ -435,9 +474,11 @@ export default function App() {
           platformerTimelineData={platformerTimelineData}
         />
       ) : active === "LEADERBOARD" ? (
-        <LeaderboardPage />
-      ) : active === "MODLB" ? (
-        <ModLeaderboardPage />
+        <LeaderboardPage
+          initialMode={route.lbMode ?? "players"}
+          initialListSource={route.listSource ?? "classic"}
+          onAchievementClick={setSelectedLevel}
+        />
       ) : (
         <LevelList
           data={filteredData}
@@ -472,8 +513,14 @@ export default function App() {
         <LevelModal
           level={selectedLevel}
           onClose={() => setSelectedLevel(null)}
-          hideRank={active === "PENDING" && !isPendingList}
-          isPendingEstimate={isPendingList}
+          hideRank={
+            active !== "LEADERBOARD" && active === "PENDING" && !isPendingList
+          }
+          isPendingEstimate={
+            active === "LEADERBOARD"
+              ? ["pending", "platformerpending"].includes(selectedLevel._src)
+              : isPendingList
+          }
           pendingMainCount={pendingMainCount}
           showProjectedRanks={showProjectedRanks && isMainList}
         />

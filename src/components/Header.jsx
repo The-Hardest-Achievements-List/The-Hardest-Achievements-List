@@ -259,7 +259,8 @@ const DiscordIcon = () => (
   </svg>
 );
 
-const isListless = (t) => t === "HOME" || t === "LEADERBOARD" || t === "MODLB";
+const isHome = (t) => t === "HOME";
+const hasListControls = (t) => t === "MAIN" || t === "PENDING" || t === "TIMELINE";
 const hasListFilters = (t) => t === "MAIN" || t === "PENDING" || t === "TIMELINE";
 
 const ChevronDown = () => (
@@ -298,15 +299,55 @@ const FiltersIcon = () => (
 
 function MobileNav({ active, setActive }) {
   const [open, setOpen] = useState(false);
-  const ref = useRef(null);
+  const [fitsInline, setFitsInline] = useState(false);
+  const wrapRef = useRef(null);
+  const measureRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handler = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  useEffect(() => {
+    if (!fitsInline) setOpen(false);
+  }, [fitsInline]);
+
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    const measure = measureRef.current;
+    const parent = wrap?.parentElement;
+    if (!wrap || !measure || !parent) return;
+
+    const check = () => {
+      const filtersBtn = parent.querySelector(".hd__nav-mobile-btn");
+      const styles = getComputedStyle(parent);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+      const filtersWidth = filtersBtn
+        ? filtersBtn.getBoundingClientRect().width + gap
+        : 0;
+      const available = parent.clientWidth - filtersWidth;
+      const needed = measure.scrollWidth;
+      const nextFits = needed > 0 && needed <= available;
+      setFitsInline((prev) => (prev === nextFits ? prev : nextFits));
+    };
+
+    const ro = new ResizeObserver(check);
+    ro.observe(parent);
+    ro.observe(measure);
+    check();
+
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(check).catch(() => {});
+    }
+
+    return () => ro.disconnect();
+  }, [active]);
 
   const activeTab = TABS.includes(active) ? active : TABS[0];
 
@@ -316,53 +357,64 @@ function MobileNav({ active, setActive }) {
   };
 
   return (
-    <>
-      <nav className="hd__nav-mobile-tabs" aria-label="List navigation">
+    <div className="hd__nav-mobile" ref={wrapRef}>
+      <div className="hd__nav-mobile-measure" ref={measureRef} aria-hidden="true">
         {TABS.map((t) => (
-          <button
-            key={t}
-            type="button"
-            className={`hd__nav-btn hd__nav-mobile-tab${active === t ? " is-active" : ""}`}
-            onClick={() => setActive(t)}
-            aria-current={active === t ? "page" : undefined}
-          >
+          <span key={t} className="hd__nav-btn hd__nav-mobile-tab">
             <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
             <span className="hd__nav-label">{t}</span>
-          </button>
+          </span>
         ))}
-      </nav>
-
-      <div className="hd__nav-mobile-dropdown" ref={ref}>
-        <button
-          type="button"
-          className="hd__nav-mobile-dropdown-btn hd__nav-mobile-action-btn"
-          aria-label="Choose list"
-          aria-expanded={open}
-          aria-haspopup="menu"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <i className={`fas ${TAB_ICONS[activeTab]}`} aria-hidden="true" />
-          <span className="hd__nav-mobile-dropdown-label">{activeTab}</span>
-          <ChevronDown />
-        </button>
-        {open && (
-          <div className="hd__nav-mobile-dropdown-menu" role="menu">
-            {TABS.map((t) => (
-              <button
-                key={t}
-                type="button"
-                role="menuitem"
-                className={`hd__nav-mobile-dropdown-item${active === t ? " is-active" : ""}`}
-                onClick={() => handleSelect(t)}
-              >
-                <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
-                {t}
-              </button>
-            ))}
-          </div>
-        )}
       </div>
-    </>
+
+      {fitsInline ? (
+        <nav className="hd__nav-mobile-tabs" aria-label="List navigation">
+          {TABS.map((t) => (
+            <button
+              key={t}
+              type="button"
+              className={`hd__nav-btn hd__nav-mobile-tab${active === t ? " is-active" : ""}`}
+              onClick={() => setActive(t)}
+              aria-current={active === t ? "page" : undefined}
+            >
+              <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
+              <span className="hd__nav-label">{t}</span>
+            </button>
+          ))}
+        </nav>
+      ) : (
+        <div className="hd__nav-mobile-dropdown" ref={dropdownRef}>
+          <button
+            type="button"
+            className="hd__nav-mobile-dropdown-btn hd__nav-mobile-action-btn"
+            aria-label="Choose list"
+            aria-expanded={open}
+            aria-haspopup="menu"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <i className={`fas ${TAB_ICONS[activeTab]}`} aria-hidden="true" />
+            <span className="hd__nav-mobile-dropdown-label">{activeTab}</span>
+            <ChevronDown />
+          </button>
+          {open && (
+            <div className="hd__nav-mobile-dropdown-menu" role="menu">
+              {TABS.map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  role="menuitem"
+                  className={`hd__nav-mobile-dropdown-item${active === t ? " is-active" : ""}`}
+                  onClick={() => handleSelect(t)}
+                >
+                  <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
+                  {t}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -417,7 +469,7 @@ export default function Header({
               </div>
             )}
 
-            {showHeader && !isListless(active) && (
+            {showHeader && hasListControls(active) && (
               <>
                 <div className="hd__controls-wrapper">
                   <div className="hd__search">
@@ -526,7 +578,10 @@ export default function Header({
 
                   </div>
                 </div>
+              </>
+            )}
 
+            {showHeader && active !== "HOME" && (
                 <nav className="hd__nav-right">
                   {TABS.map((t) => (
                     <button
@@ -539,7 +594,6 @@ export default function Header({
                     </button>
                   ))}
                 </nav>
-              </>
             )}
 
             {active !== "HOME" && (
