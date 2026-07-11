@@ -801,7 +801,7 @@
     "length": 52,
     "version": "1.9",
     "submitter": "Anceps",
-    "video": "https://www.twitch.tv/videos/44274877",
+    "video": "https://youtu.be/BRBwMofISrg",
     "showcaseVideo": "https://youtu.be/gRozCOZKL3I",
     "tags": [
       "Level",
@@ -832,7 +832,7 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/ca0yIq5gpFY",
     "showcaseVideo": "https://youtu.be/j3SgupWqHJw",
-    "id": 2241592
+    "id": "2241592"
   },
   {
     "date": "2015-??-??",
@@ -1381,8 +1381,7 @@
     "version": "1.0",
     "submitter": "Anceps",
     "video": "https://ibb.co/W4K8DdKd",
-    "tags": "Level, Verified, Rated",
-    "thumbnail": "—"
+    "tags": "Level, Verified, Rated"
   },
   {
     "date": "2013-08-14",
@@ -1399,8 +1398,7 @@
       "Verified",
       "Rated"
     ],
-    "id": 146,
-    "thumbnail": "—"
+    "id": 146
   },
   {
     "date": "2013-06-03",
