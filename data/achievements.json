@@ -1025,6 +1025,21 @@
     "id": 117692518
   },
   {
+    "name": "Antarctic Lights 92%",
+    "player": "Axinity",
+    "date": "2026-07-09",
+    "length": "55",
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/_M3D5xP0w7c",
+    "showcaseVideo": "https://youtu.be/oi5o9GTc7Qs",
+    "tags": [
+      "Level",
+      "Progress"
+    ],
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4f4649af07835eca639f06d805f8f552f8db474c/thumbnails/Antarctic%20Lights.png"
+  },
+  {
     "name": "Vehemence (wPopoff Old) 39%",
     "player": "wPopoff",
     "levelID": 96572223,
@@ -1286,20 +1301,6 @@
       "Progress"
     ],
     "id": 609629
-  },
-  {
-    "name": "Antarctic Lights 90%",
-    "player": "Axinity",
-    "date": "2026-05-13",
-    "length": 96,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/D5HC5DUj0d8",
-    "showcaseVideo": "https://youtu.be/oi5o9GTc7Qs",
-    "tags": [
-      "Level",
-      "Progress"
-    ]
   },
   {
     "name": "Silent clubstep",
@@ -2192,7 +2193,8 @@
     "tags": [
       "Level",
       "Progress"
-    ]
+    ],
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4f4649af07835eca639f06d805f8f552f8db474c/thumbnails/Antarctic%20Lights.png"
   },
   {
     "name": "Sakupen Circles 144hz Mobile 37-100%",
