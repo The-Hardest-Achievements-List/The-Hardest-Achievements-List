@@ -12,7 +12,7 @@
     "video": "https://youtu.be/hRQE_TIXGl0",
     "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Acheron (Riot) 47-100%",
     "notes": null,
     "tags": [
       "Level",
@@ -530,7 +530,7 @@
   {
     "name": "Eternal Silence 9-100%",
     "player": "noname228gg",
-    "levelID": 139730171,
+    "levelID": 83476262,
     "date": "2026-06-07",
     "length": 81,
     "version": 2.2,
@@ -540,11 +540,12 @@
     "video": "https://youtu.be/9kKsgISwEtM",
     "showcaseVideo": "https://youtu.be/gw213VIfxus",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Eternal Silence 14-100%",
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -800,9 +801,9 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/XcQ44x_ZQiU",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Im Hard 92%",
     "notes": "Equivalent to sc66p (Sakupen Circles 66-71%) x8 in a row",
     "tags": [
       "Level",
@@ -842,7 +843,7 @@
     "video": "https://youtu.be/HUvZzy00Rek",
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "IT MEANS EVERYTHING 61%",
     "notes": null,
     "tags": [
       "Level",
@@ -907,7 +908,10 @@
     "video": "https://youtu.be/EhdQdrOAaWY?t=235",
     "showcaseVideo": "https://youtu.be/hcZWawS26hU",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": [
+      "Labyrinth 29-73%",
+      "Labyrinth 44-100%"
+    ],
     "notes": null,
     "tags": [
       "Level",
@@ -927,7 +931,7 @@
     "video": "https://youtu.be/bvU88Sm5Naw",
     "showcaseVideo": "https://youtu.be/hcZWawS26hU",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Labyrinth 46%",
     "notes": null,
     "tags": [
       "Level",
@@ -1682,10 +1686,10 @@
     "submitter": "Exiled_Shade",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "Link",
+    "video": null,
     "showcaseVideo": "https://youtu.be/JJS65OMPbRo",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Subsuming Vortex 80, 71% in a row",
     "notes": null,
     "tags": [
       "Level",
@@ -1740,7 +1744,7 @@
     ]
   },
   {
-    "name": "Tunnel of Serpentical 33-100%",
+    "name": "Tunnel of Serpent 33-100%",
     "player": "serpentical",
     "levelID": null,
     "date": "2026-06-03",
@@ -1752,7 +1756,7 @@
     "video": "https://youtu.be/HXv_64ootSk",
     "showcaseVideo": "https://youtu.be/W8H_-KZG-1s",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Tunnel of Serpent 39-100%",
     "notes": null,
     "tags": [
       "Level",
@@ -1760,7 +1764,7 @@
     ]
   },
   {
-    "name": "Tunnel of Serpentical 4 deaths, 99.97% accuracy",
+    "name": "Tunnel of Serpent 4 deaths, 99.97% accuracy",
     "player": "serpentical",
     "levelID": null,
     "date": "2026-05-20",
@@ -1780,7 +1784,7 @@
     ]
   },
   {
-    "name": "Tunnel of Serpentical 58%",
+    "name": "Tunnel of Serpent 58%",
     "player": "serpentical",
     "levelID": null,
     "date": "2026-05-31",

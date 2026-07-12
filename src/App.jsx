@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, startTransition } from "react";
 import Header from "./components/Header";
 import LevelList from "./components/LevelList";
 import LevelModal from "./components/LevelModal";
@@ -6,9 +6,12 @@ import { useLevelThumbnail } from "./components/LevelCard";
 import HomePage from "./pages/HomePage";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import {
-  getDuplicateParentId,
+  getDuplicateParentIds,
   getAchievementKey,
   isGroupedDuplicate,
+  getParentKeysInList,
+  isCrossListReplacementChild,
+  getCrossListReplacementParents,
 } from "./utils/groupDuplicates";
 import {
   comparePendingEstimate,
@@ -64,14 +67,14 @@ const PLATFORMER_TAGS = [
 const DATA_MAP = {
   classic: {
     MAIN: achievementsData,
+    LEGACY: legacyData,
     PENDING: pendingData,
-    REMOVED: legacyData,
     TIMELINE: timelineData,
   },
   platformer: {
     MAIN: platformersData,
+    LEGACY: [],
     PENDING: platformerpendingData,
-    REMOVED: [],
     TIMELINE: platformerTimelineData,
   },
 };
@@ -171,12 +174,10 @@ function parseRoute() {
       listSource: "classic",
     };
   }
-  if (parts[0] === "mod-lb" || parts[0] === "mod-leaderboard")
-    return { mode: "classic", active: "LEADERBOARD", lbMode: "submissions" };
   const modeMap = { classic: "classic", plat: "platformer" };
   const tabMap = {
+    legacy: "LEGACY",
     pending: "PENDING",
-    removed: "REMOVED",
     timeline: "TIMELINE",
   };
   const mode = modeMap[parts[0]] || "classic";
@@ -213,16 +214,20 @@ export default function App() {
   function navigate(newMode, newActive) {
     if (newActive === "HOME") {
       history.pushState({}, "", "/");
-      setRoute({ mode: newMode, active: "HOME" });
+      startTransition(() => {
+        setRoute({ mode: newMode, active: "HOME" });
+      });
       return;
     }
     if (newActive === "LEADERBOARD") {
       history.pushState({}, "", "/leaderboard");
-      setRoute({
-        mode: newMode,
-        active: "LEADERBOARD",
-        lbMode: "players",
-        listSource: "classic",
+      startTransition(() => {
+        setRoute({
+          mode: newMode,
+          active: "LEADERBOARD",
+          lbMode: "players",
+          listSource: "classic",
+        });
       });
       return;
     }
@@ -230,7 +235,9 @@ export default function App() {
     const tabSlug = newActive === "MAIN" ? "" : newActive.toLowerCase();
     const path = tabSlug ? `/${modeSlug}/${tabSlug}` : `/${modeSlug}`;
     history.pushState({}, "", path);
-    setRoute({ mode: newMode, active: newActive });
+    startTransition(() => {
+      setRoute({ mode: newMode, active: newActive });
+    });
   }
 
   useEffect(() => {
@@ -262,23 +269,39 @@ export default function App() {
 
   const isPendingList = active === "PENDING";
   const isMainList = active === "MAIN";
+  const isLegacyList = active === "LEGACY";
   const mainEntries = mode === "classic" ? achievementsData : platformersData;
   const pendingEntries = mode === "classic" ? pendingData : platformerpendingData;
   const pendingMainCount = useMemo(
     () => getMainListCount(mainEntries),
     [mainEntries],
   );
+  const legacyRankOffset = isLegacyList ? pendingMainCount : 0;
   const mainProjectionByKey = useMemo(() => {
     if (!isMainList) return null;
     return buildMainProjection(mainEntries, pendingEntries, getAchievementKey);
   }, [isMainList, mode, mainEntries, pendingEntries]);
   const projectionAvailable = mainProjectionByKey != null;
   const rawData = NO_LIST.has(active) ? [] : (Array.isArray(DATA_MAP[mode]?.[active]) ? DATA_MAP[mode][active] : []);
+  const rawDataParentKeys = useMemo(
+    () => getParentKeysInList(rawData),
+    [rawData],
+  );
+  const rankedCount = useMemo(
+    () =>
+      rawData.reduce(
+        (count, achievement) =>
+          count +
+          (isGroupedDuplicate(achievement, rawData, rawDataParentKeys) ? 0 : 1),
+        0,
+      ),
+    [rawData, rawDataParentKeys],
+  );
   const rawDataWithListRank = useMemo(() => {
     if (!Array.isArray(rawData)) return [];
     let rank = 0;
     return rawData.map((achievement) => {
-      if (isGroupedDuplicate(achievement, rawData)) {
+      if (isGroupedDuplicate(achievement, rawData, rawDataParentKeys)) {
         return achievement;
       }
       rank += 1;
@@ -287,38 +310,45 @@ export default function App() {
         mainProjectionByKey != null
           ? (mainProjectionByKey.get(key) ?? null)
           : null;
-      return { ...achievement, listRank: rank, projectedRank };
+      return {
+        ...achievement,
+        listRank: rank + legacyRankOffset,
+        projectedRank,
+      };
     });
-  }, [rawData, mainProjectionByKey]);
+  }, [rawData, rawDataParentKeys, mainProjectionByKey, legacyRankOffset]);
 
   const allTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
 
-  const getParentKey = (achievement) => {
-    const duplicateParent = getDuplicateParentId(achievement);
-    return duplicateParent
-      ? getAchievementKey({ name: duplicateParent })
-      : getAchievementKey(achievement);
+  const getParentKeysForEntry = (achievement) => {
+    const duplicateParents = getDuplicateParentIds(achievement);
+    if (duplicateParents.length === 0) {
+      return [getAchievementKey(achievement)];
+    }
+    return duplicateParents.map((name) => getAchievementKey({ name }));
   };
 
   const itemMatchesSearch = (achievement, q) =>
     achievement.name?.toLowerCase().includes(q) ||
     achievement.player?.toLowerCase().includes(q) ||
     String(achievement.levelID ?? "").includes(q) ||
-    String(achievement.rank ?? "").includes(q) ||
+    String(achievement.rank ?? achievement.listRank ?? "").includes(q) ||
     (isPendingList && matchesEstimateSearch(achievement, q, pendingMainCount));
 
   const toggleTag = (t) => {
-    const next = new Map(activeTags);
-    const current = next.get(t);
+    startTransition(() => {
+      const next = new Map(activeTags);
+      const current = next.get(t);
 
-    if (current === null || current === undefined) {
-      next.set(t, "include");
-    } else if (current === "include") {
-      next.set(t, "exclude");
-    } else {
-      next.delete(t);
-    }
-    setActiveTags(next);
+      if (current === null || current === undefined) {
+        next.set(t, "include");
+      } else if (current === "include") {
+        next.set(t, "exclude");
+      } else {
+        next.delete(t);
+      }
+      setActiveTags(next);
+    });
   };
 
   useEffect(() => {
@@ -329,6 +359,7 @@ export default function App() {
 
   useEffect(() => {
     setSearch("");
+    setActiveTags(new Map());
   }, [active, mode]);
 
   useEffect(() => {
@@ -343,17 +374,40 @@ export default function App() {
     if (search.trim()) {
       const q = search.toLowerCase();
       const includedParentKeys = new Set();
+      const listSrc = {
+        mainSrc: mode === "platformer" ? "platformer" : "classic",
+        pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
+      };
 
-      if (Array.isArray(rawData)) {
-        rawData.forEach((achievement) => {
-          if (itemMatchesSearch(achievement, q)) {
-            includedParentKeys.add(getParentKey(achievement));
+      rawDataWithListRank.forEach((achievement) => {
+        if (itemMatchesSearch(achievement, q)) {
+          getParentKeysForEntry(achievement).forEach((key) =>
+            includedParentKeys.add(key),
+          );
+        }
+      });
+
+      // Pending replacements live under main parents — include them in MAIN search.
+      if (isMainList) {
+        pendingEntries.forEach((achievement) => {
+          if (!itemMatchesSearch(achievement, q)) return;
+          if (!isCrossListReplacementChild(achievement, mainEntries, listSrc)) {
+            return;
           }
+          getCrossListReplacementParents(
+            achievement,
+            mainEntries,
+            listSrc,
+          ).forEach((parent) => {
+            includedParentKeys.add(getAchievementKey(parent));
+          });
         });
       }
 
       data = data.filter((achievement) =>
-        includedParentKeys.has(getParentKey(achievement)),
+        getParentKeysForEntry(achievement).some((key) =>
+          includedParentKeys.has(key),
+        ),
       );
     }
 
@@ -408,19 +462,32 @@ export default function App() {
     });
 
     return data;
-  }, [rawData, search, activeTags, sort, sortDir, isPendingList, pendingMainCount]);
+  }, [
+    rawDataWithListRank,
+    search,
+    activeTags,
+    sort,
+    sortDir,
+    isPendingList,
+    isMainList,
+    pendingMainCount,
+    pendingEntries,
+    mainEntries,
+    mode,
+  ]);
 
   useEffect(() => {
+    if (active === "LEADERBOARD" || active === "HOME") {
+      setShowScrollTop(false);
+      return undefined;
+    }
     const update = () => {
-      const cards = document.querySelectorAll(".card");
-      setShowScrollTop(
-        cards.length >= 10 && cards[9].getBoundingClientRect().bottom < 0,
-      );
+      setShowScrollTop(window.scrollY > 900);
     };
     window.addEventListener("scroll", update, { passive: true });
     update();
     return () => window.removeEventListener("scroll", update);
-  }, [filteredData]);
+  }, [active, mode]);
 
   const topAchievement = !NO_LIST.has(active) ? rawData[0] : null;
 
@@ -481,8 +548,10 @@ export default function App() {
         />
       ) : (
         <LevelList
+          key={`${mode}-${active}`}
+          listKey={`${mode}-${active}`}
           data={filteredData}
-          totalCount={rawData.filter((a) => !isGroupedDuplicate(a, rawData)).length}
+          totalCount={rankedCount}
           activeTags={activeTags}
           allTags={allTags}
           toggleTag={toggleTag}
@@ -506,6 +575,8 @@ export default function App() {
           setSortDir={setSortDir}
           mode={mode}
           setMode={(m) => navigate(m, active)}
+          listKind={isMainList ? "main" : isPendingList ? "pending" : null}
+          otherList={isMainList ? pendingEntries : isPendingList ? mainEntries : []}
         />
       )}
 
@@ -517,7 +588,7 @@ export default function App() {
             active !== "LEADERBOARD" && active === "PENDING" && !isPendingList
           }
           isPendingEstimate={
-            active === "LEADERBOARD"
+            selectedLevel._src
               ? ["pending", "platformerpending"].includes(selectedLevel._src)
               : isPendingList
           }
@@ -526,7 +597,7 @@ export default function App() {
         />
       )}
 
-      {showScrollTop && (
+      {showScrollTop && active !== "LEADERBOARD" && active !== "HOME" && (
         <button
           className="scroll-top-btn"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

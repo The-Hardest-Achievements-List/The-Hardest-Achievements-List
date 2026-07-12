@@ -291,6 +291,7 @@ function CardTag({ tag }) {
 function CardTags({ tags, listNote }) {
   const containerRef = useRef(null);
   const [visibleCount, setVisibleCount] = useState(tags.length);
+  const hasListNote = Boolean(listNote);
 
   useLayoutEffect(() => {
     setVisibleCount(tags.length);
@@ -311,7 +312,7 @@ function CardTags({ tags, listNote }) {
     const observer = new ResizeObserver(checkOverflow);
     observer.observe(container);
     return () => observer.disconnect();
-  }, [tags, visibleCount, listNote]);
+  }, [tags, visibleCount, hasListNote]);
 
   const hiddenCount = Math.max(0, tags.length - visibleCount);
   const hiddenLabel = tags.slice(visibleCount).join(", ");
@@ -471,6 +472,7 @@ function LevelCard({
       });
   }, [a.tags]);
   const pendingRemoval = tags.includes("Pending Removal");
+  const isReplacement = Boolean(a.isReplacement);
   const isCardLayout = layoutMode === "CARD";
 
   const {
@@ -497,7 +499,7 @@ function LevelCard({
   return (
     <article
       ref={thumbnailRef}
-      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
+      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
       style={
         loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
       }
@@ -553,10 +555,12 @@ function LevelCard({
 
           <div className="card__detail-bottom">
             <div className="card__stats">
-              <div>
-                <span className="lbl">ID</span>
-                <span className="val">{displayedLevelID}</span>
-              </div>
+              {typeof a.levelID === "number" && Number.isFinite(a.levelID) && (
+                <div>
+                  <span className="lbl">ID</span>
+                  <span className="val">{displayedLevelID}</span>
+                </div>
+              )}
               {!isTimeline && (
                 <div>
                   <span className="lbl">DATE</span>

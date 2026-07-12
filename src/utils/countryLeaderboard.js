@@ -11,15 +11,43 @@ export function normalizeCountryCode(value) {
     const code = value.trim().toUpperCase();
     return /^[A-Z]{2}$/.test(code) ? code : null;
   }
+  if (Array.isArray(value)) {
+    for (const entry of value) {
+      const code = normalizeCountryCode(entry);
+      if (code) return code;
+    }
+    return null;
+  }
   if (value && typeof value === "object") {
     return normalizeCountryCode(value.code);
   }
   return null;
 }
 
+export function normalizeCountryCodes(value) {
+  if (Array.isArray(value)) {
+    const codes = [];
+    const seen = new Set();
+    for (const entry of value) {
+      const code = normalizeCountryCode(entry);
+      if (!code || seen.has(code)) continue;
+      seen.add(code);
+      codes.push(code);
+    }
+    return codes;
+  }
+
+  const code = normalizeCountryCode(value);
+  return code ? [code] : [];
+}
+
+export function resolvePlayerCountries(playerCountries, player) {
+  if (!player || player === "-" || !playerCountries) return [];
+  return normalizeCountryCodes(playerCountries[player]);
+}
+
 export function resolvePlayerCountry(playerCountries, player) {
-  if (!player || player === "-" || !playerCountries) return null;
-  return normalizeCountryCode(playerCountries[player]);
+  return resolvePlayerCountries(playerCountries, player)[0] ?? null;
 }
 
 export function getCountryName(code) {
@@ -48,36 +76,38 @@ export function buildCountryBoard(playerBoard, playerCountries) {
   const grouped = new Map();
 
   for (const player of playerBoard) {
-    const countryCode = resolvePlayerCountry(playerCountries, player.name);
-    if (!countryCode) continue;
+    const countryCodes = resolvePlayerCountries(playerCountries, player.name);
+    if (!countryCodes.length) continue;
 
-    if (!grouped.has(countryCode)) {
-      grouped.set(countryCode, {
-        code: countryCode,
-        name: getCountryName(countryCode),
-        flag: countryCodeToFlag(countryCode),
-        players: [],
-        achievements: [],
-        totalXP: 0,
-        best: null,
-        bestRank: null,
-        achievementCount: 0,
-      });
-    }
+    for (const countryCode of countryCodes) {
+      if (!grouped.has(countryCode)) {
+        grouped.set(countryCode, {
+          code: countryCode,
+          name: getCountryName(countryCode),
+          flag: countryCodeToFlag(countryCode),
+          players: [],
+          achievements: [],
+          totalXP: 0,
+          best: null,
+          bestRank: null,
+          achievementCount: 0,
+        });
+      }
 
-    const country = grouped.get(countryCode);
-    country.players.push(player);
-    country.totalXP =
-      Math.round((country.totalXP + (player.totalXP ?? 0)) * 100) / 100;
+      const country = grouped.get(countryCode);
+      country.players.push(player);
+      country.totalXP =
+        Math.round((country.totalXP + (player.totalXP ?? 0)) * 100) / 100;
 
-    for (const achievement of player.achievements) {
-      country.achievements.push(achievement);
-      country.achievementCount += 1;
+      for (const achievement of player.achievements) {
+        country.achievements.push(achievement);
+        country.achievementCount += 1;
 
-      const rank = achievement.listPosition;
-      if (rank != null && (country.bestRank == null || rank < country.bestRank)) {
-        country.bestRank = rank;
-        country.best = achievement;
+        const rank = achievement.listPosition;
+        if (rank != null && (country.bestRank == null || rank < country.bestRank)) {
+          country.bestRank = rank;
+          country.best = achievement;
+        }
       }
     }
   }

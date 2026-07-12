@@ -6,6 +6,9 @@ import {
   getNotesFullText,
   getYouTubeEmbedUrl,
   isValidDate,
+  isWatchableAchievementUrl,
+  normalizeImageUrl,
+  normalizeProofUrl,
   normalizeYouTubeUrl,
 } from "../utils/format";
 import { useLevelThumbnail } from "./LevelCard";
@@ -49,6 +52,8 @@ export default function LevelModal({
   const displayVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
   const displaySubmitter = asDisplayString(a.submitter);
   const notesText = getNotesFullText(a.notes);
+  const imageUrl = normalizeImageUrl(a.image);
+  const proofUrl = normalizeProofUrl(a.proof);
 
   const [copiedValue, setCopiedValue] = useState(null);
   const officialRank =
@@ -75,6 +80,7 @@ export default function LevelModal({
       return DISPLAYABLE_TAGS.has(tag);
     });
   const pendingRemoval = displayTags.includes("Pending Removal");
+  const isReplacement = Boolean(a?.isReplacement);
   const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
     thumbnail: a.thumbnail,
     showcaseVideo: a.showcaseVideo,
@@ -104,7 +110,7 @@ export default function LevelModal({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div
-        className={`modal${pendingRemoval ? " is-pending-removal" : ""}`}
+        className={`modal${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal__thumb">
@@ -291,8 +297,17 @@ export default function LevelModal({
             </div>
           )}
 
+          {imageUrl && (
+            <div className="modal__proof-section">
+              <span className="modal__embed-label">Achievement Proof</span>
+              <div className="modal__embed modal__embed--proof">
+                <img src={imageUrl} alt={displayName} loading="lazy" />
+              </div>
+            </div>
+          )}
+
           <div className="modal__links">
-            {a.video && (
+            {a.video && isWatchableAchievementUrl(a.video) && (
               <a
                 href={normalizeYouTubeUrl(a.video)}
                 target="_blank"
@@ -300,6 +315,26 @@ export default function LevelModal({
                 className="modal__link modal__link--primary"
               >
                 Watch Achievement ↗
+              </a>
+            )}
+            {imageUrl && (
+              <a
+                href={imageUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`modal__link${!a.video || !isWatchableAchievementUrl(a.video) ? " modal__link--primary" : ""}`}
+              >
+                View Image ↗
+              </a>
+            )}
+            {proofUrl && (
+              <a
+                href={proofUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`modal__link${(!a.video || !isWatchableAchievementUrl(a.video)) && !imageUrl ? " modal__link--primary" : ""}`}
+              >
+                View Proof ↗
               </a>
             )}
             {a.showcaseVideo && (

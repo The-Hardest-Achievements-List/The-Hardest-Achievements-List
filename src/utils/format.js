@@ -291,6 +291,31 @@ export function getYouTubeEmbedUrl(url) {
     return start != null ? `${base}?start=${start}` : base
 }
 
+/** True for YouTube / Twitch achievement video links. */
+export function isWatchableAchievementUrl(url) {
+    if (!url || typeof url !== 'string') return false
+    if (getYouTubeVideoId(url)) return true
+
+    try {
+        const parsed = new URL(fixYouTubeUrlScheme(url.trim()))
+        const host = parsed.hostname.replace(/^www\./, '').toLowerCase()
+        return host === 'twitch.tv' || host === 'clips.twitch.tv'
+    } catch {
+        return /(?:^|\.)(?:twitch\.tv|clips\.twitch\.tv)(?:\/|$)/i.test(url)
+    }
+}
+
+export function normalizeImageUrl(image) {
+    return normalizeThumbnail(image)
+}
+
+export function normalizeProofUrl(proof) {
+    if (!proof || typeof proof !== 'string') return null
+    const trimmed = proof.trim()
+    if (!trimmed || !/^https?:\/\//i.test(trimmed)) return null
+    return trimmed
+}
+
 export function getYouTubeThumbnailUrls(videoId) {
     return [
         `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,

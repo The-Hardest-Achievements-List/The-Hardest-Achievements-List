@@ -18,6 +18,29 @@ const SORT_DIR_OPTS = [
   { value: "desc", label: "Descending" },
 ];
 
+const LIST_GAP = 14;
+const MOBILE_LIST_GAP = 7;
+const LIST_ROW_HEIGHT = 96;
+const CARD_ROW_HEIGHT = 180;
+const MOBILE_CARD_ROW_HEIGHT = 120;
+const OVERSCAN = 10;
+
+function getItemHeight(layoutMode, cardScale) {
+  if (layoutMode === "LIST") return LIST_ROW_HEIGHT + LIST_GAP;
+  const isNarrow =
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 640px)").matches;
+  if (isNarrow) return MOBILE_CARD_ROW_HEIGHT + MOBILE_LIST_GAP;
+  return CARD_ROW_HEIGHT * (Number(cardScale) || 1) + LIST_GAP;
+}
+
+function getAchievementListKey(achievement) {
+  if (achievement.levelID != null) {
+    return `${achievement.levelID}::${achievement.name}::${achievement.player ?? ""}`;
+  }
+  return `${achievement.name}::${achievement.player ?? ""}::${achievement.date ?? ""}`;
+}
+
 function SidebarSelect({ value, options, onChange, ariaLabel }) {
   const [open, setOpen] = React.useState(false);
   const ref = React.useRef(null);
@@ -40,7 +63,7 @@ function SidebarSelect({ value, options, onChange, ariaLabel }) {
         aria-label={ariaLabel}
         onClick={() => setOpen((o) => !o)}
       >
-        {label}
+        <span className="hd__sel-btn-label">{label}</span>
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
           <path
             d="M2 3.5L5 6.5L8 3.5"
@@ -71,12 +94,91 @@ function SidebarSelect({ value, options, onChange, ariaLabel }) {
   );
 }
 
+function useWindowedRange(itemCount, itemHeight, listRef) {
+  const [range, setRange] = React.useState({
+    start: 0,
+    end: Math.min(itemCount, 24),
+  });
+  const listTopRef = React.useRef(0);
+  const rafRef = React.useRef(0);
+  const scrollingRef = React.useRef(false);
+  const scrollEndTimerRef = React.useRef(0);
+
+  React.useEffect(() => {
+    const measureListTop = () => {
+      const listEl = listRef.current;
+      if (!listEl) return;
+      const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      // Cache document Y of the list once per layout; recalculating every
+      // scroll frame from getBoundingClientRect fights sticky/chrome motion.
+      listTopRef.current = listEl.getBoundingClientRect().top + scrollY;
+    };
+
+    const updateRange = () => {
+      if (itemCount <= 0 || itemHeight <= 0) {
+        setRange({ start: 0, end: 0 });
+        return;
+      }
+
+      const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      const viewport = window.innerHeight || 800;
+      const listTop = listTopRef.current;
+      const start = Math.max(
+        0,
+        Math.floor((scrollY - listTop) / itemHeight) - OVERSCAN,
+      );
+      const end = Math.min(
+        itemCount,
+        Math.ceil((scrollY + viewport - listTop) / itemHeight) + OVERSCAN,
+      );
+      setRange((prev) =>
+        prev.start === start && prev.end === end ? prev : { start, end },
+      );
+    };
+
+    const onScroll = () => {
+      scrollingRef.current = true;
+      if (rafRef.current) return;
+      rafRef.current = window.requestAnimationFrame(() => {
+        rafRef.current = 0;
+        updateRange();
+      });
+      window.clearTimeout(scrollEndTimerRef.current);
+      scrollEndTimerRef.current = window.setTimeout(() => {
+        scrollingRef.current = false;
+        measureListTop();
+        updateRange();
+      }, 120);
+    };
+
+    const onResize = () => {
+      if (scrollingRef.current) return;
+      measureListTop();
+      updateRange();
+    };
+
+    measureListTop();
+    updateRange();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      if (rafRef.current) window.cancelAnimationFrame(rafRef.current);
+      window.clearTimeout(scrollEndTimerRef.current);
+    };
+  }, [itemCount, itemHeight, listRef]);
+
+  return range;
+}
+
 export default function LevelList({
   data,
   totalCount,
   activeTags,
   allTags,
   toggleTag,
+  listKey,
   isTimeline,
   hideRank,
   isPendingEstimate,
@@ -97,10 +199,22 @@ export default function LevelList({
   setSortDir,
   mode,
   setMode,
+  listKind = null,
+  otherList = [],
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
+  const listRef = React.useRef(null);
   const safeData = Array.isArray(data) ? data : [];
-  const { mainAchievements } = groupAchievementsByDuplicates(safeData);
+  const { mainAchievements } = React.useMemo(
+    () =>
+      groupAchievementsByDuplicates(safeData, {
+        listKind,
+        otherList,
+        mainSrc: mode === "platformer" ? "platformer" : "classic",
+        pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
+      }),
+    [safeData, listKind, otherList, mode],
+  );
   const timelineDateLabels = React.useMemo(
     () => (isTimeline ? buildTimelineDateLabelMap(safeData) : null),
     [isTimeline, safeData],
@@ -119,16 +233,20 @@ export default function LevelList({
     [onCardClick, getTimelineDateLabel],
   );
   const safeAllTags = Array.isArray(allTags) ? allTags : [];
-  const includeTags = [];
-  const excludeTags = [];
-  activeTags.forEach((state, tag) => {
-    if (state === "include") includeTags.push(tag);
-    else if (state === "exclude") excludeTags.push(tag);
-  });
+  const itemHeight = getItemHeight(layoutMode, cardScale);
+  const { start, end } = useWindowedRange(
+    mainAchievements.length,
+    itemHeight,
+    listRef,
+  );
+  const topSpacer = start * itemHeight;
+  const bottomSpacer = Math.max(0, (mainAchievements.length - end) * itemHeight);
+  const visibleAchievements = mainAchievements.slice(start, end);
 
   return (
     <>
       <main
+        ref={listRef}
         className={`list list--${layoutMode.toLowerCase()}${sidebarCollapsed ? " is-sidebar-collapsed" : ""}`}
         style={
           layoutMode === "CARD"
@@ -262,39 +380,48 @@ export default function LevelList({
         {safeData.length === 0 ? (
           <div className="list__empty">No entries found.</div>
         ) : (
-          mainAchievements.map((a, i) => {
-            const listKey = a.levelID != null ? `${a.levelID}-${i}` : `${a.name}-${i}`;
-            return a.hasDuplicates ? (
-              <GroupedLevelCard
-                key={listKey}
-                achievement={a}
-                duplicates={a.duplicates}
-                index={i}
-                isTimeline={isTimeline}
-                getTimelineDateLabel={getTimelineDateLabel}
-                hideRank={hideRank}
-                isPendingEstimate={isPendingEstimate}
-                pendingMainCount={pendingMainCount}
-                showProjectedRanks={showProjectedRanks}
-                onClick={handleCardClick}
-                layoutMode={layoutMode}
-              />
-            ) : (
-              <LevelCard
-                key={listKey}
-                achievement={a}
-                index={i}
-                isTimeline={isTimeline}
-                timelineDateLabel={getTimelineDateLabel(a)}
-                hideRank={hideRank}
-                isPendingEstimate={isPendingEstimate}
-                pendingMainCount={pendingMainCount}
-                showProjectedRanks={showProjectedRanks}
-                onClick={handleCardClick}
-                layoutMode={layoutMode}
-              />
-            );
-          })
+          <div
+            className="list__window"
+            style={{
+              paddingTop: topSpacer,
+              paddingBottom: bottomSpacer,
+            }}
+          >
+            {visibleAchievements.map((a, offset) => {
+              const i = start + offset;
+              const itemKey = `${listKey ?? "list"}::${getAchievementListKey(a)}`;
+              return a.hasDuplicates ? (
+                <GroupedLevelCard
+                  key={itemKey}
+                  achievement={a}
+                  duplicates={a.duplicates}
+                  index={i}
+                  isTimeline={isTimeline}
+                  getTimelineDateLabel={getTimelineDateLabel}
+                  hideRank={hideRank}
+                  isPendingEstimate={isPendingEstimate}
+                  pendingMainCount={pendingMainCount}
+                  showProjectedRanks={showProjectedRanks}
+                  onClick={handleCardClick}
+                  layoutMode={layoutMode}
+                />
+              ) : (
+                <LevelCard
+                  key={itemKey}
+                  achievement={a}
+                  index={i}
+                  isTimeline={isTimeline}
+                  timelineDateLabel={getTimelineDateLabel(a)}
+                  hideRank={hideRank}
+                  isPendingEstimate={isPendingEstimate}
+                  pendingMainCount={pendingMainCount}
+                  showProjectedRanks={showProjectedRanks}
+                  onClick={handleCardClick}
+                  layoutMode={layoutMode}
+                />
+              );
+            })}
+          </div>
         )}
       </main>
     </>

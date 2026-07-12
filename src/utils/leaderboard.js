@@ -1,8 +1,12 @@
 import {
-  getDuplicateParentId,
+  getDuplicateParentIds,
   isGroupedDuplicate,
+  isReplacementDuplicate,
 } from "./groupDuplicates.js";
-import { resolvePlayerCountry } from "./countryLeaderboard.js";
+import {
+  resolvePlayerCountries,
+  resolvePlayerCountry,
+} from "./countryLeaderboard.js";
 
 export const POINTS = {
   baseScore: 1000,
@@ -17,6 +21,18 @@ export const SORT_DIR_OPTIONS = [
 
 function normalizeNameKey(value) {
   return typeof value === "string" ? value.trim().toLowerCase() : "";
+}
+
+function findParentEntries(entry, entries) {
+  const parentRefs = getDuplicateParentIds(entry);
+  if (parentRefs.length === 0) return [];
+
+  const parentKeys = new Set(parentRefs.map(normalizeNameKey));
+  return entries.filter(
+    (candidate) =>
+      !isGroupedDuplicate(candidate, entries) &&
+      parentKeys.has(normalizeNameKey(candidate?.name)),
+  );
 }
 
 export function calculateXp(position, listSize) {
@@ -103,14 +119,19 @@ function resolveListPositionFromMaps(nameKey, classicMap, platformerMap) {
 }
 
 export function resolveAchievementListPosition(entry, classicMap, platformerMap) {
-  const parentRef = getDuplicateParentId(entry);
-  if (parentRef) {
-    const parentRank = resolveListPositionFromMaps(
-      normalizeNameKey(parentRef),
-      classicMap,
-      platformerMap,
-    );
-    if (parentRank != null) return parentRank;
+  const parentRefs = getDuplicateParentIds(entry);
+  if (parentRefs.length > 0) {
+    let bestRank = null;
+    for (const parentRef of parentRefs) {
+      const parentRank = resolveListPositionFromMaps(
+        normalizeNameKey(parentRef),
+        classicMap,
+        platformerMap,
+      );
+      if (parentRank == null) continue;
+      if (bestRank == null || parentRank < bestRank) bestRank = parentRank;
+    }
+    if (bestRank != null) return bestRank;
   }
 
   return resolveListPositionFromMaps(
@@ -136,9 +157,16 @@ export function resolveAchievementXpPosition(
   positionByName,
 ) {
   if (isGroupedDuplicate(entry, entriesWithPosition)) {
-    const parentRef = getDuplicateParentId(entry);
-    const parentPosition = positionByName.get(normalizeNameKey(parentRef));
-    if (parentPosition != null) return parentPosition;
+    const parentRefs = getDuplicateParentIds(entry);
+    let bestPosition = null;
+    for (const parentRef of parentRefs) {
+      const parentPosition = positionByName.get(normalizeNameKey(parentRef));
+      if (parentPosition == null) continue;
+      if (bestPosition == null || parentPosition < bestPosition) {
+        bestPosition = parentPosition;
+      }
+    }
+    if (bestPosition != null) return bestPosition;
   }
 
   return entry.listPosition;
@@ -161,6 +189,14 @@ export function buildPlayerBoard(entries, playerCountries = null) {
 
       const achievements = sorted.map((entry) => {
         const isDuplicate = isGroupedDuplicate(entry, entries);
+        const parentEntries = isDuplicate
+          ? findParentEntries(entry, entriesWithPosition)
+          : [];
+        const isReplacement =
+          isDuplicate &&
+          parentEntries.some((parentEntry) =>
+            isReplacementDuplicate(parentEntry, entry),
+          );
         const xpPosition = resolveAchievementXpPosition(
           entry,
           entriesWithPosition,
@@ -168,7 +204,7 @@ export function buildPlayerBoard(entries, playerCountries = null) {
         );
         const points = calculateXp(xpPosition, entry.listSize);
 
-        return { ...entry, points, isDuplicate, xpPosition };
+        return { ...entry, points, isDuplicate, isReplacement, xpPosition };
       });
 
       const best = achievements[0] ?? null;
@@ -181,6 +217,7 @@ export function buildPlayerBoard(entries, playerCountries = null) {
       return {
         name,
         country: resolvePlayerCountry(playerCountries, name),
+        countries: resolvePlayerCountries(playerCountries, name),
         achievements,
         achievementCount: achievements.filter((entry) => !entry.isDuplicate)
           .length,

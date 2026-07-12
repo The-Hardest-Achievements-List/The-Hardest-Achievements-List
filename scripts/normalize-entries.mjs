@@ -8,7 +8,7 @@ const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
 const hasEstimateFields = (fieldOrder) =>
   fieldOrder.includes("estimateLower") && fieldOrder.includes("estimateUpper");
 
-const CLASSIC_TAGS = [
+export const CLASSIC_TAGS = [
   "Level",
   "Challenge",
   "Low Hertz",
@@ -60,6 +60,25 @@ const CLASSIC_FIELD_ORDER = [
   "tags",
 ];
 
+/** Classic timeline entries only — image proofs and web-post proof links. */
+const TIMELINE_FIELD_ORDER = [
+  "name",
+  "player",
+  "levelID",
+  "date",
+  "length",
+  "version",
+  "submitter",
+  "video",
+  "showcaseVideo",
+  "image",
+  "proof",
+  "thumbnail",
+  "duplicateOf",
+  "notes",
+  "tags",
+];
+
 const PENDING_FIELD_ORDER = [
   "name",
   "player",
@@ -91,6 +110,35 @@ const PLATFORMER_FIELD_ORDER = [
   "thumbnail",
   "tags",
 ];
+
+/** Spreadsheet / import column names → canonical schema keys. */
+const FIELD_ALIASES = {
+  Name: "name",
+  Player: "player",
+  "Level ID": "levelID",
+  Date: "date",
+  Length: "length",
+  Version: "version",
+  Submitter: "submitter",
+  "Player Video": "video",
+  "Showcase Video": "showcaseVideo",
+};
+
+export const applyFieldAliases = (entry) => {
+  if (entry == null || typeof entry !== "object" || Array.isArray(entry)) {
+    return entry;
+  }
+
+  const mapped = { ...entry };
+  for (const [alias, canonical] of Object.entries(FIELD_ALIASES)) {
+    if (!(alias in mapped)) continue;
+    if (!(canonical in mapped) || mapped[canonical] == null || mapped[canonical] === "") {
+      mapped[canonical] = mapped[alias];
+    }
+    delete mapped[alias];
+  }
+  return mapped;
+};
 
 export const VIDEO_FIELDS = ["video", "showcaseVideo"];
 
@@ -223,11 +271,60 @@ export const normalizeNotesField = (value) => {
   return null;
 };
 
+/** Accepts a string or string[] of parent names. Multi-parent stays an array. */
+export const normalizeDuplicateOfField = (value) => {
+  if (value == null) return null;
+
+  if (typeof value === "string") {
+    return normalizeNonEmptyStringField(value);
+  }
+
+  if (Array.isArray(value)) {
+    const seen = new Set();
+    const parents = [];
+    for (const item of value) {
+      const name = normalizeNonEmptyStringField(item);
+      if (!name) continue;
+      const key = name.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      parents.push(name);
+    }
+    if (parents.length === 0) return null;
+    if (parents.length === 1) return parents[0];
+    return parents;
+  }
+
+  return null;
+};
+
 export const normalizeVideoField = (value) => {
   if (value == null || typeof value !== "string") return value;
   const trimmed = value.trim();
   if (!trimmed) return value;
   return normalizeYouTubeUrl(trimmed);
+};
+
+export const normalizeProofField = (value) => {
+  const normalized = normalizeNonEmptyStringField(value);
+  if (!normalized) return null;
+  if (!/^https?:\/\//i.test(normalized)) return null;
+  return normalized;
+};
+
+export const normalizeImageField = (value) => {
+  const normalized = normalizeNonEmptyStringField(value);
+  if (!normalized) return null;
+  if (!/^https?:\/\//i.test(normalized)) return null;
+
+  if (normalized.includes("github.com") && normalized.includes("/blob/")) {
+    return normalized
+      .replace("https://github.com/", "https://raw.githubusercontent.com/")
+      .replace("/blob", "")
+      .replace(/\?raw=true$/, "");
+  }
+
+  return normalized;
 };
 
 function validateEstimatePair(entry) {
@@ -285,7 +382,6 @@ function validateEstimatePair(entry) {
 export const sortEntriesByName = (entries) =>
   [...entries].sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
 
-/** Rebuild a plain object with keys sorted alphabetically (localeCompare). */
 export const sortObjectKeys = (obj) => {
   if (obj == null || typeof obj !== "object" || Array.isArray(obj)) return obj;
   const sorted = {};
@@ -296,6 +392,7 @@ export const sortObjectKeys = (obj) => {
 };
 
 export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
+  entry = applyFieldAliases(entry);
   const result = {};
   const addedFields = [];
   const removedFields = [];
@@ -315,6 +412,21 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
 
     if (key === "notes") {
       result[key] = normalizeNotesField(entry.notes);
+      continue;
+    }
+
+    if (key === "duplicateOf") {
+      result[key] = normalizeDuplicateOfField(entry.duplicateOf);
+      continue;
+    }
+
+    if (key === "image") {
+      result[key] = normalizeImageField(entry[key]);
+      continue;
+    }
+
+    if (key === "proof") {
+      result[key] = normalizeProofField(entry[key]);
       continue;
     }
 
@@ -376,8 +488,14 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
     if (!(key in entry)) continue;
     if (key === "tags") {
       previous[key] = normalizeTags(entry.tags, tagOrder);
-    } else if (key === "notes") {
+    } else     if (key === "notes") {
       previous[key] = normalizeNotesField(entry.notes);
+    } else if (key === "duplicateOf") {
+      previous[key] = normalizeDuplicateOfField(entry.duplicateOf);
+    } else if (key === "image") {
+      previous[key] = normalizeImageField(entry[key]);
+    } else if (key === "proof") {
+      previous[key] = normalizeProofField(entry[key]);
     } else if (VIDEO_FIELDS.includes(key)) {
       previous[key] = normalizeVideoField(entry[key]);
     } else if (ESTIMATE_FIELDS.has(key)) {
@@ -405,6 +523,9 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
 const normalizeClassicEntry = (entry) =>
   normalizeEntry(entry, CLASSIC_FIELD_ORDER, CLASSIC_TAGS);
 
+const normalizeTimelineEntry = (entry) =>
+  normalizeEntry(entry, TIMELINE_FIELD_ORDER, CLASSIC_TAGS);
+
 const normalizePendingEntry = (entry) =>
   normalizeEntry(entry, PENDING_FIELD_ORDER, CLASSIC_TAGS);
 
@@ -417,7 +538,8 @@ export const dataDir = path.join(__dirname, "..", "data");
 export const FILES = [
   { file: "achievements.json", normalize: normalizeClassicEntry },
   { file: "pending.json", normalize: normalizePendingEntry, sortByName: true },
-  { file: "timeline.json", normalize: normalizeClassicEntry },
+  { file: "legacy.json", normalize: normalizeClassicEntry },
+  { file: "timeline.json", normalize: normalizeTimelineEntry },
   { file: "platformers.json", normalize: normalizePlatformerEntry },
   { file: "platformerpending.json", normalize: normalizePlatformerEntry, sortByName: true },
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
@@ -425,7 +547,7 @@ export const FILES = [
 
 /** Plain object maps (not entry arrays). Keys are sorted alphabetically on write. */
 export const OBJECT_FILES = [
-  { file: "playerCountries.json", sortKeys: true },
+  { file: "playercountries.json", sortKeys: true },
 ];
 
 const VERSION_FLOAT_MARKER = "__THAL_VERSION_FLOAT__:";

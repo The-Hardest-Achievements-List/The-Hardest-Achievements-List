@@ -1,13 +1,14 @@
 ﻿import { useState, useRef, useEffect } from "react";
 import Tooltip from "./Tooltip";
 
-const TABS = ["HOME", "MAIN", "PENDING", "TIMELINE", "LEADERBOARD"];
+const TABS = ["HOME", "MAIN", "TIMELINE", "PENDING", "LEGACY", "LEADERBOARD"];
 
 const TAB_ICONS = {
   HOME: "fa-house",
   MAIN: "fa-bars",
-  PENDING: "fa-clock",
   TIMELINE: "fa-clock-rotate-left",
+  PENDING: "fa-clock",
+  LEGACY: "fa-box-archive",
   LEADERBOARD: "fa-ranking-star",
 };
 
@@ -260,8 +261,10 @@ const DiscordIcon = () => (
 );
 
 const isHome = (t) => t === "HOME";
-const hasListControls = (t) => t === "MAIN" || t === "PENDING" || t === "TIMELINE";
-const hasListFilters = (t) => t === "MAIN" || t === "PENDING" || t === "TIMELINE";
+const hasListControls = (t) =>
+  t === "MAIN" || t === "LEGACY" || t === "PENDING" || t === "TIMELINE";
+const hasListFilters = (t) =>
+  t === "MAIN" || t === "LEGACY" || t === "PENDING" || t === "TIMELINE";
 
 const ChevronDown = () => (
   <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
@@ -340,13 +343,17 @@ function MobileNav({ active, setActive }) {
     const ro = new ResizeObserver(check);
     ro.observe(parent);
     ro.observe(measure);
+    window.addEventListener("resize", check);
     check();
 
     if (document.fonts?.ready) {
       document.fonts.ready.then(check).catch(() => {});
     }
 
-    return () => ro.disconnect();
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", check);
+    };
   }, [active]);
 
   const activeTab = TABS.includes(active) ? active : TABS[0];
@@ -418,6 +425,12 @@ function MobileNav({ active, setActive }) {
   );
 }
 
+const MOBILE_NAV_QUERY = "(max-width: 1024px)";
+const SEARCH_MIN_WIDTH = 220;
+const DISCORD_BTN_WIDTH = 44;
+const CONTROLS_INNER_GAP = 12;
+const NAV_FIT_SLACK = 8;
+
 export default function Header({
   mode,
   setMode,
@@ -443,18 +456,102 @@ export default function Header({
   showProjectedRanks = false,
   setShowProjectedRanks,
 }) {
-  if (active === "HOME") return null;
-
   const [showNav, setShowNav] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
+  const [compactNav, setCompactNav] = useState(() =>
+    typeof window !== "undefined"
+      ? window.matchMedia(MOBILE_NAV_QUERY).matches
+      : false,
+  );
+
+  const rowRef = useRef(null);
+  const brandRef = useRef(null);
+  const navMeasureRef = useRef(null);
+  const compactNavRef = useRef(compactNav);
+
+  useEffect(() => {
+    compactNavRef.current = compactNav;
+  }, [compactNav]);
+
+  useEffect(() => {
+    if (active === "HOME") return;
+
+    const row = rowRef.current;
+    const navMeasure = navMeasureRef.current;
+    if (!row || !navMeasure) return;
+
+    const setCompact = (next) => {
+      if (compactNavRef.current === next) return;
+      compactNavRef.current = next;
+      setCompactNav(next);
+    };
+
+    const measureNeeded = () => {
+      const gap =
+        Number.parseFloat(
+          getComputedStyle(row).columnGap || getComputedStyle(row).gap,
+        ) || 0;
+      const brandW = brandRef.current?.offsetWidth ?? 0;
+      const navW = navMeasure.scrollWidth;
+      const needsControls = showHeader && hasListControls(active);
+
+      if (!needsControls) return brandW + gap + navW;
+
+      const controlsW =
+        SEARCH_MIN_WIDTH + CONTROLS_INNER_GAP + DISCORD_BTN_WIDTH;
+      return brandW + gap * 2 + controlsW + navW;
+    };
+
+    const check = () => {
+      if (window.matchMedia(MOBILE_NAV_QUERY).matches) {
+        setCompact(true);
+        return;
+      }
+
+      const needed = measureNeeded();
+      const available = row.clientWidth;
+
+      if (compactNavRef.current) {
+        // Expand once there is clear room for the full desktop header.
+        if (needed + NAV_FIT_SLACK <= available) setCompact(false);
+        return;
+      }
+
+      if (needed > available) setCompact(true);
+    };
+
+    const ro = new ResizeObserver(check);
+    ro.observe(row);
+    ro.observe(navMeasure);
+    if (brandRef.current) ro.observe(brandRef.current);
+
+    const media = window.matchMedia(MOBILE_NAV_QUERY);
+    media.addEventListener("change", check);
+    window.addEventListener("resize", check);
+    check();
+
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(check).catch(() => {});
+    }
+
+    return () => {
+      ro.disconnect();
+      media.removeEventListener("change", check);
+      window.removeEventListener("resize", check);
+    };
+  }, [active, showHeader]);
+
+  if (active === "HOME") return null;
 
   return (
     <>
-      <header className={`hd${showHeader ? "" : " hd--compact"}`}>
+      <header
+        className={`hd${showHeader ? "" : " hd--compact"}${compactNav ? " hd--compact-nav" : ""}`}
+      >
         <div className="hd__layout">
-          <div className="hd__row">
+          <div className="hd__row" ref={rowRef}>
             {active !== "HOME" && (
-              <div className="hd__brand">
+              <div className="hd__brand" ref={brandRef}>
                 <div
                   className="hd__logo hd__logo--home"
                   onClick={() => setActive("HOME")}
@@ -468,6 +565,15 @@ export default function Header({
                 </div>
               </div>
             )}
+
+            <div className="hd__nav-fit-measure" ref={navMeasureRef} aria-hidden="true">
+              {TABS.map((t) => (
+                <span key={t} className="hd__nav-btn">
+                  <i className={`fas ${TAB_ICONS[t]}`} aria-hidden="true" />
+                  <span className="hd__nav-label">{t}</span>
+                </span>
+              ))}
+            </div>
 
             {showHeader && hasListControls(active) && (
               <>

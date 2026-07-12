@@ -1,3 +1,5 @@
+import { isDuplicateAchievement } from "./groupDuplicates.js";
+
 export const NLW_ESTIMATE = "NLW";
 export const NLW_ESTIMATE_LABEL = "Not List Worthy";
 export const PURE_NLW_ESTIMATE_LABEL = "Questionable to be List Worthy";
@@ -51,7 +53,7 @@ export function isPureNlwEstimate(entry) {
 export function getMainListCount(mainEntries) {
   if (!Array.isArray(mainEntries)) return 0;
   return mainEntries.reduce(
-    (count, entry) => count + (entry?.duplicateOf ? 0 : 1),
+    (count, entry) => count + (isDuplicateAchievement(entry) ? 0 : 1),
     0,
   );
 }
@@ -173,7 +175,7 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
   let listRank = 0;
 
   for (const entry of mainEntries) {
-    if (entry?.duplicateOf) continue;
+    if (isDuplicateAchievement(entry)) continue;
     listRank += 1;
     items.push({
       type: "main",
@@ -187,7 +189,7 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
   const mainCount = listRank;
 
   for (const entry of pendingEntries) {
-    if (entry?.duplicateOf) continue;
+    if (isDuplicateAchievement(entry)) continue;
     const slot = getProjectionSlot(entry, mainCount);
     items.push({
       type: "pending",

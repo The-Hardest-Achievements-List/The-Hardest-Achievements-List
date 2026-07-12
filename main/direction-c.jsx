@@ -8,7 +8,7 @@
     const [mode, setMode] = useState("classic");
     const [activeTags, setActiveTags] = useState(new Set(["Level"]));
 
-    const tabs = ["MAIN", "PENDING", "REMOVED", "TIMELINE"];
+    const tabs = ["MAIN", "PENDING", "LEGACY", "TIMELINE"];
 
     const toggleTag = (t) => {
       const next = new Set(activeTags);

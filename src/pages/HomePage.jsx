@@ -25,7 +25,7 @@ const ROLE_COLORS = {
 const FILE_LABELS = {
   achievements: "Classic Main",
   pending: "Classic Pending",
-  legacy: "Classic Removed",
+  legacy: "Legacy",
   timeline: "Classic Timeline",
   platformers: "Platformer Main",
   platformertimeline: "Platformer Timeline",
@@ -202,16 +202,23 @@ export default function HomePage({
             <i className="fas fa-bars home__hero-icon" aria-hidden="true"></i>
             <span className="home__hero-label">Main List</span>
           </a>
-          <a href="/classic/pending" className="home__hero-btn">
-            <i className="fas fa-clock home__hero-icon" aria-hidden="true"></i>
-            <span className="home__hero-label">Pending</span>
-          </a>
           <a href="/classic/timeline" className="home__hero-btn">
             <i
               className="fas fa-clock-rotate-left home__hero-icon"
               aria-hidden="true"
             ></i>
             <span className="home__hero-label">Timeline</span>
+          </a>
+          <a href="/classic/pending" className="home__hero-btn">
+            <i className="fas fa-clock home__hero-icon" aria-hidden="true"></i>
+            <span className="home__hero-label">Pending</span>
+          </a>
+          <a href="/classic/legacy" className="home__hero-btn">
+            <i
+              className="fas fa-box-archive home__hero-icon"
+              aria-hidden="true"
+            ></i>
+            <span className="home__hero-label">Legacy</span>
           </a>
           <a href="/leaderboard" className="home__hero-btn">
             <i

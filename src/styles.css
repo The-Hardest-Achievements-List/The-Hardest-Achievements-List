@@ -245,8 +245,9 @@ i[class*="fa-"]::before {
     display: flex;
     align-items: stretch;
     gap: 12px;
-    width: 100%;
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .hd__nav-right {
@@ -257,7 +258,19 @@ i[class*="fa-"]::before {
     padding: 3px;
     border-radius: 8px;
     flex-shrink: 0;
-    margin-left: auto;
+    margin-left: 0;
+}
+
+.hd__nav-fit-measure {
+    position: fixed;
+    left: -99999px;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    white-space: nowrap;
 }
 
 .hd__right-group {
@@ -559,7 +572,7 @@ i[class*="fa-"]::before {
 }
 
 .hd__search {
-    flex: 1;
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -569,7 +582,8 @@ i[class*="fa-"]::before {
     border-radius: 8px;
     color: var(--ink-3);
     transition: border-color 0.15s;
-    min-width: 300px;
+    min-width: 0;
+    max-width: 520px;
 }
 
 .hd__search:focus-within {
@@ -872,7 +886,8 @@ i[class*="fa-"]::before {
     padding: 40px 40px 0;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    --list-gap: 14px;
+    gap: var(--list-gap);
     max-width: 100%;
 }
 
@@ -892,13 +907,15 @@ i[class*="fa-"]::before {
     width: min(420px, calc(100% - 960px));
     max-width: 420px;
     height: calc(100vh - var(--hd-height));
-    padding: 24px 24px 40px 24px;
+    padding: 24px 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     z-index: 50;
-    transition: width 0.3s ease, padding 0.3s ease;
+    box-sizing: border-box;
+    transition: width 0.3s ease, padding 0.3s ease, max-width 0.3s ease;
 }
 
 .list__sidebar.is-collapsed {
@@ -967,15 +984,18 @@ i[class*="fa-"]::before {
     border-radius: 8px;
     display: flex;
     flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .list__sidebar .hd__mode-toggle button {
     background: transparent;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 10px;
     font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    letter-spacing: 0.08em;
     font-weight: 600;
     color: var(--ink-3);
     cursor: pointer;
@@ -983,6 +1003,7 @@ i[class*="fa-"]::before {
     transition: background 0.15s, color 0.15s;
     white-space: nowrap;
     flex: 1;
+    min-width: 0;
 }
 
 .list__sidebar .hd__mode-toggle button:hover {
@@ -1005,6 +1026,9 @@ i[class*="fa-"]::before {
     border-radius: 8px;
     flex-shrink: 0;
     flex-wrap: wrap;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .list__sidebar .hd__layout-btn {
@@ -1034,6 +1058,7 @@ i[class*="fa-"]::before {
     font-family: var(--mono);
     font-size: 11px;
     width: 100%;
+    min-width: 0;
     order: 3;
 }
 
@@ -1044,7 +1069,8 @@ i[class*="fa-"]::before {
 
 .list__sidebar .hd__scale-control input {
     width: 100%;
-    min-width: 80px;
+    min-width: 0;
+    flex: 1;
 }
 
 .list__sidebar .hd__sort-group {
@@ -1057,6 +1083,12 @@ i[class*="fa-"]::before {
     padding: 8px;
     border-radius: 8px;
     flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
 }
 
 .list__sidebar .hd__sort-group .hd__sort-lbl {
@@ -1070,20 +1102,28 @@ i[class*="fa-"]::before {
     gap: 6px;
     flex: 1;
     min-width: 0;
+    width: 100%;
 }
 
 .list__sidebar .hd__sel--compact {
-    flex: 1;
+    flex: 1 1 0;
     min-width: 0;
+    max-width: 100%;
 }
 
 .list__sidebar .hd__sel--compact .hd__sel-btn {
     width: 100%;
     min-width: 0;
+    max-width: 100%;
     justify-content: space-between;
-    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__sel-btn-label {
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .list__sidebar .hd__toggle {
@@ -1137,7 +1177,12 @@ i[class*="fa-"]::before {
 
 .list__sidebar .hd__sel {
     position: relative;
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.list__sidebar .hd__sel:has(.hd__sel-menu) {
+    z-index: 3;
 }
 
 .list__sidebar .hd__sel-btn {
@@ -1156,6 +1201,8 @@ i[class*="fa-"]::before {
     border-radius: 6px;
     transition: background 0.12s, color 0.12s;
     height: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .list__sidebar .hd__sel-btn:hover {
@@ -1208,11 +1255,59 @@ i[class*="fa-"]::before {
 
 .list__filters {
     width: 100%;
+    min-width: 0;
     background: var(--bg-2);
     border: 1px solid var(--line);
     border-radius: 16px;
-    padding: 18px 18px 14px;
-    flex-shrink: 0;
+    padding: 18px 14px 14px;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.list__sidebar .hd__filters {
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__fgroup-lbl {
+    padding-top: 0;
+}
+
+.list__sidebar .hd__chips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+}
+
+.list__sidebar .hd__chip {
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.list__sidebar .hd__chip .tooltip-container {
+    min-width: 0;
+    max-width: 100%;
+    flex: 0 1 auto;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .list--list {
@@ -1323,6 +1418,18 @@ i[class*="fa-"]::before {
     color: var(--ink-3);
 }
 
+.list__window {
+    display: flex;
+    flex-direction: column;
+    gap: var(--list-gap, 14px);
+    width: 100%;
+}
+
+.list__window > .card,
+.list__window > .grouped-achievement {
+    flex: 0 0 auto;
+}
+
 .card {
     position: relative;
     display: grid;
@@ -1334,8 +1441,6 @@ i[class*="fa-"]::before {
     background: var(--bg-2);
     border: 1px solid var(--line);
     overflow: hidden;
-    content-visibility: auto;
-    contain-intrinsic-size: auto 180px;
     border-radius: 12px;
     cursor: pointer;
     transition: border-color 0.2s;
@@ -1380,34 +1485,60 @@ i[class*="fa-"]::before {
     color: oklch(72% 0.2 25);
 }
 
+.card.is-replacement {
+    border-color: oklch(65% 0.18 145 / 0.6);
+    box-shadow: inset 4px 0 0 oklch(62% 0.2 145);
+}
+
+.list--list .card.is-replacement {
+    background: oklch(55% 0.16 145 / 0.12);
+    box-shadow: none;
+    border-left: 4px solid oklch(62% 0.2 145);
+}
+
+.list--list .card.is-replacement:hover {
+    background: oklch(55% 0.16 145 / 0.18);
+    border-color: oklch(65% 0.18 145 / 0.6);
+}
+
+.card.is-replacement .card__name {
+    color: oklch(72% 0.18 145);
+}
+
 .card__content {
     position: relative;
     overflow: hidden;
     container-type: inline-size;
     container-name: card-content;
+    background-color: var(--bg-2);
+    border-right: 1px solid #101113;
+}
+
+/* Blurred thumb sits on its own layer and bleeds past the clip edge so
+   backdrop/filter undersampling can't leave bright pixels at the rim. */
+.card__content::after {
+    content: '';
+    position: absolute;
+    inset: -24px;
     background-image: var(--thumb-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-right: 1px solid #101113;
+    filter: blur(10px) brightness(0.35) saturate(0.6);
+    pointer-events: none;
+    z-index: 0;
 }
 
+/* Opaque scrim on top of the blur — guarantees coverage even if blur fails. */
 .card__content::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent 70%, #000000db);
+    background:
+        linear-gradient(90deg, transparent 70%, #000000db),
+        oklch(8.5% 0.018 280 / 0.55);
     pointer-events: none;
     z-index: 1;
-}
-
-.card__content::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(8px) brightness(0.35) saturate(0.6);
-    pointer-events: none;
-    z-index: 0;
 }
 
 .card__detail {
@@ -1557,6 +1688,10 @@ i[class*="fa-"]::before {
     pointer-events: auto;
 }
 
+.card__corner-actions:has(.grouped-achievement__toggle.is-replacement-label) {
+    width: calc(148px * var(--corner-btn-scale, 1));
+}
+
 .card__corner-actions .card__note-tag,
 .card__corner-actions .grouped-achievement__toggle {
     width: 100%;
@@ -1580,6 +1715,10 @@ i[class*="fa-"]::before {
 .card.has-corner-note .card__tags,
 .card.has-corner-variant .card__tags {
     padding-right: calc(118px * var(--corner-btn-scale, 1));
+}
+
+.card.has-corner-variant:has(.grouped-achievement__toggle.is-replacement-label) .card__tags {
+    padding-right: calc(154px * var(--corner-btn-scale, 1));
 }
 
 .card__note-tag {
@@ -2013,6 +2152,10 @@ i[class*="fa-"]::before {
     color: oklch(72% 0.2 25);
 }
 
+.modal.is-replacement .modal__name {
+    color: oklch(72% 0.18 145);
+}
+
 .modal__player {
     display: flex;
     align-items: baseline;
@@ -2115,6 +2258,27 @@ i[class*="fa-"]::before {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.modal__proof-section {
+    margin-bottom: 20px;
+}
+
+.modal__embed--proof {
+    height: auto;
+    padding-bottom: 0;
+    max-height: min(70vh, 520px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__embed--proof img {
+    display: block;
+    width: 100%;
+    max-height: min(70vh, 520px);
+    object-fit: contain;
+    background: var(--bg);
 }
 
 .modal__links {
@@ -2341,6 +2505,62 @@ i[class*="fa-"]::before {
     cursor: pointer;
 }
 
+.hd--compact-nav .hd__nav-right,
+.hd--compact-nav .hd__controls-wrapper {
+    display: none;
+}
+
+.hd--compact-nav .hd__mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.hd--compact-nav .hd__nav-mobile-dropdown {
+    min-width: 0;
+}
+
+.hd--compact-nav .hd__nav-mobile-btn {
+    display: inline-flex;
+}
+
+.hd--compact-nav .hd__nav-mobile-btn-label {
+    display: inline;
+}
+
+.hd--compact-nav .hd__nav-mobile-action-btn:active {
+    transform: translateY(0);
+    box-shadow: inset 0 0 0 1px oklch(100% 0 0 / 0.04);
+}
+
+.hd--compact-nav .hd__filter-badge {
+    background: var(--acc);
+    color: var(--bg);
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+/* Header Filters button replaces the sidebar whenever compact nav is active */
+.app:has(.hd--compact-nav) .list__sidebar {
+    display: none;
+}
+
+.app:has(.hd--compact-nav) .list--card,
+.app:has(.hd--compact-nav) .list.is-sidebar-collapsed.list--card {
+    padding-left: clamp(10px, 4vw, 40px);
+    padding-right: clamp(10px, 4vw, 40px);
+}
+
 @media (max-width: 1024px) {
     .hd__nav-right {
         display: none;
@@ -2508,7 +2728,7 @@ i[class*="fa-"]::before {
 
     .list {
         padding: 0 10px;
-        gap: 7px;
+        --list-gap: 7px;
     }
 
     .list--list,
@@ -2522,7 +2742,22 @@ i[class*="fa-"]::before {
         grid-template-columns: 1fr 80px;
         height: auto;
         min-height: 90px;
-        max-height: calc(180px * var(--card-height, 1));
+        max-height: none;
+    }
+
+    /* Keep auto-height cards content-sized; don't let thumb intrinsic size stretch them. */
+    .card__thumb {
+        position: relative;
+        align-self: stretch;
+        min-height: 90px;
+    }
+
+    .card__thumb img,
+    .card__thumb-placeholder {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .card.has-corner-note .card__tags,
@@ -2602,6 +2837,14 @@ i[class*="fa-"]::before {
         gap: clamp(2px, 0.7vw, 3px);
     }
 
+    .card__corner-actions:has(.grouped-achievement__toggle.is-replacement-label) {
+        width: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
+    .card.has-corner-variant:has(.grouped-achievement__toggle.is-replacement-label) .card__tags {
+        padding-right: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
     .card__corner-actions .card__note-tag {
         min-height: clamp(18px, 5.2vw, 22px);
         border-radius: clamp(4px, 1.2vw, 5px);
@@ -2613,11 +2856,18 @@ i[class*="fa-"]::before {
 
     .card__corner-actions .grouped-achievement__toggle {
         min-height: clamp(18px, 5.2vw, 22px);
+        min-width: 0;
+        width: 100%;
         padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
         gap: clamp(2px, 0.9vw, 4px);
         border-radius: clamp(4px, 1.2vw, 5px);
         font-size: clamp(7px, 2.1vw, 8px);
         letter-spacing: 0.01em;
+    }
+
+    .card__corner-actions .grouped-achievement__toggle.is-replacement-label {
+        min-width: 0;
+        padding-inline: clamp(4px, 1.4vw, 6px);
     }
 
     .card__corner-actions .grouped-achievement__toggle-icon {
@@ -3328,6 +3578,7 @@ i[class*="fa-"]::before {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
     overflow-wrap: break-word;
     word-break: normal;
@@ -3517,6 +3768,19 @@ i[class*="fa-"]::before {
     color: oklch(72% 0.2 25);
 }
 
+.lb__ach.is-replacement {
+    background: oklch(55% 0.16 145 / 0.1);
+    border-left: 3px solid oklch(62% 0.2 145);
+}
+
+.lb__ach.is-replacement:hover {
+    background: oklch(55% 0.16 145 / 0.16);
+}
+
+.lb__ach.is-replacement .lb__ach-name {
+    color: oklch(72% 0.18 145);
+}
+
 .lb__ach.is-pending {
     background: oklch(55% 0.16 145 / 0.1);
     border-left: 3px solid oklch(62% 0.2 145);
@@ -3552,6 +3816,7 @@ i[class*="fa-"]::before {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
     overflow-wrap: break-word;
     word-break: normal;
@@ -3612,6 +3877,7 @@ i[class*="fa-"]::before {
     .lb__detail--inline {
         display: block;
         margin-top: 4px;
+        margin-bottom: 10px;
     }
 
     .lb__detail--inline .lb__detail-hd {

@@ -18,9 +18,10 @@ import {
   buildCountryBoard,
   getCountryName,
   normalizeCountryCode,
+  normalizeCountryCodes,
 } from "../utils/countryLeaderboard";
 import achievementsData from "../../data/achievements.json";
-import playerCountriesData from "../../data/playerCountries.json";
+import playerCountriesData from "../../data/playercountries.json";
 import pendingData from "../../data/pending.json";
 import legacyData from "../../data/legacy.json";
 import timelineData from "../../data/timeline.json";
@@ -56,11 +57,15 @@ const applyCountryFilter = (rows, selectedCountries) => {
   if (!selectedCountries?.length) return rows;
 
   return rows.filter((row) => {
-    if (selectedCountries.includes(UNKNOWN_COUNTRY_VALUE) && !row.country) {
+    const playerCountries = Array.isArray(row.countries)
+      ? row.countries
+      : normalizeCountryCodes(row.country);
+
+    if (selectedCountries.includes(UNKNOWN_COUNTRY_VALUE) && !playerCountries.length) {
       return true;
     }
-    if (row.country && selectedCountries.includes(row.country)) return true;
-    return false;
+
+    return playerCountries.some((code) => selectedCountries.includes(code));
   });
 };
 
@@ -80,7 +85,19 @@ const rowMatchesSearch = (row, query, mode) => {
     );
   }
 
-  return name.includes(normalized) || bestName.includes(normalized);
+  if (name.includes(normalized) || bestName.includes(normalized)) return true;
+
+  const playerCountries = Array.isArray(row.countries)
+    ? row.countries
+    : normalizeCountryCodes(row.country);
+
+  return playerCountries.some((code) => {
+    const countryName = getCountryName(code).toLowerCase();
+    return (
+      code.toLowerCase().includes(normalized) ||
+      countryName.includes(normalized)
+    );
+  });
 };
 
 const MONTHS = [
@@ -327,7 +344,9 @@ DEFAULT_BOARDS.submissions = SUBMISSION_BOARDS;
 
 const COUNTRY_FILTER_OPTIONS = [
   ...new Set(
-    Object.values(playerCountriesData).map((code) => String(code).toUpperCase()),
+    Object.values(playerCountriesData).flatMap((value) =>
+      normalizeCountryCodes(value),
+    ),
   ),
 ]
   .sort((a, b) => getCountryName(a).localeCompare(getCountryName(b)))
@@ -424,6 +443,7 @@ function AchievementRow({
   points,
   isDuplicate = false,
   pendingRemoval = entry?.tags?.includes("Pending Removal"),
+  isReplacement = Boolean(entry?.isReplacement),
   isPending = isPendingSubmission(entry),
   onAchievementClick,
 }) {
@@ -431,6 +451,7 @@ function AchievementRow({
   const pointsValue = points ?? entry.points ?? 0;
   let statusClass = "";
   if (pendingRemoval) statusClass = " is-pending-removal";
+  else if (isReplacement) statusClass = " is-replacement";
   else if (isPending) statusClass = " is-pending";
 
   return (
@@ -783,7 +804,9 @@ export default function LeaderboardPage({
 
   const hasUnknownNationalityPlayers = useMemo(() => {
     const playerBoard = boards.players[listSource] ?? [];
-    return playerBoard.some((row) => !row.country);
+    return playerBoard.some(
+      (row) => !(Array.isArray(row.countries) ? row.countries : []).length,
+    );
   }, [boards.players, listSource]);
 
   const countryFilterModalOptions = useMemo(() => {
