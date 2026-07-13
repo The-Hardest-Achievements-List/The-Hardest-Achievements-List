@@ -698,9 +698,9 @@
   },
   {
     "date": "2015-07-29",
-    "name": "The Ultimate Phase (Old)",
+    "name": "Cataclysm (Old)",
     "player": "GMDElite",
-    "levelID": 104041294,
+    "levelID": 31402255,
     "length": 121,
     "version": "1.9",
     "submitter": "kittycatiscute",
@@ -751,7 +751,7 @@
     "date": "2015-05-14",
     "name": "Cataclysm (Old)",
     "player": "Giron",
-    "levelID": 115539783,
+    "levelID": 31402255,
     "length": 79,
     "version": "1.9",
     "submitter": "Anceps",
@@ -766,7 +766,7 @@
   },
   {
     "date": "2015-05-13",
-    "name": "Acropolis (Old) 65%, 100%",
+    "name": "Acropolis (Old) 65%, 100% in a row",
     "player": "Sungsu Kim",
     "levelID": 5155022,
     "length": 122,
@@ -774,13 +774,14 @@
     "submitter": "Arcadie",
     "video": "https://youtu.be/CxS2dY5JJ9A",
     "showcaseVideo": "https://youtu.be/WOuerC9uuFY",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/5155022/high",
     "id": 5155022
   },
   {
     "date": "2015-05-04",
     "name": "Cataclysm (Old) 71%",
     "player": "Giron",
-    "levelID": 115539783,
+    "levelID": 31402255,
     "length": 54,
     "version": "1.9",
     "submitter": "Anceps",
@@ -797,7 +798,7 @@
     "date": "2015-04-28",
     "name": "Cataclysm (Old) 70%",
     "player": "Giron",
-    "levelID": 115539783,
+    "levelID": 31402255,
     "length": 52,
     "version": "1.9",
     "submitter": "Anceps",
@@ -889,6 +890,7 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/4v39XU7LW7M",
     "showcaseVideo": "https://youtu.be/WOuerC9uuFY",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/5155022/high",
     "id": 25090375
   },
   {
