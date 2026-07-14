@@ -1905,5 +1905,25 @@
       "Progress",
       "2P"
     ]
+  },
+  {
+    "name": "Sweeping Demon 2 39-95%",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-07-14",
+    "length": TBA,
+    "version": 2.2,
+    "submitter": "fishcake0031",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/etENhlTko1Ut?=1591",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+    ]
   }
 ]
