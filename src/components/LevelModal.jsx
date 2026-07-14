@@ -23,6 +23,7 @@ import {
   hasResolvableEstimate,
 } from "../utils/estimateRank";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
+import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 
 export default function LevelModal({
   level: a,
@@ -151,11 +152,23 @@ export default function LevelModal({
               )
             )}
             <div className="modal__tags">
-              {displayTags.map((t, index) => (
-                <span key={`${t}-${index}`} className="modal__tag" data-tag={t}>
-                  {t}
-                </span>
-              ))}
+              {displayTags.map((t, index) => {
+                const def = TAG_DEFINITIONS[t] || {};
+                return (
+                  <span
+                    key={`${t}-${index}`}
+                    className={`modal__tag ${def.className || ""}`}
+                  >
+                    {TAG_ICONS[t] && (
+                      <i
+                        className={`fas ${TAG_ICONS[t]}`}
+                        aria-hidden="true"
+                      />
+                    )}
+                    {def.text || t}
+                  </span>
+                );
+              })}
             </div>
           </div>
 

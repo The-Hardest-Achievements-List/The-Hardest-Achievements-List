@@ -241,64 +241,25 @@
     font-size: 10px;
     letter-spacing: 0.06em;
     font-weight: 600;
-    padding: 3px 8px 3px 14px;
+    padding: 3px 8px;
     border-radius: 4px;
     text-transform: uppercase;
-    position: relative;
     color: var(--acc);
     background: var(--acc-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-.modal__tag::before {
-    content: "â—";
-    position: absolute;
-    left: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 6px;
-    color: currentColor;
+.modal__tag .fas {
+    font-size: 0.85em;
+    flex-shrink: 0;
+    opacity: 0.92;
 }
 
-.modal__tag[data-tag="Level"]::before {
-    content: "â—†";
-}
-
-.modal__tag[data-tag="Progress"]::before {
-    content: "âŸ³";
-}
-
-.modal__tag[data-tag="Consistency"]::before {
-    content: "â‰¡";
-    font-size: 8px;
-}
-
-.modal__tag[data-tag="Rated"]::before {
-    content: "â˜…";
-    font-size: 7px;
-}
-
-.modal__tag[data-tag="Tentative"]::before {
-    content: "âš ";
-    font-size: 7px;
-}
-
-.modal__tag[data-tag="Pending Removal"]::before {
-    content: "âœ•";
-    font-size: 7px;
-}
-
-.modal__tag[data-tag="Verified"]::before {
-    content: "âœ“";
-    font-size: 7px;
-}
-
-.modal__tag[data-tag="Legacy"]::before {
-    content: "â—¼";
-}
-
-.modal__tag[data-tag="Unverified"]::before {
-    content: "?";
-    font-weight: 700;
+.modal__tag.tag-pending-removal {
+    color: oklch(75% 0.18 25);
+    background: oklch(55% 0.18 25 / 0.15);
 }
 
 .modal__name {

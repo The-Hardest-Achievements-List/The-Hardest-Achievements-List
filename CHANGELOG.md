@@ -1,16 +1,10 @@
 # Changelog
 
-Changes from `79cbce0` (*Standardizing JSON field order and tag arrays format & order on achievement.json while also adding noclip and other tags to some entries*) through `3987c8d` (*Rework on leaderboard system and adding regional leaderboard, Adding Legacy List back, Separating Video and Proofs on Timeline, Changing thumbnail folder directory and multiple bugfixes*).
+Changes from `79cbce0` (*Standardizing JSON field order and tag arrays format & order on achievement.json while also adding noclip and other tags to some entries*) through `87fcf22` (*Adding changelog panel, large codebase refactor, optimization, and bug fixes*), including the current post-commit UI fixes.
 
-**Range:** 2026-07-07 → 2026-07-12  
-**Commits:** 18 (feature); 72 total in range  
-**Files changed:** 76 (+32,784 / −14,613 lines)
-
----
-
-## Summary
-
-This period focused on data normalization (`id` → `levelID`, schema enforcement via `normalize:entries`), pending-submission rank projections (now shared across Classic and Platformer lists), thumbnail loading improvements, timeline date inference, YouTube URL normalization, duplicate-grouping fixes, a new **Pending Removal** tag, responsive UI work (mobile drawer, sidebar breakpoint at 1024px), **NLW** pending-estimate handling, rich **notes** display, a full **leaderboard** rewrite with **regional/country** rankings, **Legacy List** restoration, and timeline **video vs. image proof** separation with asset path migration to `images/`.
+- **Range:** 2026-07-06 → 2026-07-14
+- **Commits:** 21 feature commits
+- **Files changed:** 99 (+38,518 / −18,654 lines, including current working-tree changes)
 
 ---
 
@@ -18,7 +12,9 @@ This period focused on data normalization (`id` → `levelID`, schema enforcemen
 
 | Commit   | Date       | Description |
 |----------|------------|-------------|
-| `3987c8d` | 2026-07-12 | Legacy List restored; timeline `image`/`proof` split; `images/thumbnails` & `images/proofs`; cross-list replacement duplicates 
+| `PENDING` | 2026-07-14 | **Hash placeholder:** align modal tag icons and labels with the shared registry; fix rename-only changelog events incorrectly reporting an unchanged rank as movement |
+| `87fcf22` | 2026-07-14 | Homepage Changelog panel; component/CSS architecture refactor; lazy leaderboard and data chunking; expanded-group virtualization fixes |
+| `3987c8d` | 2026-07-12 | Legacy List restored; timeline `image`/`proof` split; `images/thumbnails` & `images/proofs`; cross-list replacement duplicates |
 | `5269d38` | 2026-07-10 | Leaderboard rework; regional/country leaderboard; `ModLeaderboardPage` merged into submissions mode |
 | `10c2dbc` | 2026-07-10 | Data normalization refactor; notes/tooltip UI polish; Twitch link support |
 | `48b392a` | 2026-07-09 | Notes display overhaul (string or array); grouped-card & mobile edge-case fixes |
@@ -36,8 +32,105 @@ This period focused on data normalization (`id` → `levelID`, schema enforcemen
 | `be87c3d` | 2026-07-07 | Adding rank projection system that works with pending submissions + minor UI improvement |
 | `45f1b3c` | 2026-07-07 | Normalizing all instances of `id` into `levelID` and restoring logo image |
 | `010a7a9` | 2026-07-07 | Fixing timestamp not working on iframe embed video |
+| `79cbce0` | 2026-07-06 | Standardized JSON field and tag-array order; added Noclip and other tags to selected achievements |
 
 ---
+
+## Summary
+
+This period focused on data normalization (`id` → `levelID`, schema enforcement via `normalize:entries`), pending-submission rank projections (now shared across Classic and Platformer lists), thumbnail loading improvements, timeline date inference, YouTube URL normalization, duplicate-grouping fixes, a new **Pending Removal** tag, responsive UI work (mobile drawer, sidebar breakpoint at 1024px), **NLW** pending-estimate handling, rich **notes** display, a full **leaderboard** rewrite with **regional/country** rankings, **Legacy List** restoration, and timeline **video vs. image proof** separation with asset path migration to `images/`. The 2026-07-14 update adds a data-backed **homepage Changelog panel**, reorganizes the UI into smaller shared components and co-located stylesheets, improves list virtualization and bundle loading, extends inferred timeline dates to sorting, and fixes several display and normalization edge cases.
+
+---
+
+## Latest update — 2026-07-14
+
+### Homepage Changelog panel (`87fcf22`)
+
+The homepage now includes a structured change-history feed instead of relying only on this repository changelog.
+
+- **Classic / Platformer / Timeline tabs:** switches between independent history feeds with accessible tab roles and selected-state announcements
+- **Automatic event classification:** distinguishes additions, removals, rank increases, rank decreases, renames or progress updates, timeline changes, and achievement-baseline milestones
+- **Detailed headlines:** combines old/new names and ranks, movement direction, and neighboring entries (`above` / `below`) where that context is available
+- **Milestone support:** reports list creation and achievement-baseline increases alongside ordinary list changes
+- **Date grouping:** groups events under human-readable headings such as **Today**, **Yesterday**, or a full calendar date
+- **Pagination:** displays ten events per page using the same shared pagination component as the leaderboard
+- **Current follow-up fix:** rename-only and progress-only events whose rank did not change no longer claim that an entry “moved from #N to #N”
+- **New structural data sources:** `classicchangelog.json`, `platformerchangelog.json`, `timelinechangelog.json`, and `milestones.json`; routine edits to individual list records are intentionally omitted from this document
+
+### Homepage layout, staff, and navigation (`87fcf22`)
+
+- Reworked the homepage into a two-column desktop layout: **Staff** on the left, with **Community** and **Changelog** panels stacked on the right
+- Added responsive height synchronization with `ResizeObserver` so the stacked side panels align with the staff panel without forcing fixed content heights
+- Collapses to a single-column layout below 640px and limits the mobile changelog panel height for easier scrolling
+- Converted staff entries into structured records with multiple roles and optional external profile links
+- Added gradient staff-role colors, keyboard focus styling, descriptive link labels, and safe external-link attributes
+- Updated homepage quick links to use in-app SPA navigation, avoiding full-page reloads when opening Main, Pending, Timeline, Legacy, or Leaderboard views
+
+### Shared components and utilities (`87fcf22`)
+
+The refactor reduces duplicated UI logic while preserving the existing card-based interface.
+
+- **`src/utils/tags.js`:** centralizes Classic/Platformer tag lists, icons, labels, class names, and tooltip definitions for filters, cards, modals, and normalization
+- **`src/utils/display.js`:** centralizes safe conversion and fallback handling for names, ranks, dates, lengths, and tags
+- **`src/hooks/useLevelThumbnail.js`:** moves thumbnail lazy-loading and fallback behavior out of `LevelCard.jsx` so cards, modals, and backgrounds share one hook
+- **`CardTags.jsx`:** owns overflow-aware card tags and their tooltips
+- **`TruncatedCardName.jsx`:** isolates measured, binary-search name truncation
+- **`FilterDrawer.jsx`:** separates mobile filter controls from the main header
+- **`HeaderControls.jsx`:** shares mode, scale, Discord, and sort controls
+- **`SelectDropdown.jsx`:** replaces separate drawer, sidebar, and leaderboard dropdown implementations
+- **`PaginationControls.jsx`:** provides one pagination implementation for the homepage changelog and leaderboard
+- **`constants/sortOptions.js`:** provides shared sort-field and sort-direction options
+- **`utils/playerCountries.js`:** separates player/country lookup helpers from leaderboard aggregation and avoids circular utility dependencies
+
+### Stylesheet reorganization (`87fcf22`)
+
+- Reduced `src/styles.css` to an import manifest instead of a 4,000-line global stylesheet
+- Split styles by ownership into `styles/base.css`, component stylesheets (`Header.css`, `FilterDrawer.css`, `LevelList.css`, `LevelModal.css`), and page stylesheets (`HomePage.css`, `LeaderboardPage.css`)
+- Preserved the existing cascade while making component styling easier to locate and maintain
+
+### Performance and rendering (`87fcf22`)
+
+- Lazy-loads `LeaderboardPage` with React `lazy()` / `Suspense`, keeping leaderboard code out of the initial application render path
+- Configures Vite to emit JSON data imports in a dedicated `data` chunk
+- Corrects virtual-list offsets when grouped duplicate cards are expanded by measuring expanded rows and including their extra height in window calculations
+- Uses `ResizeObserver` to keep virtualized row measurements accurate as grouped content changes size
+- Keeps the existing Intersection Observer thumbnail loading and fallback chain, now through the extracted shared hook
+
+### List, timeline, and leaderboard behavior (`87fcf22`)
+
+- Timeline sorting now uses inferred dates when the stored date is missing or invalid, extending the earlier inferred-date display behavior to ordering
+- Inferred timeline range labels now order neighboring dates chronologically
+- Unknown pending estimates share the unresolved estimate sort tier instead of being placed in a separate trailing tier
+- Expanded duplicate variants receive the projected-rank display setting consistently
+- Player leaderboard `achievementCount` now counts all displayed achievements, including duplicate-associated records, so the count matches the board's achievement details and XP treatment
+- Switching list tab or mode resets search, tag filters, sort field, and direction to prevent stale controls from leaking into another dataset
+- Platformer navigation excludes Legacy, and invalid Platformer Legacy routes redirect to Platformer Main
+- Leaderboard navigation preserves the current leaderboard mode and source when navigating within the leaderboard
+- Modal copy feedback timers are cleaned up on unmount, and clipboard failures are handled without leaving rejected promises
+
+### Tag display consistency (current follow-up)
+
+- Level modals now consume the shared `TAG_DEFINITIONS` and `TAG_ICONS` registry used by the rest of the application
+- Replaced modal-only text pseudo-glyphs with the shared Font Awesome icons and canonical display labels
+- Added modal styling for shared tag classes, including the **Pending Removal** treatment
+
+### Normalization and schema support (`87fcf22`)
+
+- `normalize:entries` now normalizes and newest-first sorts all four changelog/milestone data sources
+- Added dedicated list-changelog, timeline-changelog, and milestone field orders and normalizers
+- Added changelog import aliases for alternate old/new name and rank headings
+- Platformer Pending now uses its own pending-entry field order, including duplicate, notes, and estimate fields, instead of the Platformer Main schema
+- Tag normalization imports the canonical order from `src/utils/tags.js`, removing a duplicated tag registry from the script
+
+### Removed or superseded (`87fcf22`)
+
+- Removed the unused **LIST** layout mode and its alternate grouped-card rendering; the application now has one card layout with adjustable scale
+- Removed the obsolete `hideRank` prop chain; pending estimate/rank presentation is decided directly from entry context
+- Removed unused homepage statistics calculations that were not rendered
+- Removed obsolete duplicate helper exports and the unused `main/direction-c.jsx` source file
+- Removed one-off migration scripts after their image/proof migrations were completed; `normalize:entries` remains the supported normalization path
+- The committed modal pseudo-icon implementation was superseded by the shared tag registry integration described above and is therefore not recorded as a separate feature
+
 
 ## Features
 
@@ -46,7 +139,7 @@ This period focused on data normalization (`id` → `levelID`, schema enforcemen
 `npm run normalize:entries` (`scripts/normalize-entries.mjs`) enforces a consistent JSON schema across all data files.
 
 - Reorders fields per list type (Classic, Pending, Platformer); pending uses a separate field order (`estimateLower` / `estimateUpper` before video fields)
-- Sorts tags to match `CLASSIC_TAGS` / `PLATFORMER_TAGS` in `App.jsx`
+- Sorts tags to match `CLASSIC_TAGS` / `PLATFORMER_TAGS` from the canonical registry in `src/utils/tags.js`
 - Fills missing schema fields with `null`; strips undeclared fields
 - Normalizes `video` / `showcaseVideo` via shared `normalizeYouTubeUrl()` from `format.js`
 - Sorts `pending.json` and `platformerpending.json` alphabetically by name
@@ -122,8 +215,8 @@ A rank projection system simulates how the **Main** list (Classic or Platformer)
 
 New tag for levels marked for removal due to redundancy.
 
-- Added to `CLASSIC_TAGS` and `PLATFORMER_TAGS` in `App.jsx`
-- Tag definition, icon (`fa-trash-can`), and styling in `Header.jsx` / `styles.css`
+- Added to `CLASSIC_TAGS` and `PLATFORMER_TAGS` (now centralized in `src/utils/tags.js`)
+- Tag definition and icon (`fa-trash-can`) are centralized in `src/utils/tags.js`; presentation lives in the owning component stylesheets
 - Visual treatment on cards, modals, and leaderboard rows (`is-pending-removal` class — red accent border/background)
 - Applied to at least one entry in `data/achievements.json`
 
@@ -131,7 +224,7 @@ New tag for levels marked for removal due to redundancy.
 
 Major overhaul of how level thumbnails are fetched and displayed.
 
-- **New hook:** `useLevelThumbnail()` exported from `LevelCard.jsx`
+- **Shared hook:** `useLevelThumbnail()` (now located in `src/hooks/useLevelThumbnail.js`)
   - Intersection Observer lazy-loading (200px root margin)
   - Fallback chain: explicit thumbnail → levelthumbs.prevter.me (high/small/default) → YouTube showcase → YouTube player video
   - Rejects images below 200×200 px and tries the next URL in sequence
@@ -200,7 +293,7 @@ The archived **Legacy** tab returns in the main navigation.
 - **`App.jsx`:** `LEGACY` list in `DATA_MAP`; `legacyRankOffset` continues rank numbering after the current Main list size
 - **`data/legacy.json`:** re-normalized and populated (~100 entries) with the same schema as Classic Main
 - **`Header.jsx`:** Legacy tab with archive icon; Classic-only (no Platformer legacy list)
-- **`HomePage.jsx`:** legacy entry count included in site statistics
+- **`HomePage.jsx`:** Legacy is available from the homepage's SPA quick navigation
 - Leaderboard player/submission boards include legacy-sourced achievements
 
 ### Timeline video vs. proof separation (`3987c8d`)
@@ -280,7 +373,7 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 
 ### Sidebar & sorting (`be87c3d`)
 
-- Sort direction changed from a toggle button to a dedicated **Ascending / Descending** dropdown (`SidebarSelect`)
+- Sort direction changed to a dedicated **Ascending / Descending** sidebar dropdown (now implemented by shared `SelectDropdown`)
 - Collapse button redesigned: full-width with "Hide panel" / "Show panel" label; vertical label when collapsed
 - Accessibility: `aria-label`, `aria-expanded`, `type="button"` on controls
 
@@ -321,7 +414,7 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 ## Files changed by area
 
 ### Application core
-- `src/App.jsx` — projection state, `AppBackground`, pending estimate search/sort, tag list source; mode-agnostic Main/Pending list handling (`7e49b75`); `isGroupedDuplicate` for rank/count (`389fad7`); Header projection props (`239bdc0`); Legacy list + rank offset (`3987c8d`); leaderboard routing (`5269d38`)
+- `src/App.jsx` — projection state, `AppBackground`, pending estimate search/sort; mode-agnostic Main/Pending list handling (`7e49b75`); `isGroupedDuplicate` for rank/count (`389fad7`); Header projection props (`239bdc0`); Legacy list + rank offset (`3987c8d`); leaderboard routing (`5269d38`); changelog data wiring, inferred timeline sort maps, and lazy leaderboard loading (`87fcf22`)
 - `src/utils/estimateRank.js` — projection logic; NLW estimates + resolved bounds (`dce23bf`, `10c2dbc`); `getProjectionSlot()` (`c835988`)
 - `src/utils/format.js` — YouTube timestamps & normalization, thumbnail memoization, levelthumbs API, timeline date inference (`58b5242`); notes helpers + proof/image URL helpers (`48b392a`, `3987c8d`); `formatDisplayVersion()` (`10c2dbc`)
 - `src/utils/groupDuplicates.js` — `isGroupedDuplicate()`, cross-list duplicate handling (`389fad7`); multi-parent `duplicateOf`, replacement duplicates (`3987c8d`)
@@ -332,22 +425,22 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 - `package.json` — `normalize:entries` script; `@fortawesome/fontawesome-free` (`dce23bf`)
 
 ### Components
-- `src/components/LevelCard.jsx` — `useLevelThumbnail` hook, projection/estimate badges, pending removal styling, timeline date label; `CardNoteButton` + note tooltips (`48b392a`)
+- `src/components/LevelCard.jsx` — projection/estimate badges, pending removal styling, timeline date label, and note tooltips; thumbnail loading now lives in `src/hooks/useLevelThumbnail.js`, while tag overflow and measured-name logic live in `CardTags.jsx` and `TruncatedCardName.jsx`
 - `src/components/LevelModal.jsx` — shared thumbnail hook, projection ranks, embed URL fix, timeline date label; notes section; video vs image proof sections (`3987c8d`)
 - `src/components/LevelList.jsx` — projection toggle, sort direction select, timeline date label map (`58b5242`); replacement duplicate handling (`3987c8d`)
 - `src/components/GroupedLevelCard.jsx` / `.css` — projection + estimate props; variant toggle repositioned (`4910d5d`); notes on variants (`48b392a`); replacement styling (`3987c8d`)
-- `src/components/Header.jsx` — Pending Removal tag; chip icon removal; mobile drawer controls (`239bdc0`, `dce23bf`); Legacy tab (`3987c8d`); tag defs for Noclip, Speedhack, Miscellaneous
+- `src/components/Header.jsx` — chip icon removal, responsive navigation, and Legacy tab (`3987c8d`); mobile filters moved to `FilterDrawer.jsx`, controls to `HeaderControls.jsx`, and tag definitions to `src/utils/tags.js` in `87fcf22`
 - `src/components/CountryFilterModal.jsx` — **new** regional filter UI (`5269d38`)
 - `src/components/Tooltip.jsx` — portal-based positioning, projection content
 - `src/components/Tooltip.css` — portal + projection + note tooltip styles
 
 ### Pages
 - `src/pages/LeaderboardPage.jsx` — full rewrite: players/countries/submissions, XP scoring, country filter, pagination (`5269d38`); legacy source + replacement styling (`3987c8d`)
-- `src/pages/HomePage.jsx` — legacy count in statistics (`3987c8d`)
+- `src/pages/HomePage.jsx` — staff/community layout, SPA quick navigation, and tabbed/paginated Changelog panel (`87fcf22`)
 - ~~`src/pages/ModLeaderboardPage.jsx`~~ — **removed**; submitter view merged into `LeaderboardPage` submissions mode (`5269d38`)
 
 ### Styles & HTML
-- `src/styles.css` — chips, sidebar, projection badges, pending removal theme, responsive drawer/breakpoint (`239bdc0`); mobile header fixes (`dce23bf`); note tooltips (`48b392a`); leaderboard layout (`5269d38`)
+- `src/styles.css` — import manifest for the split style architecture; global foundations live in `src/styles/base.css`, with header, drawer, list, modal, homepage, and leaderboard rules in their corresponding component/page stylesheets (`87fcf22`)
 - `index.html` — preconnect + logo preload; Font Awesome CDN removed (`dce23bf`)
 - `src/main.jsx` — Font Awesome npm import (`dce23bf`)
 
@@ -361,7 +454,7 @@ React keys and duplicate grouping updated to use `levelID` (fallback: `name`).
 ## Breaking / migration notes
 
 1. **Data schema:** Any code or scripts expecting an `id` field on level entries must use `levelID` instead.
-2. **Data schema:** All list types now declare a fixed field set; missing values are `null`. Run `npm run normalize:entries` after manual edits. Undeclared fields are stripped.
+2. **Data schema:** All list types and changelog/milestone feeds now declare fixed field sets; missing list-entry values are `null`. Run `npm run normalize:entries` after manual edits. Undeclared fields are stripped, and history feeds are sorted newest-first.
 3. **Pending entries:** To participate in rank projection, entries need `estimateLower` and `estimateUpper` (finite numbers, `"NLW"`, or `"Not List Worthy"`; `lower ≤ upper` when both numeric). Missing estimates sort last and display as "Unknown projection". Applies to both Classic and Platformer pending lists.
 4. **Timeline data:** `platformertimeline.json` no longer stores per-entry `rank`; position in the array defines display order. Invalid/missing `date` values are inferred in the UI from neighbors. Classic `timeline.json` uses separate `image` (screenshot) and `proof` (URL) fields — not interchangeable with `video`.
 5. **Thumbnail sources:** The app now depends on `levelthumbs.prevter.me` as a fallback; network access to that host improves thumbnail coverage. Manual overrides live under **`images/thumbnails/`** (not `thumbnails/`).

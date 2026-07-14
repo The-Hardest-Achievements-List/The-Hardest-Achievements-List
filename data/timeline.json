@@ -959,8 +959,8 @@
   {
     "name": "Cataclysm (Old)",
     "player": "Giron",
-    "levelID": 115539783,
-    "date": "2015-05-14",
+    "levelID": 31402255,
+    "date": null,
     "length": 79,
     "version": 1.9,
     "submitter": "Anceps",
@@ -980,7 +980,7 @@
   {
     "name": "Acropolis (Old) 65%, 100% in a row",
     "player": "Sungsu Kim",
-    "levelID": 5155022,
+    "levelID": 25090375,
     "date": "2015-05-13",
     "length": 122,
     "version": 1.9,
@@ -989,15 +989,19 @@
     "showcaseVideo": "https://youtu.be/WOuerC9uuFY",
     "image": null,
     "proof": null,
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/5155022/high",
     "duplicateOf": null,
     "notes": null,
-    "tags": []
+    "tags": [
+      "Level",
+      "Consistency",
+      "Outdated Version"
+    ]
   },
   {
     "name": "Cataclysm (Old) 71%",
     "player": "Giron",
-    "levelID": 115539783,
+    "levelID": 31402255,
     "date": "2015-05-04",
     "length": 54,
     "version": 1.9,
@@ -1140,7 +1144,7 @@
     "showcaseVideo": "https://youtu.be/WOuerC9uuFY",
     "image": null,
     "proof": null,
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/5155022/high",
     "duplicateOf": null,
     "notes": null,
     "tags": [

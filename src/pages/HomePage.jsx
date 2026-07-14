@@ -230,10 +230,12 @@ function buildChangeHeadline(entry, kind) {
 
   const moveDir =
     kind === "up" ? "up" : kind === "down" ? "down" : null;
+  const ranksDiffer =
+    currentRank != null && newRank != null && currentRank !== newRank;
   const movePhrase =
-    currentRank != null && newRank != null && moveDir
+    ranksDiffer && moveDir
       ? <> and moved {moveDir} from #{currentRank} to #{newRank}</>
-      : currentRank != null && newRank != null
+      : ranksDiffer
         ? <> and moved from #{currentRank} to #{newRank}</>
         : null;
 
