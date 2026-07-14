@@ -1637,6 +1637,26 @@
     ]
   },
   {
+    "name": "Sonic Wave (Cyclic) 1.9 60hz 53%, 100% in a row",
+    "player": "Muffy450",
+    "levelID": 102063440,
+    "date": "2026-01-28",
+    "length": null,
+    "version": 1.9,
+    "submitter": "Muffy450",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0nlG1ptGcPw",
+    "showcaseVideo": "https://youtu.be/gOsHTH8BhQ4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Sonic Wave Infinity (Jevan) 24-70%",
     "player": "Jevan",
     "levelID": null,

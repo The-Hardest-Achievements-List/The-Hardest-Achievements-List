@@ -1175,6 +1175,24 @@
     ]
   },
   {
+    "name": "Antarctic Lights 92%",
+    "player": "Axinity",
+    "levelID": null,
+    "date": "2026-07-09",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/_M3D5xP0w7c",
+    "showcaseVideo": "https://youtu.be/oi5o9GTc7Qs",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4f4649af07835eca639f06d805f8f552f8db474c/thumbnails/Antarctic%20Lights.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Vehemence (wPopoff Old) 39%",
     "player": "wPopoff",
     "levelID": 96572223,
@@ -1566,7 +1584,7 @@
     ]
   },
   {
-    "name": "Tunnel of Despair 18-100%; (0%), 100% 3 deaths, 99.98% Accuracy in a row",
+    "name": "Tunnel of Despair 18-100%, (0%); 100% 3 deaths, 99.98% Accuracy in a row",
     "player": "lanx",
     "levelID": 91351939,
     "date": "2024-10-07",
@@ -2470,7 +2488,7 @@
     ]
   },
   {
-    "name": "ANTARCTIC LIGHTS 25-100%",
+    "name": "Antarctic Lights 25-100%",
     "player": "Axinity",
     "levelID": null,
     "date": "2025-02-03",
@@ -2479,7 +2497,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/X221kjOFiWk",
     "showcaseVideo": "https://youtu.be/oZfKkZ36L9Q",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4f4649af07835eca639f06d805f8f552f8db474c/thumbnails/Antarctic%20Lights.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -4869,7 +4887,7 @@
     "name": "3sh on Pointercrate",
     "player": "VovanPo",
     "levelID": 127534241,
-    "date": "2025-10-16",
+    "date": "2025-10-28",
     "length": 21,
     "version": 2.2,
     "submitter": "VovanPo",
@@ -5404,7 +5422,7 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "0.03% opacity",
+    "notes": "0.03 opacity",
     "tags": [
       "Level",
       "Progress"
@@ -5422,7 +5440,7 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "0.03% opacity",
+    "notes": "0.03 opacity",
     "tags": [
       "Level",
       "Progress"
@@ -5697,7 +5715,7 @@
     "showcaseVideo": "https://youtu.be/7WgD_7Z0Emg",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120546085",
     "duplicateOf": "Sakupen Circles",
-    "notes": null,
+    "notes": "Sakupen Circles with 0.1 opacity",
     "tags": [
       "Level",
       "Verified"
@@ -6642,7 +6660,7 @@
   },
   {
     "name": "Silent RealistiK 22",
-    "player": "apuu",
+    "player": "apu",
     "levelID": 133065676,
     "date": "2026-02-07",
     "length": 51,

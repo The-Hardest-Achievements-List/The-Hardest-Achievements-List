@@ -1,10 +1,18 @@
-import { useState, useMemo, useEffect, startTransition } from "react";
+import {
+  useState,
+  useMemo,
+  useEffect,
+  startTransition,
+  lazy,
+  Suspense,
+} from "react";
 import Header from "./components/Header";
 import LevelList from "./components/LevelList";
 import LevelModal from "./components/LevelModal";
-import { useLevelThumbnail } from "./components/LevelCard";
+import { useLevelThumbnail } from "./hooks/useLevelThumbnail";
 import HomePage from "./pages/HomePage";
-import LeaderboardPage from "./pages/LeaderboardPage";
+
+const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 import {
   getDuplicateParentIds,
   getAchievementKey,
@@ -19,6 +27,14 @@ import {
   buildMainProjection,
   getMainListCount,
 } from "./utils/estimateRank";
+import {
+  isValidDate,
+  getTimelineEntryKey,
+  buildTimelineDateLabelMap,
+  buildTimelineDateSortMap,
+} from "./utils/format";
+import { CLASSIC_TAGS, PLATFORMER_TAGS } from "./utils/tags";
+import { getLeaderboardPath } from "./utils/leaderboard";
 
 import achievementsData from "../data/achievements.json";
 import pendingData from "../data/pending.json";
@@ -27,42 +43,33 @@ import timelineData from "../data/timeline.json";
 import platformersData from "../data/platformers.json";
 import platformerTimelineData from "../data/platformertimeline.json";
 import platformerpendingData from "../data/platformerpending.json";
+import classicChangelogData from "../data/classicchangelog.json";
+import milestonesData from "../data/milestones.json";
+import platformerChangelogData from "../data/platformerchangelog.json";
+import timelineChangelogData from "../data/timelinechangelog.json";
 
-const CLASSIC_TAGS = [
-  "Level",
-  "Challenge",
-  "Low Hertz",
-  "Progress",
-  "Consistency",
-  "Verified",
-  "Rated",
-  "Formerly Rated",
-  "Tentative",
-  "Noclip",
-  "Speedhack",
-  "Mobile",
-  "2P",
-  "Coin Route",
-  "Miscellaneous",
-  "Outdated Version",
-  "Pending Removal",
-];
+function isMilestoneEntry(entry) {
+  return entry?.list === "classic" || entry?.list === "platformer";
+}
 
-const PLATFORMER_TAGS = [
-  "Platformer",
-  "Deathless",
-  "Rated",
-  "Verified",
-  "Consistency",
-  "Progress",
-  "Speedrun",
-  "Low Hertz",
-  "Mobile",
-  "Coin Route",
-  "Miscellaneous",
-  "Outdated Version",
-  "Pending Removal",
-];
+function mergeChangelogWithMilestones(changelog, milestones) {
+  return [...changelog, ...milestones].sort((a, b) => {
+    const dateCmp = String(b.date || "").localeCompare(String(a.date || ""));
+    if (dateCmp !== 0) return dateCmp;
+    // Milestones first on the same day so list-wide events stand out.
+    return Number(isMilestoneEntry(b)) - Number(isMilestoneEntry(a));
+  });
+}
+
+const classicChangelogWithMilestones = mergeChangelogWithMilestones(
+  classicChangelogData,
+  milestonesData.filter((entry) => entry.list === "classic"),
+);
+
+const platformerChangelogWithMilestones = mergeChangelogWithMilestones(
+  platformerChangelogData,
+  milestonesData.filter((entry) => entry.list === "platformer"),
+);
 
 const DATA_MAP = {
   classic: {
@@ -78,22 +85,6 @@ const DATA_MAP = {
     TIMELINE: platformerTimelineData,
   },
 };
-
-const ALL_LISTS_COUNT =
-  achievementsData.length +
-  pendingData.length +
-  legacyData.length +
-  timelineData.length +
-  platformersData.length +
-  platformerTimelineData.length +
-  platformerpendingData.length;
-
-achievementsData.length +
-  pendingData.length +
-  legacyData.length +
-  timelineData.length +
-  platformersData.length +
-  platformerTimelineData.length;
 
 const NO_LIST = new Set(["HOME", "LEADERBOARD"]);
 
@@ -181,7 +172,8 @@ function parseRoute() {
     timeline: "TIMELINE",
   };
   const mode = modeMap[parts[0]] || "classic";
-  const active = tabMap[parts[1]] || "MAIN";
+  let active = tabMap[parts[1]] || "MAIN";
+  if (mode === "platformer" && active === "LEGACY") active = "MAIN";
   return { mode, active };
 }
 
@@ -195,7 +187,6 @@ export default function App() {
   const [activeTags, setActiveTags] = useState(new Map());
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [layoutMode, setLayoutMode] = useState("CARD");
   const [cardScale, setCardScale] = useState(() => {
     if (typeof window === "undefined") return 0.95;
     const stored = window.localStorage.getItem("hd-card-scale");
@@ -212,31 +203,45 @@ export default function App() {
   });
 
   function navigate(newMode, newActive) {
-    if (newActive === "HOME") {
+    // Platformer has no legacy list — fall back to main.
+    const activeTab =
+      newMode === "platformer" && newActive === "LEGACY" ? "MAIN" : newActive;
+
+    if (activeTab === "HOME") {
       history.pushState({}, "", "/");
       startTransition(() => {
         setRoute({ mode: newMode, active: "HOME" });
       });
       return;
     }
-    if (newActive === "LEADERBOARD") {
-      history.pushState({}, "", "/leaderboard");
+    if (activeTab === "LEADERBOARD") {
+      const lbMode =
+        active === "LEADERBOARD" ? (route.lbMode ?? "players") : "players";
+      const listSource =
+        active === "LEADERBOARD"
+          ? (route.listSource ?? "classic")
+          : "classic";
+      const path =
+        lbMode === "players" && listSource === "classic"
+          ? "/leaderboard"
+          : getLeaderboardPath(lbMode, listSource);
+      history.pushState({}, "", path);
       startTransition(() => {
         setRoute({
           mode: newMode,
           active: "LEADERBOARD",
-          lbMode: "players",
-          listSource: "classic",
+          lbMode,
+          listSource,
         });
       });
       return;
     }
     const modeSlug = newMode === "platformer" ? "plat" : "classic";
-    const tabSlug = newActive === "MAIN" ? "" : newActive.toLowerCase();
+    const tabSlug = activeTab === "MAIN" ? "" : activeTab.toLowerCase();
     const path = tabSlug ? `/${modeSlug}/${tabSlug}` : `/${modeSlug}`;
     history.pushState({}, "", path);
     startTransition(() => {
-      setRoute({ mode: newMode, active: newActive });
+      setRoute({ mode: newMode, active: activeTab });
     });
   }
 
@@ -287,15 +292,14 @@ export default function App() {
     () => getParentKeysInList(rawData),
     [rawData],
   );
-  const rankedCount = useMemo(
-    () =>
-      rawData.reduce(
-        (count, achievement) =>
-          count +
-          (isGroupedDuplicate(achievement, rawData, rawDataParentKeys) ? 0 : 1),
-        0,
-      ),
-    [rawData, rawDataParentKeys],
+  const isTimeline = active === "TIMELINE";
+  const timelineDateLabelMap = useMemo(
+    () => (isTimeline ? buildTimelineDateLabelMap(rawData) : null),
+    [isTimeline, rawData],
+  );
+  const timelineDateSortMap = useMemo(
+    () => (isTimeline ? buildTimelineDateSortMap(rawData) : null),
+    [isTimeline, rawData],
   );
   const rawDataWithListRank = useMemo(() => {
     if (!Array.isArray(rawData)) return [];
@@ -306,6 +310,7 @@ export default function App() {
       }
       rank += 1;
       const key = getAchievementKey(achievement);
+      const timelineKey = getTimelineEntryKey(achievement);
       const projectedRank =
         mainProjectionByKey != null
           ? (mainProjectionByKey.get(key) ?? null)
@@ -314,9 +319,27 @@ export default function App() {
         ...achievement,
         listRank: rank + legacyRankOffset,
         projectedRank,
+        ...(timelineDateLabelMap
+          ? {
+              timelineDateLabel:
+                timelineDateLabelMap.get(timelineKey) ?? null,
+            }
+          : {}),
+        ...(timelineDateSortMap
+          ? {
+              sortDateMs: timelineDateSortMap.get(timelineKey) ?? null,
+            }
+          : {}),
       };
     });
-  }, [rawData, rawDataParentKeys, mainProjectionByKey, legacyRankOffset]);
+  }, [
+    rawData,
+    rawDataParentKeys,
+    mainProjectionByKey,
+    legacyRankOffset,
+    timelineDateLabelMap,
+    timelineDateSortMap,
+  ]);
 
   const allTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
 
@@ -352,14 +375,12 @@ export default function App() {
   };
 
   useEffect(() => {
-    setActiveTags(new Map());
-    setSort("rank");
-    setSortDir("asc");
-  }, [mode]);
-
-  useEffect(() => {
     setSearch("");
     setActiveTags(new Map());
+    if (!NO_LIST.has(active)) {
+      setSort("rank");
+      setSortDir("asc");
+    }
   }, [active, mode]);
 
   useEffect(() => {
@@ -453,8 +474,18 @@ export default function App() {
         va = a.length ?? 0;
         vb = b.length ?? 0;
       } else {
-        va = new Date(a.date ?? 0).getTime();
-        vb = new Date(b.date ?? 0).getTime();
+        const getSortDateMs = (entry) => {
+          if (entry.sortDateMs != null) return entry.sortDateMs;
+          if (isValidDate(entry.date)) return new Date(entry.date).getTime();
+          return null;
+        };
+        const aMs = getSortDateMs(a);
+        const bMs = getSortDateMs(b);
+        if (aMs == null && bMs == null) return 0;
+        if (aMs == null) return 1;
+        if (bMs == null) return -1;
+        va = aMs;
+        vb = bMs;
       }
       if (va < vb) return sortDir === "asc" ? -1 : 1;
       if (va > vb) return sortDir === "asc" ? 1 : -1;
@@ -513,9 +544,6 @@ export default function App() {
         activeTags={activeTags}
         toggleTag={toggleTag}
         allTags={allTags}
-        totalCount={ALL_LISTS_COUNT}
-        layoutMode={layoutMode}
-        setLayoutMode={setLayoutMode}
         cardScale={cardScale}
         setCardScale={setCardScale}
         cardWidth={cardWidth}
@@ -527,44 +555,34 @@ export default function App() {
 
       {active === "HOME" ? (
         <HomePage
-          totalCount={
-            achievementsData.length +
-            pendingData.length +
-            legacyData.length +
-            platformersData.length
-          }
-          achievementsData={achievementsData}
-          pendingData={pendingData}
-          legacyData={legacyData}
-          timelineData={timelineData}
-          platformersData={platformersData}
-          platformerTimelineData={platformerTimelineData}
+          classicChangelog={classicChangelogWithMilestones}
+          platformerChangelog={platformerChangelogWithMilestones}
+          timelineChangelog={timelineChangelogData}
+          onNavigate={navigate}
         />
       ) : active === "LEADERBOARD" ? (
-        <LeaderboardPage
-          initialMode={route.lbMode ?? "players"}
-          initialListSource={route.listSource ?? "classic"}
-          onAchievementClick={setSelectedLevel}
-        />
+        <Suspense fallback={null}>
+          <LeaderboardPage
+            initialMode={route.lbMode ?? "players"}
+            initialListSource={route.listSource ?? "classic"}
+            onAchievementClick={setSelectedLevel}
+          />
+        </Suspense>
       ) : (
         <LevelList
           key={`${mode}-${active}`}
           listKey={`${mode}-${active}`}
           data={filteredData}
-          totalCount={rankedCount}
           activeTags={activeTags}
           allTags={allTags}
           toggleTag={toggleTag}
-          isTimeline={active === "TIMELINE"}
-          hideRank={active === "PENDING" && !isPendingList}
+          isTimeline={isTimeline}
           isPendingEstimate={isPendingList}
           pendingMainCount={pendingMainCount}
           projectionAvailable={projectionAvailable}
           showProjectedRanks={showProjectedRanks}
           setShowProjectedRanks={setShowProjectedRanks}
           onCardClick={setSelectedLevel}
-          layoutMode={layoutMode}
-          setLayoutMode={setLayoutMode}
           cardScale={cardScale}
           setCardScale={setCardScale}
           cardWidth={cardWidth}
@@ -584,9 +602,6 @@ export default function App() {
         <LevelModal
           level={selectedLevel}
           onClose={() => setSelectedLevel(null)}
-          hideRank={
-            active !== "LEADERBOARD" && active === "PENDING" && !isPendingList
-          }
           isPendingEstimate={
             selectedLevel._src
               ? ["pending", "platformerpending"].includes(selectedLevel._src)

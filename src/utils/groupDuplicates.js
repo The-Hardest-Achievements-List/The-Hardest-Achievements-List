@@ -43,11 +43,6 @@ export function getDuplicateParentIds(achievement) {
   return parents;
 }
 
-/** First parent name, or null. Prefer getDuplicateParentIds for multi-parent links. */
-export function getDuplicateParentId(achievement) {
-  return getDuplicateParentIds(achievement)[0] ?? null;
-}
-
 export function isDuplicateAchievement(achievement) {
   return getDuplicateParentIds(achievement).length > 0;
 }
@@ -333,13 +328,4 @@ export function groupAchievementsByDuplicates(achievements, options = {}) {
   return {
     mainAchievements,
   };
-}
-
-export function getDuplicatesForAchievement(achievementName, achievements) {
-  const normalizedParentRef = normalizeDuplicateKey(achievementName);
-  return achievements.filter((a) =>
-    getDuplicateParentIds(a).some(
-      (parentRef) => normalizeDuplicateKey(parentRef) === normalizedParentRef,
-    ),
-  );
 }

@@ -1,6 +1,8 @@
 ﻿import { useState, useRef, useEffect, Fragment, useMemo } from "react";
-import { getNotesPreview } from "../utils/format";
+import { formatDate, getNotesPreview } from "../utils/format";
 import CountryFilterModal from "../components/CountryFilterModal";
+import SelectDropdown from "../components/SelectDropdown";
+import PaginationControls from "../components/PaginationControls";
 import {
   buildPlayerBoard,
   buildSubmissionBoard,
@@ -8,11 +10,11 @@ import {
   getEntryRank,
   paginateRows,
   sortLeaderboardRows,
-  getPaginationItems,
   PLAYER_SORT_OPTIONS,
   COUNTRY_SORT_OPTIONS,
   SUBMISSION_SORT_OPTIONS,
   SORT_DIR_OPTIONS,
+  getLeaderboardPath,
 } from "../utils/leaderboard";
 import {
   buildCountryBoard,
@@ -100,21 +102,6 @@ const rowMatchesSearch = (row, query, mode) => {
   });
 };
 
-const MONTHS = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
-];
-
 const SOURCE_LABEL = {
   classic: "Classic",
   pending: "Classic Pending",
@@ -132,12 +119,6 @@ const POINT_FORMATTER = new Intl.NumberFormat("en-US", {
   minimumFractionDigits: 0,
   maximumFractionDigits: 2,
 });
-
-function fmt(iso) {
-  if (!iso) return "—";
-  const d = new Date(iso);
-  return `${d.getDate()} ${MONTHS[d.getMonth()]} ${String(d.getFullYear()).slice(2)}`;
-}
 
 function Points({ value }) {
   const s = POINT_FORMATTER.format(value ?? 0);
@@ -157,77 +138,6 @@ function Points({ value }) {
   );
 }
 
-function LbDropdown({
-  value,
-  options,
-  onChange,
-  ariaLabel,
-  className = "",
-  leading,
-}) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-  const selected = options.find((option) => option.value === value) ?? options[0];
-
-  useEffect(() => {
-    const handlePointerDown = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handlePointerDown);
-    return () => document.removeEventListener("mousedown", handlePointerDown);
-  }, []);
-
-  return (
-    <div className={`lb__dropdown${className ? ` ${className}` : ""}`} ref={ref}>
-      <button
-        type="button"
-        className="lb__dropdown-btn"
-        aria-label={ariaLabel}
-        aria-expanded={open}
-        aria-haspopup="listbox"
-        onClick={() => setOpen((current) => !current)}
-      >
-        {leading}
-        <span className="lb__dropdown-label">{selected?.label}</span>
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-          <path
-            d="M2 3.5L5 6.5L8 3.5"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      </button>
-
-      {open && (
-        <div className="lb__dropdown-menu" role="listbox" aria-label={ariaLabel}>
-          {options.map((option) => (
-            <button
-              key={option.value}
-              type="button"
-              role="option"
-              aria-selected={value === option.value}
-              className={`lb__dropdown-item${value === option.value ? " is-active" : ""}`}
-              onClick={() => {
-                onChange(option.value);
-                setOpen(false);
-              }}
-            >
-              {option.leading ? (
-                <span className="lb__dropdown-item-leading">{option.leading}</span>
-              ) : null}
-              <span>{option.label}</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
 function formatRank(rank) {
   return rank != null ? `#${rank}` : "—";
 }
@@ -240,54 +150,6 @@ function toLevelModalEntry(entry) {
     rank: listRank,
   };
 }
-
-function getLeaderboardPath(mode, listSource) {
-  if (mode === "players") {
-    return listSource === "platformer"
-      ? "/leaderboard/players/platformer"
-      : "/leaderboard/players";
-  }
-  if (mode === "countries") {
-    return listSource === "platformer"
-      ? "/leaderboard/countries/platformer"
-      : "/leaderboard/countries";
-  }
-  if (mode === "submissions") {
-    return listSource === "platformer"
-      ? "/leaderboard/submission/platformer"
-      : "/leaderboard/submission";
-  }
-  return "/leaderboard/players";
-}
-
-const combinedClassic = achievementsData.map((entry) => ({
-  ...entry,
-  _src: "classic",
-}));
-
-const platformerList = platformersData.map((entry) => ({
-  ...entry,
-  _src: "platformer",
-}));
-
-const CLASSIC_POSITION_MAP = buildListPositionMap(combinedClassic);
-const PLATFORMER_POSITION_MAP = buildListPositionMap(platformerList);
-
-const PLAYER_BOARDS = {
-  classic: buildPlayerBoard(combinedClassic, playerCountriesData),
-  platformer: buildPlayerBoard(platformerList, playerCountriesData),
-};
-
-const COUNTRY_BOARDS = {
-  classic: buildCountryBoard(PLAYER_BOARDS.classic, playerCountriesData),
-  platformer: buildCountryBoard(PLAYER_BOARDS.platformer, playerCountriesData),
-};
-
-export const DEFAULT_BOARDS = {
-  players: PLAYER_BOARDS,
-  countries: COUNTRY_BOARDS,
-  submissions: null,
-};
 
 const CLASSIC_SUBMISSION_SOURCES = new Set([
   "classic",
@@ -302,45 +164,78 @@ const PLATFORMER_SUBMISSION_SOURCES = new Set([
   "platformertimeline",
 ]);
 
-const ALL_SUBMISSION_ENTRIES = [
-  ...achievementsData.map((entry) => ({ ...entry, _src: "classic" })),
-  ...pendingData.map((entry) => ({ ...entry, _src: "pending" })),
-  ...legacyData.map((entry) => ({ ...entry, _src: "legacy" })),
-  ...timelineData.map((entry) => ({ ...entry, _src: "timeline" })),
-  ...platformersData.map((entry) => ({ ...entry, _src: "platformer" })),
-  ...platformerpendingData.map((entry) => ({
+function buildDefaultBoards() {
+  const combinedClassic = achievementsData.map((entry) => ({
     ...entry,
-    _src: "platformerpending",
-  })),
-  ...platformerTimelineData.map((entry) => ({
+    _src: "classic",
+  }));
+
+  const platformerList = platformersData.map((entry) => ({
     ...entry,
-    _src: "platformertimeline",
-  })),
-];
+    _src: "platformer",
+  }));
 
-function filterSubmissionEntries(listSource) {
-  const allowed =
-    listSource === "platformer"
-      ? PLATFORMER_SUBMISSION_SOURCES
-      : CLASSIC_SUBMISSION_SOURCES;
+  const classicPositionMap = buildListPositionMap(combinedClassic);
+  const platformerPositionMap = buildListPositionMap(platformerList);
 
-  return ALL_SUBMISSION_ENTRIES.filter((entry) => allowed.has(entry._src));
+  const players = {
+    classic: buildPlayerBoard(combinedClassic, playerCountriesData),
+    platformer: buildPlayerBoard(platformerList, playerCountriesData),
+  };
+
+  const countries = {
+    classic: buildCountryBoard(players.classic, playerCountriesData),
+    platformer: buildCountryBoard(players.platformer, playerCountriesData),
+  };
+
+  const allSubmissionEntries = [
+    ...achievementsData.map((entry) => ({ ...entry, _src: "classic" })),
+    ...pendingData.map((entry) => ({ ...entry, _src: "pending" })),
+    ...legacyData.map((entry) => ({ ...entry, _src: "legacy" })),
+    ...timelineData.map((entry) => ({ ...entry, _src: "timeline" })),
+    ...platformersData.map((entry) => ({ ...entry, _src: "platformer" })),
+    ...platformerpendingData.map((entry) => ({
+      ...entry,
+      _src: "platformerpending",
+    })),
+    ...platformerTimelineData.map((entry) => ({
+      ...entry,
+      _src: "platformertimeline",
+    })),
+  ];
+
+  const filterSubmissionEntries = (listSource) => {
+    const allowed =
+      listSource === "platformer"
+        ? PLATFORMER_SUBMISSION_SOURCES
+        : CLASSIC_SUBMISSION_SOURCES;
+
+    return allSubmissionEntries.filter((entry) => allowed.has(entry._src));
+  };
+
+  const submissions = {
+    classic: buildSubmissionBoard(
+      filterSubmissionEntries("classic"),
+      classicPositionMap,
+      platformerPositionMap,
+    ),
+    platformer: buildSubmissionBoard(
+      filterSubmissionEntries("platformer"),
+      classicPositionMap,
+      platformerPositionMap,
+    ),
+  };
+
+  return { players, countries, submissions };
 }
 
-const SUBMISSION_BOARDS = {
-  classic: buildSubmissionBoard(
-    filterSubmissionEntries("classic"),
-    CLASSIC_POSITION_MAP,
-    PLATFORMER_POSITION_MAP,
-  ),
-  platformer: buildSubmissionBoard(
-    filterSubmissionEntries("platformer"),
-    CLASSIC_POSITION_MAP,
-    PLATFORMER_POSITION_MAP,
-  ),
-};
+let cachedDefaultBoards = null;
 
-DEFAULT_BOARDS.submissions = SUBMISSION_BOARDS;
+/** Boards are built lazily on first use (not at module import) and cached. */
+export function getDefaultBoards() {
+  if (!cachedDefaultBoards) cachedDefaultBoards = buildDefaultBoards();
+  return cachedDefaultBoards;
+}
 
 const COUNTRY_FILTER_OPTIONS = [
   ...new Set(
@@ -410,7 +305,8 @@ function getCountryFilterLabel(selectedCountries) {
   return `${selectedCountries.length} countries`;
 }
 
-const SITE_HEADER_HEIGHT = 80;
+// Fallback used only until the real site header is measured on mount.
+const SITE_HEADER_HEIGHT_FALLBACK = 80;
 
 function useMediaQuery(query) {
   const [matches, setMatches] = useState(() => {
@@ -553,7 +449,7 @@ function CountryDetailContent({ country, view, onViewChange, onAchievementClick 
               <AchievementRow
                 key={`${entry.name}-${entry.listPosition}-${entry._src}-${entry.player}`}
                 entry={entry}
-                meta={`${entry.player} · ${SOURCE_LABEL[entry._src]} · ${fmt(entry.date)}`}
+                meta={`${entry.player} · ${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`}
                 points={entry.points ?? 0}
                 onAchievementClick={onAchievementClick}
               />
@@ -600,7 +496,7 @@ function DetailContent({
               <AchievementRow
                 key={`${entry.name}-${index}-${entry._src}`}
                 entry={entry}
-                meta={`${SOURCE_LABEL[entry._src] ?? "Classic"} · ${fmt(entry.date)}`}
+                meta={`${SOURCE_LABEL[entry._src] ?? "Classic"} · ${formatDate(entry.date)}`}
                 points={1}
                 onAchievementClick={onAchievementClick}
               />
@@ -637,7 +533,7 @@ function DetailContent({
             <AchievementRow
               key={`${entry.name}-${entry.listPosition}-${entry._src}`}
               entry={entry}
-              meta={`${SOURCE_LABEL[entry._src]} · ${fmt(entry.date)}`}
+              meta={`${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`}
               points={entry.points ?? 0}
               isDuplicate={entry.isDuplicate}
               onAchievementClick={onAchievementClick}
@@ -649,118 +545,11 @@ function DetailContent({
   );
 }
 
-function EllipsisJump({ defaultPage, totalPages, onPageChange }) {
-  const [editing, setEditing] = useState(false);
-  const [value, setValue] = useState(String(defaultPage));
-
-  useEffect(() => {
-    setValue(String(defaultPage));
-  }, [defaultPage]);
-
-  const commit = () => {
-    const nextPage = Number(value);
-    if (!Number.isFinite(nextPage)) {
-      setEditing(false);
-      return;
-    }
-    onPageChange(Math.min(Math.max(1, nextPage), totalPages));
-    setEditing(false);
-  };
-
-  if (editing) {
-    return (
-      <input
-        className="lb__page-input lb__page-input--ellipsis"
-        type="number"
-        min={1}
-        max={totalPages}
-        value={value}
-        autoFocus
-        aria-label="Jump to page"
-        onChange={(event) => setValue(event.target.value)}
-        onBlur={commit}
-        onKeyDown={(event) => {
-          if (event.key === "Enter") commit();
-          if (event.key === "Escape") setEditing(false);
-        }}
-      />
-    );
-  }
-
-  return (
-    <button
-      type="button"
-      className="lb__page-ellipsis"
-      aria-label={`Jump near page ${defaultPage}`}
-      onClick={() => {
-        setValue(String(defaultPage));
-        setEditing(true);
-      }}
-    >
-      ...
-    </button>
-  );
-}
-
-function Pagination({ page, totalPages, onPageChange }) {
-  const items = getPaginationItems(page, totalPages);
-
-  if (totalPages <= 1) return null;
-
-  return (
-    <div className="lb__pagination">
-      <button
-        type="button"
-        className="lb__page-btn"
-        disabled={page <= 1}
-        onClick={() => onPageChange(page - 1)}
-      >
-        Previous
-      </button>
-
-      <div className="lb__page-numbers">
-        {items.map((item, index) => {
-          if (item.type === "ellipsis") {
-            return (
-              <EllipsisJump
-                key={`${item.side}-${index}`}
-                defaultPage={item.defaultPage}
-                totalPages={totalPages}
-                onPageChange={onPageChange}
-              />
-            );
-          }
-
-          return (
-            <button
-              key={item.value}
-              type="button"
-              className={`lb__page-num${item.value === page ? " is-active" : ""}`}
-              onClick={() => onPageChange(item.value)}
-            >
-              {item.value}
-            </button>
-          );
-        })}
-      </div>
-
-      <button
-        type="button"
-        className="lb__page-btn"
-        disabled={page >= totalPages}
-        onClick={() => onPageChange(page + 1)}
-      >
-        Next
-      </button>
-    </div>
-  );
-}
-
 export default function LeaderboardPage({
   initialMode = "players",
   initialListSource = "classic",
   onAchievementClick,
-  boards = DEFAULT_BOARDS,
+  boards = getDefaultBoards(),
 }) {
   const [mode, setMode] = useState(initialMode);
   const [listSource, setListSource] = useState(initialListSource);
@@ -778,6 +567,9 @@ export default function LeaderboardPage({
   const sidebarRef = useRef(null);
   const [headHeight, setHeadHeight] = useState(0);
   const [sidebarBounds, setSidebarBounds] = useState(null);
+  const [siteHeaderHeight, setSiteHeaderHeight] = useState(
+    SITE_HEADER_HEIGHT_FALLBACK,
+  );
   const isMobileLayout = useMediaQuery("(max-width: 640px)");
 
   useEffect(() => {
@@ -903,7 +695,33 @@ export default function LeaderboardPage({
     return () => observer.disconnect();
   }, [mode, listSource, countryFilter, searchQuery, sortOptions.length]);
 
-  const sidebarStickyTop = SITE_HEADER_HEIGHT + headHeight + 16;
+  // Track the real site header height so the leaderboard's own sticky head
+  // lines up flush beneath it, exactly like the list pages do.
+  useEffect(() => {
+    const siteHeader = document.querySelector(".hd");
+
+    const measure = () => {
+      if (siteHeader) setSiteHeaderHeight(siteHeader.getBoundingClientRect().height);
+    };
+
+    measure();
+
+    if (typeof ResizeObserver === "undefined") {
+      window.addEventListener("resize", measure);
+      return () => window.removeEventListener("resize", measure);
+    }
+
+    const observer = new ResizeObserver(measure);
+    if (siteHeader) observer.observe(siteHeader);
+    window.addEventListener("resize", measure);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  const sidebarStickyTop = siteHeaderHeight + headHeight + 16;
 
   const sidebarStyle = sidebarBounds
     ? {
@@ -926,7 +744,7 @@ export default function LeaderboardPage({
       const pagination = paginationRef.current;
       if (!layout) return;
 
-      const stickTop = SITE_HEADER_HEIGHT + headHeight + 16;
+      const stickTop = siteHeaderHeight + headHeight + 16;
       const gap = 16;
       const layoutRect = layout.getBoundingClientRect();
       let maxHeight = window.innerHeight - stickTop - gap;
@@ -957,7 +775,15 @@ export default function LeaderboardPage({
       window.removeEventListener("resize", measureSidebarBounds);
       window.removeEventListener("scroll", measureSidebarBounds);
     };
-  }, [selectedRow, headHeight, pagination.page, mode, listSource, isMobileLayout]);
+  }, [
+    selectedRow,
+    headHeight,
+    siteHeaderHeight,
+    pagination.page,
+    mode,
+    listSource,
+    isMobileLayout,
+  ]);
 
   useEffect(() => {
     if (!selectedKey || isMobileLayout) return;
@@ -1059,6 +885,7 @@ export default function LeaderboardPage({
       <div
         ref={headRef}
         className={`lb__head${isMobileLayout ? "" : " lb__head--sticky"}`}
+        style={isMobileLayout ? undefined : { top: `${siteHeaderHeight}px` }}
       >
         <h1 className="lb__title">Leaderboard</h1>
         <p className="lb__sub">
@@ -1086,22 +913,20 @@ export default function LeaderboardPage({
           </button>
         </div>
 
-        {(mode === "players" || mode === "countries" || mode === "submissions") && (
-          <div className="lb__mode-toggle lb__mode-toggle--nested">
-            <button
-              className={`lb__mode-btn${listSource === "classic" ? " is-active" : ""}`}
-              onClick={() => switchListSource("classic")}
-            >
-              Classic List
-            </button>
-            <button
-              className={`lb__mode-btn${listSource === "platformer" ? " is-active" : ""}`}
-              onClick={() => switchListSource("platformer")}
-            >
-              Platformer List
-            </button>
-          </div>
-        )}
+        <div className="lb__mode-toggle lb__mode-toggle--nested">
+          <button
+            className={`lb__mode-btn${listSource === "classic" ? " is-active" : ""}`}
+            onClick={() => switchListSource("classic")}
+          >
+            Classic List
+          </button>
+          <button
+            className={`lb__mode-btn${listSource === "platformer" ? " is-active" : ""}`}
+            onClick={() => switchListSource("platformer")}
+          >
+            Platformer List
+          </button>
+        </div>
 
         <div
           className={`lb__toolbar${isMobileLayout ? " lb__toolbar--sticky" : ""}`}
@@ -1146,18 +971,20 @@ export default function LeaderboardPage({
             </div>
           )}
 
-          <LbDropdown
+          <SelectDropdown
             value={sortKey}
             ariaLabel="Sort leaderboard"
             options={sortOptions}
             onChange={setSortKey}
+            variant="lb"
           />
 
-          <LbDropdown
+          <SelectDropdown
             value={sortDir}
             ariaLabel="Sort direction"
             options={SORT_DIR_OPTIONS}
             onChange={setSortDir}
+            variant="lb"
           />
         </div>
       </div>
@@ -1287,7 +1114,9 @@ export default function LeaderboardPage({
       </div>
 
       <div ref={paginationRef}>
-        <Pagination
+        <PaginationControls
+          classPrefix="lb"
+          ellipsisLabel="..."
           page={pagination.page}
           totalPages={pagination.totalPages}
           onPageChange={handlePageChange}

@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-05-26",
+    "list": "classic",
+    "from": "Tartarus",
+    "to": "Firework"
+  },
+  {
+    "date": "2025-11-10",
+    "list": "classic",
+    "from": "Zodiac",
+    "to": "Tartarus"
+  },
+  {
+    "date": "2025-09-28",
+    "list": "platformer",
+    "from": null,
+    "to": "Project Buzzkill"
+  },
+  {
+    "date": "2025-02-26",
+    "list": "classic",
+    "from": "Bloodlust",
+    "to": "Zodiac"
+  },
+  {
+    "date": "2023-10-29",
+    "list": "classic",
+    "from": null,
+    "to": "Bloodlust"
+  }
+]

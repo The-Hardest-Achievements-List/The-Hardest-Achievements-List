@@ -1,0 +1,504 @@
+﻿/* Styles for the level detail modal (src/components/LevelModal.jsx).
+   .lbl/.val are also reused by LevelCard.jsx for the stat rows on each card. */
+
+.lbl {
+    font-family: var(--mono);
+    font-size: 0.643em;
+    letter-spacing: 0.18em;
+    color: var(--ink-3);
+}
+
+.val {
+    font-family: var(--mono);
+    font-size: 0.929em;
+    color: var(--ink);
+    font-weight: 600;
+    font-feature-settings: "tnum";
+}
+
+.val i {
+    font-style: normal;
+    color: var(--ink-3);
+    font-size: 10px;
+}
+
+.card__tags {
+    --card-tag-row-height: calc(18px * var(--card-detail-bottom-scale, 1));
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(4px * var(--card-detail-bottom-scale, 1));
+    max-height: calc(var(--card-tag-row-height) * 2 + 4px * var(--card-detail-bottom-scale, 1));
+    overflow: hidden;
+    position: relative;
+    align-content: flex-start;
+}
+
+.card__tag--overflow {
+    color: var(--ink-2);
+    background: oklch(22% 0.01 260 / 0.85);
+    border: 1px solid var(--line-2);
+    cursor: help;
+}
+
+.card__tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    padding: calc(3px * var(--card-detail-bottom-scale, 1)) calc(8px * var(--card-detail-bottom-scale, 1));
+    border-radius: calc(4px * var(--card-detail-bottom-scale, 1));
+    text-transform: uppercase;
+    position: relative;
+    color: var(--acc);
+    background: var(--acc-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: calc(0.5rem * var(--card-detail-bottom-scale, 1));
+}
+
+.card__tag .tooltip-container {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(0.5rem * var(--card-detail-bottom-scale, 1));
+}
+
+.card__tag img {
+    height: calc(12px * var(--card-detail-bottom-scale, 1));
+    flex-shrink: 0;
+}
+
+.card__thumb {
+    position: relative;
+    background: var(--bg-3);
+    overflow: hidden;
+    contain: layout style paint;
+}
+
+.card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.1);
+    transition: transform 0.5s;
+    will-change: transform;
+    display: block;
+}
+
+.card:hover .card__thumb img {
+    transform: scale(1.04);
+}
+
+.card__thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-3) 0%, oklch(20% 0.015 280) 100%);
+}
+
+.card__thumb-fade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 70%, #000000db), linear-gradient(270deg, transparent 60%, #00000086);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: oklch(0% 0 0 / 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px oklch(0% 0 0 / 0.6);
+    animation: modal-in 0.2s cubic-bezier(0.2, 0, 0, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    width: 34px;
+    height: 34px;
+    background: oklch(8% 0.005 280 / 0.85);
+    border: 1px solid var(--line-2);
+    color: var(--ink-2);
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    backdrop-filter: blur(10px);
+}
+
+.modal__close:hover {
+    background: var(--acc);
+    color: var(--bg);
+    border-color: var(--acc);
+}
+
+.modal__thumb {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: var(--bg-3);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.modal__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.1);
+}
+
+.modal__thumb-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, var(--bg-2) 0%, transparent 60%);
+}
+
+.modal__thumb:not(:has(img)) {
+    height: 52px;
+    background: transparent;
+}
+
+.modal__thumb:not(:has(img)) .modal__thumb-fade {
+    display: none;
+}
+
+.modal__body {
+    padding: 20px 28px 28px;
+}
+
+.modal__top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.modal__rank {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--acc);
+    background: var(--acc-soft);
+    padding: 4px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.08em;
+}
+
+.modal__rank--unknown {
+    color: var(--ink-2);
+    background: var(--bg-3);
+}
+
+.modal__rank--official {
+    color: var(--ink);
+    background: transparent;
+    padding: 0;
+    letter-spacing: 0.04em;
+}
+
+.modal__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.modal__tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    padding: 3px 8px 3px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--acc);
+    background: var(--acc-soft);
+}
+
+.modal__tag::before {
+    content: "â—";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6px;
+    color: currentColor;
+}
+
+.modal__tag[data-tag="Level"]::before {
+    content: "â—†";
+}
+
+.modal__tag[data-tag="Progress"]::before {
+    content: "âŸ³";
+}
+
+.modal__tag[data-tag="Consistency"]::before {
+    content: "â‰¡";
+    font-size: 8px;
+}
+
+.modal__tag[data-tag="Rated"]::before {
+    content: "â˜…";
+    font-size: 7px;
+}
+
+.modal__tag[data-tag="Tentative"]::before {
+    content: "âš ";
+    font-size: 7px;
+}
+
+.modal__tag[data-tag="Pending Removal"]::before {
+    content: "âœ•";
+    font-size: 7px;
+}
+
+.modal__tag[data-tag="Verified"]::before {
+    content: "âœ“";
+    font-size: 7px;
+}
+
+.modal__tag[data-tag="Legacy"]::before {
+    content: "â—¼";
+}
+
+.modal__tag[data-tag="Unverified"]::before {
+    content: "?";
+    font-weight: 700;
+}
+
+.modal__name {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
+
+.modal.is-pending-removal .modal__name {
+    color: oklch(72% 0.2 25);
+}
+
+.modal.is-replacement .modal__name {
+    color: oklch(72% 0.18 145);
+}
+
+.modal__player {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.modal__player-by {
+    font-family: var(--mono);
+    color: var(--ink-3);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.modal__player-name {
+    color: var(--acc);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.modal__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+}
+
+.modal__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.modal__stat .lbl {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--ink-3);
+}
+
+.modal__stat .val {
+    font-family: var(--mono);
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.modal__stat .val:hover {
+    opacity: 0.7;
+}
+
+.modal__notes {
+    margin-bottom: 24px;
+    padding: 14px 16px;
+    background: oklch(55% 0.12 85 / 0.1);
+    border: 1px solid oklch(70% 0.14 85 / 0.3);
+    border-radius: 10px;
+}
+
+.modal__notes-body {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-1);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.modal__embed-section {
+    margin-bottom: 20px;
+}
+
+.modal__embed-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+}
+
+.modal__embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--bg-3);
+}
+
+.modal__embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.modal__proof-section {
+    margin-bottom: 20px;
+}
+
+.modal__embed--proof {
+    height: auto;
+    padding-bottom: 0;
+    max-height: min(70vh, 520px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__embed--proof img {
+    display: block;
+    width: 100%;
+    max-height: min(70vh, 520px);
+    object-fit: contain;
+    background: var(--bg);
+}
+
+.modal__links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.modal__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    color: var(--ink-2);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.modal__link:hover {
+    border-color: var(--ink-3);
+    color: var(--ink);
+}
+
+.modal__link--primary {
+    background: var(--acc);
+    border-color: var(--acc);
+    color: var(--bg);
+}
+
+.modal__link--primary:hover {
+    background: var(--acc-2);
+    border-color: var(--acc-2);
+    color: var(--bg);
+}
+
+.hd__mode-toggle button.is-active {
+    background: var(--acc);
+    color: var(--bg);
+}
+
+.hd__filter-btn {
+    display: none;
+}
+
+.hd__kbd {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 7px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    color: var(--ink-3);
+    background: var(--bg);
+}
+

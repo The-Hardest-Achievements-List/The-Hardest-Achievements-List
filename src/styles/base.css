@@ -1,0 +1,201 @@
+﻿/* Global reset, CSS variables, Font Awesome fixes, and the App shell
+   (background layers + scroll-to-top button). Imported first by styles.css. */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 17px;
+    scrollbar-gutter: stable;
+    overflow-x: clip;
+}
+
+body {
+    background: var(--bg);
+    overflow-x: clip;
+}
+
+:root {
+    --bg: oklch(8.5% 0.018 280);
+    --bg-2: oklch(12.5% 0.022 280);
+    --bg-3: oklch(16% 0.028 280);
+    --line: oklch(24% 0.035 280);
+    --line-2: oklch(30% 0.045 280);
+    --ink: oklch(96% 0.005 280);
+    --ink-2: oklch(74% 0.010 280);
+    --ink-3: oklch(56% 0.012 280);
+    --ink-4: oklch(44% 0.012 280);
+    --acc: oklch(78% 0.13 75);
+    --acc-2: oklch(70% 0.13 75);
+    --acc-soft: oklch(78% 0.13 75 / 0.15);
+    --sans: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    --mono: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+i[class*="fa-"] {
+    display: inline-block;
+    font-style: normal !important;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fas,
+.far,
+.fa-solid,
+.fa-regular,
+i[class*="fa-"]:not(.fab):not(.fa-brands) {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.fab,
+.fa-brands,
+i.fab[class*="fa-"] {
+    font-family: "Font Awesome 6 Brands" !important;
+}
+
+.fas,
+.fa-solid,
+i.fas[class*="fa-"] {
+    font-weight: 900 !important;
+}
+
+.far,
+.fa-regular,
+i.far[class*="fa-"] {
+    font-weight: 400 !important;
+}
+
+.fab,
+.fa-brands,
+i.fab[class*="fa-"] {
+    font-weight: 400 !important;
+}
+
+.fas::before,
+.far::before,
+.fab::before,
+.fa-solid::before,
+.fa-regular::before,
+.fa-brands::before,
+i[class*="fa-"]::before {
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+.app {
+    position: relative;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: var(--sans);
+    padding-bottom: 80px;
+}
+
+.app:has(.lb),
+.app:has(.home) {
+    padding-bottom: 40px;
+}
+
+.app-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.app-bg__img {
+    position: absolute;
+    inset: -40px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(80px) saturate(0.4) brightness(0.3);
+    opacity: 0.25;
+    transform: scale(1.1);
+}
+
+.app-bg__grid {
+    position: absolute;
+    inset: -40%;
+
+    background-image:
+        repeating-linear-gradient(118deg,
+            oklch(42% 0.025 275 / 0.10) 0px,
+            oklch(42% 0.025 275 / 0.10) 1px,
+            transparent 1px,
+            transparent 44px),
+        repeating-linear-gradient(-18deg,
+            oklch(45% 0.02 285 / 0.07) 0px,
+            oklch(45% 0.02 285 / 0.07) 1px,
+            transparent 1px,
+            transparent 62px),
+        repeating-linear-gradient(72deg,
+            oklch(50% 0.02 250 / 0.05) 0px,
+            oklch(50% 0.02 250 / 0.05) 1px,
+            transparent 1px,
+            transparent 88px),
+        repeating-linear-gradient(3deg,
+            oklch(38% 0.015 290 / 0.035) 0px,
+            oklch(38% 0.015 290 / 0.035) 1px,
+            transparent 1px,
+            transparent 120px);
+
+    transform:
+        perspective(1000px) rotateX(74deg) rotateZ(-18deg) scale(2.9) translateY(-2%);
+
+    mask-image:
+        radial-gradient(circle at 52% 44%,
+            black 15%,
+            black 40%,
+            transparent 85%);
+
+    -webkit-mask-image:
+        radial-gradient(circle at 52% 44%,
+            black 15%,
+            black 40%,
+            transparent 85%);
+
+    filter: blur(0.45px) contrast(1.02);
+
+    opacity: 0.45;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 150;
+    background: var(--acc);
+    border: none;
+    border-radius: 28px;
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding: 10px 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px oklch(0% 0 0 / 0.45);
+    transition: filter 0.15s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.scroll-top-btn:hover {
+    filter: brightness(1.12);
+    transform: translateX(-50%) translateY(-2px);
+}
+

@@ -1,49 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
-  formatDate,
   formatDisplayVersion,
-  formatLength,
   getNotesFullText,
   getYouTubeEmbedUrl,
-  isValidDate,
   isWatchableAchievementUrl,
   normalizeImageUrl,
   normalizeProofUrl,
   normalizeYouTubeUrl,
 } from "../utils/format";
-import { useLevelThumbnail } from "./LevelCard";
-import { TAG_DEFINITIONS } from "./Header";
+import {
+  UNDEFINED_LABEL,
+  asDisplayDate,
+  asDisplayLength,
+  asDisplayNumber,
+  asDisplayString,
+  filterDisplayableTags,
+} from "../utils/display";
+import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
 import {
   formatEstimateDisplay,
-  hasEstimate,
   hasProjectedShift,
   hasResolvableEstimate,
 } from "../utils/estimateRank";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
 
-const DISPLAYABLE_TAGS = new Set(Object.keys(TAG_DEFINITIONS));
-
 export default function LevelModal({
   level: a,
   onClose,
-  hideRank,
   isPendingEstimate,
   pendingMainCount = 0,
   showProjectedRanks = false,
 }) {
-  const UNDEFINED_LABEL = "undefined";
-  const asDisplayString = (value) =>
-    typeof value === "string" && value.trim() ? value.trim() : UNDEFINED_LABEL;
-  const asDisplayNumber = (value) =>
-    typeof value === "number" && Number.isFinite(value)
-      ? String(value)
-      : UNDEFINED_LABEL;
-  const asDisplayDate = (value) =>
-    isValidDate(value) ? formatDate(value) : UNDEFINED_LABEL;
-  const asDisplayLength = (value) =>
-    typeof value === "number" && Number.isFinite(value) && value > 0
-      ? formatLength(value)
-      : UNDEFINED_LABEL;
   const displayName = asDisplayString(a.name);
   const displayPlayer = asDisplayString(a.player);
   const displayLevelID = asDisplayNumber(a.levelID);
@@ -65,20 +52,7 @@ export default function LevelModal({
     : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
-  const tags = Array.isArray(a?.tags)
-    ? a.tags
-    : typeof a?.tags === "string"
-      ? a.tags.split(/\s*,\s*/)
-      : [];
-  const displayTags = tags
-    .filter((tag) => typeof tag === "string")
-    .map((tag) => tag.trim())
-    .filter((tag) => {
-      if (!tag) return false;
-      const lowered = tag.toLowerCase();
-      if (lowered === "undefined" || lowered === "null") return false;
-      return DISPLAYABLE_TAGS.has(tag);
-    });
+  const displayTags = filterDisplayableTags(a?.tags);
   const pendingRemoval = displayTags.includes("Pending Removal");
   const isReplacement = Boolean(a?.isReplacement);
   const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
@@ -89,11 +63,20 @@ export default function LevelModal({
     lazy: false,
   });
 
+  const copyTimersRef = useRef([]);
+
   const handleCopy = (value) => {
-    navigator.clipboard.writeText(value);
+    navigator.clipboard.writeText(value).catch(() => {});
     setCopiedValue(value);
-    setTimeout(() => setCopiedValue(null), 2000);
+    copyTimersRef.current.push(setTimeout(() => setCopiedValue(null), 2000));
   };
+
+  useEffect(
+    () => () => {
+      copyTimersRef.current.forEach((timerId) => clearTimeout(timerId));
+    },
+    [],
+  );
 
   useEffect(() => {
     const onKey = (e) => {
@@ -133,14 +116,14 @@ export default function LevelModal({
 
         <div className="modal__body">
           <div className="modal__top-row">
-            {!hideRank && isPendingEstimate && pendingRankLabel != null && (
+            {isPendingEstimate && pendingRankLabel != null && (
               <span
                 className={`modal__rank${!hasResolvableEstimate(a, pendingMainCount) ? " modal__rank--unknown" : ""}`}
               >
                 {pendingRankLabel}
               </span>
             )}
-            {!hideRank && !isPendingEstimate && officialRank != null && (
+            {!isPendingEstimate && officialRank != null && (
               hasProjectedShift(a) ? (
                 <Tooltip
                   content={

@@ -6,7 +6,7 @@ import {
 import {
   resolvePlayerCountries,
   resolvePlayerCountry,
-} from "./countryLeaderboard.js";
+} from "./playerCountries.js";
 
 export const POINTS = {
   baseScore: 1000,
@@ -18,6 +18,25 @@ export const SORT_DIR_OPTIONS = [
   { value: "asc", label: "Ascending" },
   { value: "desc", label: "Descending" },
 ];
+
+export function getLeaderboardPath(mode, listSource) {
+  if (mode === "players") {
+    return listSource === "platformer"
+      ? "/leaderboard/players/platformer"
+      : "/leaderboard/players";
+  }
+  if (mode === "countries") {
+    return listSource === "platformer"
+      ? "/leaderboard/countries/platformer"
+      : "/leaderboard/countries";
+  }
+  if (mode === "submissions") {
+    return listSource === "platformer"
+      ? "/leaderboard/submission/platformer"
+      : "/leaderboard/submission";
+  }
+  return "/leaderboard/players";
+}
 
 function normalizeNameKey(value) {
   return typeof value === "string" ? value.trim().toLowerCase() : "";
@@ -45,12 +64,21 @@ export function calculateXp(position, listSize) {
   return Math.max(POINTS.minXp, rounded);
 }
 
-function compareByXpThenBestRank(a, b) {
+/** Shared XP-then-best-rank comparison; returns 0 on a full tie so callers
+ * can apply their own final tiebreaker. */
+export function compareByXpAndBestRank(a, b) {
   if (b.totalXP !== a.totalXP) return b.totalXP - a.totalXP;
   const rankA = a.bestRank ?? Number.POSITIVE_INFINITY;
   const rankB = b.bestRank ?? Number.POSITIVE_INFINITY;
   if (rankA !== rankB) return rankA - rankB;
-  return String(a.name ?? "").localeCompare(String(b.name ?? ""));
+  return 0;
+}
+
+function compareByXpThenBestRank(a, b) {
+  return (
+    compareByXpAndBestRank(a, b) ||
+    String(a.name ?? "").localeCompare(String(b.name ?? ""))
+  );
 }
 
 export function getEntryRank(entry) {
@@ -219,8 +247,9 @@ export function buildPlayerBoard(entries, playerCountries = null) {
         country: resolvePlayerCountry(playerCountries, name),
         countries: resolvePlayerCountries(playerCountries, name),
         achievements,
-        achievementCount: achievements.filter((entry) => !entry.isDuplicate)
-          .length,
+        // Counts grouped duplicates too, matching totalXP semantics (duplicates
+        // intentionally contribute XP as well).
+        achievementCount: achievements.length,
         totalXP,
         best,
         bestRank: getEntryRank(best),
@@ -290,23 +319,15 @@ export function buildSubmissionBoard(
   return withCompetitionRank(board, (row) => row.pts);
 }
 
-export const PLAYER_SORT_OPTIONS = [
+const BOARD_SORT_OPTIONS = [
   { value: "globalRank", label: "Rank" },
   { value: "bestRank", label: "Hardest Achievement" },
   { value: "name", label: "Name" },
 ];
 
-export const COUNTRY_SORT_OPTIONS = [
-  { value: "globalRank", label: "Rank" },
-  { value: "bestRank", label: "Hardest Achievement" },
-  { value: "name", label: "Name" },
-];
-
-export const SUBMISSION_SORT_OPTIONS = [
-  { value: "globalRank", label: "Rank" },
-  { value: "bestRank", label: "Hardest Achievement" },
-  { value: "name", label: "Name" },
-];
+export const PLAYER_SORT_OPTIONS = BOARD_SORT_OPTIONS;
+export const COUNTRY_SORT_OPTIONS = BOARD_SORT_OPTIONS;
+export const SUBMISSION_SORT_OPTIONS = BOARD_SORT_OPTIONS;
 
 export function sortLeaderboardRows(rows, sortKey, sortDir) {
   const dir = sortDir === "asc" ? 1 : -1;
@@ -355,10 +376,6 @@ export function sortLeaderboardRows(rows, sortKey, sortDir) {
       return String(a.name ?? "").localeCompare(String(b.name ?? ""));
     }
 
-    if (sortKey === "bestRank" || sortKey === "globalRank") {
-      return cmp * (sortDir === "asc" ? 1 : -1);
-    }
-
     return cmp * dir;
   });
 }
@@ -380,91 +397,51 @@ export function paginateRows(rows, page, pageSize) {
 export function getPaginationItems(currentPage, totalPages) {
   if (totalPages <= 1) return [];
 
-  const items = [];
-  const addPage = (page) => {
-    if (page < 1 || page > totalPages) return;
-    if (items.some((item) => item.type === "page" && item.value === page)) return;
-    items.push({ type: "page", value: page });
-  };
-
   if (totalPages <= 5) {
-    for (let page = 1; page <= totalPages; page += 1) addPage(page);
-    return items;
+    return Array.from({ length: totalPages }, (_, index) => ({
+      type: "page",
+      value: index + 1,
+    }));
   }
 
-  if (currentPage === 1) {
-    addPage(1);
-    addPage(2);
-    items.push({
-      type: "ellipsis",
-      side: "right",
-      defaultPage: 3,
-    });
-    addPage(totalPages);
-    return items;
-  }
+  const pages = new Set([currentPage]);
+  if (currentPage > 1) pages.add(currentPage - 1);
+  if (currentPage < totalPages) pages.add(currentPage + 1);
+  pages.add(1);
+  pages.add(totalPages);
 
-  if (currentPage === 2) {
-    addPage(1);
-    addPage(2);
-    addPage(3);
+  const sorted = [...pages].sort((a, b) => a - b);
+  const items = [];
 
-    if (totalPages > 4) {
-      items.push({
-        type: "ellipsis",
-        side: "right",
-        defaultPage: 4,
-      });
-      addPage(totalPages);
-    } else {
-      for (let page = 4; page <= totalPages; page += 1) addPage(page);
+  for (let index = 0; index < sorted.length; index += 1) {
+    const page = sorted[index];
+
+    if (index > 0) {
+      const leftPage = sorted[index - 1];
+      const rightPage = page;
+
+      if (rightPage - leftPage > 1) {
+        const isLeftEllipsis = rightPage <= currentPage + 1;
+        items.push({
+          type: "ellipsis",
+          side: isLeftEllipsis ? "left" : "right",
+          defaultPage: isLeftEllipsis ? rightPage - 1 : leftPage + 1,
+        });
+      } else if (
+        leftPage === 1 &&
+        currentPage > 2 &&
+        rightPage === currentPage - 1
+      ) {
+        items.push({
+          type: "ellipsis",
+          side: "left",
+          defaultPage: rightPage - 1,
+        });
+      }
     }
 
-    return items;
+    items.push({ type: "page", value: page });
   }
 
-  if (currentPage === totalPages) {
-    items.push({
-      type: "ellipsis",
-      side: "left",
-      defaultPage: totalPages - 1,
-    });
-    addPage(totalPages - 1);
-    addPage(totalPages);
-    return items;
-  }
-
-  if (currentPage === totalPages - 1) {
-    addPage(1);
-
-    if (totalPages > 4) {
-      items.push({
-        type: "ellipsis",
-        side: "left",
-        defaultPage: Math.max(2, totalPages - 3),
-      });
-    }
-
-    addPage(totalPages - 2);
-    addPage(totalPages - 1);
-    addPage(totalPages);
-    return items;
-  }
-
-  addPage(1);
-  items.push({
-    type: "ellipsis",
-    side: "left",
-    defaultPage: Math.max(1, currentPage - 1),
-  });
-  addPage(currentPage - 1);
-  addPage(currentPage);
-  addPage(currentPage + 1);
-  items.push({
-    type: "ellipsis",
-    side: "right",
-    defaultPage: Math.min(totalPages, currentPage + 1),
-  });
-  addPage(totalPages);
   return items;
 }

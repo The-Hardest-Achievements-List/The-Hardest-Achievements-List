@@ -3,46 +3,40 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { normalizeYouTubeUrl } from "../src/utils/format.js";
 import { normalizeEstimateField } from "../src/utils/estimateRank.js";
-
+import { CLASSIC_TAGS, PLATFORMER_TAGS } from "../src/utils/tags.js";
 const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
 const hasEstimateFields = (fieldOrder) =>
   fieldOrder.includes("estimateLower") && fieldOrder.includes("estimateUpper");
 
-export const CLASSIC_TAGS = [
-  "Level",
-  "Challenge",
-  "Low Hertz",
-  "Progress",
-  "Consistency",
-  "Verified",
-  "Rated",
-  "Formerly Rated",
-  "Tentative",
-  "Noclip",
-  "Speedhack",
-  "Mobile",
-  "2P",
-  "Coin Route",
-  "Miscellaneous",
-  "Outdated Version",
-  "Pending Removal",
+/** Classic list-changelog entries have this fixed nullable shape/key order. */
+const CLASSIC_CHANGELOG_FIELDS = [
+  "date",
+  "currentName",
+  "newName",
+  "currentRank",
+  "newRank",
+  "below",
+  "above",
 ];
 
-const PLATFORMER_TAGS = [
-  "Platformer",
-  "Deathless",
-  "Rated",
-  "Verified",
-  "Consistency",
-  "Progress",
-  "Speedrun",
-  "Low Hertz",
-  "Mobile",
-  "Coin Route",
-  "Miscellaneous",
-  "Outdated Version",
-  "Pending Removal",
-];
+/**
+ * Stable sort newest-to-oldest by `date` (YYYY-MM-DD strings).
+ * Entries without a date sink to the end; original order is preserved
+ * for equal dates and among dateless entries.
+ */
+export const sortChangelogNewestFirst = (entries) =>
+  [...entries]
+    .map((entry, index) => ({ entry, index }))
+    .sort((a, b) => {
+      const dateA = a.entry.date;
+      const dateB = b.entry.date;
+      if (dateA == null && dateB == null) return a.index - b.index;
+      if (dateA == null) return 1;
+      if (dateB == null) return -1;
+      if (dateA !== dateB) return String(dateB).localeCompare(String(dateA));
+      return a.index - b.index;
+    })
+    .map(({ entry }) => entry);
 
 const CLASSIC_FIELD_ORDER = [
   "name",
@@ -108,8 +102,41 @@ const PLATFORMER_FIELD_ORDER = [
   "video",
   "showcaseVideo",
   "thumbnail",
+  "duplicateOf",
+  "notes",
   "tags",
 ];
+
+/** Platformer pending — same estimate/notes/duplicate support as classic pending. */
+const PLATFORMER_PENDING_FIELD_ORDER = [
+  "name",
+  "player",
+  "levelID",
+  "date",
+  "length",
+  "version",
+  "submitter",
+  "estimateLower",
+  "estimateUpper",
+  "video",
+  "showcaseVideo",
+  "thumbnail",
+  "duplicateOf",
+  "notes",
+  "tags",
+];
+
+const LIST_CHANGELOG_FIELD_ORDER = CLASSIC_CHANGELOG_FIELDS;
+
+const TIMELINE_CHANGELOG_FIELD_ORDER = [
+  "date",
+  "name",
+  "timelineAdded",
+  "timelineRemoved",
+];
+
+const MILESTONE_FIELD_ORDER = ["date", "list", "from", "to"];
+const MILESTONE_LISTS = new Set(["classic", "platformer"]);
 
 /** Spreadsheet / import column names → canonical schema keys. */
 const FIELD_ALIASES = {
@@ -449,12 +476,6 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       continue;
     }
 
-    if (key === "video") {
-      const normalized = normalizeVideoField(entry[key]);
-      result[key] = normalizeNonEmptyStringField(normalized);
-      continue;
-    }
-
     if (key === "levelID" || key === "length") {
       result[key] = normalizeNumberField(entry[key]);
       continue;
@@ -532,6 +553,135 @@ const normalizePendingEntry = (entry) =>
 const normalizePlatformerEntry = (entry) =>
   normalizeEntry(entry, PLATFORMER_FIELD_ORDER, PLATFORMER_TAGS);
 
+const normalizePlatformerPendingEntry = (entry) =>
+  normalizeEntry(entry, PLATFORMER_PENDING_FIELD_ORDER, PLATFORMER_TAGS);
+
+const normalizeNonEmptyOrNull = (value) => {
+  if (value == null) return null;
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    return trimmed || null;
+  }
+  return value;
+};
+
+const normalizeRankOrNull = (value) => {
+  if (value == null || value === "") return null;
+  const n = typeof value === "number" ? value : Number(value);
+  return Number.isFinite(n) ? n : null;
+};
+
+export const normalizeListChangelogEntry = (entry) => {
+  const source = entry && typeof entry === "object" ? entry : {};
+  const normalized = {
+    date: normalizeDateField(source.date),
+    currentName: normalizeNonEmptyOrNull(
+      source.currentName ?? source.nameFrom ?? null,
+    ),
+    newName: normalizeNonEmptyOrNull(source.newName ?? source.nameTo ?? null),
+    currentRank: normalizeRankOrNull(
+      source.currentRank ?? source.from ?? null,
+    ),
+    newRank: normalizeRankOrNull(source.newRank ?? source.to ?? null),
+    below: normalizeNonEmptyOrNull(source.below),
+    above: normalizeNonEmptyOrNull(source.above),
+  };
+
+  const previous = {};
+  for (const key of LIST_CHANGELOG_FIELD_ORDER) {
+    previous[key] = normalized[key];
+  }
+
+  const addedFields = LIST_CHANGELOG_FIELD_ORDER.filter(
+    (key) => !(key in source),
+  );
+  const removedFields = Object.keys(source).filter(
+    (key) => !LIST_CHANGELOG_FIELD_ORDER.includes(key),
+  );
+  const changed =
+    addedFields.length > 0 ||
+    removedFields.length > 0 ||
+    LIST_CHANGELOG_FIELD_ORDER.some((key) => source[key] !== normalized[key]);
+
+  return {
+    entry: previous,
+    changed,
+    addedFields,
+    removedFields,
+    videoChanges: 0,
+  };
+};
+
+export const normalizeTimelineChangelogEntry = (entry) => {
+  const source = entry && typeof entry === "object" ? entry : {};
+  const normalized = {
+    date: normalizeDateField(source.date),
+    name: normalizeNonEmptyOrNull(source.name),
+    timelineAdded: normalizeDateField(source.timelineAdded),
+    timelineRemoved: normalizeDateField(source.timelineRemoved),
+  };
+
+  const previous = {};
+  for (const key of TIMELINE_CHANGELOG_FIELD_ORDER) {
+    previous[key] = normalized[key];
+  }
+
+  const addedFields = TIMELINE_CHANGELOG_FIELD_ORDER.filter(
+    (key) => !(key in source),
+  );
+  const removedFields = Object.keys(source).filter(
+    (key) => !TIMELINE_CHANGELOG_FIELD_ORDER.includes(key),
+  );
+  const changed =
+    addedFields.length > 0 ||
+    removedFields.length > 0 ||
+    TIMELINE_CHANGELOG_FIELD_ORDER.some(
+      (key) => source[key] !== normalized[key],
+    );
+
+  return {
+    entry: previous,
+    changed,
+    addedFields,
+    removedFields,
+    videoChanges: 0,
+  };
+};
+
+export const normalizeMilestoneEntry = (entry) => {
+  const source = entry && typeof entry === "object" ? entry : {};
+  const rawList = normalizeNonEmptyOrNull(source.list);
+  const list = MILESTONE_LISTS.has(rawList) ? rawList : null;
+  const normalized = {
+    date: normalizeDateField(source.date),
+    list,
+    from: normalizeNonEmptyOrNull(source.from),
+    to: normalizeNonEmptyOrNull(source.to ?? source.baseline ?? null),
+  };
+
+  const previous = {};
+  for (const key of MILESTONE_FIELD_ORDER) {
+    previous[key] = normalized[key];
+  }
+
+  const addedFields = MILESTONE_FIELD_ORDER.filter((key) => !(key in source));
+  const removedFields = Object.keys(source).filter(
+    (key) => !MILESTONE_FIELD_ORDER.includes(key),
+  );
+  const changed =
+    addedFields.length > 0 ||
+    removedFields.length > 0 ||
+    MILESTONE_FIELD_ORDER.some((key) => source[key] !== normalized[key]);
+
+  return {
+    entry: previous,
+    changed,
+    addedFields,
+    removedFields,
+    videoChanges: 0,
+  };
+};
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const dataDir = path.join(__dirname, "..", "data");
 
@@ -541,8 +691,28 @@ export const FILES = [
   { file: "legacy.json", normalize: normalizeClassicEntry },
   { file: "timeline.json", normalize: normalizeTimelineEntry },
   { file: "platformers.json", normalize: normalizePlatformerEntry },
-  { file: "platformerpending.json", normalize: normalizePlatformerEntry, sortByName: true },
+  { file: "platformerpending.json", normalize: normalizePlatformerPendingEntry, sortByName: true },
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
+  {
+    file: "classicchangelog.json",
+    normalize: normalizeListChangelogEntry,
+    sortNewestFirst: true,
+  },
+  {
+    file: "milestones.json",
+    normalize: normalizeMilestoneEntry,
+    sortNewestFirst: true,
+  },
+  {
+    file: "platformerchangelog.json",
+    normalize: normalizeListChangelogEntry,
+    sortNewestFirst: true,
+  },
+  {
+    file: "timelinechangelog.json",
+    normalize: normalizeTimelineChangelogEntry,
+    sortNewestFirst: true,
+  },
 ];
 
 /** Plain object maps (not entry arrays). Keys are sorted alphabetically on write. */
@@ -625,7 +795,12 @@ if (isMainModule) {
   const globalAdded = {};
   const globalRemoved = {};
 
-  for (const { file, normalize, sortByName = false } of FILES) {
+  for (const {
+    file,
+    normalize,
+    sortByName = false,
+    sortNewestFirst = false,
+  } of FILES) {
     const filePath = path.join(dataDir, file);
     if (!fs.existsSync(filePath)) {
       console.warn(`Skipped ${file} (not found)`);
@@ -643,6 +818,10 @@ if (isMainModule) {
       normalized = sortEntriesByName(normalized);
       orderChanged =
         namesBefore !== normalized.map((entry) => entry.name).join("\0");
+    } else if (sortNewestFirst) {
+      const before = JSON.stringify(normalized);
+      normalized = sortChangelogNewestFirst(normalized);
+      orderChanged = before !== JSON.stringify(normalized);
     }
 
     fs.writeFileSync(filePath, stringifyEntries(normalized));
@@ -660,7 +839,7 @@ if (isMainModule) {
     console.log(`  entries: ${entries.length}`);
     console.log(`  modified: ${summary.modifiedEntries}`);
     console.log(`  video links normalized: ${summary.videoChanges}`);
-    if (sortByName) {
+    if (sortByName || sortNewestFirst) {
       console.log(`  order changed: ${orderChanged ? "yes" : "no"}`);
     }
     if (Object.keys(summary.addedFieldCounts).length > 0) {

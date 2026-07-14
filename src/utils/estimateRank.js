@@ -106,11 +106,6 @@ export const UNKNOWN_ESTIMATE_LABEL = "Unknown projection";
 export const PROJECTION_TOOLTIP =
   "Rank after all pending entries are placed. Not list worthy resolves to just below the current list end; unknown projections are placed last.";
 
-export function getEstimateMidpoint(entry) {
-  if (!hasEstimate(entry)) return null;
-  return (entry.estimateLower + entry.estimateUpper) / 2;
-}
-
 export function getTailProjectionSlot(mainCount) {
   return mainCount + 0.5;
 }
@@ -127,7 +122,7 @@ export function compareEntryName(a, b) {
 function getResolvedSortKey(entry, mainCount) {
   const bounds = getResolvedBounds(entry, mainCount);
   if (!bounds) {
-    return { tier: 2, midpoint: Infinity, lower: Infinity, upper: Infinity };
+    return { tier: 1, midpoint: Infinity, lower: Infinity, upper: Infinity };
   }
   return {
     tier: 0,
@@ -143,8 +138,8 @@ export function comparePendingEstimate(a, b, sortDir = "asc", mainCount = 0) {
   const dir = sortDir === "asc" ? 1 : -1;
 
   if (ka.tier !== kb.tier) {
-    if (ka.tier === 2) return 1;
-    if (kb.tier === 2) return -1;
+    if (ka.tier === 1) return 1;
+    if (kb.tier === 1) return -1;
     return ka.tier - kb.tier;
   }
 

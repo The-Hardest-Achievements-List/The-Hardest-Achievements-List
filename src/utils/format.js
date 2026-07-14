@@ -150,6 +150,28 @@ export function getTimelineEntryKey(entry) {
     return `${entry.levelID ?? ''}\0${entry.name ?? ''}\0${entry.date ?? ''}\0${entry.player ?? ''}`
 }
 
+function getNeighborDateBounds(entries, index) {
+    return {
+        prevDate: findNeighborDate(entries, index, -1),
+        nextDate: findNeighborDate(entries, index, 1),
+    }
+}
+
+/** Sortable ms timestamp; missing dates use neighbor midpoint (or the known side). */
+export function getInferredDateTimestamp(entries, index) {
+    const entry = entries[index]
+    if (isValidDate(entry.date)) return new Date(entry.date).getTime()
+
+    const { prevDate, nextDate } = getNeighborDateBounds(entries, index)
+    const prevT = prevDate ? new Date(prevDate).getTime() : null
+    const nextT = nextDate ? new Date(nextDate).getTime() : null
+
+    if (prevT != null && nextT != null) return (prevT + nextT) / 2
+    if (prevT != null) return prevT
+    if (nextT != null) return nextT
+    return null
+}
+
 function buildTimelineDateLabelAt(entries, index) {
     const entry = entries[index]
 
@@ -157,11 +179,15 @@ function buildTimelineDateLabelAt(entries, index) {
         return formatDate(entry.date)
     }
 
-    const prevDate = findNeighborDate(entries, index, -1)
-    const nextDate = findNeighborDate(entries, index, 1)
+    const { prevDate, nextDate } = getNeighborDateBounds(entries, index)
 
     if (prevDate && nextDate) {
-        return `${formatDate(prevDate)} – ${formatDate(nextDate)}`
+        const earlier =
+            new Date(prevDate).getTime() <= new Date(nextDate).getTime()
+                ? prevDate
+                : nextDate
+        const later = earlier === prevDate ? nextDate : prevDate
+        return `${formatDate(earlier)} – ${formatDate(later)}`
     }
     if (prevDate) {
         return `${formatDate(prevDate)} – ?`
@@ -178,6 +204,17 @@ export function buildTimelineDateLabelMap(entries) {
 
     for (let i = 0; i < entries.length; i++) {
         map.set(getTimelineEntryKey(entries[i]), buildTimelineDateLabelAt(entries, i))
+    }
+
+    return map
+}
+
+export function buildTimelineDateSortMap(entries) {
+    const map = new Map()
+    if (!Array.isArray(entries)) return map
+
+    for (let i = 0; i < entries.length; i++) {
+        map.set(getTimelineEntryKey(entries[i]), getInferredDateTimestamp(entries, i))
     }
 
     return map

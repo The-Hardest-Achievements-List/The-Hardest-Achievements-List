@@ -71,11 +71,6 @@
   display: none;
 }
 
-.grouped-achievement__toggle--list {
-  align-self: flex-start;
-  margin-left: 4px;
-}
-
 .grouped-achievement__toggle.is-replacement-label {
   white-space: nowrap;
   padding-inline: calc(11px * var(--corner-btn-scale, 1));

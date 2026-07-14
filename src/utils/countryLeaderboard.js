@@ -1,54 +1,22 @@
-import { isGroupedDuplicate } from "./groupDuplicates.js";
-import { withGlobalRank } from "./leaderboard.js";
+import { compareByXpAndBestRank, withGlobalRank } from "./leaderboard.js";
+import {
+  normalizeCountryCode,
+  normalizeCountryCodes,
+  resolvePlayerCountries,
+  resolvePlayerCountry,
+} from "./playerCountries.js";
+
+export {
+  normalizeCountryCode,
+  normalizeCountryCodes,
+  resolvePlayerCountries,
+  resolvePlayerCountry,
+};
 
 const COUNTRY_NAME_FORMATTER =
   typeof Intl !== "undefined" && Intl.DisplayNames
     ? new Intl.DisplayNames(["en"], { type: "region" })
     : null;
-
-export function normalizeCountryCode(value) {
-  if (typeof value === "string") {
-    const code = value.trim().toUpperCase();
-    return /^[A-Z]{2}$/.test(code) ? code : null;
-  }
-  if (Array.isArray(value)) {
-    for (const entry of value) {
-      const code = normalizeCountryCode(entry);
-      if (code) return code;
-    }
-    return null;
-  }
-  if (value && typeof value === "object") {
-    return normalizeCountryCode(value.code);
-  }
-  return null;
-}
-
-export function normalizeCountryCodes(value) {
-  if (Array.isArray(value)) {
-    const codes = [];
-    const seen = new Set();
-    for (const entry of value) {
-      const code = normalizeCountryCode(entry);
-      if (!code || seen.has(code)) continue;
-      seen.add(code);
-      codes.push(code);
-    }
-    return codes;
-  }
-
-  const code = normalizeCountryCode(value);
-  return code ? [code] : [];
-}
-
-export function resolvePlayerCountries(playerCountries, player) {
-  if (!player || player === "-" || !playerCountries) return [];
-  return normalizeCountryCodes(playerCountries[player]);
-}
-
-export function resolvePlayerCountry(playerCountries, player) {
-  return resolvePlayerCountries(playerCountries, player)[0] ?? null;
-}
 
 export function getCountryName(code) {
   const normalized = normalizeCountryCode(code);
@@ -56,20 +24,11 @@ export function getCountryName(code) {
   return COUNTRY_NAME_FORMATTER?.of(normalized) ?? normalized;
 }
 
-export function countryCodeToFlag(code) {
-  const normalized = normalizeCountryCode(code);
-  if (!normalized) return "";
-  return [...normalized]
-    .map((char) => String.fromCodePoint(127397 + char.charCodeAt(0)))
-    .join("");
-}
-
 function compareCountryByXp(a, b) {
-  if (a.totalXP !== b.totalXP) return b.totalXP - a.totalXP;
-  const rankA = a.bestRank ?? Number.POSITIVE_INFINITY;
-  const rankB = b.bestRank ?? Number.POSITIVE_INFINITY;
-  if (rankA !== rankB) return rankA - rankB;
-  return getCountryName(a.code).localeCompare(getCountryName(b.code));
+  return (
+    compareByXpAndBestRank(a, b) ||
+    getCountryName(a.code).localeCompare(getCountryName(b.code))
+  );
 }
 
 export function buildCountryBoard(playerBoard, playerCountries) {
@@ -84,7 +43,6 @@ export function buildCountryBoard(playerBoard, playerCountries) {
         grouped.set(countryCode, {
           code: countryCode,
           name: getCountryName(countryCode),
-          flag: countryCodeToFlag(countryCode),
           players: [],
           achievements: [],
           totalXP: 0,
@@ -117,9 +75,15 @@ export function buildCountryBoard(playerBoard, playerCountries) {
       .map((country) => ({
         ...country,
         players: [...country.players].sort((a, b) => b.totalXP - a.totalXP),
-        achievements: [...country.achievements].sort(
-          (a, b) => a.listPosition - b.listPosition,
-        ),
+        achievements: [...country.achievements].sort((a, b) => {
+          // Null/undefined positions sort last, deterministically.
+          const posA = a.listPosition ?? null;
+          const posB = b.listPosition ?? null;
+          if (posA == null && posB == null) return 0;
+          if (posA == null) return 1;
+          if (posB == null) return -1;
+          return posA - posB;
+        }),
       }))
       .sort(compareCountryByXp),
   );

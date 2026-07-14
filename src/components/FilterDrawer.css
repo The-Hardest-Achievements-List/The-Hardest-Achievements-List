@@ -1,0 +1,698 @@
+﻿/* Styles for the mobile filter drawer (src/components/FilterDrawer.jsx),
+   including the compact-nav/narrow-viewport breakpoints that adjust the
+   Header, level list, and modal together whenever the drawer replaces the
+   desktop controls. */
+
+.flt-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: oklch(0% 0 0 / 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: flex-end;
+    animation: flt-overlay-in 0.18s ease;
+}
+
+@keyframes flt-overlay-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.flt-drawer {
+    width: 100%;
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-bottom: none;
+    border-radius: 24px 24px 0 0;
+    padding: 12px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-height: 82dvh;
+    overflow-y: auto;
+    animation: flt-drawer-in 0.28s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes flt-drawer-in {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.flt-drawer__handle {
+    width: 36px;
+    height: 4px;
+    background: var(--line-2);
+    border-radius: 3px;
+    margin: 0 auto 8px;
+    flex-shrink: 0;
+}
+
+.flt-lbl {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.flt-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.flt-sort-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hd__search--mobile {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+}
+
+.hd__search--mobile input {
+    font-size: 14px;
+    padding: 0;
+}
+
+.hd__sort-group--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.hd__sort-group--mobile .hd__sort-lbl {
+    display: none;
+}
+
+.flt-sort-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.hd__sel--drawer {
+    flex: 1;
+    min-width: 0;
+}
+
+.hd__sel--drawer .hd__sel-btn {
+    width: 100%;
+    justify-content: space-between;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 12px;
+    min-height: 42px;
+}
+
+.hd__toggle--drawer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 12px;
+    user-select: none;
+}
+
+.hd__toggle--drawer input[type="checkbox"] {
+    accent-color: var(--acc);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.hd__chips--mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.flt-done {
+    margin-top: 4px;
+}
+
+.flt-select {
+    flex: 1;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.hd--compact-nav .hd__nav-right,
+.hd--compact-nav .hd__controls-wrapper {
+    display: none;
+}
+
+.hd--compact-nav .hd__mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.hd--compact-nav .hd__nav-mobile-dropdown {
+    min-width: 0;
+}
+
+.hd--compact-nav .hd__nav-mobile-btn {
+    display: inline-flex;
+}
+
+.hd--compact-nav .hd__nav-mobile-btn-label {
+    display: inline;
+}
+
+.hd--compact-nav .hd__nav-mobile-action-btn:active {
+    transform: translateY(0);
+    box-shadow: inset 0 0 0 1px oklch(100% 0 0 / 0.04);
+}
+
+.hd--compact-nav .hd__filter-badge {
+    background: var(--acc);
+    color: var(--bg);
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+/* Header Filters button replaces the sidebar whenever compact nav is active */
+.app:has(.hd--compact-nav) .list__sidebar {
+    display: none;
+}
+
+.app:has(.hd--compact-nav) .list--card,
+.app:has(.hd--compact-nav) .list.is-sidebar-collapsed.list--card {
+    padding-left: clamp(10px, 4vw, 40px);
+    padding-right: clamp(10px, 4vw, 40px);
+}
+
+@media (max-width: 1024px) {
+    .hd__nav-right {
+        display: none;
+    }
+
+    .hd__controls-wrapper {
+        display: none;
+    }
+
+    .hd__mobile-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .hd__nav-mobile-dropdown {
+        min-width: 0;
+    }
+
+    .hd__nav-mobile-btn {
+        display: inline-flex;
+    }
+
+    .hd__nav-mobile-btn-label {
+        display: inline;
+    }
+
+    .hd__nav-mobile-action-btn:active {
+        transform: translateY(0);
+        box-shadow: inset 0 0 0 1px oklch(100% 0 0 / 0.04);
+    }
+
+    .hd__filter-badge {
+        background: var(--acc);
+        color: var(--bg);
+        font-size: 10px;
+        font-weight: 700;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+    }
+
+    .flt-drawer .hd__mode-toggle {
+        display: flex;
+        width: fit-content;
+    }
+
+    .flt-drawer .hd__sort-group {
+        display: flex;
+    }
+
+    .flt-drawer .hd__layout-group--drawer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .list__sidebar {
+        display: none;
+    }
+
+    .list--card,
+    .list.is-sidebar-collapsed.list--card {
+        padding-left: clamp(10px, 4vw, 40px);
+        padding-right: clamp(10px, 4vw, 40px);
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .hd__controls-wrapper .hd__layout-group,
+    .hd__controls-wrapper .hd__sort-group,
+    .hd__controls-wrapper .hd__mode-toggle {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .list--card {
+        padding-left: clamp(10px, 4vw, 40px);
+        padding-right: clamp(10px, 8vw, 450px);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+    .list--card {
+        padding-left: clamp(10px, 4vw, 40px);
+        padding-right: clamp(10px, 7vw, 350px);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .list--card {
+        padding-left: clamp(10px, 4vw, 40px);
+        padding-right: clamp(10px, 6vw, 200px);
+    }
+}
+
+@keyframes modal-mobile-in {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .hd {
+        padding: 12px 14px 0;
+    }
+
+    .hd__row {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .hd__brand-meta {
+        display: none;
+    }
+
+    .hd__nav {
+        display: none;
+    }
+
+    .hd__controls {
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+        align-items: stretch;
+    }
+
+    .hd__sort-group,
+    .hd__mode-toggle,
+    .hd__filters {
+        display: none;
+    }
+
+    .hd__kbd {
+        display: none;
+    }
+
+    .list {
+        padding: 0 10px;
+        --list-gap: 7px;
+    }
+
+    .list--card,
+    .list.is-sidebar-collapsed.list--card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card {
+        grid-template-columns: 1fr 80px;
+        height: auto;
+        min-height: 90px;
+        max-height: none;
+    }
+
+    /* Keep auto-height cards content-sized; don't let thumb intrinsic size stretch them. */
+    .card__thumb {
+        position: relative;
+        align-self: stretch;
+        min-height: 90px;
+    }
+
+    .card__thumb img,
+    .card__thumb-placeholder {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card.has-corner-note .card__tags,
+    .card.has-corner-variant .card__tags {
+        padding-right: calc(58px * var(--corner-btn-scale, 1));
+    }
+
+    .card:not(.is-timeline) .card__rank {
+        display: none;
+    }
+
+    .card:not(.is-timeline) .card__content {
+        grid-template-columns: 1fr;
+    }
+
+    .card.is-timeline .card__content {
+        grid-template-columns: 52px 1fr;
+    }
+
+    .card.is-timeline .card__rank {
+        padding: 8px 4px;
+    }
+
+    .card.is-timeline .card__rank-date {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        font-size: 8px;
+        letter-spacing: 0.04em;
+    }
+
+    .card__detail {
+        padding: 10px 12px;
+    }
+
+    .card.has-corner-note .card__detail-top,
+    .card.has-corner-variant .card__detail-top {
+        padding-right: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
+    .card__name {
+        font-size: 14px;
+        margin-bottom: 4px;
+        max-height: calc(2 * 1.15em);
+    }
+
+    .card__player-name {
+        font-size: 12px;
+    }
+
+    .card__detail-bottom {
+        gap: 5px;
+    }
+
+    .card__stats {
+        display: none;
+    }
+
+    .card__tags {
+        gap: 3px;
+    }
+
+    .card__tag {
+        font-size: 8px;
+        padding: 2px 6px;
+    }
+
+    .card__note-tag {
+        font-size: clamp(7px, 2.1vw, 8px);
+    }
+
+    .card__note-tag__btn {
+        padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
+    }
+
+    .card__corner-actions {
+        width: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+        gap: clamp(2px, 0.7vw, 3px);
+    }
+
+    .card__corner-actions:has(.grouped-achievement__toggle.is-replacement-label) {
+        width: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
+    .card.has-corner-variant:has(.grouped-achievement__toggle.is-replacement-label) .card__tags {
+        padding-right: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
+    .card__corner-actions .card__note-tag {
+        min-height: clamp(18px, 5.2vw, 22px);
+        border-radius: clamp(4px, 1.2vw, 5px);
+    }
+
+    .card__corner-actions .card__note-tag__btn {
+        gap: clamp(2px, 0.9vw, 4px);
+    }
+
+    .card__corner-actions .grouped-achievement__toggle {
+        min-height: clamp(18px, 5.2vw, 22px);
+        min-width: 0;
+        width: 100%;
+        padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
+        gap: clamp(2px, 0.9vw, 4px);
+        border-radius: clamp(4px, 1.2vw, 5px);
+        font-size: clamp(7px, 2.1vw, 8px);
+        letter-spacing: 0.01em;
+    }
+
+    .card__corner-actions .grouped-achievement__toggle.is-replacement-label {
+        min-width: 0;
+        padding-inline: clamp(4px, 1.4vw, 6px);
+    }
+
+    .card__corner-actions .grouped-achievement__toggle-icon {
+        font-size: clamp(0.58em, 1.8vw, 0.68em);
+    }
+
+    .card__corner-actions .grouped-achievement__toggle-count {
+        font-size: 0.92em;
+        font-weight: 600;
+    }
+
+    .card__open {
+        display: none;
+    }
+
+    .modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .modal {
+        max-width: 100%;
+        border-radius: 24px 24px 0 0;
+        border-bottom: none;
+        max-height: 92dvh;
+        overflow-y: auto;
+        animation: modal-mobile-in 0.3s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .modal__thumb {
+        height: 160px;
+    }
+
+    .modal__body {
+        padding: 18px 18px 36px;
+    }
+
+    .modal__name {
+        font-size: 20px;
+    }
+
+    .modal__stats {
+        gap: 14px;
+    }
+
+    .modal__links {
+        flex-direction: column;
+    }
+
+    .modal__link {
+        justify-content: center;
+    }
+}
+
+/* (the global .scroll-top-btn rule that used to sit here now lives in
+   styles/base.css, since it belongs to the App shell, not the drawer) */
+
+.flt-sort-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.flt-sort-btn {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: background .15s, color .15s, border-color .15s;
+}
+
+.flt-sort-btn:hover {
+    color: var(--ink);
+    border-color: var(--line-2);
+}
+
+.flt-sort-btn.is-active {
+    background: var(--acc);
+    color: var(--bg);
+    border-color: var(--acc);
+}
+
+.flt-dir-btn {
+    margin-top: 8px;
+    width: 100%;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 11px;
+    cursor: pointer;
+    text-align: center;
+    transition: background .15s, color .15s, border-color .15s;
+}
+
+.flt-dir-btn:hover {
+    color: var(--ink);
+    border-color: var(--line-2);
+}
+
+.flt-dir-btn.is-active {
+    background: var(--acc);
+    color: var(--bg);
+    border-color: var(--acc);
+}
+
+.flt-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 6px;
+    width: 100%;
+    justify-items: center;
+}
+
+.flt-tab {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 8px 7px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.flt-tab:hover {
+    color: var(--ink);
+    background: var(--bg-4, var(--bg-3));
+    border-color: var(--ink-3);
+    transform: translateY(-1px);
+}
+
+.flt-tab.is-active {
+    background: var(--acc);
+    color: var(--bg);
+    border-color: var(--acc);
+    font-weight: 700;
+}
+
+.flt-tab.is-active:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 640px) {
+    .flt-tabs {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .flt-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .flt-tab {
+        flex: 0 0 auto;
+        min-width: 82px;
+        padding: 8px 9px;
+    }
+}
+
