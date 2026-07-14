@@ -1911,19 +1911,19 @@
     "player": "Taiago",
     "levelID": null,
     "date": "2026-07-14",
-    "length": TBA,
+    "length": null,
     "version": 2.2,
     "submitter": "fishcake0031",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/etENhlTko1Ut?=1591",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Progress"
     ]
   }
 ]
