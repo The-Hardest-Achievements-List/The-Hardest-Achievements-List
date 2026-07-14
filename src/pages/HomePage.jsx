@@ -20,7 +20,7 @@ const EDITORS = [
   { 
     name: "TYATYAPKA", 
     roles: ["List Moderator"], 
-    url: https://www.youtube.com/@TYATYAPKA
+    url: "https://www.youtube.com/@TYATYAPKA"
   },
   { 
     name: "raine", 
@@ -39,11 +39,11 @@ const EDITORS = [
   { 
     name: "SupremeSDB", 
     roles: ["List Helper"], 
-    url: https://www.youtube.com/@SupremeSDB
+    url: "https://www.youtube.com/@SupremeSDB"
   },
   { name: "aytch0008", 
     roles: ["Trial Moderator"], 
-    url: https://www.youtube.com/@aytch0008 
+    url: "https://www.youtube.com/@aytch0008" 
   },
   { name: "NucDev", 
     roles: ["Integrity Moderator"], 
