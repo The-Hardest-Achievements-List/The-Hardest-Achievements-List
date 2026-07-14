@@ -264,6 +264,7 @@ export function buildSubmissionBoard(
   entries,
   classicMap,
   platformerMap,
+  playerCountries = null,
 ) {
   const submissions = entries
     .map((entry) => ({
@@ -303,6 +304,8 @@ export function buildSubmissionBoard(
 
       return {
         name,
+        country: resolvePlayerCountry(playerCountries, name),
+        countries: resolvePlayerCountries(playerCountries, name),
         submissions: rankedItems,
         pts: items.length,
         best,

@@ -389,9 +389,8 @@ const memoizedGetThumbnailUrlSequence = memoize(function getThumbnailUrlSequence
     if (explicit) add(explicit)
 
     if (levelID) {
-        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/high`)
-        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/small`)
         add(`https://levelthumbs.prevter.me/thumbnail/${levelID}`)
+        add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/small`)
     }
 
     const showcaseVideoId = showcaseVideo ? getYouTubeVideoId(showcaseVideo) : null

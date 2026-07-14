@@ -51,6 +51,96 @@ const CountryFlag = ({ code, className = "lb__flag-img", size = 18 }) => {
   );
 };
 
+const getRowCountries = (row) => {
+  if (Array.isArray(row?.countries) && row.countries.length) {
+    return row.countries;
+  }
+  return normalizeCountryCodes(row?.country);
+};
+
+/** Shows all nationality flags; trims with +N when the row is too narrow. */
+const NationalityFlags = ({
+  codes,
+  size = 18,
+  className = "lb__flags",
+  flagClassName = "lb__flag-img lb__flag-img--inline",
+}) => {
+  const normalized = useMemo(() => {
+    if (Array.isArray(codes)) {
+      return codes.map(normalizeCountryCode).filter(Boolean);
+    }
+    return normalizeCountryCodes(codes);
+  }, [codes]);
+  const codesKey = normalized.join(",");
+  const containerRef = useRef(null);
+  const [visibleCount, setVisibleCount] = useState(normalized.length);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || normalized.length === 0) {
+      setVisibleCount(0);
+      return undefined;
+    }
+
+    const GAP = 4;
+    const MORE_WIDTH = 22;
+    const flagCount = normalized.length;
+
+    const measure = () => {
+      const available = el.clientWidth;
+      if (available <= 0) {
+        setVisibleCount(flagCount);
+        return;
+      }
+
+      const fullWidth = flagCount * size + Math.max(0, flagCount - 1) * GAP;
+      if (fullWidth <= available) {
+        setVisibleCount(flagCount);
+        return;
+      }
+
+      let fit = 0;
+      for (let i = 0; i < flagCount; i += 1) {
+        const flagsWidth = (i + 1) * size + i * GAP;
+        const remaining = flagCount - (i + 1);
+        const withMore =
+          remaining > 0 ? flagsWidth + GAP + MORE_WIDTH : flagsWidth;
+        if (withMore > available) break;
+        fit = i + 1;
+      }
+
+      setVisibleCount(Math.max(1, Math.min(fit || 1, flagCount)));
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [codesKey, normalized.length, size]);
+
+  if (!normalized.length) return null;
+
+  const visible = normalized.slice(0, visibleCount);
+  const hiddenCount = Math.max(0, normalized.length - visible.length);
+  const title = normalized.map((code) => getCountryName(code)).join(", ");
+
+  return (
+    <span
+      ref={containerRef}
+      className={className}
+      title={title}
+      aria-label={title}
+    >
+      {visible.map((code) => (
+        <CountryFlag key={code} code={code} className={flagClassName} size={size} />
+      ))}
+      {hiddenCount > 0 ? (
+        <span className="lb__flags-more">+{hiddenCount}</span>
+      ) : null}
+    </span>
+  );
+};
+
 const getRowKey = (row, mode) => (mode === "countries" ? row.code : row.name);
 
 const UNKNOWN_COUNTRY_VALUE = "unknown";
@@ -218,11 +308,13 @@ function buildDefaultBoards() {
       filterSubmissionEntries("classic"),
       classicPositionMap,
       platformerPositionMap,
+      playerCountriesData,
     ),
     platformer: buildSubmissionBoard(
       filterSubmissionEntries("platformer"),
       classicPositionMap,
       platformerPositionMap,
+      playerCountriesData,
     ),
   };
 
@@ -485,7 +577,13 @@ function DetailContent({
         <div className="lb__detail-hd">
           <div className="lb__detail-left">
             <span className="lb__detail-pos">#{player.globalRank}</span>
-            <h2 className="lb__detail-name">{player.name}</h2>
+            <h2 className="lb__detail-name">
+              <NationalityFlags
+                codes={getRowCountries(player)}
+                className="lb__flags lb__flags--detail"
+              />
+              {player.name}
+            </h2>
           </div>
           <span className="lb__detail-points">{player.pts} submissions</span>
         </div>
@@ -513,12 +611,10 @@ function DetailContent({
         <div className="lb__detail-left">
           <span className="lb__detail-pos">#{player.globalRank}</span>
           <h2 className="lb__detail-name">
-            {player.country ? (
-              <CountryFlag
-                code={player.country}
-                className="lb__flag-img lb__flag-img--inline"
-              />
-            ) : null}
+            <NationalityFlags
+              codes={getRowCountries(player)}
+              className="lb__flags lb__flags--detail"
+            />
             {player.name}
           </h2>
         </div>
@@ -1043,12 +1139,7 @@ export default function LeaderboardPage({
                     ) : (
                       <>
                         <span className="lb__pname">
-                          {row.country ? (
-                            <CountryFlag
-                              code={row.country}
-                              className="lb__flag-img lb__flag-img--inline"
-                            />
-                          ) : null}
+                          <NationalityFlags codes={getRowCountries(row)} />
                           <span className="lb__pname-text">{row.name}</span>
                         </span>
                         <span
