@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  flex-shrink: 0;
 }
 
 .grouped-achievement__main {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .grouped-achievement__main .card {
@@ -16,39 +20,65 @@
 }
 
 .grouped-achievement__toggle {
-  position: absolute;
-  bottom: calc(10px * var(--card-text-scale, 1));
-  right: calc(10px * var(--card-text-scale, 1));
-  background: oklch(18% 0.008 260 / 0.85);
-  color: var(--ink);
-  border: calc(2px * var(--card-text-scale, 1)) solid var(--line-2);
-  border-radius: calc(6px * var(--card-text-scale, 1));
-  padding: calc(8px * var(--card-text-scale, 1)) calc(12px * var(--card-text-scale, 1));
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: calc(6px * var(--card-text-scale, 1));
-  transition: all 0.2s ease;
-  z-index: 10;
+  justify-content: center;
+  gap: calc(5px * var(--corner-btn-scale, 1));
+  flex-shrink: 0;
+  background: oklch(16% 0.010 260 / 0.72);
+  color: oklch(88% 0.006 280);
+  border: 1px solid oklch(100% 0 0 / 0.16);
+  border-radius: calc(6px * var(--corner-btn-scale, 1));
+  padding: calc(4px * var(--corner-btn-scale, 1)) calc(9px * var(--corner-btn-scale, 1));
+  font-family: var(--mono);
+  font-size: calc(10px * var(--corner-btn-scale, 1));
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 1px 2px oklch(0% 0 0 / 0.18),
+    inset 0 1px 0 oklch(100% 0 0 / 0.06);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+  min-height: calc(26px * var(--corner-btn-scale, 1));
+  box-sizing: border-box;
 }
 
 .grouped-achievement__toggle:hover {
-  background: oklch(22% 0.010 260 / 0.95);
-  border-color: var(--acc);
+  background: oklch(20% 0.012 260 / 0.88);
+  border-color: oklch(78% 0.13 75 / 0.45);
   color: var(--acc);
-  transform: scale(1.05);
+  box-shadow:
+    0 1px 3px oklch(0% 0 0 / 0.22),
+    0 0 0 1px oklch(78% 0.13 75 / 0.12),
+    inset 0 1px 0 oklch(100% 0 0 / 0.08);
+}
+
+.grouped-achievement__toggle:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 2px;
 }
 
 .grouped-achievement__toggle-icon {
-  display: inline-block;
-  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  font-size: 0.72em;
+  opacity: 0.92;
 }
 
-.grouped-achievement__toggle:hover .grouped-achievement__toggle-icon {
-  transform: scale(1.2);
+.grouped-achievement__toggle-count {
+  display: none;
+}
+
+.grouped-achievement__toggle.is-replacement-label {
+  white-space: nowrap;
+  padding-inline: calc(11px * var(--corner-btn-scale, 1));
+  min-width: calc(138px * var(--corner-btn-scale, 1));
+}
+
+.grouped-achievement__toggle.is-replacement-label .grouped-achievement__toggle-text {
+  white-space: nowrap;
 }
 
 .grouped-achievement__duplicates {
@@ -58,26 +88,37 @@
   padding: calc(12px * var(--card-text-scale, 1));
   background: oklch(18% 0.008 260 / 0.5);
   border-left: calc(4px * var(--card-text-scale, 1)) solid var(--acc-soft);
+  flex-shrink: 0;
   animation: slideDown 0.2s ease;
+}
+
+.grouped-achievement__duplicate-item.is-replacement {
+  border-color: oklch(65% 0.18 145 / 0.6);
+  box-shadow: inset 4px 0 0 oklch(62% 0.2 145);
+}
+
+.grouped-achievement__duplicate-item.is-replacement:hover {
+  border-color: oklch(65% 0.18 145 / 0.75);
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+    transform: translateY(-6px);
   }
 
   to {
     opacity: 1;
-    max-height: 1000px;
+    transform: translateY(0);
   }
 }
 
 .grouped-achievement__duplicate-item {
   background: oklch(15% 0.005 260 / 0.5);
   border-radius: calc(4px * var(--card-text-scale, 1));
-  overflow: hidden;
+  overflow: clip;
+  flex: 0 0 auto;
+  min-height: min-content;
   transition: background 0.2s ease;
   border: calc(1px * var(--card-text-scale, 1)) solid var(--line);
 }
@@ -89,18 +130,66 @@
 
 .grouped-achievement__duplicate-item .card {
   cursor: pointer;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  /* Match a normal card footprint; green chrome lives on the wrapper. */
+  height: calc(180px * var(--card-height, 1));
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+.grouped-achievement__duplicate-item .card.is-replacement {
+  border: none;
+  box-shadow: none;
+}
+
+@container card-content (max-width: 300px) {
+  .grouped-achievement__toggle-text {
+    display: none;
+  }
+
+  .grouped-achievement__toggle-count {
+    display: inline;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (max-width: 640px) {
   .grouped-achievement__toggle {
-    bottom: 8px;
-    right: 8px;
-    padding: 6px 10px;
-    font-size: 12px;
+    min-height: clamp(18px, 5.2vw, 22px);
+    padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
+    gap: clamp(2px, 0.9vw, 4px);
+    border-radius: clamp(4px, 1.2vw, 5px);
+    font-size: clamp(7px, 2.1vw, 8px);
+  }
+
+  .grouped-achievement__toggle.is-replacement-label {
+    min-width: 0;
+    padding-inline: clamp(4px, 1.4vw, 6px);
+  }
+
+  .grouped-achievement__toggle-icon {
+    font-size: clamp(0.58em, 1.8vw, 0.68em);
+  }
+
+  .grouped-achievement__toggle-text {
+    display: none;
+  }
+
+  .grouped-achievement__toggle-count {
+    display: inline;
+    font-variant-numeric: tabular-nums;
   }
 
   .grouped-achievement__duplicates {
     padding: 8px;
     gap: 6px;
+  }
+
+  .grouped-achievement__duplicate-item .card {
+    height: auto;
+    min-height: 90px;
   }
 }

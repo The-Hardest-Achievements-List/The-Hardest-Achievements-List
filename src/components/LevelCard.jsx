@@ -1,169 +1,251 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   formatDate,
-  formatLength,
-  getThumbnailUrlSequence,
+  formatDisplayVersion,
+  getNotesExtraCount,
+  getNotesPreview,
+  getNotesPreviewMaxLength,
+  hasNotes,
+  hasNotesBeyondPreview,
 } from "../utils/format";
-import { TAG_ICONS, TAG_DEFINITIONS } from "./Header";
-import Tooltip from "./Tooltip";
+import {
+  UNDEFINED_LABEL,
+  asDisplayDate,
+  asDisplayLength,
+  asDisplayNumber,
+  asDisplayString,
+  filterDisplayableTags,
+} from "../utils/display";
+import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
+import TruncatedCardName from "./TruncatedCardName";
+import CardTags from "./CardTags";
+import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
+import {
+  formatEstimateDisplay,
+  hasEstimate,
+  hasProjectedShift,
+  hasResolvableEstimate,
+} from "../utils/estimateRank";
+
+export function CardNoteButton({ notes, onOpen }) {
+  const [previewMaxLength, setPreviewMaxLength] = useState(getNotesPreviewMaxLength);
+
+  useEffect(() => {
+    const updatePreviewLimit = () => {
+      setPreviewMaxLength(getNotesPreviewMaxLength());
+    };
+    updatePreviewLimit();
+    window.addEventListener("resize", updatePreviewLimit);
+    return () => window.removeEventListener("resize", updatePreviewLimit);
+  }, []);
+
+  const preview = getNotesPreview(notes, previewMaxLength);
+  if (!preview) return null;
+
+  const hasMore = hasNotesBeyondPreview(notes, previewMaxLength);
+  const extraCount = getNotesExtraCount(notes);
+  const noteClassName = `card__note-tag${hasMore ? " card__note-tag--more" : ""}`;
+
+  const tooltipContent = (
+    <div className="note-tooltip">
+      <p className="note-tooltip__body">{preview}</p>
+      {hasMore ? (
+        <p className="note-tooltip__hint">Click card for full notes</p>
+      ) : null}
+    </div>
+  );
+
+  return (
+    <Tooltip content={tooltipContent} className={noteClassName}>
+      <button
+        type="button"
+        className="card__note-tag__btn"
+        onClick={(e) => {
+          e.stopPropagation();
+          onOpen?.();
+        }}
+        aria-label={hasMore ? "Notes — click for full text" : "Notes"}
+      >
+        <i className="fas fa-comment-dots" aria-hidden="true" />
+        <span className="card__note-tag__label">Note</span>
+        {extraCount > 0 ? (
+          <span className="card__note-tag__more" aria-hidden="true">
+            +{extraCount}
+          </span>
+        ) : null}
+      </button>
+    </Tooltip>
+  );
+}
 
 function LevelCard({
   achievement: a,
   index,
   isTimeline,
-  hideRank,
+  timelineDateLabel,
+  isPendingEstimate,
+  pendingMainCount = 0,
+  showProjectedRanks = false,
   onClick,
-  layoutMode = "CARD",
+  cornerActions = null,
 }) {
-  const shouldShowRank = !hideRank && !isTimeline && index !== -1;
-  const podiumRank = shouldShowRank
+  const displayedDate = timelineDateLabel ?? formatDate(a.date);
+  const displayedName = asDisplayString(a.name);
+  const displayedPlayer = asDisplayString(a.player);
+  const displayedLevelID = asDisplayNumber(a.levelID);
+  const displayedLength = asDisplayLength(a.length);
+  const displayedVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
+  const displayedDateValue = asDisplayDate(a.date);
+  const shouldShowRank = !isTimeline && index !== -1;
+  const officialRank = shouldShowRank
     ? (a.rank ?? a.listRank ?? index + 1)
     : null;
-  const isPodium = !isTimeline && index < 3 && !hideRank;
+  const pendingRankBadge = isPendingEstimate
+    ? formatEstimateDisplay(a, pendingMainCount)
+    : null;
+  const showProjectedShift =
+    showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
+  const isPodium =
+    !isTimeline && index < 3 && (isPendingEstimate ? hasEstimate(a) : true);
   const isDuplicate = index === -1;
 
-  const tags = React.useMemo(() => {
-    if (Array.isArray(a.tags)) return a.tags;
-    if (typeof a.tags === "string") return a.tags.split(/\s*,\s*/).filter(Boolean);
-    return [];
-  }, [a.tags]);
+  const tags = React.useMemo(() => filterDisplayableTags(a.tags), [a.tags]);
+  const pendingRemoval = tags.includes("Pending Removal");
+  const isReplacement = Boolean(a.isReplacement);
 
-  const thumbnailUrlSequence = useMemo(
-    () =>
-      getThumbnailUrlSequence(a.thumbnail, a.showcaseVideo, a.video, a.levelID),
-    [a.thumbnail, a.showcaseVideo, a.video, a.levelID],
-  );
-
-  const [urlIndex, setUrlIndex] = useState(0);
-  const currentThumbnailUrl = thumbnailUrlSequence[urlIndex] || null;
-
-  const handleImageError = useCallback(() => {
-    setUrlIndex((prev) =>
-      prev < thumbnailUrlSequence.length - 1 ? prev + 1 : prev,
-    );
-  }, [thumbnailUrlSequence.length]);
-
-  const handleImageLoad = useCallback(
-    (e) => {
-      if (e.target.naturalWidth === 0 || e.target.naturalHeight === 0) {
-        handleImageError();
-      }
-    },
-    [handleImageError],
-  );
+  const {
+    ref: thumbnailRef,
+    currentUrl,
+    loadedUrl,
+    onError,
+    onLoad,
+  } = useLevelThumbnail({
+    thumbnail: a.thumbnail,
+    showcaseVideo: a.showcaseVideo,
+    video: a.video,
+    levelID: a.levelID,
+    enabled: true,
+  });
 
   const handleCardClick = useCallback(() => {
     onClick(a);
   }, [onClick, a]);
 
+  const showCornerNote = hasNotes(a.notes);
+  const showCornerActions = showCornerNote || Boolean(cornerActions);
+
   return (
     <article
-      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${layoutMode === "LIST" ? " card--list" : ""}`}
+      ref={thumbnailRef}
+      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}`}
+      style={
+        loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
+      }
       onClick={handleCardClick}
     >
-      <div
-        className="card__content"
-        style={{
-          backgroundImage:
-            layoutMode === "CARD" && currentThumbnailUrl
-              ? `url(${currentThumbnailUrl})`
-              : undefined,
-        }}
-      >
+      <div className="card__content">
         <div className="card__detail">
           <div className="card__detail-top">
             <div className="card__rank-row">
               {!isDuplicate &&
                 (isTimeline ? (
-                  <span className="card__rank-badge">{formatDate(a.date)}</span>
+                  <span className="card__rank-badge">{displayedDate}</span>
+                ) : isPendingEstimate ? (
+                  pendingRankBadge != null && (
+                    <span
+                      className={`card__rank-badge${!hasResolvableEstimate(a, pendingMainCount) ? " card__rank-badge--unknown" : ""}`}
+                    >
+                      {pendingRankBadge}
+                    </span>
+                  )
+                ) : hasProjectedShift(a) ? (
+                  <Tooltip
+                    content={
+                      showProjectedShift ? (
+                        <ProjectedRankTooltipContent entry={a} />
+                      ) : null
+                    }
+                  >
+                    <span
+                      className={`card__rank-badge rank-projection${showProjectedShift ? "" : " rank-projection--single"}`}
+                    >
+                      <span className="rank-projection__current">#{officialRank}</span>
+                      <span className="rank-projection__arrow" aria-hidden="true">
+                        →
+                      </span>
+                      <span className="rank-projection__projected">
+                        #{a.projectedRank}
+                      </span>
+                    </span>
+                  </Tooltip>
                 ) : (
-                  podiumRank != null && (
-                    <span className="card__rank-badge">#{podiumRank}</span>
+                  officialRank != null && (
+                    <span className="card__rank-badge">#{officialRank}</span>
                   )
                 ))}
             </div>
-            <h2 className="card__name">{a.name}</h2>
+            <TruncatedCardName name={displayedName} className="card__name" />
             <div className="card__player">
               <span className="card__player-by">by</span>
-              <span className="card__player-name">{a.player}</span>
+              <span className="card__player-name">{displayedPlayer}</span>
             </div>
           </div>
 
           <div className="card__detail-bottom">
             <div className="card__stats">
-              {a.levelID != null && (
+              {typeof a.levelID === "number" && Number.isFinite(a.levelID) && (
                 <div>
                   <span className="lbl">ID</span>
-                  <span className="val">{a.levelID}</span>
+                  <span className="val">{displayedLevelID}</span>
                 </div>
               )}
               {!isTimeline && (
                 <div>
                   <span className="lbl">DATE</span>
-                  <span className="val">{formatDate(a.date)}</span>
-                </div>
-              )}
-              {!!a.length && (
-                <div>
-                  <span className="lbl">LEN</span>
-                  <span className="val">{formatLength(a.length)}</span>
+                  <span className="val">{displayedDateValue}</span>
                 </div>
               )}
               <div>
+                <span className="lbl">LEN</span>
+                <span className="val">{displayedLength}</span>
+              </div>
+              <div>
                 <span className="lbl">VER</span>
-                <span className="val">{a.version ?? "2.2"}</span>
+                <span className="val">{displayedVersion}</span>
               </div>
             </div>
-            <div className="card__tags">
-              {tags.map((t) => {
-                const def = TAG_DEFINITIONS[t] || {};
-                return (
-                  <span key={t} className={`card__tag ${def.className || ""}`}>
-                    <Tooltip text={def.tooltip || t}>
-                      {def.icon ? (
-                        <img
-                          src={def.icon}
-                          alt=""
-                          style={{ marginRight: "0.35rem", height: 12 }}
-                        />
-                      ) : (
-                        TAG_ICONS[t] && (
-                          <i
-                            className={`fas ${TAG_ICONS[t]}`}
-                            style={{ marginRight: "0.35rem" }}
-                          />
-                        )
-                      )}
-                      {def.text || t}
-                    </Tooltip>
-                  </span>
-                );
-              })}
-            </div>
+            <CardTags tags={tags} listNote={null} />
           </div>
         </div>
+        {showCornerActions && (
+          <div
+            className="card__corner-actions"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {showCornerNote && (
+              <CardNoteButton notes={a.notes} onOpen={handleCardClick} />
+            )}
+            {cornerActions}
+          </div>
+        )}
       </div>
 
-      {layoutMode === "CARD" && (
-        <div className="card__thumb">
-          {currentThumbnailUrl ? (
-            <img
-              src={currentThumbnailUrl}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              onError={handleImageError}
-              onLoad={handleImageLoad}
-              width="100%"
-              height="100%"
-            />
-          ) : (
-            <div className="card__thumb-placeholder" />
-          )}
-          <div className="card__thumb-fade" />
-          {a.notes && <div className="card__notes-overlay">{a.notes}</div>}
-        </div>
-      )}
+      <div className="card__thumb">
+        {currentUrl ? (
+          <img
+            src={currentUrl}
+            alt=""
+            decoding="async"
+            onError={onError}
+            onLoad={onLoad}
+            width="100%"
+            height="100%"
+          />
+        ) : (
+          <div className="card__thumb-placeholder" />
+        )}
+        <div className="card__thumb-fade" />
+      </div>
     </article>
   );
 }

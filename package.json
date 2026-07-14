@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "normalize:entries": "node scripts/normalize-entries.mjs"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

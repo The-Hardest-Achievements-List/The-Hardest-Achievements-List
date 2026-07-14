@@ -1,0 +1,887 @@
+﻿/* Styles for the level list grid and level cards
+   (src/components/LevelList.jsx, src/components/LevelCard.jsx). */
+
+.list {
+    position: relative;
+    z-index: 1;
+    padding: 40px 40px 0;
+    display: flex;
+    flex-direction: column;
+    --list-gap: 14px;
+    gap: var(--list-gap);
+    max-width: 100%;
+}
+
+.list--card {
+    padding-right: 460px;
+    transition: padding-right 0.3s ease;
+}
+
+.list.is-sidebar-collapsed.list--card {
+    padding-right: 100px;
+}
+
+.list__sidebar {
+    position: fixed;
+    top: var(--hd-height);
+    right: 0;
+    width: min(420px, calc(100% - 960px));
+    max-width: 420px;
+    height: calc(100vh - var(--hd-height));
+    padding: 24px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 50;
+    box-sizing: border-box;
+    transition: width 0.3s ease, padding 0.3s ease, max-width 0.3s ease;
+}
+
+.list__sidebar.is-collapsed {
+    width: 60px;
+    padding: 12px 8px;
+}
+
+.list__sidebar.is-collapsed> :not(.sidebar__collapse-btn) {
+    display: none;
+}
+
+.sidebar__collapse-btn {
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    color: var(--ink);
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    flex-shrink: 0;
+    align-self: stretch;
+    margin-top: auto;
+    box-shadow: 0 4px 14px oklch(0% 0 0 / 0.22);
+}
+
+.sidebar__collapse-btn-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.sidebar__collapse-btn:hover {
+    background: var(--acc-soft);
+    border-color: var(--acc);
+    color: var(--ink);
+    box-shadow: 0 6px 18px oklch(0% 0 0 / 0.28);
+}
+
+.list__sidebar.is-collapsed .sidebar__collapse-btn {
+    width: 44px;
+    min-height: 88px;
+    padding: 10px 8px;
+    flex-direction: column;
+    align-self: center;
+}
+
+.list__sidebar.is-collapsed .sidebar__collapse-btn-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 10px;
+}
+
+.list__sidebar .hd__mode-toggle {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 3px;
+    border-radius: 8px;
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__mode-toggle button {
+    background: transparent;
+    border: none;
+    padding: 8px 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--ink-3);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+}
+
+.list__sidebar .hd__mode-toggle button:hover {
+    color: var(--ink);
+    background: var(--bg-3);
+}
+
+.list__sidebar .hd__mode-toggle button.is-active {
+    background: var(--acc);
+    color: var(--bg);
+}
+
+.list__sidebar .hd__layout-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 6px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__layout-btn {
+    background: transparent;
+    border: none;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 70px;
+}
+
+.list__sidebar .hd__layout-btn.is-active {
+    background: var(--acc);
+    color: var(--bg);
+}
+
+.list__sidebar .hd__scale-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-3);
+    font-family: var(--mono);
+    font-size: 11px;
+    width: 100%;
+    min-width: 0;
+    order: 3;
+}
+
+.list__sidebar .hd__scale-control label {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.list__sidebar .hd__scale-control input {
+    width: 100%;
+    min-width: 0;
+    flex: 1;
+}
+
+.list__sidebar .hd__sort-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 8px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+}
+
+.list__sidebar .hd__sort-group .hd__sort-lbl {
+    padding-left: 4px;
+    align-self: flex-start;
+}
+
+.list__sort-controls {
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+
+.list__sidebar .hd__sel--compact {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.list__sidebar .hd__sel--compact .hd__sel-btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__sel-btn-label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list__sidebar .hd__toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--ink-2);
+    font-family: var(--mono);
+    font-size: 11px;
+    user-select: none;
+}
+
+.list__sidebar .hd__sort-group .hd__toggle--inline {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 8px 4px 0;
+    flex-shrink: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+    margin-left: 0;
+    align-self: stretch;
+}
+
+.list__sidebar .hd__sort-group .hd__toggle-label {
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    max-width: none;
+}
+
+.list__sidebar .hd__toggle input[type="checkbox"] {
+    accent-color: var(--acc);
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.list__sidebar .hd__sort-lbl {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-3);
+    padding-left: 8px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.list__sidebar .hd__sel {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.list__sidebar .hd__sel:has(.hd__sel-menu) {
+    z-index: 3;
+}
+
+.list__sidebar .hd__sel-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.12s, color 0.12s;
+    height: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.list__sidebar .hd__sel-btn:hover {
+    background: var(--bg-3);
+}
+
+.list__sidebar .hd__sel-btn svg {
+    color: var(--ink-3);
+    flex-shrink: 0;
+}
+
+.list__sidebar .hd__sel-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 120px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 8px 24px oklch(0% 0 0 / 0.4);
+    z-index: 200;
+}
+
+.list__sidebar .hd__sel-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: background 0.1s, color 0.1s;
+}
+
+.list__sidebar .hd__sel-item:hover {
+    background: var(--bg-3);
+    color: var(--ink);
+}
+
+.list__sidebar .hd__sel-item.is-active {
+    color: var(--acc);
+    font-weight: 700;
+}
+
+.list__filters {
+    width: 100%;
+    min-width: 0;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 14px 14px;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.list__sidebar .hd__filters {
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.list__sidebar .hd__fgroup-lbl {
+    padding-top: 0;
+}
+
+.list__sidebar .hd__chips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+}
+
+.list__sidebar .hd__chip {
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.list__sidebar .hd__chip .tooltip-container {
+    min-width: 0;
+    max-width: 100%;
+    flex: 0 1 auto;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.list--card {
+    --card-text-scale: calc(min(var(--card-height, 1), var(--card-width, 1)));
+    --card-detail-bottom-scale: clamp(0.8, var(--card-height, 1), 1);
+    --corner-ui-scale: clamp(0.95, var(--card-detail-bottom-scale, 1), 1.2);
+    --corner-btn-scale: calc(var(--corner-ui-scale, 1) * 0.95);
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: calc(180px * var(--card-height, 1));
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.card:hover {
+    border-color: var(--line-2);
+}
+
+.list__projection-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: var(--ink-2);
+    background: var(--acc-soft);
+    border: 1px solid oklch(78% 0.13 75 / 0.25);
+    border-radius: 8px;
+}
+
+.list__projection-banner i {
+    color: var(--acc);
+    flex-shrink: 0;
+}
+
+.list__projection-banner strong {
+    color: var(--acc);
+    font-weight: 700;
+}
+
+.list__empty {
+    padding: 80px 0;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--ink-3);
+}
+
+.list__window {
+    display: flex;
+    flex-direction: column;
+    gap: var(--list-gap, 14px);
+    width: 100%;
+}
+
+.list__window > .card,
+.list__window > .grouped-achievement {
+    flex: 0 0 auto;
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: calc(100% * var(--card-width, 1));
+    max-width: 100%;
+    height: calc(180px * var(--card-height, 1));
+    font-size: 14px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin: 0 auto;
+}
+
+.card:hover {
+    border-color: var(--line-2);
+}
+
+.card:hover {
+    border-color: var(--line-2);
+}
+
+.card.is-podium {
+    border-color: var(--line-2);
+}
+
+.card.is-pending-removal {
+    border-color: oklch(65% 0.2 25 / 0.6);
+    box-shadow: inset 4px 0 0 oklch(62% 0.22 25);
+}
+
+.card__tag.tag-pending-removal {
+    color: oklch(75% 0.18 25);
+    background: oklch(55% 0.18 25 / 0.15);
+    border-color: oklch(62% 0.2 25 / 0.4);
+}
+
+.card.is-pending-removal .card__name {
+    color: oklch(72% 0.2 25);
+}
+
+.card.is-replacement {
+    border-color: oklch(65% 0.18 145 / 0.6);
+    box-shadow: inset 4px 0 0 oklch(62% 0.2 145);
+}
+
+.card.is-replacement .card__name {
+    color: oklch(72% 0.18 145);
+}
+
+.card__content {
+    position: relative;
+    overflow: hidden;
+    container-type: inline-size;
+    container-name: card-content;
+    background-color: var(--bg-2);
+    border-right: 1px solid #101113;
+}
+
+/* Blurred thumb sits on its own layer and bleeds past the clip edge so
+   backdrop/filter undersampling can't leave bright pixels at the rim. */
+.card__content::after {
+    content: '';
+    position: absolute;
+    inset: -24px;
+    background-image: var(--thumb-url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px) brightness(0.35) saturate(0.6);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Opaque scrim on top of the blur â€” guarantees coverage even if blur fails. */
+.card__content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 70%, #000000db),
+        oklch(8.5% 0.018 280 / 0.55);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card__detail {
+    height: 100%;
+    padding: calc(16px * var(--card-text-scale, 1)) calc(20px * var(--card-text-scale, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    gap: calc(8px * var(--card-text-scale, 1));
+    position: relative;
+    z-index: 2;
+}
+
+.card__detail-top {
+    min-width: 0;
+}
+
+.card__rank-row {
+    display: flex;
+    align-items: center;
+    gap: calc(8px * var(--card-text-scale, 1));
+    margin-bottom: calc(5px * var(--card-text-scale, 1));
+    min-height: calc(0.857em * 1.35);
+}
+
+.card__rank-row .tooltip-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.card__rank-badge {
+    font-family: var(--mono);
+    font-size: 0.857em;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 3px oklch(0% 0 0 / 0.55);
+    font-variant-numeric: tabular-nums;
+}
+
+.card__rank-badge--unknown {
+    color: var(--ink-2);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.rank-projection {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(5px * var(--card-text-scale, 1));
+    cursor: help;
+    text-shadow: 0 1px 3px oklch(0% 0 0 / 0.55);
+}
+
+.rank-projection__current,
+.rank-projection__projected {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.rank-projection__arrow {
+    color: var(--ink-2);
+    font-weight: 600;
+    font-size: 0.92em;
+}
+
+.rank-projection--single {
+    cursor: default;
+}
+
+.rank-projection--single .rank-projection__arrow,
+.rank-projection--single .rank-projection__projected {
+    display: none;
+}
+
+.modal__rank.rank-projection {
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    letter-spacing: 0.04em;
+    box-shadow: none;
+}
+
+.card__rank-pin {
+    font-family: var(--mono);
+    font-size: 0.643em;
+    letter-spacing: 0.2em;
+    color: var(--acc);
+    font-weight: 700;
+    background: var(--acc-soft);
+    padding: calc(3px * var(--card-text-scale, 1)) calc(6px * var(--card-text-scale, 1));
+    border-radius: calc(2px * var(--card-text-scale, 1));
+}
+
+.card__name {
+    font-size: 1.286em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+    margin: 0 0 calc(5px * var(--card-text-scale, 1));
+    color: var(--ink);
+    overflow: hidden;
+    display: block;
+    max-height: calc(2 * 1.15em);
+}
+
+.card__name-suffix {
+    white-space: nowrap;
+}
+
+.card__player {
+    display: flex;
+    align-items: baseline;
+    gap: calc(5px * var(--card-text-scale, 1));
+}
+
+.card__player-by {
+    font-family: var(--mono);
+    color: var(--ink-3);
+    font-size: 0.786em;
+    letter-spacing: 0.1em;
+}
+
+.card__player-name {
+    color: var(--acc);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.card__detail-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: calc(8px * var(--card-detail-bottom-scale, 1));
+}
+
+.card__corner-actions {
+    position: absolute;
+    right: calc(8px * var(--corner-btn-scale, 1));
+    bottom: calc(8px * var(--corner-btn-scale, 1));
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: calc(5px * var(--corner-btn-scale, 1));
+    width: calc(112px * var(--corner-btn-scale, 1));
+    pointer-events: auto;
+}
+
+.card__corner-actions:has(.grouped-achievement__toggle.is-replacement-label) {
+    width: calc(148px * var(--corner-btn-scale, 1));
+}
+
+.card__corner-actions .card__note-tag,
+.card__corner-actions .grouped-achievement__toggle {
+    width: 100%;
+    min-height: calc(26px * var(--corner-btn-scale, 1));
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+@media (min-width: 641px) {
+    .card__corner-actions .card__note-tag {
+        min-height: calc(24px * var(--corner-btn-scale, 1));
+        font-size: calc(10px * var(--corner-btn-scale, 1));
+    }
+
+    .card__corner-actions .card__note-tag__btn {
+        padding: calc(3px * var(--corner-btn-scale, 1)) calc(8px * var(--corner-btn-scale, 1));
+        gap: calc(4px * var(--corner-btn-scale, 1));
+    }
+}
+
+.card.has-corner-note .card__tags,
+.card.has-corner-variant .card__tags {
+    padding-right: calc(118px * var(--corner-btn-scale, 1));
+}
+
+.card.has-corner-variant:has(.grouped-achievement__toggle.is-replacement-label) .card__tags {
+    padding-right: calc(154px * var(--corner-btn-scale, 1));
+}
+
+.card__note-tag {
+    font-family: var(--mono);
+    font-size: calc(11px * var(--corner-btn-scale, 1));
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    padding: 0;
+    border-radius: calc(6px * var(--corner-btn-scale, 1));
+    text-transform: uppercase;
+    color: oklch(88% 0.006 280);
+    background: oklch(16% 0.010 260 / 0.72);
+    border: 1px solid oklch(100% 0 0 / 0.16);
+    box-shadow:
+        0 1px 2px oklch(0% 0 0 / 0.18),
+        inset 0 1px 0 oklch(100% 0 0 / 0.06);
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+    cursor: help;
+}
+
+.card__note-tag__btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    padding: calc(4px * var(--corner-btn-scale, 1)) calc(9px * var(--corner-btn-scale, 1));
+    display: inline-flex;
+    align-items: center;
+    gap: calc(5px * var(--corner-btn-scale, 1));
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    border-radius: inherit;
+}
+
+.card__note-tag--more {
+    cursor: pointer;
+}
+
+.card__note-tag__more {
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--acc);
+    opacity: 0.95;
+    flex-shrink: 0;
+}
+
+.card__tags .card__note-tag {
+    font-size: calc(10px * var(--card-detail-bottom-scale, 1));
+    border-radius: calc(6px * var(--card-detail-bottom-scale, 1));
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.card__tags .card__note-tag__btn {
+    padding: calc(3px * var(--card-detail-bottom-scale, 1)) calc(8px * var(--card-detail-bottom-scale, 1));
+    gap: calc(5px * var(--card-detail-bottom-scale, 1));
+}
+
+.card__note-tag i {
+    font-size: 0.85em;
+    flex-shrink: 0;
+    opacity: 0.92;
+}
+
+.card__note-tag:hover,
+.card__note-tag:focus-within,
+.card__corner-actions .grouped-achievement__toggle:hover {
+    background: oklch(20% 0.012 260 / 0.88);
+    border-color: oklch(78% 0.13 75 / 0.45);
+    color: var(--acc);
+    box-shadow:
+        0 1px 3px oklch(0% 0 0 / 0.22),
+        0 0 0 1px oklch(78% 0.13 75 / 0.12),
+        inset 0 1px 0 oklch(100% 0 0 / 0.08);
+}
+
+.card__note-tag:focus-within {
+    outline: 2px solid var(--acc);
+    outline-offset: 2px;
+}
+
+@container card-content (max-width: 300px) {
+    .card__corner-actions {
+        width: calc(54px * var(--corner-btn-scale, 1));
+    }
+
+    .card.has-corner-note .card__tags,
+    .card.has-corner-variant .card__tags {
+        padding-right: calc(clamp(48px, 15vw, 58px) * var(--corner-btn-scale, 1));
+    }
+
+    .card__note-tag__label {
+        display: none;
+    }
+}
+
+.card__stats {
+    display: flex;
+    gap: calc(14px * var(--card-detail-bottom-scale, 1));
+    padding: calc(8px * var(--card-detail-bottom-scale, 1)) 0;
+    border-top: 1px solid oklch(50% 0.035 280 / 0.55);
+    box-shadow: inset 0 1px 0 oklch(72% 0.02 280 / 0.08);
+}
+
+.card__stats>div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1px * var(--card-text-scale, 1));
+}
+
