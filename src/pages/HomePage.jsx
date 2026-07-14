@@ -14,18 +14,18 @@ const EDITORS = [
     url: "https://www.youtube.com/@qwidzitgd"
   },
   { name: "Arcadie", 
-    roles: ["Elder List Moderator"], 
+    roles: ["Elder Moderator"], 
     url: "https://www.youtube.com/@GW-Arcadie" 
   },
   { 
     name: "TYATYAPKA", 
     roles: ["List Moderator"], 
-    url: null
+    url: https://www.youtube.com/@TYATYAPKA
   },
   { 
     name: "raine", 
     roles: ["List Moderator"], 
-    url: null
+    url: "https://www.youtube.com/@rtwnr"
   },
   { name: "Exiled_Shade", 
     roles: ["List Helper"],
@@ -39,11 +39,11 @@ const EDITORS = [
   { 
     name: "SupremeSDB", 
     roles: ["List Helper"], 
-    url: null
+    url: https://www.youtube.com/@SupremeSDB
   },
   { name: "aytch0008", 
     roles: ["Trial Moderator"], 
-    url: null 
+    url: https://www.youtube.com/@aytch0008 
   },
   { name: "NucDev", 
     roles: ["Integrity Moderator"], 
