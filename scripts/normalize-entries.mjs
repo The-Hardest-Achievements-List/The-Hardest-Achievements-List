@@ -193,7 +193,12 @@ const normalizeTagValue = (tag) => {
 const normalizeNonEmptyStringField = (value) => {
   if (typeof value !== "string") return null;
   const trimmed = value.trim();
-  return trimmed ? trimmed : null;
+  if (!trimmed) return null;
+
+  const lowered = trimmed.toLowerCase();
+  if (lowered === "undefined" || lowered === "null") return null;
+
+  return trimmed;
 };
 
 const normalizeNumberField = (value) => {
@@ -326,10 +331,9 @@ export const normalizeDuplicateOfField = (value) => {
 };
 
 export const normalizeVideoField = (value) => {
-  if (value == null || typeof value !== "string") return value;
-  const trimmed = value.trim();
-  if (!trimmed) return value;
-  return normalizeYouTubeUrl(trimmed);
+  const normalized = normalizeNonEmptyStringField(value);
+  if (!normalized) return null;
+  return normalizeYouTubeUrl(normalized);
 };
 
 export const normalizeProofField = (value) => {
@@ -447,7 +451,7 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       continue;
     }
 
-    if (key === "image") {
+    if (key === "image" || key === "thumbnail") {
       result[key] = normalizeImageField(entry[key]);
       continue;
     }
@@ -491,7 +495,10 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       continue;
     }
 
-    result[key] = entry[key];
+    result[key] =
+      typeof entry[key] === "string"
+        ? normalizeNonEmptyStringField(entry[key])
+        : entry[key];
   }
 
   if (hasEstimateFields(fieldOrder)) {
@@ -515,12 +522,14 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       previous[key] = normalizeDuplicateOfField(entry.duplicateOf);
     } else if (key === "image") {
       previous[key] = normalizeImageField(entry[key]);
+    } else if (key === "thumbnail") {
+      previous[key] = entry[key];
     } else if (key === "proof") {
       previous[key] = normalizeProofField(entry[key]);
     } else if (VIDEO_FIELDS.includes(key)) {
-      previous[key] = normalizeVideoField(entry[key]);
+      previous[key] = entry[key];
     } else if (ESTIMATE_FIELDS.has(key)) {
-      previous[key] = normalizeEstimateField(entry[key]);
+      previous[key] = entry[key];
     } else {
       previous[key] = entry[key];
     }
@@ -559,8 +568,7 @@ const normalizePlatformerPendingEntry = (entry) =>
 const normalizeNonEmptyOrNull = (value) => {
   if (value == null) return null;
   if (typeof value === "string") {
-    const trimmed = value.trim();
-    return trimmed || null;
+    return normalizeNonEmptyStringField(value);
   }
   return value;
 };

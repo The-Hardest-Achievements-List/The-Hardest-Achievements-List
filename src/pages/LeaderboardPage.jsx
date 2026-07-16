@@ -265,12 +265,28 @@ function buildDefaultBoards() {
     _src: "platformer",
   }));
 
+  const classicPending = pendingData.map((entry) => ({
+    ...entry,
+    _src: "pending",
+  }));
+
+  const platformerPending = platformerpendingData.map((entry) => ({
+    ...entry,
+    _src: "platformerpending",
+  }));
+
   const classicPositionMap = buildListPositionMap(combinedClassic);
   const platformerPositionMap = buildListPositionMap(platformerList);
 
   const players = {
-    classic: buildPlayerBoard(combinedClassic, playerCountriesData),
-    platformer: buildPlayerBoard(platformerList, playerCountriesData),
+    classic: buildPlayerBoard(
+      [...combinedClassic, ...classicPending],
+      playerCountriesData,
+    ),
+    platformer: buildPlayerBoard(
+      [...platformerList, ...platformerPending],
+      playerCountriesData,
+    ),
   };
 
   const countries = {

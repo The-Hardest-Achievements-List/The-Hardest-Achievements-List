@@ -1566,7 +1566,7 @@
     ]
   },
   {
-    "name": "Tunnel of Despair 18-100%, (0%); 100% 3 deaths, 99.98% Accuracy in a row",
+    "name": "Tunnel of Despair 18-100%; (0%); 100% 3 deaths, 99.98% Accuracy in a row",
     "player": "lanx",
     "levelID": 91351939,
     "date": "2024-10-07",
@@ -2452,24 +2452,6 @@
     ]
   },
   {
-    "name": "Antarctic Lights 25-100%",
-    "player": "Axinity",
-    "levelID": null,
-    "date": "2025-02-03",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/X221kjOFiWk",
-    "showcaseVideo": "https://youtu.be/oZfKkZ36L9Q",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4f4649af07835eca639f06d805f8f552f8db474c/thumbnails/Antarctic%20Lights.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Sakupen Circles 144hz Mobile 37-100%",
     "player": "sydno",
     "levelID": 76962930,
@@ -2554,7 +2536,7 @@
     "date": "2024-09-08",
     "length": 67,
     "version": 2.2,
-    "submitter": "nota_goodusername",
+    "submitter": "notagood_username",
     "video": "https://youtu.be/bTb7U5KdLOM",
     "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
     "thumbnail": null,
@@ -3040,7 +3022,7 @@
     "submitter": "kyle1saurus",
     "video": "https://youtube.com/clip/UgkxloMsVh-moBfxRJZobkNTrhLCqZCMeMt3",
     "showcaseVideo": null,
-    "thumbnail": "—",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -3156,7 +3138,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Consistency"
+      "Consistency",
+      "Pending Removal"
     ]
   },
   {
@@ -3622,7 +3605,8 @@
       "Progress",
       "Rated",
       "Tentative",
-      "Mobile"
+      "Mobile",
+      "Pending Removal"
     ]
   },
   {
@@ -5180,7 +5164,8 @@
       "Progress",
       "Rated",
       "Tentative",
-      "Mobile"
+      "Mobile",
+      "Pending Removal"
     ]
   },
   {

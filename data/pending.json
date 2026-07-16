@@ -1,15 +1,55 @@
 [
   {
-    "name": "Acheron (Riot) 35-100%",
+    "name": "3SH is maxxed 78%",
+    "player": "VovanPo",
+    "levelID": null,
+    "date": "2026-06-04",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "VovanPo",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": null,
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "3SH is maxxed is a level consisting of 3 second hell challenge x15 in a row, in which this runs clears 12 out of 15.",
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Acheron (Riot) 17-97%",
     "player": "klimk",
     "levelID": 82758705,
-    "date": "2026-06-08",
-    "length": 44,
+    "date": "2026-06-04",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oZAv25TqJOQ",
+    "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Acheron (Riot) 23-100%",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-20",
+    "length": 49,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/hRQE_TIXGl0",
+    "video": "https://youtu.be/afRXOzUEADo",
     "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
     "thumbnail": null,
     "duplicateOf": "Acheron (Riot) 47-100%",
@@ -17,6 +57,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Acheron (Riot) 40-92%, 76% in a row",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-12",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r3DInzGpPEc",
+    "showcaseVideo": "https://youtu.be/Pui-sfRR_kQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -64,6 +124,148 @@
     ]
   },
   {
+    "name": "Acheron 60hz 36-96%",
+    "player": "Llqne",
+    "levelID": 73667628,
+    "date": "2026-07-07",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WgcCxGV2QxU",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Aeternus 19-100% 33 deaths, 99.01% accuracy",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-05-20",
+    "length": 62,
+    "version": 2.2,
+    "submitter": "aden",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LfS5zXcjeA4",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Including 75-92% deathless",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 24-39%",
+    "player": "dewbbs",
+    "levelID": 102647436,
+    "date": "2026-06-20",
+    "length": 11,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rrp94T91-aQ",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 26-40%",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-06-20",
+    "length": 12,
+    "version": 2.2,
+    "submitter": "megafwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/nACJUp1hDS4",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 42-59%",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-05-20",
+    "length": 13,
+    "version": 2.2,
+    "submitter": "megafwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/G_ZvIM2LvaY",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 42-60% 1 deaths, 99.97% accuracy",
+    "player": "FlinGuSPluNkuS",
+    "levelID": 102647436,
+    "date": "2026-05-23",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "FlinGuSPluNkuS",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gsZ-RRTeKLA",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 56-61%, 56-58%, 56-57%, 56-56%, 56-61%, 56-56%, 56-57%, 56-61% in a row",
+    "player": "FlinGuSPluNkuS",
+    "levelID": 102647436,
+    "date": "2026-06-28",
+    "length": 16,
+    "version": 2.2,
+    "submitter": "FlinGuSPluNkuS",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/qwJZIDfdF7k",
+    "showcaseVideo": "https://youtu.be/p4QgFtKL5kE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Aeternus 56-69%",
     "player": "yoshi",
     "levelID": 102647436,
@@ -94,7 +296,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/KKDmcMFs5w0",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -114,7 +316,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/idWQCCRfgzY",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -134,10 +336,30 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/NCxbxNAVY20",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "0.03 opacity",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Bassline Junkie",
+    "player": "Karma",
+    "levelID": 143300771,
+    "date": "2026-05-23",
+    "length": 110,
+    "version": 2.2,
+    "submitter": "BlueGamer",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/db_V19gW0rI",
+    "showcaseVideo": "https://youtu.be/4XVD5UzrCpM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
     "tags": [
       "Level",
       "Verified"
@@ -158,6 +380,46 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Blindscapes 17-100%",
+    "player": "benbot",
+    "levelID": null,
+    "date": "2026-07-11",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "rainityyy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/K74AS4pE9tU",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Extremely dark Nullscapes with a small light following your robot.",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Blindscapes 81%",
+    "player": "benbot",
+    "levelID": null,
+    "date": "2026-07-10",
+    "length": 75,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2ohbPZZRmK4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Extremely dark Nullscapes with a small light following your robot.",
     "tags": [
       "Level",
       "Progress"
@@ -190,7 +452,7 @@
     "date": "2026-01-16",
     "length": 243,
     "version": 2.2,
-    "submitter": "stupidass_username / 0",
+    "submitter": "bbv3 :3",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/szh-Z6eU3UU?t=4178",
@@ -202,6 +464,26 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "BYTELAW NEVER CLEAR",
+    "player": "FlinGuSPluNkuS",
+    "levelID": null,
+    "date": "2026-06-26",
+    "length": 7,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/jovWGeoFaeI",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
     ]
   },
   {
@@ -326,6 +608,91 @@
     ]
   },
   {
+    "name": "Cognitohazard",
+    "player": "Whizkid05",
+    "levelID": 130891319,
+    "date": "2025-02-19",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "CoolSchnoodle",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/T5g0r16X_ZA",
+    "showcaseVideo": "https://youtu.be/m1jvLHBy99M",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Collapse 73%, 100% in a row",
+    "player": "Cuatrocientos",
+    "levelID": 113256247,
+    "date": "2025-03-07",
+    "length": 208,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Au3817LnR-Y",
+    "showcaseVideo": "https://youtu.be/Hu3ZLVw7xKo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "CorroZ (nensa) 47%",
+    "player": "nensa",
+    "levelID": null,
+    "date": "2025-07-06",
+    "length": 17,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/DSsVuOb4BuQ",
+    "showcaseVideo": "https://youtu.be/fiCwcuCl4c0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "cry me a river 180%, 169% in a row",
+    "player": "klimk",
+    "levelID": 76403850,
+    "date": "2025-07-03",
+    "length": 85,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/G7IXpEgBaQU",
+    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": [
+      "cry me a river is a level consisting of Slaughterhouse River's part (49-58%) x5 in a row",
+      "This achievement is equivalent to River x9, x8 in a row"
+    ],
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Cyber Raptor 93%",
     "player": "Lobster",
     "levelID": null,
@@ -337,6 +704,26 @@
     "estimateUpper": null,
     "video": "https://youtu.be/X0uqmrkzfHI",
     "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "CYBERPSYCHOSIS 36-100%",
+    "player": "GuillExprex52",
+    "levelID": null,
+    "date": "2026-07-02",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LHjNGQcUQkI",
+    "showcaseVideo": "https://youtu.be/yJUFmtYwHYg",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -387,6 +774,26 @@
     ]
   },
   {
+    "name": "Diablo Fate Z 36-100%",
+    "player": "HipoAR",
+    "levelID": null,
+    "date": "2026-07-01",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gdJToAFW6OE",
+    "showcaseVideo": "https://youtu.be/p9cwDp0BC4A",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Dignity 47-90%",
     "player": "Sevant",
     "levelID": null,
@@ -404,6 +811,32 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Disquietudal Dance 39%; Im Deaf 2 deaths, 99.86% accuracy",
+    "player": "Emp",
+    "levelID": null,
+    "date": "2026-05-13",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/QkSExdZGmwI",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": [
+      "Disquietudal Dance is a level consisting of Diamond Dance (Sakupen Circles 37-49%) x16 in a row.",
+      "Im Deaf is a level consisting of sc66p (Sakupen Circles 37-49%) x4 in a row.",
+      "This run is equivalent to Diamond Dance x6 and sc66p x4 in 2 deaths in a row."
+    ],
+    "tags": [
+      "Level",
+      "Progress",
+      "Noclip",
+      "Miscellaneous"
     ]
   },
   {
@@ -488,16 +921,16 @@
     ]
   },
   {
-    "name": "Escalator 42%",
+    "name": "Escalator 47%",
     "player": "teraaa",
     "levelID": null,
-    "date": "2026-02-15",
-    "length": 46,
+    "date": "2026-07-10",
+    "length": 49,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/1NbSXFdu8Qs",
+    "video": "https://youtu.be/7JPl4hPZJig",
     "showcaseVideo": "https://youtu.be/wyGXMC2I-j8",
     "thumbnail": null,
     "duplicateOf": null,
@@ -549,16 +982,16 @@
     ]
   },
   {
-    "name": "EVISCERATE 48%",
+    "name": "EVISCERATE 55%",
     "player": "Surpl3x",
     "levelID": null,
-    "date": "2026-05-01",
-    "length": 38,
+    "date": "2026-07-09",
+    "length": 43,
     "version": 2.2,
     "submitter": "zFexty",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/KIEoUQSoau8",
+    "video": "https://youtu.be/m3pF70nTW6o",
     "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
     "thumbnail": null,
     "duplicateOf": null,
@@ -589,6 +1022,26 @@
     ]
   },
   {
+    "name": "Evolution 88%",
+    "player": "Striker",
+    "levelID": null,
+    "date": "2026-06-27",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "mangocartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ZG0unxgVrFY",
+    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Ex Vacuo 33-100%",
     "player": "Laniakea",
     "levelID": null,
@@ -609,6 +1062,26 @@
     ]
   },
   {
+    "name": "Exens limit 167%",
+    "player": "Skylar",
+    "levelID": 97338077,
+    "date": "2026-07-03",
+    "length": 86,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/KJKrObmjD7M",
+    "showcaseVideo": "https://youtu.be/ZpeknSJF-2U",
+    "thumbnail": null,
+    "duplicateOf": "Exens limit 165%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "FAIRY KNIFE HELL (buffed) 78-100%",
     "player": "Quaint",
     "levelID": null,
@@ -619,7 +1092,27 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/DbCt-Rmv3L0",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Flashbang 44-100%",
+    "player": "LordVadercraft",
+    "levelID": null,
+    "date": "2026-07-16",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tP_O6i71274",
+    "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -639,7 +1132,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/kqWSOP1hvM0",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -659,7 +1152,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/PtIT4z-XCrU",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -679,7 +1172,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/C0ttHXp4dtM",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -721,7 +1214,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/DX2cbUwT1Tg",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -748,6 +1241,67 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "Hades 34%",
+    "player": "mariner",
+    "levelID": null,
+    "date": "2026-07-16",
+    "length": 26,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/g025LPyIpbM",
+    "showcaseVideo": "https://youtu.be/juEhToSrm3w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Hades 63-100%",
+    "player": "mariner",
+    "levelID": null,
+    "date": "2026-06-28",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "mangocartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yeXvqpn_K2o",
+    "showcaseVideo": "https://youtu.be/juEhToSrm3w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Heliopolis 16 deaths, 99.92% accuracy",
+    "player": "Bradenbowl",
+    "levelID": 142529115,
+    "date": "2026-07-11",
+    "length": 139,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/BRq0zK20jzg",
+    "showcaseVideo": "https://youtu.be/gVmUIcpply0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Noclip"
     ]
   },
   {
@@ -803,7 +1357,7 @@
     "video": "https://youtu.be/XcQ44x_ZQiU",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": "null",
+    "duplicateOf": null,
     "notes": "Equivalent to sc66p (Sakupen Circles 66-71%) x8 in a row",
     "tags": [
       "Level",
@@ -817,7 +1371,7 @@
     "date": "2026-01-22",
     "length": 37,
     "version": 2.2,
-    "submitter": "stupidass_username / 0",
+    "submitter": "bbv3 :3",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/XQ0LYnTx6vY",
@@ -844,6 +1398,26 @@
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": null,
     "duplicateOf": "IT MEANS EVERYTHING 61%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "KingVonhouse 91%",
+    "player": "Icanplayz",
+    "levelID": 143271789,
+    "date": "2025-07-26",
+    "length": 62,
+    "version": 2.2,
+    "submitter": "EditorBails",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/sRaLOOj9p4g",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -884,7 +1458,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/T1Y_7d124IY",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -968,7 +1542,7 @@
     "submitter": "aytch0008",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "Submission",
+    "video": "https://youtu.be/TODhe8eJcwo",
     "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1090,7 +1664,7 @@
     "submitter": "aytch0008",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": null,
+    "video": "https://youtu.be/0Qfvx6rXTKM",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -1161,6 +1735,26 @@
     ]
   },
   {
+    "name": "Metropolis",
+    "player": "ascendddd",
+    "levelID": 144560194,
+    "date": "2026-07-11",
+    "length": 54,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/JtWMtMFdK24",
+    "showcaseVideo": "https://youtu.be/3X8lla3xKJs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Murk 29-100%",
     "player": "NucDev",
     "levelID": null,
@@ -1223,6 +1817,32 @@
     ]
   },
   {
+    "name": "Ouroboros 60hz Mobile",
+    "player": "Jastro",
+    "levelID": 56703691,
+    "date": "2026-06-27",
+    "length": 156,
+    "version": 2.2,
+    "submitter": "Sirdoodle",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/MXsRVOPp-FM",
+    "showcaseVideo": "https://youtu.be/WTlsTUtAsAo",
+    "thumbnail": null,
+    "duplicateOf": [
+      "Ouroboros 60hz Mobile 10-100%",
+      "Ouroboros 60hz Mobile 83%"
+    ],
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Verified",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "RARE 2.60%, 2.87%, 2.90%, 2.88%, 2.87%x2 in a row",
     "player": "FlinGuSPluNkuS",
     "levelID": 81002356,
@@ -1232,7 +1852,7 @@
     "submitter": "FlinGuSPluNkuS",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "Submission",
+    "video": "https://youtu.be/2poTRtqM2i8",
     "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1243,7 +1863,27 @@
     ]
   },
   {
-    "name": "Sakupen Circles (Old) 1 death; 99.97% accuracy, 100% in a row",
+    "name": "Riverever",
+    "player": "Yanlici",
+    "levelID": null,
+    "date": "2026-06-21",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/hWfASp7nVEg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Equivalent to Slaughterhouse River's part (49-58%) x10 in a row",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Old) 1 death, 99.97% accuracy; 100% in a row",
     "player": "Bacon",
     "levelID": 10887708,
     "date": "2026-05-18",
@@ -1261,6 +1901,28 @@
       "Level",
       "Consistency",
       "Noclip"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Old) 120hz Mobile 13 deaths, 99.32% accuracy",
+    "player": "ROZE GD",
+    "levelID": 76962930,
+    "date": "2026-07-01",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "-",
+    "showcaseVideo": "https://youtu.be/WX5RCDxobSA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Noclip",
+      "Mobile"
     ]
   },
   {
@@ -1360,13 +2022,53 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/Pw6htA1gvXs",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "SARY NEVER CLEAR (Optic Sunflow) 37-100%",
+    "player": "gmdkiwi",
+    "levelID": 609629,
+    "date": "2026-07-14",
+    "length": 47,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "Submission",
+    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Shadow of The Past",
+    "player": "LennyFeus",
+    "levelID": null,
+    "date": "2026-07-01",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LEyo0LJV8os",
+    "showcaseVideo": "https://youtu.be/MwRQKGCX8Fk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -1427,6 +2129,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles (Starchman) 27-100% 7 deaths, 99.66% accuracy",
+    "player": "dewbbs",
+    "levelID": null,
+    "date": "2026-03-28",
+    "length": 47,
+    "version": 2.2,
+    "submitter": "mangocartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0d_m83tFOUw?t=5415",
+    "showcaseVideo": "https://youtu.be/uZsilHbMc2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Noclip"
     ]
   },
   {
@@ -1500,7 +2223,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/2zcCm6eBeEQ",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Silent Clubstep (Old) with Decode Decoration",
@@ -1550,6 +2273,26 @@
     ]
   },
   {
+    "name": "skc startpos",
+    "player": "CCTHEPC",
+    "levelID": 144178762,
+    "date": "2026-07-01",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LNMKz3RsKt0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Slaughterhouse (CoolRanchDoritos1055) 49-100%",
     "player": "CoolRanchDoritos1055",
     "levelID": null,
@@ -1560,7 +2303,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/JU03NGK2iDM",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1637,11 +2380,34 @@
     ]
   },
   {
+    "name": "Solar Flare 120hz Mobile 79%",
+    "player": "Just_Coal",
+    "levelID": 90390075,
+    "date": "2026-07-11",
+    "length": 53,
+    "version": 2.2,
+    "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/uVQfQ1xLrrs",
+    "showcaseVideo": "https://youtu.be/V2UFysszlyI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Sonic Wave (Cyclic) 1.9 60hz 53%, 100% in a row",
     "player": "Muffy450",
     "levelID": 102063440,
     "date": "2026-01-28",
-    "length": null,
+    "length": 185,
     "version": 1.9,
     "submitter": "Muffy450",
     "estimateLower": null,
@@ -1667,7 +2433,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/3pFVbm4U0xM",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1687,7 +2453,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/dBQZlvm0Me4",
-    "showcaseVideo": "",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1706,7 +2472,7 @@
     "submitter": "Exiled_Shade",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": null,
+    "video": "https://youtu.be/8P0tfm_EFHk",
     "showcaseVideo": "https://youtu.be/JJS65OMPbRo",
     "thumbnail": null,
     "duplicateOf": "Subsuming Vortex 80, 71% in a row",
@@ -1715,6 +2481,26 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Sweeping Demon 2 39-95%",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-07-14",
+    "length": null,
+    "version": 2.2,
+    "submitter": "fishcake0031",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/etENhlTko1U",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1738,6 +2524,126 @@
       "Rated",
       "Noclip",
       "Speedhack"
+    ]
+  },
+  {
+    "name": "Tidal Wave buffed 71%, 100% in a row",
+    "player": "wPopoff",
+    "levelID": 116732736,
+    "date": "2025-04-01",
+    "length": 308,
+    "version": 2.2,
+    "submitter": "Emp",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1-ihSeRCpds",
+    "showcaseVideo": "https://youtu.be/IObH78Nln2U",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Tremor",
+    "player": "VoltrixAce",
+    "levelID": 79823052,
+    "date": "2024-07-13",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/anCfwis4JYE",
+    "showcaseVideo": "https://youtu.be/HJnqc6Hg2r8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Tremor 62%, 67% in a row",
+    "player": "VoltrixAce",
+    "levelID": 79823052,
+    "date": "2024-07-11",
+    "length": 35,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "Submission",
+    "showcaseVideo": "https://youtu.be/HJnqc6Hg2r8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Triplusion 36%, 34%, 36%, 36%, 21% in a row",
+    "player": "seels",
+    "levelID": 92910288,
+    "date": "2024-05-13",
+    "length": 54,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/jQlXNrJvlvw?t=149",
+    "showcaseVideo": "https://youtu.be/J537fh0y1hA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Triplusion 46%, 42%, 75% in a row",
+    "player": "seels",
+    "levelID": 92910288,
+    "date": "2026-05-13",
+    "length": 52,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/jQlXNrJvlvw?t=207",
+    "showcaseVideo": "https://youtu.be/J537fh0y1hA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "True Unnerfed Ashley Wave Trials 56-100%",
+    "player": "KRUEL",
+    "levelID": null,
+    "date": "2026-07-03",
+    "length": 48,
+    "version": 2.2,
+    "submitter": "mangocartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/65-nfAi74kg",
+    "showcaseVideo": "https://youtu.be/J537fh0y1hA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1804,16 +2710,16 @@
     ]
   },
   {
-    "name": "Tunnel of Serpent 58%",
+    "name": "Tunnel of Serpent 60%",
     "player": "serpentical",
     "levelID": null,
-    "date": "2026-05-31",
-    "length": 46,
+    "date": "2026-07-14",
+    "length": 48,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/bkW3BbC19JY",
+    "video": "https://youtu.be/NtMZGXKdHxY",
     "showcaseVideo": "https://youtu.be/W8H_-KZG-1s",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1835,6 +2741,46 @@
     "estimateUpper": null,
     "video": "https://youtu.be/GLJD0DBoyCw",
     "showcaseVideo": "https://youtu.be/-W49BsRjZTk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "VOID",
+    "player": "veshel",
+    "levelID": 143671277,
+    "date": "2026-06-28",
+    "length": 71,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/uMv8iGVpeCc",
+    "showcaseVideo": "https://youtu.be/viboMADx9rA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Water World 20-68%",
+    "player": "niroi",
+    "levelID": 142171089,
+    "date": "2026-07-10",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/brOnDDHF5EI",
+    "showcaseVideo": "https://youtu.be/ziNVcdh8w_M",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1904,26 +2850,6 @@
       "Level",
       "Progress",
       "2P"
-    ]
-  },
-  {
-    "name": "Sweeping Demon 2 39-95%",
-    "player": "Taiago",
-    "levelID": null,
-    "date": "2026-07-14",
-    "length": null,
-    "version": 2.2,
-    "submitter": "fishcake0031",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/etENhlTko1Ut?=1591",
-    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   }
 ]

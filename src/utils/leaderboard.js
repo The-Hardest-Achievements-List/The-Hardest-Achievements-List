@@ -1,6 +1,7 @@
 import {
   getDuplicateParentIds,
   isGroupedDuplicate,
+  isPendingListSource,
   isReplacementDuplicate,
 } from "./groupDuplicates.js";
 import {
@@ -86,9 +87,15 @@ export function getEntryRank(entry) {
 }
 
 function sortByListPosition(entries) {
-  return [...entries].sort(
-    (a, b) => (getEntryRank(a) ?? 999999) - (getEntryRank(b) ?? 999999),
-  );
+  return [...entries].sort((a, b) => {
+    const pendingA = isPendingListSource(a) ? 1 : 0;
+    const pendingB = isPendingListSource(b) ? 1 : 0;
+    if (pendingA !== pendingB) return pendingA - pendingB;
+    return (
+      (getEntryRank(a) ?? Number.POSITIVE_INFINITY) -
+      (getEntryRank(b) ?? Number.POSITIVE_INFINITY)
+    );
+  });
 }
 
 export function withListPositions(entries) {
@@ -148,7 +155,9 @@ function resolveListPositionFromMaps(nameKey, classicMap, platformerMap) {
 
 export function resolveAchievementListPosition(entry, classicMap, platformerMap) {
   const parentRefs = getDuplicateParentIds(entry);
-  if (parentRefs.length > 0) {
+  // Pending replacements link to a main-list parent via duplicateOf, but they
+  // are not on that list yet — do not inherit the parent's rank for display.
+  if (parentRefs.length > 0 && !isPendingListSource(entry)) {
     let bestRank = null;
     for (const parentRef of parentRefs) {
       const parentRank = resolveListPositionFromMaps(
@@ -201,8 +210,25 @@ export function resolveAchievementXpPosition(
 }
 
 export function buildPlayerBoard(entries, playerCountries = null) {
-  const entriesWithPosition = withListPositions(entries);
-  const positionByName = buildPositionByNameMap(entriesWithPosition);
+  const mainEntries = [];
+  const pendingEntries = [];
+
+  for (const entry of entries) {
+    if (isPendingListSource(entry)) pendingEntries.push(entry);
+    else mainEntries.push(entry);
+  }
+
+  // Rank/XP sizing comes from the main list only so pending never dilutes scores.
+  const mainWithPosition = withListPositions(mainEntries);
+  const listSize = mainWithPosition.length;
+  const positionByName = buildPositionByNameMap(mainWithPosition);
+  const pendingWithMeta = pendingEntries.map((entry) => ({
+    ...entry,
+    listPosition: null,
+    listSize,
+  }));
+  const entriesWithPosition = [...mainWithPosition, ...pendingWithMeta];
+  const sourceEntries = [...mainEntries, ...pendingEntries];
   const grouped = new Map();
 
   for (const entry of entriesWithPosition) {
@@ -216,7 +242,8 @@ export function buildPlayerBoard(entries, playerCountries = null) {
       const sorted = sortByListPosition(playerEntries);
 
       const achievements = sorted.map((entry) => {
-        const isDuplicate = isGroupedDuplicate(entry, entries);
+        const isPending = isPendingListSource(entry);
+        const isDuplicate = isGroupedDuplicate(entry, sourceEntries);
         const parentEntries = isDuplicate
           ? findParentEntries(entry, entriesWithPosition)
           : [];
@@ -225,17 +252,25 @@ export function buildPlayerBoard(entries, playerCountries = null) {
           parentEntries.some((parentEntry) =>
             isReplacementDuplicate(parentEntry, entry),
           );
-        const xpPosition = resolveAchievementXpPosition(
-          entry,
-          entriesWithPosition,
-          positionByName,
-        );
-        const points = calculateXp(xpPosition, entry.listSize);
+        const xpPosition = isPending
+          ? null
+          : resolveAchievementXpPosition(
+              entry,
+              entriesWithPosition,
+              positionByName,
+            );
+        const points =
+          isPending || xpPosition == null
+            ? 0
+            : calculateXp(xpPosition, entry.listSize);
 
         return { ...entry, points, isDuplicate, isReplacement, xpPosition };
       });
 
-      const best = achievements[0] ?? null;
+      const best =
+        achievements.find((entry) => !isPendingListSource(entry)) ??
+        achievements[0] ??
+        null;
       const totalXP =
         Math.round(
           achievements.reduce((sum, entry) => sum + (entry.points ?? 0), 0) *
