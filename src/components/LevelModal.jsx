@@ -12,7 +12,7 @@ import {
   UNDEFINED_LABEL,
   asDisplayDate,
   asDisplayLength,
-  asDisplayNumber,
+  asDisplayLevelID,
   asDisplayString,
   filterDisplayableTags,
 } from "../utils/display";
@@ -34,7 +34,7 @@ export default function LevelModal({
 }) {
   const displayName = asDisplayString(a.name);
   const displayPlayer = asDisplayString(a.player);
-  const displayLevelID = asDisplayNumber(a.levelID);
+  const displayLevelID = asDisplayLevelID(a.levelID);
   const displayDate = a.timelineDateLabel ?? asDisplayDate(a.date);
   const displayLength = asDisplayLength(a.length);
   const displayVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;

@@ -2,6 +2,7 @@ import { formatDate, formatLength, isValidDate } from "./format";
 import { TAG_DEFINITIONS } from "./tags";
 
 export const UNDEFINED_LABEL = "undefined";
+export const UNRELEASED_LABEL = "unreleased";
 
 export const DISPLAYABLE_TAGS = new Set(Object.keys(TAG_DEFINITIONS));
 
@@ -13,6 +14,16 @@ export function asDisplayNumber(value) {
   return typeof value === "number" && Number.isFinite(value)
     ? String(value)
     : UNDEFINED_LABEL;
+}
+
+export function asDisplayLevelID(value) {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return String(value);
+  }
+  if (value == null) {
+    return UNRELEASED_LABEL;
+  }
+  return UNDEFINED_LABEL;
 }
 
 export function asDisplayDate(value) {

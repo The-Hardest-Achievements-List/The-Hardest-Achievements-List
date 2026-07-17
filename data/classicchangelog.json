@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-07-16",
+    "currentName": "OUROBOROS (Unbuffed) 27-100%",
+    "newName": "OUROBOROS (Old Unbuffed) 27-100%",
+    "currentRank": 281,
+    "newRank": 281,
+    "below": null,
+    "above": null
+  },
+  {
+    "date": "2026-07-16",
+    "currentName": "OUROBOROS 27-100%",
+    "newName": "OUROBOROS (Unnerfed) 27-100%",
+    "currentRank": 162,
+    "newRank": 162,
+    "below": null,
+    "above": null
+  },
+  {
+    "date": "2026-07-16",
+    "currentName": "OUROBOROS 73%",
+    "newName": "OUROBOROS (Unnerfed) 73%",
+    "currentRank": 134,
+    "newRank": 134,
+    "below": null,
+    "above": null
+  },
+  {
+    "date": "2026-07-15",
+    "currentName": "Antarctic Lights 25-100%",
+    "newName": "Antarctic Lights 25-100%",
+    "currentRank": 124,
+    "newRank": null,
+    "below": "Silent clubstep 2.1",
+    "above": "Sakupen Circles 144hz Mobile 37-100%"
+  },
+  {
     "date": "2026-07-15",
     "currentName": "Antarctic Lights 92%",
     "newName": "Antarctic Lights",

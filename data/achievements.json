@@ -4827,7 +4827,7 @@
     "duplicateOf": null,
     "notes": null,
     "tags": [
-      "Level",
+      "Challenge",
       "Verified"
     ]
   },
@@ -5140,7 +5140,6 @@
     "tags": [
       "Level",
       "Low Hertz",
-      "Progress",
       "Rated",
       "Mobile"
     ]
@@ -5427,7 +5426,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Verified"
+      "Verified",
+      "Rated"
     ]
   },
   {
