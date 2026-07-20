@@ -1,5 +1,50 @@
 [
   {
+    "date": "2026-07-20",
+    "currentName": "LESOPOWAL",
+    "newName": "LESOPOWAL",
+    "currentRank": 66,
+    "newRank": 65,
+    "below": "Vehemence (wPopoff Old) 39%",
+    "above": "BOOBAWAMBA"
+  },
+  {
+    "date": "2026-07-20",
+    "currentName": "Maniacal Chains",
+    "newName": "Maniacal Chains",
+    "currentRank": 178,
+    "newRank": 258,
+    "below": "The Lightning Rod",
+    "above": "CHIL"
+  },
+  {
+    "date": "2026-07-20",
+    "currentName": "Deimos 57%, 100% in a row",
+    "newName": "Deimos 57%, 100% in a row",
+    "currentRank": 181,
+    "newRank": 162,
+    "below": "Abyss of Darkness (Old)",
+    "above": "OUROBOROS (Unnerfed) 27-100%"
+  },
+  {
+    "date": "2026-07-20",
+    "currentName": "Master of Puppets",
+    "newName": "Master of Puppets",
+    "currentRank": 257,
+    "newRank": 285,
+    "below": "EXPIRATION DATE",
+    "above": "BRITNEY NO SCLEARS 82%, (0%, 0%), 100% in a row"
+  },
+  {
+    "date": "2026-07-20",
+    "currentName": "Deimos",
+    "newName": "Deimos",
+    "currentRank": 302,
+    "newRank": 259,
+    "below": "The Lightning Rod",
+    "above": "Maniacal Chains"
+  },
+  {
     "date": "2026-07-16",
     "currentName": "OUROBOROS (Unbuffed) 27-100%",
     "newName": "OUROBOROS (Old Unbuffed) 27-100%",
