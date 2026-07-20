@@ -560,7 +560,7 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
+    "name": "Africa Circles (ChopBlox) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-18",
@@ -880,7 +880,7 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox Unnerfed) 14-100%",
+    "name": "Africa Circles (ChopBlox) 14-100%",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-03",
@@ -987,6 +987,46 @@
     "tags": [
       "Level",
       "Verified"
+    ]
+  },
+  {
+    "name": "Blindscapes 17-100%",
+    "player": "benbot",
+    "levelID": 129447957,
+    "date": "2026-07-11",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "rainityyy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/K74AS4pE9tU",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Extremely dark Nullscapes with a small light following your robot.",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Blindscapes 81%",
+    "player": "benbot",
+    "levelID": 129447957,
+    "date": "2026-07-10",
+    "length": 75,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2ohbPZZRmK4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Extremely dark Nullscapes with a small light following your robot.",
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1248,7 +1288,7 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox Unnerfed) 61%",
+    "name": "Africa Circles (ChopBlox) 61%",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-20",
@@ -1621,6 +1661,24 @@
       "Progress"
     ]
   },
+   {
+    "name": "Acheron (Riot) 23-100%",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-22",
+    "length": 49,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/afRXOzUEADo",
+    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Acheron (Riot) 91%",
     "player": "klimk",
@@ -1839,6 +1897,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Herr Machine",
+    "player": "BONN",
+    "levelID": 142529115,
+    "date": "2026-03-12",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/CBcQqmqWFo4",
+    "showcaseVideo": "https://youtu.be/VgbZTWyu4bI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -2622,6 +2700,46 @@
     ]
   },
   {
+    "name": "Gay Acheron 17-100%",
+    "player": "turtl",
+    "levelID": null,
+    "date": "2025-05-30",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/C0ttHXp4dtM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Green Acheron 17-100%",
+    "player": "-",
+    "levelID": null,
+    "date": "2024-12-16",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/DX2cbUwT1Tg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Thinking Space II (Legacy)",
     "player": "Zeronium",
     "levelID": 132854166,
@@ -3124,22 +3242,23 @@
     ]
   },
   {
-    "name": "Exens limit 165%",
+    "name": "Exens limit 167%",
     "player": "Skylar",
     "levelID": 97338077,
-    "date": "2025-05-02",
-    "length": 49,
+    "date": "2026-07-03",
+    "length": 86,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/g5l38fIAkds",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/KJKrObmjD7M",
     "showcaseVideo": "https://youtu.be/ZpeknSJF-2U",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Consistency",
-      "Pending Removal"
+      "Consistency"
     ]
   },
   {
@@ -3252,6 +3371,26 @@
       "Level",
       "Low Hertz",
       "Rated"
+    ]
+  },
+  {
+    "name": "Sonic Wave (Cyclic) 1.9 60hz 53%, 100% in a row",
+    "player": "Muffy450",
+    "levelID": 102063440,
+    "date": "2026-01-28",
+    "length": 185,
+    "version": 1.9,
+    "submitter": "Muffy450",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0nlG1ptGcPw",
+    "showcaseVideo": "https://youtu.be/gOsHTH8BhQ4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -5149,6 +5288,26 @@
     ]
   },
   {
+    "name": "Im Bleaf",
+    "player": "ad3usgmd",
+    "levelID": 133056901,
+    "date": "2026-02-08",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/XcQ44x_ZQiU",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Equivalent to sc66p (Sakupen Circles 66-71%) x8 in a row",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "if FF was lvl 1",
     "player": "DenseCabbage",
     "levelID": 92787811,
@@ -5263,6 +5422,26 @@
     ]
   },
   {
+    "name": "Bassline Junkie",
+    "player": "Karma",
+    "levelID": 143300771,
+    "date": "2026-05-23",
+    "length": 110,
+    "version": 2.2,
+    "submitter": "BlueGamer",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/db_V19gW0rI",
+    "showcaseVideo": "https://youtu.be/4XVD5UzrCpM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "The Lightning Rod",
     "player": "lavatrex",
     "levelID": 93917076,
@@ -5284,7 +5463,7 @@
   {
     "name": "Maniacal Chains",
     "player": "spcreat",
-    "levelID": 129492846,
+    "levelID": 48991380,
     "date": "2026-04-09",
     "length": 116,
     "version": 2.2,
@@ -5428,6 +5607,28 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Le Fishe 2x 75%",
+    "player": "Dramel",
+    "levelID": 80647754,
+    "date": "2025-12-26",
+    "length": 26,
+    "version": 2.2,
+    "submitter": "jak",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/IKb4nXholuc",
+    "showcaseVideo": "https://youtu.be/43rIzwU_by8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Rated",
+      "Speedhack"
     ]
   },
   {
@@ -5704,6 +5905,24 @@
     "tags": [
       "Level",
       "Verified"
+    ]
+  },
+  {
+    "name": "Purplehouse 25-95%",
+    "player": "Druki",
+    "levelID": null,
+    "date": "2025-09-09",
+    "length": 38,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/f1WehtceFnk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
