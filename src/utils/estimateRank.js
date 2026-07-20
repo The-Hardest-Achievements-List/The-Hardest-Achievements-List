@@ -1,4 +1,4 @@
-import { isDuplicateAchievement } from "./groupDuplicates.js";
+import { isGroupedDuplicate, getParentKeysInList } from "./groupDuplicates.js";
 
 export const NLW_ESTIMATE = "NLW";
 export const NLW_ESTIMATE_LABEL = "Not List Worthy";
@@ -52,8 +52,10 @@ export function isPureNlwEstimate(entry) {
 
 export function getMainListCount(mainEntries) {
   if (!Array.isArray(mainEntries)) return 0;
+  const parentKeys = getParentKeysInList(mainEntries);
   return mainEntries.reduce(
-    (count, entry) => count + (isDuplicateAchievement(entry) ? 0 : 1),
+    (count, entry) =>
+      count + (isGroupedDuplicate(entry, mainEntries, parentKeys) ? 0 : 1),
     0,
   );
 }
@@ -63,6 +65,19 @@ export function hasEstimate(entry) {
   const hi = entry?.estimateUpper;
   if (isNlwEstimateField(lo) || isNlwEstimateField(hi)) return false;
   return isEstimateNumber(lo) && isEstimateNumber(hi) && lo <= hi;
+}
+
+/**
+ * Pending podium place when both estimate bounds are the same exact rank 1–3.
+ * Ranges like 1–2 or NLW never qualify. Returns null otherwise.
+ */
+export function getExactEstimatePodiumPlace(entry) {
+  const lo = normalizeEstimateField(entry?.estimateLower);
+  const hi = normalizeEstimateField(entry?.estimateUpper);
+  if (!isEstimateNumber(lo) || !isEstimateNumber(hi)) return null;
+  if (lo !== hi) return null;
+  if (lo < 1 || lo > 3) return null;
+  return lo;
 }
 
 export function resolveEstimateBound(value, mainCount) {
@@ -168,9 +183,10 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
 
   const items = [];
   let listRank = 0;
+  const mainParentKeys = getParentKeysInList(mainEntries);
 
   for (const entry of mainEntries) {
-    if (isDuplicateAchievement(entry)) continue;
+    if (isGroupedDuplicate(entry, mainEntries, mainParentKeys)) continue;
     listRank += 1;
     items.push({
       type: "main",
@@ -182,9 +198,10 @@ export function buildMainProjection(mainEntries, pendingEntries, getKey) {
   }
 
   const mainCount = listRank;
+  const pendingParentKeys = getParentKeysInList(pendingEntries);
 
   for (const entry of pendingEntries) {
-    if (isDuplicateAchievement(entry)) continue;
+    if (isGroupedDuplicate(entry, pendingEntries, pendingParentKeys)) continue;
     const slot = getProjectionSlot(entry, mainCount);
     items.push({
       type: "pending",

@@ -16,8 +16,7 @@ const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 import {
   getDuplicateParentIds,
   getAchievementKey,
-  isGroupedDuplicate,
-  getParentKeysInList,
+  annotateVariantProximity,
   isCrossListReplacementChild,
   getCrossListReplacementParents,
 } from "./utils/groupDuplicates";
@@ -177,6 +176,85 @@ function parseRoute() {
   return { mode, active };
 }
 
+/**
+ * Pull variant families into search results via parent keys.
+ * `seedFamilyKeys` covers MAIN hosts for matching pending replacements.
+ */
+function pullVariantFamiliesForSearch(
+  entries,
+  {
+    query,
+    matchesSearch,
+    getFamilyKeys,
+    seedFamilyKeys = [],
+  },
+) {
+  if (!query) return entries;
+
+  const includedFamilyKeys = new Set(seedFamilyKeys);
+  for (const achievement of entries) {
+    if (!matchesSearch(achievement, query)) continue;
+    for (const key of getFamilyKeys(achievement)) {
+      includedFamilyKeys.add(key);
+    }
+  }
+
+  return entries.filter((achievement) =>
+    getFamilyKeys(achievement).some((key) => includedFamilyKeys.has(key)),
+  );
+}
+
+/**
+ * After search (and tags), drop non-matching hangers-on when the parent is gone.
+ * Distant siblings only stay if they match or the parent itself matched search.
+ * Matching close orphans remain as separate ranked cards.
+ */
+function pruneSearchVariantHangers(
+  filteredEntries,
+  rawEntries,
+  {
+    query,
+    matchesSearch,
+  },
+) {
+  if (!query) return filteredEntries;
+
+  const parentsPresent = new Set(
+    filteredEntries
+      .filter((entry) => getDuplicateParentIds(entry).length === 0)
+      .map((entry) => getAchievementKey(entry)),
+  );
+  const parentMatchedSearch = new Set(
+    rawEntries
+      .filter(
+        (entry) =>
+          getDuplicateParentIds(entry).length === 0 &&
+          matchesSearch(entry, query),
+      )
+      .map((entry) => getAchievementKey(entry)),
+  );
+
+  return filteredEntries.filter((achievement) => {
+    if (matchesSearch(achievement, query)) return true;
+
+    const parentIds = getDuplicateParentIds(achievement);
+    if (parentIds.length === 0) return true;
+
+    const linkedParentPresent = parentIds.some((parentRef) =>
+      parentsPresent.has(getAchievementKey({ name: parentRef })),
+    );
+    if (!linkedParentPresent) return false;
+
+    if (achievement.isDistantVariant) {
+      return parentIds.some((parentRef) =>
+        parentMatchedSearch.has(getAchievementKey({ name: parentRef })),
+      );
+    }
+
+    return true;
+  });
+}
+
 export default function App() {
   const [route, setRoute] = useState(parseRoute);
   const { mode, active } = route;
@@ -275,8 +353,20 @@ export default function App() {
   const isPendingList = active === "PENDING";
   const isMainList = active === "MAIN";
   const isLegacyList = active === "LEGACY";
-  const mainEntries = mode === "classic" ? achievementsData : platformersData;
-  const pendingEntries = mode === "classic" ? pendingData : platformerpendingData;
+  const mainEntries = useMemo(
+    () =>
+      annotateVariantProximity(
+        mode === "classic" ? achievementsData : platformersData,
+      ),
+    [mode],
+  );
+  const pendingEntries = useMemo(
+    () =>
+      annotateVariantProximity(
+        mode === "classic" ? pendingData : platformerpendingData,
+      ),
+    [mode],
+  );
   const pendingMainCount = useMemo(
     () => getMainListCount(mainEntries),
     [mainEntries],
@@ -287,11 +377,13 @@ export default function App() {
     return buildMainProjection(mainEntries, pendingEntries, getAchievementKey);
   }, [isMainList, mode, mainEntries, pendingEntries]);
   const projectionAvailable = mainProjectionByKey != null;
-  const rawData = NO_LIST.has(active) ? [] : (Array.isArray(DATA_MAP[mode]?.[active]) ? DATA_MAP[mode][active] : []);
-  const rawDataParentKeys = useMemo(
-    () => getParentKeysInList(rawData),
-    [rawData],
-  );
+  const rawSource = NO_LIST.has(active) ? null : DATA_MAP[mode]?.[active];
+  const rawData = useMemo(() => {
+    if (isMainList) return mainEntries;
+    if (isPendingList) return pendingEntries;
+    if (!Array.isArray(rawSource)) return [];
+    return annotateVariantProximity(rawSource);
+  }, [isMainList, isPendingList, mainEntries, pendingEntries, rawSource]);
   const isTimeline = active === "TIMELINE";
   const timelineDateLabelMap = useMemo(
     () => (isTimeline ? buildTimelineDateLabelMap(rawData) : null),
@@ -303,13 +395,22 @@ export default function App() {
   );
   const rawDataWithListRank = useMemo(() => {
     if (!Array.isArray(rawData)) return [];
+
+    const parentRankByKey = new Map();
     let rank = 0;
-    return rawData.map((achievement) => {
-      if (isGroupedDuplicate(achievement, rawData, rawDataParentKeys)) {
+
+    const ranked = rawData.map((achievement) => {
+      // Proximity stamps come from annotateVariantProximity on raw order.
+      if (achievement.isCloseGroupedVariant) {
         return achievement;
       }
+
       rank += 1;
+      const listRank = rank + legacyRankOffset;
       const key = getAchievementKey(achievement);
+      if (key && !achievement.isDistantVariant) {
+        parentRankByKey.set(key, listRank);
+      }
       const timelineKey = getTimelineEntryKey(achievement);
       const projectedRank =
         mainProjectionByKey != null
@@ -317,7 +418,7 @@ export default function App() {
           : null;
       return {
         ...achievement,
-        listRank: rank + legacyRankOffset,
+        listRank,
         projectedRank,
         ...(timelineDateLabelMap
           ? {
@@ -332,9 +433,31 @@ export default function App() {
           : {}),
       };
     });
+
+    // Close variants inherit the parent's list rank for orphan / filter views.
+    return ranked.map((achievement) => {
+      if (!achievement.isCloseGroupedVariant) return achievement;
+
+      let inheritedRank = null;
+      for (const parentRef of getDuplicateParentIds(achievement)) {
+        const parentRank = parentRankByKey.get(
+          getAchievementKey({ name: parentRef }),
+        );
+        if (parentRank == null) continue;
+        if (inheritedRank == null || parentRank < inheritedRank) {
+          inheritedRank = parentRank;
+        }
+      }
+      if (inheritedRank == null) return achievement;
+
+      return {
+        ...achievement,
+        listRank: inheritedRank,
+        listRankInherited: true,
+      };
+    });
   }, [
     rawData,
-    rawDataParentKeys,
     mainProjectionByKey,
     legacyRankOffset,
     timelineDateLabelMap,
@@ -348,7 +471,14 @@ export default function App() {
     if (duplicateParents.length === 0) {
       return [getAchievementKey(achievement)];
     }
-    return duplicateParents.map((name) => getAchievementKey({ name }));
+    const parentKeys = duplicateParents.map((name) =>
+      getAchievementKey({ name }),
+    );
+    // Distant variants are first-class; close ones only link through the parent.
+    if (achievement.isDistantVariant) {
+      return [getAchievementKey(achievement), ...parentKeys];
+    }
+    return parentKeys;
   };
 
   const itemMatchesSearch = (achievement, q) =>
@@ -391,27 +521,20 @@ export default function App() {
   const filteredData = useMemo(() => {
     if (!Array.isArray(rawDataWithListRank)) return [];
     let data = [...rawDataWithListRank];
+    const searchQuery = search.trim() ? search.toLowerCase() : "";
 
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      const includedParentKeys = new Set();
+    if (searchQuery) {
       const listSrc = {
         mainSrc: mode === "platformer" ? "platformer" : "classic",
         pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
       };
 
-      rawDataWithListRank.forEach((achievement) => {
-        if (itemMatchesSearch(achievement, q)) {
-          getParentKeysForEntry(achievement).forEach((key) =>
-            includedParentKeys.add(key),
-          );
-        }
-      });
-
-      // Pending replacements live under main parents — include them in MAIN search.
+      // Pending replacements live under main parents — seed their parent keys
+      // so MAIN search can surface the host group.
+      const seedFamilyKeys = [];
       if (isMainList) {
         pendingEntries.forEach((achievement) => {
-          if (!itemMatchesSearch(achievement, q)) return;
+          if (!itemMatchesSearch(achievement, searchQuery)) return;
           if (!isCrossListReplacementChild(achievement, mainEntries, listSrc)) {
             return;
           }
@@ -420,16 +543,17 @@ export default function App() {
             mainEntries,
             listSrc,
           ).forEach((parent) => {
-            includedParentKeys.add(getAchievementKey(parent));
+            seedFamilyKeys.push(getAchievementKey(parent));
           });
         });
       }
 
-      data = data.filter((achievement) =>
-        getParentKeysForEntry(achievement).some((key) =>
-          includedParentKeys.has(key),
-        ),
-      );
+      data = pullVariantFamiliesForSearch(rawDataWithListRank, {
+        query: searchQuery,
+        matchesSearch: itemMatchesSearch,
+        getFamilyKeys: getParentKeysForEntry,
+        seedFamilyKeys,
+      });
     }
 
     if (activeTags.size > 0) {
@@ -449,6 +573,15 @@ export default function App() {
           (a) => !a.tags || excludeTags.every((t) => !a.tags.includes(t)),
         );
       }
+    }
+
+    // Orphan prune must run AFTER tags so exclude-Rated can drop the parent
+    // before hangers-on are removed (christmas + exclude Rated → christmashouse).
+    if (searchQuery) {
+      data = pruneSearchVariantHangers(data, rawDataWithListRank, {
+        query: searchQuery,
+        matchesSearch: itemMatchesSearch,
+      });
     }
 
     data.sort((a, b) => {

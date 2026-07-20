@@ -22,7 +22,7 @@ import CardTags from "./CardTags";
 import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
 import {
   formatEstimateDisplay,
-  hasEstimate,
+  getExactEstimatePodiumPlace,
   hasProjectedShift,
   hasResolvableEstimate,
 } from "../utils/estimateRank";
@@ -105,8 +105,16 @@ function LevelCard({
     : null;
   const showProjectedShift =
     showProjectedRanks && !isPendingEstimate && hasProjectedShift(a);
-  const isPodium =
-    !isTimeline && index < 3 && (isPendingEstimate ? hasEstimate(a) : true);
+  // Main list: real list ranks 1–3.
+  // Pending: only when estimateLower === estimateUpper === 1|2|3 (exact top).
+  const podiumPlace = !isTimeline
+    ? isPendingEstimate
+      ? getExactEstimatePodiumPlace(a)
+      : officialRank != null && officialRank >= 1 && officialRank <= 3
+        ? officialRank
+        : null
+    : null;
+  const isPodium = podiumPlace != null;
   const isDuplicate = index === -1;
 
   const tags = React.useMemo(() => filterDisplayableTags(a.tags), [a.tags]);
@@ -137,7 +145,7 @@ function LevelCard({
   return (
     <article
       ref={thumbnailRef}
-      className={`card${isPodium ? " is-podium" : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}`}
+      className={`card${isPodium ? ` is-podium is-podium--${podiumPlace}` : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}`}
       style={
         loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
       }

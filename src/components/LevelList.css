@@ -519,12 +519,48 @@
     border-color: var(--line-2);
 }
 
-.card:hover {
-    border-color: var(--line-2);
+/* Top-3: metal-tinted rank badges only */
+.card.is-podium--1 {
+    /* Bright yellow-gold */
+    --podium-text: oklch(90% 0.12 95);
+    --podium-bg: oklch(48% 0.14 92 / 0.5);
+    --podium-border: oklch(78% 0.14 95 / 0.7);
 }
 
-.card.is-podium {
-    border-color: var(--line-2);
+.card.is-podium--2 {
+    /* Cool silver */
+    --podium-text: oklch(92% 0.01 250);
+    --podium-bg: oklch(45% 0.03 250 / 0.45);
+    --podium-border: oklch(72% 0.03 250 / 0.55);
+}
+
+.card.is-podium--3 {
+    /* Deep copper / reddish bronze */
+    --podium-text: oklch(82% 0.12 48);
+    --podium-bg: oklch(36% 0.1 45 / 0.55);
+    --podium-border: oklch(58% 0.12 42 / 0.65);
+}
+
+.card.is-podium .card__rank-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15em 0.55em;
+    border-radius: 999px;
+    color: var(--podium-text);
+    background: var(--podium-bg);
+    border: 1px solid var(--podium-border);
+    text-shadow: none;
+    letter-spacing: 0.03em;
+}
+
+.card.is-podium .rank-projection__current {
+    color: inherit;
+}
+
+.card.is-podium .rank-projection__arrow,
+.card.is-podium .rank-projection__projected {
+    color: var(--podium-text);
+    opacity: 0.85;
 }
 
 .card.is-pending-removal {

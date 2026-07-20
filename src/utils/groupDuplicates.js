@@ -59,7 +59,224 @@ export function getParentKeysInList(achievements) {
   );
 }
 
-export function isGroupedDuplicate(
+/** Minimum list-spot gap outside a parent’s variant chain to rank separately. */
+export const SEPARATE_VARIANT_MIN_DISTANCE = 2;
+
+/**
+ * For each parent, take its family (parent + same-list children), then grow a
+ * contiguous chain from the parent up/down while the next list slot is still
+ * in the family. Chain ends are the reference points; family members outside
+ * that block (≥ SEPARATE_VARIANT_MIN_DISTANCE spots away) are distant.
+ *
+ * Classification is by list index so duplicate names do not collide.
+ * A child linked to multiple parents is close if it sits in any parent’s chain
+ * (mixed close-to-A / far-from-B should not occur in authored data).
+ *
+ * @returns {{ closeIndices: Set<number>, distantIndices: Set<number> }}
+ */
+export function classifyVariantsInList(achievements) {
+  const closeIndices = new Set();
+  const distantIndices = new Set();
+
+  if (!Array.isArray(achievements) || achievements.length === 0) {
+    return { closeIndices, distantIndices };
+  }
+
+  /** First non-duplicate entry index for each parent name. */
+  const parentIndexByKey = new Map();
+  /** parentKey -> child list indices */
+  const childrenByParentKey = new Map();
+
+  achievements.forEach((entry, index) => {
+    const key = getAchievementKey(entry);
+    if (
+      key &&
+      !isDuplicateAchievement(entry) &&
+      !parentIndexByKey.has(key)
+    ) {
+      parentIndexByKey.set(key, index);
+    }
+
+    for (const parentRef of getDuplicateParentIds(entry)) {
+      const parentKey = normalizeDuplicateKey(parentRef);
+      if (!childrenByParentKey.has(parentKey)) {
+        childrenByParentKey.set(parentKey, []);
+      }
+      childrenByParentKey.get(parentKey).push(index);
+    }
+  });
+
+  for (const [parentKey, childIndices] of childrenByParentKey) {
+    const parentIndex = parentIndexByKey.get(parentKey);
+    if (parentIndex == null) continue;
+
+    const familyIndices = new Set([parentIndex, ...childIndices]);
+
+    let chainTop = parentIndex;
+    let chainBottom = parentIndex;
+    while (familyIndices.has(chainTop - 1)) chainTop -= 1;
+    while (familyIndices.has(chainBottom + 1)) chainBottom += 1;
+
+    for (const childIndex of childIndices) {
+      if (childIndex >= chainTop && childIndex <= chainBottom) {
+        closeIndices.add(childIndex);
+        continue;
+      }
+
+      // Outside a maximal contiguous chain ⇒ always ≥ 2 spots from an end.
+      distantIndices.add(childIndex);
+    }
+  }
+
+  // Multi-parent: close to any parent wins over distant-from-another.
+  for (const index of closeIndices) distantIndices.delete(index);
+
+  return { closeIndices, distantIndices };
+}
+
+/**
+ * Stamp `isCloseGroupedVariant` / `isDistantVariant` from raw list order.
+ * Returns a new array; unchanged entries keep the same object reference.
+ */
+export function annotateVariantProximity(achievements) {
+  if (!Array.isArray(achievements)) return [];
+  const { closeIndices, distantIndices } = classifyVariantsInList(achievements);
+
+  if (closeIndices.size === 0 && distantIndices.size === 0) {
+    return achievements;
+  }
+
+  return achievements.map((entry, index) => {
+    if (closeIndices.has(index)) {
+      if (entry?.isCloseGroupedVariant === true && !entry?.isDistantVariant) {
+        return entry;
+      }
+      return {
+        ...entry,
+        isCloseGroupedVariant: true,
+        isDistantVariant: false,
+      };
+    }
+    if (distantIndices.has(index)) {
+      if (entry?.isDistantVariant === true && !entry?.isCloseGroupedVariant) {
+        return entry;
+      }
+      return {
+        ...entry,
+        isDistantVariant: true,
+        isCloseGroupedVariant: false,
+      };
+    }
+    if (entry?.isCloseGroupedVariant || entry?.isDistantVariant) {
+      const {
+        isCloseGroupedVariant: _c,
+        isDistantVariant: _d,
+        ...rest
+      } = entry;
+      return rest;
+    }
+    return entry;
+  });
+}
+
+function resolveEntryIndex(achievement, achievements) {
+  if (!achievement || !Array.isArray(achievements)) return -1;
+  const byRef = achievements.indexOf(achievement);
+  if (byRef >= 0) return byRef;
+
+  // Copies (after listRank annotation, etc.) lose referential identity.
+  const key = getAchievementKey(achievement);
+  if (!key) return -1;
+
+  const wantParents = getDuplicateParentIds(achievement)
+    .map(normalizeDuplicateKey)
+    .sort()
+    .join("\0");
+
+  let found = -1;
+  for (let index = 0; index < achievements.length; index += 1) {
+    const entry = achievements[index];
+    if (getAchievementKey(entry) !== key) continue;
+
+    const gotParents = getDuplicateParentIds(entry)
+      .map(normalizeDuplicateKey)
+      .sort()
+      .join("\0");
+    if (gotParents !== wantParents) continue;
+
+    if (
+      achievement.player != null &&
+      entry.player != null &&
+      achievement.player !== entry.player
+    ) {
+      continue;
+    }
+
+    // Ambiguous duplicate names — refuse rather than guess wrong.
+    if (found >= 0) return -1;
+    found = index;
+  }
+
+  return found;
+}
+
+/**
+ * Spots from a child to its parent’s contiguous variant chain
+ * (0 if inside; otherwise distance to the nearer chain end). Null if unlinked.
+ */
+export function getDistanceToParentVariantChain(child, parent, achievements) {
+  if (!child || !parent || !Array.isArray(achievements)) return null;
+
+  const parentKey = getAchievementKey(parent);
+  const childKey = getAchievementKey(child);
+  if (!parentKey || !childKey) return null;
+
+  let parentIndex = resolveEntryIndex(parent, achievements);
+  if (parentIndex < 0) {
+    parentIndex = achievements.findIndex(
+      (entry) =>
+        !isDuplicateAchievement(entry) &&
+        getAchievementKey(entry) === parentKey,
+    );
+  }
+  if (parentIndex < 0) return null;
+
+  let childIndex = resolveEntryIndex(child, achievements);
+  if (childIndex < 0) {
+    childIndex = achievements.findIndex(
+      (entry) => getAchievementKey(entry) === childKey,
+    );
+  }
+  if (childIndex < 0) return null;
+
+  const familyIndices = new Set([parentIndex]);
+  achievements.forEach((entry, index) => {
+    if (
+      getDuplicateParentIds(entry).some(
+        (parentRef) => normalizeDuplicateKey(parentRef) === parentKey,
+      )
+    ) {
+      familyIndices.add(index);
+    }
+  });
+
+  let chainTop = parentIndex;
+  let chainBottom = parentIndex;
+  while (familyIndices.has(chainTop - 1)) chainTop -= 1;
+  while (familyIndices.has(chainBottom + 1)) chainBottom += 1;
+
+  if (childIndex >= chainTop && childIndex <= chainBottom) return 0;
+  if (childIndex < chainTop) return chainTop - childIndex;
+  return childIndex - chainBottom;
+}
+
+/** Alias for getDistanceToParentVariantChain. */
+export function getVariantListDistance(child, parent, achievements) {
+  return getDistanceToParentVariantChain(child, parent, achievements);
+}
+
+/** True when at least one duplicateOf parent exists in the same list. */
+export function isSameListVariant(
   achievement,
   achievements,
   parentKeys = null,
@@ -70,6 +287,48 @@ export function isGroupedDuplicate(
   return parentIds.some((parentId) =>
     keys.has(normalizeDuplicateKey(parentId)),
   );
+}
+
+/**
+ * Close same-list variant: inside a parent’s contiguous variant chain.
+ * Nested-only (no own list rank / XP tier).
+ *
+ * Prefers proximity stamps so sorted/filtered copies stay correctly classified.
+ */
+export function isGroupedDuplicate(
+  achievement,
+  achievements,
+  parentKeys = null,
+) {
+  if (achievement?.isCloseGroupedVariant === true) return true;
+  if (achievement?.isDistantVariant === true) return false;
+  if (!isSameListVariant(achievement, achievements, parentKeys)) return false;
+
+  const index = resolveEntryIndex(achievement, achievements);
+  if (index < 0) return false;
+
+  const { closeIndices } = classifyVariantsInList(achievements);
+  return closeIndices.has(index);
+}
+
+/**
+ * Same-list variant outside every linked parent’s contiguous chain —
+ * ranks as its own achievement, still nests under parent.
+ */
+export function isDistantVariant(
+  achievement,
+  achievements,
+  parentKeys = null,
+) {
+  if (achievement?.isDistantVariant === true) return true;
+  if (achievement?.isCloseGroupedVariant === true) return false;
+  if (!isSameListVariant(achievement, achievements, parentKeys)) return false;
+
+  const index = resolveEntryIndex(achievement, achievements);
+  if (index < 0) return false;
+
+  const { distantIndices } = classifyVariantsInList(achievements);
+  return distantIndices.has(index);
 }
 
 export function isPendingListSource(entry) {
@@ -316,12 +575,29 @@ export function groupAchievementsByDuplicates(achievements, options = {}) {
       return;
     }
 
-    const linkedInList = getDuplicateParentIds(achievement).some((parentRef) =>
-      parentKeysInList.has(normalizeDuplicateKey(parentRef)),
+    const linkedInList = isSameListVariant(
+      achievement,
+      achievements,
+      parentKeysInList,
     );
     if (!linkedInList) {
       // Cross-list replacements still appear on pending as normal cards.
       mainAchievements.push(achievement);
+      return;
+    }
+
+    // Use the precomputed stamp when present. Never recompute distance on a
+    // sorted list — unranked close variants sit at the end and would look distant.
+    if (isDistantVariant(achievement, achievements, parentKeysInList)) {
+      // Keep the original reference when already stamped (memo-friendly).
+      if (achievement.isDistantVariant === true) {
+        mainAchievements.push(achievement);
+      } else {
+        mainAchievements.push({
+          ...achievement,
+          isDistantVariant: true,
+        });
+      }
     }
   });
 

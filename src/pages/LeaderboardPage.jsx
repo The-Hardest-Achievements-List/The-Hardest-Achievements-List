@@ -22,6 +22,7 @@ import {
   normalizeCountryCode,
   normalizeCountryCodes,
 } from "../utils/countryLeaderboard";
+import { annotateVariantProximity } from "../utils/groupDuplicates";
 import achievementsData from "../../data/achievements.json";
 import playerCountriesData from "../../data/playercountries.json";
 import pendingData from "../../data/pending.json";
@@ -255,25 +256,33 @@ const PLATFORMER_SUBMISSION_SOURCES = new Set([
 ]);
 
 function buildDefaultBoards() {
-  const combinedClassic = achievementsData.map((entry) => ({
-    ...entry,
-    _src: "classic",
-  }));
+  const combinedClassic = annotateVariantProximity(
+    achievementsData.map((entry) => ({
+      ...entry,
+      _src: "classic",
+    })),
+  );
 
-  const platformerList = platformersData.map((entry) => ({
-    ...entry,
-    _src: "platformer",
-  }));
+  const platformerList = annotateVariantProximity(
+    platformersData.map((entry) => ({
+      ...entry,
+      _src: "platformer",
+    })),
+  );
 
-  const classicPending = pendingData.map((entry) => ({
-    ...entry,
-    _src: "pending",
-  }));
+  const classicPending = annotateVariantProximity(
+    pendingData.map((entry) => ({
+      ...entry,
+      _src: "pending",
+    })),
+  );
 
-  const platformerPending = platformerpendingData.map((entry) => ({
-    ...entry,
-    _src: "platformerpending",
-  }));
+  const platformerPending = annotateVariantProximity(
+    platformerpendingData.map((entry) => ({
+      ...entry,
+      _src: "platformerpending",
+    })),
+  );
 
   const classicPositionMap = buildListPositionMap(combinedClassic);
   const platformerPositionMap = buildListPositionMap(platformerList);

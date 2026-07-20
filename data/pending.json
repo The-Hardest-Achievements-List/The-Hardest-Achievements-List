@@ -977,8 +977,7 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
-      "Pending Removal"
+      "Progress"
     ]
   },
   {
@@ -1232,7 +1231,7 @@
     "version": 2.2,
     "submitter": "tmtsps12",
     "estimateLower": 1,
-    "estimateUpper": 1,
+    "estimateUpper": 2,
     "video": "https://youtu.be/apmslJgRMow?t=11678",
     "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",

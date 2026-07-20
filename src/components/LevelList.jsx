@@ -406,13 +406,16 @@ export default function LevelList({
           >
             {visibleAchievements.map((a, offset) => {
               const i = start + offset;
+              // Prefer stable listRank so filtered/sorted views keep correct
+              // badges; fall back to visual index (pending estimate order).
+              const cardIndex = a.listRank != null ? a.listRank - 1 : i;
               const itemKey = `${listKey ?? "list"}::${getAchievementListKey(a)}`;
               return a.hasDuplicates ? (
                 <GroupedLevelCard
                   key={itemKey}
                   achievement={a}
                   duplicates={a.duplicates}
-                  index={i}
+                  index={cardIndex}
                   isTimeline={isTimeline}
                   getTimelineDateLabel={getTimelineDateLabel}
                   isPendingEstimate={isPendingEstimate}
@@ -424,7 +427,7 @@ export default function LevelList({
                 <LevelCard
                   key={itemKey}
                   achievement={a}
-                  index={i}
+                  index={cardIndex}
                   isTimeline={isTimeline}
                   timelineDateLabel={getTimelineDateLabel(a)}
                   isPendingEstimate={isPendingEstimate}

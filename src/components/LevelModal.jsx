@@ -10,6 +10,7 @@ import {
 } from "../utils/format";
 import {
   UNDEFINED_LABEL,
+  UNRELEASED_LABEL,
   asDisplayDate,
   asDisplayLength,
   asDisplayLevelID,
@@ -35,6 +36,7 @@ export default function LevelModal({
   const displayName = asDisplayString(a.name);
   const displayPlayer = asDisplayString(a.player);
   const displayLevelID = asDisplayLevelID(a.levelID);
+  const canCopyLevelID = displayLevelID !== UNRELEASED_LABEL;
   const displayDate = a.timelineDateLabel ?? asDisplayDate(a.date);
   const displayLength = asDisplayLength(a.length);
   const displayVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
@@ -183,11 +185,17 @@ export default function LevelModal({
               <span className="lbl">LEVEL ID</span>
               <span
                 className="val"
-                onClick={() => handleCopy(displayLevelID)}
-                style={{ cursor: "pointer" }}
-                title="Click to copy"
+                onClick={
+                  canCopyLevelID
+                    ? () => handleCopy(displayLevelID)
+                    : undefined
+                }
+                style={canCopyLevelID ? { cursor: "pointer" } : undefined}
+                title={canCopyLevelID ? "Click to copy" : undefined}
               >
-                {copiedValue === displayLevelID ? "✓ Copied" : displayLevelID}
+                {canCopyLevelID && copiedValue === displayLevelID
+                  ? "✓ Copied"
+                  : displayLevelID}
               </span>
             </div>
             <div className="modal__stat">

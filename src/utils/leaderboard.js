@@ -1,8 +1,11 @@
 import {
   getDuplicateParentIds,
+  getParentKeysInList,
   isGroupedDuplicate,
   isPendingListSource,
   isReplacementDuplicate,
+  isDuplicateAchievement,
+  annotateVariantProximity,
 } from "./groupDuplicates.js";
 import {
   resolvePlayerCountries,
@@ -86,23 +89,40 @@ export function getEntryRank(entry) {
   return entry?.listPosition ?? entry?.rank ?? null;
 }
 
-function sortByListPosition(entries) {
-  return [...entries].sort((a, b) => {
-    const pendingA = isPendingListSource(a) ? 1 : 0;
-    const pendingB = isPendingListSource(b) ? 1 : 0;
-    if (pendingA !== pendingB) return pendingA - pendingB;
-    return (
-      (getEntryRank(a) ?? Number.POSITIVE_INFINITY) -
-      (getEntryRank(b) ?? Number.POSITIVE_INFINITY)
-    );
-  });
-}
-
 export function withListPositions(entries) {
-  return entries.map((entry, index) => ({
+  if (!Array.isArray(entries) || entries.length === 0) return [];
+
+  // Safety net: classify from raw order if callers forgot to annotate.
+  const hasDuplicates = entries.some((entry) => isDuplicateAchievement(entry));
+  const hasProximityStamps = entries.some(
+    (entry) =>
+      entry?.isCloseGroupedVariant === true ||
+      entry?.isDistantVariant === true,
+  );
+  const source =
+    hasDuplicates && !hasProximityStamps
+      ? annotateVariantProximity(entries)
+      : entries;
+
+  const parentKeys = getParentKeysInList(source);
+  let rank = 0;
+  const positioned = source.map((entry) => {
+    if (isGroupedDuplicate(entry, source, parentKeys)) {
+      return {
+        ...entry,
+        listPosition: null,
+      };
+    }
+    rank += 1;
+    return {
+      ...entry,
+      listPosition: rank,
+    };
+  });
+
+  return positioned.map((entry) => ({
     ...entry,
-    listPosition: index + 1,
-    listSize: entries.length,
+    listSize: rank,
   }));
 }
 
@@ -133,9 +153,10 @@ export function withCompetitionRank(rows, getScore) {
 export function buildListPositionMap(entries) {
   const map = new Map();
   const positioned = withListPositions(entries);
+  const parentKeys = getParentKeysInList(positioned);
 
   for (const entry of positioned) {
-    if (isGroupedDuplicate(entry, entries)) continue;
+    if (isGroupedDuplicate(entry, positioned, parentKeys)) continue;
     map.set(normalizeNameKey(entry.name), entry.listPosition);
   }
 
@@ -154,7 +175,16 @@ function resolveListPositionFromMaps(nameKey, classicMap, platformerMap) {
 }
 
 export function resolveAchievementListPosition(entry, classicMap, platformerMap) {
+  // Distant variants (and parents) are in the position maps; prefer own rank.
+  const ownRank = resolveListPositionFromMaps(
+    normalizeNameKey(entry.name),
+    classicMap,
+    platformerMap,
+  );
+  if (ownRank != null) return ownRank;
+
   const parentRefs = getDuplicateParentIds(entry);
+  // Close variants are omitted from the maps — inherit the best parent rank.
   // Pending replacements link to a main-list parent via duplicateOf, but they
   // are not on that list yet — do not inherit the parent's rank for display.
   if (parentRefs.length > 0 && !isPendingListSource(entry)) {
@@ -171,11 +201,7 @@ export function resolveAchievementListPosition(entry, classicMap, platformerMap)
     if (bestRank != null) return bestRank;
   }
 
-  return resolveListPositionFromMaps(
-    normalizeNameKey(entry.name),
-    classicMap,
-    platformerMap,
-  );
+  return null;
 }
 
 export function buildPositionByNameMap(entriesWithPosition) {
@@ -220,7 +246,9 @@ export function buildPlayerBoard(entries, playerCountries = null) {
 
   // Rank/XP sizing comes from the main list only so pending never dilutes scores.
   const mainWithPosition = withListPositions(mainEntries);
-  const listSize = mainWithPosition.length;
+  const listSize =
+    mainWithPosition.find((entry) => entry.listPosition != null)?.listSize ??
+    0;
   const positionByName = buildPositionByNameMap(mainWithPosition);
   const pendingWithMeta = pendingEntries.map((entry) => ({
     ...entry,
@@ -239,33 +267,49 @@ export function buildPlayerBoard(entries, playerCountries = null) {
 
   const board = [...grouped.entries()]
     .map(([name, playerEntries]) => {
-      const sorted = sortByListPosition(playerEntries);
-
-      const achievements = sorted.map((entry) => {
-        const isPending = isPendingListSource(entry);
-        const isDuplicate = isGroupedDuplicate(entry, sourceEntries);
-        const parentEntries = isDuplicate
-          ? findParentEntries(entry, entriesWithPosition)
-          : [];
-        const isReplacement =
-          isDuplicate &&
-          parentEntries.some((parentEntry) =>
-            isReplacementDuplicate(parentEntry, entry),
-          );
-        const xpPosition = isPending
-          ? null
-          : resolveAchievementXpPosition(
-              entry,
-              entriesWithPosition,
-              positionByName,
+      const achievements = playerEntries
+        .map((entry) => {
+          const isPending = isPendingListSource(entry);
+          const isDuplicate = isGroupedDuplicate(entry, sourceEntries);
+          const parentEntries = isDuplicate
+            ? findParentEntries(entry, entriesWithPosition)
+            : [];
+          const isReplacement =
+            isDuplicate &&
+            parentEntries.some((parentEntry) =>
+              isReplacementDuplicate(parentEntry, entry),
             );
-        const points =
-          isPending || xpPosition == null
-            ? 0
-            : calculateXp(xpPosition, entry.listSize);
+          const xpPosition = isPending
+            ? null
+            : resolveAchievementXpPosition(
+                entry,
+                entriesWithPosition,
+                positionByName,
+              );
+          const points =
+            isPending || xpPosition == null
+              ? 0
+              : calculateXp(xpPosition, entry.listSize);
 
-        return { ...entry, points, isDuplicate, isReplacement, xpPosition };
-      });
+          return {
+            ...entry,
+            // Display rank matches the XP tier (own rank, or parent for close variants).
+            listPosition: xpPosition,
+            points,
+            isDuplicate,
+            isReplacement,
+            xpPosition,
+          };
+        })
+        .sort((a, b) => {
+          const pendingA = isPendingListSource(a) ? 1 : 0;
+          const pendingB = isPendingListSource(b) ? 1 : 0;
+          if (pendingA !== pendingB) return pendingA - pendingB;
+          return (
+            (getEntryRank(a) ?? Number.POSITIVE_INFINITY) -
+            (getEntryRank(b) ?? Number.POSITIVE_INFINITY)
+          );
+        });
 
       const best =
         achievements.find((entry) => !isPendingListSource(entry)) ??

@@ -88,7 +88,13 @@ function GroupedLevelCard({
             >
               <LevelCard
                 achievement={duplicate}
-                index={-1}
+                index={
+                  // Close variants inherit listRank for orphan views but stay
+                  // unranked under the parent toggle; distant show their own #.
+                  duplicate.isDistantVariant && duplicate.listRank != null
+                    ? duplicate.listRank - 1
+                    : -1
+                }
                 isTimeline={isTimeline}
                 timelineDateLabel={getTimelineDateLabel(duplicate)}
                 isPendingEstimate={isPendingEstimate}
