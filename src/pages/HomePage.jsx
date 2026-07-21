@@ -1,6 +1,7 @@
 ﻿import { useEffect, useRef, useState } from "react";
 import { paginateRows } from "../utils/leaderboard";
 import PaginationControls from "../components/PaginationControls";
+import { formatDate } from "../utils/format";
 
 const EDITORS = [
   { 
@@ -129,11 +130,7 @@ function formatDateLabel(iso) {
   if (target.getTime() === today.getTime()) return "Today";
   if (target.getTime() === yesterday.getTime()) return "Yesterday";
 
-  return d.toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  return formatDate(iso);
 }
 
 function inferChange(entry) {
@@ -146,6 +143,14 @@ function inferChange(entry) {
 
   if (entry.timelineAdded != null) return { kind: "added", action: "timeline_added" };
   if (entry.timelineRemoved != null) return { kind: "removed", action: "timeline_removed" };
+
+  // Variant link changes share +/- icons with normal add/remove, but use purple styling.
+  if (entry.variantAdded != null) {
+    return { kind: "variant-added", action: "variant_added" };
+  }
+  if (entry.variantRemoved != null) {
+    return { kind: "variant-removed", action: "variant_removed" };
+  }
 
   const { currentRank, newRank, currentName, newName } = entry;
   const renamed = Boolean(currentName && newName && currentName !== newName);
@@ -168,13 +173,13 @@ function getChangeKind(entry) {
 
 function ChangeIcon({ kind }) {
   const icon =
-    kind === "added"
+    kind === "added" || kind === "variant-added"
       ? "fa-plus"
       : kind === "up"
         ? "fa-caret-up"
         : kind === "down"
           ? "fa-caret-down"
-          : kind === "removed"
+          : kind === "removed" || kind === "variant-removed"
             ? "fa-minus"
             : kind === "milestone"
               ? "fa-flag"
@@ -198,6 +203,8 @@ function buildChangeHeadline(entry, kind) {
     timelineRemoved,
     from,
     to,
+    variantAdded,
+    variantRemoved,
   } = entry;
   const { action } = inferChange(entry);
   const displayName = newName || currentName || name;
@@ -281,6 +288,22 @@ function buildChangeHeadline(entry, kind) {
     );
   }
 
+  if (action === "variant_added") {
+    return (
+      <>
+        <strong>{newName || displayName}</strong> added as a variant of {variantAdded}
+      </>
+    );
+  }
+
+  if (action === "variant_removed") {
+    return (
+      <>
+        <strong>{currentName || displayName}</strong> removed as a variant of {variantRemoved}
+      </>
+    );
+  }
+
   if (action === "removed") {
     return (
       <>
@@ -292,7 +315,7 @@ function buildChangeHeadline(entry, kind) {
   if (action === "timeline_added") {
     return (
       <>
-        <strong>{displayName}</strong> added to Timeline ({timelineAdded})
+        <strong>{displayName}</strong> added to Timeline ({formatDate(timelineAdded)})
       </>
     );
   }
@@ -300,7 +323,7 @@ function buildChangeHeadline(entry, kind) {
   if (action === "timeline_removed") {
     return (
       <>
-        <strong>{displayName}</strong> removed from Timeline ({timelineRemoved})
+        <strong>{displayName}</strong> removed from Timeline ({formatDate(timelineRemoved)})
       </>
     );
   }
@@ -311,7 +334,8 @@ function buildChangeHeadline(entry, kind) {
 function ChangeEntry({ entry }) {
   const { above, below } = entry;
   const kind = getChangeKind(entry);
-  const neighborPrefix = kind === "removed" ? "Formerly" : "Now";
+  const neighborPrefix =
+    kind === "removed" || kind === "variant-removed" ? "Formerly" : "Now";
   const hasNeighbors = kind !== "milestone" && Boolean(below || above);
 
   return (

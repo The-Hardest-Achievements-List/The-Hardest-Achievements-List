@@ -177,82 +177,172 @@ function parseRoute() {
 }
 
 /**
- * Pull variant families into search results via parent keys.
- * `seedFamilyKeys` covers MAIN hosts for matching pending replacements.
+ * Hybrid family filter (model B + child-only exception):
+ * - Parent match on search → parent + all variants (close & distant); names ignored.
+ * - Parent match on tags → same expand; children inherit the parent's tag pass.
+ * - Child-only match → that child (+ parent host if the parent still passes tags);
+ *   siblings do not expand.
+ * - Hitchhiking only while the expanding parent remains present.
+ * - Pending search hits seed a host parent only (not a full family expand).
  */
-function pullVariantFamiliesForSearch(
+function filterEntriesByFamilySemantics(
   entries,
   {
     query,
     matchesSearch,
-    getFamilyKeys,
-    seedFamilyKeys = [],
+    includeTags = [],
+    excludeTags = [],
+    seedHostParentKeys = [],
   },
 ) {
-  if (!query) return entries;
+  const hasSearch = Boolean(query);
+  const hasTags = includeTags.length > 0 || excludeTags.length > 0;
+  const passesTags = (entry) =>
+    entryMatchesActiveTags(entry, includeTags, excludeTags);
 
-  const includedFamilyKeys = new Set(seedFamilyKeys);
-  for (const achievement of entries) {
-    if (!matchesSearch(achievement, query)) continue;
-    for (const key of getFamilyKeys(achievement)) {
-      includedFamilyKeys.add(key);
+  // Parents whose own fields matched search (full family expand roots).
+  const searchExpandParentKeys = new Set();
+  // Parents pulled only so a matching child / pending replacement can nest.
+  const hostParentKeys = new Set(
+    seedHostParentKeys.filter(Boolean).map((key) => key),
+  );
+
+  if (hasSearch) {
+    for (const entry of entries) {
+      if (!matchesSearch(entry, query)) continue;
+      const parentIds = getDuplicateParentIds(entry);
+      if (parentIds.length === 0) {
+        searchExpandParentKeys.add(getAchievementKey(entry));
+        continue;
+      }
+      for (const parentRef of parentIds) {
+        hostParentKeys.add(getAchievementKey({ name: parentRef }));
+      }
     }
   }
 
-  return entries.filter((achievement) =>
-    getFamilyKeys(achievement).some((key) => includedFamilyKeys.has(key)),
-  );
+  let data = entries;
+  if (hasSearch) {
+    data = entries.filter((entry) => {
+      if (matchesSearch(entry, query)) return true;
+
+      const parentIds = getDuplicateParentIds(entry);
+      if (parentIds.length === 0) {
+        const key = getAchievementKey(entry);
+        return searchExpandParentKeys.has(key) || hostParentKeys.has(key);
+      }
+
+      // Full family expand (close + distant) when the parent matched search.
+      return parentIds.some((parentRef) =>
+        searchExpandParentKeys.has(getAchievementKey({ name: parentRef })),
+      );
+    });
+  }
+
+  if (!hasTags) {
+    return {
+      entries: data,
+      expandingParentKeys: hasSearch
+        ? searchExpandParentKeys
+        : new Set(
+            data
+              .filter((entry) => getDuplicateParentIds(entry).length === 0)
+              .map((entry) => getAchievementKey(entry)),
+          ),
+    };
+  }
+
+  // Tag-passing parents that are allowed to expand / inherit to children.
+  // Tags-only: every tag-passing parent expands.
+  // With search: only search-expand roots that still pass tags (not mere hosts).
+  const expandingParentKeys = new Set();
+  for (const entry of data) {
+    if (getDuplicateParentIds(entry).length > 0) continue;
+    if (!passesTags(entry)) continue;
+    const key = getAchievementKey(entry);
+    if (!hasSearch || searchExpandParentKeys.has(key)) {
+      expandingParentKeys.add(key);
+    }
+  }
+
+  data = data.filter((entry) => {
+    const parentIds = getDuplicateParentIds(entry);
+    if (parentIds.length === 0) {
+      // Parents must pass tags themselves (failed host → matching child orphans).
+      return passesTags(entry);
+    }
+    // Inherit parent tag pass while that expanding parent is still present.
+    if (
+      parentIds.some((parentRef) =>
+        expandingParentKeys.has(getAchievementKey({ name: parentRef })),
+      )
+    ) {
+      return true;
+    }
+    // Personal pass only — family-pulled non-hits must not orphan after the
+    // expanding parent is tag-dropped.
+    if (hasSearch && !matchesSearch(entry, query)) return false;
+    return passesTags(entry);
+  });
+
+  return { entries: data, expandingParentKeys };
 }
 
-/**
- * After search (and tags), drop non-matching hangers-on when the parent is gone.
- * Distant siblings only stay if they match or the parent itself matched search.
- * Matching close orphans remain as separate ranked cards.
- */
-function pruneSearchVariantHangers(
-  filteredEntries,
-  rawEntries,
+function filterOtherListByFamilySemantics(
+  otherEntries,
   {
     query,
     matchesSearch,
+    includeTags = [],
+    excludeTags = [],
+    parentKeysPresent,
+    expandingParentKeys,
+    resolveParentKeys,
   },
 ) {
-  if (!query) return filteredEntries;
+  if (!Array.isArray(otherEntries) || otherEntries.length === 0) return [];
+  const hasSearch = Boolean(query);
+  const hasTags = includeTags.length > 0 || excludeTags.length > 0;
+  if (!hasSearch && !hasTags) return otherEntries;
 
-  const parentsPresent = new Set(
-    filteredEntries
-      .filter((entry) => getDuplicateParentIds(entry).length === 0)
-      .map((entry) => getAchievementKey(entry)),
-  );
-  const parentMatchedSearch = new Set(
-    rawEntries
-      .filter(
-        (entry) =>
-          getDuplicateParentIds(entry).length === 0 &&
-          matchesSearch(entry, query),
-      )
-      .map((entry) => getAchievementKey(entry)),
-  );
+  const passesTags = (entry) =>
+    entryMatchesActiveTags(entry, includeTags, excludeTags);
 
-  return filteredEntries.filter((achievement) => {
-    if (matchesSearch(achievement, query)) return true;
-
-    const parentIds = getDuplicateParentIds(achievement);
-    if (parentIds.length === 0) return true;
-
-    const linkedParentPresent = parentIds.some((parentRef) =>
-      parentsPresent.has(getAchievementKey({ name: parentRef })),
+  return otherEntries.filter((entry) => {
+    const parentKeys = resolveParentKeys(entry).filter((key) =>
+      parentKeysPresent.has(key),
     );
-    if (!linkedParentPresent) return false;
+    if (parentKeys.length === 0) return false;
 
-    if (achievement.isDistantVariant) {
-      return parentIds.some((parentRef) =>
-        parentMatchedSearch.has(getAchievementKey({ name: parentRef })),
-      );
-    }
+    const inheritsFromExpandingParent = parentKeys.some((key) =>
+      expandingParentKeys.has(key),
+    );
+    if (inheritsFromExpandingParent) return true;
 
+    if (hasSearch && !matchesSearch(entry, query)) return false;
+    if (hasTags && !passesTags(entry)) return false;
     return true;
   });
+}
+
+function entryMatchesActiveTags(achievement, includeTags, excludeTags) {
+  if (includeTags.length > 0) {
+    if (
+      !achievement.tags ||
+      !includeTags.every((tag) => achievement.tags.includes(tag))
+    ) {
+      return false;
+    }
+  }
+  if (excludeTags.length > 0) {
+    if (
+      achievement.tags &&
+      !excludeTags.every((tag) => !achievement.tags.includes(tag))
+    ) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export default function App() {
@@ -466,21 +556,6 @@ export default function App() {
 
   const allTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
 
-  const getParentKeysForEntry = (achievement) => {
-    const duplicateParents = getDuplicateParentIds(achievement);
-    if (duplicateParents.length === 0) {
-      return [getAchievementKey(achievement)];
-    }
-    const parentKeys = duplicateParents.map((name) =>
-      getAchievementKey({ name }),
-    );
-    // Distant variants are first-class; close ones only link through the parent.
-    if (achievement.isDistantVariant) {
-      return [getAchievementKey(achievement), ...parentKeys];
-    }
-    return parentKeys;
-  };
-
   const itemMatchesSearch = (achievement, q) =>
     achievement.name?.toLowerCase().includes(q) ||
     achievement.player?.toLowerCase().includes(q) ||
@@ -518,21 +593,35 @@ export default function App() {
     setShowScrollTop(false);
   }, [active, mode]);
 
-  const filteredData = useMemo(() => {
-    if (!Array.isArray(rawDataWithListRank)) return [];
-    let data = [...rawDataWithListRank];
-    const searchQuery = search.trim() ? search.toLowerCase() : "";
+  const activeTagLists = useMemo(() => {
+    const includeTags = [];
+    const excludeTags = [];
+    activeTags.forEach((state, tag) => {
+      if (state === "include") includeTags.push(tag);
+      else if (state === "exclude") excludeTags.push(tag);
+    });
+    return { includeTags, excludeTags };
+  }, [activeTags]);
 
-    if (searchQuery) {
-      const listSrc = {
-        mainSrc: mode === "platformer" ? "platformer" : "classic",
-        pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
-      };
+  const { filteredData, expandingParentKeys, parentKeysPresent } =
+    useMemo(() => {
+      if (!Array.isArray(rawDataWithListRank)) {
+        return {
+          filteredData: [],
+          expandingParentKeys: new Set(),
+          parentKeysPresent: new Set(),
+        };
+      }
 
-      // Pending replacements live under main parents — seed their parent keys
-      // so MAIN search can surface the host group.
-      const seedFamilyKeys = [];
-      if (isMainList) {
+      const searchQuery = search.trim() ? search.toLowerCase() : "";
+      const { includeTags, excludeTags } = activeTagLists;
+
+      const seedHostParentKeys = [];
+      if (searchQuery && isMainList) {
+        const listSrc = {
+          mainSrc: mode === "platformer" ? "platformer" : "classic",
+          pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
+        };
         pendingEntries.forEach((achievement) => {
           if (!itemMatchesSearch(achievement, searchQuery)) return;
           if (!isCrossListReplacementChild(achievement, mainEntries, listSrc)) {
@@ -543,100 +632,133 @@ export default function App() {
             mainEntries,
             listSrc,
           ).forEach((parent) => {
-            seedFamilyKeys.push(getAchievementKey(parent));
+            seedHostParentKeys.push(getAchievementKey(parent));
           });
         });
       }
 
-      data = pullVariantFamiliesForSearch(rawDataWithListRank, {
-        query: searchQuery,
-        matchesSearch: itemMatchesSearch,
-        getFamilyKeys: getParentKeysForEntry,
-        seedFamilyKeys,
-      });
-    }
+      const { entries, expandingParentKeys: expandingKeys } =
+        filterEntriesByFamilySemantics(rawDataWithListRank, {
+          query: searchQuery,
+          matchesSearch: itemMatchesSearch,
+          includeTags,
+          excludeTags,
+          seedHostParentKeys,
+        });
 
-    if (activeTags.size > 0) {
-      const includeTags = [];
-      const excludeTags = [];
-      activeTags.forEach((state, tag) => {
-        if (state === "include") includeTags.push(tag);
-        else if (state === "exclude") excludeTags.push(tag);
+      entries.sort((a, b) => {
+        if (sort === "rank" && isPendingList) {
+          return comparePendingEstimate(a, b, sortDir, pendingMainCount);
+        }
+
+        let va, vb;
+        if (sort === "rank") {
+          const ra = a.rank ?? a.listRank;
+          const rb = b.rank ?? b.listRank;
+          const aIsRanked = ra != null;
+          const bIsRanked = rb != null;
+          if (!aIsRanked && !bIsRanked) return 0;
+          if (!aIsRanked) return 1;
+          if (!bIsRanked) return -1;
+          va = ra;
+          vb = rb;
+        } else if (sort === "name") {
+          va = (a.name ?? "").toLowerCase();
+          vb = (b.name ?? "").toLowerCase();
+        } else if (sort === "length") {
+          va = a.length ?? 0;
+          vb = b.length ?? 0;
+        } else {
+          const getSortDateMs = (entry) => {
+            if (entry.sortDateMs != null) return entry.sortDateMs;
+            if (isValidDate(entry.date)) return new Date(entry.date).getTime();
+            return null;
+          };
+          const aMs = getSortDateMs(a);
+          const bMs = getSortDateMs(b);
+          if (aMs == null && bMs == null) return 0;
+          if (aMs == null) return 1;
+          if (bMs == null) return -1;
+          va = aMs;
+          vb = bMs;
+        }
+        if (va < vb) return sortDir === "asc" ? -1 : 1;
+        if (va > vb) return sortDir === "asc" ? 1 : -1;
+        return 0;
       });
-      if (includeTags.length > 0) {
-        data = data.filter(
-          (a) => a.tags && includeTags.every((t) => a.tags.includes(t)),
+
+      const present = new Set(
+        entries
+          .filter((entry) => getDuplicateParentIds(entry).length === 0)
+          .map((entry) => getAchievementKey(entry)),
+      );
+
+      return {
+        filteredData: entries,
+        expandingParentKeys: expandingKeys,
+        parentKeysPresent: present,
+      };
+    }, [
+      rawDataWithListRank,
+      search,
+      activeTagLists,
+      sort,
+      sortDir,
+      isPendingList,
+      isMainList,
+      pendingMainCount,
+      pendingEntries,
+      mainEntries,
+      mode,
+    ]);
+
+  const filteredOtherList = useMemo(() => {
+    const source = isMainList
+      ? pendingEntries
+      : isPendingList
+        ? mainEntries
+        : [];
+    if (!Array.isArray(source) || source.length === 0) return [];
+
+    const searchQuery = search.trim() ? search.toLowerCase() : "";
+    const { includeTags, excludeTags } = activeTagLists;
+    const listSrc = {
+      mainSrc: mode === "platformer" ? "platformer" : "classic",
+      pendingSrc: mode === "platformer" ? "platformerpending" : "pending",
+    };
+
+    // When filtering main, otherList is pending replacements of present parents.
+    // When filtering pending, otherList is main parents (rarely attached the same way).
+    const parentPool = isMainList ? filteredData : mainEntries;
+
+    return filterOtherListByFamilySemantics(source, {
+      query: searchQuery,
+      matchesSearch: itemMatchesSearch,
+      includeTags,
+      excludeTags,
+      parentKeysPresent,
+      expandingParentKeys,
+      resolveParentKeys: (entry) => {
+        if (isMainList) {
+          return getCrossListReplacementParents(entry, parentPool, listSrc).map(
+            (parent) => getAchievementKey(parent),
+          );
+        }
+        return getDuplicateParentIds(entry).map((name) =>
+          getAchievementKey({ name }),
         );
-      }
-      if (excludeTags.length > 0) {
-        data = data.filter(
-          (a) => !a.tags || excludeTags.every((t) => !a.tags.includes(t)),
-        );
-      }
-    }
-
-    // Orphan prune must run AFTER tags so exclude-Rated can drop the parent
-    // before hangers-on are removed (christmas + exclude Rated → christmashouse).
-    if (searchQuery) {
-      data = pruneSearchVariantHangers(data, rawDataWithListRank, {
-        query: searchQuery,
-        matchesSearch: itemMatchesSearch,
-      });
-    }
-
-    data.sort((a, b) => {
-      if (sort === "rank" && isPendingList) {
-        return comparePendingEstimate(a, b, sortDir, pendingMainCount);
-      }
-
-      let va, vb;
-      if (sort === "rank") {
-        const ra = a.rank ?? a.listRank;
-        const rb = b.rank ?? b.listRank;
-        const aIsRanked = ra != null;
-        const bIsRanked = rb != null;
-        if (!aIsRanked && !bIsRanked) return 0;
-        if (!aIsRanked) return 1;
-        if (!bIsRanked) return -1;
-        va = ra;
-        vb = rb;
-      } else if (sort === "name") {
-        va = (a.name ?? "").toLowerCase();
-        vb = (b.name ?? "").toLowerCase();
-      } else if (sort === "length") {
-        va = a.length ?? 0;
-        vb = b.length ?? 0;
-      } else {
-        const getSortDateMs = (entry) => {
-          if (entry.sortDateMs != null) return entry.sortDateMs;
-          if (isValidDate(entry.date)) return new Date(entry.date).getTime();
-          return null;
-        };
-        const aMs = getSortDateMs(a);
-        const bMs = getSortDateMs(b);
-        if (aMs == null && bMs == null) return 0;
-        if (aMs == null) return 1;
-        if (bMs == null) return -1;
-        va = aMs;
-        vb = bMs;
-      }
-      if (va < vb) return sortDir === "asc" ? -1 : 1;
-      if (va > vb) return sortDir === "asc" ? 1 : -1;
-      return 0;
+      },
     });
-
-    return data;
   }, [
-    rawDataWithListRank,
-    search,
-    activeTags,
-    sort,
-    sortDir,
-    isPendingList,
     isMainList,
-    pendingMainCount,
+    isPendingList,
     pendingEntries,
     mainEntries,
+    filteredData,
+    search,
+    activeTagLists,
+    parentKeysPresent,
+    expandingParentKeys,
     mode,
   ]);
 
@@ -727,7 +849,7 @@ export default function App() {
           mode={mode}
           setMode={(m) => navigate(m, active)}
           listKind={isMainList ? "main" : isPendingList ? "pending" : null}
-          otherList={isMainList ? pendingEntries : isPendingList ? mainEntries : []}
+          otherList={filteredOtherList}
         />
       )}
 

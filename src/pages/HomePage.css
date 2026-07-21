@@ -406,6 +406,11 @@
     color: oklch(74% 0.14 145);
 }
 
+.home-change__icon--variant-added,
+.home-change__icon--variant-removed {
+    color: oklch(72% 0.18 305);
+}
+
 .home-change__icon--up {
     color: oklch(74% 0.12 265);
 }

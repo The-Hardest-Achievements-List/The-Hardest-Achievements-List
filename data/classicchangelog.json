@@ -1,12 +1,146 @@
 [
   {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Bassline Junkie",
+    "currentRank": null,
+    "newRank": 257,
+    "below": "KOCMOC",
+    "above": "The Lightning Rod",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Blindscapes 17-100%",
+    "currentRank": null,
+    "newRank": 53,
+    "below": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
+    "above": "Nullscapes",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Blindscapes 81%",
+    "currentRank": null,
+    "newRank": 53,
+    "below": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
+    "above": "Blindscapes 17-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": "Exens limit 165%",
+    "newName": "Exens limit 167%",
+    "currentRank": 165,
+    "newRank": 165,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Green Acheron 17-100%",
+    "currentRank": null,
+    "newRank": 135,
+    "below": "Heliopolis (Thnnder Old) 17%",
+    "above": "Thinking Space II (Legacy)",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Herr Machine",
+    "currentRank": null,
+    "newRank": 100,
+    "below": "Silent Circles (Starchman, Juls) 47-100%",
+    "above": "Aquamarine",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Im Bleaf",
+    "currentRank": null,
+    "newRank": 255,
+    "below": "Ouroboros 60hz Mobile 10-100%",
+    "above": "if FF was lvl 1",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Le Fishe 2x 75%",
+    "currentRank": null,
+    "newRank": 272,
+    "below": "zorin",
+    "above": "limbo but uwu ig idk 60hz Mobile 80%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Sonic Wave (Cyclic) 1.9 60hz 53%, 100% in a row",
+    "currentRank": null,
+    "newRank": 170,
+    "below": "Widestep 60hz",
+    "above": "Sakupen Circles Infinity (Layout) 37-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Gay Acheron 17-100%",
+    "currentRank": null,
+    "newRank": 136,
+    "below": "Heliopolis (Thnnder Old) 17%",
+    "above": "Green Acheron 17-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": null,
+    "newName": "Purplehouse 25-95%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": "Slaughterhouse",
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-21",
+    "currentName": "Acheron (Riot) 47-100%",
+    "newName": "Acheron (Riot) 23-100%",
+    "currentRank": 178,
+    "newRank": 88,
+    "below": "Amethyst (Trick) 61%",
+    "above": "Acheron (Riot) 91%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-07-20",
     "currentName": "LESOPOWAL",
     "newName": "LESOPOWAL",
     "currentRank": 66,
     "newRank": 65,
     "below": "Vehemence (wPopoff Old) 39%",
-    "above": "BOOBAWAMBA"
+    "above": "BOOBAWAMBA",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-20",
@@ -15,7 +149,9 @@
     "currentRank": 178,
     "newRank": 258,
     "below": "The Lightning Rod",
-    "above": "CHIL"
+    "above": "CHIL",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-20",
@@ -24,7 +160,9 @@
     "currentRank": 181,
     "newRank": 162,
     "below": "Abyss of Darkness (Old)",
-    "above": "OUROBOROS (Unnerfed) 27-100%"
+    "above": "OUROBOROS (Unnerfed) 27-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-20",
@@ -33,7 +171,9 @@
     "currentRank": 257,
     "newRank": 285,
     "below": "EXPIRATION DATE",
-    "above": "BRITNEY NO SCLEARS 82%, (0%, 0%), 100% in a row"
+    "above": "BRITNEY NO SCLEARS 82%, (0%, 0%), 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-20",
@@ -42,7 +182,9 @@
     "currentRank": 302,
     "newRank": 259,
     "below": "The Lightning Rod",
-    "above": "Maniacal Chains"
+    "above": "Maniacal Chains",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-16",
@@ -51,7 +193,9 @@
     "currentRank": 281,
     "newRank": 281,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-16",
@@ -60,7 +204,9 @@
     "currentRank": 162,
     "newRank": 162,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-16",
@@ -69,7 +215,9 @@
     "currentRank": 134,
     "newRank": 134,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-15",
@@ -78,7 +226,9 @@
     "currentRank": 124,
     "newRank": null,
     "below": "Silent clubstep 2.1",
-    "above": "Sakupen Circles 144hz Mobile 37-100%"
+    "above": "Sakupen Circles 144hz Mobile 37-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-15",
@@ -87,7 +237,9 @@
     "currentRank": 63,
     "newRank": 63,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-15",
@@ -96,7 +248,9 @@
     "currentRank": 26,
     "newRank": 26,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-15",
@@ -105,7 +259,9 @@
     "currentRank": 25,
     "newRank": 25,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-15",
@@ -114,7 +270,9 @@
     "currentRank": 6,
     "newRank": 6,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-13",
@@ -123,7 +281,9 @@
     "currentRank": 87,
     "newRank": null,
     "below": "Acheron (Riot) 91%",
-    "above": "VSC 72%, 100% in a row"
+    "above": "VSC 72%, 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-12",
@@ -132,7 +292,9 @@
     "currentRank": 79,
     "newRank": 63,
     "below": "Quanteuse processing",
-    "above": "Vehemence (wPopoff Old) 39%"
+    "above": "Vehemence (wPopoff Old) 39%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-08",
@@ -141,7 +303,9 @@
     "currentRank": 106,
     "newRank": 106,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-08",
@@ -150,7 +314,9 @@
     "currentRank": 271,
     "newRank": null,
     "below": "Sakupen Circles (Exen)",
-    "above": "Sakupen Circles (Kritoss)"
+    "above": "Sakupen Circles (Kritoss)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-07",
@@ -159,7 +325,9 @@
     "currentRank": 349,
     "newRank": null,
     "below": "CorroZ 41%",
-    "above": "The Yangire 144hz"
+    "above": "The Yangire 144hz",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-01",
@@ -168,7 +336,9 @@
     "currentRank": null,
     "newRank": 336,
     "below": "VSC 1.1x 61%",
-    "above": "ace"
+    "above": "ace",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-01",
@@ -177,7 +347,9 @@
     "currentRank": null,
     "newRank": 84,
     "below": "Angelicide 53-100% 2 deaths, 99.98% accuracy",
-    "above": "Azure Flare (VERTOP) 49%"
+    "above": "Azure Flare (VERTOP) 49%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-29",
@@ -186,7 +358,9 @@
     "currentRank": 348,
     "newRank": null,
     "below": "Buffed unknown 11-47%",
-    "above": "The Yangire 144hz"
+    "above": "The Yangire 144hz",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-27",
@@ -195,7 +369,9 @@
     "currentRank": 102,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-27",
@@ -204,7 +380,9 @@
     "currentRank": 257,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-27",
@@ -213,7 +391,9 @@
     "currentRank": null,
     "newRank": 39,
     "below": "Silent clubstep 14%, 18%, 40%, 19%, 62%, 63% in a row",
-    "above": "KOCMOC Unleashed (Nerfed II) 73%"
+    "above": "KOCMOC Unleashed (Nerfed II) 73%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-26",
@@ -222,7 +402,9 @@
     "currentRank": 88,
     "newRank": 88,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-24",
@@ -231,7 +413,9 @@
     "currentRank": 404,
     "newRank": 404,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-23",
@@ -240,7 +424,9 @@
     "currentRank": 1,
     "newRank": 1,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-21",
@@ -249,7 +435,9 @@
     "currentRank": 3,
     "newRank": 1,
     "below": null,
-    "above": "GRIEF 97%"
+    "above": "GRIEF 97%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-21",
@@ -258,7 +446,9 @@
     "currentRank": 9,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-21",
@@ -267,7 +457,9 @@
     "currentRank": 9,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-21",
@@ -276,7 +468,9 @@
     "currentRank": null,
     "newRank": 5,
     "below": "Thinking Space II 85%, (5%), (3%), 86% in a row",
-    "above": "Sweeping Demon 2 (Taiago) 86%"
+    "above": "Sweeping Demon 2 (Taiago) 86%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-19",
@@ -285,7 +479,9 @@
     "currentRank": 32,
     "newRank": 32,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-19",
@@ -294,7 +490,9 @@
     "currentRank": 296,
     "newRank": 296,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-16",
@@ -303,7 +501,9 @@
     "currentRank": 12,
     "newRank": 9,
     "below": "Society 72%",
-    "above": "Amethyst 59%, 54% in a row"
+    "above": "Amethyst 59%, 54% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-16",
@@ -312,7 +512,9 @@
     "currentRank": 10,
     "newRank": 8,
     "below": "KOCMOC UNLEASHED 68%",
-    "above": "Amethyst 59%, 54% in a row"
+    "above": "Amethyst 59%, 54% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-16",
@@ -321,7 +523,9 @@
     "currentRank": null,
     "newRank": 404,
     "below": "Kosetsu",
-    "above": "Acheron my 79%"
+    "above": "Acheron my 79%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-16",
@@ -330,7 +534,9 @@
     "currentRank": 379,
     "newRank": 220,
     "below": "Labyrinth 44-100%",
-    "above": "Subterminal Point"
+    "above": "Subterminal Point",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-15",
@@ -339,7 +545,9 @@
     "currentRank": null,
     "newRank": 379,
     "below": "ace",
-    "above": "Snowblind (Old) 59%"
+    "above": "Snowblind (Old) 59%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-14",
@@ -348,7 +556,9 @@
     "currentRank": null,
     "newRank": 328,
     "below": "EXPIRATION DATE",
-    "above": "Justin Camp"
+    "above": "Justin Camp",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-14",
@@ -357,7 +567,9 @@
     "currentRank": 13,
     "newRank": null,
     "below": "GRIEF 25-100%",
-    "above": "Society 15-100%"
+    "above": "Society 15-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-14",
@@ -366,7 +578,9 @@
     "currentRank": 3,
     "newRank": null,
     "below": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
-    "above": "Society 44%, 67% in a row"
+    "above": "Society 44%, 67% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-14",
@@ -375,7 +589,9 @@
     "currentRank": null,
     "newRank": 1,
     "below": null,
-    "above": "KOCMOC UNLEASHED (Aug. 2025) 19-91%"
+    "above": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-14",
@@ -384,7 +600,9 @@
     "currentRank": 13,
     "newRank": 11,
     "below": "Vehemence 13-72%",
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-13",
@@ -393,7 +611,9 @@
     "currentRank": null,
     "newRank": 162,
     "below": "Illusion of Hell 2.1",
-    "above": "Angelicide 37-74% (Kaza)"
+    "above": "Angelicide 37-74% (Kaza)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-13",
@@ -402,7 +622,9 @@
     "currentRank": 188,
     "newRank": 146,
     "below": "Heliopolis (Thnnder old) 17%",
-    "above": "OUROBOROS 73%"
+    "above": "OUROBOROS 73%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-13",
@@ -411,7 +633,9 @@
     "currentRank": 205,
     "newRank": 110,
     "below": "Anathema",
-    "above": "Vehemence (Wpopoff) 27%"
+    "above": "Vehemence (Wpopoff) 27%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-13",
@@ -420,7 +644,9 @@
     "currentRank": 102,
     "newRank": 68,
     "below": "BOOBAWAMBA",
-    "above": "Africa Circles (ChopBlox Unnerfed) 61%"
+    "above": "Africa Circles (ChopBlox Unnerfed) 61%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-12",
@@ -429,7 +655,9 @@
     "currentRank": 26,
     "newRank": 14,
     "below": "Society 67%",
-    "above": "Flamewall 73%, (0), 100% in a row"
+    "above": "Flamewall 73%, (0), 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -438,7 +666,9 @@
     "currentRank": 312,
     "newRank": 316,
     "below": "Sakupen Circles (Criedex)",
-    "above": "BONUS LEVEL"
+    "above": "BONUS LEVEL",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -447,7 +677,9 @@
     "currentRank": null,
     "newRank": 311,
     "below": "Sakupen Circles (Full Detail)",
-    "above": "WOKE CIRCLES"
+    "above": "WOKE CIRCLES",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -456,7 +688,9 @@
     "currentRank": null,
     "newRank": 68,
     "below": "BOOBAWAMBA",
-    "above": "Exasperation 67%"
+    "above": "Exasperation 67%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -465,7 +699,9 @@
     "currentRank": null,
     "newRank": 35,
     "below": "Legoshi Dance 37-51%, 37-75%, 37-60%, 37-60%, 37-60%, 37-60%, 37-75%, 37-51%, 37-100%, 37-51%, 37-67%, 37-51%, 37-53%, 37-60%, 37-100% in a row",
-    "above": "Acheron 60hz 17-67%"
+    "above": "Acheron 60hz 17-67%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -474,7 +710,9 @@
     "currentRank": null,
     "newRank": 70,
     "below": "Azure Flare (VERTOP) 36-91%",
-    "above": "Every End"
+    "above": "Every End",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -483,7 +721,9 @@
     "currentRank": 248,
     "newRank": 49,
     "below": "Avernus 77%, 98% in a row",
-    "above": "ORBIT"
+    "above": "ORBIT",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -492,7 +732,9 @@
     "currentRank": null,
     "newRank": 33,
     "below": "Subsuming Vortex 80%, 71% in a row",
-    "above": "Acheron 60hz 17-67%"
+    "above": "Acheron 60hz 17-67%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -501,7 +743,9 @@
     "currentRank": null,
     "newRank": 377,
     "below": "Im Deaf",
-    "above": "Firework (Sid125) 24-92%"
+    "above": "Firework (Sid125) 24-92%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -510,7 +754,9 @@
     "currentRank": null,
     "newRank": 35,
     "below": "KOCMOC UNLEASHED (Nerfed)",
-    "above": "Eternal Silence Eternal Silence 1 death, 100% noclip accuracy"
+    "above": "Eternal Silence Eternal Silence 1 death, 100% noclip accuracy",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-10",
@@ -519,7 +765,9 @@
     "currentRank": 30,
     "newRank": 26,
     "below": "KOCMOC UNLEASHED (Nerfed II) 14-93%",
-    "above": "Vehemence 40-100%"
+    "above": "Vehemence 40-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -528,7 +776,9 @@
     "currentRank": 292,
     "newRank": 299,
     "below": "Sakupen Denouement",
-    "above": "Sakupen Madness"
+    "above": "Sakupen Madness",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -537,7 +787,9 @@
     "currentRank": 311,
     "newRank": null,
     "below": "wocky circles (Elysium) 34-88%",
-    "above": "Sakupen Circles (Criedex)"
+    "above": "Sakupen Circles (Criedex)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -546,7 +798,9 @@
     "currentRank": 207,
     "newRank": 75,
     "below": "SARY NEVER CLEAR (Optic Sunflow) 88%",
-    "above": "Silent clubstep"
+    "above": "Silent clubstep",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -555,7 +809,9 @@
     "currentRank": null,
     "newRank": 289,
     "below": "Barely Visible SKC 68%",
-    "above": "zorin"
+    "above": "zorin",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -564,7 +820,9 @@
     "currentRank": null,
     "newRank": 193,
     "below": "Akashic Records 60hz",
-    "above": "Kyouki"
+    "above": "Kyouki",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -573,7 +831,9 @@
     "currentRank": null,
     "newRank": 220,
     "below": "Demotivation Dance",
-    "above": "Silent Circles (Thebacon_gamer) 27-53%"
+    "above": "Silent Circles (Thebacon_gamer) 27-53%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -582,7 +842,9 @@
     "currentRank": null,
     "newRank": 221,
     "below": "Silent Circles 27-53%",
-    "above": "christmashouse"
+    "above": "christmashouse",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -591,7 +853,9 @@
     "currentRank": 4,
     "newRank": 3,
     "below": "GRIEF (Apr. 2025) 56-100%, 67% in a row",
-    "above": "Thinking Space II 85%, (5), (3), 86% in a row"
+    "above": "Thinking Space II 85%, (5), (3), 86% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -600,7 +864,9 @@
     "currentRank": 18,
     "newRank": 13,
     "below": "GRIEF 17-92",
-    "above": "Flamewall 73%, (0), 100% in a row"
+    "above": "Flamewall 73%, (0), 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -609,7 +875,9 @@
     "currentRank": null,
     "newRank": 292,
     "below": "Sakupen Circles buff",
-    "above": "Sakupen Circles (Diamond)"
+    "above": "Sakupen Circles (Diamond)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -618,7 +886,9 @@
     "currentRank": 259,
     "newRank": 291,
     "below": "Exens limit",
-    "above": "Sakupen Circles (Diamond)"
+    "above": "Sakupen Circles (Diamond)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -627,7 +897,9 @@
     "currentRank": 278,
     "newRank": 259,
     "below": "Ragnarok 60hz",
-    "above": "MINUS WORLD 67-91%"
+    "above": "MINUS WORLD 67-91%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -636,7 +908,9 @@
     "currentRank": null,
     "newRank": 356,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -645,7 +919,9 @@
     "currentRank": null,
     "newRank": 331,
     "below": "Element 111 Rg",
-    "above": "Cognition 60hz Mobile 15-96%"
+    "above": "Cognition 60hz Mobile 15-96%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -654,7 +930,9 @@
     "currentRank": null,
     "newRank": 313,
     "below": "OUROBOROS (Unbuffed) 27-100%",
-    "above": "last stop 37-100%"
+    "above": "last stop 37-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -663,7 +941,9 @@
     "currentRank": null,
     "newRank": 278,
     "below": "Operation Evolution 97%, 100% in a row",
-    "above": "Africa Circles 49-100%"
+    "above": "Africa Circles 49-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -672,7 +952,9 @@
     "currentRank": null,
     "newRank": 333,
     "below": "Deimos",
-    "above": "VSC Out"
+    "above": "VSC Out",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -681,7 +963,9 @@
     "currentRank": null,
     "newRank": 169,
     "below": "Widestep 60hz",
-    "above": "KOCMOC UNLEASHED (Layout Aug. 2024) 48-89%"
+    "above": "KOCMOC UNLEASHED (Layout Aug. 2024) 48-89%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -690,7 +974,9 @@
     "currentRank": null,
     "newRank": 314,
     "below": "bosco busch",
-    "above": "EXPIRATION DATE"
+    "above": "EXPIRATION DATE",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -699,7 +985,9 @@
     "currentRank": null,
     "newRank": 287,
     "below": "limbo but uwu ig idk 60hz Mobile 80%",
-    "above": "Exens limit"
+    "above": "Exens limit",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -708,7 +996,9 @@
     "currentRank": null,
     "newRank": 284,
     "below": "Barely Visible SKC 37-100%",
-    "above": "zorin"
+    "above": "zorin",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -717,7 +1007,9 @@
     "currentRank": null,
     "newRank": 283,
     "below": "Sakupen Circles 1.1x",
-    "above": "zorin"
+    "above": "zorin",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -726,7 +1018,9 @@
     "currentRank": null,
     "newRank": 6,
     "below": "Sweeping Demon 2 (Taiago) 86%",
-    "above": "GRIEF 84%"
+    "above": "GRIEF 84%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -735,7 +1029,9 @@
     "currentRank": null,
     "newRank": 4,
     "below": "Thinking Space II 85%, (5), (3), 86% in a row",
-    "above": "Sweeping Demon 2 (Taiago) 86%"
+    "above": "Sweeping Demon 2 (Taiago) 86%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -744,7 +1040,9 @@
     "currentRank": null,
     "newRank": 28,
     "below": "GRIEF Madness 85%",
-    "above": "Slaughterhouse 300%"
+    "above": "Slaughterhouse 300%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-09",
@@ -753,7 +1051,9 @@
     "currentRank": null,
     "newRank": 16,
     "below": "Amethyst",
-    "above": "Eternal Silence 31%, (1), 65%"
+    "above": "Eternal Silence 31%, (1), 65%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-08",
@@ -762,7 +1062,9 @@
     "currentRank": 17,
     "newRank": 14,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-04",
@@ -771,7 +1073,9 @@
     "currentRank": 100,
     "newRank": 100,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-04",
@@ -780,7 +1084,9 @@
     "currentRank": 124,
     "newRank": null,
     "below": "Silent clubstep 2.1",
-    "above": "ANTARCTIC LIGHTS 25-100%"
+    "above": "ANTARCTIC LIGHTS 25-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-03",
@@ -789,7 +1095,9 @@
     "currentRank": 283,
     "newRank": 288,
     "below": "Sakupen Madness",
-    "above": "Sakupen Circles"
+    "above": "Sakupen Circles",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-02",
@@ -798,7 +1106,9 @@
     "currentRank": 10,
     "newRank": 3,
     "below": "GRIEF (Apr. 2025) 56-100%, 67% in a row",
-    "above": "Sweeping Demon 2 (Taiago) 86%"
+    "above": "Sweeping Demon 2 (Taiago) 86%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -807,7 +1117,9 @@
     "currentRank": 104,
     "newRank": 49,
     "below": "Nullscapes",
-    "above": "Angelicide 48-95%"
+    "above": "Angelicide 48-95%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -816,7 +1128,9 @@
     "currentRank": 62,
     "newRank": 33,
     "below": "Tidal Wave",
-    "above": "Silent clubstep 14%, 18%, 40%, 19%, 62%, 63% in a row"
+    "above": "Silent clubstep 14%, 18%, 40%, 19%, 62%, 63% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -825,7 +1139,9 @@
     "currentRank": 104,
     "newRank": null,
     "below": "Heliopolis 27-68%",
-    "above": "Angelicide 10-48%"
+    "above": "Angelicide 10-48%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -834,7 +1150,9 @@
     "currentRank": 37,
     "newRank": 37,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -843,7 +1161,9 @@
     "currentRank": null,
     "newRank": 6,
     "below": "KOCMOC UNLEASHED 68%",
-    "above": "Vehemence 13-72%"
+    "above": "Vehemence 13-72%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -852,7 +1172,9 @@
     "currentRank": null,
     "newRank": 108,
     "below": "surface (Old) 40-100%",
-    "above": "avenus copy"
+    "above": "avenus copy",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -861,7 +1183,9 @@
     "currentRank": 210,
     "newRank": 96,
     "below": "GREEN BULLET 18-100%",
-    "above": "Anathema"
+    "above": "Anathema",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -870,7 +1194,9 @@
     "currentRank": 97,
     "newRank": 71,
     "below": "Silent clubstep",
-    "above": "andromeda"
+    "above": "andromeda",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -879,7 +1205,9 @@
     "currentRank": 111,
     "newRank": 89,
     "below": "Sakupen Circles Wave",
-    "above": "Aquamarine"
+    "above": "Aquamarine",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -888,7 +1216,9 @@
     "currentRank": 198,
     "newRank": 128,
     "below": "Angelicide 37%",
-    "above": "Acheron"
+    "above": "Acheron",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -897,7 +1227,9 @@
     "currentRank": 364,
     "newRank": 107,
     "below": "Tunnel of Despair 59%, 100% in a row",
-    "above": "avenus copy"
+    "above": "avenus copy",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-06-01",
@@ -906,7 +1238,9 @@
     "currentRank": 185,
     "newRank": 176,
     "below": "Maniacal Chains",
-    "above": "surface 62%"
+    "above": "surface 62%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-31",
@@ -915,7 +1249,9 @@
     "currentRank": 70,
     "newRank": 70,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-31",
@@ -924,7 +1260,9 @@
     "currentRank": 63,
     "newRank": 63,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-30",
@@ -933,7 +1271,9 @@
     "currentRank": 307,
     "newRank": null,
     "below": "Denouement USKC 67%",
-    "above": "bosco busch"
+    "above": "bosco busch",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-30",
@@ -942,7 +1282,9 @@
     "currentRank": 186,
     "newRank": null,
     "below": "Angelicide (Kaza) 28%",
-    "above": "Slaughterhouse 1.25x 25-100% 2 deaths, 99.86% accuracy"
+    "above": "Slaughterhouse 1.25x 25-100% 2 deaths, 99.86% accuracy",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-30",
@@ -951,7 +1293,9 @@
     "currentRank": 302,
     "newRank": null,
     "below": "Azure Flare 36-62%",
-    "above": "RANDOM WAVE 516%"
+    "above": "RANDOM WAVE 516%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-30",
@@ -960,7 +1304,9 @@
     "currentRank": 281,
     "newRank": 283,
     "below": "Sakupen Circles (Exen)",
-    "above": "Sakupen Circles (Diamond)"
+    "above": "Sakupen Circles (Diamond)",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -969,7 +1315,9 @@
     "currentRank": null,
     "newRank": 204,
     "below": "Slaughterhouse 1.3x 49-100% 2 deaths, 99.93% accuracy",
-    "above": "Labyrinth 46%"
+    "above": "Labyrinth 46%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -978,7 +1326,9 @@
     "currentRank": null,
     "newRank": 147,
     "below": "Angelicide (Kaza) 37-74%",
-    "above": "Spectre"
+    "above": "Spectre",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -987,7 +1337,9 @@
     "currentRank": 131,
     "newRank": 131,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -996,7 +1348,9 @@
     "currentRank": 118,
     "newRank": 118,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1005,7 +1359,9 @@
     "currentRank": null,
     "newRank": 102,
     "below": "Heliopolis 48-100%",
-    "above": "Tunnel of Despair 59%, 100% in a row"
+    "above": "Tunnel of Despair 59%, 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1014,7 +1370,9 @@
     "currentRank": 63,
     "newRank": 63,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1023,7 +1381,9 @@
     "currentRank": 138,
     "newRank": 77,
     "below": "VSC 72%, 100% in a row",
-    "above": "Old Orochi"
+    "above": "Old Orochi",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1032,7 +1392,9 @@
     "currentRank": null,
     "newRank": 71,
     "below": "Andromeda",
-    "above": "Azure Flare (VERTOP) 49%"
+    "above": "Azure Flare (VERTOP) 49%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1041,7 +1403,9 @@
     "currentRank": 316,
     "newRank": 63,
     "below": "Eternal Silence 14-100%",
-    "above": "Penumbral"
+    "above": "Penumbral",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1050,7 +1414,9 @@
     "currentRank": null,
     "newRank": 47,
     "below": "Nullscapes",
-    "above": "Banshee (May 2024) 86%"
+    "above": "Banshee (May 2024) 86%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-29",
@@ -1059,7 +1425,9 @@
     "currentRank": null,
     "newRank": 275,
     "below": "limbo but uwu ig idk 60hz Mobile 80%",
-    "above": "Exens limit"
+    "above": "Exens limit",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-28",
@@ -1068,7 +1436,9 @@
     "currentRank": 265,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-28",
@@ -1077,7 +1447,9 @@
     "currentRank": null,
     "newRank": 258,
     "below": "INTERCONNECTED",
-    "above": "Im Hard 92%"
+    "above": "Im Hard 92%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-28",
@@ -1086,7 +1458,9 @@
     "currentRank": null,
     "newRank": 286,
     "below": "WOKE CIRCLES",
-    "above": "wocky circles"
+    "above": "wocky circles",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-28",
@@ -1095,7 +1469,9 @@
     "currentRank": null,
     "newRank": 14,
     "below": "Amethyst",
-    "above": "Vehemence 24-79%"
+    "above": "Vehemence 24-79%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1104,7 +1480,9 @@
     "currentRank": 47,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1113,7 +1491,9 @@
     "currentRank": 87,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1122,7 +1502,9 @@
     "currentRank": 94,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1131,7 +1513,9 @@
     "currentRank": 95,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1140,7 +1524,9 @@
     "currentRank": 179,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1149,7 +1535,9 @@
     "currentRank": null,
     "newRank": 21,
     "below": "KOCMOC Unleashed (Nerfed II) 14-93%",
-    "above": "Sweeping Demon 2 (Taiago) 21-87%"
+    "above": "Sweeping Demon 2 (Taiago) 21-87%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1158,7 +1546,9 @@
     "currentRank": null,
     "newRank": 16,
     "below": "Heliopolis 47%",
-    "above": "KOCMOC UNLEASHED (Nerfed) 57%, 48%, 69%, 77% in a row"
+    "above": "KOCMOC UNLEASHED (Nerfed) 57%, 48%, 69%, 77% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1167,7 +1557,9 @@
     "currentRank": null,
     "newRank": 14,
     "below": "Amethyst",
-    "above": "Heliopolis 47%"
+    "above": "Heliopolis 47%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1176,7 +1568,9 @@
     "currentRank": null,
     "newRank": 6,
     "below": "KOCMOC UNLEASHED 68%",
-    "above": "GRIEF 25-100%"
+    "above": "GRIEF 25-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1185,7 +1579,9 @@
     "currentRank": null,
     "newRank": 65,
     "below": "Eternal Silence (Decorated) 25%",
-    "above": "Silent clubstep"
+    "above": "Silent clubstep",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1194,7 +1590,9 @@
     "currentRank": 46,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1203,7 +1601,9 @@
     "currentRank": 51,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1212,7 +1612,9 @@
     "currentRank": 58,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1221,7 +1623,9 @@
     "currentRank": 164,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1230,7 +1634,9 @@
     "currentRank": 115,
     "newRank": 64,
     "below": "Silent clubstep 5-25%x2, 5-64% in a row",
-    "above": "Silent clubstep"
+    "above": "Silent clubstep",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1239,7 +1645,9 @@
     "currentRank": 147,
     "newRank": 113,
     "below": "Menace 65%, 100% in a row",
-    "above": "Silent clubstep 2.1"
+    "above": "Silent clubstep 2.1",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1248,7 +1656,9 @@
     "currentRank": null,
     "newRank": 43,
     "below": "KOCMOC 224%",
-    "above": "SARY NEVER CLEAR (Optic Sunflow) 2.1"
+    "above": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1257,7 +1667,9 @@
     "currentRank": 24,
     "newRank": 19,
     "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52), 81%, 69% in a row",
-    "above": "KOCMOC Unleashed (Nerfed II) 14-93%"
+    "above": "KOCMOC Unleashed (Nerfed II) 14-93%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1266,7 +1678,9 @@
     "currentRank": 25,
     "newRank": 20,
     "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52), 81%, 69% in a row",
-    "above": "Sweeping Demon 2 (Taiago) 21-87%"
+    "above": "Sweeping Demon 2 (Taiago) 21-87%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1275,7 +1689,9 @@
     "currentRank": 27,
     "newRank": 23,
     "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52), 81%, 69% in a row",
-    "above": "GRIEF madness 85%"
+    "above": "GRIEF madness 85%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1284,7 +1700,9 @@
     "currentRank": 14,
     "newRank": 8,
     "below": "GRIEF 25-100%",
-    "above": "Thinking Space II 85%, (5), (3), 86% in a row"
+    "above": "Thinking Space II 85%, (5), (3), 86% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1293,7 +1711,9 @@
     "currentRank": 55,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1302,7 +1722,9 @@
     "currentRank": 64,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1311,7 +1733,9 @@
     "currentRank": 65,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1320,7 +1744,9 @@
     "currentRank": null,
     "newRank": 22,
     "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52), 81%, 69% in a row",
-    "above": "Sweeping Demon 2 (Taiago) 39-100%"
+    "above": "Sweeping Demon 2 (Taiago) 39-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1329,7 +1755,9 @@
     "currentRank": null,
     "newRank": 3,
     "below": "GRIEF (Apr. 2025) 56-100%, 67% in a row",
-    "above": "GRIEF 84%"
+    "above": "GRIEF 84%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1338,7 +1766,9 @@
     "currentRank": 156,
     "newRank": 156,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1347,7 +1777,9 @@
     "currentRank": 167,
     "newRank": 167,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1356,7 +1788,9 @@
     "currentRank": 3,
     "newRank": 3,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1365,7 +1799,9 @@
     "currentRank": 11,
     "newRank": 5,
     "below": "GRIEF 84%",
-    "above": "GRIEF 25-100%"
+    "above": "GRIEF 25-100%",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1374,7 +1810,9 @@
     "currentRank": 25,
     "newRank": null,
     "below": "Tidal Wave buffed",
-    "above": "Tidal Wave"
+    "above": "Tidal Wave",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1383,7 +1821,9 @@
     "currentRank": 13,
     "newRank": 13,
     "below": null,
-    "above": null
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1392,7 +1832,9 @@
     "currentRank": null,
     "newRank": 219,
     "below": "Yellow Slaughterhouse",
-    "above": "Pink Slaughterhouse"
+    "above": "Pink Slaughterhouse",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1401,7 +1843,9 @@
     "currentRank": null,
     "newRank": 215,
     "below": "Blue Slaughterhouse (The_Bat0)",
-    "above": "White Slaughterhouse"
+    "above": "White Slaughterhouse",
+    "variantAdded": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-05-27",
@@ -1410,6 +1854,8 @@
     "currentRank": 207,
     "newRank": 190,
     "below": "Based After Based",
-    "above": "Bloodlust 60hz Mobile 63%"
+    "above": "Bloodlust 60hz Mobile 63%",
+    "variantAdded": null,
+    "variantRemoved": null
   }
 ]
