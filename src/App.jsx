@@ -177,7 +177,7 @@ function parseRoute() {
 }
 
 /**
- * Hybrid family filter (model B + child-only exception):
+ * Hybrid family filter:
  * - Parent match on search → parent + all variants (close & distant); names ignored.
  * - Parent match on tags → same expand; children inherit the parent's tag pass.
  * - Child-only match → that child (+ parent host if the parent still passes tags);

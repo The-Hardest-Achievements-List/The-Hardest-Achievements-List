@@ -1,5 +1,38 @@
 [
   {
+    "date": "2026-07-22",
+    "currentName": "Tunnel of Despair 59%, 100% in a row",
+    "newName": null,
+    "currentRank": 113,
+    "newRank": null,
+    "below": "Angelicide 10-48%",
+    "above": "surface (Old) 40-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "Acheron (Riot) 47-100%",
+    "newName": null,
+    "currentRank": 180,
+    "newRank": null,
+    "below": "Firework (Unnerfed)",
+    "above": "Illusion of Hell",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "KOCMOC UNLEASHED (May 2025) 14-78%",
+    "newName": null,
+    "currentRank": 22,
+    "newRank": null,
+    "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52%), 81%, 69% in a row",
+    "above": "KOCMOC UNLEASHED (Nerfed II) 14-93%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-07-21",
     "currentName": null,
     "newName": "Bassline Junkie",

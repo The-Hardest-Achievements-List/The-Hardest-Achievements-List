@@ -2157,26 +2157,6 @@
     ]
   },
   {
-    "name": "Tunnel of Despair 59%, 100% in a row",
-    "player": "FinleyGG",
-    "levelID": 91351939,
-    "date": "2025-10-19",
-    "length": 160,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/IMtD_3YKfgw",
-    "showcaseVideo": "https://youtu.be/0GC5og7gVS0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "surface (Old) 40-100%",
     "player": "zXdasfsa",
     "levelID": 81683082,
@@ -3480,25 +3460,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Acheron (Riot) 47-100%",
-    "player": "xalval",
-    "levelID": 82758705,
-    "date": "2025-06-28",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/Y3IBLK3t40U?t=50",
-    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Pending Removal"
     ]
   },
   {
@@ -6506,8 +6467,7 @@
       "Low Hertz",
       "Progress",
       "Rated",
-      "Mobile",
-      "Pending Removal"
+      "Mobile"
     ]
   },
   {
