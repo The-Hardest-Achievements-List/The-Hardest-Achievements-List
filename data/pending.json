@@ -1737,7 +1737,7 @@
     ]
   },
   {
-    "name": "Ouroboros (Viprin) 60hz Mobile",
+    "name": "Ouroboros (-) 60hz Mobile",
     "player": "Jastro",
     "levelID": 56703691,
     "date": "2026-06-27",
@@ -1750,8 +1750,8 @@
     "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
     "thumbnail": null,
     "duplicateOf": [
-      "Ouroboros (Viprin) 60hz Mobile 10-100%",
-      "Ouroboros (Viprin) 60hz Mobile 83%"
+      "Ouroboros (-) 60hz Mobile 10-100%",
+      "Ouroboros (-) 60hz Mobile 83%"
     ],
     "notes": null,
     "tags": [
@@ -1762,7 +1762,7 @@
     ]
   },
   {
-    "name": "OUROBOROS 41-100%",
+    "name": "OUROBOROS (Qmystic) 41-100%",
     "player": "apu",
     "levelID": null,
     "date": "2026-07-17",
@@ -1782,7 +1782,7 @@
     ]
   },
   {
-    "name": "OUROBOROS 45%",
+    "name": "OUROBOROS (Qmystic) 45%",
     "player": "apu",
     "levelID": null,
     "date": "2026-07-19",
