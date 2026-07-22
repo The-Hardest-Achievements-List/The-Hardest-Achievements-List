@@ -8,6 +8,257 @@ const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
 const hasEstimateFields = (fieldOrder) =>
   fieldOrder.includes("estimateLower") && fieldOrder.includes("estimateUpper");
 
+/**
+ * Repair common hand-edit JSON mistakes so `JSON.parse` can succeed.
+ * Handles: trailing commas, missing values after `"key":`, missing `]` before
+ * `}`, bare `undefined`/`NaN`, and line/block comments outside strings.
+ */
+export const repairJsonText = (text) => {
+  const source = String(text ?? "").replace(/^\uFEFF/, "");
+  const repairs = [];
+  const out = [];
+  const stack = [];
+  let i = 0;
+  let inString = false;
+  let escape = false;
+
+  const peekNonWs = (from) => {
+    let j = from;
+    while (j < source.length) {
+      const ch = source[j];
+      if (ch === " " || ch === "\t" || ch === "\n" || ch === "\r") {
+        j += 1;
+        continue;
+      }
+      // line comment
+      if (ch === "/" && source[j + 1] === "/") {
+        j += 2;
+        while (j < source.length && source[j] !== "\n") j += 1;
+        continue;
+      }
+      // block comment
+      if (ch === "/" && source[j + 1] === "*") {
+        j += 2;
+        while (j + 1 < source.length && !(source[j] === "*" && source[j + 1] === "/")) {
+          j += 1;
+        }
+        j = Math.min(j + 2, source.length);
+        continue;
+      }
+      return j;
+    }
+    return j;
+  };
+
+  const readStringAt = (from) => {
+    if (source[from] !== '"') return null;
+    let j = from + 1;
+    let esc = false;
+    while (j < source.length) {
+      const ch = source[j];
+      if (esc) {
+        esc = false;
+        j += 1;
+        continue;
+      }
+      if (ch === "\\") {
+        esc = true;
+        j += 1;
+        continue;
+      }
+      if (ch === '"') return { end: j, raw: source.slice(from, j + 1) };
+      j += 1;
+    }
+    return null;
+  };
+
+  const stripTrailingComma = (closing) => {
+    let k = out.length - 1;
+    while (k >= 0 && /\s/.test(out[k])) k -= 1;
+    if (k >= 0 && out[k] === ",") {
+      out.splice(k, 1);
+      repairs.push(`removed trailing comma before ${closing}`);
+    }
+  };
+
+  const matchBareLiteral = (from, literal) => {
+    if (!source.startsWith(literal, from)) return false;
+    const next = source[from + literal.length];
+    if (next != null && /[A-Za-z0-9_$]/.test(next)) return false;
+    const prev = source[from - 1];
+    if (prev != null && /[A-Za-z0-9_$]/.test(prev)) return false;
+    return true;
+  };
+
+  while (i < source.length) {
+    const ch = source[i];
+
+    if (inString) {
+      out.push(ch);
+      if (escape) {
+        escape = false;
+      } else if (ch === "\\") {
+        escape = true;
+      } else if (ch === '"') {
+        inString = false;
+      }
+      i += 1;
+      continue;
+    }
+
+    // Strip comments outside strings
+    if (ch === "/" && source[i + 1] === "/") {
+      const start = i;
+      i += 2;
+      while (i < source.length && source[i] !== "\n") i += 1;
+      repairs.push(`removed line comment at ${start}`);
+      continue;
+    }
+    if (ch === "/" && source[i + 1] === "*") {
+      const start = i;
+      i += 2;
+      while (i + 1 < source.length && !(source[i] === "*" && source[i + 1] === "/")) {
+        i += 1;
+      }
+      i = Math.min(i + 2, source.length);
+      repairs.push(`removed block comment at ${start}`);
+      continue;
+    }
+
+    if (ch === '"') {
+      inString = true;
+      out.push(ch);
+      i += 1;
+      continue;
+    }
+
+    if (ch === "{") {
+      stack.push("{");
+      out.push(ch);
+      i += 1;
+      continue;
+    }
+
+    if (ch === "[") {
+      stack.push("[");
+      out.push(ch);
+      i += 1;
+      continue;
+    }
+
+    if (ch === "}") {
+      while (stack.length > 0 && stack[stack.length - 1] === "[") {
+        stripTrailingComma("]");
+        out.push("]");
+        stack.pop();
+        repairs.push("inserted missing ] before }");
+      }
+      stripTrailingComma("}");
+      if (stack.length > 0 && stack[stack.length - 1] === "{") stack.pop();
+      out.push("}");
+      i += 1;
+      continue;
+    }
+
+    if (ch === "]") {
+      stripTrailingComma("]");
+      if (stack.length > 0 && stack[stack.length - 1] === "[") stack.pop();
+      out.push("]");
+      i += 1;
+      continue;
+    }
+
+    if (ch === ":") {
+      out.push(":");
+      i += 1;
+      const valueStart = peekNonWs(i);
+
+      // Missing value: `"key":` then `}` / `]` / `,` / EOF
+      if (valueStart >= source.length) {
+        out.push(" null");
+        repairs.push("inserted null for missing value");
+        continue;
+      }
+
+      const next = source[valueStart];
+      if (next === "}" || next === "]" || next === ",") {
+        out.push(" null");
+        repairs.push("inserted null for missing value");
+        while (i < valueStart) {
+          out.push(source[i]);
+          i += 1;
+        }
+        continue;
+      }
+
+      // Missing value: `"key":` then another `"nextKey":`
+      if (next === '"') {
+        const str = readStringAt(valueStart);
+        if (str) {
+          const afterStr = peekNonWs(str.end + 1);
+          if (afterStr < source.length && source[afterStr] === ":") {
+            // Need a comma so the following property remains valid JSON.
+            out.push(" null,");
+            repairs.push("inserted null for missing value before next key");
+            while (i < valueStart) {
+              out.push(source[i]);
+              i += 1;
+            }
+            continue;
+          }
+        }
+      }
+
+      continue;
+    }
+
+    if (matchBareLiteral(i, "undefined") || matchBareLiteral(i, "NaN")) {
+      const literal = source.startsWith("undefined", i) ? "undefined" : "NaN";
+      out.push("null");
+      i += literal.length;
+      repairs.push(`replaced ${literal} with null`);
+      continue;
+    }
+
+    out.push(ch);
+    i += 1;
+  }
+
+  // Close any still-open arrays/objects (best-effort)
+  while (stack.length > 0) {
+    const open = stack.pop();
+    if (open === "[") {
+      stripTrailingComma("]");
+      out.push("]");
+      repairs.push("inserted missing ] at end of input");
+    } else {
+      stripTrailingComma("}");
+      out.push("}");
+      repairs.push("inserted missing } at end of input");
+    }
+  }
+
+  return { text: out.join(""), repairs };
+};
+
+export const parseJsonLenient = (text, label = "JSON") => {
+  const { text: repairedText, repairs } = repairJsonText(text);
+  try {
+    return { data: JSON.parse(repairedText), repairs, repairedText };
+  } catch (error) {
+    const hint =
+      repairs.length > 0
+        ? ` (after ${repairs.length} repair attempt(s))`
+        : "";
+    throw new Error(`Failed to parse ${label}${hint}: ${error.message}`);
+  }
+};
+
+const readJsonFile = (filePath, label = path.basename(filePath)) => {
+  const raw = fs.readFileSync(filePath, "utf8");
+  return parseJsonLenient(raw, label);
+};
+
 /** Classic list-changelog entries have this fixed nullable shape/key order. */
 const CLASSIC_CHANGELOG_FIELDS = [
   "date",
@@ -819,7 +1070,12 @@ if (isMainModule) {
       continue;
     }
 
-    const entries = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const { data: entries, repairs } = readJsonFile(filePath, file);
+    if (!Array.isArray(entries)) {
+      console.warn(`Skipped ${file} (expected an array)`);
+      continue;
+    }
+
     const results = entries.map(normalize);
     let normalized = results.map((result) => result.entry);
     const summary = summarize(results);
@@ -851,6 +1107,12 @@ if (isMainModule) {
     console.log(`  entries: ${entries.length}`);
     console.log(`  modified: ${summary.modifiedEntries}`);
     console.log(`  video links normalized: ${summary.videoChanges}`);
+    if (repairs.length > 0) {
+      console.log(`  json repairs: ${repairs.length}`);
+      for (const repair of repairs) {
+        console.log(`    - ${repair}`);
+      }
+    }
     if (sortByName || sortNewestFirst) {
       console.log(`  order changed: ${orderChanged ? "yes" : "no"}`);
     }
@@ -871,7 +1133,7 @@ if (isMainModule) {
       continue;
     }
 
-    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const { data, repairs } = readJsonFile(filePath, file);
     if (data == null || typeof data !== "object" || Array.isArray(data)) {
       console.warn(`Skipped ${file} (expected a plain object)`);
       continue;
@@ -888,6 +1150,12 @@ if (isMainModule) {
 
     console.log(`Normalized ${file}:`);
     console.log(`  keys: ${keysAfter.length}`);
+    if (repairs.length > 0) {
+      console.log(`  json repairs: ${repairs.length}`);
+      for (const repair of repairs) {
+        console.log(`    - ${repair}`);
+      }
+    }
     if (sortKeys) {
       console.log(`  order changed: ${orderChanged ? "yes" : "no"}`);
     }

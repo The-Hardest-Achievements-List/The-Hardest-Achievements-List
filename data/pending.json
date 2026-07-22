@@ -140,7 +140,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Aeternus 19-100% 33 deaths, 99.01% accuracy",
@@ -381,7 +384,7 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Progress"
     ]
   },
   {
@@ -972,7 +975,7 @@
     "video": "https://youtu.be/VxZz26KgQdU",
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Eternal Silence 31%, (1%), 65% in a row",
     "notes": "Five ship passes (6-9%) out of seven consecutive attempts.",
     "tags": [
       "Level",
@@ -1367,23 +1370,6 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED 14-81%",
-    "player": "Arshadow",
-    "levelID": null,
-    "date": "2026-07-20",
-    "length": 41,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/lY9yfAc2SOA",
-    "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/KOCMOC%20UNLEASHED.png",
-    "duplicateOf": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
-    "notes": 
-    "tags": null,
-  },
-  {
     "name": "KOCMOC UNLEASHED (Tohupolko) 120hz Mobile 65-91%",
     "player": "Tuhupolko",
     "levelID": 133730700,
@@ -1403,6 +1389,26 @@
       "Low Hertz",
       "Progress",
       "Mobile"
+    ]
+  },
+  {
+    "name": "KOCMOC UNLEASHED 14-81%",
+    "player": "Arshadow",
+    "levelID": null,
+    "date": "2026-07-20",
+    "length": 41,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/lY9yfAc2SOA",
+    "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/KOCMOC%20UNLEASHED.png",
+    "duplicateOf": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1730,7 +1736,7 @@
       "Rated"
     ]
   },
-   {
+  {
     "name": "OUROBOROS 41-100%",
     "player": "apu",
     "levelID": null,
@@ -1747,7 +1753,7 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Progress"
     ]
   },
   {
@@ -1767,7 +1773,7 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Progress"
     ]
   },
   {
@@ -2663,7 +2669,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "Tunnel of Serpent 7-75%",
     "player": "serpentical",
     "levelID": null,
@@ -2680,7 +2686,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Progress"
+    ]
   },
   {
     "name": "Verdudous 43%",
