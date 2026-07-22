@@ -126,6 +126,26 @@
     ]
   },
   {
+    "name": "Aeternus 16-27%",
+    "player": "wShock",
+    "levelID": "102647436",
+    "date": "2026-07-21",
+    "length": "8",
+    "version": "2.2",
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/RNSH-h71Wqo",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+    ]
+  },
+  {
     "name": "Aeternus 19-100% 33 deaths, 99.01% accuracy",
     "player": "aden",
     "levelID": 102647436,
@@ -194,7 +214,7 @@
     "date": "2026-06-20",
     "length": 12,
     "version": 2.2,
-    "submitter": "megafwoggy",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/nACJUp1hDS4",
@@ -214,7 +234,7 @@
     "date": "2026-05-20",
     "length": 13,
     "version": 2.2,
-    "submitter": "megafwoggy",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/G_ZvIM2LvaY",
@@ -325,6 +345,46 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Apocalyptic Trilogy (Unnerfed) 56-100",
+    "player": "Trick",
+    "levelID": null,
+    "date": 2023-10-10",
+    "length": "115",
+    "version": "2.1",
+    "submitter": "tmtsps12",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": https://youtu.be/GgBZ1cV7mrk?t=1438
+    "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/9d9b20801b3a602e4c6f6f83620d0d0af76650fa/images/thumbnails/Apocalyptic%20Trilogy%20(Unnerfed).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Artemis 13 68-100%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-20",
+    "length": "23",
+    "version": "2.2",
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/RLvAlbVZzfA?t=7227",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
     ]
   },
   {
@@ -1484,7 +1544,7 @@
     "submitter": "anduval",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/9LExT8yrcp8",
+    "video": "https://youtu.be/fONXLM_nQ1I",
     "showcaseVideo": "https://youtu.be/CN18I01OzWQ",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/2d9b008ab708bb1286cbb69c85bb6bf62890fa07/images/thumbnails/LimeWire.png",
     "duplicateOf": null,
@@ -1654,6 +1714,46 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+   {
+    "name": "OUROBOROS 41-100%",
+    "player": "apu",
+    "levelID": null,
+    "date": "2026-07-17",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "marleywave",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/eKYJBH8tFjI",
+    "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+    ]
+  },
+  {
+    "name": "OUROBOROS 45%",
+    "player": "apu",
+    "levelID": null,
+    "date": "2026-07-19",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cVURAkPwslg",
+    "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
     ]
   },
   {
@@ -1828,16 +1928,16 @@
     ]
   },
   {
-    "name": "Sakupen Circles 120hz Mobile 44-100%",
+    "name": "Sakupen Circles 120hz Mobile 37-100%",
     "player": "ItzAmethyst",
     "levelID": 76962930,
-    "date": "2026-05-17",
-    "length": 25,
+    "date": "2026-07-20",
+    "length": 27,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/uiL3QR91Lsw",
+    "video": "https://youtu.be/bxqxQ9zX27E",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1952,16 +2052,16 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman, Mar. 2026) 27-85%",
+    "name": "Silent Circles (Starchman) 26-86%",
     "player": "dewbbs",
     "levelID": null,
-    "date": "2026-03-26",
-    "length": 35,
+    "date": "2026-07-19",
+    "length": 37,
     "version": 2.2,
-    "submitter": "raine",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/llCZap9wVKU",
+    "video": "https://youtu.be/uAxF8NTg10A",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -2549,6 +2649,25 @@
       "Progress"
     ]
   },
+    {
+    "name": "Tunnel of Serpent 7-75%",
+    "player": "serpentical",
+    "levelID": null,
+    "date": "2026-07-20",
+    "length": "53",
+    "version": "2.2",
+    "submitter": "SilkizinhoYT",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/fPcc7B5CQ30",
+    "showcaseVideo": "https://youtu.be/rcHE78QQSp8",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Tunnel%20of%20Serpent.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+  },
   {
     "name": "Verdudous 43%",
     "player": "Timy",
@@ -2590,7 +2709,7 @@
     ]
   },
   {
-    "name": "Water World 20-68%",
+    "name": "water world 20-68%",
     "player": "niroi",
     "levelID": 142171089,
     "date": "2026-07-10",
@@ -2600,7 +2719,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/brOnDDHF5EI",
-    "showcaseVideo": "https://youtu.be/ziNVcdh8w_M",
+    "showcaseVideo": "https://youtu.be/NoiwMZrQsz0",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
