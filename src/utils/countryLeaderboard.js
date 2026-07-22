@@ -1,4 +1,8 @@
-import { compareByXpAndBestRank, withGlobalRank } from "./leaderboard.js";
+import {
+  compareByXpAndBestRank,
+  isShadowRealmRow,
+  withGlobalRank,
+} from "./leaderboard.js";
 import {
   normalizeCountryCode,
   normalizeCountryCodes,
@@ -35,6 +39,7 @@ export function buildCountryBoard(playerBoard, playerCountries) {
   const grouped = new Map();
 
   for (const player of playerBoard) {
+    if (isShadowRealmRow(player)) continue;
     const countryCodes = resolvePlayerCountries(playerCountries, player.name);
     if (!countryCodes.length) continue;
 

@@ -17,6 +17,8 @@ const CLASSIC_CHANGELOG_FIELDS = [
   "newRank",
   "below",
   "above",
+  "variantAdded",
+  "variantRemoved",
 ];
 
 /**
@@ -593,6 +595,8 @@ export const normalizeListChangelogEntry = (entry) => {
     newRank: normalizeRankOrNull(source.newRank ?? source.to ?? null),
     below: normalizeNonEmptyOrNull(source.below),
     above: normalizeNonEmptyOrNull(source.above),
+    variantAdded: normalizeNonEmptyOrNull(source.variantAdded),
+    variantRemoved: normalizeNonEmptyOrNull(source.variantRemoved),
   };
 
   const previous = {};

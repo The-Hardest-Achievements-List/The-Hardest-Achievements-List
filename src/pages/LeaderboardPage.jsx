@@ -10,6 +10,7 @@ import {
   getEntryRank,
   paginateRows,
   sortLeaderboardRows,
+  isShadowRealmRow,
   PLAYER_SORT_OPTIONS,
   COUNTRY_SORT_OPTIONS,
   SUBMISSION_SORT_OPTIONS,
@@ -150,6 +151,9 @@ const applyCountryFilter = (rows, selectedCountries) => {
   if (!selectedCountries?.length) return rows;
 
   return rows.filter((row) => {
+    // TheShadowRealm is outside the nationality filter system.
+    if (isShadowRealmRow(row)) return false;
+
     const playerCountries = Array.isArray(row.countries)
       ? row.countries
       : normalizeCountryCodes(row.country);
@@ -165,6 +169,8 @@ const applyCountryFilter = (rows, selectedCountries) => {
 const rowMatchesSearch = (row, query, mode) => {
   const normalized = query.trim().toLowerCase();
   if (!normalized) return true;
+  // Unsearchable easter-egg row — never matches a query.
+  if (isShadowRealmRow(row)) return false;
 
   const name = String(row.name ?? "").toLowerCase();
   const bestName = String(row.best?.name ?? "").toLowerCase();
@@ -682,6 +688,9 @@ export default function LeaderboardPage({
   const [sortKey, setSortKey] = useState(getDefaultSort(initialMode));
   const [sortDir, setSortDir] = useState("asc");
   const [page, setPage] = useState(1);
+  // TheShadowRealm only appears on the last page if you walked there
+  // (prev page → last), not if you jumped straight to the last page button.
+  const [shadowRealmUnlocked, setShadowRealmUnlocked] = useState(false);
   const headRef = useRef(null);
   const layoutRef = useRef(null);
   const paginationRef = useRef(null);
@@ -699,6 +708,7 @@ export default function LeaderboardPage({
     setSelectedKey(null);
     setCountryDetailView("players");
     setPage(1);
+    setShadowRealmUnlocked(false);
     setSortKey(getDefaultSort(initialMode));
     setSortDir("asc");
   }, [initialMode, initialListSource]);
@@ -718,7 +728,9 @@ export default function LeaderboardPage({
   const hasUnknownNationalityPlayers = useMemo(() => {
     const playerBoard = boards.players[listSource] ?? [];
     return playerBoard.some(
-      (row) => !(Array.isArray(row.countries) ? row.countries : []).length,
+      (row) =>
+        !isShadowRealmRow(row) &&
+        !(Array.isArray(row.countries) ? row.countries : []).length,
     );
   }, [boards.players, listSource]);
 
@@ -755,22 +767,48 @@ export default function LeaderboardPage({
     return sortLeaderboardRows(rows, sortKey, sortDir);
   }, [baseLeaderboard, mode, countryFilter, searchQuery, sortKey, sortDir]);
 
-  const pagination = useMemo(
-    () => paginateRows(processedLeaderboard, page, PAGE_SIZE),
-    [processedLeaderboard, page],
-  );
+  // Paginate without TheShadowRealm so jumping to "last" never reveals it.
+  // When unlocked, append them only onto the last page's rows.
+  const { regularRows, shadowRows } = useMemo(() => {
+    const regular = [];
+    const shadow = [];
+    for (const row of processedLeaderboard) {
+      if (mode === "players" && isShadowRealmRow(row)) shadow.push(row);
+      else regular.push(row);
+    }
+    return { regularRows: regular, shadowRows: shadow };
+  }, [processedLeaderboard, mode]);
+
+  const pagination = useMemo(() => {
+    const base = paginateRows(regularRows, page, PAGE_SIZE);
+    const onLastPage = base.page === base.totalPages;
+    const showShadow =
+      mode === "players" &&
+      shadowRealmUnlocked &&
+      onLastPage &&
+      shadowRows.length > 0;
+
+    return {
+      ...base,
+      rows: showShadow ? [...base.rows, ...shadowRows] : base.rows,
+    };
+  }, [regularRows, shadowRows, page, mode, shadowRealmUnlocked]);
 
   const selectedRow = useMemo(() => {
     if (!selectedKey) return null;
-    return (
-      processedLeaderboard.find((row) => getRowKey(row, mode) === selectedKey) ??
-      null
+    const fromPage = pagination.rows.find(
+      (row) => getRowKey(row, mode) === selectedKey,
     );
-  }, [processedLeaderboard, selectedKey, mode]);
+    if (fromPage) return fromPage;
+    return (
+      regularRows.find((row) => getRowKey(row, mode) === selectedKey) ?? null
+    );
+  }, [pagination.rows, regularRows, selectedKey, mode]);
 
   useEffect(() => {
     setPage(1);
     setSelectedKey(null);
+    setShadowRealmUnlocked(false);
   }, [mode, listSource, countryFilter, searchQuery, sortKey, sortDir]);
 
   useEffect(() => {
@@ -979,7 +1017,17 @@ export default function LeaderboardPage({
   }, [isMobileLayout, mode, listSource, pagination.page]);
 
   const handlePageChange = (nextPage) => {
-    setPage(nextPage);
+    const { totalPages } = paginateRows(regularRows, page, PAGE_SIZE);
+    const safeNext = Math.min(Math.max(1, nextPage), totalPages);
+
+    // Unlock only when stepping onto the last page from the page before it.
+    if (mode === "players" && safeNext === totalPages && totalPages > 1) {
+      setShadowRealmUnlocked(page === totalPages - 1);
+    } else {
+      setShadowRealmUnlocked(false);
+    }
+
+    setPage(safeNext);
     setSelectedKey(null);
   };
 
@@ -1010,7 +1058,7 @@ export default function LeaderboardPage({
       >
         <h1 className="lb__title">Leaderboard</h1>
         <p className="lb__sub">
-          {getLeaderboardCountLabel(mode, processedLeaderboard.length)}
+          {getLeaderboardCountLabel(mode, regularRows.length)}
         </p>
 
         <div className="lb__mode-toggle">

@@ -646,7 +646,9 @@ export default function App() {
           seedHostParentKeys,
         });
 
-      entries.sort((a, b) => {
+      // Copy before sort so unfiltered paths still get a new array identity
+      // (in-place sort of a shared ref would leave LevelList's memo stale).
+      const sortedEntries = [...entries].sort((a, b) => {
         if (sort === "rank" && isPendingList) {
           return comparePendingEstimate(a, b, sortDir, pendingMainCount);
         }
@@ -688,13 +690,13 @@ export default function App() {
       });
 
       const present = new Set(
-        entries
+        sortedEntries
           .filter((entry) => getDuplicateParentIds(entry).length === 0)
           .map((entry) => getAchievementKey(entry)),
       );
 
       return {
-        filteredData: entries,
+        filteredData: sortedEntries,
         expandingParentKeys: expandingKeys,
         parentKeysPresent: present,
       };

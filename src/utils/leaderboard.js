@@ -18,6 +18,17 @@ export const POINTS = {
   minXp: 0.01,
 };
 
+/** Placeholder player for anonymous (`"-"`) achievements — easter egg at list bottom. */
+export const SHADOW_REALM_PLAYER = "TheShadowRealm";
+
+export function isAnonymousPlayer(player) {
+  return !player || player === "-";
+}
+
+export function isShadowRealmRow(row) {
+  return row?.isShadowRealm === true || row?.name === SHADOW_REALM_PLAYER;
+}
+
 export const SORT_DIR_OPTIONS = [
   { value: "asc", label: "Ascending" },
   { value: "desc", label: "Descending" },
@@ -260,13 +271,17 @@ export function buildPlayerBoard(entries, playerCountries = null) {
   const grouped = new Map();
 
   for (const entry of entriesWithPosition) {
-    if (!entry.player || entry.player === "-") continue;
-    if (!grouped.has(entry.player)) grouped.set(entry.player, []);
-    grouped.get(entry.player).push(entry);
+    if (!entry.player) continue;
+    const playerName = isAnonymousPlayer(entry.player)
+      ? SHADOW_REALM_PLAYER
+      : entry.player;
+    if (!grouped.has(playerName)) grouped.set(playerName, []);
+    grouped.get(playerName).push(entry);
   }
 
   const board = [...grouped.entries()]
     .map(([name, playerEntries]) => {
+      const isShadowRealm = name === SHADOW_REALM_PLAYER;
       const achievements = playerEntries
         .map((entry) => {
           const isPending = isPendingListSource(entry);
@@ -286,13 +301,16 @@ export function buildPlayerBoard(entries, playerCountries = null) {
                 entriesWithPosition,
                 positionByName,
               );
-          const points =
-            isPending || xpPosition == null
+          const points = isShadowRealm
+            ? 0
+            : isPending || xpPosition == null
               ? 0
               : calculateXp(xpPosition, entry.listSize);
 
           return {
             ...entry,
+            // Attribute anonymous entries to the shadow-realm placeholder.
+            player: isShadowRealm ? SHADOW_REALM_PLAYER : entry.player,
             // Display rank matches the XP tier (own rank, or parent for close variants).
             listPosition: xpPosition,
             points,
@@ -315,16 +333,22 @@ export function buildPlayerBoard(entries, playerCountries = null) {
         achievements.find((entry) => !isPendingListSource(entry)) ??
         achievements[0] ??
         null;
-      const totalXP =
-        Math.round(
-          achievements.reduce((sum, entry) => sum + (entry.points ?? 0), 0) *
-            100,
-        ) / 100;
+      const totalXP = isShadowRealm
+        ? 0
+        : Math.round(
+            achievements.reduce((sum, entry) => sum + (entry.points ?? 0), 0) *
+              100,
+          ) / 100;
 
       return {
         name,
-        country: resolvePlayerCountry(playerCountries, name),
-        countries: resolvePlayerCountries(playerCountries, name),
+        isShadowRealm,
+        country: isShadowRealm
+          ? null
+          : resolvePlayerCountry(playerCountries, name),
+        countries: isShadowRealm
+          ? []
+          : resolvePlayerCountries(playerCountries, name),
         achievements,
         // Counts grouped duplicates too, matching totalXP semantics (duplicates
         // intentionally contribute XP as well).
@@ -334,7 +358,11 @@ export function buildPlayerBoard(entries, playerCountries = null) {
         bestRank: getEntryRank(best),
       };
     })
-    .sort(compareByXpThenBestRank);
+    .sort((a, b) => {
+      // Shadow realm is always last, regardless of XP/rank.
+      if (a.isShadowRealm !== b.isShadowRealm) return a.isShadowRealm ? 1 : -1;
+      return compareByXpThenBestRank(a, b);
+    });
 
   return withGlobalRank(board);
 }
@@ -413,8 +441,15 @@ export const SUBMISSION_SORT_OPTIONS = BOARD_SORT_OPTIONS;
 
 export function sortLeaderboardRows(rows, sortKey, sortDir) {
   const dir = sortDir === "asc" ? 1 : -1;
+  const regular = [];
+  const shadow = [];
 
-  return [...rows].sort((a, b) => {
+  for (const row of rows) {
+    if (isShadowRealmRow(row)) shadow.push(row);
+    else regular.push(row);
+  }
+
+  regular.sort((a, b) => {
     let cmp = 0;
 
     switch (sortKey) {
@@ -460,6 +495,9 @@ export function sortLeaderboardRows(rows, sortKey, sortDir) {
 
     return cmp * dir;
   });
+
+  // Always pin TheShadowRealm after every other row, any sort key/direction.
+  return [...regular, ...shadow];
 }
 
 export function paginateRows(rows, page, pageSize) {

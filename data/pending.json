@@ -40,26 +40,6 @@
     ]
   },
   {
-    "name": "Acheron (Riot) 23-100%",
-    "player": "klimk",
-    "levelID": 82758705,
-    "date": "2026-06-20",
-    "length": 49,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/afRXOzUEADo",
-    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
-    "thumbnail": null,
-    "duplicateOf": "Acheron (Riot) 47-100%",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Acheron (Riot) 40-92%, 76% in a row",
     "player": "klimk",
     "levelID": 82758705,
@@ -163,6 +143,28 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 24-34% 120hz Mobile",
+    "player": "SilkizinhoYT",
+    "levelID": 102647436,
+    "date": "2026-07-17",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "bmc",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VPEfaCBV-3I",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
     ]
   },
   {
@@ -898,6 +900,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "player": "chiikawa",
+    "levelID": 83476262,
+    "date": "2026-07-22",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "chiikawa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VxZz26KgQdU",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Five ship passes (6-9%) out of seven consecutive attempts.",
+    "tags": [
+      "Level",
+      "Progress",
+      "Consistency"
     ]
   },
   {
@@ -2305,12 +2328,12 @@
     "player": "Taiago",
     "levelID": null,
     "date": "2026-07-14",
-    "length": null,
+    "length": 36,
     "version": 2.2,
     "submitter": "fishcake0031",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/etENhlTko1U",
+    "video": "https://youtu.be/etENhlTko1U?t=1593",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
     "duplicateOf": null,
