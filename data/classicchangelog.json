@@ -46,7 +46,7 @@
   {
     "date": "2026-07-22",
     "currentName": "Ouroboros 60hz Mobile 10-100%",
-    "newName": "Ouroboros (Viprin) 60hz Mobile 10-100%",
+    "newName": "Ouroboros (-) 60hz Mobile 10-100%",
     "currentRank": null,
     "newRank": null,
     "below": null,
@@ -57,7 +57,40 @@
   {
     "date": "2026-07-22",
     "currentName": "Ouroboros 60hz Mobile 83%",
-    "newName": "Ouroboros (Viprin) 60hz Mobile 83%",
+    "newName": "Ouroboros (-) 60hz Mobile 83%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "OUROBOROS (Unnerfed) 73%",
+    "newName": "OUROBOROS (Qmystic Unnerfed) 73%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "OUROBOROS (Unnerfed) 27-100%",
+    "newName": "OUROBOROS (Qmystic Unnerfed) 27-100%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "OUROBOROS (Old Unbuffed) 27-100%",
+    "newName": "OUROBOROS (Qmystic Old Unbuffed) 27-100%",
     "currentRank": null,
     "newRank": null,
     "below": null,
