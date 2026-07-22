@@ -2582,6 +2582,26 @@
     ]
   },
   {
+    "name": "RGB Acheron",
+    "player": "SpaceRS",
+    "levelID": 145079168,
+    "date": "2026-07-17",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/HOlZO_Y9hHM",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": "Acheron",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+    ]
+  },
+  {
     "name": "vsc infinity 79%, 100% in a row",
     "player": "JACKSONAMORE",
     "levelID": 78765594,
