@@ -1737,6 +1737,31 @@
     ]
   },
   {
+    "name": "Ouroboros (Viprin) 60hz Mobile",
+    "player": "Jastro",
+    "levelID": 56703691,
+    "date": "2026-06-27",
+    "length": 156,
+    "version": 2.2,
+    "submitter": "Sirdoodle",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/MXsRVOPp-FM",
+    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
+    "thumbnail": null,
+    "duplicateOf": [
+      "Ouroboros (Viprin) 60hz Mobile 10-100%",
+      "Ouroboros (Viprin) 60hz Mobile 83%"
+    ],
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "OUROBOROS 41-100%",
     "player": "apu",
     "levelID": null,
@@ -1774,32 +1799,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Ouroboros 60hz Mobile",
-    "player": "Jastro",
-    "levelID": 56703691,
-    "date": "2026-06-27",
-    "length": 156,
-    "version": 2.2,
-    "submitter": "Sirdoodle",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/MXsRVOPp-FM",
-    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
-    "thumbnail": null,
-    "duplicateOf": [
-      "Ouroboros 60hz Mobile 10-100%",
-      "Ouroboros 60hz Mobile 83%"
-    ],
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Verified",
-      "Rated",
-      "Mobile"
     ]
   },
   {

@@ -834,20 +834,40 @@ const normalizeRankOrNull = (value) => {
 
 export const normalizeListChangelogEntry = (entry) => {
   const source = entry && typeof entry === "object" ? entry : {};
+  const currentName = normalizeNonEmptyOrNull(
+    source.currentName ?? source.nameFrom ?? null,
+  );
+  const newName = normalizeNonEmptyOrNull(
+    source.newName ?? source.nameTo ?? null,
+  );
+  const variantAdded = normalizeNonEmptyOrNull(source.variantAdded);
+  const variantRemoved = normalizeNonEmptyOrNull(source.variantRemoved);
+  // Name changes / variant link changes: drop ranks unless both are set and
+  // differ (real rename+move / ranked variant). Same-rank or one-sided stamps
+  // are cleared.
+  const isNameChange =
+    currentName != null && newName != null && currentName !== newName;
+  const isVariantChange = variantAdded != null || variantRemoved != null;
+  let currentRank = normalizeRankOrNull(
+    source.currentRank ?? source.from ?? null,
+  );
+  let newRank = normalizeRankOrNull(source.newRank ?? source.to ?? null);
+  const hasRankMove =
+    currentRank != null && newRank != null && currentRank !== newRank;
+  if ((isNameChange || isVariantChange) && !hasRankMove) {
+    currentRank = null;
+    newRank = null;
+  }
   const normalized = {
     date: normalizeDateField(source.date),
-    currentName: normalizeNonEmptyOrNull(
-      source.currentName ?? source.nameFrom ?? null,
-    ),
-    newName: normalizeNonEmptyOrNull(source.newName ?? source.nameTo ?? null),
-    currentRank: normalizeRankOrNull(
-      source.currentRank ?? source.from ?? null,
-    ),
-    newRank: normalizeRankOrNull(source.newRank ?? source.to ?? null),
+    currentName,
+    newName,
+    currentRank,
+    newRank,
     below: normalizeNonEmptyOrNull(source.below),
     above: normalizeNonEmptyOrNull(source.above),
-    variantAdded: normalizeNonEmptyOrNull(source.variantAdded),
-    variantRemoved: normalizeNonEmptyOrNull(source.variantRemoved),
+    variantAdded,
+    variantRemoved,
   };
 
   const previous = {};

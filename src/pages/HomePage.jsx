@@ -155,15 +155,24 @@ function inferChange(entry) {
   const { currentRank, newRank, currentName, newName } = entry;
   const renamed = Boolean(currentName && newName && currentName !== newName);
 
+  // Renames win over add/remove even if ranks are partial/null. Optional ranks
+  // still drive up/down when both are present and differ.
+  if (renamed) {
+    if (currentRank != null && newRank != null) {
+      if (newRank < currentRank) return { kind: "up", action: "updated" };
+      if (newRank > currentRank) return { kind: "down", action: "updated" };
+    }
+    return { kind: "updated", action: "updated" };
+  }
+
   if (currentRank == null && newRank != null) return { kind: "added", action: "added" };
   if (currentRank != null && newRank == null) return { kind: "removed", action: "removed" };
 
   if (currentRank != null && newRank != null) {
-    if (newRank < currentRank) return { kind: "up", action: renamed ? "updated" : "moved" };
-    if (newRank > currentRank) return { kind: "down", action: renamed ? "updated" : "moved" };
+    if (newRank < currentRank) return { kind: "up", action: "moved" };
+    if (newRank > currentRank) return { kind: "down", action: "moved" };
   }
 
-  if (renamed) return { kind: "updated", action: "updated" };
   return { kind: "updated", action: "updated" };
 }
 
@@ -292,6 +301,7 @@ function buildChangeHeadline(entry, kind) {
     return (
       <>
         <strong>{newName || displayName}</strong> added as a variant of {variantAdded}
+        {movePhrase}
       </>
     );
   }
@@ -300,6 +310,7 @@ function buildChangeHeadline(entry, kind) {
     return (
       <>
         <strong>{currentName || displayName}</strong> removed as a variant of {variantRemoved}
+        {movePhrase}
       </>
     );
   }
