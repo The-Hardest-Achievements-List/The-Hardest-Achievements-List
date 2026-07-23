@@ -1,8 +1,8 @@
 [
   {
     "date": "2026-07-23",
-    "currentName": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
-    "newName": null,
+    "currentName": null,
+    "newName": "Purplehouse 25-95%",
     "currentRank": null,
     "newRank": 28,
     "below": "Slaughterhouse 300%",
@@ -12,8 +12,8 @@
   },
   {
     "date": "2026-07-23",
-    "currentName": "Magentahouse 25-86%",
-    "newName": null,
+    "currentName": null,
+    "newName": "Purplehouse 25-95%",
     "currentRank": null,
     "newRank": 285,
     "below": "Purplehouse 25-95",
@@ -23,8 +23,8 @@
   },
   {
     "date": "2026-07-23",
-    "currentName": "Purplehouse 25-95%",
-    "newName": null,
+    "currentName": null,
+    "newName": "Purplehouse 25-95%",
     "currentRank": null,
     "newRank": 284,
     "below": "Sakypen Circles",
