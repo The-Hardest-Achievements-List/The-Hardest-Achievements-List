@@ -407,6 +407,26 @@
       "Progress"
     ]
   },
+    {
+    "name": "Azure Flare (ItsHybrid) 69%",
+    "player": "Diamond",
+    "levelID": null,
+    "date": "2026-07-17",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PknC5na8x0k?t=18850s",
+    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Bellatrix 70%",
     "player": "Dan2D",
