@@ -2687,7 +2687,7 @@
     "video": "https://youtu.be/DX2cbUwT1Tg",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": Acheron,
+    "duplicateOf": "Acheron",
     "notes": null,
     "tags": [
       "Level",
@@ -3500,7 +3500,7 @@
     "video": "https://youtu.be/He3iRW6Usv4",
     "showcaseVideo": "https://youtu.be/2zdkj3begOE",
     "thumbnail": null,
-    "duplicateOf": Firework (Unnerfed),
+    "duplicateOf": "Unnerfed)",
     "notes": null,
     "tags": [
       "Level",
@@ -4371,7 +4371,7 @@
       "Rated"
     ]
   },
-    {
+  {
     "name": "Purplehouse 25-95%",
     "player": "Druki",
     "levelID": null,
@@ -4389,7 +4389,7 @@
       "Progress"
     ]
   },
-   {
+  {
     "name": "Magentahouse 25-86%",
     "player": "nswish",
     "levelID": null,
