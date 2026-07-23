@@ -5851,42 +5851,6 @@
     ]
   },
   {
-    "name": "Purplehouse 25-95%",
-    "player": "Druki",
-    "levelID": null,
-    "date": "2025-09-09",
-    "length": 38,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/f1WehtceFnk",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Slaughterhouse",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Magentahouse 25-86%",
-    "player": "nswish",
-    "levelID": null,
-    "date": "2026-03-12",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "raine",
-    "video": "https://youtu.be/Y8TTigwrEP4",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Slaughterhouse",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "wocky circles",
     "player": "ROZE GD",
     "levelID": 100420930,
