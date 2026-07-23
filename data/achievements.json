@@ -974,7 +974,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "Silent Destep (nensa) 25%, 12% in a row",
     "player": "nensa",
     "levelID": 83282566,
@@ -7263,7 +7263,7 @@
     "video": "https://youtu.be/w_SfQ5RJTj4",
     "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
     "thumbnail": null,
-    "duplicateOf": "Sakupen Circles (Awedsy),
+    "duplicateOf": "Sakupen Circles (Awedsy)",
     "notes": "An ever so slightly nerfed version of Awedsy's version of Sakupen Cirles.",
     "tags": [
       "Level",
