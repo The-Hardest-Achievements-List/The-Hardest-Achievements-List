@@ -503,7 +503,7 @@
   {
     "name": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
     "player": "lanx",
-    "levelID": "137886942",
+    "levelID": 137886942,
     "date": "2026-07-06",
     "length": 171,
     "version": 2.2,
@@ -522,7 +522,7 @@
     ]
   },
   {
-    "name": "Subsuming Vortex 80, 71% in a row",
+    "name": "Subsuming Vortex 80%, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
     "date": "2025-12-14",
