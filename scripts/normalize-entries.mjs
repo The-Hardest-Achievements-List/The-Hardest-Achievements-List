@@ -4,7 +4,6 @@ import { fileURLToPath } from "url";
 import { normalizeYouTubeUrl } from "../src/utils/format.js";
 import { normalizeEstimateField } from "../src/utils/estimateRank.js";
 import { CLASSIC_TAGS, PLATFORMER_TAGS } from "../src/utils/tags.js";
-import { groupSameListVariantsUnderParents } from "../src/utils/groupDuplicates.js";
 const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
 const hasEstimateFields = (fieldOrder) =>
   fieldOrder.includes("estimateLower") && fieldOrder.includes("estimateUpper");
@@ -970,23 +969,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const dataDir = path.join(__dirname, "..", "data");
 
 export const FILES = [
-  {
-    file: "achievements.json",
-    normalize: normalizeClassicEntry,
-    groupVariants: true,
-  },
+  { file: "achievements.json", normalize: normalizeClassicEntry },
   { file: "pending.json", normalize: normalizePendingEntry, sortByName: true },
-  {
-    file: "legacy.json",
-    normalize: normalizeClassicEntry,
-    groupVariants: true,
-  },
+  { file: "legacy.json", normalize: normalizeClassicEntry },
   { file: "timeline.json", normalize: normalizeTimelineEntry },
-  {
-    file: "platformers.json",
-    normalize: normalizePlatformerEntry,
-    groupVariants: true,
-  },
+  { file: "platformers.json", normalize: normalizePlatformerEntry },
   { file: "platformerpending.json", normalize: normalizePlatformerPendingEntry, sortByName: true },
   { file: "platformertimeline.json", normalize: normalizePlatformerEntry },
   {
@@ -1096,7 +1083,6 @@ if (isMainModule) {
     normalize,
     sortByName = false,
     sortNewestFirst = false,
-    groupVariants = false,
   } of FILES) {
     const filePath = path.join(dataDir, file);
     if (!fs.existsSync(filePath)) {
@@ -1115,12 +1101,7 @@ if (isMainModule) {
     const summary = summarize(results);
 
     let orderChanged = false;
-    if (groupVariants) {
-      const namesBefore = normalized.map((entry) => entry.name).join("\0");
-      normalized = groupSameListVariantsUnderParents(normalized);
-      orderChanged =
-        namesBefore !== normalized.map((entry) => entry.name).join("\0");
-    } else if (sortByName) {
+    if (sortByName) {
       const namesBefore = normalized.map((entry) => entry.name).join("\0");
       normalized = sortEntriesByName(normalized);
       orderChanged =
@@ -1152,7 +1133,7 @@ if (isMainModule) {
         console.log(`    - ${repair}`);
       }
     }
-    if (groupVariants || sortByName || sortNewestFirst) {
+    if (sortByName || sortNewestFirst) {
       console.log(`  order changed: ${orderChanged ? "yes" : "no"}`);
     }
     if (Object.keys(summary.addedFieldCounts).length > 0) {

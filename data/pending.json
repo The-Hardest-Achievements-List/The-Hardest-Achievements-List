@@ -407,7 +407,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "Azure Flare (ItsHybrid) 69%",
     "player": "Diamond",
     "levelID": null,
@@ -417,7 +417,7 @@
     "submitter": "Excryst",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/PknC5na8x0k?t=18850s",
+    "video": "https://youtu.be/PknC5na8x0k?t=18850",
     "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
     "duplicateOf": null,
@@ -980,6 +980,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Eternal Silence 4-10%, (4-7%), 4-12%, 4-10%, 4-67% in a row",
+    "player": "cc478",
+    "levelID": 83476262,
+    "date": "2026-07-23",
+    "length": 77,
+    "version": 2.2,
+    "submitter": "cc478",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Uclb8_PvBIw",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": "Eternal Silence 31%, (1%), 65% in a row",
+    "notes": "Four ship passes (6-9%) out of five consecutive attempts.",
+    "tags": [
+      "Level",
+      "Progress",
+      "Consistency"
     ]
   },
   {
@@ -1874,7 +1895,7 @@
     "video": "https://youtu.be/_ea8mbSfZvA",
     "showcaseVideo": "https://youtu.be/4TFonU644Pg",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Sakupen circles (Old) 37-66%, 37-69%, 70% in a row",
     "notes": null,
     "tags": [
       "Level",
@@ -1902,26 +1923,6 @@
       "Low Hertz",
       "Noclip",
       "Mobile"
-    ]
-  },
-  {
-    "name": "Sakupen circles (Old) 58-68%, 58-69%, 58-70%, 58-67% in a row",
-    "player": "Bacon",
-    "levelID": 10887708,
-    "date": "2026-05-13",
-    "length": 22,
-    "version": 2.2,
-    "submitter": "SeptaGon7",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/ACHxns8MSuE",
-    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
     ]
   },
   {
@@ -2233,7 +2234,7 @@
   },
   {
     "name": "skc startpos",
-    "player": "CCTHEPC",
+    "player": "cc478",
     "levelID": 144178762,
     "date": "2026-07-01",
     "length": 50,

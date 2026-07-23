@@ -115,68 +115,6 @@ export function isGroupedDuplicate(
   return isSameListVariant(achievement, achievements, parentKeys);
 }
 
-/**
- * Physically group same-list variants under their parent (parent first,
- * then children A–Z). Ranked entries keep relative order after variants
- * are pulled out of the middle of the list.
- *
- * Same-list multi-parent links should not occur; if they do, the child is
- * placed under the first linked parent only. Cross-list replacements are
- * left in place (parent is not in this list).
- */
-export function groupSameListVariantsUnderParents(entries) {
-  if (!Array.isArray(entries) || entries.length === 0) return entries;
-
-  const parentKeys = getParentKeysInList(entries);
-  const variantsByParent = new Map();
-  const ranked = [];
-
-  for (const entry of entries) {
-    const linkedParents = getDuplicateParentIds(entry).filter((parentRef) =>
-      parentKeys.has(normalizeDuplicateKey(parentRef)),
-    );
-
-    if (linkedParents.length === 0) {
-      ranked.push(entry);
-      continue;
-    }
-
-    const parentKey = normalizeDuplicateKey(linkedParents[0]);
-    if (!variantsByParent.has(parentKey)) {
-      variantsByParent.set(parentKey, []);
-    }
-    variantsByParent.get(parentKey).push(entry);
-  }
-
-  for (const children of variantsByParent.values()) {
-    children.sort((a, b) =>
-      String(a?.name ?? "").localeCompare(String(b?.name ?? ""), undefined, {
-        sensitivity: "base",
-      }),
-    );
-  }
-
-  const result = [];
-  for (const entry of ranked) {
-    result.push(entry);
-    if (isDuplicateAchievement(entry)) continue;
-
-    const key = getAchievementKey(entry);
-    const children = variantsByParent.get(key);
-    if (!children?.length) continue;
-
-    result.push(...children);
-    variantsByParent.delete(key);
-  }
-
-  // Orphans whose parent key existed but the parent row was missing.
-  for (const children of variantsByParent.values()) {
-    result.push(...children);
-  }
-
-  return result;
-}
-
 export function isPendingListSource(entry) {
   const src = entry?._src;
   return src === "pending" || src === "platformerpending";

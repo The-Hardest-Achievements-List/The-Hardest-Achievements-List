@@ -508,8 +508,6 @@
     "length": 171,
     "version": 2.2,
     "submitter": "lanx",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/gqRYH66CfpE",
     "showcaseVideo": "https://youtu.be/t7wM3sbJdkg",
     "thumbnail": null,
@@ -860,7 +858,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Consistency"
+      "Consistency",
+      "Pending Removal"
     ]
   },
   {
@@ -1368,7 +1367,7 @@
     "date": "2026-02-17",
     "length": 66,
     "version": 2.2,
-    "submitter": "benjiwii",
+    "submitter": "BenjiWii",
     "video": "https://youtu.be/pwh6xknCu_w?t=3607",
     "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",
@@ -2374,7 +2373,7 @@
   },
   {
     "name": "Aeternus 72-100%",
-    "player": "Chill guy",
+    "player": "Chill Guy",
     "levelID": 102647436,
     "date": "2025-06-20",
     "length": 18,
@@ -3811,7 +3810,7 @@
   },
   {
     "name": "Kyouki",
-    "player": "{出見塩}Demishio",
+    "player": "{出見塩} Demishio",
     "levelID": 86018142,
     "date": "2022-11-24",
     "length": 98,
@@ -4102,7 +4101,7 @@
     "date": "2026-05-08",
     "length": 92,
     "version": 2.2,
-    "submitter": "benjiwii",
+    "submitter": "BenjiWii",
     "video": "https://youtu.be/hnE5T6aHhlg",
     "showcaseVideo": "https://youtu.be/czV24THGlA4",
     "thumbnail": null,
@@ -5808,7 +5807,7 @@
     "video": "https://youtu.be/VHKhCgbccmM",
     "showcaseVideo": "https://youtu.be/u5xKFQRE0-g",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Sakupen Circles",
     "notes": null,
     "tags": [
       "Level",
@@ -5826,7 +5825,7 @@
     "video": "https://youtu.be/4db2-yQeeAk",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Sakupen Circles",
     "notes": null,
     "tags": [
       "Level",
@@ -5881,7 +5880,7 @@
     "showcaseVideo": "https://youtu.be/7WgD_7Z0Emg",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120546085",
     "duplicateOf": "Sakupen Circles",
-    "notes": "Sakupen Circles with 0.1 opacity",
+    "notes": "Sakupen Circles with 0.10 opacity",
     "tags": [
       "Level",
       "Verified"
@@ -5916,6 +5915,24 @@
     "submitter": "Gooba",
     "video": "https://youtu.be/kgp67D14rc8",
     "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "WOKE CIRCLES",
+    "player": "PPPixel",
+    "levelID": 88318424,
+    "date": "2023-02-03",
+    "length": 50,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/MKFeLVaBdoE",
+    "showcaseVideo": "https://youtu.be/o626AFlYzoI",
     "thumbnail": null,
     "duplicateOf": "Sakupen Circles",
     "notes": null,
@@ -5972,24 +5989,6 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "WOKE CIRCLES",
-    "player": "PPPixel",
-    "levelID": 88318424,
-    "date": "2023-02-03",
-    "length": 50,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/MKFeLVaBdoE",
-    "showcaseVideo": "https://youtu.be/o626AFlYzoI",
-    "thumbnail": null,
-    "duplicateOf": "Sakupen Circles",
     "notes": null,
     "tags": [
       "Level",
@@ -7391,7 +7390,7 @@
     "video": "https://youtu.be/UMOqidVTMmk",
     "showcaseVideo": "https://youtu.be/Jy6UUkY_2aY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/95851008",
-    "duplicateOf": null,
+    "duplicateOf": "Eyes in the Water",
     "notes": null,
     "tags": [
       "Level",
