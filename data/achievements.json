@@ -974,6 +974,27 @@
     ]
   },
   {
+    "name": "Silent Destep (nensa) 25%, 12% in a row",
+    "player": "nensa",
+    "levelID": 83282566,
+    "date": "2026-03-12",
+    "length": 35,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2zcCm6eBeEQ",
+    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
+    "duplicateOf": null,
+    "notes": "Silent clubstep (Old) with DeCode decoration.",
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
+    ]
+  },
+  {
     "name": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
     "player": "Glow",
     "levelID": 609629,
@@ -1455,6 +1476,26 @@
     ]
   },
   {
+    "name": "Silent DeStep (nensa) 45%",
+    "player": "nensa",
+    "levelID": 83282566,
+    "date": "2026-07-23",
+    "length": 41,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Gig-gQz03x4",
+    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
+    "duplicateOf": null,
+    "notes": "Silent clubstep (Old) with DeCode decoration.",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Silent clubstep (Old) 4 deaths, 99.98% accuracy",
     "player": "noname228gg",
     "levelID": 38692301,
@@ -1801,6 +1842,24 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen circles wave",
+    "player": "totalgd",
+    "levelID": 17884447,
+    "date": "2026-01-19",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "iloveliliesxoxo",
+    "video": "https://youtu.be/ODeHCi4lczc?t=3478",
+    "showcaseVideo": "https://youtu.be/jsw9y19JZxo",
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles (Old)",
+    "notes": "Equivalent to Sakupen Circles (Old) 37-100%",
     "tags": [
       "Level",
       "Verified"
@@ -3499,7 +3558,7 @@
     "video": "https://youtu.be/He3iRW6Usv4",
     "showcaseVideo": "https://youtu.be/2zdkj3begOE",
     "thumbnail": null,
-    "duplicateOf": "Unnerfed)",
+    "duplicateOf": "Firework (Unnerfed)",
     "notes": null,
     "tags": [
       "Level",
@@ -5225,24 +5284,6 @@
     "notes": "Im Hard is a level consisting of sc66p (Sakupen Circles 66-71%) x10 in a row",
     "tags": [
       "Challenge",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Gayouki 83%",
-    "player": "Kaza",
-    "levelID": null,
-    "date": "2024-06-01",
-    "length": 78,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/x9h7QPWNGsg",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Kyouki",
-    "notes": null,
-    "tags": [
-      "Level",
       "Progress"
     ]
   },
@@ -7231,7 +7272,7 @@
     ]
   },
   {
-    "name": "Sakupen Circles fi",
+    "name": "Sakupen Feet",
     "player": "nensa",
     "levelID": 118680356,
     "date": "2025-05-10",
@@ -7239,6 +7280,26 @@
     "version": 2.2,
     "submitter": "kittycatiscute",
     "video": "https://youtu.be/w_SfQ5RJTj4",
+    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles (Awedsy)",
+    "notes": "An ever so slightly nerfed version of Awedsy's version of Sakupen Cirles.",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Awedsy)",
+    "player": "BrianCheese",
+    "levelID": 63702523,
+    "date": "2025-07-12",
+    "length": 54,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LosiqyqaqV0",
     "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
     "thumbnail": null,
     "duplicateOf": null,
