@@ -974,26 +974,8 @@
       "Progress"
     ]
   },
-  {
-    "name": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
-    "player": "Glow",
-    "levelID": 609629,
-    "date": "2025-10-05",
-    "length": 75,
-    "version": 2.1,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/Hpo77uVq75M",
-    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Silent Destep (nensa) 12%, 25% in a row",
+    {
+    "name": "Silent Destep (nensa) 25%, 12% in a row",
     "player": "nensa",
     "levelID": 83282566,
     "date": "2026-03-12",
@@ -1011,6 +993,24 @@
       "Level",
       "Consistency",
       "Tentative"
+    ]
+  },
+  {
+    "name": "SARY NEVER CLEAR (Optic Sunflow) 2.1",
+    "player": "Glow",
+    "levelID": 609629,
+    "date": "2025-10-05",
+    "length": 75,
+    "version": 2.1,
+    "submitter": "Exiled_Shade",
+    "video": "https://youtu.be/Hpo77uVq75M",
+    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -7261,6 +7261,26 @@
     "version": 2.2,
     "submitter": "kittycatiscute",
     "video": "https://youtu.be/w_SfQ5RJTj4",
+    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles (Awedsy),
+    "notes": "An ever so slightly nerfed version of Awedsy's version of Sakupen Cirles.",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Awedsy)",
+    "player": "BrianCheese",
+    "levelID": 63702523,
+    "date": "2025-07-12",
+    "length": 54,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LosiqyqaqV0",
     "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
     "thumbnail": null,
     "duplicateOf": null,
