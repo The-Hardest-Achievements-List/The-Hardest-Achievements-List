@@ -407,6 +407,26 @@
       "Progress"
     ]
   },
+    {
+    "name": "Azure Flare (ItsHybrid) 69%",
+    "player": "Diamond",
+    "levelID": null,
+    "date": "2026-07-17",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PknC5na8x0k?t=18850s",
+    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Bellatrix 70%",
     "player": "Dan2D",
@@ -1401,7 +1421,7 @@
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/lY9yfAc2SOA",
+    "video": "https://youtu.be/Ry3KjPOhzbo?t=72",
     "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/KOCMOC%20UNLEASHED.png",
     "duplicateOf": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
@@ -1512,26 +1532,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
-    "player": "lanx",
-    "levelID": 137886942,
-    "date": "2026-07-06",
-    "length": 171,
-    "version": 2.2,
-    "submitter": "lanx",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/gqRYH66CfpE",
-    "showcaseVideo": "https://youtu.be/EwDAZUgVTS8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
     ]
   },
   {

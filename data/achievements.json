@@ -501,7 +501,27 @@
     ]
   },
   {
-    "name": "Subsuming Vortex 80, 71% in a row",
+    "name": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
+    "player": "lanx",
+    "levelID": 137886942,
+    "date": "2026-07-06",
+    "length": 171,
+    "version": 2.2,
+    "submitter": "lanx",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gqRYH66CfpE",
+    "showcaseVideo": "https://youtu.be/t7wM3sbJdkg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Subsuming Vortex 80%, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
     "date": "2025-12-14",
@@ -648,7 +668,7 @@
     "video": "https://youtu.be/1-ihSeRCpds",
     "showcaseVideo": "https://youtu.be/IObH78Nln2U",
     "thumbnail": null,
-    "duplicateOf": "Tidal Wave",
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -1208,7 +1228,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Verified"
+      "Verified",
+      "Rated"
     ]
   },
   {
@@ -1230,7 +1251,7 @@
     ]
   },
   {
-    "name": "LESOPOWAL",
+    "name": "Lesopowal",
     "player": "Bacon",
     "levelID": 137886942,
     "date": "2025-04-05",
@@ -1238,7 +1259,7 @@
     "version": 2.2,
     "submitter": "zFexty",
     "video": "https://youtu.be/RTXnFHkGO_g",
-    "showcaseVideo": "https://youtu.be/EwDAZUgVTS8",
+    "showcaseVideo": "https://youtu.be/t7wM3sbJdkg",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1787,6 +1808,60 @@
     ]
   },
   {
+    "name": "Denouement USKC 67%",
+    "player": "ad3usgmd",
+    "levelID": null,
+    "date": "2026-03-23",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/4Q9iZX8gauM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles (Old)",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "brownupen circles 67%",
+    "player": "ad3usgmd",
+    "levelID": 102356371,
+    "date": "2026-05-10",
+    "length": 36,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/lOIIYvJ31M0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen circles (Old)",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "brownupen circles 58-100%",
+    "player": "ad3usgmd",
+    "levelID": 102356371,
+    "date": "2026-05-05",
+    "length": 22,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/-3qjjcioCL8",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen circles (Old)",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "KILLSTEALER",
     "player": "kloone",
     "levelID": 138781722,
@@ -1891,24 +1966,6 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Sakupen Circles Wave",
-    "player": "totalgd",
-    "levelID": 17884447,
-    "date": "2026-01-19",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "iloveliliesxoxo",
-    "video": "https://youtu.be/ODeHCi4lczc?t=3478",
-    "showcaseVideo": "https://youtu.be/jsw9y19JZxo",
-    "thumbnail": null,
-    "duplicateOf": "Sakupen Circles (Old)",
-    "notes": "Equivalent to Sakupen Circles (Old) 37-100%",
     "tags": [
       "Level",
       "Verified"
@@ -2241,6 +2298,24 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Avernus green (VanterGez) 15-100%",
+    "player": "-",
+    "levelID": 113341338,
+    "date": "2024-12-22",
+    "length": 65,
+    "version": 2.2,
+    "submitter": "Arcadie",
+    "video": "https://youtu.be/WfnaiwqDHaE",
+    "showcaseVideo": "https://youtu.be/8lNHaYbvQE0",
+    "thumbnail": null,
+    "duplicateOf": "Avernus",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2584,6 +2659,42 @@
     ]
   },
   {
+    "name": "Gay Acheron 17-100%",
+    "player": "turtl",
+    "levelID": null,
+    "date": "2025-05-30",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/C0ttHXp4dtM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Acheron",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Green Acheron 17-100%",
+    "player": "-",
+    "levelID": null,
+    "date": "2024-12-16",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/DX2cbUwT1Tg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Acheron",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "RGB Acheron",
     "player": "SpaceRS",
     "levelID": 145079168,
@@ -2675,42 +2786,6 @@
     ]
   },
   {
-    "name": "Gay Acheron 17-100%",
-    "player": "turtl",
-    "levelID": null,
-    "date": "2025-05-30",
-    "length": 55,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/C0ttHXp4dtM",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Green Acheron 17-100%",
-    "player": "-",
-    "levelID": null,
-    "date": "2024-12-16",
-    "length": 55,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/DX2cbUwT1Tg",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Thinking Space II (Legacy)",
     "player": "Zeronium",
     "levelID": 132854166,
@@ -2738,7 +2813,7 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/olWPDI0M5A4",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/image0.webp",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8b402f6b1e0810aa380f4343bb05570b2f167f9b/images/thumbnails/OUROBOROS%20(qmystic).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -3084,24 +3159,6 @@
     ]
   },
   {
-    "name": "Avernus green (VanterGez) 15-100%",
-    "player": "-",
-    "levelID": 113341338,
-    "date": "2024-12-22",
-    "length": 65,
-    "version": 2.2,
-    "submitter": "Arcadie",
-    "video": "https://youtu.be/WfnaiwqDHaE",
-    "showcaseVideo": "https://youtu.be/8lNHaYbvQE0",
-    "thumbnail": null,
-    "duplicateOf": "Avernus",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Acheron (-) 31-89%",
     "player": "-",
     "levelID": null,
@@ -3138,7 +3195,7 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED 49-100% (May 2025)",
+    "name": "KOCMOC UNLEASHED (May 2025) 49-100%",
     "player": "Arshadow",
     "levelID": null,
     "date": "2025-03-31",
@@ -3296,7 +3353,7 @@
     "submitter": "jak",
     "video": "https://youtu.be/t5TWB9uA8kU",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/image0.webp",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8b402f6b1e0810aa380f4343bb05570b2f167f9b/images/thumbnails/OUROBOROS%20(qmystic).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -3443,7 +3500,7 @@
     "video": "https://youtu.be/He3iRW6Usv4",
     "showcaseVideo": "https://youtu.be/2zdkj3begOE",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Unnerfed)",
     "notes": null,
     "tags": [
       "Level",
@@ -4270,7 +4327,7 @@
     "video": "https://youtu.be/02CjrfNq8FQ",
     "showcaseVideo": null,
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/12169905",
-    "duplicateOf": null,
+    "duplicateOf": "Silent Circles 27-53%",
     "notes": null,
     "tags": [
       "Level",
@@ -4312,6 +4369,42 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Purplehouse 25-95%",
+    "player": "Druki",
+    "levelID": null,
+    "date": "2025-09-09",
+    "length": 38,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/f1WehtceFnk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Magentahouse 25-86%",
+    "player": "nswish",
+    "levelID": null,
+    "date": "2026-03-12",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "raine",
+    "video": "https://youtu.be/Y8TTigwrEP4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -4543,24 +4636,6 @@
     "submitter": "SeptaGon7",
     "video": "https://youtu.be/v56IEBLz5f4",
     "showcaseVideo": "https://youtu.be/PZ6EjmesjVE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "silent Acropolis (Unnerfed) 31-100%",
-    "player": "bop",
-    "levelID": 13918016,
-    "date": "2024-10-25",
-    "length": 49,
-    "version": 2.2,
-    "submitter": "gdspeedcuber",
-    "video": "https://youtu.be/c2pc6LSqBl8",
-    "showcaseVideo": "https://youtu.be/lR70uK1NuKU",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -5499,7 +5574,7 @@
     ]
   },
   {
-    "name": "Barely Visible SKC 69%",
+    "name": "BARELY VISIBLE SKC 69%",
     "player": "taiga",
     "levelID": null,
     "date": "2026-05-22",
@@ -5604,60 +5679,6 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/KZksoQVGmKw",
     "showcaseVideo": "https://youtu.be/ZpeknSJF-2U",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Sakupen Circles (Exen)",
-    "player": "ROZE GD",
-    "levelID": 57546619,
-    "date": "2026-02-13",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/VHKhCgbccmM",
-    "showcaseVideo": "https://youtu.be/u5xKFQRE0-g",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Sakupen Circles (Kritoss)",
-    "player": "ad3usgmd",
-    "levelID": 109644667,
-    "date": "2026-02-27",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "Gooba",
-    "video": "https://youtu.be/4db2-yQeeAk",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Sakupen Circles (Diamond)",
-    "player": "Skylar",
-    "levelID": 116790129,
-    "date": "2025-03-31",
-    "length": 51,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "video": null,
-    "showcaseVideo": "https://youtu.be/PMdl-AvQbY",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -5777,6 +5798,60 @@
     ]
   },
   {
+    "name": "Sakupen Circles (Exen)",
+    "player": "ROZE GD",
+    "levelID": 57546619,
+    "date": "2026-02-13",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/VHKhCgbccmM",
+    "showcaseVideo": "https://youtu.be/u5xKFQRE0-g",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Kritoss)",
+    "player": "ad3usgmd",
+    "levelID": 109644667,
+    "date": "2026-02-27",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "Gooba",
+    "video": "https://youtu.be/4db2-yQeeAk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Diamond)",
+    "player": "Skylar",
+    "levelID": 116790129,
+    "date": "2025-03-31",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "video": null,
+    "showcaseVideo": "https://youtu.be/PMdl-AvQbY",
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "lgbt circles",
     "player": "foxyan17",
     "levelID": 113421585,
@@ -5847,42 +5922,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Purplehouse 25-95%",
-    "player": "Druki",
-    "levelID": null,
-    "date": "2025-09-09",
-    "length": 38,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/f1WehtceFnk",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Slaughterhouse",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Magentahouse 25-86%",
-    "player": "nswish",
-    "levelID": null,
-    "date": "2026-03-12",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "raine",
-    "video": "https://youtu.be/Y8TTigwrEP4",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Slaughterhouse",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -6058,7 +6097,7 @@
     "submitter": "jak",
     "video": "https://youtu.be/D9d-H5QGJgs",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/image0.webp",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8b402f6b1e0810aa380f4343bb05570b2f167f9b/images/thumbnails/OUROBOROS%20(qmystic).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -6104,24 +6143,6 @@
     ]
   },
   {
-    "name": "Denouement USKC 67%",
-    "player": "ad3usgmd",
-    "levelID": null,
-    "date": "2026-03-23",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/4Q9iZX8gauM",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Sakupen Circles (Old)",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "bosco busch",
     "player": "sydno",
     "levelID": 95259962,
@@ -6137,24 +6158,6 @@
     "tags": [
       "Challenge",
       "Verified"
-    ]
-  },
-  {
-    "name": "brownupen circles 67%",
-    "player": "ad3usgmd",
-    "levelID": 102356371,
-    "date": "2026-05-10",
-    "length": 36,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/lOIIYvJ31M0",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Sakupen Circles",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -6487,24 +6490,6 @@
       "Level",
       "Consistency",
       "Tentative"
-    ]
-  },
-  {
-    "name": "brownupen circles 58-100%",
-    "player": "ad3usgmd",
-    "levelID": 102356371,
-    "date": "2026-05-05",
-    "length": 22,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/-3qjjcioCL8",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -7027,7 +7012,7 @@
     ]
   },
   {
-    "name": "KOCMOC (Trick)",
+    "name": "KOCMOC (Old)",
     "player": "Trick",
     "levelID": 91901757,
     "date": "2023-03-12",
@@ -7577,7 +7562,7 @@
     "video": "https://youtu.be/BmRoiqUzxXw",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Firework",
     "notes": null,
     "tags": [
       "Level",

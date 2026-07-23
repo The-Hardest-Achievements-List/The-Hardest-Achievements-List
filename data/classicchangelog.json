@@ -1,5 +1,82 @@
 [
   {
+    "date": "2026-07-23",
+    "currentName": null,
+    "newName": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
+    "currentRank": null,
+    "newRank": 28,
+    "below": "Slaughterhouse 300%",
+    "above": "Subsuming Vortex 80%, 71% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-23",
+    "currentName": null,
+    "newName": "Magentahouse 25-86%",
+    "currentRank": null,
+    "newRank": 285,
+    "below": "Purplehouse 25-95",
+    "above": "wocky circles",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-23",
+    "currentName": null,
+    "newName": "Purplehouse 25-95%",
+    "currentRank": null,
+    "newRank": 284,
+    "below": "Sakypen Circles",
+    "above": "wocky circles",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-23",
+    "currentName": "Magentahouse 25-86%",
+    "newName": null,
+    "currentRank": 284,
+    "newRank": null,
+    "below": "Sakupen Circles",
+    "above": "wocky circles",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-23",
+    "currentName": "Purplehouse 25-95%",
+    "newName": null,
+    "currentRank": 284,
+    "newRank": null,
+    "below": "Sakupen Circles",
+    "above": "Magentahouse 25-86%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "Magentahouse 25-86%",
+    "newName": null,
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": "Slaughterhouse",
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-07-22",
+    "currentName": "KOCMOC UNLEASHED 68%",
+    "newName": "KOCMOC UNLEASHED (Mar. 2026) 68%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-07-22",
     "currentName": "CYBERPSYCHOSIS 36-100%",
     "newName": "CYBERPSYCHOSIS (Unbuffed) 36-100%",
