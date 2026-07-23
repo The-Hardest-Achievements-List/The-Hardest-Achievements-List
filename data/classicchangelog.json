@@ -63,7 +63,7 @@
     "below": null,
     "above": null,
     "variantAdded": "Slaughterhouse",
-    "variantRemoved": null,
+    "variantRemoved": null
   },
   {
     "date": "2026-07-22",
@@ -72,7 +72,7 @@
     "currentRank": null,
     "newRank": null,
     "below": null,
-    "above": null
+    "above": null,
     "variantAdded": null,
     "variantRemoved": null
   },
