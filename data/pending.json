@@ -2172,26 +2172,6 @@
     ]
   },
   {
-    "name": "Silent Destep (nensa) 12%, 25% in a row",
-    "player": "nensa",
-    "levelID": 83282566,
-    "date": "2026-03-12",
-    "length": 35,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/2zcCm6eBeEQ",
-    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
-    "duplicateOf": null,
-    "notes": "Silent clubstep (Old) with Decode Decoration",
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Silent Jumper 57-100%",
     "player": "GreenZz1337",
     "levelID": null,
