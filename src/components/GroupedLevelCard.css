@@ -118,7 +118,11 @@
   border-radius: calc(4px * var(--card-text-scale, 1));
   overflow: clip;
   flex: 0 0 auto;
+  width: calc(100% * var(--card-width, 1));
+  max-width: 100%;
+  margin-inline: auto;
   min-height: min-content;
+  box-sizing: border-box;
   transition: background 0.2s ease;
   border: calc(1px * var(--card-text-scale, 1)) solid var(--line);
 }
@@ -130,12 +134,13 @@
 
 .grouped-achievement__duplicate-item .card {
   cursor: pointer;
+  /* Fill the scaled wrapper; Scale X/Y come from --card-width / --card-height. */
   width: 100%;
+  max-width: 100%;
   margin: 0;
   border-radius: 0;
   border: none;
   box-shadow: none;
-  /* Match a normal card footprint; green chrome lives on the wrapper. */
   height: calc(180px * var(--card-height, 1));
   flex-shrink: 0;
 }

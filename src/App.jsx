@@ -16,7 +16,7 @@ const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 import {
   getDuplicateParentIds,
   getAchievementKey,
-  annotateVariantProximity,
+  annotateGroupedVariants,
   isCrossListReplacementChild,
   getCrossListReplacementParents,
 } from "./utils/groupDuplicates";
@@ -178,7 +178,7 @@ function parseRoute() {
 
 /**
  * Hybrid family filter:
- * - Parent match on search → parent + all variants (close & distant); names ignored.
+ * - Parent match on search → parent + all variants; names ignored.
  * - Parent match on tags → same expand; children inherit the parent's tag pass.
  * - Child-only match → that child (+ parent host if the parent still passes tags);
  *   siblings do not expand.
@@ -232,7 +232,7 @@ function filterEntriesByFamilySemantics(
         return searchExpandParentKeys.has(key) || hostParentKeys.has(key);
       }
 
-      // Full family expand (close + distant) when the parent matched search.
+      // Full family expand when the parent matched search.
       return parentIds.some((parentRef) =>
         searchExpandParentKeys.has(getAchievementKey({ name: parentRef })),
       );
@@ -445,14 +445,14 @@ export default function App() {
   const isLegacyList = active === "LEGACY";
   const mainEntries = useMemo(
     () =>
-      annotateVariantProximity(
+      annotateGroupedVariants(
         mode === "classic" ? achievementsData : platformersData,
       ),
     [mode],
   );
   const pendingEntries = useMemo(
     () =>
-      annotateVariantProximity(
+      annotateGroupedVariants(
         mode === "classic" ? pendingData : platformerpendingData,
       ),
     [mode],
@@ -472,7 +472,7 @@ export default function App() {
     if (isMainList) return mainEntries;
     if (isPendingList) return pendingEntries;
     if (!Array.isArray(rawSource)) return [];
-    return annotateVariantProximity(rawSource);
+    return annotateGroupedVariants(rawSource);
   }, [isMainList, isPendingList, mainEntries, pendingEntries, rawSource]);
   const isTimeline = active === "TIMELINE";
   const timelineDateLabelMap = useMemo(
@@ -490,15 +490,15 @@ export default function App() {
     let rank = 0;
 
     const ranked = rawData.map((achievement) => {
-      // Proximity stamps come from annotateVariantProximity on raw order.
-      if (achievement.isCloseGroupedVariant) {
+      // Same-list variants are rankless; stamps come from annotateGroupedVariants.
+      if (achievement.isGroupedVariant) {
         return achievement;
       }
 
       rank += 1;
       const listRank = rank + legacyRankOffset;
       const key = getAchievementKey(achievement);
-      if (key && !achievement.isDistantVariant) {
+      if (key) {
         parentRankByKey.set(key, listRank);
       }
       const timelineKey = getTimelineEntryKey(achievement);
@@ -524,9 +524,9 @@ export default function App() {
       };
     });
 
-    // Close variants inherit the parent's list rank for orphan / filter views.
+    // Variants inherit the parent's list rank for orphan / filter views.
     return ranked.map((achievement) => {
-      if (!achievement.isCloseGroupedVariant) return achievement;
+      if (!achievement.isGroupedVariant) return achievement;
 
       let inheritedRank = null;
       for (const parentRef of getDuplicateParentIds(achievement)) {

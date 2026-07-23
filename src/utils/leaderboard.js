@@ -5,7 +5,7 @@ import {
   isPendingListSource,
   isReplacementDuplicate,
   isDuplicateAchievement,
-  annotateVariantProximity,
+  annotateGroupedVariants,
 } from "./groupDuplicates.js";
 import {
   resolvePlayerCountries,
@@ -103,17 +103,13 @@ export function getEntryRank(entry) {
 export function withListPositions(entries) {
   if (!Array.isArray(entries) || entries.length === 0) return [];
 
-  // Safety net: classify from raw order if callers forgot to annotate.
-  const hasDuplicates = entries.some((entry) => isDuplicateAchievement(entry));
-  const hasProximityStamps = entries.some(
+  // Safety net: stamp same-list variants if callers forgot to annotate.
+  const needsAnnotate = entries.some(
     (entry) =>
-      entry?.isCloseGroupedVariant === true ||
-      entry?.isDistantVariant === true,
+      isDuplicateAchievement(entry) &&
+      typeof entry?.isGroupedVariant !== "boolean",
   );
-  const source =
-    hasDuplicates && !hasProximityStamps
-      ? annotateVariantProximity(entries)
-      : entries;
+  const source = needsAnnotate ? annotateGroupedVariants(entries) : entries;
 
   const parentKeys = getParentKeysInList(source);
   let rank = 0;
@@ -186,7 +182,7 @@ function resolveListPositionFromMaps(nameKey, classicMap, platformerMap) {
 }
 
 export function resolveAchievementListPosition(entry, classicMap, platformerMap) {
-  // Distant variants (and parents) are in the position maps; prefer own rank.
+  // Parents are in the position maps; prefer own rank when present.
   const ownRank = resolveListPositionFromMaps(
     normalizeNameKey(entry.name),
     classicMap,
@@ -195,7 +191,7 @@ export function resolveAchievementListPosition(entry, classicMap, platformerMap)
   if (ownRank != null) return ownRank;
 
   const parentRefs = getDuplicateParentIds(entry);
-  // Close variants are omitted from the maps — inherit the best parent rank.
+  // Same-list variants are omitted from the maps — inherit the best parent rank.
   // Pending replacements link to a main-list parent via duplicateOf, but they
   // are not on that list yet — do not inherit the parent's rank for display.
   if (parentRefs.length > 0 && !isPendingListSource(entry)) {
@@ -311,7 +307,7 @@ export function buildPlayerBoard(entries, playerCountries = null) {
             ...entry,
             // Attribute anonymous entries to the shadow-realm placeholder.
             player: isShadowRealm ? SHADOW_REALM_PLAYER : entry.player,
-            // Display rank matches the XP tier (own rank, or parent for close variants).
+            // Display rank matches the XP tier (own rank, or parent for variants).
             listPosition: xpPosition,
             points,
             isDuplicate,

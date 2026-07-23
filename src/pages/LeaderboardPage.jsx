@@ -23,7 +23,7 @@ import {
   normalizeCountryCode,
   normalizeCountryCodes,
 } from "../utils/countryLeaderboard";
-import { annotateVariantProximity } from "../utils/groupDuplicates";
+import { annotateGroupedVariants } from "../utils/groupDuplicates";
 import achievementsData from "../../data/achievements.json";
 import playerCountriesData from "../../data/playercountries.json";
 import pendingData from "../../data/pending.json";
@@ -262,28 +262,28 @@ const PLATFORMER_SUBMISSION_SOURCES = new Set([
 ]);
 
 function buildDefaultBoards() {
-  const combinedClassic = annotateVariantProximity(
+  const combinedClassic = annotateGroupedVariants(
     achievementsData.map((entry) => ({
       ...entry,
       _src: "classic",
     })),
   );
 
-  const platformerList = annotateVariantProximity(
+  const platformerList = annotateGroupedVariants(
     platformersData.map((entry) => ({
       ...entry,
       _src: "platformer",
     })),
   );
 
-  const classicPending = annotateVariantProximity(
+  const classicPending = annotateGroupedVariants(
     pendingData.map((entry) => ({
       ...entry,
       _src: "pending",
     })),
   );
 
-  const platformerPending = annotateVariantProximity(
+  const platformerPending = annotateGroupedVariants(
     platformerpendingData.map((entry) => ({
       ...entry,
       _src: "platformerpending",

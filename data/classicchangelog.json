@@ -68,7 +68,7 @@
   {
     "date": "2026-07-22",
     "currentName": "OUROBOROS (Unnerfed) 73%",
-    "newName": "OUROBOROS (Qmystic Unnerfed) 73%",
+    "newName": "OUROBOROS (qmystic Unnerfed) 73%",
     "currentRank": null,
     "newRank": null,
     "below": null,
@@ -79,7 +79,7 @@
   {
     "date": "2026-07-22",
     "currentName": "OUROBOROS (Unnerfed) 27-100%",
-    "newName": "OUROBOROS (Qmystic Unnerfed) 27-100%",
+    "newName": "OUROBOROS (qmystic Unnerfed) 27-100%",
     "currentRank": null,
     "newRank": null,
     "below": null,
@@ -90,7 +90,7 @@
   {
     "date": "2026-07-22",
     "currentName": "OUROBOROS (Old Unbuffed) 27-100%",
-    "newName": "OUROBOROS (Qmystic Old Unbuffed) 27-100%",
+    "newName": "OUROBOROS (qmystic Old Unbuffed) 27-100%",
     "currentRank": null,
     "newRank": null,
     "below": null,
@@ -254,7 +254,7 @@
   },
   {
     "date": "2026-07-21",
-    "currentName": null,
+    "currentName": "Purplehouse 25-95%",
     "newName": "Purplehouse 25-95%",
     "currentRank": null,
     "newRank": null,
