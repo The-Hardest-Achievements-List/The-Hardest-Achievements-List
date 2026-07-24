@@ -417,6 +417,25 @@
     ]
   },
   {
+    "name": "Abyss of Darkness",
+    "player": "Cursed",
+    "levelID": 49896559,
+    "date": "2022-04-03",
+    "length": 125,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/ejJkpqcMMCY",
+    "showcaseVideo": "https://youtu.be/A7i2m-yL-mA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Abyss of Darkness (Old) 98%",
     "player": "Dils thik",
     "levelID": 76680844,
