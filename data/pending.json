@@ -367,6 +367,26 @@
       "Progress"
     ]
   },
+   {
+    "name": "Artemis 13 28%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-23",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "Quinnsapien",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zzL8PuBgRGk?t=5230",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Artemis 13 68-100%",
     "player": "Zoink",
@@ -773,6 +793,27 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Delirium 185hz Mobile",
+    "player": "ADR",
+    "levelID": "109218075",
+    "date": "2026-07-23
+    "length": 17,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Oz0jgjo4NKc",
+    "showcaseVideo": "https://youtu.be/pd-S3jgEvns",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Low Hertz",
+      "Mobile"
     ]
   },
   {
@@ -2173,16 +2214,16 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 58%",
+    "name": "Silent Circles (Starchman) 60%",
     "player": "dewbbs",
     "levelID": null,
-    "date": "2026-03-23",
-    "length": 41,
+    "date": "2026-07-24",
+    "length": 42,
     "version": 2.2,
-    "submitter": "Gooba",
+    "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/3ANI557EzW8",
+    "video": "https://youtu.be/NinKMI7i2mw?t=3256s",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
