@@ -135,7 +135,7 @@
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/5_TQvRtmtSo"
+    "video": "https://youtu.be/5_TQvRtmtSo",
     "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1068,7 +1068,7 @@
     "player": "Al3xTT",
     "levelID": 73011766,
     "date": "2026-07-21",
-    "length": 34, 
+    "length": 34,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
@@ -1981,6 +1981,7 @@
     "tags": [
       "Level",
       "Progress"
+    ]
   },
   {
     "name": "Riverever",
