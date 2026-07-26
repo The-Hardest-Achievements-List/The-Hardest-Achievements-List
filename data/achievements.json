@@ -224,6 +224,24 @@
     ]
   },
   {
+    "name": "Tidal Wave buffed 71%, 100% in a row",
+    "player": "wPopoff",
+    "levelID": 116732736,
+    "date": "2025-04-01",
+    "length": 308,
+    "version": 2.2,
+    "submitter": "Emp",
+    "video": "https://youtu.be/1-ihSeRCpds",
+    "showcaseVideo": "https://youtu.be/IObH78Nln2U",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Thinking Space II",
     "player": "Zoink",
     "levelID": 119544028,
@@ -259,6 +277,25 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "player": "chiikawa",
+    "levelID": 83476262,
+    "date": "2026-07-22",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "chiikawa",
+    "video": "https://youtu.be/VxZz26KgQdU",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Five ship passes (6-9%) and 3 one frame pyramid jump passes (12%) out of seven consecutive attempts.",
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
     ]
   },
   {
@@ -299,22 +336,22 @@
     ]
   },
   {
-    "name": "Eternal Silence 31%, (1%), 65% in a row",
-    "player": "noname228gg",
-    "levelID": 83476262,
-    "date": "2026-05-27",
-    "length": 87,
+    "name": "Sakupen circles (Old) 1 death, 99.97% accuracy; 100% in a row",
+    "player": "Bacon",
+    "levelID": 10887708,
+    "date": "2026-05-18",
+    "length": 98,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/xUJxWhulOSw",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "video": "https://youtu.be/_ea8mbSfZvA",
+    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
       "Consistency",
-      "Pending Removal"
+      "Noclip"
     ]
   },
   {
@@ -844,25 +881,6 @@
     ]
   },
   {
-    "name": "Sakupen circles (Old) 37-66%, 37-69%, 70% in a row",
-    "player": "ad3usgmd",
-    "levelID": 10887708,
-    "date": "2025-06-27",
-    "length": 91,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/QYs7UyGMrqw",
-    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "Avernus 77%, 98% in a row",
     "player": "turtl",
     "levelID": 89496627,
@@ -882,6 +900,24 @@
     ]
   },
   {
+    "name": "Acheron (Riot) 40-92%, 76% in a row",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-12",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/r3DInzGpPEc",
+    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Africa Circles (ChopBlox) 14-100%",
     "player": "ChopBlox",
     "levelID": 68549629,
@@ -897,6 +933,25 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "KOCMOC 224%",
+    "player": "Netermind",
+    "levelID": 87665224,
+    "date": "2024-12-09",
+    "length": 194,
+    "version": 2.2,
+    "submitter": "Swift",
+    "video": "https://youtu.be/DYI1IPtInws?t=5649",
+    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
@@ -937,25 +992,6 @@
     ]
   },
   {
-    "name": "KOCMOC 224%",
-    "player": "Netermind",
-    "levelID": 87665224,
-    "date": "2024-12-09",
-    "length": 194,
-    "version": 2.2,
-    "submitter": "Swift",
-    "video": "https://youtu.be/DYI1IPtInws?t=5649",
-    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "Silent clubstep (Old) 72%",
     "player": "noname228gg",
     "levelID": 38692301,
@@ -981,8 +1017,6 @@
     "length": 35,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/2zcCm6eBeEQ",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
@@ -992,6 +1026,24 @@
       "Level",
       "Consistency",
       "Tentative"
+    ]
+  },
+  {
+    "name": "Eternal Silence 9-100%",
+    "player": "noname228gg",
+    "levelID": 83476262,
+    "date": "2026-06-07",
+    "length": 81,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/9kKsgISwEtM",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1346,25 +1398,6 @@
     ]
   },
   {
-    "name": "Angelicide 37-100% 7 deaths, 99.83% accuracy",
-    "player": "Druki",
-    "levelID": 120478542,
-    "date": "2026-05-31",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/aAPyd0B54zs",
-    "showcaseVideo": "https://youtu.be/czV24THGlA4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Noclip"
-    ]
-  },
-  {
     "name": "Azure Flare (VERTOP) 36-91%",
     "player": "VERTOP",
     "levelID": null,
@@ -1421,25 +1454,6 @@
     ]
   },
   {
-    "name": "Eternal Silence 14-100%",
-    "player": "noname228gg",
-    "levelID": 83476262,
-    "date": "2026-02-26",
-    "length": 84,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/OoG0sxtd1NM",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "Angelicide 56-98%",
     "player": "Druki",
     "levelID": 120478542,
@@ -1484,8 +1498,6 @@
     "length": 41,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/Gig-gQz03x4",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
@@ -1568,6 +1580,24 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Sakupen circles (Old)",
+    "player": "ad3usgmd",
+    "levelID": 10887708,
+    "date": "2025-07-15",
+    "length": 49,
+    "version": 2.2,
+    "submitter": "Emp",
+    "video": "https://youtu.be/AdrmZsy52EY",
+    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -1721,6 +1751,24 @@
     ]
   },
   {
+    "name": "Acheron (Riot) 17-97%",
+    "player": "klimk",
+    "levelID": 82758705,
+    "date": "2026-06-04",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "ad3usgmd",
+    "video": "https://youtu.be/oZAv25TqJOQ",
+    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Acheron (Riot) 91%",
     "player": "klimk",
     "levelID": 82758705,
@@ -1772,6 +1820,25 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Angelicide 37-100% 7 deaths, 99.83% accuracy",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2026-05-31",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/aAPyd0B54zs",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Noclip"
     ]
   },
   {
@@ -1828,24 +1895,6 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ]
-  },
-  {
-    "name": "Sakupen circles (Old)",
-    "player": "ad3usgmd",
-    "levelID": 10887708,
-    "date": "2025-07-15",
-    "length": 49,
-    "version": 2.2,
-    "submitter": "Emp",
-    "video": "https://youtu.be/AdrmZsy52EY",
-    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -2664,6 +2713,26 @@
     ]
   },
   {
+    "name": "Ouroboros (-) 60hz Mobile",
+    "player": "Jastro",
+    "levelID": 56703691,
+    "date": "2026-06-27",
+    "length": 156,
+    "version": 2.2,
+    "submitter": "Sirdoodle",
+    "video": "https://youtu.be/MXsRVOPp-FM",
+    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Angelicide 37%",
     "player": "Druki",
     "levelID": 120478542,
@@ -2773,6 +2842,42 @@
     ]
   },
   {
+    "name": "Clubcheron 40-100%",
+    "player": "SpaceRS",
+    "levelID": 112310040,
+    "date": "2026-01-09",
+    "length": 38,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/M6wZdcbmKLo",
+    "showcaseVideo": "https://youtu.be/eBJmZOKndEE",
+    "thumbnail": null,
+    "duplicateOf": "Acheron",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Clubcheron 42%",
+    "player": "SpaceRS",
+    "levelID": 112310040,
+    "date": "2026-01-09",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/M6wZdcbmKLo",
+    "showcaseVideo": "https://youtu.be/eBJmZOKndEE",
+    "thumbnail": null,
+    "duplicateOf": "Acheron",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "vsc infinity 79%, 100% in a row",
     "player": "JACKSONAMORE",
     "levelID": 78765594,
@@ -2807,6 +2912,25 @@
       "Level",
       "Progress",
       "Tentative"
+    ]
+  },
+  {
+    "name": "Angelicide 61% 4 deaths, 99.91% accuracy",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2025-06-09",
+    "length": 59,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://medal.tv/fr/games/geometry-dash/clips/mSD49NsXrXft5YaGA?invite=cr-MSxTNjQsMzk2NDE5NDA0",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Noclip"
     ]
   },
   {
@@ -3031,6 +3155,27 @@
       "Level",
       "2P",
       "Miscellaneous"
+    ]
+  },
+  {
+    "name": "Tidal Wave 1.2x 29-100% 27 deaths, 99.34% accuracy",
+    "player": "JesseGamingGD",
+    "levelID": 86407629,
+    "date": "2026-03-08",
+    "length": 96,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/-DP4mNsombE",
+    "showcaseVideo": "https://youtu.be/YbyfDYChIYU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Rated",
+      "Noclip",
+      "Speedhack"
     ]
   },
   {
@@ -3348,6 +3493,48 @@
     ]
   },
   {
+    "name": "The Golden 94%, (49%), 367% in a row",
+    "player": "Sid125",
+    "levelID": 60978746,
+    "date": "2023-11-03",
+    "length": 429,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/b6dUBlA38_4",
+    "showcaseVideo": "https://youtu.be/lbrN3kasxR0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "cry me a river 180%, 169% in a row",
+    "player": "klimk",
+    "levelID": 76403850,
+    "date": "2025-07-03",
+    "length": 85,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/G7IXpEgBaQU",
+    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": [
+      "cry me a river is a level consisting of Slaughterhouse River's part (49-58%) x5 in a row",
+      "This achievement is equivalent to River x9, x8 in a row"
+    ],
+    "tags": [
+      "Challenge",
+      "Consistency",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Abyss of Darkness",
     "player": "Cursed",
     "levelID": 49896559,
@@ -3394,6 +3581,25 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/N5efNNp1WMc",
     "showcaseVideo": "https://youtu.be/tEm59VdSJGE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "CHIL 62%, 100% in a row",
+    "player": "Nexel",
+    "levelID": 114281093,
+    "date": "2026-05-17",
+    "length": 100,
+    "version": 2.2,
+    "submitter": "anduval",
+    "video": "https://youtu.be/XdPVlvjgnh0",
+    "showcaseVideo": "https://youtu.be/Mi49wryCl0E",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -3604,6 +3810,24 @@
     ]
   },
   {
+    "name": "3SH is maxxed 78%",
+    "player": "VovanPo",
+    "levelID": null,
+    "date": "2026-06-04",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": null,
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/20855830",
+    "duplicateOf": null,
+    "notes": "3SH is maxxed is a level consisting of 3 second hell challenge x15 in a row, in which this runs clears 12 out of 15.",
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
     "name": "The Golden 80hz 94%",
     "player": "Sid125",
     "levelID": 60978746,
@@ -3772,29 +3996,6 @@
     ]
   },
   {
-    "name": "Ouroboros (-) 60hz Mobile 83%",
-    "player": "Jastro",
-    "levelID": 56703691,
-    "date": "2025-10-12",
-    "length": 135,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/1z0DqY4Pxqw",
-    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated",
-      "Tentative",
-      "Mobile",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "Defeated Circles",
     "player": "Zoink",
     "levelID": 120012581,
@@ -3907,25 +4108,6 @@
       "Rated",
       "Noclip",
       "Speedhack"
-    ]
-  },
-  {
-    "name": "The Golden 367%",
-    "player": "Sid125",
-    "levelID": 60978746,
-    "date": "2023-11-03",
-    "length": 305,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/b6dUBlA38_4",
-    "showcaseVideo": "https://youtu.be/lbrN3kasxR0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -4075,6 +4257,43 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "The Lightning Rod",
+    "player": "lavatrex",
+    "levelID": 93917076,
+    "date": "2023-08-28",
+    "length": 97,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/nQDTi077O6M",
+    "showcaseVideo": "https://youtu.be/DCbXHYwW7r0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "last stop 15%, 14%, (4%), 55%, (7%), 15%, 13% in a row",
+    "player": "aytch0008",
+    "levelID": 64815983,
+    "date": "2025-12-22",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "aytch0008",
+    "video": "https://youtu.be/VIzP6XkJSMU",
+    "showcaseVideo": "https://youtu.be/_T8Y4HfBpas",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/last%20stop.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
     ]
   },
   {
@@ -4250,169 +4469,6 @@
     ]
   },
   {
-    "name": "Slaughterhouse",
-    "player": "Doggie",
-    "levelID": 27690100,
-    "date": "2021-12-21",
-    "length": 70,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/kpcF1-QAHQc",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Invisible Slaughterhouse 49-91%",
-    "player": "enfix",
-    "levelID": 89216381,
-    "date": "2023-03-17",
-    "length": 29,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/yIeX5TA4yvs?t=19",
-    "showcaseVideo": "https://youtu.be/l6poOVWISJA",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/89216381",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Like if you camt bea 92%",
-    "player": "Llqne",
-    "levelID": null,
-    "date": "2024-05-03",
-    "length": 18,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/SkQl-UkQkVQ",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Acheron (Wolvez) 96%",
-    "player": "Wolvez",
-    "levelID": 79312442,
-    "date": "2022-04-09",
-    "length": 67,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/Hjmtt7q5boA",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Flamewall (OneAlphaHelix) 60%",
-    "player": "OneAlphaHelix",
-    "levelID": null,
-    "date": "2023-12-22",
-    "length": 253,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/c1qBa3JfeVQ",
-    "showcaseVideo": "https://youtu.be/ZpPm8WhG6zI",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Flamewall%20(OneAlphaHelix).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Heat Stroke 59-96%",
-    "player": "serpentical",
-    "levelID": 113989022,
-    "date": "2025-09-25",
-    "length": 45,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/-cz3aXm1c6Q?t=6649",
-    "showcaseVideo": "https://youtu.be/MAeaU8Z3E68",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Heat%20Stroke.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Demotivation Dance",
-    "player": "Cursed",
-    "levelID": 98446627,
-    "date": "2023-05-05",
-    "length": 48,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/JlhBdtzL99A",
-    "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x8 in a row",
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Silent Circles 27-53%",
-    "player": "SeptaGon7",
-    "levelID": 12169905,
-    "date": "2026-05-20",
-    "length": 14,
-    "version": 2.2,
-    "submitter": "stax",
-    "video": "https://youtu.be/9cmj4l_3Oaw",
-    "showcaseVideo": "https://youtu.be/gJlP-V1DCfo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Silent Circles (Thebacon_gamer) 27-53%",
-    "player": "Thebacon_gamer",
-    "levelID": null,
-    "date": "2026-05-19",
-    "length": 14,
-    "version": 2.2,
-    "submitter": "stax",
-    "video": "https://youtu.be/02CjrfNq8FQ",
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/12169905",
-    "duplicateOf": "Silent Circles 27-53%",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "christmashouse",
     "player": "Zoink",
     "levelID": 84117769,
@@ -4431,15 +4487,15 @@
     ]
   },
   {
-    "name": "Subterminal Point",
-    "player": "PoCle",
-    "levelID": 113599729,
-    "date": "2024-12-29",
-    "length": 69,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/h2wmRMgACH4",
-    "showcaseVideo": "https://youtu.be/TwPQH9N8X_k",
+    "name": "Slaughterhouse",
+    "player": "Doggie",
+    "levelID": 27690100,
+    "date": "2021-12-21",
+    "length": 70,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/kpcF1-QAHQc",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -4648,6 +4704,169 @@
     ]
   },
   {
+    "name": "Invisible Slaughterhouse 49-91%",
+    "player": "enfix",
+    "levelID": 89216381,
+    "date": "2023-03-17",
+    "length": 29,
+    "version": 2.1,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/yIeX5TA4yvs?t=19",
+    "showcaseVideo": "https://youtu.be/l6poOVWISJA",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/89216381",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Like if you camt bea 92%",
+    "player": "Llqne",
+    "levelID": null,
+    "date": "2024-05-03",
+    "length": 18,
+    "version": 2.1,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/SkQl-UkQkVQ",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Acheron (Wolvez) 96%",
+    "player": "Wolvez",
+    "levelID": 79312442,
+    "date": "2022-04-09",
+    "length": 67,
+    "version": 2.1,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/Hjmtt7q5boA",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Flamewall (OneAlphaHelix) 60%",
+    "player": "OneAlphaHelix",
+    "levelID": null,
+    "date": "2023-12-22",
+    "length": 253,
+    "version": 2.1,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/c1qBa3JfeVQ",
+    "showcaseVideo": "https://youtu.be/ZpPm8WhG6zI",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Flamewall%20(OneAlphaHelix).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Heat Stroke 59-96%",
+    "player": "serpentical",
+    "levelID": 113989022,
+    "date": "2025-09-25",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/-cz3aXm1c6Q?t=6649",
+    "showcaseVideo": "https://youtu.be/MAeaU8Z3E68",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Heat%20Stroke.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Demotivation Dance",
+    "player": "Cursed",
+    "levelID": 98446627,
+    "date": "2023-05-05",
+    "length": 48,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/JlhBdtzL99A",
+    "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x8 in a row",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Silent Circles 27-53%",
+    "player": "SeptaGon7",
+    "levelID": 12169905,
+    "date": "2026-05-20",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "stax",
+    "video": "https://youtu.be/9cmj4l_3Oaw",
+    "showcaseVideo": "https://youtu.be/gJlP-V1DCfo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles (Thebacon_gamer) 27-53%",
+    "player": "Thebacon_gamer",
+    "levelID": null,
+    "date": "2026-05-19",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "stax",
+    "video": "https://youtu.be/02CjrfNq8FQ",
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/12169905",
+    "duplicateOf": "Silent Circles 27-53%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Subterminal Point",
+    "player": "PoCle",
+    "levelID": 113599729,
+    "date": "2024-12-29",
+    "length": 69,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/h2wmRMgACH4",
+    "showcaseVideo": "https://youtu.be/TwPQH9N8X_k",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Sonic Wave (Cyclic) 1.9 60hz",
     "player": "Muffy450",
     "levelID": 102063440,
@@ -4720,24 +4939,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "last stop 31%, 15%, 25%, 31%, 15%, 25% in a row",
-    "player": "aytch0008",
-    "levelID": 64815983,
-    "date": "2025-10-22",
-    "length": 30,
-    "version": 2.1,
-    "submitter": "aytch0008",
-    "video": "https://youtu.be/MBP_VUt8wHI",
-    "showcaseVideo": "https://youtu.be/OyFvsJ0RRKE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/last%20stop.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
     ]
   },
   {
@@ -5330,29 +5531,6 @@
     ]
   },
   {
-    "name": "Ouroboros (-) 60hz Mobile 10-100%",
-    "player": "Jastro",
-    "levelID": 56703691,
-    "date": "2024-07-04",
-    "length": 137,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/Wv_pGGGE8A8",
-    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated",
-      "Tentative",
-      "Mobile",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "Im Bleaf",
     "player": "ad3usgmd",
     "levelID": 133056901,
@@ -5428,6 +5606,25 @@
     ]
   },
   {
+    "name": "Edge of Destiny 180%",
+    "player": "nettniko",
+    "levelID": 89187968,
+    "date": "2026-05-08",
+    "length": 230,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "video": "https://youtu.be/v3Q7uzaWBdk",
+    "showcaseVideo": "https://youtu.be/AjgEIT-qrO0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Exens limit 1.1x 70%",
     "player": "Skylar",
     "levelID": 97338077,
@@ -5444,25 +5641,6 @@
       "Level",
       "Progress",
       "Speedhack"
-    ]
-  },
-  {
-    "name": "Operation Evolution 97%, 100% in a row",
-    "player": "Lobster",
-    "levelID": 114999625,
-    "date": "2025-10-20",
-    "length": 600,
-    "version": 2.2,
-    "submitter": "Yoshikid",
-    "video": "https://youtu.be/BfpUmTO-PyM",
-    "showcaseVideo": "https://youtu.be/lgoEemeOYb0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -5500,25 +5678,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "The Lightning Rod",
-    "player": "lavatrex",
-    "levelID": 93917076,
-    "date": "2023-08-28",
-    "length": 97,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/nQDTi077O6M",
-    "showcaseVideo": "https://youtu.be/DCbXHYwW7r0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
     ]
   },
   {
@@ -5667,6 +5826,25 @@
     "tags": [
       "Level",
       "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Collapse 73%, 100% in a row",
+    "player": "Cuatrocientos",
+    "levelID": 113256247,
+    "date": "2025-03-07",
+    "length": 208,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "video": "https://youtu.be/Au3817LnR-Y",
+    "showcaseVideo": "https://youtu.be/XK3kj1CJgk0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
       "Rated"
     ]
   },
@@ -5847,8 +6025,6 @@
     "length": 50,
     "version": 2.2,
     "submitter": "Cinder",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/LNMKz3RsKt0",
     "showcaseVideo": null,
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/76962930/small",
@@ -6352,6 +6528,24 @@
     ]
   },
   {
+    "name": "CorroZ (nensa) 47%",
+    "player": "nensa",
+    "levelID": 86191664,
+    "date": "2025-07-06",
+    "length": 17,
+    "version": 2.2,
+    "submitter": "nensa",
+    "video": "https://youtu.be/DSsVuOb4BuQ",
+    "showcaseVideo": "https://youtu.be/fiCwcuCl4c0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
     "name": "Oblivers",
     "player": "OverGD",
     "levelID": 85042202,
@@ -6722,6 +6916,25 @@
     ]
   },
   {
+    "name": "Artemis 13 68-100%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-20",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/RLvAlbVZzfA?t=7227",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "VSC 1.1x 16-86%",
     "player": "-",
     "levelID": 60805571,
@@ -6741,6 +6954,25 @@
     ]
   },
   {
+    "name": "Operation Evolution 97%, 100% in a row",
+    "player": "Lobster",
+    "levelID": 114999625,
+    "date": "2025-10-20",
+    "length": 600,
+    "version": 2.2,
+    "submitter": "Yoshikid",
+    "video": "https://youtu.be/BfpUmTO-PyM",
+    "showcaseVideo": "https://youtu.be/lgoEemeOYb0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Zodiac 75hz",
     "player": "wwdonut",
     "levelID": 52374843,
@@ -6757,6 +6989,24 @@
       "Level",
       "Low Hertz",
       "Rated"
+    ]
+  },
+  {
+    "name": "Flashbang 44-100%",
+    "player": "LordVadercraft",
+    "levelID": null,
+    "date": "2026-07-16",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/tP_O6i71274",
+    "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Flashbang.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -7319,8 +7569,6 @@
     "length": 54,
     "version": 2.2,
     "submitter": "kyle1saurus",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/LosiqyqaqV0",
     "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
     "thumbnail": null,
@@ -7349,6 +7597,24 @@
       "Low Hertz",
       "Progress",
       "Tentative"
+    ]
+  },
+  {
+    "name": "Lure Infinity 8.53%",
+    "player": "aytch0008",
+    "levelID": null,
+    "date": "2026-02-25",
+    "length": 7,
+    "version": 2.2,
+    "submitter": "aytch0008",
+    "video": "https://youtu.be/0Qfvx6rXTKM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
     ]
   },
   {
@@ -7613,6 +7879,26 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Tartarus 98%, (1%), 100% in a row",
+    "player": "Crisis",
+    "levelID": 59075347,
+    "date": "2021-04-16",
+    "length": 174,
+    "version": 2.1,
+    "submitter": "Muffy450",
+    "video": "https://youtu.be/onHj7AqSaWQ",
+    "showcaseVideo": "https://youtu.be/lm1498Rfl0s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
     ]
   },
   {

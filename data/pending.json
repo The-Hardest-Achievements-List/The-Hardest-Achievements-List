@@ -1,65 +1,5 @@
 [
   {
-    "name": "3SH is maxxed 78%",
-    "player": "VovanPo",
-    "levelID": null,
-    "date": "2026-06-04",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": null,
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/20855830",
-    "duplicateOf": null,
-    "notes": "3SH is maxxed is a level consisting of 3 second hell challenge x15 in a row, in which this runs clears 12 out of 15.",
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Acheron (Riot) 17-97%",
-    "player": "klimk",
-    "levelID": 82758705,
-    "date": "2026-06-04",
-    "length": 51,
-    "version": 2.2,
-    "submitter": "ad3usgmd",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/oZAv25TqJOQ",
-    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Acheron (Riot) 40-92%, 76% in a row",
-    "player": "klimk",
-    "levelID": 82758705,
-    "date": "2026-06-12",
-    "length": 84,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/r3DInzGpPEc",
-    "showcaseVideo": "https://youtu.be/qqj8H-WXFZ8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Acheron 1.1x 40-100%",
     "player": "xalval",
     "levelID": 73667628,
@@ -448,26 +388,6 @@
     ]
   },
   {
-    "name": "Artemis 13 68-100%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-07-20",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/RLvAlbVZzfA?t=7227",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Ashley Wave Trials (True Unnerfed) 56-100%",
     "player": "KRUEL",
     "levelID": 127179119,
@@ -609,67 +529,6 @@
     ]
   },
   {
-    "name": "CHIL 62%, 100% in a row",
-    "player": "Nexel",
-    "levelID": 114281093,
-    "date": "2026-05-17",
-    "length": 100,
-    "version": 2.2,
-    "submitter": "anduval",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/XdPVlvjgnh0",
-    "showcaseVideo": "https://youtu.be/Mi49wryCl0E",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Clubcheron 40-100%",
-    "player": "SpaceRS",
-    "levelID": 112310040,
-    "date": "2026-01-09",
-    "length": 38,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/eBJmZOKndEE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Clubcheron 42%",
-    "player": "SpaceRS",
-    "levelID": 112310040,
-    "date": "2026-01-09",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/M6wZdcbmKLo",
-    "showcaseVideo": "https://youtu.be/eBJmZOKndEE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "CLUBSTEP XYZ 42-92%",
     "player": "Streamy450",
     "levelID": null,
@@ -728,70 +587,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "Collapse 73%, 100% in a row",
-    "player": "Cuatrocientos",
-    "levelID": 113256247,
-    "date": "2025-03-07",
-    "length": 208,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Au3817LnR-Y",
-    "showcaseVideo": "https://youtu.be/XK3kj1CJgk0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "CorroZ (nensa) 47%",
-    "player": "nensa",
-    "levelID": 86191664,
-    "date": "2025-07-06",
-    "length": 17,
-    "version": 2.2,
-    "submitter": "nensa",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/DSsVuOb4BuQ",
-    "showcaseVideo": "https://youtu.be/fiCwcuCl4c0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
-    "name": "cry me a river 180%, 169% in a row",
-    "player": "klimk",
-    "levelID": 76403850,
-    "date": "2025-07-03",
-    "length": 85,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/G7IXpEgBaQU",
-    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": [
-      "cry me a river is a level consisting of Slaughterhouse River's part (49-58%) x5 in a row",
-      "This achievement is equivalent to River x9, x8 in a row"
-    ],
-    "tags": [
-      "Challenge",
-      "Consistency"
     ]
   },
   {
@@ -858,7 +653,7 @@
   {
     "name": "Delirium 185hz Mobile",
     "player": "ADR",
-    "levelID": "109218075",
+    "levelID": 109218075,
     "date": "2026-07-23",
     "length": 17,
     "version": 2.2,
@@ -983,27 +778,6 @@
     ]
   },
   {
-    "name": "Edge of Destiny 180%",
-    "player": "nettniko",
-    "levelID": 89187968,
-    "date": "2026-05-08",
-    "length": 230,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/v3Q7uzaWBdk",
-    "showcaseVideo": "https://youtu.be/AjgEIT-qrO0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "Escalator 36-100%",
     "player": "teraaa",
     "levelID": null,
@@ -1047,7 +821,7 @@
     "name": "Escalator 49%",
     "player": "teraaa",
     "levelID": null,
-    "date": "2026-07-233",
+    "date": null,
     "length": 50,
     "version": 2.2,
     "submitter": "TYATYAPKA",
@@ -1097,68 +871,6 @@
     "showcaseVideo": "https://youtu.be/zj6dKBpQZg8",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Eternal Silence 4-10%, (4-7%), 4-12%, 4-10%, 4-67% in a row",
-    "player": "cc478",
-    "levelID": 83476262,
-    "date": "2026-07-23",
-    "length": 77,
-    "version": 2.2,
-    "submitter": "cc478",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Uclb8_PvBIw",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": "Eternal Silence 31%, (1%), 65% in a row",
-    "notes": "Four ship passes (6-9%) out of five consecutive attempts.",
-    "tags": [
-      "Level",
-      "Progress",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
-    "player": "chiikawa",
-    "levelID": 83476262,
-    "date": "2026-07-22",
-    "length": 57,
-    "version": 2.2,
-    "submitter": "chiikawa",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VxZz26KgQdU",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": "Eternal Silence 31%, (1%), 65% in a row",
-    "notes": "Five ship passes (6-9%) out of seven consecutive attempts.",
-    "tags": [
-      "Level",
-      "Progress",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "Eternal Silence 9-100%",
-    "player": "noname228gg",
-    "levelID": 83476262,
-    "date": "2026-06-07",
-    "length": 81,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/9kKsgISwEtM",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": "Eternal Silence 14-100%",
     "notes": null,
     "tags": [
       "Level",
@@ -1258,26 +970,6 @@
     "video": "https://youtu.be/DbCt-Rmv3L0",
     "showcaseVideo": "https://youtu.be/mD8bMlCV8Jc",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111680151",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Flashbang 44-100%",
-    "player": "LordVadercraft",
-    "levelID": null,
-    "date": "2026-07-16",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/tP_O6i71274",
-    "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Flashbang.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1617,46 +1309,6 @@
     ]
   },
   {
-    "name": "last stop 15%, 14%, (4%), 55%, (7%), 15%, 13% in a row",
-    "player": "aytch0008",
-    "levelID": 64815983,
-    "date": "2025-12-22",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "aytch0008",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VIzP6XkJSMU",
-    "showcaseVideo": "https://youtu.be/_T8Y4HfBpas",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/last%20stop.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "last stop 24%, 28%, 31% in a row",
-    "player": "aytch0008",
-    "levelID": 64815983,
-    "date": "2025-03-22",
-    "length": 21,
-    "version": 2.2,
-    "submitter": "aytch0008",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/TODhe8eJcwo",
-    "showcaseVideo": "https://youtu.be/_T8Y4HfBpas",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/last%20stop.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Leaves 48-100%",
     "player": "Jszl_GMD",
     "levelID": 82602651,
@@ -1713,26 +1365,6 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Lure Infinity 8.53%",
-    "player": "aytch0008",
-    "levelID": null,
-    "date": "2026-02-25",
-    "length": 7,
-    "version": 2.2,
-    "submitter": "aytch0008",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/0Qfvx6rXTKM",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
       "Progress"
     ]
   },
@@ -1879,31 +1511,6 @@
     ]
   },
   {
-    "name": "Ouroboros (-) 60hz Mobile",
-    "player": "Jastro",
-    "levelID": 56703691,
-    "date": "2026-06-27",
-    "length": 156,
-    "version": 2.2,
-    "submitter": "Sirdoodle",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/MXsRVOPp-FM",
-    "showcaseVideo": "https://youtu.be/HNR-eOfYum4",
-    "thumbnail": null,
-    "duplicateOf": [
-      "Ouroboros (-) 60hz Mobile 10-100%",
-      "Ouroboros (-) 60hz Mobile 83%"
-    ],
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Rated",
-      "Mobile"
-    ]
-  },
-  {
     "name": "OUROBOROS (Qmystic) 41-100%",
     "player": "apu",
     "levelID": null,
@@ -1944,26 +1551,6 @@
     ]
   },
   {
-    "name": "rare 2.60%, 2.87%, 2.90%, 2.88%, 2.87% x2 in a row",
-    "player": "FlinGuSPluNkuS",
-    "levelID": 81002356,
-    "date": "2026-02-25",
-    "length": 69,
-    "version": 2.2,
-    "submitter": "FlinGuSPluNkuS",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/2poTRtqM2i8",
-    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "rare (Viwi) 79-100%",
     "player": "Viwi",
     "levelID": null,
@@ -1981,6 +1568,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "rare 2.60%, 2.87%, 2.90%, 2.88%, 2.87% x2 in a row",
+    "player": "FlinGuSPluNkuS",
+    "levelID": 81002356,
+    "date": "2026-02-25",
+    "length": 69,
+    "version": 2.2,
+    "submitter": "FlinGuSPluNkuS",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2poTRtqM2i8",
+    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -2021,27 +1628,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Sakupen circles (Old) 1 death, 99.97% accuracy; 100% in a row",
-    "player": "Bacon",
-    "levelID": 10887708,
-    "date": "2026-05-18",
-    "length": 98,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/_ea8mbSfZvA",
-    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
-    "thumbnail": null,
-    "duplicateOf": "Sakupen circles (Old) 37-66%, 37-69%, 70% in a row",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Noclip"
     ]
   },
   {
@@ -2197,7 +1783,7 @@
     "player": "Hover",
     "levelID": null,
     "date": "2026-07-24",
-    "length": "TBA",
+    "length": null,
     "version": 2.2,
     "submitter": "sayoriiCLUB",
     "estimateLower": null,
@@ -2323,7 +1909,7 @@
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/NinKMI7i2mw?t=3256s",
+    "video": "https://youtu.be/NinKMI7i2mw?t=3256",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -2605,49 +2191,6 @@
     ]
   },
   {
-    "name": "Tidal Wave 1.2x 29-100% 27 deaths, 99.34% accuracy",
-    "player": "JesseGamingGD",
-    "levelID": 86407629,
-    "date": "2026-03-08",
-    "length": 96,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/-DP4mNsombE",
-    "showcaseVideo": "https://youtu.be/YbyfDYChIYU",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Rated",
-      "Noclip",
-      "Speedhack"
-    ]
-  },
-  {
-    "name": "Tidal Wave buffed 71%, 100% in a row",
-    "player": "wPopoff",
-    "levelID": 116732736,
-    "date": "2025-04-01",
-    "length": 308,
-    "version": 2.2,
-    "submitter": "Emp",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/1-ihSeRCpds",
-    "showcaseVideo": "https://youtu.be/IObH78Nln2U",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Tremor",
     "player": "VoltrixAce",
     "levelID": 79823052,
@@ -2895,7 +2438,7 @@
     "player": null,
     "levelID": 145494348,
     "date": "2026-07-23",
-    "length": "TBA",
+    "length": null,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
