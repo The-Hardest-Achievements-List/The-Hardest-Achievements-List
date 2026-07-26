@@ -2791,6 +2791,25 @@
     ]
   },
   {
+    "name": "Wild Roses",
+    "player": null,
+    "levelID": 145494348,
+    "2026-07-23",
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": null,
+    "showcaseVideo": "https://youtu.be/Xd93ChqJ0AE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Video currently pending."
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "you when bee crusher 18-81%",
     "player": "GuitGuit",
     "levelID": 134734938,
