@@ -126,6 +126,46 @@
     ]
   },
   {
+    "name": "Aeternus 11-23%",
+    "player": "wShock",
+    "levelID": 102647436,
+    "date": "2026-07-24",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/5_TQvRtmtSo"
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 14%, 13% in a row",
+    "player": "Chill Guy",
+    "levelID": 102647436,
+    "date": "2026-07-24",
+    "length": 21,
+    "version": 2.2,
+    "submitter": "Quinnsapian",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Alz5AB5ushE",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Aeternus 16-27%",
     "player": "wShock",
     "levelID": 102647436,
@@ -367,14 +407,34 @@
       "Progress"
     ]
   },
-   {
+  {
+    "name": "Artemis 13 16-47%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-23",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zzL8PuBgRGk?t=4198",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Artemis 13 28%",
     "player": "Zoink",
     "levelID": null,
     "date": "2026-07-23",
     "length": 25,
     "version": 2.2,
-    "submitter": "Quinnsapien",
+    "submitter": "Quinnsapian",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/zzL8PuBgRGk?t=5230",
@@ -944,16 +1004,16 @@
     ]
   },
   {
-    "name": "Escalator 39-100%",
+    "name": "Escalator 36-100%",
     "player": "teraaa",
     "levelID": null,
-    "date": "2026-05-17",
-    "length": 59,
+    "date": "2026-07-25",
+    "length": 61,
     "version": 2.2,
-    "submitter": "kittycatiscute",
+    "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/ed4RQUJvIrs",
+    "video": "https://youtu.be/eYWaHv6WstQ",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/40ba41152f3666b8c0d75cf2d231905281c7aadf/images/thumbnails/Escalator.png",
     "duplicateOf": null,
@@ -1904,6 +1964,25 @@
     ]
   },
   {
+    "name": "rare (Viwi) 79-100%",
+    "player": "Viwi",
+    "levelID": null,
+    "date": "2026-07-25",
+    "length": 29,
+    "version": 2.2,
+    "submitter": "Radiator",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/q69eN95ed-w",
+    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96496947",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+  },
+  {
     "name": "Riverever",
     "player": "Yanlici",
     "levelID": 109889043,
@@ -2031,16 +2110,16 @@
     ]
   },
   {
-    "name": "Sakupen Circles 120hz Mobile 69%",
+    "name": "Sakupen Circles 120hz Mobile 70%",
     "player": "ItzAmethyst",
     "levelID": 76962930,
     "date": "2026-05-26",
-    "length": 36,
+    "length": 37,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "nensa",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/ZWIM4NASjoE",
+    "video": "https://youtu.be/ovxf7Gouym0",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
     "duplicateOf": null,
@@ -2110,6 +2189,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silent Acropolis (Hover, ThePurgatory) 60%, 73% in a row",
+    "player": "Hover",
+    "levelID": null,
+    "date": "2026-07-24",
+    "length": "TBA",
+    "version": 2.2,
+    "submitter": "sayoriiCLUB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/HoverThereal/status/2080719576531107914",
+    "showcaseVideo": "https://youtu.be/yJCMeyWPmoA",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111237270",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -2214,11 +2313,11 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 60%",
+    "name": "Silent Circles (Starchman) 62%",
     "player": "dewbbs",
     "levelID": null,
     "date": "2026-07-24",
-    "length": 42,
+    "length": 43,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
