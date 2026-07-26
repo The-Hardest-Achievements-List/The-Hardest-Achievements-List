@@ -2501,6 +2501,26 @@
     ]
   },
   {
+    "name": "Snowbound 132%",
+    "player": "Zoink",
+    "levelID": 120289520,
+    "date": "2026-07-18",
+    "length": 187,
+    "version": 2.2,
+    "submitter": "Emp",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1bhAareaao8?t=2230",
+    "showcaseVideo": "https://youtu.be/rR4wVg5R0GA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Solar Flare 120hz Mobile 79%",
     "player": "Just_Coal",
     "levelID": 90390075,
