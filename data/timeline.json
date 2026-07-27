@@ -498,6 +498,46 @@
     ]
   },
   {
+    "name": "Abyss of Darkness (Old) 68%",
+    "player": "Dils thik",
+    "levelID": 76680844,
+    "date": "2020-11-14",
+    "length": 86,
+    "version": 2.1,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/lZTt8znHTYs",
+    "showcaseVideo": "https://youtu.be/9xnaAgxqqJs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Abyss of Darkness (Old) 32-100%",
+    "player": "Dils thik",
+    "levelID": 76680844,
+    "date": "2020-10-23",
+    "length": 84,
+    "version": 2.1,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/uNidvqXwwPU",
+    "showcaseVideo": "https://youtu.be/9xnaAgxqqJs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Tartarus",
     "player": "-",
     "levelID": 59075347,
