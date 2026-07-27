@@ -4505,6 +4505,86 @@
       "Rated"
     ]
   },
+    {
+    "name": "Purplehouse",
+    "player": "CoolRanchDoritos1055",
+    "levelID": 144451459,
+    "date": null,
+    "length": 70,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tCtwOTfz9MM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Greenhouse",
+    "player": "CoolRanchDoritos1055",
+    "levelID": 144451454,
+    "date": null,
+    "length": 70,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tCtwOTfz9MM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Yellowhouse",
+    "player": "CoolRanchDoritos1055",
+    "levelID": 144451463,
+    "date": null,
+    "length": 70,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tCtwOTfz9MM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "shit House",
+    "player": "CoolRanchDoritos1055",
+    "levelID": 144655983,
+    "date": null,
+    "length": 70,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tCtwOTfz9MM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Slaughterhouse",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
   {
     "name": "Purplehouse 25-95%",
     "player": "Druki",
