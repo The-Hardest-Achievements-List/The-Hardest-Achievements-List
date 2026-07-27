@@ -35,7 +35,7 @@ const EDITORS = [
   },
   { 
     name: "Excryst", 
-    roles: ["List Moderator", "Developer"], 
+    roles: ["List Moderator", "Website Helper"], 
     url: "https://www.youtube.com/@excryst"
   },
   { name: "Exiled_Shade", 
