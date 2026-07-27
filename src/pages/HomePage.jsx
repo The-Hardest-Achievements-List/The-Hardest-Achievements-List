@@ -28,6 +28,11 @@ const EDITORS = [
     roles: ["List Moderator"], 
     url: "https://www.youtube.com/@rtwnr"
   },
+  { 
+    name: "SupremeSDB", 
+    roles: ["List Moderator"], 
+    url: "https://www.youtube.com/@SupremeSDB"
+  },
   { name: "Exiled_Shade", 
     roles: ["List Helper"],
     url: "https://www.youtube.com/@exiled_shadegd" 
@@ -36,11 +41,6 @@ const EDITORS = [
     name: "Excryst", 
     roles: ["List Helper", "Developer"], 
     url: "https://www.youtube.com/@excryst"
-  },
-  { 
-    name: "SupremeSDB", 
-    roles: ["List Helper"], 
-    url: "https://www.youtube.com/@SupremeSDB"
   },
   { name: "aytch0008", 
     roles: ["Trial Moderator"], 
