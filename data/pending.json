@@ -368,16 +368,16 @@
     ]
   },
   {
-    "name": "Artemis 13 28%",
+    "name": "Artemis 13 35%",
     "player": "Zoink",
     "levelID": null,
-    "date": "2026-07-23",
-    "length": 25,
+    "date": "2026-07-26",
+    "length": 30,
     "version": 2.2,
-    "submitter": "Quinnsapian",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/zzL8PuBgRGk?t=5230",
+    "video": "https://youtu.be/ekn9ZcZI6Oc?t=3799",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
     "duplicateOf": null,
@@ -386,6 +386,25 @@
       "Level",
       "Progress"
     ]
+  },
+  {
+    "name": "Artemis 13 68-100%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-26",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ekn9ZcZI6Oc?t=1h30m30s",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": "Artemis 13 68-100%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
   },
   {
     "name": "Ashley Wave Trials (True Unnerfed) 56-100%",
