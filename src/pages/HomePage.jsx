@@ -33,14 +33,14 @@ const EDITORS = [
     roles: ["List Moderator"], 
     url: "https://www.youtube.com/@SupremeSDB"
   },
+  { 
+    name: "Excryst", 
+    roles: ["List Moderator", "Developer"], 
+    url: "https://www.youtube.com/@excryst"
+  },
   { name: "Exiled_Shade", 
     roles: ["List Helper"],
     url: "https://www.youtube.com/@exiled_shadegd" 
-  },
-  { 
-    name: "Excryst", 
-    roles: ["List Helper", "Developer"], 
-    url: "https://www.youtube.com/@excryst"
   },
   { name: "aytch0008", 
     roles: ["Trial Moderator"], 
