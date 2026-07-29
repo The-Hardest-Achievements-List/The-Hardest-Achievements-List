@@ -6,6 +6,9 @@ const MIN_TAIL_SEGMENTS = 1;
 const PREFERRED_TAIL_SEGMENTS = 2;
 const NAME_LINE_COUNT = 2;
 const CONSISTENCY_SUFFIX = " in a row";
+/** Cache fitted bodies across virtualized remounts (name|widthBucket → body). */
+const fitCache = new Map();
+const FIT_CACHE_MAX = 400;
 
 /** Progress hyphens must not soft-wrap (otherwise "65-79%" → "65-" / "79% …"). */
 function hardenProgressText(text) {
@@ -174,6 +177,19 @@ function fitCardName(element, name) {
   return minimalTruncatedBody(segments);
 }
 
+function cacheKey(name, width) {
+  // Bucket width so tiny sub-pixel changes don't bust the cache.
+  return `${name}::${Math.round(width / 4) * 4}`;
+}
+
+function rememberFit(key, body) {
+  if (fitCache.size >= FIT_CACHE_MAX) {
+    const oldest = fitCache.keys().next().value;
+    fitCache.delete(oldest);
+  }
+  fitCache.set(key, body);
+}
+
 export default function TruncatedCardName({ name, className }) {
   const ref = useRef(null);
   const { suffix, segments } = parseCardNameSegments(name);
@@ -191,7 +207,16 @@ export default function TruncatedCardName({ name, className }) {
         return;
       }
 
+      const key = cacheKey(name, element.clientWidth);
+      const cached = fitCache.get(key);
+      if (cached != null) {
+        applyNameDom(element, cached, suffix);
+        setDisplayBody((prev) => (prev === cached ? prev : cached));
+        return;
+      }
+
       const nextBody = fitCardName(element, name);
+      rememberFit(key, nextBody);
       // nameFits mutates the live spans while probing candidates. Restore the
       // selected candidate even when React bails out because state is unchanged.
       applyNameDom(element, nextBody, suffix);
@@ -200,27 +225,34 @@ export default function TruncatedCardName({ name, className }) {
 
     updateDisplayName();
 
-    const rafId = requestAnimationFrame(() => {
-      updateDisplayName();
-      requestAnimationFrame(updateDisplayName);
-    });
+    let resizeRaf = 0;
+    const onResize = () => {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        updateDisplayName();
+      });
+    };
 
+    let fontsPromise = null;
     if (document.fonts?.ready) {
-      document.fonts.ready.then(() => {
+      fontsPromise = document.fonts.ready.then(() => {
         if (ref.current) updateDisplayName();
       });
     }
 
-    const observer = new ResizeObserver(updateDisplayName);
+    const observer = new ResizeObserver(onResize);
     observer.observe(element);
-    window.addEventListener("resize", updateDisplayName);
+    window.addEventListener("resize", onResize);
 
     return () => {
-      cancelAnimationFrame(rafId);
+      if (resizeRaf) cancelAnimationFrame(resizeRaf);
       observer.disconnect();
-      window.removeEventListener("resize", updateDisplayName);
+      window.removeEventListener("resize", onResize);
+      // fonts.ready can't be cancelled; the ref check above guards stale work.
+      void fontsPromise;
     };
-  }, [name, fullBody]);
+  }, [name, fullBody, suffix]);
 
   const plainDisplay = `${displayBody}${suffix}`.replace(/\u2011/g, "-");
   const isTruncated = plainDisplay !== name;

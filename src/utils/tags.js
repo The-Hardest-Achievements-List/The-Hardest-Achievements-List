@@ -16,6 +16,7 @@ export const CLASSIC_TAGS = [
   "Miscellaneous",
   "Outdated Version",
   "Pending Removal",
+  "Variant",
 ];
 
 export const PLATFORMER_TAGS = [
@@ -32,6 +33,7 @@ export const PLATFORMER_TAGS = [
   "Miscellaneous",
   "Outdated Version",
   "Pending Removal",
+  "Variant",
 ];
 
 export const TAG_ICONS = {
@@ -47,6 +49,7 @@ export const TAG_ICONS = {
   Tentative: "fa-hourglass-half",
   "Outdated Version": "fa-clock-rotate-left",
   "Pending Removal": "fa-trash-can",
+  Variant: "fa-clone",
   "Coin Route": "fa-coins",
   Noclip: "fa-ghost",
   Speedhack: "fa-gauge-high",
@@ -159,5 +162,10 @@ export const TAG_DEFINITIONS = {
     className: "tag-tentative",
     text: "Tentative",
     tooltip: "Tentative placement; unfixed; subject to change.",
+  },
+  Variant: {
+    className: "tag-variant",
+    text: "Variant",
+    tooltip: "A variant of another achievement on the list.",
   },
 };

@@ -122,9 +122,11 @@ i[class*="fa-"]::before {
     inset: -40px;
     background-size: cover;
     background-position: center;
-    filter: blur(80px) saturate(0.4) brightness(0.3);
+    /* Own compositor layer so list scroll doesn't re-blur this wash. */
+    filter: blur(60px) saturate(0.4) brightness(0.3);
     opacity: 0.25;
-    transform: scale(1.1);
+    transform: translateZ(0) scale(1.1);
+    isolation: isolate;
 }
 
 .app-bg__grid {
@@ -154,7 +156,7 @@ i[class*="fa-"]::before {
             transparent 120px);
 
     transform:
-        perspective(1000px) rotateX(74deg) rotateZ(-18deg) scale(2.9) translateY(-2%);
+        perspective(1000px) rotateX(74deg) rotateZ(-18deg) scale(2.9) translateY(-2%) translateZ(0);
 
     mask-image:
         radial-gradient(circle at 52% 44%,
@@ -168,9 +170,8 @@ i[class*="fa-"]::before {
             black 40%,
             transparent 85%);
 
-    filter: blur(0.45px) contrast(1.02);
-
     opacity: 0.45;
+    isolation: isolate;
 }
 
 .scroll-top-btn {

@@ -387,18 +387,20 @@
         padding-right: 10px;
     }
 
+    /* Fixed height MUST match LevelList MOBILE_CARD_ROW_HEIGHT (120).
+       Auto-height cards break windowed virtualization and cause scroll jump. */
     .card {
         grid-template-columns: 1fr 80px;
-        height: auto;
-        min-height: 90px;
-        max-height: none;
+        height: 120px;
+        min-height: 120px;
+        max-height: 120px;
     }
 
-    /* Keep auto-height cards content-sized; don't let thumb intrinsic size stretch them. */
     .card__thumb {
         position: relative;
         align-self: stretch;
-        min-height: 90px;
+        min-height: 0;
+        height: 100%;
     }
 
     .card__thumb img,
@@ -500,6 +502,12 @@
     }
 
     .card__corner-actions .card__note-tag__btn {
+        gap: clamp(2px, 0.9vw, 4px);
+    }
+
+    .card__jump-tab {
+        font-size: clamp(7px, 2.1vw, 8px);
+        padding: clamp(1px, 0.35vw, 2px) clamp(4px, 1.4vw, 6px);
         gap: clamp(2px, 0.9vw, 4px);
     }
 

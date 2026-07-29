@@ -2,6 +2,7 @@ import {
   useState,
   useMemo,
   useEffect,
+  useCallback,
   startTransition,
   lazy,
   Suspense,
@@ -180,7 +181,7 @@ function parseRoute() {
  * Hybrid family filter:
  * - Parent match on search → parent + all variants; names ignored.
  * - Parent match on tags → same expand; children inherit the parent's tag pass.
- * - Child-only match → that child (+ parent host if the parent still passes tags);
+ * - Child-only match → host the parent (variant button) + that child;
  *   siblings do not expand.
  * - Hitchhiking only while the expanding parent remains present.
  * - Pending search hits seed a host parent only (not a full family expand).
@@ -199,6 +200,10 @@ function filterEntriesByFamilySemantics(
   const hasTags = includeTags.length > 0 || excludeTags.length > 0;
   const passesTags = (entry) =>
     entryMatchesActiveTags(entry, includeTags, excludeTags);
+  // Hosts skip include tags so parents can nest matching children, but excludes
+  // still apply (an excluded parent must not resurface as a shell).
+  const passesHostExcludes = (entry) =>
+    entryMatchesActiveTags(entry, [], excludeTags);
 
   // Parents whose own fields matched search (full family expand roots).
   const searchExpandParentKeys = new Set();
@@ -252,6 +257,18 @@ function filterEntriesByFamilySemantics(
     };
   }
 
+  // Child-only tag hits host their parents so variants nest under the toggle
+  // instead of rendering as orphan cards.
+  for (const entry of data) {
+    const parentIds = getDuplicateParentIds(entry);
+    if (parentIds.length === 0) continue;
+    if (hasSearch && !matchesSearch(entry, query)) continue;
+    if (!passesTags(entry)) continue;
+    for (const parentRef of parentIds) {
+      hostParentKeys.add(getAchievementKey({ name: parentRef }));
+    }
+  }
+
   // Tag-passing parents that are allowed to expand / inherit to children.
   // Tags-only: every tag-passing parent expands.
   // With search: only search-expand roots that still pass tags (not mere hosts).
@@ -268,7 +285,8 @@ function filterEntriesByFamilySemantics(
   data = data.filter((entry) => {
     const parentIds = getDuplicateParentIds(entry);
     if (parentIds.length === 0) {
-      // Parents must pass tags themselves (failed host → matching child orphans).
+      const key = getAchievementKey(entry);
+      if (hostParentKeys.has(key)) return passesHostExcludes(entry);
       return passesTags(entry);
     }
     // Inherit parent tag pass while that expanding parent is still present.
@@ -354,6 +372,7 @@ export default function App() {
   const [sortDir, setSortDir] = useState("asc");
   const [activeTags, setActiveTags] = useState(new Map());
   const [selectedLevel, setSelectedLevel] = useState(null);
+  const [pendingJumpKey, setPendingJumpKey] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [cardScale, setCardScale] = useState(() => {
     if (typeof window === "undefined") return 0.95;
@@ -579,9 +598,35 @@ export default function App() {
     });
   };
 
+  const hasListContextFilter =
+    Boolean(search.trim()) || activeTags.size > 0;
+
+  const jumpToListPosition = useCallback((achievement) => {
+    if (!achievement) return;
+
+    // Same-list variants nest under a parent after filters clear — scroll there.
+    let targetKey = getAchievementKey(achievement);
+    if (achievement.isGroupedVariant) {
+      const parentIds = getDuplicateParentIds(achievement);
+      if (parentIds.length > 0) {
+        targetKey = getAchievementKey({ name: parentIds[0] });
+      }
+    }
+
+    // Sync updates — startTransition would deprioritize the clear+scroll and feel laggy.
+    setPendingJumpKey(targetKey);
+    setSearch("");
+    setActiveTags(new Map());
+  }, []);
+
+  const clearPendingJump = useCallback(() => {
+    setPendingJumpKey(null);
+  }, []);
+
   useEffect(() => {
     setSearch("");
     setActiveTags(new Map());
+    setPendingJumpKey(null);
     if (!NO_LIST.has(active)) {
       setSort("rank");
       setSortDir("asc");
@@ -769,12 +814,21 @@ export default function App() {
       setShowScrollTop(false);
       return undefined;
     }
+    let raf = 0;
     const update = () => {
-      setShowScrollTop(window.scrollY > 900);
+      if (raf) return;
+      raf = window.requestAnimationFrame(() => {
+        raf = 0;
+        const next = window.scrollY > 900;
+        setShowScrollTop((prev) => (prev === next ? prev : next));
+      });
     };
     window.addEventListener("scroll", update, { passive: true });
     update();
-    return () => window.removeEventListener("scroll", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      if (raf) window.cancelAnimationFrame(raf);
+    };
   }, [active, mode]);
 
   const topAchievement = !NO_LIST.has(active) ? rawData[0] : null;
@@ -852,6 +906,10 @@ export default function App() {
           setMode={(m) => navigate(m, active)}
           listKind={isMainList ? "main" : isPendingList ? "pending" : null}
           otherList={filteredOtherList}
+          showJumpToList={hasListContextFilter}
+          onJumpToList={jumpToListPosition}
+          pendingJumpKey={pendingJumpKey}
+          onJumpHandled={clearPendingJump}
         />
       )}
 

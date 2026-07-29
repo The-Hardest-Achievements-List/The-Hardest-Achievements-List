@@ -88,6 +88,8 @@ function LevelCard({
   showProjectedRanks = false,
   onClick,
   cornerActions = null,
+  onJumpToList = null,
+  isJumpHighlight = false,
 }) {
   const displayedDate = timelineDateLabel ?? formatDate(a.date);
   const displayedName = asDisplayString(a.name);
@@ -132,6 +134,8 @@ function LevelCard({
     showcaseVideo: a.showcaseVideo,
     video: a.video,
     levelID: a.levelID,
+    // LevelList already window-virtualizes; skip a second IntersectionObserver.
+    lazy: false,
     enabled: true,
   });
 
@@ -139,13 +143,22 @@ function LevelCard({
     onClick(a);
   }, [onClick, a]);
 
+  const handleJumpClick = useCallback(
+    (e) => {
+      e.stopPropagation();
+      onJumpToList?.(a);
+    },
+    [onJumpToList, a],
+  );
+
+  const showJumpButton = typeof onJumpToList === "function";
   const showCornerNote = hasNotes(a.notes);
   const showCornerActions = showCornerNote || Boolean(cornerActions);
 
   return (
     <article
       ref={thumbnailRef}
-      className={`card${isPodium ? ` is-podium is-podium--${podiumPlace}` : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}`}
+      className={`card${isPodium ? ` is-podium is-podium--${podiumPlace}` : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}${showJumpButton ? " has-jump-tab" : ""}${isJumpHighlight ? " is-jump-highlight" : ""}`}
       style={
         loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
       }
@@ -200,6 +213,18 @@ function LevelCard({
           </div>
 
           <div className="card__detail-bottom">
+            {showJumpButton && (
+              <button
+                type="button"
+                className="card__jump-tab"
+                onClick={handleJumpClick}
+                title="Clear search/filters and jump to this spot in the full list"
+                aria-label="Jump to list position"
+              >
+                <i className="fas fa-location-crosshairs" aria-hidden="true" />
+                <span className="card__jump-tab__label">Jump</span>
+              </button>
+            )}
             <div className="card__stats">
               {typeof a.levelID === "number" && Number.isFinite(a.levelID) && (
                 <div>

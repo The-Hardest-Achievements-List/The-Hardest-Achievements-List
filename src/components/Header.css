@@ -6,8 +6,8 @@
     z-index: 100;
     --hd-height: 96px;
     padding: 28px 48px 0;
-    background: oklch(8.5% 0.018 280 / 0.92);
-    backdrop-filter: blur(20px);
+    /* Opaque enough that backdrop-filter is wasted cost on every scroll frame. */
+    background: oklch(8.5% 0.018 280 / 0.97);
     border-bottom: 1px solid var(--line);
 }
 

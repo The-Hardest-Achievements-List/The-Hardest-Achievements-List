@@ -438,23 +438,6 @@
     --corner-btn-scale: calc(var(--corner-ui-scale, 1) * 0.95);
 }
 
-.card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    height: calc(180px * var(--card-height, 1));
-    background: var(--bg-2);
-    border: 1px solid var(--line);
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: border-color 0.2s;
-}
-
-.card:hover {
-    border-color: var(--line-2);
-}
-
 .list__projection-banner {
     display: flex;
     align-items: center;
@@ -487,14 +470,21 @@
 }
 
 .list__window {
+    position: relative;
+    width: 100%;
+    /* Keep scroll height stable while the visible slice is transform-offset. */
+    contain: layout style;
+}
+
+.list__slice {
     display: flex;
     flex-direction: column;
     gap: var(--list-gap, 14px);
     width: 100%;
 }
 
-.list__window > .card,
-.list__window > .grouped-achievement {
+.list__slice > .card,
+.list__slice > .grouped-achievement {
     flex: 0 0 auto;
 }
 
@@ -513,6 +503,8 @@
     cursor: pointer;
     transition: border-color 0.2s;
     margin: 0 auto;
+    /* Isolate card paint so scroll doesn't re-rasterize neighbors. */
+    contain: layout style paint;
 }
 
 .card:hover {
@@ -596,22 +588,28 @@
     border-right: 1px solid #101113;
 }
 
-/* Blurred thumb sits on its own layer and bleeds past the clip edge so
-   backdrop/filter undersampling can't leave bright pixels at the rim. */
+/* Soft thumb wash without a full-size blur:
+   paint at ~half size, tiny blur, then scale up. Same look, far cheaper. */
 .card__content::after {
     content: '';
     position: absolute;
-    inset: -24px;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
     background-image: var(--thumb-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(10px) brightness(0.35) saturate(0.6);
+    filter: blur(3px) brightness(0.3) saturate(0.55);
+    transform: translate(-50%, -50%) scale(2.35);
+    transform-origin: center;
+    opacity: 0.9;
     pointer-events: none;
     z-index: 0;
 }
 
-/* Opaque scrim on top of the blur â€” guarantees coverage even if blur fails. */
+/* Opaque scrim on top of the wash. */
 .card__content::before {
     content: '';
     position: absolute;
@@ -753,6 +751,7 @@
 }
 
 .card__detail-bottom {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: calc(8px * var(--card-detail-bottom-scale, 1));
@@ -781,6 +780,87 @@
     min-height: calc(26px * var(--corner-btn-scale, 1));
     justify-content: center;
     box-sizing: border-box;
+}
+
+/* Jump sits on the right, exactly above the stats divider line */
+.card__jump-tab {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(5px * var(--corner-btn-scale, 1));
+    margin: 0;
+    padding: calc(4px * var(--corner-btn-scale, 1)) calc(9px * var(--corner-btn-scale, 1));
+    border: 1px solid oklch(100% 0 0 / 0.18);
+    border-radius: calc(6px * var(--corner-btn-scale, 1));
+    background: oklch(14% 0.012 260 / 0.92);
+    color: oklch(90% 0.01 280);
+    font-family: var(--mono);
+    font-size: calc(10px * var(--corner-btn-scale, 1));
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow:
+        0 2px 8px oklch(0% 0 0 / 0.35),
+        inset 0 1px 0 oklch(100% 0 0 / 0.08);
+    transform: translateY(calc(-100% - 6px));
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        background 0.12s,
+        border-color 0.12s,
+        color 0.12s,
+        box-shadow 0.12s;
+}
+
+.card:hover .card__jump-tab,
+.card:focus-within .card__jump-tab,
+.card__jump-tab:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card__jump-tab:hover,
+.card__jump-tab:focus-visible {
+    background: oklch(18% 0.016 260 / 0.96);
+    border-color: oklch(78% 0.13 75 / 0.55);
+    color: var(--acc);
+    box-shadow:
+        0 3px 12px oklch(0% 0 0 / 0.4),
+        0 0 0 1px oklch(78% 0.13 75 / 0.18),
+        inset 0 1px 0 oklch(100% 0 0 / 0.1);
+}
+
+.card__jump-tab:focus-visible {
+    outline: 2px solid var(--acc);
+    outline-offset: 2px;
+}
+
+.card.is-jump-highlight,
+.grouped-achievement.is-jump-highlight > .grouped-achievement__main > .card {
+    box-shadow:
+        0 0 0 2px oklch(78% 0.13 75 / 0.85),
+        0 0 24px oklch(78% 0.13 75 / 0.28);
+    animation: card-jump-pulse 1.8s ease-out;
+}
+
+@keyframes card-jump-pulse {
+    0% {
+        box-shadow:
+            0 0 0 2px oklch(78% 0.13 75 / 1),
+            0 0 28px oklch(78% 0.13 75 / 0.4);
+    }
+    100% {
+        box-shadow:
+            0 0 0 0 oklch(78% 0.13 75 / 0),
+            0 0 0 oklch(78% 0.13 75 / 0);
+    }
 }
 
 @media (min-width: 641px) {
@@ -813,7 +893,7 @@
     border-radius: calc(6px * var(--corner-btn-scale, 1));
     text-transform: uppercase;
     color: oklch(88% 0.006 280);
-    background: oklch(16% 0.010 260 / 0.72);
+    background: oklch(16% 0.010 260 / 0.92);
     border: 1px solid oklch(100% 0 0 / 0.16);
     box-shadow:
         0 1px 2px oklch(0% 0 0 / 0.18),
@@ -821,8 +901,6 @@
     display: inline-flex;
     align-items: center;
     flex-shrink: 0;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
     cursor: help;
 }
@@ -861,8 +939,6 @@
 .card__tags .card__note-tag {
     font-size: calc(10px * var(--card-detail-bottom-scale, 1));
     border-radius: calc(6px * var(--card-detail-bottom-scale, 1));
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
 }
 
 .card__tags .card__note-tag__btn {

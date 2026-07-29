@@ -23,7 +23,10 @@ import {
   normalizeCountryCode,
   normalizeCountryCodes,
 } from "../utils/countryLeaderboard";
-import { annotateGroupedVariants } from "../utils/groupDuplicates";
+import {
+  annotateGroupedVariants,
+  getDuplicateParentIds,
+} from "../utils/groupDuplicates";
 import achievementsData from "../../data/achievements.json";
 import playerCountriesData from "../../data/playercountries.json";
 import pendingData from "../../data/pending.json";
@@ -237,6 +240,12 @@ function Points({ value }) {
 
 function formatRank(rank) {
   return rank != null ? `#${rank}` : "—";
+}
+
+function formatVariantOf(entry) {
+  const parents = getDuplicateParentIds(entry);
+  if (parents.length === 0) return null;
+  return `Variant of ${parents.join(", ")}`;
 }
 
 function toLevelModalEntry(entry) {
@@ -460,7 +469,7 @@ function AchievementRow({
   entry,
   meta,
   points,
-  isDuplicate = false,
+  isDuplicate = Boolean(entry?.isDuplicate),
   pendingRemoval = entry?.tags?.includes("Pending Removal"),
   isReplacement = Boolean(entry?.isReplacement),
   isPending = isPendingSubmission(entry),
@@ -468,6 +477,9 @@ function AchievementRow({
 }) {
   const clickable = Boolean(onAchievementClick);
   const pointsValue = points ?? entry.points ?? 0;
+  const variantLabel = isDuplicate ? formatVariantOf(entry) : null;
+  const metaLabel =
+    variantLabel && meta ? `${meta} · ${variantLabel}` : (meta ?? variantLabel);
   let statusClass = "";
   if (pendingRemoval) statusClass = " is-pending-removal";
   else if (isReplacement) statusClass = " is-replacement";
@@ -495,10 +507,10 @@ function AchievementRow({
           : undefined
       }
     >
-      <span className="lb__ach-rank">{formatRank(getEntryRank(entry))}</span>
+      <span className="lb__ach-rank">{isDuplicate ? "—" : formatRank(getEntryRank(entry))}</span>
       <div className="lb__ach-info">
         <span className="lb__ach-name">{entry.name}</span>
-        <span className="lb__ach-meta">{meta}</span>
+        <span className="lb__ach-meta">{metaLabel}</span>
       </div>
       <span className="lb__ach-points">
         {points != null ? (

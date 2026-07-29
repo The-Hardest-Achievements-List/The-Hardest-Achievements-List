@@ -2,7 +2,10 @@ import React from "react";
 import LevelCard from "./LevelCard";
 import GroupedLevelCard from "./GroupedLevelCard";
 import SelectDropdown from "./SelectDropdown";
-import { groupAchievementsByDuplicates } from "../utils/groupDuplicates";
+import {
+  getAchievementKey,
+  groupAchievementsByDuplicates,
+} from "../utils/groupDuplicates";
 import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 import { SORT_OPTS, SORT_DIR_OPTS } from "../constants/sortOptions";
 import { ModeToggle, ScaleControls } from "./HeaderControls";
@@ -12,8 +15,10 @@ const LIST_GAP = 14;
 const MOBILE_LIST_GAP = 7;
 const CARD_ROW_HEIGHT = 180;
 const MOBILE_CARD_ROW_HEIGHT = 120;
-const OVERSCAN = 10;
+const OVERSCAN = 4;
 const NARROW_VIEWPORT_QUERY = "(max-width: 640px)";
+const JUMP_SCROLL_HEADER_OFFSET = 96;
+const JUMP_HIGHLIGHT_MS = 1800;
 
 function useIsNarrowViewport() {
   const [isNarrow, setIsNarrow] = React.useState(
@@ -77,7 +82,13 @@ function getAchievementListKey(achievement) {
   return `${achievement.name}::${achievement.player ?? ""}::${achievement.date ?? ""}`;
 }
 
-function useWindowedRange(itemCount, itemHeight, listRef, extraOffsets) {
+function getDocumentTop(el) {
+  if (!el) return 0;
+  const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  return el.getBoundingClientRect().top + scrollY;
+}
+
+function useWindowedRange(itemCount, itemHeight, windowRef, extraOffsets) {
   const [range, setRange] = React.useState({
     start: 0,
     end: Math.min(itemCount, 24),
@@ -86,60 +97,69 @@ function useWindowedRange(itemCount, itemHeight, listRef, extraOffsets) {
   const rafRef = React.useRef(0);
   const scrollingRef = React.useRef(false);
   const scrollEndTimerRef = React.useRef(0);
+  const paramsRef = React.useRef({ itemCount, itemHeight, extraOffsets });
+  paramsRef.current = { itemCount, itemHeight, extraOffsets };
+
+  const measureListTop = React.useCallback(() => {
+    const windowEl = windowRef.current;
+    if (!windowEl) return;
+    // Anchor to the windowed list itself (not the padded <main>) and cache
+    // it. Remeasuring every scroll frame fights mobile browser chrome.
+    listTopRef.current = getDocumentTop(windowEl);
+  }, [windowRef]);
+
+  const updateRange = React.useCallback(() => {
+    const {
+      itemCount: count,
+      itemHeight: height,
+      extraOffsets: offsets,
+    } = paramsRef.current;
+    if (count <= 0 || height <= 0) {
+      setRange({ start: 0, end: 0 });
+      return;
+    }
+
+    const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    // Prefer visualViewport height so mobile URL-bar show/hide doesn't
+    // wildly change how many rows we think are on screen mid-gesture.
+    const viewport =
+      window.visualViewport?.height || window.innerHeight || 800;
+    const listTop = listTopRef.current;
+    let start;
+    let end;
+    if (offsets.length === 0) {
+      start = Math.max(0, Math.floor((scrollY - listTop) / height) - OVERSCAN);
+      end = Math.min(
+        count,
+        Math.ceil((scrollY + viewport - listTop) / height) + OVERSCAN,
+      );
+    } else {
+      start = Math.max(
+        0,
+        findIndexAtOffset(scrollY - listTop, height, offsets) - OVERSCAN,
+      );
+      end = Math.min(
+        count,
+        findIndexAtOffset(scrollY + viewport - listTop, height, offsets) +
+          1 +
+          OVERSCAN,
+      );
+    }
+    setRange((prev) =>
+      prev.start === start && prev.end === end ? prev : { start, end },
+    );
+  }, []);
+
+  const syncRange = React.useCallback(() => {
+    measureListTop();
+    updateRange();
+  }, [measureListTop, updateRange]);
+
+  React.useLayoutEffect(() => {
+    syncRange();
+  }, [itemCount, itemHeight, extraOffsets, syncRange]);
 
   React.useEffect(() => {
-    const measureListTop = () => {
-      const listEl = listRef.current;
-      if (!listEl) return;
-      const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-      // Cache document Y of the list once per layout; recalculating every
-      // scroll frame from getBoundingClientRect fights sticky/chrome motion.
-      listTopRef.current = listEl.getBoundingClientRect().top + scrollY;
-    };
-
-    const updateRange = () => {
-      if (itemCount <= 0 || itemHeight <= 0) {
-        setRange({ start: 0, end: 0 });
-        return;
-      }
-
-      const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-      const viewport = window.innerHeight || 800;
-      const listTop = listTopRef.current;
-      let start;
-      let end;
-      if (extraOffsets.length === 0) {
-        // Fully-collapsed list: keep the original fixed-height math untouched.
-        start = Math.max(
-          0,
-          Math.floor((scrollY - listTop) / itemHeight) - OVERSCAN,
-        );
-        end = Math.min(
-          itemCount,
-          Math.ceil((scrollY + viewport - listTop) / itemHeight) + OVERSCAN,
-        );
-      } else {
-        start = Math.max(
-          0,
-          findIndexAtOffset(scrollY - listTop, itemHeight, extraOffsets) -
-            OVERSCAN,
-        );
-        end = Math.min(
-          itemCount,
-          findIndexAtOffset(
-            scrollY + viewport - listTop,
-            itemHeight,
-            extraOffsets,
-          ) +
-            1 +
-            OVERSCAN,
-        );
-      }
-      setRange((prev) =>
-        prev.start === start && prev.end === end ? prev : { start, end },
-      );
-    };
-
     const onScroll = () => {
       scrollingRef.current = true;
       if (rafRef.current) return;
@@ -148,11 +168,12 @@ function useWindowedRange(itemCount, itemHeight, listRef, extraOffsets) {
         updateRange();
       });
       window.clearTimeout(scrollEndTimerRef.current);
+      // Mark scroll idle only — do NOT remasure list top here. On mobile,
+      // getBoundingClientRect + scrollY drifts while the URL bar animates,
+      // which rewrites spacers and feels like the list jumps upward.
       scrollEndTimerRef.current = window.setTimeout(() => {
         scrollingRef.current = false;
-        measureListTop();
-        updateRange();
-      }, 120);
+      }, 150);
     };
 
     const onResize = () => {
@@ -161,19 +182,22 @@ function useWindowedRange(itemCount, itemHeight, listRef, extraOffsets) {
       updateRange();
     };
 
-    measureListTop();
-    updateRange();
+    const visualViewport = window.visualViewport;
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
+    // visualViewport resize fires for URL-bar changes without a layout
+    // resize; ignore while the user is mid-scroll to avoid spacer jumps.
+    visualViewport?.addEventListener("resize", onResize);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
+      visualViewport?.removeEventListener("resize", onResize);
       if (rafRef.current) window.cancelAnimationFrame(rafRef.current);
       window.clearTimeout(scrollEndTimerRef.current);
     };
-  }, [itemCount, itemHeight, listRef, extraOffsets]);
+  }, [measureListTop, updateRange]);
 
-  return range;
+  return { ...range, syncRange, scrollingRef };
 }
 
 export default function LevelList({
@@ -201,9 +225,14 @@ export default function LevelList({
   setMode,
   listKind = null,
   otherList = [],
+  showJumpToList = false,
+  onJumpToList = null,
+  pendingJumpKey = null,
+  onJumpHandled = null,
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
-  const listRef = React.useRef(null);
+  const [highlightKey, setHighlightKey] = React.useState(null);
+  const jumpHandledKeyRef = React.useRef(null);
   const safeData = Array.isArray(data) ? data : [];
   const { mainAchievements } = React.useMemo(
     () =>
@@ -228,10 +257,17 @@ export default function LevelList({
     },
     [onCardClick, getTimelineDateLabel],
   );
+  const handleJumpToList = React.useCallback(
+    (achievement) => {
+      onJumpToList?.(achievement);
+    },
+    [onJumpToList],
+  );
   const safeAllTags = Array.isArray(allTags) ? allTags : [];
   const isNarrow = useIsNarrowViewport();
   const itemHeight = getItemHeight(cardScale, isNarrow);
   const windowRef = React.useRef(null);
+  const sliceRef = React.useRef(null);
   // Measured extra height (beyond the base row height) of grouped cards whose
   // duplicates are currently expanded, keyed by achievement list key.
   const [expandedExtras, setExpandedExtras] = React.useState(() => new Map());
@@ -246,30 +282,88 @@ export default function LevelList({
     return offsets;
   }, [expandedExtras, mainAchievements]);
 
-  const { start, end } = useWindowedRange(
+  const { start, end, syncRange, scrollingRef } = useWindowedRange(
     mainAchievements.length,
     itemHeight,
-    listRef,
+    windowRef,
     extraOffsets,
   );
-  const topSpacer = start * itemHeight + sumExtrasBefore(extraOffsets, start);
-  const bottomSpacer = Math.max(
-    0,
-    (mainAchievements.length - end) * itemHeight +
-      sumExtrasFrom(extraOffsets, end),
-  );
+  const offsetY = start * itemHeight + sumExtrasBefore(extraOffsets, start);
+  const totalHeight =
+    mainAchievements.length * itemHeight +
+    sumExtrasFrom(extraOffsets, 0);
   const visibleAchievements = mainAchievements.slice(start, end);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
+    if (!pendingJumpKey) {
+      jumpHandledKeyRef.current = null;
+      return;
+    }
+    if (jumpHandledKeyRef.current === pendingJumpKey) return;
+    if (showJumpToList) return;
+
+    const index = mainAchievements.findIndex(
+      (achievement) => getAchievementKey(achievement) === pendingJumpKey,
+    );
+    if (index < 0) {
+      jumpHandledKeyRef.current = pendingJumpKey;
+      onJumpHandled?.();
+      return;
+    }
+
+    jumpHandledKeyRef.current = pendingJumpKey;
     const windowEl = windowRef.current;
-    if (!windowEl) return undefined;
+    const listTop = windowEl ? getDocumentTop(windowEl) : 0;
+    const targetY = Math.max(
+      0,
+      listTop +
+        index * itemHeight +
+        sumExtrasBefore(extraOffsets, index) -
+        JUMP_SCROLL_HEADER_OFFSET,
+    );
+
+    // Instant scroll — smooth animation adds a long wait after the list expands.
+    window.scrollTo({ top: targetY, behavior: "auto" });
+    // Keep the virtualized window in sync before paint so the target card exists.
+    syncRange();
+    setHighlightKey(getAchievementListKey(mainAchievements[index]));
+    onJumpHandled?.();
+  }, [
+    pendingJumpKey,
+    showJumpToList,
+    mainAchievements,
+    itemHeight,
+    extraOffsets,
+    onJumpHandled,
+    syncRange,
+  ]);
+
+  React.useEffect(() => {
+    if (!highlightKey) return undefined;
+    const clearHighlight = window.setTimeout(() => {
+      setHighlightKey(null);
+    }, JUMP_HIGHLIGHT_MS);
+    return () => window.clearTimeout(clearHighlight);
+  }, [highlightKey]);
+
+  React.useEffect(() => {
+    const sliceEl = sliceRef.current;
+    if (!sliceEl) return undefined;
 
     const gap = isNarrow ? MOBILE_LIST_GAP : LIST_GAP;
     const collapsedRowHeight = itemHeight - gap;
+    let measureRaf = 0;
 
     const measureExpandedExtras = () => {
+      if (scrollingRef.current) return;
+      // Fast path: nothing expanded in the visible slice.
+      if (!sliceEl.querySelector(".grouped-achievement__duplicates")) {
+        setExpandedExtras((prev) => (prev.size === 0 ? prev : new Map()));
+        return;
+      }
+
       const next = new Map();
-      const children = windowEl.children;
+      const children = sliceEl.children;
       // Rendered children map 1:1 (in order) to the visible slice.
       for (let offset = 0; offset < children.length; offset += 1) {
         const child = children[offset];
@@ -297,17 +391,27 @@ export default function LevelList({
       });
     };
 
+    const scheduleMeasure = () => {
+      if (measureRaf) return;
+      measureRaf = window.requestAnimationFrame(() => {
+        measureRaf = 0;
+        measureExpandedExtras();
+      });
+    };
+
     measureExpandedExtras();
     if (typeof ResizeObserver === "undefined") return undefined;
-    const observer = new ResizeObserver(measureExpandedExtras);
-    observer.observe(windowEl);
-    return () => observer.disconnect();
-  }, [mainAchievements, start, end, itemHeight, isNarrow]);
+    const observer = new ResizeObserver(scheduleMeasure);
+    observer.observe(sliceEl);
+    return () => {
+      observer.disconnect();
+      if (measureRaf) window.cancelAnimationFrame(measureRaf);
+    };
+  }, [mainAchievements, start, end, itemHeight, isNarrow, scrollingRef]);
 
   return (
     <>
       <main
-        ref={listRef}
         className={`list list--card${sidebarCollapsed ? " is-sidebar-collapsed" : ""}`}
         style={{ "--card-height": cardScale, "--card-width": cardWidth }}
       >
@@ -363,7 +467,7 @@ export default function LevelList({
                 return (
                   <button
                     key={t}
-                    className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""} ${def.className || ""}`}
+                    className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""}${def.className ? ` ${def.className}` : ""}`}
                     onClick={() => toggleTag(t)}
                   >
                     <Tooltip text={def.tooltip}>
@@ -399,44 +503,54 @@ export default function LevelList({
           <div
             ref={windowRef}
             className="list__window"
-            style={{
-              paddingTop: topSpacer,
-              paddingBottom: bottomSpacer,
-            }}
+            style={{ height: totalHeight }}
           >
-            {visibleAchievements.map((a, offset) => {
-              const i = start + offset;
-              // Prefer stable listRank so filtered/sorted views keep correct
-              // badges; fall back to visual index (pending estimate order).
-              const cardIndex = a.listRank != null ? a.listRank - 1 : i;
-              const itemKey = `${listKey ?? "list"}::${getAchievementListKey(a)}`;
-              return a.hasDuplicates ? (
-                <GroupedLevelCard
-                  key={itemKey}
-                  achievement={a}
-                  duplicates={a.duplicates}
-                  index={cardIndex}
-                  isTimeline={isTimeline}
-                  getTimelineDateLabel={getTimelineDateLabel}
-                  isPendingEstimate={isPendingEstimate}
-                  pendingMainCount={pendingMainCount}
-                  showProjectedRanks={showProjectedRanks}
-                  onClick={handleCardClick}
-                />
-              ) : (
-                <LevelCard
-                  key={itemKey}
-                  achievement={a}
-                  index={cardIndex}
-                  isTimeline={isTimeline}
-                  timelineDateLabel={getTimelineDateLabel(a)}
-                  isPendingEstimate={isPendingEstimate}
-                  pendingMainCount={pendingMainCount}
-                  showProjectedRanks={showProjectedRanks}
-                  onClick={handleCardClick}
-                />
-              );
-            })}
+            <div
+              ref={sliceRef}
+              className="list__slice"
+              style={{ transform: `translateY(${offsetY}px)` }}
+            >
+              {visibleAchievements.map((a, offset) => {
+                const i = start + offset;
+                // Prefer stable listRank so filtered/sorted views keep correct
+                // badges; fall back to visual index (pending estimate order).
+                const cardIndex = a.listRank != null ? a.listRank - 1 : i;
+                const itemKey = `${listKey ?? "list"}::${getAchievementListKey(a)}`;
+                const isJumpHighlight =
+                  highlightKey != null &&
+                  highlightKey === getAchievementListKey(a);
+                return a.hasDuplicates ? (
+                  <GroupedLevelCard
+                    key={itemKey}
+                    achievement={a}
+                    duplicates={a.duplicates}
+                    index={cardIndex}
+                    isTimeline={isTimeline}
+                    getTimelineDateLabel={getTimelineDateLabel}
+                    isPendingEstimate={isPendingEstimate}
+                    pendingMainCount={pendingMainCount}
+                    showProjectedRanks={showProjectedRanks}
+                    onClick={handleCardClick}
+                    onJumpToList={showJumpToList ? handleJumpToList : null}
+                    isJumpHighlight={isJumpHighlight}
+                  />
+                ) : (
+                  <LevelCard
+                    key={itemKey}
+                    achievement={a}
+                    index={cardIndex}
+                    isTimeline={isTimeline}
+                    timelineDateLabel={getTimelineDateLabel(a)}
+                    isPendingEstimate={isPendingEstimate}
+                    pendingMainCount={pendingMainCount}
+                    showProjectedRanks={showProjectedRanks}
+                    onClick={handleCardClick}
+                    onJumpToList={showJumpToList ? handleJumpToList : null}
+                    isJumpHighlight={isJumpHighlight}
+                  />
+                );
+              })}
+            </div>
           </div>
         )}
       </main>

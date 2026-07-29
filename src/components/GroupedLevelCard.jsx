@@ -13,6 +13,8 @@ function GroupedLevelCard({
   pendingMainCount = 0,
   showProjectedRanks,
   onClick,
+  onJumpToList = null,
+  isJumpHighlight = false,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const duplicatesRegionId = useId();
@@ -57,7 +59,9 @@ function GroupedLevelCard({
   ) : null;
 
   return (
-    <div className="grouped-achievement">
+    <div
+      className={`grouped-achievement${isJumpHighlight ? " is-jump-highlight" : ""}`}
+    >
       <div className="grouped-achievement__main">
         <LevelCard
           achievement={mainAchievement}
@@ -68,6 +72,8 @@ function GroupedLevelCard({
           pendingMainCount={pendingMainCount}
           showProjectedRanks={showProjectedRanks}
           onClick={onClick}
+          onJumpToList={onJumpToList}
+          isJumpHighlight={isJumpHighlight}
           cornerActions={variantToggle}
         />
       </div>
@@ -95,6 +101,7 @@ function GroupedLevelCard({
                 pendingMainCount={pendingMainCount}
                 showProjectedRanks={showProjectedRanks}
                 onClick={onClick}
+                onJumpToList={onJumpToList}
               />
             </div>
           ))}
