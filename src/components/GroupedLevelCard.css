@@ -132,7 +132,6 @@
 
 .grouped-achievement__duplicate-item .card {
   cursor: pointer;
-  /* Fill the scaled wrapper; Scale X/Y come from --card-width / --card-height. */
   width: 100%;
   max-width: 100%;
   margin: 0;

@@ -1,6 +1,4 @@
-﻿/* Styles for the Leaderboard page (src/pages/LeaderboardPage.jsx). */
-
-.lb {
+﻿.lb {
     position: relative;
     z-index: 1;
     max-width: 960px;

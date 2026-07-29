@@ -205,9 +205,7 @@ function filterEntriesByFamilySemantics(
   const passesHostExcludes = (entry) =>
     entryMatchesActiveTags(entry, [], excludeTags);
 
-  // Parents whose own fields matched search (full family expand roots).
   const searchExpandParentKeys = new Set();
-  // Parents pulled only so a matching child / pending replacement can nest.
   const hostParentKeys = new Set(
     seedHostParentKeys.filter(Boolean).map((key) => key),
   );
@@ -237,7 +235,6 @@ function filterEntriesByFamilySemantics(
         return searchExpandParentKeys.has(key) || hostParentKeys.has(key);
       }
 
-      // Full family expand when the parent matched search.
       return parentIds.some((parentRef) =>
         searchExpandParentKeys.has(getAchievementKey({ name: parentRef })),
       );
@@ -289,7 +286,6 @@ function filterEntriesByFamilySemantics(
       if (hostParentKeys.has(key)) return passesHostExcludes(entry);
       return passesTags(entry);
     }
-    // Inherit parent tag pass while that expanding parent is still present.
     if (
       parentIds.some((parentRef) =>
         expandingParentKeys.has(getAchievementKey({ name: parentRef })),

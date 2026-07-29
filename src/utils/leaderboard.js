@@ -182,7 +182,6 @@ function resolveListPositionFromMaps(nameKey, classicMap, platformerMap) {
 }
 
 export function resolveAchievementListPosition(entry, classicMap, platformerMap) {
-  // Parents are in the position maps; prefer own rank when present.
   const ownRank = resolveListPositionFromMaps(
     normalizeNameKey(entry.name),
     classicMap,
@@ -305,7 +304,6 @@ export function buildPlayerBoard(entries, playerCountries = null) {
 
           return {
             ...entry,
-            // Attribute anonymous entries to the shadow-realm placeholder.
             player: isShadowRealm ? SHADOW_REALM_PLAYER : entry.player,
             // Display rank matches the XP tier (own rank, or parent for variants).
             listPosition: xpPosition,

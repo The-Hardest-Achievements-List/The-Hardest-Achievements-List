@@ -1,6 +1,4 @@
-﻿/* Styles for the Home page (src/pages/HomePage.jsx). */
-
-.home {
+﻿.home {
     position: relative;
     z-index: 1;
     max-width: 900px;

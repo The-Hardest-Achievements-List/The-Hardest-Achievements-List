@@ -1,6 +1,4 @@
-﻿/* Styles for the site-wide Header component (src/components/Header.jsx). */
-
-.hd {
+﻿.hd {
     position: sticky;
     top: 0;
     z-index: 100;

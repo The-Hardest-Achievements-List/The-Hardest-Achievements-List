@@ -12,7 +12,6 @@ const Chevron = () => (
 );
 
 /**
- * Shared custom select used by Header, LevelList, and Leaderboard.
  * Pass className prefixes via `variant`: "hd" | "hd-drawer" | "hd-compact" | "lb".
  */
 export default function SelectDropdown({

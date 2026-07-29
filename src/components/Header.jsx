@@ -268,7 +268,6 @@ export default function Header({
       const available = row.clientWidth;
 
       if (compactNavRef.current) {
-        // Expand once there is clear room for the full desktop header.
         if (needed + NAV_FIT_SLACK <= available) setCompact(false);
         return;
       }

@@ -268,8 +268,6 @@ export default function LevelList({
   const itemHeight = getItemHeight(cardScale, isNarrow);
   const windowRef = React.useRef(null);
   const sliceRef = React.useRef(null);
-  // Measured extra height (beyond the base row height) of grouped cards whose
-  // duplicates are currently expanded, keyed by achievement list key.
   const [expandedExtras, setExpandedExtras] = React.useState(() => new Map());
 
   const extraOffsets = React.useMemo(() => {
@@ -356,7 +354,6 @@ export default function LevelList({
 
     const measureExpandedExtras = () => {
       if (scrollingRef.current) return;
-      // Fast path: nothing expanded in the visible slice.
       if (!sliceEl.querySelector(".grouped-achievement__duplicates")) {
         setExpandedExtras((prev) => (prev.size === 0 ? prev : new Map()));
         return;

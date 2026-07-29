@@ -36,7 +36,6 @@ export function formatDisplayVersion(value) {
     return null
 }
 
-/** Clean note parts from a string or string[]. */
 export function getNotesParts(notes) {
     if (typeof notes === 'string') {
         const trimmed = notes.trim()
@@ -51,14 +50,12 @@ export function getNotesParts(notes) {
     return []
 }
 
-/** Max tooltip width in px, scaled to the viewport. */
 export function getNotesTooltipMaxWidth() {
     if (typeof window === 'undefined') return 260
     // Keep the hover panel modest vs screen: ~44vw, hard-capped.
     return Math.max(180, Math.min(260, Math.floor(window.innerWidth * 0.44), window.innerWidth - 32))
 }
 
-/** Approx. chars that fit in the note tooltip at the current viewport width. */
 export function getNotesPreviewMaxLength() {
     const tooltipMaxWidth = getNotesTooltipMaxWidth()
     // ~6.5px per character at 12px; keep about 3–3.5 lines of preview.
@@ -94,17 +91,12 @@ export function truncateNotesPreview(text, maxLength) {
     return { text: `${cut.slice(0, boundary).trimEnd()}…`, truncated: true }
 }
 
-/**
- * Hover/preview text: full string (possibly length-truncated), or only the
- * first array element (also length-truncated when needed).
- */
 export function getNotesPreview(notes, maxLength = getNotesPreviewMaxLength()) {
     const parts = getNotesParts(notes)
     if (!parts.length) return null
     return truncateNotesPreview(parts[0], maxLength).text
 }
 
-/** True when hover preview hides more content than it shows. */
 export function hasNotesBeyondPreview(notes, maxLength = getNotesPreviewMaxLength()) {
     const parts = getNotesParts(notes)
     if (parts.length > 1) return true
@@ -112,12 +104,10 @@ export function hasNotesBeyondPreview(notes, maxLength = getNotesPreviewMaxLengt
     return false
 }
 
-/** Extra array items beyond the first previewed note. */
 export function getNotesExtraCount(notes) {
     return Math.max(0, getNotesParts(notes).length - 1)
 }
 
-/** Modal/full text: full string, or all array elements joined. */
 export function getNotesFullText(notes) {
     const parts = getNotesParts(notes)
     return parts.length ? parts.join('\n\n') : null
@@ -328,7 +318,6 @@ export function getYouTubeEmbedUrl(url) {
     return start != null ? `${base}?start=${start}` : base
 }
 
-/** True for YouTube / Twitch achievement video links. */
 export function isWatchableAchievementUrl(url) {
     if (!url || typeof url !== 'string') return false
     if (getYouTubeVideoId(url)) return true

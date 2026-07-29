@@ -1,7 +1,4 @@
-﻿/* Styles for the level detail modal (src/components/LevelModal.jsx).
-   .lbl/.val are also reused by LevelCard.jsx for the stat rows on each card. */
-
-.lbl {
+﻿.lbl {
     font-family: var(--mono);
     font-size: 0.643em;
     letter-spacing: 0.18em;

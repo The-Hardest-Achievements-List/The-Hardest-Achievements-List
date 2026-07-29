@@ -1,9 +1,3 @@
-/* This file was split into smaller, co-located partials for readability.
-   The partials below are concatenated in this exact order at build time via
-   @import, so the resulting cascade is byte-for-byte identical to the
-   original single-file stylesheet (only the previously scattered
-   `.scroll-top-btn` rule was relocated into base.css, since it belongs to
-   the global App shell rather than any single page/component). */
 @import "./styles/base.css";
 @import "./components/Header.css";
 @import "./components/LevelList.css";

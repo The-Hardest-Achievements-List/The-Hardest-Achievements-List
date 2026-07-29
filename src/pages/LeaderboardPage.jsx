@@ -363,7 +363,6 @@ function buildDefaultBoards() {
 
 let cachedDefaultBoards = null;
 
-/** Boards are built lazily on first use (not at module import) and cached. */
 export function getDefaultBoards() {
   if (!cachedDefaultBoards) cachedDefaultBoards = buildDefaultBoards();
   return cachedDefaultBoards;

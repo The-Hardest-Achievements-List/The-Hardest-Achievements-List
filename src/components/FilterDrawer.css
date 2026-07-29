@@ -1,9 +1,4 @@
-﻿/* Styles for the mobile filter drawer (src/components/FilterDrawer.jsx),
-   including the compact-nav/narrow-viewport breakpoints that adjust the
-   Header, level list, and modal together whenever the drawer replaces the
-   desktop controls. */
-
-.flt-overlay {
+﻿.flt-overlay {
     position: fixed;
     inset: 0;
     z-index: 300;
@@ -213,7 +208,6 @@
     padding: 0 4px;
 }
 
-/* Header Filters button replaces the sidebar whenever compact nav is active */
 .app:has(.hd--compact-nav) .list__sidebar {
     display: none;
 }
@@ -578,9 +572,6 @@
         justify-content: center;
     }
 }
-
-/* (the global .scroll-top-btn rule that used to sit here now lives in
-   styles/base.css, since it belongs to the App shell, not the drawer) */
 
 .flt-sort-btns {
     display: grid;

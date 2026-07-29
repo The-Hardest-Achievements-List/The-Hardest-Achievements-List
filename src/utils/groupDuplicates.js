@@ -19,9 +19,6 @@ function hasTag(achievement, tagName) {
   return getAchievementTags(achievement).includes(tagName);
 }
 
-/**
- * Normalize duplicateOf (string | string[] | null) into a unique list of parent names.
- */
 export function getDuplicateParentIds(achievement) {
   const raw = achievement?.duplicateOf;
   if (raw == null || raw === "") return [];
@@ -59,7 +56,6 @@ export function getParentKeysInList(achievements) {
   );
 }
 
-/** True when at least one duplicateOf parent exists in the same list. */
 export function isSameListVariant(
   achievement,
   achievements,
@@ -185,10 +181,6 @@ function findParentInList(parentRef, list) {
   );
 }
 
-/**
- * Main-list parents that this pending child validly replaces.
- * Supports duplicateOf as a string or string[].
- */
 export function getCrossListReplacementParents(child, mainList, listSrc = {}) {
   if (!isDuplicateAchievement(child)) return [];
 
@@ -212,9 +204,6 @@ export function getCrossListReplacementParents(child, mainList, listSrc = {}) {
   return parents;
 }
 
-/**
- * True when a pending entry is a valid replacement of at least one main-list parent.
- */
 export function isCrossListReplacementChild(child, mainList, listSrc = {}) {
   return getCrossListReplacementParents(child, mainList, listSrc).length > 0;
 }

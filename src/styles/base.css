@@ -1,7 +1,4 @@
-﻿/* Global reset, CSS variables, Font Awesome fixes, and the App shell
-   (background layers + scroll-to-top button). Imported first by styles.css. */
-
-*,
+﻿*,
 *::before,
 *::after {
     box-sizing: border-box;
