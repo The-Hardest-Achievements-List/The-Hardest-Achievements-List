@@ -833,7 +833,7 @@
     ]
   },
   {
-    "name": "Sonic Wave 72%",
+    "name": "Sonic Wave (Cyclic) 72%",
     "player": "Mefewe",
     "levelID": 26681070,
     "date": "2015-12-08",
@@ -851,6 +851,26 @@
       "Level",
       "Progress",
       "Rated"
+    ]
+  },
+  {
+    "name": "Sonic Wave (Cyclic) 49%",
+    "player": "Mefewe",
+    "levelID": 102063440,
+    "date": "2015-10-??",
+    "length": 59,
+    "version": 1.9, 
+    "submitter": "Anceps",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/omlnzqofRXg",
+    "showcaseVideo": "https://youtu.be/gOsHTH8BhQ4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
