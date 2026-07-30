@@ -597,23 +597,37 @@ export default function App() {
   const hasListContextFilter =
     Boolean(search.trim()) || activeTags.size > 0;
 
-  const jumpToListPosition = useCallback((achievement) => {
-    if (!achievement) return;
+  const jumpToListPosition = useCallback(
+    (achievement) => {
+      if (!achievement) return;
 
-    // Same-list variants nest under a parent after filters clear — scroll there.
-    let targetKey = getAchievementKey(achievement);
-    if (achievement.isGroupedVariant) {
-      const parentIds = getDuplicateParentIds(achievement);
-      if (parentIds.length > 0) {
-        targetKey = getAchievementKey({ name: parentIds[0] });
+      // Replacements live on pending — jump there instead of failing on main.
+      const jumpToPending = Boolean(achievement.isReplacement);
+      let targetKey = getAchievementKey(achievement);
+
+      // Same-list variants nest under a parent after filters clear — scroll there.
+      // Replacements keep their own key so pending list can find them.
+      if (!jumpToPending && achievement.isGroupedVariant) {
+        const parentIds = getDuplicateParentIds(achievement);
+        if (parentIds.length > 0) {
+          targetKey = getAchievementKey({ name: parentIds[0] });
+        }
       }
-    }
 
-    // Sync updates — startTransition would deprioritize the clear+scroll and feel laggy.
-    setPendingJumpKey(targetKey);
-    setSearch("");
-    setActiveTags(new Map());
-  }, []);
+      // Sync updates — startTransition would deprioritize the clear+scroll and feel laggy.
+      setPendingJumpKey(targetKey);
+      setSearch("");
+      setActiveTags(new Map());
+
+      if (jumpToPending && active !== "PENDING") {
+        const modeSlug = mode === "platformer" ? "plat" : "classic";
+        history.pushState({}, "", `/${modeSlug}/pending`);
+        // Sync route (not startTransition) so the pending list mounts with the jump key.
+        setRoute({ mode, active: "PENDING" });
+      }
+    },
+    [active, mode],
+  );
 
   const clearPendingJump = useCallback(() => {
     setPendingJumpKey(null);
@@ -622,7 +636,8 @@ export default function App() {
   useEffect(() => {
     setSearch("");
     setActiveTags(new Map());
-    setPendingJumpKey(null);
+    // Do not clear pendingJumpKey here — Jump may switch MAIN → PENDING with the
+    // key already set; LevelList clears it after scrolling (or on a miss).
     if (!NO_LIST.has(active)) {
       setSort("rank");
       setSortDir("asc");
@@ -630,8 +645,12 @@ export default function App() {
   }, [active, mode]);
 
   useEffect(() => {
+    // Jump scrolls to the target card; don't yank back to top on the same nav.
+    if (pendingJumpKey) return;
     window.scrollTo(0, 0);
     setShowScrollTop(false);
+    // pendingJumpKey is read as a same-render gate only; must not re-fire when Jump clears it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- list change only
   }, [active, mode]);
 
   const activeTagLists = useMemo(() => {

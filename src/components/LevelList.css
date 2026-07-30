@@ -810,8 +810,8 @@
         box-shadow 0.12s;
 }
 
+/* Hover only — not :focus-within, or clicking variant/note leaves Jump stuck visible. */
 .card:hover .card__jump-tab,
-.card:focus-within .card__jump-tab,
 .card__jump-tab:focus-visible {
     opacity: 1;
     pointer-events: auto;

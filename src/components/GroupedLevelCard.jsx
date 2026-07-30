@@ -22,6 +22,8 @@ function GroupedLevelCard({
   const handleToggleExpanded = useCallback((e) => {
     e.stopPropagation();
     setIsExpanded((prev) => !prev);
+    // Pointer clicks leave focus on the toggle; blur so the card doesn't look hovered.
+    if (e.detail > 0) e.currentTarget.blur();
   }, []);
 
   const hasVariants = duplicates && duplicates.length > 0;
