@@ -598,7 +598,7 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
+    "name": "Africa Circles (Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-18",
@@ -918,7 +918,7 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox) 14-100%",
+    "name": "Africa Circles (Unnerfed) 14-100%",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-03",
@@ -1361,7 +1361,27 @@
     ]
   },
   {
-    "name": "Africa Circles (ChopBlox) 61%",
+    "name": "The Bloop",
+    "player": "Zoink",
+    "levelID": 135661111,
+    "date": "2026-03-14",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/H8GPB9L97Cs?t=6748",
+    "showcaseVideo": "https://youtu.be/_KxiuJofGWM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Africa Circles (Unnerfed) 61%",
     "player": "ChopBlox",
     "levelID": 68549629,
     "date": "2026-05-20",
@@ -2192,26 +2212,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "The Bloop",
-    "player": "Zoink",
-    "levelID": 135661111,
-    "date": "2026-03-14",
-    "length": 106,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/H8GPB9L97Cs?t=6748",
-    "showcaseVideo": "https://youtu.be/_KxiuJofGWM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated",
-      "Tentative"
     ]
   },
   {
