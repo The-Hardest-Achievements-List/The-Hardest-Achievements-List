@@ -368,16 +368,36 @@
     ]
   },
   {
-    "name": "Artemis 13 35%",
+    "name": "Artemis 13 61%",
     "player": "Zoink",
     "levelID": null,
-    "date": "2026-07-26",
-    "length": 30,
+    "date": "2026-07-30",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oPqO8WbKAJo?t=6068",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Artemis 13 32-74",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-27",
+    "length": 25,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/ekn9ZcZI6Oc?t=3799",
+    "video": "https://youtu.be/Yg51HLNK_-o?t=2389",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
     "duplicateOf": null,
@@ -468,6 +488,47 @@
     ]
   },
   {
+    "name": "BloodEngine 27-60%,
+    "player": "Karma",
+    "levelID": null,
+    "date": "2026-07-28",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0xQ6Ek8Ew8g",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  }, 
+  {
+    "name": "BloodEngine 38-76%,
+    "player": "Karma",
+    "levelID": null,
+    "date": "2026-07-28",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0xQ6Ek8Ew8g",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  }, 
+
+  {
     "name": "BloodEngine 57-100%",
     "player": "Karma",
     "levelID": null,
@@ -480,6 +541,66 @@
     "video": "https://youtu.be/HbKik90cGSA",
     "showcaseVideo": null,
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bocadillo FD Albondi 49%, 51%, 58% 
+    "player": "nensa",
+    "levelID": 90069457,
+    "date": "2026-07-30",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/APXvn8dxQE4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency
+    ]
+  },
+  {
+    "name": "Bonfire 32-100%",
+    "player": "vvay",
+    "levelID": 88686539,
+    "date": "2026-07-29",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "zFexty",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/d-lL-wN-xdc",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bonfire 32-100%",
+    "player": "vvay",
+    "levelID": 88686539,
+    "date": "2026-07-29",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Ix6_Kr3AHac",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -692,6 +813,27 @@
     ]
   },
   {
+    "name": "Despair Code 99.37% accuracy, 17 deaths",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-07-27",
+    "length": 24,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.youtube.com/shorts/Oh-6KZeDemA?feature=share"
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  }, 
+
+  {
     "name": "Despair Code 35-100%",
     "player": "Infinny",
     "levelID": null,
@@ -858,16 +1000,16 @@
     ]
   },
   {
-    "name": "Eternal Night 37%",
+    "name": "Eternal Night 43%",
     "player": "Al3xTT",
     "levelID": 73011766,
-    "date": "2026-07-21",
-    "length": 34,
+    "date": "2026-07-31",
+    "length": 40,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/wPCb6prtlqM",
+    "video": "https://youtu.be/mkeBeHo1J8E",
     "showcaseVideo": "https://youtu.be/zj6dKBpQZg8",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1080,6 +1222,26 @@
     ]
   },
   {
+    "name": "FOREST OF SPIKES",
+    "player": "BrianCheese",
+    "levelID": 145709435,
+    "date": "2026-07-26",
+    "length": 109,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WJYh3dW8Bfo",
+    "showcaseVideo": "https://youtu.be/szCliCZQItg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Hades 34%",
     "player": "mariner",
     "levelID": null,
@@ -1153,11 +1315,31 @@
     "video": "https://youtu.be/QL5l70qKd60",
     "showcaseVideo": "https://youtu.be/OzCGe5a5DTY",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/i%20n%20j%20u%20r%20y.png",
-    "duplicateOf": null,
+    "duplicateOf": "i n j u r y (Aug. 2024) 74%",
     "notes": null,
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "invisible cobwebs",
+    "player": "ezzzzka",
+    "levelID": 145275969,
+    "date": "2026-07-28",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/USGhIbIY_GM",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -1653,7 +1835,7 @@
   {
     "name": "Sakupen circles (Old) 120hz Mobile 13 deaths, 99.32% accuracy",
     "player": "ROZE GD",
-    "levelID": 76962930,
+    "levelID": 10887708,
     "date": "2026-07-01",
     "length": 50,
     "version": 2.2,
@@ -1673,16 +1855,16 @@
     ]
   },
   {
-    "name": "Sakupen Circles 120hz Mobile 2 Deaths, 99.95% accuracy",
+    "name": "Sakupen Circles 120hz Mobile 1 death, 99.98% accuracy",
     "player": "ItzAmethyst",
     "levelID": 76962930,
-    "date": "2026-05-12",
+    "date": "2026-05-28",
     "length": 50,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "denkyuzu",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/sEtBCSg-Hqc",
+    "video": "https://youtu.be/-gxbIw0234o",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1819,16 +2001,16 @@
     ]
   },
   {
-    "name": "Silent Acropolis (Hover, ThePurgatory) 84%",
+    "name": "Silent Acropolis (Hover, ThePurgatory) 85%",
     "player": "Hover",
     "levelID": null,
-    "date": "2026-05-26",
-    "length": 62,
+    "date": "2026-07-29",
+    "length": 63,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/0M-cjzSJY7s",
+    "video": "https://youtu.be/BOOJyyTFNI4",
     "showcaseVideo": "https://youtu.be/yJCMeyWPmoA",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111237270",
     "duplicateOf": null,
@@ -1839,16 +2021,16 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 26-86%",
+    "name": "Silent Circles (Starchman) 82%",
     "player": "dewbbs",
     "levelID": null,
     "date": "2026-07-19",
-    "length": 37,
+    "length": 57,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/uAxF8NTg10A",
+    "video": "https://youtu.be/Er1qYZHyVeg",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -2191,19 +2373,19 @@
     ]
   },
   {
-    "name": "Sweeping Demon 2 39-95%",
+    "name": "Sweeping Demon 2 34-100%",
     "player": "Taiago",
     "levelID": null,
-    "date": "2026-07-14",
-    "length": 36,
+    "date": "2026-07-30",
+    "length": 40,
     "version": 2.2,
-    "submitter": "fishcake0031",
+    "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/etENhlTko1U?t=1593",
+    "video": "https://youtu.be/GL3t9xNqkC0",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": null,
+    "duplicateOf": "Sweeping Demon 2 (Mar. 2026) 39-100%",
     "notes": null,
     "tags": [
       "Level",
@@ -2468,6 +2650,46 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": "Video currently pending.",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Yellowpolis 17%",
+    "player": "Drakanja",
+    "levelID": null,
+    "date": null,
+    "length": 25,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/L4WET93RKt0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Those who know...",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Yellowpolis (Old) 19%",
+    "player": "Drakanja",
+    "levelID": null,
+    "date": null,
+    "length": 28,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/f6W2fhSeR_4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
     "tags": [
       "Level",
       "Progress"
