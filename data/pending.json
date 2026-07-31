@@ -506,7 +506,7 @@
       "Level",
       "Progress"
     ]
-  }, 
+  },
   {
     "name": "BloodEngine 38-76%",
     "player": "Karma",
@@ -526,8 +526,7 @@
       "Level",
       "Progress"
     ]
-  }, 
-
+  },
   {
     "name": "BloodEngine 57-100%",
     "player": "Karma",
@@ -549,7 +548,7 @@
     ]
   },
   {
-    "name": "Bocadillo FD Albondi 49%, 51%, 58%", 
+    "name": "Bocadillo FD Albondi 49%, 51%, 58%",
     "player": "nensa",
     "levelID": 90069457,
     "date": "2026-07-30",
@@ -565,7 +564,7 @@
     "notes": null,
     "tags": [
       "Level",
-      "Consistency
+      "Consistency"
     ]
   },
   {
@@ -822,7 +821,7 @@
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://www.youtube.com/shorts/Oh-6KZeDemA?feature=share"
+    "video": "https://www.youtube.com/shorts/Oh-6KZeDemA?feature=share",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -831,8 +830,7 @@
       "Challenge",
       "Progress"
     ]
-  }, 
-
+  },
   {
     "name": "Despair Code 35-100%",
     "player": "Infinny",
