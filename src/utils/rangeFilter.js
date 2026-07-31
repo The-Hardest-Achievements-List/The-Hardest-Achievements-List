@@ -1,9 +1,12 @@
-/** Parse a progress % range from an achievement name (`13-72%` or `3.13%`). */
-export function parseProgressRange(name) {
-  if (!name) return null;
+/** Parse a progress % range from an achievement name (`13-72%` or `3.13%`).
+ * Noclip progress with no usable % in the name is treated as a full 0–100 run. */
+export function parseProgressRange(name, tags = null) {
+  if (!name && !(Array.isArray(tags) && tags.includes("Noclip"))) return null;
 
   // Ignore accuracy percentages so they don't masquerade as progress.
-  const cleaned = String(name).replace(/\d+(?:\.\d+)?%\s*accuracy/gi, "");
+  const cleaned = name
+    ? String(name).replace(/\d+(?:\.\d+)?%\s*accuracy/gi, "")
+    : "";
 
   const range = cleaned.match(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\s*%/);
   if (range) {
@@ -18,6 +21,10 @@ export function parseProgressRange(name) {
     const pct = Number(single[1]);
     if (!Number.isFinite(pct)) return null;
     return { start: 0, end: pct };
+  }
+
+  if (Array.isArray(tags) && tags.includes("Noclip")) {
+    return { start: 0, end: 100 };
   }
 
   return null;
@@ -60,7 +67,10 @@ export function entryMatchesRangeFilter(
     const from = parseBound(progressFrom);
     const to = parseBound(progressTo);
     if (from != null || to != null) {
-      const range = parseProgressRange(achievement?.name);
+      const range = parseProgressRange(
+        achievement?.name,
+        achievement?.tags,
+      );
       if (!range) return false;
       if (from != null && range.start < from) return false;
       if (to != null && range.end > to) return false;
