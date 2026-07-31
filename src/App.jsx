@@ -35,6 +35,10 @@ import {
 } from "./utils/format";
 import { CLASSIC_TAGS, PLATFORMER_TAGS } from "./utils/tags";
 import { getLeaderboardPath } from "./utils/leaderboard";
+import {
+  entryMatchesRangeFilter,
+  hasRangeFilterBounds,
+} from "./utils/rangeFilter";
 
 import achievementsData from "../data/achievements.json";
 import pendingData from "../data/pending.json";
@@ -194,12 +198,16 @@ function filterEntriesByFamilySemantics(
     includeTags = [],
     excludeTags = [],
     seedHostParentKeys = [],
+    rangeFilter = null,
   },
 ) {
   const hasSearch = Boolean(query);
-  const hasTags = includeTags.length > 0 || excludeTags.length > 0;
+  const hasRange = hasRangeFilterBounds(rangeFilter ?? {});
+  const hasTags =
+    includeTags.length > 0 || excludeTags.length > 0 || hasRange;
   const passesTags = (entry) =>
-    entryMatchesActiveTags(entry, includeTags, excludeTags);
+    entryMatchesActiveTags(entry, includeTags, excludeTags) &&
+    entryMatchesRangeFilter(entry, rangeFilter ?? {});
   // Hosts skip include tags so parents can nest matching children, but excludes
   // still apply (an excluded parent must not resurface as a shell).
   const passesHostExcludes = (entry) =>
@@ -312,15 +320,19 @@ function filterOtherListByFamilySemantics(
     parentKeysPresent,
     expandingParentKeys,
     resolveParentKeys,
+    rangeFilter = null,
   },
 ) {
   if (!Array.isArray(otherEntries) || otherEntries.length === 0) return [];
   const hasSearch = Boolean(query);
-  const hasTags = includeTags.length > 0 || excludeTags.length > 0;
+  const hasRange = hasRangeFilterBounds(rangeFilter ?? {});
+  const hasTags =
+    includeTags.length > 0 || excludeTags.length > 0 || hasRange;
   if (!hasSearch && !hasTags) return otherEntries;
 
   const passesTags = (entry) =>
-    entryMatchesActiveTags(entry, includeTags, excludeTags);
+    entryMatchesActiveTags(entry, includeTags, excludeTags) &&
+    entryMatchesRangeFilter(entry, rangeFilter ?? {});
 
   return otherEntries.filter((entry) => {
     const parentKeys = resolveParentKeys(entry).filter((key) =>
@@ -367,6 +379,10 @@ export default function App() {
   const [sort, setSort] = useState("rank");
   const [sortDir, setSortDir] = useState("asc");
   const [activeTags, setActiveTags] = useState(new Map());
+  const [progressFrom, setProgressFrom] = useState("");
+  const [progressTo, setProgressTo] = useState("");
+  const [hzMin, setHzMin] = useState("");
+  const [hzMax, setHzMax] = useState("");
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [pendingJumpKey, setPendingJumpKey] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -594,8 +610,32 @@ export default function App() {
     });
   };
 
+  const progressFilterEnabled = activeTags.get("Progress") === "include";
+  const hertzFilterEnabled = activeTags.get("Low Hertz") === "include";
+
+  const rangeFilter = useMemo(
+    () => ({
+      progressEnabled: progressFilterEnabled,
+      progressFrom,
+      progressTo,
+      hertzEnabled: hertzFilterEnabled,
+      hzMin,
+      hzMax,
+    }),
+    [
+      progressFilterEnabled,
+      progressFrom,
+      progressTo,
+      hertzFilterEnabled,
+      hzMin,
+      hzMax,
+    ],
+  );
+
   const hasListContextFilter =
-    Boolean(search.trim()) || activeTags.size > 0;
+    Boolean(search.trim()) ||
+    activeTags.size > 0 ||
+    hasRangeFilterBounds(rangeFilter);
 
   const jumpToListPosition = useCallback(
     (achievement) => {
@@ -618,6 +658,10 @@ export default function App() {
       setPendingJumpKey(targetKey);
       setSearch("");
       setActiveTags(new Map());
+      setProgressFrom("");
+      setProgressTo("");
+      setHzMin("");
+      setHzMax("");
 
       if (jumpToPending && active !== "PENDING") {
         const modeSlug = mode === "platformer" ? "plat" : "classic";
@@ -636,6 +680,10 @@ export default function App() {
   useEffect(() => {
     setSearch("");
     setActiveTags(new Map());
+    setProgressFrom("");
+    setProgressTo("");
+    setHzMin("");
+    setHzMax("");
     // Do not clear pendingJumpKey here — Jump may switch MAIN → PENDING with the
     // key already set; LevelList clears it after scrolling (or on a miss).
     if (!NO_LIST.has(active)) {
@@ -704,6 +752,7 @@ export default function App() {
           includeTags,
           excludeTags,
           seedHostParentKeys,
+          rangeFilter,
         });
 
       // Copy before sort so unfiltered paths still get a new array identity
@@ -764,6 +813,7 @@ export default function App() {
       rawDataWithListRank,
       search,
       activeTagLists,
+      rangeFilter,
       sort,
       sortDir,
       isPendingList,
@@ -798,6 +848,7 @@ export default function App() {
       matchesSearch: itemMatchesSearch,
       includeTags,
       excludeTags,
+      rangeFilter,
       parentKeysPresent,
       expandingParentKeys,
       resolveParentKeys: (entry) => {
@@ -819,6 +870,7 @@ export default function App() {
     filteredData,
     search,
     activeTagLists,
+    rangeFilter,
     parentKeysPresent,
     expandingParentKeys,
     mode,
@@ -870,6 +922,14 @@ export default function App() {
         activeTags={activeTags}
         toggleTag={toggleTag}
         allTags={allTags}
+        progressFrom={progressFrom}
+        setProgressFrom={setProgressFrom}
+        progressTo={progressTo}
+        setProgressTo={setProgressTo}
+        hzMin={hzMin}
+        setHzMin={setHzMin}
+        hzMax={hzMax}
+        setHzMax={setHzMax}
         cardScale={cardScale}
         setCardScale={setCardScale}
         cardWidth={cardWidth}
@@ -902,6 +962,14 @@ export default function App() {
           activeTags={activeTags}
           allTags={allTags}
           toggleTag={toggleTag}
+          progressFrom={progressFrom}
+          setProgressFrom={setProgressFrom}
+          progressTo={progressTo}
+          setProgressTo={setProgressTo}
+          hzMin={hzMin}
+          setHzMin={setHzMin}
+          hzMax={hzMax}
+          setHzMax={setHzMax}
           isTimeline={isTimeline}
           isPendingEstimate={isPendingList}
           pendingMainCount={pendingMainCount}

@@ -10,6 +10,7 @@ import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 import { SORT_OPTS, SORT_DIR_OPTS } from "../constants/sortOptions";
 import { ModeToggle, ScaleControls } from "./HeaderControls";
 import Tooltip from "./Tooltip";
+import RangeFilters from "./RangeFilters";
 
 const LIST_GAP = 14;
 const MOBILE_LIST_GAP = 7;
@@ -229,6 +230,14 @@ export default function LevelList({
   onJumpToList = null,
   pendingJumpKey = null,
   onJumpHandled = null,
+  progressFrom = "",
+  setProgressFrom,
+  progressTo = "",
+  setProgressTo,
+  hzMin = "",
+  setHzMin,
+  hzMax = "",
+  setHzMax,
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const [highlightKey, setHighlightKey] = React.useState(null);
@@ -477,6 +486,18 @@ export default function LevelList({
                 );
               })}
             </div>
+            <RangeFilters
+              showProgress={activeTags.get("Progress") === "include"}
+              showHertz={activeTags.get("Low Hertz") === "include"}
+              progressFrom={progressFrom}
+              progressTo={progressTo}
+              onProgressFromChange={setProgressFrom}
+              onProgressToChange={setProgressTo}
+              hzMin={hzMin}
+              hzMax={hzMax}
+              onHzMinChange={setHzMin}
+              onHzMaxChange={setHzMax}
+            />
           </div>
           <button
             type="button"

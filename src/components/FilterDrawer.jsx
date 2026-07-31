@@ -2,6 +2,7 @@ import SelectDropdown from "./SelectDropdown";
 import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 import { SORT_OPTS, SORT_DIR_OPTS } from "../constants/sortOptions";
 import { ModeToggle, ScaleControls } from "./HeaderControls";
+import RangeFilters from "./RangeFilters";
 
 export default function FilterDrawer({
   onClose,
@@ -23,6 +24,14 @@ export default function FilterDrawer({
   allTags,
   activeTags,
   toggleTag,
+  progressFrom = "",
+  setProgressFrom,
+  progressTo = "",
+  setProgressTo,
+  hzMin = "",
+  setHzMin,
+  hzMax = "",
+  setHzMax,
 }) {
   return (
     <div className="flt-overlay" onClick={onClose}>
@@ -128,6 +137,18 @@ export default function FilterDrawer({
               );
             })}
           </div>
+          <RangeFilters
+            showProgress={activeTags.get("Progress") === "include"}
+            showHertz={activeTags.get("Low Hertz") === "include"}
+            progressFrom={progressFrom}
+            progressTo={progressTo}
+            onProgressFromChange={setProgressFrom}
+            onProgressToChange={setProgressTo}
+            hzMin={hzMin}
+            hzMax={hzMax}
+            onHzMinChange={setHzMin}
+            onHzMaxChange={setHzMax}
+          />
         </div>
       </div>
     </div>

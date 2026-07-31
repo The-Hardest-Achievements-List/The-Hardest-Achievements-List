@@ -204,6 +204,14 @@ export default function Header({
   activeTags,
   toggleTag,
   allTags,
+  progressFrom = "",
+  setProgressFrom,
+  progressTo = "",
+  setProgressTo,
+  hzMin = "",
+  setHzMin,
+  hzMax = "",
+  setHzMax,
   cardScale,
   setCardScale,
   cardWidth,
@@ -441,6 +449,14 @@ export default function Header({
           allTags={allTags}
           activeTags={activeTags}
           toggleTag={toggleTag}
+          progressFrom={progressFrom}
+          setProgressFrom={setProgressFrom}
+          progressTo={progressTo}
+          setProgressTo={setProgressTo}
+          hzMin={hzMin}
+          setHzMin={setHzMin}
+          hzMax={hzMax}
+          setHzMax={setHzMax}
         />
       )}
 
