@@ -608,6 +608,46 @@
     ]
   },
   {
+    "name": "Bonfire (vvay) 44-100%",
+    "player": "vvay",
+    "levelID": null,,
+    "date": "2026-08-01",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yLGaVcvIKzo",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bonfire (vvay) 44-100%",
+    "player": "vvay",
+    "levelID": null,,
+    "date": "2026-08-01",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yLGaVcvIKzo",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Boobawamba 67%, 86% in a row",
     "player": "wPopoff",
     "levelID": 110816181,
@@ -1035,6 +1075,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Every End 92%, 100% in a row",
+    "player": "Thnndr",
+    "levelID": 116174063,
+    "date": "2026-08-01",
+    "length": 894,
+    "version": 2.2,
+    "submitter": "BlueGamer",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/CFLWkzVCknU",
+    "showcaseVideo": "https://youtu.be/C7Umvy4VyDg",
+    "thumbnail": null,
+    "duplicateOf": "Every End 18-94%, 94% in a row",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -1742,6 +1802,26 @@
     "estimateUpper": null,
     "video": "https://youtu.be/cVURAkPwslg",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Phantasm IV 40-100%",
+    "player": "T4G",
+    "levelID": null,
+    "date": "2026-08-01",
+    "length": 68,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cnY1S_MbnpA",
+    "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
