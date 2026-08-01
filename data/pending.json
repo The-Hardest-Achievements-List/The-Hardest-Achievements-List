@@ -248,7 +248,7 @@
     ]
   },
   {
-    "name": "Aeternus 56-61%, 56-58%, 56-57%, 56-56%, 56-61%, 56-56%, 56-57%, 56-61% in a row",
+    "name": "Aeternus 56-61%, 56-58%, 56-57%, (56-56%), 56-61%, (56-56%), 56-57%, 56-61% in a row",
     "player": "FlinGuSPluNkuS",
     "levelID": 102647436,
     "date": "2026-06-28",
@@ -628,7 +628,7 @@
     ]
   },
   {
-    "name": "Bonfire (vvay) 44-100%",
+    "name": "Bonfire (vvay) 55%",
     "player": "vvay",
     "levelID": null,
     "date": "2026-08-01",
@@ -680,7 +680,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/jovWGeoFaeI",
     "showcaseVideo": "https://youtu.be/aUt-HTMrwcA",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/89b84d86ae391f140511685de87430991337b1e6/images/thumbnails/BYTELAW%20NEVER%20CLEAR.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -790,7 +790,7 @@
     ]
   },
   {
-    "name": "Cyberpsychosis 36-100%",
+    "name": "CYBERPSYCHOSIS 36-100%",
     "player": "GuillExprex52",
     "levelID": 109814681,
     "date": "2026-07-02",
@@ -1148,7 +1148,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/ZG0unxgVrFY",
-    "showcaseVideo": "https://youtu.be/etS7_bCsTtI",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1258,7 +1258,7 @@
     ]
   },
   {
-    "name": "Goober Rage Stage 60Hz Mobile",
+    "name": "Goober Rage Stage 60hz Mobile",
     "player": "The5Sharks",
     "levelID": 130183035,
     "date": "2026-05-06",
@@ -1600,7 +1600,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/CKJ4KfaF1u0",
     "showcaseVideo": "https://youtu.be/ryBbuH_SPbs",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/02d7386b604f0a471ae4117cca3cca0534721438/images/thumbnails/LIMBO%20(Unnerfed).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1771,7 +1771,7 @@
     ]
   },
   {
-    "name": "OUROBOROS (Qmystic) 41-100%",
+    "name": "OUROBOROS (qmystic) 41-100%",
     "player": "apu",
     "levelID": null,
     "date": "2026-07-17",
@@ -1782,7 +1782,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/eKYJBH8tFjI",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8b402f6b1e0810aa380f4343bb05570b2f167f9b/images/thumbnails/OUROBOROS%20(qmystic).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1791,7 +1791,7 @@
     ]
   },
   {
-    "name": "OUROBOROS (Qmystic) 45%",
+    "name": "OUROBOROS (qmystic) 45%",
     "player": "apu",
     "levelID": null,
     "date": "2026-07-19",
@@ -1802,7 +1802,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/cVURAkPwslg",
     "showcaseVideo": "https://youtu.be/gZz_2r97wzM",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8b402f6b1e0810aa380f4343bb05570b2f167f9b/images/thumbnails/OUROBOROS%20(qmystic).png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1822,7 +1822,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/cnY1S_MbnpA",
     "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/0cb3652af8773aee9d648b25b992488178660d48/images/thumbnails/Phantasm%20IV.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1862,7 +1862,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/q69eN95ed-w",
     "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96496947",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
