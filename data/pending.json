@@ -147,7 +147,7 @@
   },
   {
     "name": "Aeternus 24-34% 120hz Mobile",
-    "player": "SilkizinhoYT",
+    "player": "Silkizinho",
     "levelID": 102647436,
     "date": "2026-07-17",
     "length": 8,
@@ -368,6 +368,26 @@
     ]
   },
   {
+    "name": "Artemis 13 32-74%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-07-27",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Yg51HLNK_-o?t=2389",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Artemis 13 61%",
     "player": "Zoink",
     "levelID": null,
@@ -388,26 +408,6 @@
     ]
   },
   {
-    "name": "Artemis 13 32-74",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-07-27",
-    "length": 25,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Yg51HLNK_-o?t=2389",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Artemis 13 68-100%",
     "player": "Zoink",
     "levelID": null,
@@ -417,7 +417,7 @@
     "submitter": "abbycartridges",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/ekn9ZcZI6Oc?t=1h30m30s",
+    "video": "https://youtu.be/ekn9ZcZI6Oc?t=5430",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d57889b889b62c5225cbaa32936c85f5e4ef356e/images/thumbnails/Artemis%2013.png",
     "duplicateOf": "Artemis 13 (Jul. 20th, 2026) 68-100%",
@@ -812,26 +812,6 @@
     ]
   },
   {
-    "name": "Despair Code 99.37% accuracy, 17 deaths",
-    "player": "Infinny",
-    "levelID": null,
-    "date": "2026-07-27",
-    "length": 24,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.youtube.com/shorts/Oh-6KZeDemA?feature=share",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
     "name": "Despair Code 35-100%",
     "player": "Infinny",
     "levelID": null,
@@ -843,6 +823,26 @@
     "estimateUpper": null,
     "video": "https://youtu.be/Ahx_F-1DrZ4",
     "showcaseVideo": "https://youtu.be/uJjqnGFupZQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Despair Code 99.37% accuracy, 17 deaths",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-07-27",
+    "length": 24,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Oh-6KZeDemA",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -998,26 +998,6 @@
     ]
   },
   {
-    "name": "Eternal Night 43%",
-    "player": "Al3xTT",
-    "levelID": 73011766,
-    "date": "2026-07-31",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/mkeBeHo1J8E",
-    "showcaseVideo": "https://youtu.be/zj6dKBpQZg8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Eternal Night 38-100%",
     "player": "Mizukii",
     "levelID": 73011766,
@@ -1028,6 +1008,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/cD3o9bOf_0w",
+    "showcaseVideo": "https://youtu.be/zj6dKBpQZg8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Eternal Night 43%",
+    "player": "Al3xTT",
+    "levelID": 73011766,
+    "date": "2026-07-31",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/mkeBeHo1J8E",
     "showcaseVideo": "https://youtu.be/zj6dKBpQZg8",
     "thumbnail": null,
     "duplicateOf": null,
@@ -1138,6 +1138,26 @@
     ]
   },
   {
+    "name": "FOREST OF SPIKES",
+    "player": "BrianCheese",
+    "levelID": 145709435,
+    "date": "2026-07-26",
+    "length": 109,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WJYh3dW8Bfo",
+    "showcaseVideo": "https://youtu.be/szCliCZQItg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Fronly Demise (Skylar)",
     "player": "Skylar",
     "levelID": null,
@@ -1184,7 +1204,7 @@
     "date": "2026-05-06",
     "length": 59,
     "version": 2.2,
-    "submitter": "some_person",
+    "submitter": "SumPerson",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/KB47OxRmjfw",
@@ -1217,26 +1237,6 @@
     "tags": [
       "Level",
       "Consistency"
-    ]
-  },
-  {
-    "name": "FOREST OF SPIKES",
-    "player": "BrianCheese",
-    "levelID": 145709435,
-    "date": "2026-07-26",
-    "length": 109,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/WJYh3dW8Bfo",
-    "showcaseVideo": "https://youtu.be/szCliCZQItg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -1751,26 +1751,6 @@
     ]
   },
   {
-    "name": "rare 79-100%",
-    "player": "Viwi",
-    "levelID": 81002356,
-    "date": "2026-07-25",
-    "length": 29,
-    "version": 2.2,
-    "submitter": "Radiator",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/q69eN95ed-w",
-    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96496947",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "rare 2.60%, 2.87%, 2.90%, 2.88%, 2.87% x2 in a row",
     "player": "FlinGuSPluNkuS",
     "levelID": 81002356,
@@ -1788,6 +1768,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "rare 79-100%",
+    "player": "Viwi",
+    "levelID": 81002356,
+    "date": "2026-07-25",
+    "length": 29,
+    "version": 2.2,
+    "submitter": "Radiator",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/q69eN95ed-w",
+    "showcaseVideo": "https://youtu.be/3vlpoX6e2I4",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/96496947",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2019,26 +2019,6 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 82%",
-    "player": "dewbbs",
-    "levelID": null,
-    "date": "2026-07-19",
-    "length": 57,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Er1qYZHyVeg",
-    "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Silent Circles (Starchman) 27-100% 7 deaths, 99.66% accuracy",
     "player": "dewbbs",
     "levelID": null,
@@ -2110,6 +2090,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/NinKMI7i2mw?t=3256",
+    "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles (Starchman) 82%",
+    "player": "dewbbs",
+    "levelID": null,
+    "date": "2026-07-19",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Er1qYZHyVeg",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -2560,7 +2560,7 @@
     "date": "2026-07-20",
     "length": 53,
     "version": 2.2,
-    "submitter": "SilkizinhoYT",
+    "submitter": "Silkizinho",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/fPcc7B5CQ30",
