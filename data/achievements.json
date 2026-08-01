@@ -317,6 +317,46 @@
     ]
   },
   {
+    "name": "Yellowpolis (Old) 19%",
+    "player": "Drakanja",
+    "levelID": null,
+    "date": null,
+    "length": 28,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/f6W2fhSeR_4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Heliopolis 51%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Yellowpolis 17%",
+    "player": "Drakanja",
+    "levelID": null,
+    "date": null,
+    "length": 25,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/L4WET93RKt0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Heliopolis 51%",
+    "notes": "Those who know...",
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Amethyst",
     "player": "wPopoff",
     "levelID": 119550490,
