@@ -2126,7 +2126,7 @@
   },
   {
     "name": "Herr Machine",
-    "player": "BONN",
+    "player": "BONN GD",
     "levelID": 142529115,
     "date": "2026-03-12",
     "length": 106,
@@ -2272,7 +2272,7 @@
   },
   {
     "name": "Slaughterhouse (Unnerfed, ROZE)",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": 131185518,
     "date": "2026-01-10",
     "length": 70,
@@ -2587,7 +2587,7 @@
   },
   {
     "name": "Firework 144hz Mobile",
-    "player": "MAXDASH07",
+    "player": "MAXDASH",
     "levelID": 105547415,
     "date": "2025-05-24",
     "length": 127,
@@ -3253,7 +3253,7 @@
   },
   {
     "name": "Re",
-    "player": "torn",
+    "player": "torn49",
     "levelID": 126279500,
     "date": "2025-09-23",
     "length": 14,
@@ -3310,7 +3310,7 @@
   },
   {
     "name": "Aquamarine (SuperioxX) 70%",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": null,
     "date": "2025-02-05",
     "length": 42,
@@ -3474,7 +3474,7 @@
   },
   {
     "name": "The Rupture 60hz",
-    "player": "LaChataigne",
+    "player": "Lunares",
     "levelID": 57828784,
     "date": "2024-06-02",
     "length": 85,
@@ -3944,7 +3944,7 @@
   },
   {
     "name": "Sonic Wave Infinity (Slithium)",
-    "player": "HipoAR",
+    "player": "Hipo",
     "levelID": 129774598,
     "date": "2025-12-19",
     "length": 122,
@@ -4128,7 +4128,7 @@
   },
   {
     "name": "Kyouki",
-    "player": "{出見塩} Demishio",
+    "player": "Demishio",
     "levelID": 86018142,
     "date": "2022-11-24",
     "length": 98,
@@ -4659,7 +4659,7 @@
   },
   {
     "name": "Magentahouse 25-86%",
-    "player": "nswish",
+    "player": "nSwish",
     "levelID": null,
     "date": "2026-03-12",
     "length": 30,
@@ -5588,7 +5588,7 @@
   },
   {
     "name": "INTERCONNECTED",
-    "player": "NucGDStuff",
+    "player": "NucDev",
     "levelID": 121310778,
     "date": "2025-06-20",
     "length": 18,
@@ -5945,7 +5945,7 @@
   },
   {
     "name": "BARELY VISIBLE SKC 69%",
-    "player": "taiga",
+    "player": "ItzOguzok",
     "levelID": null,
     "date": "2026-05-22",
     "length": 36,
@@ -6154,7 +6154,7 @@
   },
   {
     "name": "Sakupen Circles (ROZE)",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": 141351180,
     "date": "2026-05-20",
     "length": 50,
@@ -6192,7 +6192,7 @@
   },
   {
     "name": "Sakupen Circles (Exen)",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": 57546619,
     "date": "2026-02-13",
     "length": 50,
@@ -6345,7 +6345,7 @@
   },
   {
     "name": "wocky circles",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": 100420930,
     "date": "2025-09-15",
     "length": 55,
@@ -6363,7 +6363,7 @@
   },
   {
     "name": "wocky circles (Elysium) 34-88%",
-    "player": "ROZE GD",
+    "player": "ROZE",
     "levelID": 84722782,
     "date": "2025-09-20",
     "length": 27,
@@ -6417,7 +6417,7 @@
   },
   {
     "name": "Zodiac (Unnerfed)",
-    "player": "mageman85",
+    "player": "nebnoob",
     "levelID": 54441585,
     "date": "2024-05-20",
     "length": 194,
@@ -6436,7 +6436,7 @@
   },
   {
     "name": "i n j u r y (Aug. 2024) 74%",
-    "player": "KYWY",
+    "player": "kywy",
     "levelID": null,
     "date": "2024-08-18",
     "length": 24,
@@ -6895,12 +6895,12 @@
   },
   {
     "name": "Leaves 77-100%, 65-80%, 65-78%, 65-86%, 65-80%, 65-100%, 65-91%, 65-78%, 65-79%x4, 65-86%, 65-84%, 65-87%, 65-79% in a row",
-    "player": "subabo",
+    "player": "Subabo",
     "levelID": 82602651,
     "date": "2025-09-01",
     "length": 200,
     "version": 2.2,
-    "submitter": "subabo",
+    "submitter": "Subabo",
     "video": "https://youtu.be/igekb2lWp9M",
     "showcaseVideo": "https://youtu.be/nVPNZIu0nhY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82602651",
@@ -6989,7 +6989,7 @@
   },
   {
     "name": "ET3RN4L TORM3NT",
-    "player": "violet",
+    "player": "Violet",
     "levelID": 140241137,
     "date": "2025-02-11",
     "length": 27,
@@ -7288,12 +7288,12 @@
   },
   {
     "name": "Leaves 33-91%",
-    "player": "subabo",
+    "player": "Subabo",
     "levelID": 82602651,
     "date": "2025-08-06",
     "length": 41,
     "version": 2.2,
-    "submitter": "subabo",
+    "submitter": "Subabo",
     "video": "https://youtu.be/JpBB-FEWI2Q",
     "showcaseVideo": "https://youtu.be/nVPNZIu0nhY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82602651",
@@ -7307,12 +7307,12 @@
   },
   {
     "name": "Leaves 25-82%",
-    "player": "subabo",
+    "player": "Subabo",
     "levelID": 82602651,
     "date": "2025-07-22",
     "length": 40,
     "version": 2.2,
-    "submitter": "subabo",
+    "submitter": "Subabo",
     "video": "https://youtu.be/hPI_TTbaLBo",
     "showcaseVideo": "https://youtu.be/nVPNZIu0nhY",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82602651",
@@ -7362,7 +7362,7 @@
   },
   {
     "name": "Snowblind",
-    "player": "Hippo",
+    "player": "FHippo",
     "levelID": null,
     "date": "2025-09-02",
     "length": 73,
@@ -7419,12 +7419,12 @@
   },
   {
     "name": "SADOMASOCHISM 60%, 85% in a row",
-    "player": "NucGDStuff",
+    "player": "NucDev",
     "levelID": 76213334,
     "date": "2025-04-14",
     "length": 25,
     "version": 2.2,
-    "submitter": "NucGDStuff",
+    "submitter": "NucDev",
     "video": "https://youtu.be/Sfxv1RfJ0sc",
     "showcaseVideo": "https://youtu.be/VPXub8NAKPU",
     "thumbnail": null,
@@ -7474,7 +7474,7 @@
   },
   {
     "name": "Im Deaf (superbuffed) 2 deaths, 99.69% accuracy",
-    "player": "DehydratedMoron",
+    "player": "Ellie",
     "levelID": null,
     "date": "2025-05-06",
     "length": 13,
@@ -7586,7 +7586,7 @@
   },
   {
     "name": "ace",
-    "player": "aidsen",
+    "player": "Aidsen",
     "levelID": 138215607,
     "date": "2026-04-15",
     "length": 69,
@@ -7604,7 +7604,7 @@
   },
   {
     "name": "Snowblind (Old) 59%",
-    "player": "Hippo",
+    "player": "FHippo",
     "levelID": null,
     "date": "2025-05-13",
     "length": 36,
@@ -7732,7 +7732,7 @@
   },
   {
     "name": "Sakupen Circles (Awedsy)",
-    "player": "BrianCheese",
+    "player": "Brian Cheese",
     "levelID": 63702523,
     "date": "2025-07-12",
     "length": 54,
@@ -8111,7 +8111,7 @@
   },
   {
     "name": "Redwork",
-    "player": "Abstract",
+    "player": "abstract",
     "levelID": 113640015,
     "date": "2024-12-30",
     "length": 127,
