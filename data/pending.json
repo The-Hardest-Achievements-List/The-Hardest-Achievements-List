@@ -2099,47 +2099,6 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 27-100% 7 deaths, 99.66% accuracy",
-    "player": "dewbbs",
-    "levelID": null,
-    "date": "2026-03-28",
-    "length": 47,
-    "version": 2.2,
-    "submitter": "abbycartridges",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/0d_m83tFOUw?t=5415",
-    "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Noclip"
-    ]
-  },
-  {
-    "name": "Silent Circles (Starchman) 38-87%",
-    "player": "dewbbs",
-    "levelID": null,
-    "date": "2026-06-13",
-    "length": 31,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/6nIXM-mSiqs",
-    "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Silent Circles (Starchman) 47-100%",
     "player": "dewbbs",
     "levelID": null,
@@ -2150,26 +2109,6 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/3ANI557EzW8?t=45",
-    "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Silent Circles (Starchman) 62%",
-    "player": "dewbbs",
-    "levelID": null,
-    "date": "2026-07-24",
-    "length": 43,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/NinKMI7i2mw?t=3256",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -2240,8 +2179,8 @@
     ]
   },
   {
-    "name": "Slaughterhouse (CoolRanchDoritos1055) 49-100%",
-    "player": "CoolRanchDoritos1055",
+    "name": "Slaughterhouse (Doritos1055) 49-100%",
+    "player": "Doritos1055",
     "levelID": null,
     "date": "2025/05/31",
     "length": 30,
@@ -2451,7 +2390,7 @@
     ]
   },
   {
-    "name": "Sweeping Demon 2 34-100%",
+    "name": "Sweeping Demon 2 (Taiago) 34-100%",
     "player": "Taiago",
     "levelID": null,
     "date": "2026-07-30",
