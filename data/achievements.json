@@ -712,6 +712,27 @@
     ]
   },
   {
+    "name": "Silent Acropolis (Hover, ThePurgatory) 99%",
+    "player": "Hover",
+    "levelID": null,
+    "date": "2026-08-02",
+    "length": 73,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/O7lvH8orS5s?t=1157",
+    "showcaseVideo": "https://youtu.be/yJCMeyWPmoA",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111237270",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Eternal Silence 1 death, 100% accuracy",
     "player": "noname228gg",
     "levelID": 83476262,
@@ -1048,7 +1069,7 @@
     ]
   },
   {
-    "name": "Silent Destep (nensa) 25%, 12% in a row",
+    "name": "Silent DeStep (nensa) 25%, 12% in a row",
     "player": "nensa",
     "levelID": 83282566,
     "date": "2026-03-12",
