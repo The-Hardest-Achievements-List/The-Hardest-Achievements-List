@@ -568,6 +568,46 @@
     ]
   },
   {
+    "name": "Bonfire (vvay) 44-100%",
+    "player": "vvay",
+    "levelID": null,
+    "date": "2026-08-01",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yLGaVcvIKzo",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bonfire (vvay) 55%",
+    "player": "vvay",
+    "levelID": null,
+    "date": "2026-08-01",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yLGaVcvIKzo",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Bonfire 32-100%",
     "player": "vvay",
     "levelID": 88686539,
@@ -599,46 +639,6 @@
     "estimateUpper": null,
     "video": "https://youtu.be/Ix6_Kr3AHac",
     "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire (vvay) 44-100%",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-01",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "denkyuzu",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/yLGaVcvIKzo",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire (vvay) 55%",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-01",
-    "length": 34,
-    "version": 2.2,
-    "submitter": "denkyuzu",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/yLGaVcvIKzo",
-    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
