@@ -28,8 +28,8 @@
   "bop": "GB",
   "Bradenbowl": "US",
   "cc478": [
-    "US",
-    "IT"
+    "IT",
+    "US"
   ],
   "Cejelost": "NL",
   "Chiikawa": "RS",
@@ -78,20 +78,17 @@
   "fwoggy": "RU",
   "gdspeedcuber": "GB",
   "GGonop": "FI",
-  "Glow": [
-    "PK",
-    "US"
-  ],
+  "Glow": "PK",
   "Gmdkiwi": "PL",
   "Gooba": [
-    "JP",
-    "US",
     "DE",
-    "IE",
-    "SE",
     "FR",
     "GB",
-    "MX"
+    "IE",
+    "JP",
+    "MX",
+    "SE",
+    "US"
   ],
   "Grave": "GB",
   "GreenZz": "RU",
@@ -255,8 +252,8 @@
   "zFexty": "NG",
   "Zoink": "US",
   "zXdasfsa": [
-    "US",
     "JM",
-    "TT"
+    "TT",
+    "US"
   ]
 }
