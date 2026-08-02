@@ -19,6 +19,7 @@ import {
 } from "../utils/leaderboard";
 import {
   buildCountryBoard,
+  buildSubmissionCountryBoard,
   getCountryName,
   normalizeCountryCode,
   normalizeCountryCodes,
@@ -146,7 +147,15 @@ const NationalityFlags = ({
   );
 };
 
-const getRowKey = (row, mode) => (mode === "countries" ? row.code : row.name);
+const getRowKey = (row, mode, submissionView = "submitters") => {
+  if (mode === "countries") return row.code;
+  if (mode === "submissions" && submissionView === "countries") return row.code;
+  return row.name;
+};
+
+const isCountryBoardMode = (mode, submissionView = "submitters") =>
+  mode === "countries" ||
+  (mode === "submissions" && submissionView === "countries");
 
 const UNKNOWN_COUNTRY_VALUE = "unknown";
 
@@ -169,7 +178,27 @@ const applyCountryFilter = (rows, selectedCountries) => {
   });
 };
 
-const rowMatchesSearch = (row, query, mode) => {
+/** Attribution for a country row's hardest entry. Submission countries show both roles. */
+const formatBestAttribution = (best, { includeSubmitter = false } = {}) => {
+  if (!best) return "";
+
+  const player = typeof best.player === "string" ? best.player.trim() : "";
+  const submitter =
+    typeof best.submitter === "string" ? best.submitter.trim() : "";
+
+  if (!includeSubmitter) {
+    return player ? ` by ${player}` : "";
+  }
+
+  if (player && submitter && player !== submitter) {
+    return ` by ${player} · submitted by ${submitter}`;
+  }
+  if (player) return ` by ${player}`;
+  if (submitter) return ` submitted by ${submitter}`;
+  return "";
+};
+
+const rowMatchesSearch = (row, query, mode, submissionView = "submitters") => {
   const normalized = query.trim().toLowerCase();
   if (!normalized) return true;
   // Unsearchable easter-egg row — never matches a query.
@@ -178,12 +207,17 @@ const rowMatchesSearch = (row, query, mode) => {
   const name = String(row.name ?? "").toLowerCase();
   const bestName = String(row.best?.name ?? "").toLowerCase();
   const bestPlayer = String(row.best?.player ?? "").toLowerCase();
+  const bestSubmitter = String(row.best?.submitter ?? "").toLowerCase();
+  const showingSubmissionCountries =
+    mode === "submissions" && submissionView === "countries";
 
-  if (mode === "countries") {
+  if (isCountryBoardMode(mode, submissionView)) {
     return (
       name.includes(normalized) ||
       bestName.includes(normalized) ||
-      bestPlayer.includes(normalized)
+      bestPlayer.includes(normalized) ||
+      (showingSubmissionCountries && bestSubmitter.includes(normalized)) ||
+      String(row.code ?? "").toLowerCase().includes(normalized)
     );
   }
 
@@ -358,7 +392,18 @@ function buildDefaultBoards() {
     ),
   };
 
-  return { players, countries, submissions };
+  const submissionCountries = {
+    classic: buildSubmissionCountryBoard(
+      submissions.classic,
+      playerCountriesData,
+    ),
+    platformer: buildSubmissionCountryBoard(
+      submissions.platformer,
+      playerCountriesData,
+    ),
+  };
+
+  return { players, countries, submissions, submissionCountries };
 }
 
 let cachedDefaultBoards = null;
@@ -386,20 +431,30 @@ function getDefaultSort(mode) {
   return "globalRank";
 }
 
-function getEmptyMessage(mode, hasActiveFilters) {
+function getEmptyMessage(mode, hasActiveFilters, submissionView = "submitters") {
+  const showingSubmissionCountries =
+    mode === "submissions" && submissionView === "countries";
+
   if (!hasActiveFilters) {
-    if (mode === "countries") return "No countries found.";
+    if (mode === "countries" || showingSubmissionCountries) {
+      return "No countries found.";
+    }
     if (mode === "submissions") return "No submitters found.";
     return "No players found.";
   }
 
-  if (mode === "countries") return "No countries match your filters.";
+  if (mode === "countries" || showingSubmissionCountries) {
+    return "No countries match your filters.";
+  }
   if (mode === "submissions") return "No submitters match your filters.";
   return "No players match your filters.";
 }
 
-function getLeaderboardCountLabel(mode, count) {
-  if (mode === "countries") {
+function getLeaderboardCountLabel(mode, count, submissionView = "submitters") {
+  if (
+    mode === "countries" ||
+    (mode === "submissions" && submissionView === "countries")
+  ) {
     return count === 1 ? "1 country" : `${count} countries`;
   }
   if (mode === "submissions") {
@@ -524,7 +579,21 @@ function AchievementRow({
   );
 }
 
-function CountryDetailContent({ country, view, onViewChange, onAchievementClick }) {
+function CountryDetailContent({
+  country,
+  view,
+  onViewChange,
+  onAchievementClick,
+  variant = "players",
+}) {
+  const isSubmissions = variant === "submissions";
+  const members = isSubmissions ? country.submitters : country.players;
+  const memberView = isSubmissions ? "submitters" : "players";
+  const listView = isSubmissions ? "submissions" : "achievements";
+  const entries = isSubmissions ? country.submissions : country.achievements;
+  const activeView =
+    view === memberView || view === listView ? view : memberView;
+
   return (
     <div className="lb__detail-body">
       <div className="lb__detail-hd">
@@ -536,55 +605,69 @@ function CountryDetailContent({ country, view, onViewChange, onAchievementClick 
           </h2>
         </div>
         <span className="lb__detail-points">
-          <Points value={country.totalXP} /> pts
+          {isSubmissions ? (
+            <>{country.pts} submissions</>
+          ) : (
+            <>
+              <Points value={country.totalXP} /> pts
+            </>
+          )}
         </span>
       </div>
 
       <div className="lb__mode-toggle lb__mode-toggle--nested lb__detail-toggle">
         <button
           type="button"
-          className={`lb__mode-btn${view === "players" ? " is-active" : ""}`}
-          onClick={() => onViewChange("players")}
+          className={`lb__mode-btn${activeView === memberView ? " is-active" : ""}`}
+          onClick={() => onViewChange(memberView)}
         >
-          Players
+          {isSubmissions ? "Submitters" : "Players"}
         </button>
         <button
           type="button"
-          className={`lb__mode-btn${view === "achievements" ? " is-active" : ""}`}
-          onClick={() => onViewChange("achievements")}
+          className={`lb__mode-btn${activeView === listView ? " is-active" : ""}`}
+          onClick={() => onViewChange(listView)}
         >
-          Achievements
+          {isSubmissions ? "Submissions" : "Achievements"}
         </button>
       </div>
 
       <DetailScroll>
-        {view === "players" ? (
+        {activeView === memberView ? (
           <div className="lb__achs">
-            {country.players.map((player) => (
-              <div key={player.name} className="lb__ach">
-                <span className="lb__ach-rank">#{player.globalRank}</span>
+            {(members ?? []).map((member) => (
+              <div key={member.name} className="lb__ach">
+                <span className="lb__ach-rank">#{member.globalRank}</span>
                 <div className="lb__ach-info">
-                  <span className="lb__ach-name">{player.name}</span>
+                  <span className="lb__ach-name">{member.name}</span>
                   <span className="lb__ach-meta">
-                    {player.best
-                      ? `${formatRank(player.bestRank)} · ${player.best.name}`
+                    {member.best
+                      ? `${formatRank(member.bestRank)} · ${member.best.name}`
                       : "—"}
                   </span>
                 </div>
                 <span className="lb__ach-points">
-                  <Points value={player.totalXP} />
+                  {isSubmissions ? (
+                    member.pts
+                  ) : (
+                    <Points value={member.totalXP} />
+                  )}
                 </span>
               </div>
             ))}
           </div>
         ) : (
           <div className="lb__achs">
-            {country.achievements.map((entry) => (
+            {(entries ?? []).map((entry) => (
               <AchievementRow
-                key={`${entry.name}-${entry.listPosition}-${entry._src}-${entry.player}`}
+                key={`${entry.name}-${entry.listPosition}-${entry._src}-${entry.player ?? entry.submitter}`}
                 entry={entry}
-                meta={`${entry.player} · ${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`}
-                points={entry.points ?? 0}
+                meta={
+                  isSubmissions
+                    ? `${entry.submitter ?? "—"} · ${SOURCE_LABEL[entry._src] ?? "Classic"} · ${formatDate(entry.date)}`
+                    : `${entry.player} · ${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`
+                }
+                points={isSubmissions ? 1 : (entry.points ?? 0)}
                 onAchievementClick={onAchievementClick}
               />
             ))}
@@ -598,6 +681,7 @@ function CountryDetailContent({ country, view, onViewChange, onAchievementClick 
 function DetailContent({
   player,
   mode,
+  submissionView,
   countryDetailView,
   onCountryDetailViewChange,
   onAchievementClick,
@@ -609,6 +693,19 @@ function DetailContent({
         view={countryDetailView}
         onViewChange={onCountryDetailViewChange}
         onAchievementClick={onAchievementClick}
+        variant="players"
+      />
+    );
+  }
+
+  if (mode === "submissions" && submissionView === "countries") {
+    return (
+      <CountryDetailContent
+        country={player}
+        view={countryDetailView}
+        onViewChange={onCountryDetailViewChange}
+        onAchievementClick={onAchievementClick}
+        variant="submissions"
       />
     );
   }
@@ -695,6 +792,7 @@ export default function LeaderboardPage({
   const [countryFilter, setCountryFilter] = useState([]);
   const [countryFilterOpen, setCountryFilterOpen] = useState(false);
   const [countryDetailView, setCountryDetailView] = useState("players");
+  const [submissionView, setSubmissionView] = useState("submitters");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortKey, setSortKey] = useState(getDefaultSort(initialMode));
   const [sortDir, setSortDir] = useState("asc");
@@ -718,35 +816,53 @@ export default function LeaderboardPage({
     setListSource(initialListSource);
     setSelectedKey(null);
     setCountryDetailView("players");
+    setSubmissionView("submitters");
     setPage(1);
     setShadowRealmUnlocked(false);
     setSortKey(getDefaultSort(initialMode));
     setSortDir("asc");
   }, [initialMode, initialListSource]);
 
+  const showingSubmissionCountries =
+    mode === "submissions" && submissionView === "countries";
+  const showingCountryRows = isCountryBoardMode(mode, submissionView);
+  const showingCountryFilter =
+    mode === "players" ||
+    (mode === "submissions" && submissionView === "submitters");
+
   const baseLeaderboard = useMemo(() => {
     if (mode === "countries") return boards.countries[listSource];
-    if (mode === "submissions") return boards.submissions[listSource];
+    if (mode === "submissions") {
+      return submissionView === "countries"
+        ? (boards.submissionCountries?.[listSource] ?? [])
+        : (boards.submissions[listSource] ?? []);
+    }
     return boards.players[listSource];
-  }, [mode, listSource, boards]);
+  }, [mode, listSource, boards, submissionView]);
 
   const sortOptions = useMemo(() => {
-    if (mode === "countries") return COUNTRY_SORT_OPTIONS;
+    if (mode === "countries" || showingSubmissionCountries) {
+      return COUNTRY_SORT_OPTIONS;
+    }
     if (mode === "submissions") return SUBMISSION_SORT_OPTIONS;
     return PLAYER_SORT_OPTIONS;
-  }, [mode]);
+  }, [mode, showingSubmissionCountries]);
 
-  const hasUnknownNationalityPlayers = useMemo(() => {
-    const playerBoard = boards.players[listSource] ?? [];
-    return playerBoard.some(
+  const hasUnknownNationalityRows = useMemo(() => {
+    if (!showingCountryFilter) return false;
+    const board =
+      mode === "submissions"
+        ? (boards.submissions[listSource] ?? [])
+        : (boards.players[listSource] ?? []);
+    return board.some(
       (row) =>
         !isShadowRealmRow(row) &&
         !(Array.isArray(row.countries) ? row.countries : []).length,
     );
-  }, [boards.players, listSource]);
+  }, [boards.players, boards.submissions, listSource, mode, showingCountryFilter]);
 
   const countryFilterModalOptions = useMemo(() => {
-    const options = hasUnknownNationalityPlayers
+    const options = hasUnknownNationalityRows
       ? [
           { value: UNKNOWN_COUNTRY_VALUE, label: "Unknown" },
           ...COUNTRY_FILTER_OPTIONS,
@@ -762,21 +878,32 @@ export default function LeaderboardPage({
           <CountryFlag code={option.value} size={16} />
         ),
     }));
-  }, [hasUnknownNationalityPlayers]);
+  }, [hasUnknownNationalityRows]);
 
   const processedLeaderboard = useMemo(() => {
     let rows = baseLeaderboard;
 
-    if (mode === "players" && countryFilter.length > 0) {
+    if (showingCountryFilter && countryFilter.length > 0) {
       rows = applyCountryFilter(rows, countryFilter);
     }
 
     if (searchQuery.trim()) {
-      rows = rows.filter((row) => rowMatchesSearch(row, searchQuery, mode));
+      rows = rows.filter((row) =>
+        rowMatchesSearch(row, searchQuery, mode, submissionView),
+      );
     }
 
     return sortLeaderboardRows(rows, sortKey, sortDir);
-  }, [baseLeaderboard, mode, countryFilter, searchQuery, sortKey, sortDir]);
+  }, [
+    baseLeaderboard,
+    mode,
+    submissionView,
+    showingCountryFilter,
+    countryFilter,
+    searchQuery,
+    sortKey,
+    sortDir,
+  ]);
 
   // Paginate without TheShadowRealm so jumping to "last" never reveals it.
   // When unlocked, append them only onto the last page's rows.
@@ -808,39 +935,43 @@ export default function LeaderboardPage({
   const selectedRow = useMemo(() => {
     if (!selectedKey) return null;
     const fromPage = pagination.rows.find(
-      (row) => getRowKey(row, mode) === selectedKey,
+      (row) => getRowKey(row, mode, submissionView) === selectedKey,
     );
     if (fromPage) return fromPage;
     return (
-      regularRows.find((row) => getRowKey(row, mode) === selectedKey) ?? null
+      regularRows.find(
+        (row) => getRowKey(row, mode, submissionView) === selectedKey,
+      ) ?? null
     );
-  }, [pagination.rows, regularRows, selectedKey, mode]);
+  }, [pagination.rows, regularRows, selectedKey, mode, submissionView]);
 
   useEffect(() => {
     setPage(1);
     setSelectedKey(null);
     setShadowRealmUnlocked(false);
-  }, [mode, listSource, countryFilter, searchQuery, sortKey, sortDir]);
+  }, [mode, listSource, countryFilter, searchQuery, sortKey, sortDir, submissionView]);
 
   useEffect(() => {
-    setCountryDetailView("players");
-  }, [selectedKey]);
+    setCountryDetailView(
+      showingSubmissionCountries ? "submitters" : "players",
+    );
+  }, [selectedKey, showingSubmissionCountries]);
 
   useEffect(() => {
-    if (mode !== "players") {
+    if (!showingCountryFilter) {
       setCountryFilter([]);
       setCountryFilterOpen(false);
     }
     setSearchQuery("");
-  }, [mode]);
+  }, [mode, submissionView, showingCountryFilter]);
 
   useEffect(() => {
-    if (hasUnknownNationalityPlayers) return;
+    if (hasUnknownNationalityRows) return;
     setCountryFilter((current) => {
       if (!current.includes(UNKNOWN_COUNTRY_VALUE)) return current;
       return current.filter((code) => code !== UNKNOWN_COUNTRY_VALUE);
     });
-  }, [hasUnknownNationalityPlayers]);
+  }, [hasUnknownNationalityRows]);
 
   useEffect(() => {
     if (!sortOptions.some((option) => option.value === sortKey)) {
@@ -1058,7 +1189,7 @@ export default function LeaderboardPage({
 
   const hasActiveFilters =
     searchQuery.trim().length > 0 ||
-    (mode === "players" && countryFilter.length > 0);
+    (showingCountryFilter && countryFilter.length > 0);
 
   return (
     <div className="lb">
@@ -1069,7 +1200,7 @@ export default function LeaderboardPage({
       >
         <h1 className="lb__title">Leaderboard</h1>
         <p className="lb__sub">
-          {getLeaderboardCountLabel(mode, regularRows.length)}
+          {getLeaderboardCountLabel(mode, regularRows.length, submissionView)}
         </p>
 
         <div className="lb__mode-toggle">
@@ -1108,6 +1239,25 @@ export default function LeaderboardPage({
           </button>
         </div>
 
+        {mode === "submissions" && (
+          <div className="lb__mode-toggle lb__mode-toggle--nested">
+            <button
+              type="button"
+              className={`lb__mode-btn${submissionView === "submitters" ? " is-active" : ""}`}
+              onClick={() => setSubmissionView("submitters")}
+            >
+              Submitters
+            </button>
+            <button
+              type="button"
+              className={`lb__mode-btn${submissionView === "countries" ? " is-active" : ""}`}
+              onClick={() => setSubmissionView("countries")}
+            >
+              Countries
+            </button>
+          </div>
+        )}
+
         <div
           className={`lb__toolbar${isMobileLayout ? " lb__toolbar--sticky" : ""}`}
         >
@@ -1116,7 +1266,7 @@ export default function LeaderboardPage({
             type="search"
             value={searchQuery}
             placeholder={
-              mode === "countries"
+              showingCountryRows
                 ? "Search countries..."
                 : mode === "submissions"
                   ? "Search submitters..."
@@ -1126,7 +1276,7 @@ export default function LeaderboardPage({
             aria-label="Search leaderboard"
           />
 
-          {mode === "players" && (
+          {showingCountryFilter && (
             <div className="lb__dropdown lb__dropdown--country">
               <button
                 type="button"
@@ -1176,14 +1326,21 @@ export default function LeaderboardPage({
         <div className="lb__list">
           {pagination.totalCount === 0 && (
             <p className="lb__empty">
-              {getEmptyMessage(mode, hasActiveFilters)}
+              {getEmptyMessage(mode, hasActiveFilters, submissionView)}
             </p>
           )}
 
           {pagination.rows.map((row) => {
-            const rowKey = getRowKey(row, mode);
+            const rowKey = getRowKey(row, mode, submissionView);
             const isSelected = selectedKey === rowKey;
             const displayRank = row.globalRank;
+            const countryBestLabel =
+              showingCountryRows && row.best
+                ? `${formatRank(row.bestRank)} · ${row.best.name}${formatBestAttribution(
+                    row.best,
+                    { includeSubmitter: showingSubmissionCountries },
+                  )}`
+                : null;
 
             return (
               <Fragment key={rowKey}>
@@ -1198,7 +1355,7 @@ export default function LeaderboardPage({
                   </span>
 
                   <div className="lb__pinfo">
-                    {mode === "countries" ? (
+                    {showingCountryRows ? (
                       <>
                         <span className="lb__pname">
                           <CountryFlag
@@ -1209,15 +1366,9 @@ export default function LeaderboardPage({
                         </span>
                         <span
                           className="lb__pbest"
-                          title={
-                            row.best
-                              ? `${formatRank(row.bestRank)} · ${row.best.name} by ${row.best.player}`
-                              : undefined
-                          }
+                          title={countryBestLabel ?? undefined}
                         >
-                          {row.best
-                            ? `${formatRank(row.bestRank)} · ${row.best.name} by ${row.best.player}`
-                            : "—"}
+                          {countryBestLabel ?? "—"}
                         </span>
                       </>
                     ) : (
@@ -1260,6 +1411,7 @@ export default function LeaderboardPage({
                     <DetailContent
                       player={row}
                       mode={mode}
+                      submissionView={submissionView}
                       countryDetailView={countryDetailView}
                       onCountryDetailViewChange={setCountryDetailView}
                       onAchievementClick={onAchievementClick}
@@ -1280,6 +1432,7 @@ export default function LeaderboardPage({
             <DetailContent
               player={selectedRow}
               mode={mode}
+              submissionView={submissionView}
               countryDetailView={countryDetailView}
               onCountryDetailViewChange={setCountryDetailView}
               onAchievementClick={onAchievementClick}

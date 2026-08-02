@@ -1,6 +1,7 @@
 import {
   compareByXpAndBestRank,
   isShadowRealmRow,
+  withCompetitionRank,
   withGlobalRank,
 } from "./leaderboard.js";
 import {
@@ -33,6 +34,23 @@ function compareCountryByXp(a, b) {
     compareByXpAndBestRank(a, b) ||
     getCountryName(a.code).localeCompare(getCountryName(b.code))
   );
+}
+
+function compareCountryBySubmissions(a, b) {
+  if (b.pts !== a.pts) return b.pts - a.pts;
+  return getCountryName(a.code).localeCompare(getCountryName(b.code));
+}
+
+function sortAchievementsByListPosition(achievements) {
+  return [...achievements].sort((a, b) => {
+    // Null/undefined positions sort last, deterministically.
+    const posA = a.listPosition ?? null;
+    const posB = b.listPosition ?? null;
+    if (posA == null && posB == null) return 0;
+    if (posA == null) return 1;
+    if (posB == null) return -1;
+    return posA - posB;
+  });
 }
 
 export function buildCountryBoard(playerBoard, playerCountries) {
@@ -80,16 +98,64 @@ export function buildCountryBoard(playerBoard, playerCountries) {
       .map((country) => ({
         ...country,
         players: [...country.players].sort((a, b) => b.totalXP - a.totalXP),
-        achievements: [...country.achievements].sort((a, b) => {
-          // Null/undefined positions sort last, deterministically.
-          const posA = a.listPosition ?? null;
-          const posB = b.listPosition ?? null;
-          if (posA == null && posB == null) return 0;
-          if (posA == null) return 1;
-          if (posB == null) return -1;
-          return posA - posB;
-        }),
+        achievements: sortAchievementsByListPosition(country.achievements),
       }))
       .sort(compareCountryByXp),
+  );
+}
+
+/** Aggregate submitters into a country board scored by submission count. */
+export function buildSubmissionCountryBoard(submissionBoard, playerCountries) {
+  const grouped = new Map();
+
+  for (const submitter of submissionBoard) {
+    const countryCodes = resolvePlayerCountries(playerCountries, submitter.name);
+    if (!countryCodes.length) continue;
+
+    for (const countryCode of countryCodes) {
+      if (!grouped.has(countryCode)) {
+        grouped.set(countryCode, {
+          code: countryCode,
+          name: getCountryName(countryCode),
+          submitters: [],
+          submissions: [],
+          pts: 0,
+          totalXP: 0,
+          best: null,
+          bestRank: null,
+          achievementCount: 0,
+        });
+      }
+
+      const country = grouped.get(countryCode);
+      country.submitters.push(submitter);
+      country.pts += submitter.pts ?? 0;
+      country.totalXP = country.pts;
+
+      for (const submission of submitter.submissions ?? []) {
+        country.submissions.push(submission);
+        country.achievementCount += 1;
+
+        const rank = submission.listPosition;
+        if (rank != null && (country.bestRank == null || rank < country.bestRank)) {
+          country.bestRank = rank;
+          country.best = submission;
+        }
+      }
+    }
+  }
+
+  return withCompetitionRank(
+    [...grouped.values()]
+      .map((country) => ({
+        ...country,
+        submitters: [...country.submitters].sort((a, b) => {
+          if (b.pts !== a.pts) return b.pts - a.pts;
+          return String(a.name ?? "").localeCompare(String(b.name ?? ""));
+        }),
+        submissions: sortAchievementsByListPosition(country.submissions),
+      }))
+      .sort(compareCountryBySubmissions),
+    (row) => row.pts,
   );
 }
