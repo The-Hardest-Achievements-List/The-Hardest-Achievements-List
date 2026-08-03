@@ -4412,7 +4412,27 @@
     ]
   },
   {
-    "name": "Sakupen Circles (Muffy450, Skylar) 76%",
+    "name": "skc skylar buff 37-100%",
+    "player": "Emp",
+    "levelID": null,
+    "date": "2026-05-10",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "Emp",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Pw6htA1gvXs",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "skc skylar buff 76%",
     "player": "Skylar",
     "levelID": null,
     "date": "2025-08-16",
