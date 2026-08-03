@@ -1,5 +1,82 @@
 [
   {
+    "date": "2026-08-03",
+    "currentName": "Sweeping Demon 2 (Taiago, Mar. 2026) 39-100%",
+    "newName": "Sweeping Demon 2 (Mar. 2026) 39-100%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null.
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-03",
+    "currentName": "Sweeping Demon 2 (Taiago, Apr. 2026) 21-87%",
+    "newName": "Sweeping Demon 2 (Apr. 2026) 21-87%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null.
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-03",
+    "currentName": "Sweeping Demon 2 (Taiago, Apr. 2026) 86%",
+    "newName": "Sweeping Demon 2 (Apr. 2026) 86%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null.
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-03",
+    "currentName": null,
+    "newName": "skc skylar buff 37-100%",
+    "currentRank": null,
+    "newRank": 217,
+    "below": "Tunnel of Despair 144hz Mobile 46-100%",
+    "above": "skc skylar buff 76%",
+    "variantAdded": null,
+    "variantRemoved": null,
+  },
+  {
+    "date": "2026-08-03",
+    "currentName": "Sakupen Circles Nerfdate 76%",
+    "newName": "skc skylar buff 76%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null,
+  },
+  {
+    "date": "2026-08-02",
+    "currentName": null,
+    "newName": "Silent Acropolis (The Purgatory) 99%",
+    "currentRank": null,
+    "newRank": 37,
+    "below": "Every End 18-94%, 94% in a row",
+    "above": "Eternal Silence 1 death, 100% accuracy",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-02",
+    "currentName": "Silent Circles (Thebacon_gamer) 27-53%",
+    "newName": "Silent Circles (Snailboy1234) 27-53",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null.
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-01",
     "currentName": null,
     "newName": "Yellowopolis 17%",
