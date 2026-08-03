@@ -339,14 +339,14 @@
   {
     "name": "Yellowopolis (Old) 19%",
     "player": "Drakanja",
-    "levelID": null,
+    "levelID": 146234787,
     "date": null,
     "length": 28,
     "version": 2.2,
     "submitter": "raine",
     "video": "https://youtu.be/f6W2fhSeR_4",
     "showcaseVideo": null,
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/7c766b0127cab5700ef384af0da676b4e48f970b/images/thumbnails/Yellowopolis%20(Old).png",
     "duplicateOf": "Heliopolis 51%",
     "notes": null,
     "tags": [
@@ -357,7 +357,7 @@
   {
     "name": "Yellowopolis 17%",
     "player": "Drakanja",
-    "levelID": null,
+    "levelID": 139769209,
     "date": null,
     "length": 25,
     "version": 2.2,
