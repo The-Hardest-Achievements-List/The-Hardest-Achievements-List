@@ -872,6 +872,26 @@
     ]
   },
   {
+    "name": "Dignity 15-78%",
+    "player": "Sevant",
+    "levelID": null,
+    "date": "2026-08-03",
+    "length": 35,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/keQtr4pDotc",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Dignity 47-90%",
     "player": "Sevant",
     "levelID": null,
