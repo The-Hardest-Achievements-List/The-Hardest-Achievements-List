@@ -9,14 +9,14 @@ const EDITORS = [
     roles: ["Owner"],
     url: "https://www.youtube.com/@ancepsbutworse"
   },
+  { name: "Arcadie", 
+    roles: ["Elder Moderator"], 
+    url: "https://www.youtube.com/@GW-Arcadie" 
+  },
   { 
     name: "QwidziT", 
     roles: ["Developer"],
     url: "https://www.youtube.com/@qwidzitgd"
-  },
-  { name: "Arcadie", 
-    roles: ["Elder Moderator"], 
-    url: "https://www.youtube.com/@GW-Arcadie" 
   },
   { 
     name: "TYATYAPKA", 
