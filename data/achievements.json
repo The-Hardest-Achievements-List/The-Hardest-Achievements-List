@@ -1516,24 +1516,6 @@
     ]
   },
   {
-    "name": "Angelicide 56-98%",
-    "player": "Druki",
-    "levelID": 120478542,
-    "date": "2026-04-19",
-    "length": 37,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/2sXwazX_epA",
-    "showcaseVideo": "https://youtu.be/czV24THGlA4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Penumbral",
     "player": "w3rty",
     "levelID": 134942736,
@@ -7318,25 +7300,6 @@
     "version": 2.2,
     "submitter": "Subabo",
     "video": "https://youtu.be/JpBB-FEWI2Q",
-    "showcaseVideo": "https://youtu.be/yScT_vx-Vpc",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82602651",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Leaves 25-82%",
-    "player": "Subabo",
-    "levelID": 82602651,
-    "date": "2025-07-22",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "Subabo",
-    "video": "https://youtu.be/hPI_TTbaLBo",
     "showcaseVideo": "https://youtu.be/yScT_vx-Vpc",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/82602651",
     "duplicateOf": null,
