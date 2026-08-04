@@ -528,46 +528,6 @@
     ]
   },
   {
-    "name": "Bonfire (vvay) 44-100%",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-01",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "denkyuzu",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/yLGaVcvIKzo",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire (vvay) 55%",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-01",
-    "length": 34,
-    "version": 2.2,
-    "submitter": "denkyuzu",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/yLGaVcvIKzo",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Bonfire 32-100%",
     "player": "vvay",
     "levelID": 88686539,
@@ -600,6 +560,46 @@
     "video": "https://youtu.be/Ix6_Kr3AHac",
     "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
     "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bonfire (vvay) 44-100%",
+    "player": "vvay",
+    "levelID": null,
+    "date": "2026-08-01",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "denkyuzu",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yLGaVcvIKzo",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Bonfire (vvay) 64%",
+    "player": "vvay",
+    "levelID": null,
+    "date": "2026-08-04",
+    "length": 43,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VAjc4ROXfoU?t=1h10m19s",
+    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1762,6 +1762,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/cnY1S_MbnpA",
+    "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/0cb3652af8773aee9d648b25b992488178660d48/images/thumbnails/Phantasm%20IV.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+    {
+    "name": "Phantasm IV 44%",
+    "player": "T4G",
+    "levelID": null,
+    "date": "2026-08-02",
+    "length": 66,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/kmwc4IS6uik",
     "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/0cb3652af8773aee9d648b25b992488178660d48/images/thumbnails/Phantasm%20IV.png",
     "duplicateOf": null,
