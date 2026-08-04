@@ -3687,17 +3687,17 @@
     ]
   },
   {
-    "name": "Sakupen Circles (Skylar) 2 deaths, 99.98% accuracy",
+    "name": "Sakupen circles (Skylar) 2 deaths, 99.98% accuracy",
     "player": "Emp",
-    "levelID": null,
+    "levelID": 116990010,
     "date": "2024-08-10",
     "length": 49,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/NXmZoIQEzOU",
     "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/2eb6ad9fd018d3b7d4d48e844e58edd1562af604/images/thumbnails/Sakupen%20circles%20(Skylar).png",
+    "duplicateOf": "Sakupen circles (Old)",
     "notes": null,
     "tags": [
       "Level",
