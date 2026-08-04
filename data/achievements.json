@@ -2394,7 +2394,7 @@
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/AgB_Ua5MMt0",
-    "showcaseVideo": "https://youtu.be/_pEXSsmXePU,
+    "showcaseVideo": "https://youtu.be/_pEXSsmXePU",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -4345,13 +4345,13 @@
     "date": "2024-07-06",
     "length": 16,
     "version": 2.2,
-    "submitter": "aytch0008"
+    "submitter": "aytch0008",
     "video": "https://youtu.be/N0CzjSm2XwM",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags", [
+    "tags": [
       "Level",
       "Consistency"
     ]
