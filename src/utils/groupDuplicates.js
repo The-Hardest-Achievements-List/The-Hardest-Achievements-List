@@ -116,6 +116,10 @@ export function isPendingListSource(entry) {
   return src === "pending" || src === "platformerpending";
 }
 
+export function isLegacyListSource(entry) {
+  return entry?._src === "legacy";
+}
+
 export function isMainListSource(entry) {
   const src = entry?._src;
   return src === "classic" || src === "platformer" || src === "main";

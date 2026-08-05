@@ -3,6 +3,7 @@ import {
   getParentKeysInList,
   isGroupedDuplicate,
   isPendingListSource,
+  isLegacyListSource,
   isReplacementDuplicate,
   isDuplicateAchievement,
   annotateGroupedVariants,
@@ -241,16 +242,24 @@ export function resolveAchievementXpPosition(
   return entry.listPosition;
 }
 
+function sourceSortOrder(entry) {
+  if (isPendingListSource(entry)) return 1;
+  if (isLegacyListSource(entry)) return 2;
+  return 0;
+}
+
 export function buildPlayerBoard(entries, playerCountries = null) {
   const mainEntries = [];
   const pendingEntries = [];
+  const legacyEntries = [];
 
   for (const entry of entries) {
     if (isPendingListSource(entry)) pendingEntries.push(entry);
+    else if (isLegacyListSource(entry)) legacyEntries.push(entry);
     else mainEntries.push(entry);
   }
 
-  // Rank/XP sizing comes from the main list only so pending never dilutes scores.
+  // Rank/XP sizing comes from the main list only so pending/legacy never dilute scores.
   const mainWithPosition = withListPositions(mainEntries);
   const listSize =
     mainWithPosition.find((entry) => entry.listPosition != null)?.listSize ??
@@ -261,8 +270,17 @@ export function buildPlayerBoard(entries, playerCountries = null) {
     listPosition: null,
     listSize,
   }));
-  const entriesWithPosition = [...mainWithPosition, ...pendingWithMeta];
-  const sourceEntries = [...mainEntries, ...pendingEntries];
+  const legacyWithMeta = legacyEntries.map((entry) => ({
+    ...entry,
+    listPosition: null,
+    listSize,
+  }));
+  const entriesWithPosition = [
+    ...mainWithPosition,
+    ...pendingWithMeta,
+    ...legacyWithMeta,
+  ];
+  const sourceEntries = [...mainEntries, ...pendingEntries, ...legacyEntries];
   const grouped = new Map();
 
   for (const entry of entriesWithPosition) {
@@ -280,6 +298,7 @@ export function buildPlayerBoard(entries, playerCountries = null) {
       const achievements = playerEntries
         .map((entry) => {
           const isPending = isPendingListSource(entry);
+          const isLegacy = isLegacyListSource(entry);
           const isDuplicate = isGroupedDuplicate(entry, sourceEntries);
           const parentEntries = isDuplicate
             ? findParentEntries(entry, entriesWithPosition)
@@ -289,16 +308,17 @@ export function buildPlayerBoard(entries, playerCountries = null) {
             parentEntries.some((parentEntry) =>
               isReplacementDuplicate(parentEntry, entry),
             );
-          const xpPosition = isPending
-            ? null
-            : resolveAchievementXpPosition(
-                entry,
-                entriesWithPosition,
-                positionByName,
-              );
+          const xpPosition =
+            isPending || isLegacy
+              ? null
+              : resolveAchievementXpPosition(
+                  entry,
+                  entriesWithPosition,
+                  positionByName,
+                );
           const points = isShadowRealm
             ? 0
-            : isPending || xpPosition == null
+            : isPending || isLegacy || xpPosition == null
               ? 0
               : calculateXp(xpPosition, entry.listSize);
 
@@ -314,9 +334,9 @@ export function buildPlayerBoard(entries, playerCountries = null) {
           };
         })
         .sort((a, b) => {
-          const pendingA = isPendingListSource(a) ? 1 : 0;
-          const pendingB = isPendingListSource(b) ? 1 : 0;
-          if (pendingA !== pendingB) return pendingA - pendingB;
+          const orderA = sourceSortOrder(a);
+          const orderB = sourceSortOrder(b);
+          if (orderA !== orderB) return orderA - orderB;
           return (
             (getEntryRank(a) ?? Number.POSITIVE_INFINITY) -
             (getEntryRank(b) ?? Number.POSITIVE_INFINITY)
@@ -324,7 +344,10 @@ export function buildPlayerBoard(entries, playerCountries = null) {
         });
 
       const best =
-        achievements.find((entry) => !isPendingListSource(entry)) ??
+        achievements.find(
+          (entry) =>
+            !isPendingListSource(entry) && !isLegacyListSource(entry),
+        ) ??
         achievements[0] ??
         null;
       const totalXP = isShadowRealm

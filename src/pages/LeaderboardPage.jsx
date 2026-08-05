@@ -27,6 +27,9 @@ import {
 import {
   annotateGroupedVariants,
   getDuplicateParentIds,
+  isMainListSource,
+  isPendingListSource,
+  isLegacyListSource,
 } from "../utils/groupDuplicates";
 import achievementsData from "../../data/achievements.json";
 import playerCountriesData from "../../data/playercountries.json";
@@ -246,6 +249,68 @@ const SOURCE_LABEL = {
   platformerpending: "Platformer Pending",
 };
 
+const ACHIEVEMENT_SOURCE_FILTERS = {
+  classic: [
+    { value: "all", label: "All" },
+    { value: "main", label: "Main" },
+    { value: "pending", label: "Pending" },
+    { value: "legacy", label: "Legacy" },
+  ],
+  platformer: [
+    { value: "all", label: "All" },
+    { value: "main", label: "Main" },
+    { value: "pending", label: "Pending" },
+  ],
+};
+
+function getAchievementSourceFilters(listSource) {
+  return (
+    ACHIEVEMENT_SOURCE_FILTERS[listSource] ?? ACHIEVEMENT_SOURCE_FILTERS.classic
+  );
+}
+
+function resolveAchievementSourceFilter(listSource, filter) {
+  const sourceFilters = getAchievementSourceFilters(listSource);
+  return sourceFilters.some((option) => option.value === filter)
+    ? filter
+    : "all";
+}
+
+function matchesAchievementSourceFilter(entry, filter) {
+  if (filter === "all") return true;
+  if (filter === "main") return isMainListSource(entry);
+  if (filter === "pending") return isPendingListSource(entry);
+  if (filter === "legacy") return isLegacyListSource(entry);
+  return true;
+}
+
+function filterEntriesByAchievementSource(entries, listSource, filter) {
+  const activeFilter = resolveAchievementSourceFilter(listSource, filter);
+  return (entries ?? []).filter((entry) =>
+    matchesAchievementSourceFilter(entry, activeFilter),
+  );
+}
+
+function AchievementSourceFilterToggle({ listSource, value, onChange }) {
+  const sourceFilters = getAchievementSourceFilters(listSource);
+  const activeSourceFilter = resolveAchievementSourceFilter(listSource, value);
+
+  return (
+    <div className="lb__mode-toggle lb__mode-toggle--nested lb__detail-toggle">
+      {sourceFilters.map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          className={`lb__mode-btn${activeSourceFilter === option.value ? " is-active" : ""}`}
+          onClick={() => onChange(option.value)}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 const MEDALS = ["gold", "silver", "bronze"];
 const PAGE_SIZE = 25;
 
@@ -326,6 +391,13 @@ function buildDefaultBoards() {
     })),
   );
 
+  const classicLegacy = annotateGroupedVariants(
+    legacyData.map((entry) => ({
+      ...entry,
+      _src: "legacy",
+    })),
+  );
+
   const platformerPending = annotateGroupedVariants(
     platformerpendingData.map((entry) => ({
       ...entry,
@@ -338,7 +410,7 @@ function buildDefaultBoards() {
 
   const players = {
     classic: buildPlayerBoard(
-      [...combinedClassic, ...classicPending],
+      [...combinedClassic, ...classicPending, ...classicLegacy],
       playerCountriesData,
     ),
     platformer: buildPlayerBoard(
@@ -681,9 +753,12 @@ function CountryDetailContent({
 function DetailContent({
   player,
   mode,
+  listSource,
   submissionView,
   countryDetailView,
   onCountryDetailViewChange,
+  achievementSourceFilter,
+  onAchievementSourceFilterChange,
   onAchievementClick,
 }) {
   if (mode === "countries") {
@@ -711,6 +786,12 @@ function DetailContent({
   }
 
   if (mode === "submissions") {
+    const filteredSubmissions = filterEntriesByAchievementSource(
+      player.submissions,
+      listSource,
+      achievementSourceFilter,
+    );
+
     return (
       <div className="lb__detail-body">
         <div className="lb__detail-hd">
@@ -727,22 +808,38 @@ function DetailContent({
           <span className="lb__detail-points">{player.pts} submissions</span>
         </div>
 
+        <AchievementSourceFilterToggle
+          listSource={listSource}
+          value={achievementSourceFilter}
+          onChange={onAchievementSourceFilterChange}
+        />
+
         <DetailScroll>
           <div className="lb__achs">
-            {player.submissions.map((entry, index) => (
-              <AchievementRow
-                key={`${entry.name}-${index}-${entry._src}`}
-                entry={entry}
-                meta={`${SOURCE_LABEL[entry._src] ?? "Classic"} · ${formatDate(entry.date)}`}
-                points={1}
-                onAchievementClick={onAchievementClick}
-              />
-            ))}
+            {filteredSubmissions.length === 0 ? (
+              <div className="lb__empty">No submissions in this list.</div>
+            ) : (
+              filteredSubmissions.map((entry, index) => (
+                <AchievementRow
+                  key={`${entry.name}-${index}-${entry._src}`}
+                  entry={entry}
+                  meta={`${SOURCE_LABEL[entry._src] ?? "Classic"} · ${formatDate(entry.date)}`}
+                  points={1}
+                  onAchievementClick={onAchievementClick}
+                />
+              ))
+            )}
           </div>
         </DetailScroll>
       </div>
     );
   }
+
+  const filteredAchievements = filterEntriesByAchievementSource(
+    player.achievements,
+    listSource,
+    achievementSourceFilter,
+  );
 
   return (
     <div className="lb__detail-body">
@@ -762,18 +859,28 @@ function DetailContent({
         </span>
       </div>
 
+      <AchievementSourceFilterToggle
+        listSource={listSource}
+        value={achievementSourceFilter}
+        onChange={onAchievementSourceFilterChange}
+      />
+
       <DetailScroll>
         <div className="lb__achs">
-          {player.achievements.map((entry) => (
-            <AchievementRow
-              key={`${entry.name}-${entry.listPosition}-${entry._src}`}
-              entry={entry}
-              meta={`${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`}
-              points={entry.points ?? 0}
-              isDuplicate={entry.isDuplicate}
-              onAchievementClick={onAchievementClick}
-            />
-          ))}
+          {filteredAchievements.length === 0 ? (
+            <div className="lb__empty">No achievements in this list.</div>
+          ) : (
+            filteredAchievements.map((entry) => (
+              <AchievementRow
+                key={`${entry.name}-${entry.listPosition}-${entry._src}`}
+                entry={entry}
+                meta={`${SOURCE_LABEL[entry._src]} · ${formatDate(entry.date)}`}
+                points={entry.points ?? 0}
+                isDuplicate={entry.isDuplicate}
+                onAchievementClick={onAchievementClick}
+              />
+            ))
+          )}
         </div>
       </DetailScroll>
     </div>
@@ -792,14 +899,16 @@ export default function LeaderboardPage({
   const [countryFilter, setCountryFilter] = useState([]);
   const [countryFilterOpen, setCountryFilterOpen] = useState(false);
   const [countryDetailView, setCountryDetailView] = useState("players");
+  const [achievementSourceFilter, setAchievementSourceFilter] = useState("all");
   const [submissionView, setSubmissionView] = useState("submitters");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortKey, setSortKey] = useState(getDefaultSort(initialMode));
   const [sortDir, setSortDir] = useState("asc");
   const [page, setPage] = useState(1);
-  // TheShadowRealm only appears on the last page if you walked there
-  // (prev page → last), not if you jumped straight to the last page button.
+  // TheShadowRealm only appears on the last page if you walked every page
+  // from 1 → last using only the Next button. Any other navigation resets it.
   const [shadowRealmUnlocked, setShadowRealmUnlocked] = useState(false);
+  const shadowWalkActiveRef = useRef(false);
   const headRef = useRef(null);
   const layoutRef = useRef(null);
   const paginationRef = useRef(null);
@@ -816,8 +925,10 @@ export default function LeaderboardPage({
     setListSource(initialListSource);
     setSelectedKey(null);
     setCountryDetailView("players");
+    setAchievementSourceFilter("all");
     setSubmissionView("submitters");
     setPage(1);
+    shadowWalkActiveRef.current = false;
     setShadowRealmUnlocked(false);
     setSortKey(getDefaultSort(initialMode));
     setSortDir("asc");
@@ -905,8 +1016,8 @@ export default function LeaderboardPage({
     sortDir,
   ]);
 
-  // Paginate without TheShadowRealm so jumping to "last" never reveals it.
-  // When unlocked, append them only onto the last page's rows.
+  // Paginate without TheShadowRealm so jumps/shortcuts never reveal it.
+  // When unlocked via a full Next-walk from page 1, append them onto the last page.
   const { regularRows, shadowRows } = useMemo(() => {
     const regular = [];
     const shadow = [];
@@ -948,7 +1059,9 @@ export default function LeaderboardPage({
   useEffect(() => {
     setPage(1);
     setSelectedKey(null);
+    shadowWalkActiveRef.current = false;
     setShadowRealmUnlocked(false);
+    setAchievementSourceFilter("all");
   }, [mode, listSource, countryFilter, searchQuery, sortKey, sortDir, submissionView]);
 
   useEffect(() => {
@@ -1158,17 +1271,28 @@ export default function LeaderboardPage({
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [isMobileLayout, mode, listSource, pagination.page]);
 
-  const handlePageChange = (nextPage) => {
+  const handlePageChange = (nextPage, source = "jump") => {
     const { totalPages } = paginateRows(regularRows, page, PAGE_SIZE);
     const safeNext = Math.min(Math.max(1, nextPage), totalPages);
 
-    // Unlock only when stepping onto the last page from the page before it.
-    if (mode === "players" && safeNext === totalPages && totalPages > 1) {
-      setShadowRealmUnlocked(page === totalPages - 1);
+    // Unlock only after Next-walking every page from 1 to last.
+    // Prev, page-number clicks, and jumps break the walk and hide it again.
+    let unlock = false;
+    if (
+      mode === "players" &&
+      totalPages > 1 &&
+      source === "next" &&
+      safeNext === page + 1
+    ) {
+      if (page === 1) shadowWalkActiveRef.current = true;
+      if (shadowWalkActiveRef.current && safeNext === totalPages) {
+        unlock = true;
+      }
     } else {
-      setShadowRealmUnlocked(false);
+      shadowWalkActiveRef.current = false;
     }
 
+    setShadowRealmUnlocked(unlock);
     setPage(safeNext);
     setSelectedKey(null);
   };
@@ -1411,9 +1535,12 @@ export default function LeaderboardPage({
                     <DetailContent
                       player={row}
                       mode={mode}
+                      listSource={listSource}
                       submissionView={submissionView}
                       countryDetailView={countryDetailView}
                       onCountryDetailViewChange={setCountryDetailView}
+                      achievementSourceFilter={achievementSourceFilter}
+                      onAchievementSourceFilterChange={setAchievementSourceFilter}
                       onAchievementClick={onAchievementClick}
                     />
                   </div>
@@ -1432,9 +1559,12 @@ export default function LeaderboardPage({
             <DetailContent
               player={selectedRow}
               mode={mode}
+              listSource={listSource}
               submissionView={submissionView}
               countryDetailView={countryDetailView}
               onCountryDetailViewChange={setCountryDetailView}
+              achievementSourceFilter={achievementSourceFilter}
+              onAchievementSourceFilterChange={setAchievementSourceFilter}
               onAchievementClick={onAchievementClick}
             />
           </div>

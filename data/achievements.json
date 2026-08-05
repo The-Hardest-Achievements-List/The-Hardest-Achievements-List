@@ -82,8 +82,6 @@
     "length": 40,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/GL3t9xNqkC0",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
@@ -702,8 +700,6 @@
     "length": 73,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/KBJYaQrVx3Q",
     "showcaseVideo": "https://youtu.be/yJCMeyWPmoA",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111237270",
@@ -4403,8 +4399,6 @@
     "length": 28,
     "version": 2.2,
     "submitter": "Emp",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/Pw6htA1gvXs",
     "showcaseVideo": null,
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/116790129",
@@ -7264,7 +7258,7 @@
     "submitter": "Excryst",
     "video": "https://youtu.be/ACrEql3v8Fc",
     "showcaseVideo": "https://youtu.be/s-SF_Il01RM",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Thinking%20Redux%20II.png?raw=true",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Thinking%20Redux%20II.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -7768,7 +7762,7 @@
     "duplicateOf": null,
     "notes": null,
     "tags": [
-      "Challenge",
+      "Level",
       "Progress"
     ]
   },

@@ -21,7 +21,7 @@ function EllipsisJump({
       setEditing(false);
       return;
     }
-    onPageChange(Math.min(Math.max(1, nextPage), totalPages));
+    onPageChange(Math.min(Math.max(1, nextPage), totalPages), "jump");
     setEditing(false);
   };
 
@@ -77,7 +77,7 @@ export default function PaginationControls({
         type="button"
         className={`${classPrefix}__page-btn`}
         disabled={page <= 1}
-        onClick={() => onPageChange(page - 1)}
+        onClick={() => onPageChange(page - 1, "prev")}
       >
         Previous
       </button>
@@ -102,7 +102,7 @@ export default function PaginationControls({
               key={item.value}
               type="button"
               className={`${classPrefix}__page-num${item.value === page ? " is-active" : ""}`}
-              onClick={() => onPageChange(item.value)}
+              onClick={() => onPageChange(item.value, "jump")}
             >
               {item.value}
             </button>
@@ -114,7 +114,7 @@ export default function PaginationControls({
         type="button"
         className={`${classPrefix}__page-btn`}
         disabled={page >= totalPages}
-        onClick={() => onPageChange(page + 1)}
+        onClick={() => onPageChange(page + 1, "next")}
       >
         Next
       </button>

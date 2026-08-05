@@ -189,6 +189,8 @@ function parseRoute() {
  *   siblings do not expand.
  * - Hitchhiking only while the expanding parent remains present.
  * - Pending search hits seed a host parent only (not a full family expand).
+ * - After tags/range, drop host shells with no remaining nested children
+ *   (except seed hosts, which pending replacements may still attach to).
  */
 function filterEntriesByFamilySemantics(
   entries,
@@ -305,6 +307,26 @@ function filterEntriesByFamilySemantics(
     // expanding parent is tag-dropped.
     if (hasSearch && !matchesSearch(entry, query)) return false;
     return passesTags(entry);
+  });
+
+  // Search can host a parent for a child that later fails tags/range. Drop
+  // those empty shells so include filters don't leak non-matching parents.
+  // Seed hosts stay — pending replacements attach from the other list next.
+  const seedHostKeys = new Set(
+    seedHostParentKeys.filter(Boolean).map((key) => key),
+  );
+  const nestedUnder = new Set();
+  for (const entry of data) {
+    for (const parentRef of getDuplicateParentIds(entry)) {
+      nestedUnder.add(getAchievementKey({ name: parentRef }));
+    }
+  }
+  data = data.filter((entry) => {
+    if (getDuplicateParentIds(entry).length > 0) return true;
+    const key = getAchievementKey(entry);
+    if (passesTags(entry)) return true;
+    if (nestedUnder.has(key)) return true;
+    return seedHostKeys.has(key) && passesHostExcludes(entry);
   });
 
   return { entries: data, expandingParentKeys };

@@ -255,6 +255,11 @@
 
 .lb__detail-toggle {
     margin: 8px 12px 0;
+    flex-wrap: wrap;
+}
+
+.lb__detail-toggle .lb__mode-btn {
+    padding: 6px 12px;
 }
 
 .lb__detail--sidebar .lb__achs {
