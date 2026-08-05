@@ -905,8 +905,6 @@ export default function LeaderboardPage({
   const [sortKey, setSortKey] = useState(getDefaultSort(initialMode));
   const [sortDir, setSortDir] = useState("asc");
   const [page, setPage] = useState(1);
-  // TheShadowRealm only appears on the last page if you walked every page
-  // from 1 → last using only the Next button. Any other navigation resets it.
   const [shadowRealmUnlocked, setShadowRealmUnlocked] = useState(false);
   const shadowWalkActiveRef = useRef(false);
   const headRef = useRef(null);
@@ -1016,8 +1014,6 @@ export default function LeaderboardPage({
     sortDir,
   ]);
 
-  // Paginate without TheShadowRealm so jumps/shortcuts never reveal it.
-  // When unlocked via a full Next-walk from page 1, append them onto the last page.
   const { regularRows, shadowRows } = useMemo(() => {
     const regular = [];
     const shadow = [];
@@ -1275,8 +1271,6 @@ export default function LeaderboardPage({
     const { totalPages } = paginateRows(regularRows, page, PAGE_SIZE);
     const safeNext = Math.min(Math.max(1, nextPage), totalPages);
 
-    // Unlock only after Next-walking every page from 1 to last.
-    // Prev, page-number clicks, and jumps break the walk and hide it again.
     let unlock = false;
     if (
       mode === "players" &&

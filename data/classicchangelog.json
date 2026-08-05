@@ -1,6 +1,28 @@
 [
   {
     "date": "2026-08-05",
+    "currentName": "Sakupen circles (Old) 1.1x 64%",
+    "newName": "Sakupen circles (Old) 1.1x 64%",
+    "currentRank": 283,
+    "newRank": 275,
+    "below": "Sakupen Circles 1.1x",
+    "above": "BARELY VISIBLE SKC 37-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-05",
+    "currentName": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "newName": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "currentRank": 17,
+    "newRank": 19,
+    "below": "Amethyst",
+    "above": "Sakupen circles (Old) 1 death, 99.97% accuracy; 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-05",
     "currentName": "Angelicide 56-98%",
     "newName": null,
     "currentRank": 80,

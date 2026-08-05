@@ -298,25 +298,6 @@
     ]
   },
   {
-    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
-    "player": "Chiikawa",
-    "levelID": 83476262,
-    "date": "2026-07-22",
-    "length": 57,
-    "version": 2.2,
-    "submitter": "Chiikawa",
-    "video": "https://youtu.be/VxZz26KgQdU",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Five ship passes (6-9%) and 3 one frame pyramid jump passes (12%) out of seven consecutive attempts.",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Tentative"
-    ]
-  },
-  {
     "name": "Heliopolis 51%",
     "player": "Zoink",
     "levelID": 136530685,
@@ -387,6 +368,25 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "player": "Chiikawa",
+    "levelID": 83476262,
+    "date": "2026-07-22",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "Chiikawa",
+    "video": "https://youtu.be/VxZz26KgQdU",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Five ship passes (6-9%) and 3 one frame pyramid jump passes (12%) out of seven consecutive attempts.",
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
     ]
   },
   {
@@ -5925,6 +5925,25 @@
     ]
   },
   {
+    "name": "Sakupen circles (Old) 1.1x 64%",
+    "player": "Skylar",
+    "levelID": 10887708,
+    "date": "2024-06-24",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/bOLmCAts6nI",
+    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Speedhack"
+    ]
+  },
+  {
     "name": "BARELY VISIBLE SKC 37-100%",
     "player": "ad3usgmd",
     "levelID": null,
@@ -6073,25 +6092,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Sakupen circles (Old) 1.1x 64%",
-    "player": "Skylar",
-    "levelID": 10887708,
-    "date": "2024-06-24",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/bOLmCAts6nI",
-    "showcaseVideo": "https://youtu.be/4TFonU644Pg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Speedhack"
     ]
   },
   {
