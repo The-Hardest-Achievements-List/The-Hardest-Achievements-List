@@ -1699,6 +1699,25 @@
     ]
   },
   {
+    "name": "Ultra Paracosm",
+    "player": "Wity",
+    "levelID": 138704906,
+    "date": "2026-04-21",
+    "length": 71,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/4V24spYQWuE",
+    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "andromeda",
     "player": "Taiago",
     "levelID": 114283297,
@@ -1917,25 +1936,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Ultra Paracosm",
-    "player": "Wity",
-    "levelID": 138704906,
-    "date": "2026-04-21",
-    "length": 71,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/4V24spYQWuE",
-    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
     ]
   },
   {
