@@ -6466,25 +6466,6 @@
     ]
   },
   {
-    "name": "Blade Of Justice 654%",
-    "player": "mosk1712",
-    "levelID": 35448603,
-    "date": "2025-11-23",
-    "length": 870,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/2BEWdLxVXuw",
-    "showcaseVideo": "https://youtu.be/vHij4M3TBfY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "Dramatic",
     "player": "linayru",
     "levelID": 129640849,
@@ -6907,6 +6888,25 @@
     "tags": [
       "Challenge",
       "Verified"
+    ]
+  },
+  {
+    "name": "Blade Of Justice 654%",
+    "player": "mosk1712",
+    "levelID": 35448603,
+    "date": "2025-11-23",
+    "length": 870,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/2BEWdLxVXuw",
+    "showcaseVideo": "https://youtu.be/vHij4M3TBfY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
