@@ -816,6 +816,25 @@
     ]
   },
   {
+    "name": "Sinister Silence 171%",
+    "player": "yomayoCB",
+    "levelID": 82249742,
+    "date": "2026-03-16",
+    "length": 897,
+    "version": 2.2,
+    "submitter": "yomayoCB",
+    "video": "https://www.twitch.tv/videos/2723255326?filter=highlights&sort=time)",
+    "showcaseVideo": "https://youtu.be/wgw4Y4Ie1os",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "mystic haze",
     "player": "seels",
     "levelID": 73332806,
@@ -6447,6 +6466,25 @@
     ]
   },
   {
+    "name": "Blade Of Justice 654%",
+    "player": "mosk1712",
+    "levelID": 35448603,
+    "date": "2025-11-23",
+    "length": 870,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/2BEWdLxVXuw",
+    "showcaseVideo": "https://youtu.be/vHij4M3TBfY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Dramatic",
     "player": "linayru",
     "levelID": 129640849,
@@ -6831,25 +6869,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Blade Of Justice 612%",
-    "player": "mosk1712",
-    "levelID": 35448603,
-    "date": "2025-11-23",
-    "length": 120,
-    "version": 2.2,
-    "submitter": "marleywave",
-    "video": "https://youtu.be/j0xUmqbkxg4",
-    "showcaseVideo": "https://youtu.be/vHij4M3TBfY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
