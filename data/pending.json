@@ -348,6 +348,26 @@
     ]
   },
   {
+    "name": "Artemis 13 32-93%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-05",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VksaNKkDlms?t=4996",
+    "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/9d9b20801b3a602e4c6f6f83620d0d0af76650fa/images/thumbnails/Apocalyptic%20Trilogy%20(Unnerfed).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Artemis 13 64-100%",
     "player": "Zoink",
     "levelID": null,
@@ -405,6 +425,29 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Avernus 120hz Mobile 47-91%",
+    "player": "Prmak",
+    "levelID": 89496627,
+    "date": "2026-08-06",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ozWjV-7xVrw",
+    "showcaseVideo": "https://youtu.be/JL30R7f-iBE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile",
+      "Rated"
     ]
   },
   {
@@ -508,6 +551,27 @@
     ]
   },
   {
+    "name": "BloodEngine (Apr. 2026) 46%",
+    "player": "Karma",
+    "levelID": null,
+    "date": "2026-04-21",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/1Karmakaze/status/2046645549093269603",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e91fb0e670d84266662e06cab4255c9720f2f57e/images/thumbnails/BloodEngine.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  }, 
+
+  {
     "name": "Bocadillo FD Albondi 49%, 51%, 58%",
     "player": "nensa",
     "levelID": 90069457,
@@ -528,78 +592,18 @@
     ]
   },
   {
-    "name": "Bonfire (vvay) 44-100%",
+    "name": "Bonfire",
     "player": "vvay",
     "levelID": null,
-    "date": "2026-08-01",
-    "length": 39,
+    "date": "2026-08-05",
+    "length": 67,
     "version": 2.2,
-    "submitter": "denkyuzu",
+    "submitter": "Cinder",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/yLGaVcvIKzo",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
+    "video": "https://youtu.be/7ZFoCGqCq3Y",
+    "showcaseVideo": "https://youtu.be/7ZFoCGqCq3Y",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire (vvay) 64%",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-04",
-    "length": 43,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VAjc4ROXfoU?t=4219",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire 32-100%",
-    "player": "vvay",
-    "levelID": 88686539,
-    "date": "2026-07-29",
-    "length": 45,
-    "version": 2.2,
-    "submitter": "zFexty",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/d-lL-wN-xdc",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bonfire 45%",
-    "player": "vvay",
-    "levelID": 88686539,
-    "date": "2026-07-29",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "denkyuzu",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Ix6_Kr3AHac",
-    "showcaseVideo": "https://youtu.be/wq-_SFOT8wg",
-    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1362,6 +1366,26 @@
     ]
   },
   {
+    "name": "kill yourself",
+    "player": "hola",
+    "levelID": 146339718,
+    "date": "2026-08-04",
+    "length": 26,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0IHsfYQatVk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Sakupen circles (Old) 37-100% with invisible objects and slight nerfs.",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "kingvonhouse 91%",
     "player": "Icanplayz",
     "levelID": 143271789,
@@ -1382,16 +1406,16 @@
     ]
   },
   {
-    "name": "KOCMOC 120hz Mobile 14-82%",
+    "name": "KOCMOC 120hz Mobile 14-87%",
     "player": "Tuhupolko",
     "levelID": 87665224,
-    "date": "2026-06-05",
-    "length": 45,
+    "date": "2026-08-06",
+    "length": 51,
     "version": 2.2,
-    "submitter": "QwidziT",
+    "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/Gn66qOafzO4",
+    "video": "https://youtu.be/g65iEoSdSgQ",
     "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
     "thumbnail": null,
     "duplicateOf": null,
@@ -2100,6 +2124,27 @@
     ]
   },
   {
+    "name": "Singularity 57%, 52%, 54%, 53% in a row",
+    "player": "SeptaGon7",
+    "levelID": 67432669,
+    "date": "2026-03-13",
+    "length": 93,
+    "version": 2.2,
+    "submitter": "cc478",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zuic_tCePFI",
+    "showcaseVideo": "https://youtu.be/6z4DI13isLc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  }, 
+
+  {
     "name": "Slaughterhouse (Doritos1055) 49-100%",
     "player": "Doritos1055",
     "levelID": null,
@@ -2308,6 +2353,26 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Tidal Wave 23-91%, 23-92% in a row",
+    "player": "Bacon",
+    "levelID": 86407629,
+    "date": "2026-08-05",
+    "length": 238,
+    "version": 2.2,
+    "submitter": "fraudman",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PJ4cNuK5jZo",
+    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
