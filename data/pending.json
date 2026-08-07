@@ -359,7 +359,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/VksaNKkDlms?t=4996",
     "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/9d9b20801b3a602e4c6f6f83620d0d0af76650fa/images/thumbnails/Apocalyptic%20Trilogy%20(Unnerfed).png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -471,6 +471,26 @@
     ]
   },
   {
+    "name": "Azure Flare (ItsHybrid) 57-100%",
+    "player": "Diamond",
+    "levelID": null,
+    "date": "2026-08-06",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/V9hZ-Po-fYs?t=67",
+    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Bellatrix 70%",
     "player": "Dan2D",
     "levelID": null,
@@ -534,7 +554,7 @@
     "name": "BloodEngine 57-100%",
     "player": "Karma",
     "levelID": null,
-    "date": "2026-05-01",
+    "date": "2026-07-23",
     "length": 47,
     "version": 2.2,
     "submitter": "TYATYAPKA",
@@ -1932,7 +1952,7 @@
     "video": "https://youtu.be/bxqxQ9zX27E",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Sakupen Circles 144hz Mobile 37-100%",
     "notes": null,
     "tags": [
       "Level",
@@ -1954,13 +1974,33 @@
     "video": "https://youtu.be/ovxf7Gouym0",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Sakupen Circles 144hz Mobile 37-100%",
     "notes": null,
     "tags": [
       "Level",
       "Low Hertz",
       "Progress",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Sanguine",
+    "player": "spookdd",
+    "levelID": null,
+    "date": "2026-08-07",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cBVlGzobmsA",
+    "showcaseVideo": "https://youtu.be/7ETB37ghcvQ",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d5db31d7be0246c7cd1e334ac54dd49dbe517a4a/images/Sanguine.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -2123,27 +2163,6 @@
       "Progress"
     ]
   },
-  {
-    "name": "Singularity 57%, 52%, 54%, 53% in a row",
-    "player": "SeptaGon7",
-    "levelID": 67432669,
-    "date": "2026-03-13",
-    "length": 93,
-    "version": 2.2,
-    "submitter": "cc478",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/zuic_tCePFI",
-    "showcaseVideo": "https://youtu.be/6z4DI13isLc",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  }, 
-
   {
     "name": "Slaughterhouse (Doritos1055) 49-100%",
     "player": "Doritos1055",
@@ -2479,16 +2498,16 @@
     ]
   },
   {
-    "name": "Tunnel of Serpent 33-100%",
+    "name": "Tunnel of Serpent 21-100%",
     "player": "serpentical",
     "levelID": null,
     "date": "2026-06-03",
-    "length": 57,
+    "length": 62,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "papsikdanya",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/HXv_64ootSk",
+    "video": "https://youtu.be/V3T8oUPawwQ",
     "showcaseVideo": "https://youtu.be/rcHE78QQSp8",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Tunnel%20of%20Serpent.png",
     "duplicateOf": "Tunnel of Serpent 39-100%",
@@ -2556,6 +2575,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Ultra Paracosm 46%, 52% in a row",
+    "player": "Zoink",
+    "levelID": 138704906
+    "date": "2026-07-22",
+    "length": 71,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/eAqU81A5944?t=1085",
+    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
