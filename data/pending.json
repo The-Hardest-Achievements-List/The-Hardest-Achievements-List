@@ -589,8 +589,7 @@
       "Level",
       "Progress"
     ]
-  }, 
-
+  },
   {
     "name": "Bocadillo FD Albondi 49%, 51%, 58%",
     "player": "nensa",
@@ -2580,7 +2579,7 @@
   {
     "name": "Ultra Paracosm 46%, 52% in a row",
     "player": "Zoink",
-    "levelID": 138704906
+    "levelID": 138704906,
     "date": "2026-07-22",
     "length": 71,
     "version": 2.2,
