@@ -1963,9 +1963,9 @@
     ]
   },
   {
-    "name": "Sanguine",
+    "name": "SANGUINE",
     "player": "spookdd",
-    "levelID": null,
+    "levelID": 146538900,
     "date": "2026-08-07",
     "length": 67,
     "version": 2.2,
@@ -1973,8 +1973,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/cBVlGzobmsA",
-    "showcaseVideo": "https://youtu.be/7ETB37ghcvQ",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d5db31d7be0246c7cd1e334ac54dd49dbe517a4a/images/Sanguine.png",
+    "showcaseVideo": "https://youtu.be/xPUHo4FbvqU",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
