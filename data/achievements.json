@@ -1800,6 +1800,27 @@
     ]
   },
   {
+    "name": "CYBERPSYCHOSIS 36-100%",
+    "player": "GuillExprex52",
+    "levelID": 109814681,
+    "date": "2026-07-02",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LHjNGQcUQkI",
+    "showcaseVideo": "https://youtu.be/ldoiOnp3tFk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Tunnel of Despair 18-100%, (0%); 100% 3 deaths, 99.98% accuracy in a row",
     "player": "lanx",
     "levelID": 91351939,
