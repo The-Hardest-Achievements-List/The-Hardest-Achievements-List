@@ -1,15 +1,64 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { getThumbnailUrlSequence } from "../utils/format";
+import {
+  getThumbnailUrlSequence,
+  getYouTubeMaxResThumbnailUrl,
+} from "../utils/format";
 
 const MIN_THUMBNAIL_DIMENSION = 200;
 const MAX_CONCURRENT_THUMB_LOADS = 10;
 const RESOLVED_CACHE_LIMIT = 500;
 const EXHAUSTED_SENTINEL = "";
+const PERSIST_STORAGE_KEY = "thal-thumb-cache-v1";
+const PERSIST_DEBOUNCE_MS = 300;
+
+const YT_VI_RE =
+  /(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/([a-zA-Z0-9_-]{11})\//i;
+const YT_STUB_RISKY_RE =
+  /(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/[^/]+\/(?:maxresdefault|sddefault)\./i;
 
 const resolvedThumbCache = new Map();
 
 let activeThumbLoads = 0;
 const thumbLoadWaiters = [];
+let persistTimer = null;
+let persistHydrated = false;
+
+const hydratePersistedCache = () => {
+  if (persistHydrated || typeof sessionStorage === "undefined") return;
+  persistHydrated = true;
+  try {
+    const raw = sessionStorage.getItem(PERSIST_STORAGE_KEY);
+    if (!raw) return;
+    const entries = JSON.parse(raw);
+    if (!Array.isArray(entries)) return;
+    for (const entry of entries) {
+      if (!Array.isArray(entry) || entry.length < 2) continue;
+      const [key, value] = entry;
+      if (typeof key !== "string" || typeof value !== "string") continue;
+      if (!resolvedThumbCache.has(key)) resolvedThumbCache.set(key, value);
+    }
+  } catch {
+    // Ignore quota / parse errors — in-memory cache still works.
+  }
+};
+
+const schedulePersistCache = () => {
+  if (typeof sessionStorage === "undefined") return;
+  if (persistTimer != null) return;
+  persistTimer = window.setTimeout(() => {
+    persistTimer = null;
+    try {
+      sessionStorage.setItem(
+        PERSIST_STORAGE_KEY,
+        JSON.stringify([...resolvedThumbCache.entries()]),
+      );
+    } catch {
+      // Ignore quota errors.
+    }
+  }, PERSIST_DEBOUNCE_MS);
+};
+
+hydratePersistedCache();
 
 const acquireThumbnailSlot = () => {
   let acquired = false;
@@ -64,6 +113,7 @@ const rememberResolved = (key, value) => {
     const oldest = resolvedThumbCache.keys().next().value;
     resolvedThumbCache.delete(oldest);
   }
+  schedulePersistCache();
 };
 
 const isPrevterSmallThumb = (src) =>
@@ -71,9 +121,9 @@ const isPrevterSmallThumb = (src) =>
   src.includes("levelthumbs.prevter.me/thumbnail/") &&
   /\/small\/?$/.test(src);
 
-/** YouTube thumbs can decode as 120×90 stubs — keep those hidden until accepted. */
+/** maxres/sd can decode as 120×90 stubs — keep those hidden until accepted. */
 export const isRiskyThumbnailUrl = (url) =>
-  typeof url === "string" && url.includes("img.youtube.com/vi/");
+  typeof url === "string" && YT_STUB_RISKY_RE.test(url);
 
 const isAcceptableThumbnail = (img, src) => {
   const { naturalWidth, naturalHeight } = img;
@@ -101,6 +151,19 @@ const sameImageUrl = (a, b) => {
   }
 };
 
+const getYouTubeVideoIdFromThumbUrl = (url) => {
+  if (typeof url !== "string") return null;
+  const match = url.match(YT_VI_RE);
+  return match ? match[1] : null;
+};
+
+const getMaxResUpgradeUrl = (src) => {
+  const videoId = getYouTubeVideoIdFromThumbUrl(src);
+  if (!videoId) return null;
+  if (/\/maxresdefault\./i.test(src)) return null;
+  return getYouTubeMaxResThumbnailUrl(videoId);
+};
+
 const readResolvedCache = (cacheKey, sequence, enabled) => {
   if (!enabled) {
     return { loadedUrl: null, exhausted: false, urlIndex: 0 };
@@ -116,6 +179,8 @@ const readResolvedCache = (cacheKey, sequence, enabled) => {
     if (idx >= 0) {
       return { loadedUrl: cached, exhausted: false, urlIndex: idx };
     }
+    // Persisted maxres (or rewritten host) may not be in the fallback sequence.
+    return { loadedUrl: cached, exhausted: false, urlIndex: 0 };
   }
 
   return { loadedUrl: null, exhausted: false, urlIndex: 0 };
@@ -230,7 +295,10 @@ export function useLevelThumbnail({
 
   const shouldLoad =
     enabled && inView && !isExhausted && (slotReady || Boolean(displayUrl));
-  const loaderUrl = shouldLoad ? (sequence[urlIndex] ?? null) : null;
+  // Prefer an already-resolved URL (incl. persisted maxres upgrades not in sequence).
+  const loaderUrl = shouldLoad
+    ? (displayUrl ?? sequence[urlIndex] ?? null)
+    : null;
   currentUrlRef.current = loaderUrl;
   urlIndexRef.current = urlIndex;
 
@@ -297,6 +365,33 @@ export function useLevelThumbnail({
     if (!img?.complete) return;
     settleFromImage(img);
   }, [loaderUrl, settleFromImage]);
+
+  // After a reliable YouTube size paints, quietly upgrade to maxres when available.
+  useEffect(() => {
+    if (!enabled || !displayUrl) return undefined;
+
+    const upgradeUrl = getMaxResUpgradeUrl(displayUrl);
+    if (!upgradeUrl) return undefined;
+
+    let cancelled = false;
+    const probe = new Image();
+    probe.decoding = "async";
+    probe.onload = () => {
+      if (cancelled) return;
+      if (!isAcceptableThumbnail(probe, upgradeUrl)) return;
+      rememberResolved(cacheKeyRef.current, upgradeUrl);
+      setLoadedUrl(upgradeUrl);
+    };
+    probe.onerror = () => {};
+    probe.src = upgradeUrl;
+
+    return () => {
+      cancelled = true;
+      probe.onload = null;
+      probe.onerror = null;
+      probe.src = "";
+    };
+  }, [enabled, displayUrl]);
 
   return {
     ref,

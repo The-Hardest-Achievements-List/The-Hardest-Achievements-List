@@ -342,12 +342,19 @@ export function normalizeProofUrl(proof) {
     return trimmed
 }
 
+const YT_THUMB_HOST = 'i.ytimg.com'
+
+/** Prefer reliable sizes first — maxres/sd often 200 OK with a 120×90 stub. */
 export function getYouTubeThumbnailUrls(videoId) {
     return [
-        `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-        `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+        `https://${YT_THUMB_HOST}/vi/${videoId}/hqdefault.jpg`,
+        `https://${YT_THUMB_HOST}/vi/${videoId}/mqdefault.jpg`,
     ]
+}
+
+export function getYouTubeMaxResThumbnailUrl(videoId) {
+    if (!videoId) return null
+    return `https://${YT_THUMB_HOST}/vi/${videoId}/maxresdefault.jpg`
 }
 
 export function normalizeThumbnail(thumbnail) {
@@ -362,6 +369,11 @@ export function normalizeThumbnail(thumbnail) {
             .replace('https://github.com/', 'https://raw.githubusercontent.com/')
             .replace('/blob', '')
             .replace(/\?raw=true$/, '')
+    }
+
+    // Prefer the preconnected ytimg CDN over img.youtube.com redirects.
+    if (/^https?:\/\/img\.youtube\.com\/vi\//i.test(trimmed)) {
+        return trimmed.replace(/^(https?:\/\/)img\.youtube\.com/i, `$1${YT_THUMB_HOST}`)
     }
 
     return trimmed
