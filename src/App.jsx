@@ -8,11 +8,11 @@ import {
   Suspense,
 } from "react";
 import Header from "./components/Header";
-import LevelList from "./components/LevelList";
-import LevelModal from "./components/LevelModal";
 import { useLevelThumbnail } from "./hooks/useLevelThumbnail";
 import HomePage from "./pages/HomePage";
 
+const LevelList = lazy(() => import("./components/LevelList"));
+const LevelModal = lazy(() => import("./components/LevelModal"));
 const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 import {
   getDuplicateParentIds,
@@ -40,17 +40,15 @@ import {
   hasRangeFilterBounds,
 } from "./utils/rangeFilter";
 
-import achievementsData from "../data/achievements.json";
-import pendingData from "../data/pending.json";
-import legacyData from "../data/legacy.json";
-import timelineData from "../data/timeline.json";
-import platformersData from "../data/platformers.json";
-import platformerTimelineData from "../data/platformertimeline.json";
-import platformerpendingData from "../data/platformerpending.json";
 import classicChangelogData from "../data/classicchangelog.json";
 import milestonesData from "../data/milestones.json";
 import platformerChangelogData from "../data/platformerchangelog.json";
 import timelineChangelogData from "../data/timelinechangelog.json";
+import {
+  buildDataMap,
+  getCachedListData,
+  loadListData,
+} from "./data/listData";
 
 function isMilestoneEntry(entry) {
   return entry?.list === "classic" || entry?.list === "platformer";
@@ -75,25 +73,10 @@ const platformerChangelogWithMilestones = mergeChangelogWithMilestones(
   milestonesData.filter((entry) => entry.list === "platformer"),
 );
 
-const DATA_MAP = {
-  classic: {
-    MAIN: achievementsData,
-    LEGACY: legacyData,
-    PENDING: pendingData,
-    TIMELINE: timelineData,
-  },
-  platformer: {
-    MAIN: platformersData,
-    LEGACY: [],
-    PENDING: platformerpendingData,
-    TIMELINE: platformerTimelineData,
-  },
-};
-
 const NO_LIST = new Set(["HOME", "LEADERBOARD"]);
 
 function AppBackground({ achievement }) {
-  const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
+  const { imgRef, currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
     thumbnail: achievement?.thumbnail,
     showcaseVideo: achievement?.showcaseVideo,
     video: achievement?.video,
@@ -106,9 +89,11 @@ function AppBackground({ achievement }) {
     <>
       {currentUrl && !loadedUrl && (
         <img
+          ref={imgRef}
           src={currentUrl}
           alt=""
           aria-hidden
+          decoding="async"
           onError={onError}
           onLoad={onLoad}
           style={{ display: "none" }}
@@ -117,7 +102,7 @@ function AppBackground({ achievement }) {
       {loadedUrl && (
         <div
           className="app-bg__img"
-          style={{ backgroundImage: `url(${loadedUrl})` }}
+          style={{ backgroundImage: `url("${loadedUrl}")` }}
         />
       )}
     </>
@@ -396,6 +381,8 @@ function entryMatchesActiveTags(achievement, includeTags, excludeTags) {
 export default function App() {
   const [route, setRoute] = useState(parseRoute);
   const { mode, active } = route;
+  // Home can paint without list JSON; leaderboard + lists need it (shared cache).
+  const needsListData = active !== "HOME";
 
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("rank");
@@ -408,6 +395,9 @@ export default function App() {
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [pendingJumpKey, setPendingJumpKey] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [listData, setListData] = useState(() => getCachedListData());
+  const [listDataError, setListDataError] = useState(null);
+  const [listLoadNonce, setListLoadNonce] = useState(0);
   const [cardScale, setCardScale] = useState(() => {
     if (typeof window === "undefined") return 0.95;
     const stored = window.localStorage.getItem("hd-card-scale");
@@ -422,6 +412,33 @@ export default function App() {
     if (typeof window === "undefined") return false;
     return window.localStorage.getItem("hd-show-projected-ranks") === "true";
   });
+
+  const retryListData = () => {
+    setListDataError(null);
+    setListLoadNonce((n) => n + 1);
+  };
+
+  useEffect(() => {
+    if (listData) return undefined;
+
+    let cancelled = false;
+    const applyData = (data) => {
+      if (cancelled) return;
+      setListData(data);
+      setListDataError(null);
+    };
+    const applyError = (error) => {
+      if (!cancelled) setListDataError(error);
+    };
+
+    // preload-list-data.js may already have started this on list routes.
+    // On Home, warm immediately after paint (no idle delay) so navigation is snappy.
+    loadListData().then(applyData).catch(applyError);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [needsListData, listData, listLoadNonce]);
 
   function navigate(newMode, newActive) {
     // Platformer has no legacy list — fall back to main.
@@ -496,37 +513,45 @@ export default function App() {
   const isPendingList = active === "PENDING";
   const isMainList = active === "MAIN";
   const isLegacyList = active === "LEGACY";
-  const mainEntries = useMemo(
-    () =>
-      annotateGroupedVariants(
-        mode === "classic" ? achievementsData : platformersData,
-      ),
-    [mode],
-  );
-  const pendingEntries = useMemo(
-    () =>
-      annotateGroupedVariants(
-        mode === "classic" ? pendingData : platformerpendingData,
-      ),
-    [mode],
-  );
+  const dataMap = useMemo(() => buildDataMap(listData), [listData]);
+  const listDataReady = Boolean(listData) || !needsListData;
+  const mainEntries = useMemo(() => {
+    if (!listData) return [];
+    return annotateGroupedVariants(
+      mode === "classic" ? listData.achievements : listData.platformers,
+    );
+  }, [mode, listData]);
+  const pendingEntries = useMemo(() => {
+    if (!listData) return [];
+    return annotateGroupedVariants(
+      mode === "classic" ? listData.pending : listData.platformerPending,
+    );
+  }, [mode, listData]);
   const pendingMainCount = useMemo(
     () => getMainListCount(mainEntries),
     [mainEntries],
   );
   const legacyRankOffset = isLegacyList ? pendingMainCount : 0;
   const mainProjectionByKey = useMemo(() => {
-    if (!isMainList) return null;
+    if (!isMainList || !listData) return null;
     return buildMainProjection(mainEntries, pendingEntries, getAchievementKey);
-  }, [isMainList, mode, mainEntries, pendingEntries]);
+  }, [isMainList, mode, mainEntries, pendingEntries, listData]);
   const projectionAvailable = mainProjectionByKey != null;
-  const rawSource = NO_LIST.has(active) ? null : DATA_MAP[mode]?.[active];
+  const rawSource = NO_LIST.has(active) ? null : dataMap?.[mode]?.[active];
   const rawData = useMemo(() => {
+    if (!listData) return [];
     if (isMainList) return mainEntries;
     if (isPendingList) return pendingEntries;
     if (!Array.isArray(rawSource)) return [];
     return annotateGroupedVariants(rawSource);
-  }, [isMainList, isPendingList, mainEntries, pendingEntries, rawSource]);
+  }, [
+    isMainList,
+    isPendingList,
+    mainEntries,
+    pendingEntries,
+    rawSource,
+    listData,
+  ]);
   const isTimeline = active === "TIMELINE";
   const timelineDateLabelMap = useMemo(
     () => (isTimeline ? buildTimelineDateLabelMap(rawData) : null),
@@ -920,7 +945,7 @@ export default function App() {
     };
   }, [active, mode]);
 
-  const topAchievement = !NO_LIST.has(active) ? rawData[0] : null;
+  const topAchievement = !NO_LIST.has(active) ? (rawData[0] ?? null) : null;
 
   return (
     <div className="app">
@@ -969,67 +994,103 @@ export default function App() {
           onNavigate={navigate}
         />
       ) : active === "LEADERBOARD" ? (
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <div className="list-boot" role="status" aria-live="polite">
+              Loading leaderboard…
+            </div>
+          }
+        >
           <LeaderboardPage
+            listData={listData}
+            listDataError={listDataError}
+            onRetryListData={retryListData}
             initialMode={route.lbMode ?? "players"}
             initialListSource={route.listSource ?? "classic"}
             onAchievementClick={setSelectedLevel}
           />
         </Suspense>
+      ) : !listDataReady ? (
+        <div className="list-boot" role="status" aria-live="polite">
+          {listDataError ? (
+            <>
+              <span>Failed to load list data.</span>
+              <button
+                type="button"
+                className="list-boot__retry"
+                onClick={retryListData}
+              >
+                Try again
+              </button>
+            </>
+          ) : (
+            "Loading list…"
+          )}
+        </div>
       ) : (
-        <LevelList
-          key={`${mode}-${active}`}
-          listKey={`${mode}-${active}`}
-          data={filteredData}
-          activeTags={activeTags}
-          allTags={allTags}
-          toggleTag={toggleTag}
-          progressFrom={progressFrom}
-          setProgressFrom={setProgressFrom}
-          progressTo={progressTo}
-          setProgressTo={setProgressTo}
-          hzMin={hzMin}
-          setHzMin={setHzMin}
-          hzMax={hzMax}
-          setHzMax={setHzMax}
-          isTimeline={isTimeline}
-          isPendingEstimate={isPendingList}
-          pendingMainCount={pendingMainCount}
-          projectionAvailable={projectionAvailable}
-          showProjectedRanks={showProjectedRanks}
-          setShowProjectedRanks={setShowProjectedRanks}
-          onCardClick={setSelectedLevel}
-          cardScale={cardScale}
-          setCardScale={setCardScale}
-          cardWidth={cardWidth}
-          setCardWidth={setCardWidth}
-          sort={sort}
-          setSort={setSort}
-          sortDir={sortDir}
-          setSortDir={setSortDir}
-          mode={mode}
-          setMode={(m) => navigate(m, active)}
-          listKind={isMainList ? "main" : isPendingList ? "pending" : null}
-          otherList={filteredOtherList}
-          showJumpToList={hasListContextFilter}
-          onJumpToList={jumpToListPosition}
-          pendingJumpKey={pendingJumpKey}
-          onJumpHandled={clearPendingJump}
-        />
+        <Suspense
+          fallback={
+            <div className="list-boot" role="status" aria-live="polite">
+              Loading list…
+            </div>
+          }
+        >
+          <LevelList
+            key={`${mode}-${active}`}
+            listKey={`${mode}-${active}`}
+            data={filteredData}
+            activeTags={activeTags}
+            allTags={allTags}
+            toggleTag={toggleTag}
+            progressFrom={progressFrom}
+            setProgressFrom={setProgressFrom}
+            progressTo={progressTo}
+            setProgressTo={setProgressTo}
+            hzMin={hzMin}
+            setHzMin={setHzMin}
+            hzMax={hzMax}
+            setHzMax={setHzMax}
+            isTimeline={isTimeline}
+            isPendingEstimate={isPendingList}
+            pendingMainCount={pendingMainCount}
+            projectionAvailable={projectionAvailable}
+            showProjectedRanks={showProjectedRanks}
+            setShowProjectedRanks={setShowProjectedRanks}
+            onCardClick={setSelectedLevel}
+            cardScale={cardScale}
+            setCardScale={setCardScale}
+            cardWidth={cardWidth}
+            setCardWidth={setCardWidth}
+            sort={sort}
+            setSort={setSort}
+            sortDir={sortDir}
+            setSortDir={setSortDir}
+            mode={mode}
+            setMode={(m) => navigate(m, active)}
+            listKind={isMainList ? "main" : isPendingList ? "pending" : null}
+            otherList={filteredOtherList}
+            showJumpToList={hasListContextFilter}
+            onJumpToList={jumpToListPosition}
+            pendingJumpKey={pendingJumpKey}
+            onJumpHandled={clearPendingJump}
+          />
+        </Suspense>
       )}
 
       {selectedLevel && (
-        <LevelModal
-          level={selectedLevel}
-          onClose={() => setSelectedLevel(null)}
-          isPendingEstimate={
-            selectedLevel._src
-              ? ["pending", "platformerpending"].includes(selectedLevel._src)
-              : isPendingList
-          }
-          pendingMainCount={pendingMainCount}
-          showProjectedRanks={showProjectedRanks && isMainList}
-        />
+        <Suspense fallback={null}>
+          <LevelModal
+            level={selectedLevel}
+            onClose={() => setSelectedLevel(null)}
+            isPendingEstimate={
+              selectedLevel._src
+                ? ["pending", "platformerpending"].includes(selectedLevel._src)
+                : isPendingList
+            }
+            pendingMainCount={pendingMainCount}
+            showProjectedRanks={showProjectedRanks && isMainList}
+          />
+        </Suspense>
       )}
 
       {showScrollTop && active !== "LEADERBOARD" && active !== "HOME" && (

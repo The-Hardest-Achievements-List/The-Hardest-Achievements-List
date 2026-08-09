@@ -19,7 +19,7 @@ import {
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
 import TruncatedCardName from "./TruncatedCardName";
 import CardTags from "./CardTags";
-import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
+import { useLevelThumbnail, isRiskyThumbnailUrl } from "../hooks/useLevelThumbnail";
 import {
   formatEstimateDisplay,
   getExactEstimatePodiumPlace,
@@ -125,6 +125,7 @@ function LevelCard({
 
   const {
     ref: thumbnailRef,
+    imgRef,
     currentUrl,
     loadedUrl,
     onError,
@@ -150,6 +151,11 @@ function LevelCard({
     },
     [onJumpToList, a],
   );
+
+  // Show trusted sources immediately; only gate YouTube (stub risk) until accepted.
+  const thumbVisible =
+    Boolean(loadedUrl) ||
+    (Boolean(currentUrl) && !isRiskyThumbnailUrl(currentUrl));
 
   const showJumpButton = typeof onJumpToList === "function";
   const showCornerNote = hasNotes(a.notes);
@@ -266,17 +272,20 @@ function LevelCard({
       <div className="card__thumb">
         {currentUrl ? (
           <img
+            ref={imgRef}
             src={currentUrl}
             alt=""
             decoding="async"
             onError={onError}
             onLoad={onLoad}
+            className={thumbVisible ? undefined : "card__thumb-img--pending"}
             width="100%"
             height="100%"
           />
-        ) : (
-          <div className="card__thumb-placeholder" />
-        )}
+        ) : loadedUrl ? (
+          <img src={loadedUrl} alt="" decoding="async" width="100%" height="100%" />
+        ) : null}
+        {!thumbVisible && <div className="card__thumb-placeholder" />}
         <div className="card__thumb-fade" />
       </div>
     </article>

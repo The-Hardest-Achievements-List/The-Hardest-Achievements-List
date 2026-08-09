@@ -31,14 +31,7 @@ import {
   isPendingListSource,
   isLegacyListSource,
 } from "../utils/groupDuplicates";
-import achievementsData from "../../data/achievements.json";
 import playerCountriesData from "../../data/playercountries.json";
-import pendingData from "../../data/pending.json";
-import legacyData from "../../data/legacy.json";
-import timelineData from "../../data/timeline.json";
-import platformerpendingData from "../../data/platformerpending.json";
-import platformersData from "../../data/platformers.json";
-import platformerTimelineData from "../../data/platformertimeline.json";
 
 const CountryFlag = ({ code, className = "lb__flag-img", size = 18 }) => {
   const normalized = normalizeCountryCode(code);
@@ -369,37 +362,47 @@ const PLATFORMER_SUBMISSION_SOURCES = new Set([
   "platformertimeline",
 ]);
 
-function buildDefaultBoards() {
+function buildDefaultBoards(listData, countriesData = playerCountriesData) {
+  const {
+    achievements,
+    pending,
+    legacy,
+    timeline,
+    platformers,
+    platformerPending,
+    platformerTimeline,
+  } = listData;
+
   const combinedClassic = annotateGroupedVariants(
-    achievementsData.map((entry) => ({
+    achievements.map((entry) => ({
       ...entry,
       _src: "classic",
     })),
   );
 
   const platformerList = annotateGroupedVariants(
-    platformersData.map((entry) => ({
+    platformers.map((entry) => ({
       ...entry,
       _src: "platformer",
     })),
   );
 
   const classicPending = annotateGroupedVariants(
-    pendingData.map((entry) => ({
+    pending.map((entry) => ({
       ...entry,
       _src: "pending",
     })),
   );
 
   const classicLegacy = annotateGroupedVariants(
-    legacyData.map((entry) => ({
+    legacy.map((entry) => ({
       ...entry,
       _src: "legacy",
     })),
   );
 
-  const platformerPending = annotateGroupedVariants(
-    platformerpendingData.map((entry) => ({
+  const platformerPendingList = annotateGroupedVariants(
+    platformerPending.map((entry) => ({
       ...entry,
       _src: "platformerpending",
     })),
@@ -411,30 +414,30 @@ function buildDefaultBoards() {
   const players = {
     classic: buildPlayerBoard(
       [...combinedClassic, ...classicPending, ...classicLegacy],
-      playerCountriesData,
+      countriesData,
     ),
     platformer: buildPlayerBoard(
-      [...platformerList, ...platformerPending],
-      playerCountriesData,
+      [...platformerList, ...platformerPendingList],
+      countriesData,
     ),
   };
 
   const countries = {
-    classic: buildCountryBoard(players.classic, playerCountriesData),
-    platformer: buildCountryBoard(players.platformer, playerCountriesData),
+    classic: buildCountryBoard(players.classic, countriesData),
+    platformer: buildCountryBoard(players.platformer, countriesData),
   };
 
   const allSubmissionEntries = [
-    ...achievementsData.map((entry) => ({ ...entry, _src: "classic" })),
-    ...pendingData.map((entry) => ({ ...entry, _src: "pending" })),
-    ...legacyData.map((entry) => ({ ...entry, _src: "legacy" })),
-    ...timelineData.map((entry) => ({ ...entry, _src: "timeline" })),
-    ...platformersData.map((entry) => ({ ...entry, _src: "platformer" })),
-    ...platformerpendingData.map((entry) => ({
+    ...achievements.map((entry) => ({ ...entry, _src: "classic" })),
+    ...pending.map((entry) => ({ ...entry, _src: "pending" })),
+    ...legacy.map((entry) => ({ ...entry, _src: "legacy" })),
+    ...timeline.map((entry) => ({ ...entry, _src: "timeline" })),
+    ...platformers.map((entry) => ({ ...entry, _src: "platformer" })),
+    ...platformerPending.map((entry) => ({
       ...entry,
       _src: "platformerpending",
     })),
-    ...platformerTimelineData.map((entry) => ({
+    ...platformerTimeline.map((entry) => ({
       ...entry,
       _src: "platformertimeline",
     })),
@@ -454,24 +457,21 @@ function buildDefaultBoards() {
       filterSubmissionEntries("classic"),
       classicPositionMap,
       platformerPositionMap,
-      playerCountriesData,
+      countriesData,
     ),
     platformer: buildSubmissionBoard(
       filterSubmissionEntries("platformer"),
       classicPositionMap,
       platformerPositionMap,
-      playerCountriesData,
+      countriesData,
     ),
   };
 
   const submissionCountries = {
-    classic: buildSubmissionCountryBoard(
-      submissions.classic,
-      playerCountriesData,
-    ),
+    classic: buildSubmissionCountryBoard(submissions.classic, countriesData),
     platformer: buildSubmissionCountryBoard(
       submissions.platformer,
-      playerCountriesData,
+      countriesData,
     ),
   };
 
@@ -479,9 +479,18 @@ function buildDefaultBoards() {
 }
 
 let cachedDefaultBoards = null;
+let cachedBoardsListData = null;
 
-export function getDefaultBoards() {
-  if (!cachedDefaultBoards) cachedDefaultBoards = buildDefaultBoards();
+export function getDefaultBoards(
+  listData,
+  countriesData = playerCountriesData,
+) {
+  if (!listData) return null;
+  if (cachedDefaultBoards && cachedBoardsListData === listData) {
+    return cachedDefaultBoards;
+  }
+  cachedDefaultBoards = buildDefaultBoards(listData, countriesData);
+  cachedBoardsListData = listData;
   return cachedDefaultBoards;
 }
 
@@ -891,8 +900,17 @@ export default function LeaderboardPage({
   initialMode = "players",
   initialListSource = "classic",
   onAchievementClick,
-  boards = getDefaultBoards(),
+  listData = null,
+  listDataError = null,
+  onRetryListData,
+  boards: boardsProp,
 }) {
+  const boards = useMemo(() => {
+    if (boardsProp) return boardsProp;
+    if (!listData) return null;
+    return getDefaultBoards(listData);
+  }, [boardsProp, listData]);
+
   const [mode, setMode] = useState(initialMode);
   const [listSource, setListSource] = useState(initialListSource);
   const [selectedKey, setSelectedKey] = useState(null);
@@ -940,6 +958,7 @@ export default function LeaderboardPage({
     (mode === "submissions" && submissionView === "submitters");
 
   const baseLeaderboard = useMemo(() => {
+    if (!boards) return [];
     if (mode === "countries") return boards.countries[listSource];
     if (mode === "submissions") {
       return submissionView === "countries"
@@ -958,7 +977,7 @@ export default function LeaderboardPage({
   }, [mode, showingSubmissionCountries]);
 
   const hasUnknownNationalityRows = useMemo(() => {
-    if (!showingCountryFilter) return false;
+    if (!boards || !showingCountryFilter) return false;
     const board =
       mode === "submissions"
         ? (boards.submissions[listSource] ?? [])
@@ -968,7 +987,7 @@ export default function LeaderboardPage({
         !isShadowRealmRow(row) &&
         !(Array.isArray(row.countries) ? row.countries : []).length,
     );
-  }, [boards.players, boards.submissions, listSource, mode, showingCountryFilter]);
+  }, [boards, listSource, mode, showingCountryFilter]);
 
   const countryFilterModalOptions = useMemo(() => {
     const options = hasUnknownNationalityRows
@@ -1308,6 +1327,29 @@ export default function LeaderboardPage({
   const hasActiveFilters =
     searchQuery.trim().length > 0 ||
     (showingCountryFilter && countryFilter.length > 0);
+
+  if (!boards) {
+    return (
+      <div className="list-boot" role="status" aria-live="polite">
+        {listDataError ? (
+          <>
+            <span>Failed to load list data.</span>
+            {typeof onRetryListData === "function" && (
+              <button
+                type="button"
+                className="list-boot__retry"
+                onClick={onRetryListData}
+              >
+                Try again
+              </button>
+            )}
+          </>
+        ) : (
+          "Loading leaderboard…"
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="lb">

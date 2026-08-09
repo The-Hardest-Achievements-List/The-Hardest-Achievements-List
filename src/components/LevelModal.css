@@ -81,8 +81,19 @@
     display: block;
 }
 
+.card__thumb-img--pending {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .card:hover .card__thumb img {
     transform: scale(1.04);
+}
+
+.card:hover .card__thumb-img--pending {
+    transform: none;
 }
 
 .card__thumb-placeholder {
@@ -178,19 +189,17 @@
     filter: saturate(1.1);
 }
 
+.modal__thumb-img--pending {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .modal__thumb-fade {
     position: absolute;
     inset: 0;
     background: linear-gradient(0deg, var(--bg-2) 0%, transparent 60%);
-}
-
-.modal__thumb:not(:has(img)) {
-    height: 52px;
-    background: transparent;
-}
-
-.modal__thumb:not(:has(img)) .modal__thumb-fade {
-    display: none;
 }
 
 .modal__body {

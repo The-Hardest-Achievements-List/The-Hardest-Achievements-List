@@ -17,7 +17,7 @@ import {
   asDisplayString,
   filterDisplayableTags,
 } from "../utils/display";
-import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
+import { useLevelThumbnail, isRiskyThumbnailUrl } from "../hooks/useLevelThumbnail";
 import {
   formatEstimateDisplay,
   hasProjectedShift,
@@ -58,13 +58,17 @@ export default function LevelModal({
   const displayTags = filterDisplayableTags(a?.tags);
   const pendingRemoval = displayTags.includes("Pending Removal");
   const isReplacement = Boolean(a?.isReplacement);
-  const { currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
+  const { imgRef, currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
     thumbnail: a.thumbnail,
     showcaseVideo: a.showcaseVideo,
     video: a.video,
     levelID: a.levelID,
     lazy: false,
   });
+
+  const thumbVisible =
+    Boolean(loadedUrl) ||
+    (Boolean(currentUrl) && !isRiskyThumbnailUrl(currentUrl));
 
   const copyTimersRef = useRef([]);
 
@@ -100,17 +104,20 @@ export default function LevelModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal__thumb">
-          {currentUrl && (
+          {currentUrl ? (
             <img
+              ref={imgRef}
               src={currentUrl}
               alt={displayName}
+              decoding="async"
               onError={onError}
               onLoad={onLoad}
+              className={thumbVisible ? undefined : "modal__thumb-img--pending"}
             />
-          )}
-          {!loadedUrl && !currentUrl && (
-            <div className="card__thumb-placeholder" />
-          )}
+          ) : loadedUrl ? (
+            <img src={loadedUrl} alt={displayName} decoding="async" />
+          ) : null}
+          {!thumbVisible && <div className="card__thumb-placeholder" />}
           <div className="modal__thumb-fade" />
           <button className="modal__close" onClick={onClose} aria-label="Close">
             ✕

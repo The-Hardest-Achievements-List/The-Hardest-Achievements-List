@@ -48,7 +48,41 @@
     <link rel="preload" as="image" href="/THAL.png">
 
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+    </noscript>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            background: #0d0b14;
+            color: #f2f0f5;
+        }
+
+        #boot {
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            justify-items: center;
+            gap: 0.85rem;
+            font-family: "Inter Tight", "Segoe UI", sans-serif;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: rgba(242, 240, 245, 0.55);
+        }
+
+        #boot img {
+            width: 72px;
+            height: auto;
+            opacity: 0.9;
+        }
+    </style>
 
     <script type="application/ld+json">
   {
@@ -77,7 +111,12 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div id="boot" aria-busy="true" aria-live="polite">
+            <img src="/THAL.png" alt="" width="72" height="72" />
+            <span>Loading</span>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
