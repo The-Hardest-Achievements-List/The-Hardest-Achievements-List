@@ -151,6 +151,28 @@
     ]
   },
   {
+    "name": "Acheron 60hz 36-96%",
+    "player": "Llqne",
+    "levelID": 73667628,
+    "date": "2026-07-07",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WgcCxGV2QxU",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated"
+    ]
+  },
+  {
     "name": "Sweeping Demon 2 (Apr. 2026) 86%",
     "player": "Taiago",
     "levelID": null,
