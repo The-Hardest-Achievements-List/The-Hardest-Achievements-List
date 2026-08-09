@@ -732,7 +732,7 @@
     ]
   },
   {
-    "name": "Cognitohazard",
+    "name": "cognitohazard",
     "player": "Whizkid05",
     "levelID": 130891319,
     "date": "2025-02-19",
@@ -764,26 +764,6 @@
     "estimateUpper": null,
     "video": "https://youtu.be/X0uqmrkzfHI",
     "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "CYBERPSYCHOSIS 36-100%",
-    "player": "GuillExprex52",
-    "levelID": 109814681,
-    "date": "2026-07-02",
-    "length": 64,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/LHjNGQcUQkI",
-    "showcaseVideo": "https://youtu.be/ldoiOnp3tFk",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1400,7 +1380,7 @@
     "duplicateOf": null,
     "notes": "Sakupen circles (Old) 37-100% with invisible objects and slight nerfs.",
     "tags": [
-      "Level",
+      "Challenge",
       "Verified"
     ]
   },
