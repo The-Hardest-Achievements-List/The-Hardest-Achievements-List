@@ -166,26 +166,6 @@
     ]
   },
   {
-    "name": "Aeternus 26-40%",
-    "player": "aden",
-    "levelID": 102647436,
-    "date": "2026-06-20",
-    "length": 12,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/nACJUp1hDS4",
-    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Aeternus 42-59%",
     "player": "aden",
     "levelID": 102647436,
@@ -223,26 +203,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Aeternus 56-61%, 56-58%, 56-57%, (56-56%), 56-61%, (56-56%), 56-57%, 56-61% in a row",
-    "player": "FlinGuSPluNkuS",
-    "levelID": 102647436,
-    "date": "2026-06-28",
-    "length": 16,
-    "version": 2.2,
-    "submitter": "FlinGuSPluNkuS",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/qwJZIDfdF7k",
-    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
     ]
   },
   {
