@@ -446,28 +446,8 @@
       "Level",
       "Low Hertz",
       "Progress",
-      "Mobile",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Azure Flare (ItsHybrid) 69%",
-    "player": "Diamond",
-    "levelID": null,
-    "date": "2026-07-17",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/PknC5na8x0k?t=18850",
-    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
+      "Rated",
+      "Mobile"
     ]
   },
   {
@@ -491,6 +471,26 @@
     ]
   },
   {
+    "name": "Azure Flare (ItsHybrid) 69%",
+    "player": "Diamond",
+    "levelID": null,
+    "date": "2026-07-17",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PknC5na8x0k?t=18850",
+    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Bellatrix 70%",
     "player": "Dan2D",
     "levelID": null,
@@ -503,6 +503,26 @@
     "video": "https://youtu.be/vIO9hAa-Koc",
     "showcaseVideo": "https://youtu.be/r44ig4sxMww",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8266a1f1b574b786cc713f11d110668a61933c0b/images/thumbnails/Bellatrix.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "BloodEngine (Apr. 2026) 46%",
+    "player": "Karma",
+    "levelID": null,
+    "date": "2026-04-21",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/1Karmakaze/status/2046645549093269603",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e91fb0e670d84266662e06cab4255c9720f2f57e/images/thumbnails/BloodEngine.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -563,26 +583,6 @@
     "video": "https://youtu.be/HbKik90cGSA",
     "showcaseVideo": null,
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "BloodEngine (Apr. 2026) 46%",
-    "player": "Karma",
-    "levelID": null,
-    "date": "2026-04-21",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://x.com/1Karmakaze/status/2046645549093269603",
-    "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e91fb0e670d84266662e06cab4255c9720f2f57e/images/thumbnails/BloodEngine.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [

@@ -1,5 +1,104 @@
 [
   {
+    "date": "2026-08-08",
+    "currentName": null,
+    "newName": "CYBERPSYCHOSIS 36-100%",
+    "currentRank": null,
+    "newRank": 94,
+    "below": "Angelicide 53-100% 2 deaths, 99.98% accuracy",
+    "above": "Tunnel of Despair 18-100%, (0%); 100% 3 deaths, 99.98% accuracy in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-08",
+    "currentName": null,
+    "newName": "silent flystep 25%",
+    "currentRank": null,
+    "newRank": 89,
+    "below": "Silent clubstep",
+    "above": "Ashley Wave Trials",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": "Eternal Silence 74%",
+    "newName": "Eternal Silence 74%",
+    "currentRank": 54,
+    "newRank": 39,
+    "below": "Eternal Silence 1 death, 100% accuracy",
+    "above": "Tidal Wave buffed",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": "Lithium 60hz Mobile",
+    "newName": null,
+    "currentRank": 261,
+    "newRank": null,
+    "below": "Cold Sweat 60hz Mobile",
+    "above": "Im Bleaf",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": "Ouroboros (-) 60hz Mobile",
+    "newName": "Ouroboros (-) 60hz Mobile",
+    "currentRank": 134,
+    "newRank": 163,
+    "below": "Angelicide 30-66%",
+    "above": "Spectre",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": null,
+    "newName": "KOCMOC UNLEASHED 69%",
+    "currentRank": null,
+    "newRank": 5,
+    "below": "KOCMOC UNLEASHED 14-81%",
+    "above": "Thinking Space II 85%, (5%, 3%), 86% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
+    "newName": "KOCMOC UNLEASHED 14-81%",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-07",
+    "currentName": "KOCMOC UNLEASHED (Mar. 2026) 68%",
+    "newName": "KOCMOC UNLEASHED (Mar. 2026) 68%",
+    "currentRank": 9,
+    "newRank": 3,
+    "below": "GRIEF 97%",
+    "above": "KOCMOC UNLEASHED (Aug. 2025) 19-91%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-06",
+    "currentName": "Ultra Paracosm",
+    "newName": "Ultra Paracosm",
+    "currentRank": 101,
+    "newRank": 88,
+    "below": "Ashley Wave Trials",
+    "above": "andromeda",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-05",
     "currentName": "Sakupen circles (Old) 1.1x 64%",
     "newName": "Sakupen circles (Old) 1.1x 64%",

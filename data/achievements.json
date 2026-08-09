@@ -64,8 +64,6 @@
     "length": 41,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/Ry3KjPOhzbo?t=72",
     "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d1448c452abdfd8b488005624298877890ff80d2/images/thumbnails/KOCMOC%20UNLEASHED.png",
@@ -85,8 +83,6 @@
     "length": 68,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/Ry3KjPOhzbo",
     "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/d1448c452abdfd8b488005624298877890ff80d2/images/thumbnails/KOCMOC%20UNLEASHED.png",
@@ -1710,8 +1706,6 @@
     "length": 22,
     "version": 2.2,
     "submitter": "Chiikawa",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://discord.com/channels/1122038339541934091/1122040444877025340/1535253750338293820",
     "showcaseVideo": null,
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/18dae3a53eac0097dd3ffcd1dfe028b702510749/images/thumbnails/silent%20flystep.png",
@@ -1807,8 +1801,6 @@
     "length": 64,
     "version": 2.2,
     "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/LHjNGQcUQkI",
     "showcaseVideo": "https://youtu.be/ldoiOnp3tFk",
     "thumbnail": null,
@@ -3465,8 +3457,8 @@
       "Level",
       "Low Hertz",
       "Rated",
-      "Mobile",
-      "Tentative"
+      "Tentative",
+      "Mobile"
     ]
   },
   {
