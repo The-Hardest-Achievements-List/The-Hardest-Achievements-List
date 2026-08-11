@@ -158,8 +158,6 @@
     "length": 39,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/WgcCxGV2QxU",
     "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
     "thumbnail": null,
@@ -169,7 +167,8 @@
       "Level",
       "Low Hertz",
       "Progress",
-      "Rated"
+      "Rated",
+      "Tentative"
     ]
   },
   {
@@ -284,7 +283,7 @@
     ]
   },
   {
-    "name": "Tidal Wave buffed 71%, 100% in a row",
+    "name": "Tidal Wave buffed 71%, (1%, 0%), 100% in a row",
     "player": "wPopoff",
     "levelID": 116732736,
     "date": "2025-04-01",
@@ -424,7 +423,7 @@
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": "Five ship passes (6-9%) and 3 one frame pyramid jump passes (12%) out of seven consecutive attempts.",
+    "notes": "5 ship passes (6-9%) and 3 pyramid jumps passes (12%) out of 7 consecutive attempts.",
     "tags": [
       "Level",
       "Consistency",
@@ -673,6 +672,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "Acheron 60hz 26-72%",
+    "player": "Llqne",
+    "levelID": 73667628,
+    "date": "2026-05-03",
+    "length": 29,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "video": "https://youtu.be/ALoWrBGPDyw",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated"
     ]
   },
   {
@@ -5951,6 +5970,25 @@
     ]
   },
   {
+    "name": "Sacrifice",
+    "player": "Laniakea",
+    "levelID": 141052363,
+    "date": "2023-05-26",
+    "length": 150,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/Sth67PA8XBU",
+    "showcaseVideo": "https://youtu.be/RPhy6t2bb04",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "CHIL",
     "player": "Coco",
     "levelID": 114281093,
@@ -7110,6 +7148,25 @@
     ]
   },
   {
+    "name": "Despair Code 21%, (0%, 1%), 26% in a row",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-08",
+    "length": 15,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/7aJKo3tnUnQ",
+    "showcaseVideo": "https://youtu.be/k07psA4nBJo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Zero Factorial (LAMINGTON) 36-100%",
     "player": "LAMINGTON",
     "levelID": null,
@@ -7740,43 +7797,6 @@
     ]
   },
   {
-    "name": "Sakupen Feet",
-    "player": "nensa",
-    "levelID": 118680356,
-    "date": "2025-05-10",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "video": "https://youtu.be/w_SfQ5RJTj4",
-    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
-    "thumbnail": null,
-    "duplicateOf": "Sakupen Circles (Awedsy)",
-    "notes": "An ever so slightly buffed version of Awedsy's remake of Sakupen Cirles.",
-    "tags": [
-      "Level",
-      "Verified",
-      "Variant"
-    ]
-  },
-  {
-    "name": "Sakupen Circles (Awedsy)",
-    "player": "Brian Cheese",
-    "levelID": 63702523,
-    "date": "2025-07-12",
-    "length": 54,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/LosiqyqaqV0",
-    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
     "name": "Formosa 54hz 3.13%",
     "player": "Emp",
     "levelID": 79120639,
@@ -7867,6 +7887,45 @@
     "tags": [
       "Challenge",
       "Progress"
+    ]
+  },
+  {
+    "name": "Despair Code 33%",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-10",
+    "length": 9,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/6YsJTJ4i44g",
+    "showcaseVideo": "https://youtu.be/k07psA4nBJo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Despair Code 80% 8 deaths, 99.52% accuracy",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-10",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "Infinny",
+    "video": "https://youtu.be/mtY0nBLgJXQ",
+    "showcaseVideo": "https://youtu.be/k07psA4nBJo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress",
+      "Tentative",
+      "Noclip"
     ]
   },
   {
@@ -8059,6 +8118,25 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Despair Code (May 2026) 35-100%",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-10",
+    "length": 16,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "video": "https://youtu.be/Ahx_F-1DrZ4",
+    "showcaseVideo": "https://youtu.be/k07psA4nBJo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress",
+      "Tentative"
     ]
   },
   {

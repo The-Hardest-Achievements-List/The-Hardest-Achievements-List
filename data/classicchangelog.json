@@ -1,5 +1,126 @@
 [
   {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Despair Code (May 2026) 35-100%",
+    "currentRank": null,
+    "newRank": 375,
+    "below": "KOSETSU",
+    "above": "Through the Gates",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Despair Code 80% 8 deaths, 99.52% accuracy",
+    "currentRank": null,
+    "newRank": 365,
+    "below": "Despair Code 30%",
+    "above": "The Yangire 144hz",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Despair Code 33%",
+    "currentRank": null,
+    "newRank": 364,
+    "below": "CorroZ 41%",
+    "above": "The Yangire 144hz",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": "Sakupen Feet",
+    "newName": null,
+    "currentRank": 360,
+    "newRank": null,
+    "below": "Silent clubstep (Sailence) 31%",
+    "above": "Formosa 54hz 3.13%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": "Sakupen Circles (Awedsy)",
+    "newName": null,
+    "currentRank": 360,
+    "newRank": null,
+    "below": "Silent clubstep (Sailence) 31%",
+    "above": "Formosa 54hz 3.13%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Despair Code 21%, (0%), (1%), 26% in a row",
+    "currentRank": null,
+    "newRank": 325,
+    "below": "Formosa 54hz 2.73%, 1.46% in a row",
+    "above": "Zero Factorial (LAMINGTON) 36-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Sacrifice",
+    "currentRank": null,
+    "newRank": 277,
+    "below": "Deimos",
+    "above": "CHIL",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": null,
+    "newName": "Acheron 60hz 26-72%",
+    "currentRank": null,
+    "newRank": 35,
+    "below": "Africa Circles (Unnerfed) 4-46%, 4-65%, 4-50%, (4-6%), 4-62% in a row",
+    "above": "Acheron 60hz 17-67%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": "Tidal Wave buffed 71%, 100% in a row",
+    "newName": "Tidal Wave buffed 71%, (1%, 0%), 100% in a row",
+    "currentRank": null,
+    "newRank": null,
+    "below": null,
+    "above": null,
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-11",
+    "currentName": "i n j u r y (Layout) 95%",
+    "newName": null,
+    "currentRank": 356,
+    "newRank": null,
+    "below": "Firework (Sid125) 24-92%",
+    "above": "Silent clubstep (Sailence) 31%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-10",
+    "currentName": null,
+    "newName": "Acheron 60hz 36-96%",
+    "currentRank": null,
+    "newRank": 9,
+    "below": "Society",
+    "above": "Sweeping Demon 2 (Apr. 2026) 86%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-08",
     "currentName": null,
     "newName": "CYBERPSYCHOSIS 36-100%",

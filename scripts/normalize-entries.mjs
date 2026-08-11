@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { normalizeYouTubeUrl } from "../src/utils/format.js";
+import { isFormattableDate, normalizeYouTubeUrl } from "../src/utils/format.js";
 import { normalizeEstimateField } from "../src/utils/estimateRank.js";
 import { CLASSIC_TAGS, PLATFORMER_TAGS } from "../src/utils/tags.js";
 const ESTIMATE_FIELDS = new Set(["estimateLower", "estimateUpper"]);
@@ -381,9 +381,11 @@ const PLATFORMER_PENDING_FIELD_ORDER = [
 
 const LIST_CHANGELOG_FIELD_ORDER = CLASSIC_CHANGELOG_FIELDS;
 
+/** Timeline changelog — same name fields as list changelogs, plus placement dates. */
 const TIMELINE_CHANGELOG_FIELD_ORDER = [
   "date",
-  "name",
+  "currentName",
+  "newName",
   "timelineAdded",
   "timelineRemoved",
 ];
@@ -469,6 +471,10 @@ const normalizeNumberField = (value) => {
 const normalizeDateField = (value) => {
   const normalized = normalizeNonEmptyStringField(value);
   if (!normalized) return null;
+  // Keep partial timeline dates (`2015-10-??`); Date.parse can loosely accept them.
+  if (normalized.includes("?")) {
+    return isFormattableDate(normalized) ? normalized : null;
+  }
   const timestamp = Date.parse(normalized);
   return Number.isNaN(timestamp) ? null : normalized;
 };
@@ -897,11 +903,31 @@ export const normalizeListChangelogEntry = (entry) => {
 
 export const normalizeTimelineChangelogEntry = (entry) => {
   const source = entry && typeof entry === "object" ? entry : {};
+  let currentName = normalizeNonEmptyOrNull(
+    source.currentName ?? source.nameFrom ?? null,
+  );
+  let newName = normalizeNonEmptyOrNull(
+    source.newName ?? source.nameTo ?? null,
+  );
+  const legacyName = normalizeNonEmptyOrNull(source.name);
+  const timelineAdded = normalizeDateField(source.timelineAdded);
+  const timelineRemoved = normalizeDateField(source.timelineRemoved);
+
+  // Migrate legacy single `name` into currentName/newName.
+  if (legacyName != null && currentName == null && newName == null) {
+    if (timelineRemoved != null && timelineAdded == null) {
+      currentName = legacyName;
+    } else {
+      newName = legacyName;
+    }
+  }
+
   const normalized = {
     date: normalizeDateField(source.date),
-    name: normalizeNonEmptyOrNull(source.name),
-    timelineAdded: normalizeDateField(source.timelineAdded),
-    timelineRemoved: normalizeDateField(source.timelineRemoved),
+    currentName,
+    newName,
+    timelineAdded,
+    timelineRemoved,
   };
 
   const previous = {};

@@ -117,13 +117,48 @@ export function hasNotes(notes) {
     return getNotesParts(notes).length > 0
 }
 
+const PARTIAL_DATE_RE = /^(\d{4})-(\d{2}|\?\?)-(\d{2}|\?\?)$/
+
 export function isValidDate(iso) {
     if (!iso || typeof iso !== 'string') return false
+    // Reject partial timeline dates (`2015-10-??`)
+    if (iso.includes('?')) return false
     const d = new Date(iso)
     return !Number.isNaN(d.getTime())
 }
 
+/** True for full ISO dates or partial timeline dates like `2015-10-??`. */
+export function isFormattableDate(iso) {
+    if (isValidDate(iso)) return true
+    if (!iso || typeof iso !== 'string') return false
+    const match = iso.match(PARTIAL_DATE_RE)
+    if (!match) return false
+    const [, , month, day] = match
+    if (month !== '??') {
+        const monthNum = Number(month)
+        if (monthNum < 1 || monthNum > 12) return false
+    }
+    if (day !== '??') {
+        const dayNum = Number(day)
+        if (dayNum < 1 || dayNum > 31) return false
+    }
+    return true
+}
+
 export function formatDate(iso) {
+    if (!iso || typeof iso !== 'string') return '—'
+
+    const partial = iso.match(PARTIAL_DATE_RE)
+    if (partial && (partial[2] === '??' || partial[3] === '??')) {
+        if (!isFormattableDate(iso)) return '—'
+        const [, year, month, day] = partial
+        const yearShort = year.slice(2)
+        const monthLabel =
+            month === '??' ? '?' : MONTHS[Number(month) - 1]
+        const dayLabel = day === '??' ? '?' : String(Number(day))
+        return `${dayLabel} ${monthLabel} ${yearShort}`
+    }
+
     if (!isValidDate(iso)) return '—'
     const d = new Date(iso)
     return `${d.getDate()} ${MONTHS[d.getMonth()]} ${String(d.getFullYear()).slice(2)}`
@@ -165,7 +200,7 @@ export function getInferredDateTimestamp(entries, index) {
 function buildTimelineDateLabelAt(entries, index) {
     const entry = entries[index]
 
-    if (isValidDate(entry.date)) {
+    if (isFormattableDate(entry.date)) {
         return formatDate(entry.date)
     }
 

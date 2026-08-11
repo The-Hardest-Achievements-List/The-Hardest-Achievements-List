@@ -2241,6 +2241,61 @@
     ]
   },
   {
+    "name": "Sakupen Feet",
+    "player": "nensa",
+    "levelID": 118680356,
+    "date": "2025-05-10",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "video": "https://youtu.be/w_SfQ5RJTj4",
+    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Circles (Awedsy)",
+    "notes": "An ever so slightly buffed version of Awedsy's remake of Sakupen Cirles.",
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+  {
+    "name": "Sakupen Circles (Awedsy)",
+    "player": "Brian Cheese",
+    "levelID": 63702523,
+    "date": "2025-07-12",
+    "length": 54,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/LosiqyqaqV0",
+    "showcaseVideo": "https://youtu.be/TYlMnbQdKWw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Determination Dance",
+    "player": "Cursed",
+    "levelID": 74015661,
+    "date": "2021-10-25",
+    "length": 47,
+    "version": 2.2,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/-HNuhKG4fiA",
+    "showcaseVideo": "https://youtu.be/DUAjNqop_p8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Diamond Dance (Sakupen Circles 37-49%) x4 in a row",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Silent Circles (Starchman Buffed) 81-100%",
     "player": "Juls",
     "levelID": null,

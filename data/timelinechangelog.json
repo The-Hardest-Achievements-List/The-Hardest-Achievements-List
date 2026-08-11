@@ -1,19 +1,78 @@
 [
   {
+    "date": "2026-08-07",
+    "currentName": null,
+    "newName": "KOCMOC UNLEASHED (Mar. 2026) 68%",
+    "timelineAdded": "2026-03-11",
+    "timelineRemoved": null
+  },
+  {
+    "date": "2026-07-30",
+    "currentName": null,
+    "newName": "Sonic Wave (Cyclic) 49%",
+    "timelineAdded": "2015-10-??",
+    "timelineRemoved": null
+  },
+  {
+    "date": "2026-07-30",
+    "currentName": "Sonic Wave 72%",
+    "newName": "Sonic Wave (Cyclic) 72%",
+    "timelineAdded": null,
+    "timelineRemoved": null
+  },
+  {
+    "date": "2026-07-27",
+    "currentName": null,
+    "newName": "Abyss of Darkness (Old) 68%",
+    "timelineAdded": "2020-11-14",
+    "timelineRemoved": null
+  },
+  {
+    "date": "2026-07-27",
+    "currentName": null,
+    "newName": "Abyss of Darkness (Old) 32-100%",
+    "timelineAdded": "2020-10-23",
+    "timelineRemoved": null
+  },
+  {
+    "date": "2026-07-27",
+    "currentName": "3SH in Hell",
+    "newName": null,
+    "timelineAdded": null,
+    "timelineRemoved": "2020-05-17"
+  },
+  {
+    "date": "2026-07-27",
+    "currentName": "3SH in Hell 89%",
+    "newName": null,
+    "timelineAdded": null,
+    "timelineRemoved": "2020-05-17"
+  },
+  {
+    "date": "2026-07-24",
+    "currentName": null,
+    "newName": "Abyss of Darkness",
+    "timelineAdded": "2022-04-03",
+    "timelineRemoved": null
+  },
+  {
     "date": "2026-07-21",
-    "name": "Tidal Wave buffed 71%, 100% in a row",
+    "currentName": null,
+    "newName": "Tidal Wave buffed 71%, (1%, 0%), 100% in a row",
     "timelineAdded": "2025-04-01",
     "timelineRemoved": null
   },
   {
     "date": "2026-06-21",
-    "name": "D",
+    "currentName": null,
+    "newName": "D",
     "timelineAdded": "2013-09-29",
     "timelineRemoved": null
   },
   {
     "date": "2026-06-21",
-    "name": "Level 5",
+    "currentName": "Level 5",
+    "newName": null,
     "timelineAdded": null,
     "timelineRemoved": "2013-09-13"
   }

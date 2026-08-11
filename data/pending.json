@@ -22,28 +22,6 @@
     ]
   },
   {
-    "name": "Acheron 60hz 26-72%",
-    "player": "Llqne",
-    "levelID": 73667628,
-    "date": "2026-05-03",
-    "length": 29,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/ALoWrBGPDyw",
-    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated"
-    ]
-  },
-  {
     "name": "Aeternus 11-23%",
     "player": "wShock",
     "levelID": 102647436,
@@ -750,46 +728,6 @@
       "Challenge",
       "Low Hertz",
       "Mobile"
-    ]
-  },
-  {
-    "name": "Despair Code 35-100%",
-    "player": "Infinny",
-    "levelID": null,
-    "date": "2026-05-21",
-    "length": 16,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Ahx_F-1DrZ4",
-    "showcaseVideo": "https://youtu.be/uJjqnGFupZQ",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Despair Code 99.37% accuracy, 17 deaths",
-    "player": "Infinny",
-    "levelID": null,
-    "date": "2026-07-27",
-    "length": 24,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Oh-6KZeDemA",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
     ]
   },
   {
