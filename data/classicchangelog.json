@@ -1,5 +1,93 @@
 [
-   {
+  {
+    "date": "2026-08-12",
+    "currentName": null,
+    "newName": "The Salt Factory",
+    "currentRank": null,
+    "newRank": 303,
+    "below": "EXPIRATION DATE",
+    "above": "Master of Puppets",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Acheron 2.1",
+    "newName": "Acheron 2.1",
+    "currentRank": 121,
+    "newRank": 115,
+    "below": "Silent Acropolis (Unnerfed) 31%, 54% in a row",
+    "above": "Slaughterhouse (Unnerfed)",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Slaughterhouse (Unnerfed)",
+    "newName": "Slaughterhouse (Unnerfed)",
+    "currentRank": 110,
+    "newRank": 116,
+    "below": "Silent Acropolis (Unnerfed) 31%, 54% in a row",
+    "above": "Acheron 24-100%, 17-96% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Anathema",
+    "newName": "Anathema",
+    "currentRank": 118,
+    "newRank": 114,
+    "below": "Exasperation 65-100%",
+    "above": "Silent Acropolis (Unnerfed) 31%, 54% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Aquamarine",
+    "newName": "Aquamarine",
+    "currentRank": 113,
+    "newRank": 117,
+    "below": "Acheron 24-100%, 17-96% in a row",
+    "above": "SILENT OPPENHEIMER (Old) 67%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Acheron (Riot) 91%",
+    "newName": "Acheron (Riot) 91%",
+    "currentRank": 102,
+    "newRank": 70,
+    "below": "Acheron (Riot) 17-97%",
+    "above": "Vehemence (wPopoff Old) 47-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Acheron (Riot) 17-97%",
+    "newName": "Acheron (Riot) 17-97%",
+    "currentRank": 101,
+    "newRank": 69,
+    "below": "Acheron (Riot) 23-100%",
+    "above": "Vehemence (wPopoff Old) 47-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-12",
+    "currentName": "Acheron (Riot) 23-100%",
+    "newName": "Acheron (Riot) 23-100%",
+    "currentRank": 100,
+    "newRank": 68,
+    "below": "Anathema 156%",
+    "above": "Vehemence (wPopoff Old) 47-100%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-11",
     "currentName": null,
     "newName": "Ultra Paracosm (Old) 91%",
