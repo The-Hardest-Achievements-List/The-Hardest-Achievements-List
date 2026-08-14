@@ -635,6 +635,25 @@
     ]
   },
   {
+    "name": "Every End 92%, 100% in a row",
+    "player": "Thnnder",
+    "levelID": 116174063,
+    "date": "2026-08-01",
+    "length": 894,
+    "version": 2.2,
+    "submitter": "BlueGamer",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/CFLWkzVCknU",
+    "showcaseVideo": "https://youtu.be/C7Umvy4VyDg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
     "name": "Subsuming Vortex 80%, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
@@ -751,26 +770,6 @@
       "Level",
       "Verified",
       "Tentative"
-    ]
-  },
-  {
-    "name": "Every End 18-94%, 94% in a row",
-    "player": "forewad",
-    "levelID": 116174063,
-    "date": "2026-05-20",
-    "length": 749,
-    "version": 2.2,
-    "submitter": "stax",
-    "video": "https://youtu.be/SYhBj0ditlI",
-    "showcaseVideo": "https://youtu.be/C7Umvy4VyDg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Pending Removal"
     ]
   },
   {
