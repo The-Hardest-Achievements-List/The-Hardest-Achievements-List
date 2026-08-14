@@ -433,7 +433,7 @@
   {
     "name": "Silent DeStep (nensa) 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
     "player": "nensa",
-    "levelID": 83282566
+    "levelID": 83282566,
     "date": "2026-08-12",
     "length": 56,
     "version": 2.2,
@@ -1329,7 +1329,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "Acheron (Riot) 91%",
     "player": "klimk",
     "levelID": 82758705,
@@ -2281,7 +2281,7 @@
       "Consistency"
     ]
   },
-    {
+  {
     "name": "Acheron 97 challenge 2.1",
     "player": "wPopoff",
     "levelID": 124037650,
