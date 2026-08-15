@@ -654,6 +654,7 @@
       "Consistency"
     ]
   },
+  {
     "name": "Subsuming Vortex 80%, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
@@ -1683,7 +1684,7 @@
     ]
   },
   {
-    "name": "Silent clubstep 5-25% x2, 5-64% in a row 2.1",
+    "name": "Silent clubstep 2.1 5-25% x2, 5-64% in a row",
     "player": "Vision",
     "levelID": 4125776,
     "date": "2023-01-02",
@@ -1699,6 +1700,27 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+   {
+    "name": "Tremor",
+    "player": "VoltrixAce",
+    "levelID": 79823052,
+    "date": "2024-07-13",
+    "length": 25,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/S4NSMeHe16s",
+    "showcaseVideo": "https://youtu.be/KAacXHQ8qzg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified",
+      "Tentative"
     ]
   },
   {
@@ -3709,6 +3731,27 @@
     "tags": [
       "Challenge",
       "Consistency",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "SANGUINE",
+    "player": "spookdd",
+    "levelID": 146538900,
+    "date": "2026-08-07",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cBVlGzobmsA",
+    "showcaseVideo": "https://youtu.be/xPUHo4FbvqU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
       "Tentative"
     ]
   },
