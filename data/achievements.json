@@ -506,6 +506,26 @@
     ]
   },
   {
+    "name": "silent jumpstep 11-25% 1 death, 99.96% accuracy",
+    "player": "nensa",
+    "levelID": 147182322,
+    "date": "2026-08-17",
+    "length": 15,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yjj_hfV2zP8",
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/4125776",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
     "name": "Vehemence 24-79%",
     "player": "A6",
     "levelID": null,
@@ -919,6 +939,46 @@
       "Rated"
     ]
   },
+  {
+    "name": "silent flystep 4-65%",
+    "player": "Chiikawa",
+    "levelID": 139869759,
+    "date": "2026-08-16",
+    "length": 52,
+    "version": 2.2,
+    "submitter": "Chiikawa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0c9T60PrsPA",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/18dae3a53eac0097dd3ffcd1dfe028b702510749/images/thumbnails/silent%20flystep.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "silent jumpstep 4-16% 1 death",
+    "player": "nensa",
+    "levelID": 147182322,
+    "date": "2026-08-17",
+    "length": 11,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yjj_hfV2zP8",
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/4125776",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  }, 
   {
     "name": "Heliopolis 37-100%",
     "player": "Zoink",
