@@ -1,5 +1,137 @@
 [
   {
+    "date": "2026-08-17",
+    "currentName": null,
+    "newName": "Silentlocked",
+    "currentRank": null,
+    "newRank": 337,
+    "below": "VSC 1.1x 16-86%",
+    "above": "Operation Evolution 97%, 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": null,
+    "newName": "Angelicide (Kaza) 22-52%",
+    "currentRank": null,
+    "newRank": 239,
+    "below": "Acheron (Wolvez) 96%",
+    "above": "Flamewall (OneAlphaHelix) 60%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": null,
+    "newName": "Riverever",
+    "currentRank": null,
+    "newRank": 234,
+    "below": "Demotivation Dance",
+    "above": "Slaughterhouse",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": "Demotivation Dance",
+    "newName": "Demotivation Dance",
+    "currentRank": 240,
+    "newRank": 233,
+    "below": "Centipede (Renn241)",
+    "above": "Slaughterhouse",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": "Thinking Space II (Legacy)",
+    "newName": "Thinking Space II (Legacy)",
+    "currentRank": 151,
+    "newRank": 213,
+    "below": "Based After Based",
+    "above": "Firework 174%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": null,
+    "newName": "Artemis 13 70%",
+    "currentRank": null,
+    "newRank": 30,
+    "below": "Sakupen Circles 69%, 67%, 69%, 80%, (52%), 81%, 69% in a row",
+    "above": "KOCMOC UNLEASHED (Nerfed II) 14-93%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": null,
+    "newName": "Artemis 13 32-93%",
+    "currentRank": null,
+    "newRank": 19,
+    "below": "Artemis 13 42-100%",
+    "above": "Flamewall",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-17",
+    "currentName": "Artemis 13 (Jul. 20th, 2026) 68-100%",
+    "newName": "Artemis 13 42-100%",
+    "currentRank": 331,
+    "newRank": 18,
+    "below": "Thinking Space II",
+    "above": "Flamewall",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-16",
+    "currentName": null,
+    "newName": "SANGUINE",
+    "currentRank": null,
+    "newRank": 178,
+    "below": "cry me a river 180%, 169% in a row",
+    "above": "Abyss of Darkness",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-16",
+    "currentName": null,
+    "newName": "Tremor",
+    "currentRank": null,
+    "newRank": 90,
+    "below": "Silent clubstep 2.1 5-25% x2, 5-64% in a row",
+    "above": "Eternal Silence (High Detail) 25%",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-14",
+    "currentName": "Every End 18-94%, 94% in a row",
+    "newName": "Every End 92%, 100% in a row",
+    "currentRank": 39,
+    "newRank": 33,
+    "below": "Lesopowal 34-100%, (22-24% x2), 22-100% in a row",
+    "above": "Subsuming Vortex 80%, 71% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-08-14",
+    "currentName": "Silent DeStep (nensa) 25%, 12% in a row",
+    "newName": "Silent DeStep (nensa) 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
+    "currentRank": 58,
+    "newRank": 22,
+    "below": "Eternal Silence 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
+    "above": "Sakupen circles (Old) 1 death, 99.97% accuracy; 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-12",
     "currentName": null,
     "newName": "The Salt Factory",

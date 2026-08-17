@@ -204,46 +204,6 @@
     ]
   },
   {
-    "name": "Angelicide (Kaza) 15-40%",
-    "player": "Kaza",
-    "levelID": null,
-    "date": "2026-01-17",
-    "length": 24,
-    "version": 2.2,
-    "submitter": "raine",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/KKDmcMFs5w0",
-    "showcaseVideo": "https://youtu.be/5oDT2yq8ERo",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Angelicide%20(Kaza).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Angelicide (Kaza) 22-52%",
-    "player": "Kaza",
-    "levelID": null,
-    "date": "2026-01-22",
-    "length": 27,
-    "version": 2.2,
-    "submitter": "raine",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/idWQCCRfgzY",
-    "showcaseVideo": "https://youtu.be/5oDT2yq8ERo",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Angelicide%20(Kaza).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Apocalyptic Trilogy (Unnerfed) 56-100",
     "player": "Trick",
     "levelID": null,
@@ -256,66 +216,6 @@
     "video": "https://youtu.be/GgBZ1cV7mrk?t=1438",
     "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/9d9b20801b3a602e4c6f6f83620d0d0af76650fa/images/thumbnails/Apocalyptic%20Trilogy%20(Unnerfed).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Artemis 13 32-93%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-08-05",
-    "length": 42,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VksaNKkDlms?t=4996",
-    "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Artemis 13 64-100%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-08-03",
-    "length": 26,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/sVMtO_cp3Fk?t=6394",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": "Artemis 13 (Jul. 20th, 2026) 68-100%",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Artemis 13 66%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-08-03",
-    "length": 49,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/oPqO8WbKAJo?t=6068",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1688,26 +1588,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Riverever",
-    "player": "Yanlici",
-    "levelID": 109889043,
-    "date": "2026-06-21",
-    "length": 45,
-    "version": 2.2,
-    "submitter": "Cinder",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/hWfASp7nVEg",
-    "showcaseVideo": "https://youtu.be/fBM8NH4_BFs",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Equivalent to Slaughterhouse River's part (49-58%) x10 in a row",
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {

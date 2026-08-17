@@ -320,6 +320,42 @@
     ]
   },
   {
+    "name": "Artemis 13 42-100%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-12",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/K-OTcQrbi6w?t=8725",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Artemis 13 32-93%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-05",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/VksaNKkDlms?t=4996",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Flamewall",
     "player": "Cuatrocientos",
     "levelID": 126242564,
@@ -438,11 +474,9 @@
     "length": 56,
     "version": 2.2,
     "submitter": "nensa",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/Hsqpwo2pa8o",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Silent%20Destep.png?raw=true",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Destep.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -540,6 +574,24 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Artemis 13 70%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-03",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/oPqO8WbKAJo?t=6068",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -642,8 +694,6 @@
     "length": 894,
     "version": 2.2,
     "submitter": "BlueGamer",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/CFLWkzVCknU",
     "showcaseVideo": "https://youtu.be/C7Umvy4VyDg",
     "thumbnail": null,
@@ -1702,7 +1752,7 @@
       "Rated"
     ]
   },
-   {
+  {
     "name": "Tremor",
     "player": "VoltrixAce",
     "levelID": 79823052,
@@ -1710,8 +1760,6 @@
     "length": 25,
     "version": 2.2,
     "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/S4NSMeHe16s",
     "showcaseVideo": "https://youtu.be/KAacXHQ8qzg",
     "thumbnail": null,
@@ -1880,8 +1928,8 @@
     "length": 66,
     "version": 2.2,
     "submitter": "Wity",
-    "video": "https://m.youtube.com/watch?v=FdBbuWOPl-Y",
-    "showcaseVideo": "https://youtu.be/EkkDGsPklCs?si=0V_oISbN1xomPQJD",
+    "video": "https://youtu.be/FdBbuWOPl-Y",
+    "showcaseVideo": "https://youtu.be/EkkDGsPklCs",
     "thumbnail": null,
     "duplicateOf": "Ultra Paracosm",
     "notes": null,
@@ -3149,24 +3197,6 @@
     ]
   },
   {
-    "name": "Thinking Space II (Legacy)",
-    "player": "Zeronium",
-    "levelID": 132854166,
-    "date": "2026-02-07",
-    "length": 67,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "video": "https://youtu.be/RJedeB2wHCA",
-    "showcaseVideo": "https://youtu.be/snhbE_A5Xvw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
     "name": "OUROBOROS (Old) 73%",
     "player": "-",
     "levelID": null,
@@ -3742,8 +3772,6 @@
     "length": 67,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/cBVlGzobmsA",
     "showcaseVideo": "https://youtu.be/xPUHo4FbvqU",
     "thumbnail": null,
@@ -4351,6 +4379,24 @@
     ]
   },
   {
+    "name": "Thinking Space II (Legacy)",
+    "player": "Zeronium",
+    "levelID": 132854166,
+    "date": "2026-02-07",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "video": "https://youtu.be/RJedeB2wHCA",
+    "showcaseVideo": "https://youtu.be/snhbE_A5Xvw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Firework 174%",
     "player": "Midgatal",
     "levelID": 105547415,
@@ -4702,6 +4748,42 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Demotivation Dance",
+    "player": "Cursed",
+    "levelID": 98446627,
+    "date": "2023-05-05",
+    "length": 48,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/JlhBdtzL99A",
+    "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x8 in a row",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Riverever",
+    "player": "Yanlici",
+    "levelID": 109889043,
+    "date": "2026-06-21",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "video": "https://youtu.be/hWfASp7nVEg",
+    "showcaseVideo": "https://youtu.be/fBM8NH4_BFs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Equivalent to Slaughterhouse River's part (49-58%) x10 in a row",
     "tags": [
       "Level",
       "Verified"
@@ -5066,6 +5148,24 @@
     ]
   },
   {
+    "name": "Angelicide (Kaza) 22-52%",
+    "player": "Kaza",
+    "levelID": null,
+    "date": "2026-01-22",
+    "length": 27,
+    "version": 2.2,
+    "submitter": "raine",
+    "video": "https://youtu.be/idWQCCRfgzY",
+    "showcaseVideo": "https://youtu.be/5oDT2yq8ERo",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Angelicide%20(Kaza).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Flamewall (OneAlphaHelix) 60%",
     "player": "OneAlphaHelix",
     "levelID": null,
@@ -5099,24 +5199,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Demotivation Dance",
-    "player": "Cursed",
-    "levelID": 98446627,
-    "date": "2023-05-05",
-    "length": 48,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/JlhBdtzL99A",
-    "showcaseVideo": "https://youtu.be/lu7FERh8Bys",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Equivalent to Diamond Dance (Sakupen Circles 37-49%) x8 in a row",
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -7285,26 +7367,6 @@
     ]
   },
   {
-    "name": "Artemis 13 (Jul. 20th, 2026) 68-100%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-07-20",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/RLvAlbVZzfA?t=7227",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/98e148d5d5d3b9c1de0cc6492916bb078c1465c8/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
     "name": "VSC 1.1x 16-86%",
     "player": "-",
     "levelID": 60805571,
@@ -7321,6 +7383,25 @@
       "Challenge",
       "Progress",
       "Speedhack"
+    ]
+  },
+  {
+    "name": "Silentlocked",
+    "player": "TFIBB",
+    "levelID": 113959291,
+    "date": "2025-01-07",
+    "length": 105,
+    "version": 2.2,
+    "submitter": "Arcadie",
+    "video": "https://youtu.be/O-IQeUdEGvI",
+    "showcaseVideo": "https://youtu.be/AQy4C5APekM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
