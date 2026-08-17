@@ -1071,6 +1071,24 @@
     ]
   },
   {
+    "name": "VSC 72%, 100% in a row",
+    "player": "-",
+    "levelID": 60805571,
+    "date": "2024-09-09",
+    "length": 29,
+    "version": 2.1,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/zoTaFw_6guI",
+    "showcaseVideo": "https://youtu.be/khbJn4mHEfA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Avernus 77%, 98% in a row",
     "player": "turtl",
     "levelID": 89496627,
@@ -2054,24 +2072,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "VSC 72%, 100% in a row",
-    "player": "-",
-    "levelID": 60805571,
-    "date": "2024-09-09",
-    "length": 29,
-    "version": 2.1,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/zoTaFw_6guI",
-    "showcaseVideo": "https://youtu.be/khbJn4mHEfA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
     ]
   },
   {
