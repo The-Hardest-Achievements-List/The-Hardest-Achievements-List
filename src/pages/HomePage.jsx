@@ -46,6 +46,10 @@ const EDITORS = [
     roles: ["Server Moderator"], 
     url: "https://www.youtube.com/@aytch0008" 
   },
+  { name: "Statera",
+    roles: ["Trial Staff"],
+    url: "https://www.youtube.com/@stateragd",
+  },
   { name: "NucDev", 
     roles: ["Integrity Moderator"], 
     url: "https://www.youtube.com/@NucDev"
@@ -63,6 +67,7 @@ const STAFF_GRADIENT = [
   "#2599ff",
   "#4fddff",
   "#57f369",
+  "#36e9b8",
   "#ffc963",
 ];
 
