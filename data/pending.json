@@ -470,7 +470,7 @@
   {
     "name": "BYTELAW NEVER CLEAR",
     "player": "FlinGuSPluNkuS",
-    "levelID": null,
+    "levelID": 143454618,
     "date": "2026-06-26",
     "length": 7,
     "version": 2.2,
@@ -479,7 +479,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/jovWGeoFaeI",
     "showcaseVideo": "https://youtu.be/aUt-HTMrwcA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/89b84d86ae391f140511685de87430991337b1e6/images/thumbnails/BYTELAW%20NEVER%20CLEAR.png",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1409,6 +1409,26 @@
     ]
   },
   {
+    "name": "NervHell 66%, 100% in a row",
+    "player": "JohnLikesDiamond",
+    "levelID": 143718114,
+    "date": "2026-08-09",
+    "length": 314,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower" null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2fuAMKBtU8o",
+    "showcaseVideo": "https://youtu.be/MDDBibzeJew",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Nullscapes 65%, (2%), 66% in a row",
     "player": "Theitha",
     "levelID": 109780665,
@@ -1631,6 +1651,7 @@
       "Level",
       "Low Hertz",
       "Noclip",
+      "Rated",
       "Mobile"
     ]
   },
@@ -1653,6 +1674,7 @@
       "Level",
       "Low Hertz",
       "Progress",
+      "Rated",
       "Mobile"
     ]
   },
@@ -1675,6 +1697,7 @@
       "Level",
       "Low Hertz",
       "Progress",
+      "Rated",
       "Mobile"
     ]
   },
@@ -1759,16 +1782,16 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 47-100%",
+    "name": "Silent Circles (Starchman) 38-100%",
     "player": "dewbbs",
     "levelID": null,
-    "date": "2026-03-23",
-    "length": 36,
+    "date": "2026-08-10",
+    "length": 41,
     "version": 2.2,
     "submitter": "Gooba",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/3ANI557EzW8?t=45",
+    "video": "https://youtu.be/k7_9DBjiifs?t=1610",
     "showcaseVideo": "https://youtu.be/6RCgII1G4Kw",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Circles%20(Starchman).png",
     "duplicateOf": null,
@@ -1779,11 +1802,11 @@
     ]
   },
   {
-    "name": "Silent Circles (Starchman) 82%",
+    "name": "Silent Circles (Starchman) 85%",
     "player": "dewbbs",
     "levelID": null,
-    "date": "2026-07-19",
-    "length": 57,
+    "date": "2026-08-16",
+    "length": 58,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
@@ -1922,6 +1945,7 @@
       "Level",
       "Low Hertz",
       "Progress",
+      "Rated",
       "Mobile"
     ]
   },
@@ -1943,6 +1967,29 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "Slaughterhouse 120hz 8-100% 4 deaths, 99.92% accuracy",
+    "player": "vowtz",
+    "levelID": 27690100,
+    "date": "2026-08-10",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/mlR6_2jl17g",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated,
+      "Mobile"
     ]
   },
   {
