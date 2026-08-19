@@ -63,7 +63,6 @@ const STAFF_GRADIENT = [
   "#2599ff",
   "#4fddff",
   "#57f369",
-  "#36e9b8",
   "#ffc963",
 ];
 
