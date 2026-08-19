@@ -2471,6 +2471,27 @@
     ]
   },
   {
+    "name": "Slaughterhouse start",
+    "player": "Edwarduk",
+    "levelID": 138578527,
+    "date": "2026-05-20",
+    "length": 70,
+    "version": 2.2,
+    "submitter": "stax",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NCxbxNAVY20",
+    "showcaseVideo": "https://youtu.be/EREoqJJB7uM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "0.03 opacity version of Slaughterhouse.",
+    "tags": [
+      "Level",
+      "Verified",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Slaughterhouse (Unnerfed)",
     "player": "wPopoff",
     "levelID": 70436808,
