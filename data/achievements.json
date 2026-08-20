@@ -1242,24 +1242,6 @@
     ]
   },
   {
-    "name": "Silent clubstep (Old) 72%",
-    "player": "noname228gg",
-    "levelID": 38692301,
-    "date": "2026-05-14",
-    "length": 64,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/aWovFDhS6Mo",
-    "showcaseVideo": "https://youtu.be/mTkrql917bE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Eternal Silence 9-100%",
     "player": "noname228gg",
     "levelID": 83476262,
@@ -1269,6 +1251,24 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/9kKsgISwEtM",
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent clubstep (Old) 72%",
+    "player": "noname228gg",
+    "levelID": 38692301,
+    "date": "2026-05-14",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/aWovFDhS6Mo",
+    "showcaseVideo": "https://youtu.be/mTkrql917bE",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -8134,6 +8134,46 @@
     "notes": null,
     "tags": [
       "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles redux 27-100%",
+    "player": "ROZE",
+    "levelID": "63951460",
+    "date": "2026-05-31",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/pdDKq7j6hfk",
+    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles redux 57%",
+    "player": "nensa",
+    "levelID": "63951460",
+    "date": "2026-05-31",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/kiYTrRkqbkM",
+    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
       "Progress"
     ]
   },
