@@ -22,46 +22,6 @@
     ]
   },
   {
-    "name": "Aeternus 11-23%",
-    "player": "wShock",
-    "levelID": 102647436,
-    "date": "2026-07-24",
-    "length": 8,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/5_TQvRtmtSo",
-    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Aeternus 14%, 13% in a row",
-    "player": "Chill Guy",
-    "levelID": 102647436,
-    "date": "2026-07-24",
-    "length": 21,
-    "version": 2.2,
-    "submitter": "Quinnsapian",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Alz5AB5ushE",
-    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Aeternus 16-27%",
     "player": "wShock",
     "levelID": 102647436,
@@ -121,26 +81,6 @@
       "Low Hertz",
       "Progress",
       "Mobile"
-    ]
-  },
-  {
-    "name": "Aeternus 24-39%",
-    "player": "dewbbs",
-    "levelID": 102647436,
-    "date": "2026-06-20",
-    "length": 11,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/rrp94T91-aQ",
-    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -299,26 +239,6 @@
     "video": "https://youtu.be/PknC5na8x0k?t=18850",
     "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Bellatrix 70%",
-    "player": "Dan2D",
-    "levelID": null,
-    "date": "2026-02-14",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/vIO9hAa-Koc",
-    "showcaseVideo": "https://youtu.be/r44ig4sxMww",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8266a1f1b574b786cc713f11d110668a61933c0b/images/thumbnails/Bellatrix.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -671,6 +591,46 @@
     ]
   },
   {
+    "name": "Dignity 43-100%",
+    "player": "Sevant",
+    "levelID": null,
+    "date": "2026-08-11",
+    "length": 35,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/wAxS2PWA2tA",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Dignity 43-100%",
+    "player": "Sevant",
+    "levelID": null,
+    "date": "2026-08-11",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/wAxS2PWA2tA",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Disquietudal Dance 39%; Im Deaf 2 deaths, 99.86% accuracy",
     "player": "Emp",
     "levelID": null,
@@ -897,6 +857,26 @@
     ]
   },
   {
+    "name": "Flashbang 22-70%",
+    "player": "LordVadercraft",
+    "levelID": null,
+    "date": "2026-08-18",
+    "length": 75,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/vZVNTLX6yWs?t=1742",
+    "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Flashbang.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "FOREST OF SPIKES",
     "player": "Brian Cheese",
     "levelID": 145709435,
@@ -1061,6 +1041,26 @@
     ]
   },
   {
+    "name": "Illusion of Chaos 55-91%",
+    "player": "-",
+    "levelID": 117897179,
+    "date": "2026-08-16",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": null,
+    "showcaseVideo": "https://youtu.be/LOUUz-afIi8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
     "name": "i n j u r y 59%",
     "player": "kywy",
     "levelID": null,
@@ -1181,6 +1181,26 @@
       "Progress",
       "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "KOCMOC (lxfr) 63%",
+    "player": "lxfr",
+    "levelID": null,
+    "date": "2026-07-29",
+    "length": 48,
+    "version": 2.2,
+    "submitter": "lxfr",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/D5lWgWH55Q0",
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/69196070",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1416,7 +1436,7 @@
     "length": 314,
     "version": 2.2,
     "submitter": "abbycartridges",
-    "estimateLower" null,
+    "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/2fuAMKBtU8o",
     "showcaseVideo": "https://youtu.be/MDDBibzeJew",
@@ -1563,6 +1583,26 @@
     "video": "https://youtu.be/kmwc4IS6uik",
     "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/0cb3652af8773aee9d648b25b992488178660d48/images/thumbnails/Phantasm%20IV.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Quantum Dominator 59-100%",
+    "player": "Theitha",
+    "levelID": null,
+    "date": "2026-08-17",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "zFexty",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VCnhdUHAwfg",
+    "showcaseVideo": "https://youtu.be/b4odN8G_n1Q",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/f49674984e90b77bb364cbacd24b418ed228fc8e/images/thumbnails/Quantum%20Dominator.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1822,6 +1862,46 @@
     ]
   },
   {
+    "name": "Silent Circles redux 27-100%",
+    "player": "ROZE",
+    "levelID": "63951460",
+    "date": "2026-05-31",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "kittycatiscute",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/pdDKq7j6hfk",
+    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles redux 57%",
+    "player": "nensa",
+    "levelID": "63951460",
+    "date": "2026-05-31",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/kiYTrRkqbkM",
+    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Silent Jumper 57-100%",
     "player": "GreenZz",
     "levelID": null,
@@ -1988,8 +2068,28 @@
       "Level",
       "Low Hertz",
       "Progress",
-      "Rated,
+      "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Society (Unnerfed) 15-35",
+    "player": "xXMasterXx",
+    "levelID": 143160946,
+    "date": "2026-05-10",
+    "length": 24,
+    "version": 2.2,
+    "submitter": "zmercha",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/6IHYgSM-Mxk",
+    "showcaseVideo": "https://youtu.be/NBTRzspE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2321,6 +2421,26 @@
     ]
   },
   {
+    "name": "WarCora 47-100%",
+    "player": "eni",
+    "levelID": 89189775,
+    "date": "2026-08-14",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/E2oiV6R47MM",
+    "showcaseVideo": "https://youtu.be/IkwmfQLjq9k",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "water world 20-68%",
     "player": "niroi",
     "levelID": 142171089,
@@ -2421,6 +2541,66 @@
       "Level",
       "Progress",
       "2P"
+    ]
+  },
+  {
+    "name": "ZANBOT 42-100%",
+    "player": "Cala",
+    "levelID": null,
+    "date": "2026-08-19",
+    "length": 47,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ZkEBkpgZ5g0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "ZANBOT 42-100%",
+    "player": "Cala",
+    "levelID": null,
+    "date": "2026-08-15",
+    "length": 46,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/7qke_qb2IMY",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Zodiac 60hz 63%, 75%",
+    "player": "ema",
+    "levelID": 52374843,
+    "date": "2024-10-22",
+    "length": 374,
+    "version": 2.1,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WzhJ4a1XaLg",
+    "showcaseVideo": "https://youtu.be/9ZX_EHHpf04",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   }
 ]
