@@ -1983,6 +1983,25 @@
     ]
   },
   {
+    "name": "Aeternus 20%",
+    "player": "dewbbs",
+    "levelID": 102647436,
+    "date": "2026-05-12",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "video": "https://youtu.be/hMh2waoolfQ",
+    "showcaseVideo": "https://youtu.be/H0WIku2Yjg8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Ultra Paracosm",
     "player": "Wity",
     "levelID": 138704906,
@@ -2803,25 +2822,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-    {
-    "name": "Aeternus 20%",
-    "player": "dewbbs",
-    "levelID": 102647436,
-    "date": "2026-05-12",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/hMh2waoolfQ",
-    "showcaseVideo": "https://youtu.be/H0WIku2Yjg8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
     ]
   },
   {
