@@ -6127,6 +6127,27 @@
     ]
   },
   {
+    "name": "cognitohazard",
+    "player": "Whizkid05",
+    "levelID": 130891319,
+    "date": "2025-02-19",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "CoolSchnoodle",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/T5g0r16X_ZA",
+    "showcaseVideo": "https://youtu.be/UF_zHxW0qo0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Maniacal Chains",
     "player": "spcreat",
     "levelID": 48991380,
