@@ -1862,46 +1862,6 @@
     ]
   },
   {
-    "name": "Silent Circles redux 27-100%",
-    "player": "ROZE",
-    "levelID": "63951460",
-    "date": "2026-05-31",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/pdDKq7j6hfk",
-    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Silent Circles redux 57%",
-    "player": "nensa",
-    "levelID": "63951460",
-    "date": "2026-05-31",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/kiYTrRkqbkM",
-    "showcaseVideo": "https://youtu.be/DAmtHhTS3J0",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3936a745cfdd2c79f4a091ec60ec7f8804bc808f/images/thumbnails/Silent%20Circles%20redux.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Silent Jumper 57-100%",
     "player": "GreenZz",
     "levelID": null,
