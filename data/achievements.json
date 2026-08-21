@@ -1983,6 +1983,48 @@
     ]
   },
   {
+    "name": "Aeternus 42-60% 1 death, 99.97% accuracy",
+    "player": "FlinGuSPluNkuS",
+    "levelID": 102647436,
+    "date": "2026-05-23",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "FlinGuSPluNkuS",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gsZ-RRTeKLA",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Aeternus 42-59%",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-05-20",
+    "length": 13,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/G_ZvIM2LvaY",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": "Aeternus 47-61%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Aeternus 20%",
     "player": "dewbbs",
     "levelID": 102647436,
@@ -6314,26 +6356,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Aeternus 47-61%",
-    "player": "wShock",
-    "levelID": 102647436,
-    "date": "2026-05-30",
-    "length": 16,
-    "version": 2.2,
-    "submitter": "FlinGuSPluNkuS",
-    "video": "https://youtu.be/KOeb1UjVByE",
-    "showcaseVideo": "https://youtu.be/H0WIku2Yjg8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative",
-      "Pending Removal"
     ]
   },
   {
