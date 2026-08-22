@@ -1296,6 +1296,25 @@
     ]
   },
   {
+    "name": "Antarctic Lights",
+    "player": "Axinity",
+    "levelID": 144988390,
+    "date": "2026-07-14",
+    "length": 59,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/Uue4ZRhVf-I",
+    "showcaseVideo": "https://youtu.be/oi5o9GTc7Qs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Blindscapes 17-100%",
     "player": "benbot",
     "levelID": 129447957,
@@ -1560,26 +1579,6 @@
     "submitter": "Arcadie",
     "video": "https://youtu.be/j5NC0u1Q91Q",
     "showcaseVideo": "https://youtu.be/dSVKCPvO-cA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Antarctic Lights",
-    "player": "Axinity",
-    "levelID": 144988390,
-    "date": "2026-07-14",
-    "length": 59,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/Uue4ZRhVf-I",
-    "showcaseVideo": "https://youtu.be/oi5o9GTc7Qs",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
