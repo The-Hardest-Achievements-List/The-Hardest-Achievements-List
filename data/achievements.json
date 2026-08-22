@@ -358,6 +358,26 @@
     ]
   },
   {
+    "name": "silent jumpstep 5-16% 2 deaths, 99.69% accuracy",
+    "player": "nensa"
+    "levelID": 147182322,
+    "date": "2026-08-20",
+    "length": 12,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/I_PnvElOwWk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
     "name": "Flamewall",
     "player": "Cuatrocientos",
     "levelID": 126242564,
@@ -960,7 +980,7 @@
     ]
   },
   {
-    "name": "silent jumpstep (Old) 4-16% 1 death",
+    "name": "silent jumpstep (Old) 4-16% 1 death, 99.88% accuracy",
     "player": "nensa",
     "levelID": 147182322,
     "date": "2026-08-17",
