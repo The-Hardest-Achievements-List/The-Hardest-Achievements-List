@@ -359,7 +359,7 @@
   },
   {
     "name": "silent jumpstep 5-16% 2 deaths, 99.69% accuracy",
-    "player": "nensa"
+    "player": "nensa",
     "levelID": 147182322,
     "date": "2026-08-20",
     "length": 12,
@@ -998,7 +998,7 @@
       "Level",
       "Noclip"
     ]
-  }, 
+  },
   {
     "name": "Heliopolis 37-100%",
     "player": "Zoink",
