@@ -905,6 +905,24 @@
     ]
   },
   {
+    "name": "Eternal Silence 4-100%",
+    "player": "Chiikawa",
+    "levelID": 83476262,
+    "date": "2026-08-23",
+    "length": 82,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://discord.com/channels/1122038339541934091/1122040444877025340/1541183882383335554",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Eternal Silence 74%",
     "player": "noname228gg",
     "levelID": 83476262,
@@ -1259,24 +1277,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "Eternal Silence 9-100%",
-    "player": "noname228gg",
-    "levelID": 83476262,
-    "date": "2026-06-07",
-    "length": 81,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/9kKsgISwEtM",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
