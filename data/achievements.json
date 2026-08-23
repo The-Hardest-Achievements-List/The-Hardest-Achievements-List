@@ -190,24 +190,6 @@
     ]
   },
   {
-    "name": "Heliopolis 24%, (0%), 47% in a row",
-    "player": "Zoink",
-    "levelID": 136530685,
-    "date": "2026-05-15",
-    "length": 103,
-    "version": 2.2,
-    "submitter": "hider1alduha",
-    "video": "https://youtu.be/4xjljMHsrgA?t=5304",
-    "showcaseVideo": "https://youtu.be/gVmUIcpply0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Amethyst 59%, 54% in a row",
     "player": "wPopoff",
     "levelID": 119550490,
@@ -224,6 +206,24 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Heliopolis 24%, (0%), 47% in a row",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-05-15",
+    "length": 103,
+    "version": 2.2,
+    "submitter": "hider1alduha",
+    "video": "https://youtu.be/4xjljMHsrgA?t=5304",
+    "showcaseVideo": "https://youtu.be/gVmUIcpply0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
