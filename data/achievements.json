@@ -1759,6 +1759,24 @@
     ]
   },
   {
+    "name": "Herr Machine",
+    "player": "BONN GD",
+    "levelID": 142529115,
+    "date": "2026-03-12",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/CBcQqmqWFo4",
+    "showcaseVideo": "https://youtu.be/VgbZTWyu4bI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Every End",
     "player": "HamiltonHqmy",
     "levelID": 116174063,
@@ -2418,24 +2436,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Herr Machine",
-    "player": "BONN GD",
-    "levelID": 142529115,
-    "date": "2026-03-12",
-    "length": 106,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/CBcQqmqWFo4",
-    "showcaseVideo": "https://youtu.be/VgbZTWyu4bI",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
