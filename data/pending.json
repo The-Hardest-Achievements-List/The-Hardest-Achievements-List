@@ -104,6 +104,26 @@
     ]
   },
   {
+    "name": "Artemis 13 72%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-21",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PuvMuSUZitw?t=1944",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
+    "duplicateOf": "Artemis 13 70%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Ashley Wave Trials (True Unnerfed) 56-100%",
     "player": "KRUEL",
     "levelID": 127179119,
@@ -368,6 +388,26 @@
     ]
   },
   {
+    "name": "chloride hexahydrate",
+    "player": "babapro",
+    "levelID": 147439475,
+    "date": "2026-08-21",
+    "length": 4,
+    "version": 2.2,
+    "submitter": "anduval",
+    "estimateLower": null,
+    "estimateUpper": null, 
+    "video": "https://youtu.be/rCwzBWuAqS4",
+    "showcaseVideo": "https://youtu.be/lZkHGZuboYM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
     "name": "CLUBSTEP XYZ 42-92%",
     "player": "Streamy450",
     "levelID": null,
@@ -467,6 +507,46 @@
       "Challenge",
       "Low Hertz",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Despair Code 35%",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-20",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/YGvuMSYNo4A?t=6594",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Despair Code 33%",
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Despair Code 8-46%",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-08-20",
+    "length": 10,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/YGvuMSYNo4A?t=8955",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
     ]
   },
   {
@@ -693,6 +773,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Eternal Silence 5-51%, 5-12% x3, 5-8%, (5-6% x2), 5-10%, 5-12%, 5-17%, 5-12% in a row",
+    "player": "Chiikawa",
+    "levelID": 83476262,
+    "date": "2026-08-21",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "Chiikawa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zJiWTu3qnZE",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
