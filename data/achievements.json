@@ -4885,24 +4885,6 @@
     ]
   },
   {
-    "name": "Centipede (Renn241)",
-    "player": "LordVadercraft",
-    "levelID": 141320499,
-    "date": "2026-05-28",
-    "length": 113,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "video": "https://youtu.be/UFpfgXBQzhY",
-    "showcaseVideo": "https://youtu.be/GZRKrFeKXNU",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
     "name": "Demotivation Dance",
     "player": "Cursed",
     "levelID": 98446627,
@@ -6302,6 +6284,24 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Centipede (Renn241)",
+    "player": "LordVadercraft",
+    "levelID": 141320499,
+    "date": "2026-05-28",
+    "length": 113,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "video": "https://youtu.be/UFpfgXBQzhY",
+    "showcaseVideo": "https://youtu.be/GZRKrFeKXNU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {

@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-08-25",
+    "currentName": "Centipede (Renn241)",
+    "newName": "Centipede (Renn241)",
+    "currentRank": 239,
+    "newRank": 293,
+    "below": "Sacrifice",
+    "above": "CHIL",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-17",
     "currentName": null,
     "newName": "Silentlocked",
