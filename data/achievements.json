@@ -7201,6 +7201,24 @@
     ]
   },
   {
+    "name": "ace",
+    "player": "Aidsen",
+    "levelID": 138215607,
+    "date": "2026-04-15",
+    "length": 69,
+    "version": 2.2,
+    "submitter": "Gooba",
+    "video": "https://youtu.be/7uYghOdos8I",
+    "showcaseVideo": "https://youtu.be/-gKNUjf0U2s",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "innards (Unnerfed)",
     "player": "eandis",
     "levelID": 88216956,
@@ -7997,24 +8015,6 @@
     "submitter": "Arcadie",
     "video": "https://youtu.be/0M1sMbchs68",
     "showcaseVideo": "https://youtu.be/DiOnJLAyJfU",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "ace",
-    "player": "Aidsen",
-    "levelID": 138215607,
-    "date": "2026-04-15",
-    "length": 69,
-    "version": 2.2,
-    "submitter": "Gooba",
-    "video": "https://youtu.be/7uYghOdos8I",
-    "showcaseVideo": "https://youtu.be/-gKNUjf0U2s",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
