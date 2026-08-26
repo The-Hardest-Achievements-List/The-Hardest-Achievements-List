@@ -1337,39 +1337,21 @@
     ]
   },
   {
-    "name": "Blindscapes 17-100%",
+    "name": "Blindscapes",
     "player": "benbot",
     "levelID": 129447957,
-    "date": "2026-07-11",
-    "length": 67,
+    "date": "2026-08-25",
+    "length": 86,
     "version": 2.2,
-    "submitter": "rainityyy",
-    "video": "https://youtu.be/K74AS4pE9tU",
+    "submitter": "Cinder",
+    "video": "https://youtu.be/WEqfWmmgK_8",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "Nullscapes",
     "notes": "Extremely dark Nullscapes with a small light following your robot.",
     "tags": [
       "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Blindscapes 81%",
-    "player": "benbot",
-    "levelID": 129447957,
-    "date": "2026-07-10",
-    "length": 75,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/2ohbPZZRmK4",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Extremely dark Nullscapes with a small light following your robot.",
-    "tags": [
-      "Level",
-      "Progress"
+      "Verified"
     ]
   },
   {
