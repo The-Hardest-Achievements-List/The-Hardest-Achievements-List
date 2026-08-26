@@ -1657,7 +1657,7 @@
     "player": "apuu",
     "levelID": null,
     "date": "2026-08-22",
-    "length": 40
+    "length": 40,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
@@ -2796,7 +2796,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://discord.com/channels/1122038339541934091/1122040444877025340/1541598449760210996",
-    "showcaseVideo\": null,
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
