@@ -22,16 +22,38 @@
     ]
   },
   {
-    "name": "Aeternus 16-27%",
-    "player": "wShock",
-    "levelID": 102647436,
-    "date": "2026-07-21",
-    "length": 8,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
+    "name": "Acheron 2.1 58-100%, 100% in a row",
+    "player": "karkito",
+    "levelID": 73667628,
+    "date": "2026-05-18",
+    "length": 106,
+    "version": 2.1,
+    "submitter": "abbycartridges",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/RNSH-h71Wqo",
+    "video": "https://youtu.be/BkJv3jfkIrU",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Outdated Version"
+    ]
+  },
+  {
+    "name": "Aeternus 16-28%",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-08-24",
+    "length": 9,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oISb1IaZUvQ",
     "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
     "thumbnail": null,
     "duplicateOf": null,
@@ -62,6 +84,26 @@
     ]
   },
   {
+    "name": "Aeternus 20-34%",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-08-24",
+    "length": 10,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oISb1IaZUvQ",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Aeternus 24-34% 120hz Mobile",
     "player": "Silkizinho",
     "levelID": 102647436,
@@ -81,6 +123,46 @@
       "Low Hertz",
       "Progress",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Aeternus 51 deaths, 98.66% accuracy",
+    "player": "aden",
+    "levelID": 102647436,
+    "date": "2026-06-21",
+    "length": 74,
+    "version": 2.2,
+    "submitter": "500Cigarettes",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/hS1ZDdNEJMY?t=2027",
+    "showcaseVideo": "https://youtu.be/DlDOr-_OS98",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
+    "name": "Angelicide 21-61%",
+    "player": "Druki",
+    "levelID": "120478542",
+    "date": "2026-08-22",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Lw7m0j2I5TY",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -104,16 +186,16 @@
     ]
   },
   {
-    "name": "Artemis 13 72%",
+    "name": "Artemis 13 73%",
     "player": "Zoink",
     "levelID": null,
-    "date": "2026-08-21",
-    "length": 42,
+    "date": "2026-08-25",
+    "length": 43,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/PuvMuSUZitw?t=1944",
+    "video": "https://youtu.be/nRFBfbitlRE?t=4879",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
     "duplicateOf": "Artemis 13 70%",
@@ -287,6 +369,26 @@
     ]
   },
   {
+    "name": "Bobbing bobee 57%",
+    "player": "biscr",
+    "levelID": 79013861,
+    "date": "2026-08-16",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "abbytcartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/pFn2X7qsXGo",
+    "showcaseVideo": "https://youtu.be/s6jVzTHknPI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Bocadillo FD Albondi 49%, 51%, 58%",
     "player": "nensa",
     "levelID": 90069457,
@@ -440,6 +542,26 @@
     "video": "https://youtu.be/UzYaZsBvOJU",
     "showcaseVideo": "https://youtu.be/vzhactzEFWU",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/9b744921f68609beee58fcb4642a6a412ec5b995/images/thumbnails/CLUBSTEP%20XYZ.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "cry me a cuber 91",
+    "player": "zLGsuS",
+    "levelID": "127870822",
+    "date": "2026-08-25",
+    "length": 43,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/luijesus2909/status/2092140516523569296",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -876,16 +998,16 @@
     ]
   },
   {
-    "name": "Flashbang 22-70%",
+    "name": "Flashbang 66%",
     "player": "LordVadercraft",
     "levelID": null,
-    "date": "2026-08-18",
-    "length": 75,
+    "date": "2026-08-25",
+    "length": 103,
     "version": 2.2,
-    "submitter": "fwoggy",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/vZVNTLX6yWs?t=1742",
+    "video": "https://youtu.be/bk_JXPUFpPQ",
     "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
     "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Flashbang.png?raw=true",
     "duplicateOf": null,
@@ -1348,6 +1470,27 @@
     ]
   },
   {
+    "name": "Maniacal Chains 190%",
+    "player": "ScoffGD",
+    "levelID": 48991380,
+    "date": "2026-08-13",
+    "length": 222,
+    "version": 2.2,
+    "submitter": "peppersway",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "48991380",
+    "showcaseVideo": "https://youtu.be/FrrV0cOxGmM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "MAX NRG 29-85%",
     "player": "SaturMan",
     "levelID": null,
@@ -1496,7 +1639,7 @@
     "date": "2026-07-17",
     "length": 50,
     "version": 2.2,
-    "submitter": "marleywave",
+    "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/eKYJBH8tFjI",
@@ -1510,16 +1653,16 @@
     ]
   },
   {
-    "name": "OUROBOROS (apuu, Jun. 2026) 45%",
+    "name": "OUROBOROS (apuu) 52%",
     "player": "apuu",
     "levelID": null,
-    "date": "2026-07-19",
-    "length": 37,
+    "date": "2026-08-22",
+    "length": 40
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/cVURAkPwslg",
+    "video": "https://youtu.be/Gk1nEhZVP-4",
     "showcaseVideo": "https://youtu.be/9VqusfNE5dk",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ac7d84093d47cfdb3b6363bd301d82f0879ddd9a/images/thumbnails/OUROBOROS%20(apuu).png",
     "duplicateOf": null,
@@ -1821,6 +1964,46 @@
     ]
   },
   {
+    "name": "Silent Circles (Snailboy1234) 27-42%, (27-29%), 27-47% in a row",
+    "player": "Thebacon_gamer",
+    "levelID": 94763739,
+    "date": "2026-06-16",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "QwidziT",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ELKrSA0ZG6U",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Silent Circles (Snailboy1234) 27-62% 2 deaths, ",
+    "player": "Thebacon_gamer",
+    "levelID": 94763739,
+    "date": "2026-08-13",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "Thebacon_gamer",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2-3HhK4lHUA",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Silent Circles (Starchman) 38-100%",
     "player": "dewbbs",
     "levelID": null,
@@ -1881,23 +2064,63 @@
     ]
   },
   {
-    "name": "SILENT OPPENHEIMER (Old) 35-100%",
+    "name": "SILENT OPPENHEIMER 32-100%",
     "player": "Dezstro",
     "levelID": null,
-    "date": "2026-05-22",
-    "length": 80,
+    "date": "2026-08-24",
+    "length": 84,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "sayoriiCLUB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/NtiR00EMhfw",
-    "showcaseVideo": "https://youtu.be/Q-IT8xuqU9Q",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/SILENT%20OPPENHEIMER%20(Old).png",
+    "video": "https://youtu.be/XMoLUOoinak",
+    "showcaseVideo": "https://youtu.be/XMoLUOoinak",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3f747719bbc298c84f8c83469c17b411b9756937/images/thumbnails/SILENT%20OPPENHEIMER.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silentman Adventures",
+    "player": "nickname",
+    "levelID": 147442928,
+    "date": "2026-08-21",
+    "length": 87,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NE89R0tA8fU",
+    "showcaseVideo": "https://youtu.be/y3qMBVEbIuw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Silentman Adventures 77%, (1%, 2%), 100% in a row",
+    "player": "nickname",
+    "levelID": 147442928,
+    "date": "2026-08-21",
+    "length": 157,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NE89R0tA8fU",
+    "showcaseVideo": "https://youtu.be/y3qMBVEbIuw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -2115,6 +2338,26 @@
     ]
   },
   {
+    "name": "Spectre 68%, 100% in a row",
+    "player": "PoCle",
+    "levelID": 110815379, 
+    "date": "2026-07-05",
+    "length": 228,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/tByz21ieArA",
+    "showcaseVideo": "https://youtu.be/2DMRbNGAdGU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Subsuming Vortex 35-73%, 35-83%, 35-70% in a row",
     "player": "beto",
     "levelID": 127997391,
@@ -2153,6 +2396,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+    {
+    "name": "The King Von Trial 43%",
+    "player": "Hover",
+    "levelID": 122518707,
+    "date": "2026-08-11",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/HoverThereal/status/2087253892820000889",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2503,7 +2766,7 @@
     ]
   },
   {
-    "name": "ZANBOT 42-100%",
+    "name": "ZANBOT 21-79%",
     "player": "Cala",
     "levelID": null,
     "date": "2026-08-19",
@@ -2514,6 +2777,26 @@
     "estimateUpper": null,
     "video": "https://youtu.be/ZkEBkpgZ5g0",
     "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "ZANBOT 36%",
+    "player": "Cala",
+    "levelID": null,
+    "date": "2026-08-24",
+    "length": 29,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://discord.com/channels/1122038339541934091/1122040444877025340/1541598449760210996",
+    "showcaseVideo\": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
