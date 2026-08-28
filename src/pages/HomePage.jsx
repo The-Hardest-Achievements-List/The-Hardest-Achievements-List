@@ -88,29 +88,6 @@ const rgbToHex = (r, g, b) => {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 };
 
-const sampleStaffGradient = (t) => {
-  const stops = STAFF_GRADIENT;
-  if (stops.length === 1) return stops[0];
-  const clamped = Math.min(1, Math.max(0, t));
-  const scaled = clamped * (stops.length - 1);
-  const index = Math.floor(scaled);
-  const next = Math.min(index + 1, stops.length - 1);
-  const f = scaled - index;
-  const a = hexToRgb(stops[index]);
-  const b = hexToRgb(stops[next]);
-  return rgbToHex(
-    a.r + (b.r - a.r) * f,
-    a.g + (b.g - a.g) * f,
-    a.b + (b.b - a.b) * f,
-  );
-};
-
-const getStaffColor = (index, total) => {
-  if (total <= 1) return STAFF_GRADIENT[0];
-  // Spread across the full gradient so adjacent staff (same role) stay distinct.
-  return sampleStaffGradient(index / (total - 1));
-};
-
 const HISTORY_TABS = [
   { id: "classic", label: "Classic" },
   { id: "platformer", label: "Platformer" },
