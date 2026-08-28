@@ -61,12 +61,12 @@ const EDITORS = [
 
 const STAFF_GRADIENT = [
   "#ff3900",
-  "#6542ce",
   "#2943ee",
+  "#6542ce",
   "#2599ff",
   "#4fddff",
-  "#57f369",
   "#36e9b8",
+  "#57f369",
   "#ffc963",
 ];
 
