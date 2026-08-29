@@ -146,6 +146,26 @@
     ]
   },
   {
+    "name": "andromeda 57%, 100% in a row",
+    "player": "VERTOP",
+    "levelID": 114283297,
+    "date": "2025-09-30",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yc3PcOfPZqo",
+    "showcaseVideo": "https://youtu.be/fFtQxxepyDo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Angelicide 21-61%",
     "player": "Druki",
     "levelID": "120478542",
@@ -159,6 +179,26 @@
     "showcaseVideo": "https://youtu.be/czV24THGlA4",
     "thumbnail": null,
     "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Angelicide 41%",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2026-08-28",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "papsikdanya",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rJ_3cOtkXr0",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": "Angelicide 37%",
     "notes": null,
     "tags": [
       "Level",
@@ -186,16 +226,39 @@
     ]
   },
   {
-    "name": "Artemis 13 73%",
+    "name": "Artemis 13 40-100%",
     "player": "Zoink",
     "levelID": null,
-    "date": "2026-08-25",
-    "length": 43,
+    "date": "2026-08-28",
+    "length": 42,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/nRFBfbitlRE?t=4879",
+    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
+    "duplicateOf": [
+      "Artemis 13 42-100",
+      "Artemis 13 32-93%"
+    ],
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Artemis 13 82%",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-27",
+    "length": 58,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
     "duplicateOf": "Artemis 13 70%",
@@ -550,7 +613,7 @@
     ]
   },
   {
-    "name": "cry me a cuber 91",
+    "name": "cry me a cuber 91%",
     "player": "zLGsuS",
     "levelID": "127870822",
     "date": "2026-08-25",
@@ -838,16 +901,16 @@
     ]
   },
   {
-    "name": "Escalator 49%",
+    "name": "Escalator 50%",
     "player": "teraaa",
     "levelID": null,
     "date": null,
-    "length": 50,
+    "length": 51,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/u9EERQsNk_A?t=1988",
+    "video": "https://youtu.be/jQI4VsmXLNk?t=2794",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/40ba41152f3666b8c0d75cf2d231905281c7aadf/images/thumbnails/Escalator.png",
     "duplicateOf": null,
@@ -1182,6 +1245,26 @@
     ]
   },
   {
+    "name": "Hypnosis 10-46%",
+    "player": "OverGD",
+    "levelID": 72829529,
+    "date": "2026-03-22",
+    "length": 11,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/xJ2zOpf-KL0?t=1017",
+    "showcaseVideo": "https://youtu.be/LiS1LQC5hzo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
     "name": "Illusion of Chaos 55-91%",
     "player": "-",
     "levelID": 117897179,
@@ -1198,6 +1281,26 @@
     "notes": null,
     "tags": [
       "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Infernis 65-100%",
+    "player": "peekingurangle",
+    "levelID": null,
+    "date": "2026-08-24",
+    "length": 35,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/UC_ah_MioRs",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
       "Progress"
     ]
   },
@@ -1367,6 +1470,26 @@
     ]
   },
   {
+    "name": "Kyouki 71%, 100% in a row",
+    "player": "Meyrist",
+    "levelID": 86018142,
+    "date": "2026-04-09",
+    "length": 175,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/iUK5w4V0BhA?t=1063",
+    "showcaseVideo": "https://youtu.be/RBeyMGug3J0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Labyrinth 29-100%",
     "player": "GGonop",
     "levelID": null,
@@ -1521,6 +1644,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/oN-9cJDRR2o",
+    "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "MAX NRG 49%",
+    "player": "SaturMan",
+    "levelID": null,
+    "date": "2026-08-27",
+    "length": 49,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/aegeLVHQ5Fo",
     "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
     "duplicateOf": null,
@@ -1874,6 +2017,29 @@
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
     "duplicateOf": "Sakupen Circles 144hz Mobile 37-100%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 120hz Mobile 1-74%%",
+    "player": "ItzAmethyst",
+    "levelID": 76962930,
+    "date": "2026-08-27",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "papsikdanya",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/F8UAwUytcYc",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -2786,16 +2952,16 @@
     ]
   },
   {
-    "name": "ZANBOT 36%",
+    "name": "ZANBOT 54%",
     "player": "Cala",
     "levelID": null,
-    "date": "2026-08-24",
-    "length": 29,
+    "date": "2026-08-28",
+    "length": 44,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://discord.com/channels/1122038339541934091/1122040444877025340/1541598449760210996",
+    "video": "https://youtu.be/J5ZFrwEkbGg",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -2815,7 +2981,7 @@
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/7qke_qb2IMY",
+    "video": "https://youtu.be/J5ZFrwEkbGg?t=37",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
