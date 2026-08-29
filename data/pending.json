@@ -44,6 +44,50 @@
     ]
   },
   {
+    "name": "Aeternus 120hz Mobile 24-34%",
+    "player": "Silkizinho",
+    "levelID": 102647436,
+    "date": "2026-07-17",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "bmc",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VPEfaCBV-3I",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Aeternus 120hz Mobile 33-61% 14 deaths, 96.94% accuracy",
+    "player": "vowtz",
+    "levelID": 102647436,
+    "date": "2026-08-26",
+    "length": 20,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/K2pASQ0b050",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Noclip",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Aeternus 16-28%",
     "player": "aden",
     "levelID": 102647436,
@@ -101,48 +145,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Aeternus 24-34% 120hz Mobile",
-    "player": "Silkizinho",
-    "levelID": 102647436,
-    "date": "2026-07-17",
-    "length": 8,
-    "version": 2.2,
-    "submitter": "bmc",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VPEfaCBV-3I",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Mobile"
-    ]
-  },
-  {
-    "name": "Aeternus 33-61% 14 deaths, 96.94% accuracy",
-    "player": "vowtz",
-    "levelID": 102647436,
-    "date": "2026-08-26",
-    "length": 20,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/K2pASQ0b050",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Noclip"
     ]
   },
   {
