@@ -126,6 +126,26 @@
     ]
   },
   {
+    "name": "Aeternus 33-61% 14 deaths, 96.94% accuracy",
+    "player": "vowtz",
+    "levelID": 102647436,
+    "date": "2026-08-26",
+    "length": 20,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/K2pASQ0b050",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
     "name": "Aeternus 51 deaths, 98.66% accuracy",
     "player": "aden",
     "levelID": 102647436,
@@ -2176,7 +2196,7 @@
     "date": "2026-08-10",
     "length": 41,
     "version": 2.2,
-    "submitter": "Gooba",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/k7_9DBjiifs?t=1610",
