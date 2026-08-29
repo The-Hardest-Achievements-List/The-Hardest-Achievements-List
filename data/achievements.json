@@ -499,7 +499,7 @@
     "submitter": "nensa",
     "video": "https://youtu.be/Hsqpwo2pa8o",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Silent%20Destep.png",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -940,6 +940,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silent Boi 4-17%, 4-8%, 4-15%, (4-6%), 4-10% in a row",
+    "player": "cc478",
+    "levelID": 147717723,
+    "date": "2026-08-26",
+    "length": 29,
+    "version": 2.2,
+    "submitter": "cc478",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/qNoYmGDVhIo",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/4a88643453c844febdcd67fcee8bef13ed8ec135/images/thumbnails/Silent%20Boi.png",,
+    "duplicateOf": null,
+    "notes": "0.05% opacity version of Eternal Silence",
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -1808,7 +1828,7 @@
     "submitter": "SupremeSDB",
     "video": "https://youtu.be/Gig-gQz03x4",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e735583b06e60fb8e4b61aa35accfc7f4707374e/images/thumbnails/Silent%20Destep.png",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": "Silent clubstep (Old) with DeCode decoration.",
     "tags": [
