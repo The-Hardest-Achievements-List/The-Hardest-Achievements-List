@@ -3102,6 +3102,26 @@
       "Outdated Version"
     ]
   },
+    {
+    "name": "Angelicide 41%",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2026-08-28",
+    "length": 39,
+    "version": 2.2,
+    "submitter": "papsikdanya",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rJ_3cOtkXr0",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Sakupen Circles 144hz Mobile 37-100%",
     "player": "sydno",
@@ -3143,25 +3163,6 @@
       "Progress",
       "Rated",
       "Mobile",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Angelicide 37%",
-    "player": "Druki",
-    "levelID": 120478542,
-    "date": "2026-07-17",
-    "length": 38,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/YxhnCT2UgPA",
-    "showcaseVideo": "https://youtu.be/czV24THGlA4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
       "Pending Removal"
     ]
   },
