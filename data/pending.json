@@ -474,26 +474,6 @@
     ]
   },
   {
-    "name": "Bonfire",
-    "player": "vvay",
-    "levelID": null,
-    "date": "2026-08-05",
-    "length": 67,
-    "version": 2.2,
-    "submitter": "Cinder",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/7ZFoCGqCq3Y",
-    "showcaseVideo": "https://youtu.be/7ZFoCGqCq3Y",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/88686539",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "BOOBAWAMBA 67%, 86% in a row",
     "player": "wPopoff",
     "levelID": 110816181,
@@ -2018,7 +1998,7 @@
     "video": "https://youtu.be/ovxf7Gouym0",
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
-    "duplicateOf": "Sakupen Circles 144hz Mobile 70%,
+    "duplicateOf": "Sakupen Circles 144hz Mobile 70%",
     "notes": null,
     "tags": [
       "Level",

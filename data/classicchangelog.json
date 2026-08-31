@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-09-01",
+    "currentName": "Bonfire",
+    "newName": "Bonfire",
+    "currentRank": 154,
+    "newRank": 154,
+    "below": "Acheron",
+    "above": "vsc infinity 79%, 100% in a row",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-08-25",
     "currentName": "Centipede (Renn241)",
     "newName": "Centipede (Renn241)",
