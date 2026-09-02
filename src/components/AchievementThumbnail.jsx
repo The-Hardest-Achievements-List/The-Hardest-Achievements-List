@@ -30,23 +30,26 @@ function ThumbnailPane({
     onLoadedUrl?.(loadedUrl ?? null);
   }, [loadedUrl, onLoadedUrl]);
 
-  // Hook withholds loadedUrl until maxres (or fallback) is resolved, so a
-  // 4:3 hqdefault never paints and then jumps to 16:9.
   const thumbVisible = Boolean(loadedUrl);
 
   return (
     <div ref={ref} className={className}>
+      {/* Always-hidden loader: resolves fallbacks / maxres. Never remove pending
+          from this node — flipping opacity on the same element that held hqdefault
+          flashes the 4:3 frame before maxres paints. */}
       {currentUrl ? (
         <img
           ref={imgRef}
           src={currentUrl}
-          alt={alt}
+          alt=""
           decoding="async"
           onError={onError}
           onLoad={onLoad}
-          className={thumbVisible ? undefined : pendingClassName}
+          className={pendingClassName}
+          aria-hidden="true"
         />
-      ) : loadedUrl ? (
+      ) : null}
+      {loadedUrl ? (
         <img src={loadedUrl} alt={alt} decoding="async" />
       ) : null}
       {!thumbVisible && <div className="card__thumb-placeholder" />}

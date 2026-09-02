@@ -320,11 +320,10 @@ export function useLevelThumbnail({
     enabled &&
     inView &&
     !isExhausted &&
-    (Boolean(displayUrl) || (!acceptedUrl && slotReady));
-  // Prefer an already-resolved URL (incl. persisted maxres upgrades not in sequence).
-  const loaderUrl = shouldLoad
-    ? (displayUrl ?? sequence[urlIndex] ?? null)
-    : null;
+    !acceptedUrl &&
+    !displayUrl &&
+    slotReady;
+  const loaderUrl = shouldLoad ? (sequence[urlIndex] ?? null) : null;
   currentUrlRef.current = loaderUrl;
   urlIndexRef.current = urlIndex;
 

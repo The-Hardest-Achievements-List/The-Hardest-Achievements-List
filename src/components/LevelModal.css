@@ -89,7 +89,7 @@
     pointer-events: none;
 }
 
-.card:hover .card__thumb img {
+.card:hover .card__thumb img:not(.card__thumb-img--pending) {
     transform: scale(1.04);
 }
 

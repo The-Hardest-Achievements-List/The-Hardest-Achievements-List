@@ -414,9 +414,9 @@ export default function App() {
   const [listDataError, setListDataError] = useState(null);
   const [listLoadNonce, setListLoadNonce] = useState(0);
   const [cardScale, setCardScale] = useState(() => {
-    if (typeof window === "undefined") return 0.95;
+    if (typeof window === "undefined") return 1;
     const stored = window.localStorage.getItem("hd-card-scale");
-    return stored != null ? Number(stored) : 0.95;
+    return stored != null ? Number(stored) : 1;
   });
   const [cardWidth, setCardWidth] = useState(() => {
     if (typeof window === "undefined") return 1;
