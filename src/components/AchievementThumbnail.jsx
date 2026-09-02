@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { getThumbnailSources } from "../utils/format";
-import { useLevelThumbnail, isRiskyThumbnailUrl } from "../hooks/useLevelThumbnail";
+import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
 
 function ThumbnailPane({
   thumbnail,
@@ -28,9 +28,9 @@ function ThumbnailPane({
     onLoadedUrl?.(loadedUrl ?? null);
   }, [loadedUrl, onLoadedUrl]);
 
-  const thumbVisible =
-    Boolean(loadedUrl) ||
-    (Boolean(currentUrl) && !isRiskyThumbnailUrl(currentUrl));
+  // Only reveal after accept/cache hit. Painting before decode lets the
+  // intrinsic image size flash uncropped (left edge) until load or remount.
+  const thumbVisible = Boolean(loadedUrl);
 
   return (
     <div ref={ref} className={className}>
