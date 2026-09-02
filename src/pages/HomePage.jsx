@@ -5,7 +5,7 @@ import { formatDate } from "../utils/format";
 
 const STAFF_ROLE_COLORS = {
   "Owner": "#ff3900",
-  "Elder Moderator": "#ff9933",
+  "Elder Moderator": "#2943ee",
   "List Moderator": "#2599ff",
   "Developer": "9580ff",
   "List Helper": "#4fddff",
@@ -84,7 +84,7 @@ const EDITORS = [
     roles: ["List Moderator"],
     url: {
       youtube: "https://www.youtube.com/@SupremeSDB",
-      discord: null,
+      discord: "https://discord.com/users/1367867627279614155",
     },
   },
   {
