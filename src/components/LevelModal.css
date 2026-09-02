@@ -202,6 +202,29 @@
     background: linear-gradient(0deg, var(--bg-2) 0%, transparent 60%);
 }
 
+.modal__thumb--composite {
+    display: grid;
+    grid-template-columns: repeat(var(--thumb-count, 2), 1fr);
+    position: relative;
+}
+
+.modal__thumb--composite .card__thumb-pane {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.modal__thumb--composite .card__thumb-split {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    left: calc((100% / var(--thumb-count, 2)) * var(--split-index, 1));
+    background: oklch(0% 0 0 / 0.35);
+    pointer-events: none;
+    z-index: 2;
+}
+
 .modal__body {
     padding: 20px 28px 28px;
 }

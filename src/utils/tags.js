@@ -169,3 +169,39 @@ export const TAG_DEFINITIONS = {
     tooltip: "A variant of another achievement on the list.",
   },
 };
+
+/** Catalog tags that appear on at least one entry, in catalog order. */
+export function getTagsPresentInEntries(entries, catalog) {
+  const list = Array.isArray(catalog) ? catalog : [];
+  if (!Array.isArray(entries) || list.length === 0) return [];
+
+  const seen = new Set();
+  for (const entry of entries) {
+    if (!Array.isArray(entry?.tags)) continue;
+    for (const tag of entry.tags) {
+      if (typeof tag === "string" && tag) seen.add(tag);
+    }
+  }
+
+  return list.filter((tag) => seen.has(tag));
+}
+
+/** List-only tags, plus any active filters not currently on the list. */
+export function getVisibleFilterTags({
+  catalog,
+  presentTags,
+  activeTags,
+  showAll = false,
+}) {
+  const list = Array.isArray(catalog) ? catalog : [];
+  if (showAll) return list;
+
+  const allow = new Set(Array.isArray(presentTags) ? presentTags : []);
+  if (activeTags instanceof Map) {
+    for (const tag of activeTags.keys()) {
+      if (list.includes(tag)) allow.add(tag);
+    }
+  }
+
+  return list.filter((tag) => allow.has(tag));
+}

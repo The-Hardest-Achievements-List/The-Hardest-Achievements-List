@@ -3,112 +3,152 @@ import { paginateRows } from "../utils/leaderboard";
 import PaginationControls from "../components/PaginationControls";
 import { formatDate } from "../utils/format";
 
+const STAFF_ROLE_COLORS = {
+  "Owner": "#ff3900",
+  "Elder Moderator": "#ff9933",
+  "List Moderator": "#2599ff",
+  "Developer": "9580ff",
+  "List Helper": "#4fddff",
+  "Server Moderator": "#36e9b8",
+  "Trial Staff": "#57f369",
+  "Integrity Moderator": "#ffc963",
+};
+
+const STAFF_ROLE_CLASS = {
+  "Owner": "home__editor-card--owner",
+  "Elder Moderator": "home__editor-card--elder-moderator",
+  "List Moderator": "home__editor-card--list-moderator",
+  "Developer": "home__editor-card--developer",
+  "List Helper": "home__editor-card--list-helper",
+  "Server Moderator": "home__editor-card--server-moderator",
+  "Trial Staff": "home__editor-card--trial-staff",
+  "Integrity Moderator": "home__editor-card--integrity-moderator",
+};
+
+const STAFF_ROLE_PRIORITY = [
+  "Owner",
+  "Elder Moderator",
+  "List Moderator",
+  "Developer",
+  "List Helper",
+  "Server Moderator",
+  "Trial Staff",
+  "Integrity Moderator",
+];
+
+const getPrimaryRole = (roles) => {
+  for (const role of STAFF_ROLE_PRIORITY) {
+    if (roles.includes(role)) return role;
+  }
+  return "Trial Staff";
+};
+
+const getStaffColorFromRoles = (roles) =>
+  STAFF_ROLE_COLORS[getPrimaryRole(roles)];
+
 const EDITORS = [
-  { 
-    name: "Anceps", 
+  {
+    name: "Anceps",
     roles: ["Owner"],
-    url: "https://www.youtube.com/@ancepsbutworse"
+    url: {
+      youtube: "https://www.youtube.com/@ancepsbutworse",
+      discord: null,
+    },
   },
-  { name: "Arcadie", 
-    roles: ["Elder Moderator"], 
-    url: "https://www.youtube.com/@GW-Arcadie" 
+  {
+    name: "Arcadie",
+    roles: ["Elder Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@GW-Arcadie",
+      discord: null,
+    },
   },
-  { 
-    name: "QwidziT", 
+  {
+    name: "QwidziT",
     roles: ["Developer"],
-    url: "https://www.youtube.com/@qwidzitgd"
+    url: {
+      youtube: "https://www.youtube.com/@qwidzitgd",
+      discord: null,
+    },
   },
-  { 
-    name: "TYATYAPKA", 
-    roles: ["List Moderator"], 
-    url: "https://www.youtube.com/@TYATYAPKA"
+  {
+    name: "TYATYAPKA",
+    roles: ["List Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@TYATYAPKA",
+      discord: null,
+    },
   },
-  { 
-    name: "SupremeSDB", 
-    roles: ["List Moderator"], 
-    url: "https://www.youtube.com/@SupremeSDB"
+  {
+    name: "SupremeSDB",
+    roles: ["List Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@SupremeSDB",
+      discord: null,
+    },
   },
-  { 
-    name: "Excryst", 
-    roles: ["List Moderator", "Website Helper"], 
-    url: "https://www.youtube.com/@excryst"
+  {
+    name: "Excryst",
+    roles: ["List Moderator", "Developer"],
+    url: {
+      youtube: "https://www.youtube.com/@excryst",
+      discord: "https://discord.com/users/997320515867922473",
+    },
   },
-  { name: "Exiled_Shade", 
+  {
+    name: "Exiled_Shade",
     roles: ["List Helper"],
-    url: "https://www.youtube.com/@exiled_shadegd" 
+    url: {
+      youtube: "https://www.youtube.com/@exiled_shadegd",
+      discord: null,
+    },
   },
-  { name: "raine", 
-    roles: ["Server Moderator"], 
-    url: "https://www.youtube.com/@rtwnr"
+  {
+    name: "raine",
+    roles: ["Server Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@rtwnr",
+      discord: null,
+    },
   },
-  { name: "aytch0008", 
-    roles: ["Server Moderator"], 
-    url: "https://www.youtube.com/@aytch0008" 
+  {
+    name: "aytch0008",
+    roles: ["Server Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@aytch0008",
+      discord: null,
+    },
   },
-  { name: "Statera",
+  {
+    name: "Statera",
     roles: ["Trial Staff"],
-    url: "https://www.youtube.com/@stateragd",
+    url: {
+      youtube: "https://www.youtube.com/@stateragd",
+      discord: null,
+    },
   },
-  { name: "NucDev", 
-    roles: ["Integrity Moderator"], 
-    url: "https://www.youtube.com/@NucDev"
+  {
+    name: "NucDev",
+    roles: ["Integrity Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@NucDev",
+      discord: null,
+    },
   },
-  { name: "Mentrillum", 
-    roles: ["Integrity Moderator"], 
-    url: "https://www.youtube.com/@RealDeathCorridor"
+  {
+    name: "Mentrillum",
+    roles: ["Integrity Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@RealDeathCorridor",
+      discord: null,
+    },
   },
-];
-
-const STAFF_GRADIENT = [
-  "#ff3900",
-  "#6542ce",
-  "#2943ee",
-  "#2599ff",
-  "#4fddff",
-  "#36e9b8",
-  "#57f369",
-  "#ffc963",
-];
-
-const hexToRgb = (hex) => {
-  const n = hex.replace("#", "");
-  return {
-    r: parseInt(n.slice(0, 2), 16),
-    g: parseInt(n.slice(2, 4), 16),
-    b: parseInt(n.slice(4, 6), 16),
-  };
-};
-
-const rgbToHex = (r, g, b) => {
-  const toHex = (v) =>
-    Math.round(Math.min(255, Math.max(0, v)))
-      .toString(16)
-      .padStart(2, "0");
-  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-};
-
-const sampleStaffGradient = (t) => {
-  const stops = STAFF_GRADIENT;
-  if (stops.length === 1) return stops[0];
-  const clamped = Math.min(1, Math.max(0, t));
-  const scaled = clamped * (stops.length - 1);
-  const index = Math.floor(scaled);
-  const next = Math.min(index + 1, stops.length - 1);
-  const f = scaled - index;
-  const a = hexToRgb(stops[index]);
-  const b = hexToRgb(stops[next]);
-  return rgbToHex(
-    a.r + (b.r - a.r) * f,
-    a.g + (b.g - a.g) * f,
-    a.b + (b.b - a.b) * f,
-  );
-};
-
-const getStaffColor = (index, total) => {
-  if (total <= 1) return STAFF_GRADIENT[0];
-  // Spread across the full gradient so adjacent staff (same role) stay distinct.
-  return sampleStaffGradient(index / (total - 1));
-};
+].map((editor) => ({
+  ...editor,
+  primaryRole: getPrimaryRole(editor.roles),
+  color: getStaffColorFromRoles(editor.roles),
+  roleClass: STAFF_ROLE_CLASS[getPrimaryRole(editor.roles)],
+}));
 
 const HISTORY_TABS = [
   { id: "classic", label: "Classic" },
@@ -496,35 +536,46 @@ function normalizeExternalUrl(url) {
   return `https://${trimmed}`;
 }
 
-function EditorCard({ editor, color }) {
-  const { name, roles, url } = editor;
-  const href = normalizeExternalUrl(url);
-  const cardStyle = { "--editor-color": color };
-  const content = (
-    <>
-      <div className="home__editor-name">{name}</div>
-      <div className="home__editor-role">{roles.join(" / ")}</div>
-    </>
-  );
+const EDITOR_LINK_KEYS = [
+  { key: "youtube", icon: "fab fa-youtube", label: "YouTube" },
+  { key: "discord", icon: "fab fa-discord", label: "Discord" },
+];
 
-  if (href) {
-    return (
-      <a
-        href={href}
-        className="home__editor-card home__editor-card--link"
-        style={cardStyle}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${name} (${roles.join(", ")})`}
-      >
-        {content}
-      </a>
-    );
-  }
+function getEditorLinks(urls) {
+  if (!urls || typeof urls !== "object") return [];
+
+  return EDITOR_LINK_KEYS.flatMap(({ key, icon, label }) => {
+    const href = normalizeExternalUrl(urls[key]);
+    return href ? [{ key, platform: key, href, icon, label }] : [];
+  });
+}
+
+function EditorCard({ editor }) {
+  const { name, roles, url, roleClass } = editor;
+  const links = getEditorLinks(url);
 
   return (
-    <div className="home__editor-card" style={cardStyle}>
-      {content}
+    <div className={`home__editor-card ${roleClass}`}>
+      <div className="home__editor-top">
+        <div className="home__editor-name">{name}</div>
+        {links.length > 0 ? (
+          <div className="home__editor-links">
+            {links.map((link) => (
+              <a
+                key={link.key}
+                href={link.href}
+                className={`home__editor-link home__editor-link--${link.platform}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${name} on ${link.label}`}
+              >
+                <i className={link.icon} aria-hidden="true"></i>
+              </a>
+            ))}
+          </div>
+        ) : null}
+      </div>
+      <div className="home__editor-role">{roles.join(" / ")}</div>
     </div>
   );
 }
@@ -647,12 +698,8 @@ export default function HomePage({
         <section className="home__panel home__panel--staff" ref={staffRef}>
           <h2 className="home__panel-title">Staff</h2>
           <div className="home__editors">
-            {EDITORS.map((editor, index) => (
-              <EditorCard
-                key={editor.name}
-                editor={editor}
-                color={getStaffColor(index, EDITORS.length)}
-              />
+            {EDITORS.map((editor) => (
+              <EditorCard key={editor.name} editor={editor} />
             ))}
           </div>
         </section>

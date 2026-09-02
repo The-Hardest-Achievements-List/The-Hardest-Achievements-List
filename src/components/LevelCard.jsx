@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   formatDate,
   formatDisplayVersion,
@@ -12,14 +12,18 @@ import {
   UNDEFINED_LABEL,
   asDisplayDate,
   asDisplayLength,
-  asDisplayNumber,
+  asDisplayLevelID,
   asDisplayString,
   filterDisplayableTags,
+  hasValidLevelID,
 } from "../utils/display";
 import Tooltip, { ProjectedRankTooltipContent } from "./Tooltip";
 import TruncatedCardName from "./TruncatedCardName";
 import CardTags from "./CardTags";
-import { useLevelThumbnail, isRiskyThumbnailUrl } from "../hooks/useLevelThumbnail";
+import { CountryFlagRow } from "./CountryFlag";
+import AchievementThumbnail from "./AchievementThumbnail";
+import playerCountriesData from "../../data/playercountries.json";
+import { resolvePlayerCountries } from "../utils/playerCountries";
 import {
   formatEstimateDisplay,
   getExactEstimatePodiumPlace,
@@ -94,7 +98,11 @@ function LevelCard({
   const displayedDate = timelineDateLabel ?? formatDate(a.date);
   const displayedName = asDisplayString(a.name);
   const displayedPlayer = asDisplayString(a.player);
-  const displayedLevelID = asDisplayNumber(a.levelID);
+  const playerCountryCodes = resolvePlayerCountries(
+    playerCountriesData,
+    a.player,
+  );
+  const displayedLevelID = asDisplayLevelID(a.levelID);
   const displayedLength = asDisplayLength(a.length);
   const displayedVersion = formatDisplayVersion(a.version) ?? UNDEFINED_LABEL;
   const displayedDateValue = asDisplayDate(a.date);
@@ -122,23 +130,17 @@ function LevelCard({
   const tags = React.useMemo(() => filterDisplayableTags(a.tags), [a.tags]);
   const pendingRemoval = tags.includes("Pending Removal");
   const isReplacement = Boolean(a.isReplacement);
+  const cardRef = useRef(null);
 
-  const {
-    ref: thumbnailRef,
-    imgRef,
-    currentUrl,
-    loadedUrl,
-    onError,
-    onLoad,
-  } = useLevelThumbnail({
-    thumbnail: a.thumbnail,
-    showcaseVideo: a.showcaseVideo,
-    video: a.video,
-    levelID: a.levelID,
-    // LevelList already window-virtualizes; skip a second IntersectionObserver.
-    lazy: false,
-    enabled: true,
-  });
+  const handlePrimaryThumb = useCallback((url) => {
+    const el = cardRef.current;
+    if (!el) return;
+    if (url) {
+      el.style.setProperty("--thumb-url", `url("${url}")`);
+    } else {
+      el.style.removeProperty("--thumb-url");
+    }
+  }, []);
 
   const handleCardClick = useCallback(() => {
     onClick(a);
@@ -152,22 +154,14 @@ function LevelCard({
     [onJumpToList, a],
   );
 
-  // Show trusted sources immediately; only gate YouTube (stub risk) until accepted.
-  const thumbVisible =
-    Boolean(loadedUrl) ||
-    (Boolean(currentUrl) && !isRiskyThumbnailUrl(currentUrl));
-
   const showJumpButton = typeof onJumpToList === "function";
   const showCornerNote = hasNotes(a.notes);
   const showCornerActions = showCornerNote || Boolean(cornerActions);
 
   return (
     <article
-      ref={thumbnailRef}
+      ref={cardRef}
       className={`card${isPodium ? ` is-podium is-podium--${podiumPlace}` : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}${showJumpButton ? " has-jump-tab" : ""}${isJumpHighlight ? " is-jump-highlight" : ""}`}
-      style={
-        loadedUrl ? { "--thumb-url": `url("${loadedUrl}")` } : undefined
-      }
       onClick={handleCardClick}
     >
       <div className="card__content">
@@ -215,6 +209,12 @@ function LevelCard({
             <div className="card__player">
               <span className="card__player-by">by</span>
               <span className="card__player-name">{displayedPlayer}</span>
+              <CountryFlagRow
+                codes={playerCountryCodes}
+                size={14}
+                className="card__player-flags"
+                flagClassName="card__player-flag"
+              />
             </div>
           </div>
 
@@ -232,7 +232,7 @@ function LevelCard({
               </button>
             )}
             <div className="card__stats">
-              {typeof a.levelID === "number" && Number.isFinite(a.levelID) && (
+              {hasValidLevelID(a.levelID) && (
                 <div>
                   <span className="lbl">ID</span>
                   <span className="val">{displayedLevelID}</span>
@@ -269,25 +269,14 @@ function LevelCard({
         )}
       </div>
 
-      <div className="card__thumb">
-        {currentUrl ? (
-          <img
-            ref={imgRef}
-            src={currentUrl}
-            alt=""
-            decoding="async"
-            onError={onError}
-            onLoad={onLoad}
-            className={thumbVisible ? undefined : "card__thumb-img--pending"}
-            width="100%"
-            height="100%"
-          />
-        ) : loadedUrl ? (
-          <img src={loadedUrl} alt="" decoding="async" width="100%" height="100%" />
-        ) : null}
-        {!thumbVisible && <div className="card__thumb-placeholder" />}
-        <div className="card__thumb-fade" />
-      </div>
+      <AchievementThumbnail
+        achievement={a}
+        className="card__thumb"
+        fadeClassName="card__thumb-fade"
+        pendingClassName="card__thumb-img--pending"
+        lazy={false}
+        onLoadedUrl={handlePrimaryThumb}
+      />
     </article>
   );
 }

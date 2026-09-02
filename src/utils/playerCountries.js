@@ -39,7 +39,14 @@ export function normalizeCountryCodes(value) {
 
 export function resolvePlayerCountries(playerCountries, player) {
   if (!player || player === "-" || !playerCountries) return [];
-  return normalizeCountryCodes(playerCountries[player]);
+  if (playerCountries[player] !== undefined) {
+    return normalizeCountryCodes(playerCountries[player]);
+  }
+  const matchKey = Object.keys(playerCountries).find(
+    (key) => key.toLowerCase() === player.toLowerCase(),
+  );
+  if (!matchKey) return [];
+  return normalizeCountryCodes(playerCountries[matchKey]);
 }
 
 export function resolvePlayerCountry(playerCountries, player) {

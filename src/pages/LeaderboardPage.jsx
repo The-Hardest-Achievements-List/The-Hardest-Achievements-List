@@ -32,26 +32,7 @@ import {
   isLegacyListSource,
 } from "../utils/groupDuplicates";
 import playerCountriesData from "../../data/playercountries.json";
-
-const CountryFlag = ({ code, className = "lb__flag-img", size = 18 }) => {
-  const normalized = normalizeCountryCode(code);
-  if (!normalized) return null;
-
-  const height = Math.round(size * 0.75);
-
-  return (
-    <img
-      src={`https://flagcdn.com/w40/${normalized.toLowerCase()}.png`}
-      srcSet={`https://flagcdn.com/w80/${normalized.toLowerCase()}.png 2x`}
-      alt=""
-      className={className}
-      width={size}
-      height={height}
-      loading="lazy"
-      decoding="async"
-    />
-  );
-};
+import CountryFlag from "../components/CountryFlag";
 
 const getRowCountries = (row) => {
   if (Array.isArray(row?.countries) && row.countries.length) {
@@ -115,6 +96,8 @@ const NationalityFlags = ({
     };
 
     measure();
+    if (typeof ResizeObserver === "undefined") return undefined;
+
     const observer = new ResizeObserver(measure);
     observer.observe(el);
     return () => observer.disconnect();
@@ -302,6 +285,19 @@ function AchievementSourceFilterToggle({ listSource, value, onChange }) {
       ))}
     </div>
   );
+}
+
+function getFilteredEntryCountLabel(
+  filteredCount,
+  totalCount,
+  singular,
+  plural,
+  sourceFilter,
+) {
+  if (sourceFilter !== "all" && filteredCount !== totalCount) {
+    return `${filteredCount} of ${totalCount} ${totalCount === 1 ? singular : plural}`;
+  }
+  return `${filteredCount} ${filteredCount === 1 ? singular : plural}`;
 }
 
 const MEDALS = ["gold", "silver", "bronze"];
@@ -795,10 +791,22 @@ function DetailContent({
   }
 
   if (mode === "submissions") {
+    const allSubmissions = player.submissions ?? [];
     const filteredSubmissions = filterEntriesByAchievementSource(
-      player.submissions,
+      allSubmissions,
       listSource,
       achievementSourceFilter,
+    );
+    const activeSourceFilter = resolveAchievementSourceFilter(
+      listSource,
+      achievementSourceFilter,
+    );
+    const submissionCountLabel = getFilteredEntryCountLabel(
+      filteredSubmissions.length,
+      allSubmissions.length,
+      "submission",
+      "submissions",
+      activeSourceFilter,
     );
 
     return (
@@ -814,7 +822,7 @@ function DetailContent({
               {player.name}
             </h2>
           </div>
-          <span className="lb__detail-points">{player.pts} submissions</span>
+          <span className="lb__detail-points">{submissionCountLabel}</span>
         </div>
 
         <AchievementSourceFilterToggle
@@ -844,10 +852,22 @@ function DetailContent({
     );
   }
 
+  const allAchievements = player.achievements ?? [];
   const filteredAchievements = filterEntriesByAchievementSource(
-    player.achievements,
+    allAchievements,
     listSource,
     achievementSourceFilter,
+  );
+  const activeSourceFilter = resolveAchievementSourceFilter(
+    listSource,
+    achievementSourceFilter,
+  );
+  const achievementCountLabel = getFilteredEntryCountLabel(
+    filteredAchievements.length,
+    allAchievements.length,
+    "achievement",
+    "achievements",
+    activeSourceFilter,
   );
 
   return (
@@ -863,9 +883,7 @@ function DetailContent({
             {player.name}
           </h2>
         </div>
-        <span className="lb__detail-points">
-          <Points value={player.totalXP} /> pts
-        </span>
+        <span className="lb__detail-points">{achievementCountLabel}</span>
       </div>
 
       <AchievementSourceFilterToggle
@@ -1358,65 +1376,83 @@ export default function LeaderboardPage({
         className={`lb__head${isMobileLayout ? "" : " lb__head--sticky"}`}
         style={isMobileLayout ? undefined : { top: `${siteHeaderHeight}px` }}
       >
-        <h1 className="lb__title">Leaderboard</h1>
-        <p className="lb__sub">
-          {getLeaderboardCountLabel(mode, regularRows.length, submissionView)}
-        </p>
-
-        <div className="lb__mode-toggle">
-          <button
-            className={`lb__mode-btn${mode === "players" ? " is-active" : ""}`}
-            onClick={() => switchMode("players")}
-          >
-            Players
-          </button>
-          <button
-            className={`lb__mode-btn${mode === "countries" ? " is-active" : ""}`}
-            onClick={() => switchMode("countries")}
-          >
-            Countries
-          </button>
-          <button
-            className={`lb__mode-btn${mode === "submissions" ? " is-active" : ""}`}
-            onClick={() => switchMode("submissions")}
-          >
-            Submissions
-          </button>
+        <div className="lb__title-row">
+          <h1 className="lb__title">Leaderboard</h1>
+          <p className="lb__sub">
+            {getLeaderboardCountLabel(mode, regularRows.length, submissionView)}
+          </p>
         </div>
 
-        <div className="lb__mode-toggle lb__mode-toggle--nested">
-          <button
-            className={`lb__mode-btn${listSource === "classic" ? " is-active" : ""}`}
-            onClick={() => switchListSource("classic")}
-          >
-            Classic List
-          </button>
-          <button
-            className={`lb__mode-btn${listSource === "platformer" ? " is-active" : ""}`}
-            onClick={() => switchListSource("platformer")}
-          >
-            Platformer List
-          </button>
-        </div>
-
-        {mode === "submissions" && (
-          <div className="lb__mode-toggle lb__mode-toggle--nested">
-            <button
-              type="button"
-              className={`lb__mode-btn${submissionView === "submitters" ? " is-active" : ""}`}
-              onClick={() => setSubmissionView("submitters")}
-            >
-              Submitters
-            </button>
-            <button
-              type="button"
-              className={`lb__mode-btn${submissionView === "countries" ? " is-active" : ""}`}
-              onClick={() => setSubmissionView("countries")}
-            >
-              Countries
-            </button>
+        <div className="lb__controls">
+          <div className="lb__control-group">
+            <span className="lb__control-label">List</span>
+            <div className="lb__mode-toggle lb__mode-toggle--compact">
+              <button
+                type="button"
+                className={`lb__mode-btn${listSource === "classic" ? " is-active" : ""}`}
+                onClick={() => switchListSource("classic")}
+              >
+                Classic
+              </button>
+              <button
+                type="button"
+                className={`lb__mode-btn${listSource === "platformer" ? " is-active" : ""}`}
+                onClick={() => switchListSource("platformer")}
+              >
+                Platformer
+              </button>
+            </div>
           </div>
-        )}
+
+          <div className="lb__control-group">
+            <span className="lb__control-label">View</span>
+            <div className="lb__mode-toggle">
+              <button
+                type="button"
+                className={`lb__mode-btn${mode === "players" ? " is-active" : ""}`}
+                onClick={() => switchMode("players")}
+              >
+                Players
+              </button>
+              <button
+                type="button"
+                className={`lb__mode-btn${mode === "submissions" ? " is-active" : ""}`}
+                onClick={() => switchMode("submissions")}
+              >
+                Submissions
+              </button>
+              <button
+                type="button"
+                className={`lb__mode-btn${mode === "countries" ? " is-active" : ""}`}
+                onClick={() => switchMode("countries")}
+              >
+                Countries
+              </button>
+            </div>
+          </div>
+
+          {mode === "submissions" && (
+            <div className="lb__control-group">
+              <span className="lb__control-label">Group by</span>
+              <div className="lb__mode-toggle lb__mode-toggle--compact">
+                <button
+                  type="button"
+                  className={`lb__mode-btn${submissionView === "submitters" ? " is-active" : ""}`}
+                  onClick={() => setSubmissionView("submitters")}
+                >
+                  People
+                </button>
+                <button
+                  type="button"
+                  className={`lb__mode-btn${submissionView === "countries" ? " is-active" : ""}`}
+                  onClick={() => setSubmissionView("countries")}
+                >
+                  Country
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
 
         <div
           className={`lb__toolbar${isMobileLayout ? " lb__toolbar--sticky" : ""}`}
@@ -1429,7 +1465,7 @@ export default function LeaderboardPage({
               showingCountryRows
                 ? "Search countries..."
                 : mode === "submissions"
-                  ? "Search submitters..."
+                  ? "Search people..."
                   : "Search players..."
             }
             onChange={(event) => setSearchQuery(event.target.value)}

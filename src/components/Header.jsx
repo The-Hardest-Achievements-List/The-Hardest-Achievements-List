@@ -204,6 +204,9 @@ export default function Header({
   activeTags,
   toggleTag,
   allTags,
+  canShowAllTags = false,
+  showAllTags = false,
+  setShowAllTags,
   progressFrom = "",
   setProgressFrom,
   progressTo = "",
@@ -212,6 +215,16 @@ export default function Header({
   setHzMin,
   hzMax = "",
   setHzMax,
+  lengthMin = "",
+  setLengthMin,
+  lengthMax = "",
+  setLengthMax,
+  dateFrom = "",
+  setDateFrom,
+  dateTo = "",
+  setDateTo,
+  hasActiveFilters = false,
+  onResetFilters,
   cardScale,
   setCardScale,
   cardWidth,
@@ -449,6 +462,9 @@ export default function Header({
           allTags={allTags}
           activeTags={activeTags}
           toggleTag={toggleTag}
+          canShowAllTags={canShowAllTags}
+          showAllTags={showAllTags}
+          setShowAllTags={setShowAllTags}
           progressFrom={progressFrom}
           setProgressFrom={setProgressFrom}
           progressTo={progressTo}
@@ -457,6 +473,16 @@ export default function Header({
           setHzMin={setHzMin}
           hzMax={hzMax}
           setHzMax={setHzMax}
+          lengthMin={lengthMin}
+          setLengthMin={setLengthMin}
+          lengthMax={lengthMax}
+          setLengthMax={setLengthMax}
+          dateFrom={dateFrom}
+          setDateFrom={setDateFrom}
+          dateTo={dateTo}
+          setDateTo={setDateTo}
+          hasActiveFilters={hasActiveFilters}
+          onResetFilters={onResetFilters}
         />
       )}
 

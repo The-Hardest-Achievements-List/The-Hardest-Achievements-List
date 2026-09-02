@@ -1,3 +1,5 @@
+import { isValidDate, parseLengthBound } from "./format";
+
 /** Parse a progress % range from an achievement name (`13-72%` or `3.13%`).
  * Noclip progress with no usable % in the name is treated as a full 0–100 run. */
 export function parseProgressRange(name, tags = null) {
@@ -45,12 +47,29 @@ function parseBound(value) {
   return Number.isFinite(n) ? n : null;
 }
 
+/** YYYY-MM-DD for date-only filter comparisons (timezone-safe). */
+function getEntryCalendarDate(achievement) {
+  if (isValidDate(achievement?.date)) {
+    return String(achievement.date).split("T")[0];
+  }
+  if (achievement?.sortDateMs != null) {
+    const d = new Date(achievement.sortDateMs);
+    if (Number.isNaN(d.getTime())) return null;
+    const y = d.getUTCFullYear();
+    const m = String(d.getUTCMonth() + 1).padStart(2, "0");
+    const day = String(d.getUTCDate()).padStart(2, "0");
+    return `${y}-${m}-${day}`;
+  }
+  return null;
+}
+
 /**
- * Match Progress / Low Hertz bounds parsed from the name.
- * Progress: start >= From and end <= To.
- * Hertz: value >= Min and value <= Max.
- * Empty bounds are unrestricted. When a dimension is enabled but the name
- * has no parseable value, the entry fails that dimension.
+ * Match Progress / Hertz / Length bounds.
+ * Progress: start >= From and end <= To (parsed from the name).
+ * Hertz: value >= Min and value <= Max (parsed from the name).
+ * Length: achievement.length in seconds, inclusive.
+ * Empty bounds are unrestricted. When a dimension is enabled but the entry
+ * has no usable value, it fails that dimension.
  */
 export function entryMatchesRangeFilter(
   achievement,
@@ -61,6 +80,12 @@ export function entryMatchesRangeFilter(
     hertzEnabled = false,
     hzMin = "",
     hzMax = "",
+    lengthEnabled = false,
+    lengthMin = "",
+    lengthMax = "",
+    dateEnabled = false,
+    dateFrom = "",
+    dateTo = "",
   } = {},
 ) {
   if (progressEnabled) {
@@ -88,6 +113,41 @@ export function entryMatchesRangeFilter(
     }
   }
 
+  if (lengthEnabled) {
+    if (!entryMatchesLengthFilter(achievement, {
+      lengthMin,
+      lengthMax,
+    })) {
+      return false;
+    }
+  }
+
+  if (dateEnabled) {
+    const from = dateFrom.trim();
+    const to = dateTo.trim();
+    if (from !== "" || to !== "") {
+      const entryDate = getEntryCalendarDate(achievement);
+      if (entryDate == null) return false;
+      if (from !== "" && entryDate < from) return false;
+      if (to !== "" && entryDate > to) return false;
+    }
+  }
+
+  return true;
+}
+
+function entryMatchesLengthFilter(
+  achievement,
+  { lengthMin = "", lengthMax = "" } = {},
+) {
+  const min = parseLengthBound(lengthMin);
+  const max = parseLengthBound(lengthMax);
+  if (min == null && max == null) return true;
+
+  const length = Number(achievement?.length);
+  if (!Number.isFinite(length) || length <= 0) return false;
+  if (min != null && length < min) return false;
+  if (max != null && length > max) return false;
   return true;
 }
 
@@ -98,8 +158,25 @@ export function hasRangeFilterBounds({
   hertzEnabled = false,
   hzMin = "",
   hzMax = "",
+  lengthEnabled = false,
+  lengthMin = "",
+  lengthMax = "",
+  dateEnabled = false,
+  dateFrom = "",
+  dateTo = "",
 } = {}) {
   if (progressEnabled && (progressFrom !== "" || progressTo !== "")) return true;
   if (hertzEnabled && (hzMin !== "" || hzMax !== "")) return true;
+  if (lengthEnabled && (parseLengthBound(lengthMin) != null || parseLengthBound(lengthMax) != null)) {
+    return true;
+  }
+  if (dateEnabled && (dateFrom !== "" || dateTo !== "")) return true;
   return false;
+}
+
+export function hasInvalidLengthBounds(lengthMin = "", lengthMax = "") {
+  return (
+    (lengthMin.trim() !== "" && parseLengthBound(lengthMin) == null) ||
+    (lengthMax.trim() !== "" && parseLengthBound(lengthMax) == null)
+  );
 }

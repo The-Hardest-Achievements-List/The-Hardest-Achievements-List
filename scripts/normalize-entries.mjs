@@ -603,6 +603,17 @@ export const normalizeProofField = (value) => {
 };
 
 export const normalizeImageField = (value) => {
+  if (Array.isArray(value)) {
+    const urls = [];
+    for (const item of value) {
+      const normalized = normalizeImageField(item);
+      if (normalized && !urls.includes(normalized)) urls.push(normalized);
+    }
+    if (urls.length === 0) return null;
+    if (urls.length === 1) return urls[0];
+    return urls;
+  }
+
   const normalized = normalizeNonEmptyStringField(value);
   if (!normalized) return null;
   if (!/^https?:\/\//i.test(normalized)) return null;
@@ -782,7 +793,7 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
     } else if (key === "image") {
       previous[key] = normalizeImageField(entry[key]);
     } else if (key === "thumbnail") {
-      previous[key] = entry[key];
+      previous[key] = normalizeImageField(entry[key]);
     } else if (key === "proof") {
       previous[key] = normalizeProofField(entry[key]);
     } else if (VIDEO_FIELDS.includes(key)) {

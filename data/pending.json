@@ -190,7 +190,7 @@
   {
     "name": "Angelicide 21-61%",
     "player": "Druki",
-    "levelID": "120478542",
+    "levelID": 120478542,
     "date": "2026-08-22",
     "length": 37,
     "version": 2.2,
@@ -239,10 +239,10 @@
     "estimateUpper": null,
     "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
     "duplicateOf": [
-      "Artemis 13 42-100",
-      "Artemis 13 32-93%"
+      "Artemis 13 (Aug. 2026)42-100%",
+      "Artemis 13 (Aug. 2026) 32-93%"
     ],
     "notes": null,
     "tags": [
@@ -262,8 +262,8 @@
     "estimateUpper": null,
     "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Artemis%2013.png?raw=true",
-    "duplicateOf": "Artemis 13 70%",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "duplicateOf": "Artemis 13 (Aug. 2026) 70%",
     "notes": null,
     "tags": [
       "Level",
@@ -543,7 +543,7 @@
     "version": 2.2,
     "submitter": "anduval",
     "estimateLower": null,
-    "estimateUpper": null, 
+    "estimateUpper": null,
     "video": "https://youtu.be/rCwzBWuAqS4",
     "showcaseVideo": "https://youtu.be/lZkHGZuboYM",
     "thumbnail": null,
@@ -597,7 +597,7 @@
   {
     "name": "cry me a cuber 91%",
     "player": "zLGsuS",
-    "levelID": "127870822",
+    "levelID": 127870822,
     "date": "2026-08-25",
     "length": 43,
     "version": 2.2,
@@ -1054,7 +1054,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/bk_JXPUFpPQ",
     "showcaseVideo": "https://youtu.be/2j9nLPyE2Tw",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Flashbang.png?raw=true",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Flashbang.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1247,6 +1247,26 @@
     ]
   },
   {
+    "name": "i n j u r y 59%",
+    "player": "kywy",
+    "levelID": null,
+    "date": "2026-05-26",
+    "length": 19,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/QL5l70qKd60",
+    "showcaseVideo": "https://youtu.be/OzCGe5a5DTY",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/i%20n%20j%20u%20r%20y.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Illusion of Chaos 55-91%",
     "player": "-",
     "levelID": 117897179,
@@ -1280,26 +1300,6 @@
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "i n j u r y 59%",
-    "player": "kywy",
-    "levelID": null,
-    "date": "2026-05-26",
-    "length": 19,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/QL5l70qKd60",
-    "showcaseVideo": "https://youtu.be/OzCGe5a5DTY",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/i%20n%20j%20u%20r%20y.png",
-    "duplicateOf": "i n j u r y (Aug. 2024) 74%",
     "notes": null,
     "tags": [
       "Level",
@@ -1387,6 +1387,26 @@
     ]
   },
   {
+    "name": "KOCMOC (lxfr) 63%",
+    "player": "lxfr",
+    "levelID": null,
+    "date": "2026-07-29",
+    "length": 48,
+    "version": 2.2,
+    "submitter": "lxfr",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/D5lWgWH55Q0",
+    "showcaseVideo": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/69196070",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "KOCMOC 120hz Mobile 14-87%",
     "player": "Tuhupolko",
     "levelID": 87665224,
@@ -1407,26 +1427,6 @@
       "Progress",
       "Rated",
       "Mobile"
-    ]
-  },
-  {
-    "name": "KOCMOC (lxfr) 63%",
-    "player": "lxfr",
-    "levelID": null,
-    "date": "2026-07-29",
-    "length": 48,
-    "version": 2.2,
-    "submitter": "lxfr",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/D5lWgWH55Q0",
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/69196070",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -1596,6 +1596,26 @@
     ]
   },
   {
+    "name": "MAX NRG (Feb. 2026) 66%",
+    "player": "SaturMan",
+    "levelID": null,
+    "date": "2026-02-27",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/qGEHWa9tkLY",
+    "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "MAX NRG (May 2026) 29-85%",
     "player": "SaturMan",
     "levelID": null,
@@ -1646,26 +1666,6 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/aegeLVHQ5Fo",
-    "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "MAX NRG (Feb. 2026) 66%",
-    "player": "SaturMan",
-    "levelID": null,
-    "date": "2026-02-27",
-    "length": 64,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/qGEHWa9tkLY",
     "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
     "duplicateOf": null,
@@ -1778,26 +1778,6 @@
     ]
   },
   {
-    "name": "OUROBOROS (apuu) 52%",
-    "player": "apuu",
-    "levelID": null,
-    "date": "2026-08-22",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Gk1nEhZVP-4",
-    "showcaseVideo": "https://youtu.be/9VqusfNE5dk",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ac7d84093d47cfdb3b6363bd301d82f0879ddd9a/images/thumbnails/OUROBOROS%20(apuu).png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "OUROBOROS (apuu) 27-88%",
     "player": "apuu",
     "levelID": null,
@@ -1808,6 +1788,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/Q8uMek3zijs",
+    "showcaseVideo": "https://youtu.be/9VqusfNE5dk",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ac7d84093d47cfdb3b6363bd301d82f0879ddd9a/images/thumbnails/OUROBOROS%20(apuu).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "OUROBOROS (apuu) 52%",
+    "player": "apuu",
+    "levelID": null,
+    "date": "2026-08-22",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Gk1nEhZVP-4",
     "showcaseVideo": "https://youtu.be/9VqusfNE5dk",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ac7d84093d47cfdb3b6363bd301d82f0879ddd9a/images/thumbnails/OUROBOROS%20(apuu).png",
     "duplicateOf": null,
@@ -1957,7 +1957,30 @@
     "tags": [
       "Level",
       "Low Hertz",
+      "Rated",
       "Noclip",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 120hz Mobile 1-74%%",
+    "player": "ItzAmethyst",
+    "levelID": 76962930,
+    "date": "2026-08-27",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "papsikdanya",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/F8UAwUytcYc",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
       "Rated",
       "Mobile"
     ]
@@ -1999,29 +2022,6 @@
     "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
     "thumbnail": null,
     "duplicateOf": "Sakupen Circles 144hz Mobile 70%",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated",
-      "Mobile"
-    ]
-  },
-  {
-    "name": "Sakupen Circles 120hz Mobile 1-74%%",
-    "player": "ItzAmethyst",
-    "levelID": 76962930,
-    "date": "2026-08-27",
-    "length": 37,
-    "version": 2.2,
-    "submitter": "papsikdanya",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/F8UAwUytcYc",
-    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
-    "thumbnail": null,
-    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -2132,7 +2132,7 @@
     ]
   },
   {
-    "name": "Silent Circles (Snailboy1234) 27-62% 2 deaths, ",
+    "name": "Silent Circles (Snailboy1234) 27-62% 2 deaths,",
     "player": "Thebacon_gamer",
     "levelID": 94763739,
     "date": "2026-08-13",
@@ -2275,7 +2275,7 @@
     "name": "Slaughterhouse (Doritos1055) 49-100%",
     "player": "Doritos1055",
     "levelID": null,
-    "date": "2025/05/31",
+    "date": "2025-05-31",
     "length": 30,
     "version": 2.2,
     "submitter": "Gooba",
@@ -2315,6 +2315,29 @@
     ]
   },
   {
+    "name": "Slaughterhouse 120hz 8-100% 4 deaths, 99.92% accuracy",
+    "player": "vowtz",
+    "levelID": 27690100,
+    "date": "2026-08-10",
+    "length": 51,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/mlR6_2jl17g",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Slaughterhouse 120hz Mobile 25-75%",
     "player": "vowtz",
     "levelID": 27690100,
@@ -2340,7 +2363,7 @@
     "name": "Slaughterhouse 120hz Mobile 49-100%",
     "player": "vowtz",
     "levelID": 27690100,
-    "date": "2026/02/15",
+    "date": "2026-02-15",
     "length": 25,
     "version": 2.2,
     "submitter": "TYATYAPKA",
@@ -2377,29 +2400,6 @@
     "tags": [
       "Level",
       "Consistency"
-    ]
-  },
-  {
-    "name": "Slaughterhouse 120hz 8-100% 4 deaths, 99.92% accuracy",
-    "player": "vowtz",
-    "levelID": 27690100,
-    "date": "2026-08-10",
-    "length": 51,
-    "version": 2.2,
-    "submitter": "abbycartridges",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/mlR6_2jl17g",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Rated",
-      "Mobile"
     ]
   },
   {
@@ -2488,7 +2488,7 @@
   {
     "name": "Spectre 68%, 100% in a row",
     "player": "PoCle",
-    "levelID": 110815379, 
+    "levelID": 110815379,
     "date": "2026-07-05",
     "length": 228,
     "version": 2.2,
@@ -2527,26 +2527,6 @@
     ]
   },
   {
-    "name": "Tidal Wave 23-91%, 23-92% in a row",
-    "player": "Bacon",
-    "levelID": 86407629,
-    "date": "2026-08-05",
-    "length": 238,
-    "version": 2.2,
-    "submitter": "fraudman",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/PJ4cNuK5jZo",
-    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-    {
     "name": "The King Von Trial 43%",
     "player": "Hover",
     "levelID": 122518707,
@@ -2564,6 +2544,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Tidal Wave 23-91%, 23-92% in a row",
+    "player": "Bacon",
+    "levelID": 86407629,
+    "date": "2026-08-05",
+    "length": 238,
+    "version": 2.2,
+    "submitter": "fraudman",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PJ4cNuK5jZo",
+    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -2934,26 +2934,6 @@
     ]
   },
   {
-    "name": "ZANBOT 54%",
-    "player": "Cala",
-    "levelID": null,
-    "date": "2026-08-28",
-    "length": 44,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/J5ZFrwEkbGg",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "ZANBOT 42-100%",
     "player": "Cala",
     "levelID": null,
@@ -2964,6 +2944,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/J5ZFrwEkbGg?t=37",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "ZANBOT 54%",
+    "player": "Cala",
+    "levelID": null,
+    "date": "2026-08-28",
+    "length": 44,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/J5ZFrwEkbGg",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,

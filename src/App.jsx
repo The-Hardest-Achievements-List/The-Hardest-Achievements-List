@@ -32,11 +32,19 @@ import {
   getTimelineEntryKey,
   buildTimelineDateLabelMap,
   buildTimelineDateSortMap,
+  getThumbnailSources,
+  parseLengthBound,
 } from "./utils/format";
-import { CLASSIC_TAGS, PLATFORMER_TAGS } from "./utils/tags";
+import {
+  CLASSIC_TAGS,
+  PLATFORMER_TAGS,
+  getTagsPresentInEntries,
+  getVisibleFilterTags,
+} from "./utils/tags";
 import { getLeaderboardPath } from "./utils/leaderboard";
 import {
   entryMatchesRangeFilter,
+  hasInvalidLengthBounds,
   hasRangeFilterBounds,
 } from "./utils/rangeFilter";
 
@@ -76,8 +84,10 @@ const platformerChangelogWithMilestones = mergeChangelogWithMilestones(
 const NO_LIST = new Set(["HOME", "LEADERBOARD"]);
 
 function AppBackground({ achievement }) {
+  const primaryThumbnail =
+    getThumbnailSources(achievement?.thumbnail)[0] ?? null;
   const { imgRef, currentUrl, loadedUrl, onError, onLoad } = useLevelThumbnail({
-    thumbnail: achievement?.thumbnail,
+    thumbnail: primaryThumbnail,
     showcaseVideo: achievement?.showcaseVideo,
     video: achievement?.video,
     levelID: achievement?.levelID,
@@ -392,6 +402,11 @@ export default function App() {
   const [progressTo, setProgressTo] = useState("");
   const [hzMin, setHzMin] = useState("");
   const [hzMax, setHzMax] = useState("");
+  const [lengthMin, setLengthMin] = useState("");
+  const [lengthMax, setLengthMax] = useState("");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
+  const [showAllTags, setShowAllTags] = useState(false);
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [pendingJumpKey, setPendingJumpKey] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -633,6 +648,20 @@ export default function App() {
   ]);
 
   const allTags = mode === "classic" ? CLASSIC_TAGS : PLATFORMER_TAGS;
+  const presentTags = useMemo(
+    () => getTagsPresentInEntries(rawDataWithListRank, allTags),
+    [rawDataWithListRank, allTags],
+  );
+  const visibleTags = useMemo(
+    () =>
+      getVisibleFilterTags({
+        catalog: allTags,
+        presentTags,
+        activeTags,
+        showAll: showAllTags,
+      }),
+    [allTags, presentTags, activeTags, showAllTags],
+  );
 
   const itemMatchesSearch = (achievement, q) =>
     achievement.name?.toLowerCase().includes(q) ||
@@ -668,6 +697,15 @@ export default function App() {
       hertzEnabled: hertzFilterEnabled,
       hzMin,
       hzMax,
+      lengthEnabled:
+        mode !== "platformer" &&
+        (parseLengthBound(lengthMin) != null ||
+          parseLengthBound(lengthMax) != null),
+      lengthMin,
+      lengthMax,
+      dateEnabled: dateFrom !== "" || dateTo !== "",
+      dateFrom,
+      dateTo,
     }),
     [
       progressFilterEnabled,
@@ -676,6 +714,11 @@ export default function App() {
       hertzFilterEnabled,
       hzMin,
       hzMax,
+      lengthMin,
+      lengthMax,
+      dateFrom,
+      dateTo,
+      mode,
     ],
   );
 
@@ -683,6 +726,27 @@ export default function App() {
     Boolean(search.trim()) ||
     activeTags.size > 0 ||
     hasRangeFilterBounds(rangeFilter);
+
+  const hasActiveFilters =
+    hasListContextFilter ||
+    showAllTags ||
+    (mode !== "platformer" && hasInvalidLengthBounds(lengthMin, lengthMax));
+
+  const resetFilters = useCallback(() => {
+    startTransition(() => {
+      setSearch("");
+      setActiveTags(new Map());
+      setProgressFrom("");
+      setProgressTo("");
+      setHzMin("");
+      setHzMax("");
+      setLengthMin("");
+      setLengthMax("");
+      setDateFrom("");
+      setDateTo("");
+      setShowAllTags(false);
+    });
+  }, []);
 
   const jumpToListPosition = useCallback(
     (achievement) => {
@@ -709,6 +773,10 @@ export default function App() {
       setProgressTo("");
       setHzMin("");
       setHzMax("");
+      setLengthMin("");
+      setLengthMax("");
+      setDateFrom("");
+      setDateTo("");
 
       if (jumpToPending && active !== "PENDING") {
         const modeSlug = mode === "platformer" ? "plat" : "classic";
@@ -731,6 +799,11 @@ export default function App() {
     setProgressTo("");
     setHzMin("");
     setHzMax("");
+    setLengthMin("");
+    setLengthMax("");
+    setDateFrom("");
+    setDateTo("");
+    setShowAllTags(false);
     // Do not clear pendingJumpKey here — Jump may switch MAIN → PENDING with the
     // key already set; LevelList clears it after scrolling (or on a miss).
     if (!NO_LIST.has(active)) {
@@ -968,7 +1041,10 @@ export default function App() {
         setSortDir={setSortDir}
         activeTags={activeTags}
         toggleTag={toggleTag}
-        allTags={allTags}
+        allTags={visibleTags}
+        canShowAllTags={presentTags.length < allTags.length}
+        showAllTags={showAllTags}
+        setShowAllTags={setShowAllTags}
         progressFrom={progressFrom}
         setProgressFrom={setProgressFrom}
         progressTo={progressTo}
@@ -977,6 +1053,16 @@ export default function App() {
         setHzMin={setHzMin}
         hzMax={hzMax}
         setHzMax={setHzMax}
+        lengthMin={lengthMin}
+        setLengthMin={setLengthMin}
+        lengthMax={lengthMax}
+        setLengthMax={setLengthMax}
+        dateFrom={dateFrom}
+        setDateFrom={setDateFrom}
+        dateTo={dateTo}
+        setDateTo={setDateTo}
+        hasActiveFilters={hasActiveFilters}
+        onResetFilters={resetFilters}
         cardScale={cardScale}
         setCardScale={setCardScale}
         cardWidth={cardWidth}
@@ -1040,8 +1126,11 @@ export default function App() {
             listKey={`${mode}-${active}`}
             data={filteredData}
             activeTags={activeTags}
-            allTags={allTags}
+            allTags={visibleTags}
             toggleTag={toggleTag}
+            canShowAllTags={presentTags.length < allTags.length}
+            showAllTags={showAllTags}
+            setShowAllTags={setShowAllTags}
             progressFrom={progressFrom}
             setProgressFrom={setProgressFrom}
             progressTo={progressTo}
@@ -1050,6 +1139,16 @@ export default function App() {
             setHzMin={setHzMin}
             hzMax={hzMax}
             setHzMax={setHzMax}
+            lengthMin={lengthMin}
+            setLengthMin={setLengthMin}
+            lengthMax={lengthMax}
+            setLengthMax={setLengthMax}
+            dateFrom={dateFrom}
+            setDateFrom={setDateFrom}
+            dateTo={dateTo}
+            setDateTo={setDateTo}
+            hasActiveFilters={hasActiveFilters}
+            onResetFilters={resetFilters}
             isTimeline={isTimeline}
             isPendingEstimate={isPendingList}
             pendingMainCount={pendingMainCount}
@@ -1068,6 +1167,9 @@ export default function App() {
             mode={mode}
             setMode={(m) => navigate(m, active)}
             listKind={isMainList ? "main" : isPendingList ? "pending" : null}
+            totalEntryCount={
+              isMainList || isPendingList ? getMainListCount(rawData) : null
+            }
             otherList={filteredOtherList}
             showJumpToList={hasListContextFilter}
             onJumpToList={jumpToListPosition}

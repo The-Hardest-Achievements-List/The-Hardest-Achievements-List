@@ -20,10 +20,20 @@ export function asDisplayLevelID(value) {
   if (typeof value === "number" && Number.isFinite(value)) {
     return String(value);
   }
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (/^\d+$/.test(trimmed)) return trimmed;
+  }
   if (value == null) {
     return UNRELEASED_LABEL;
   }
   return UNDEFINED_LABEL;
+}
+
+export function hasValidLevelID(value) {
+  if (typeof value === "number" && Number.isFinite(value)) return true;
+  if (typeof value === "string") return /^\d+$/.test(value.trim());
+  return false;
 }
 
 export function asDisplayDate(value) {

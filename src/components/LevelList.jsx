@@ -6,10 +6,9 @@ import {
   getAchievementKey,
   groupAchievementsByDuplicates,
 } from "../utils/groupDuplicates";
-import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 import { SORT_OPTS, SORT_DIR_OPTS } from "../constants/sortOptions";
 import { ModeToggle, ScaleControls } from "./HeaderControls";
-import Tooltip from "./Tooltip";
+import FilterTagChips from "./FilterTagChips";
 import RangeFilters from "./RangeFilters";
 
 const LIST_GAP = 14;
@@ -206,6 +205,9 @@ export default function LevelList({
   activeTags,
   allTags,
   toggleTag,
+  canShowAllTags = false,
+  showAllTags = false,
+  setShowAllTags,
   listKey,
   isTimeline,
   isPendingEstimate,
@@ -225,6 +227,7 @@ export default function LevelList({
   mode,
   setMode,
   listKind = null,
+  totalEntryCount = null,
   otherList = [],
   showJumpToList = false,
   onJumpToList = null,
@@ -238,6 +241,16 @@ export default function LevelList({
   setHzMin,
   hzMax = "",
   setHzMax,
+  lengthMin = "",
+  setLengthMin,
+  lengthMax = "",
+  setLengthMax,
+  dateFrom = "",
+  setDateFrom,
+  dateTo = "",
+  setDateTo,
+  hasActiveFilters = false,
+  onResetFilters,
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const [highlightKey, setHighlightKey] = React.useState(null);
@@ -300,6 +313,14 @@ export default function LevelList({
     mainAchievements.length * itemHeight +
     sumExtrasFrom(extraOffsets, 0);
   const visibleAchievements = mainAchievements.slice(start, end);
+  const showEntryCount =
+    (listKind === "main" || listKind === "pending") &&
+    typeof totalEntryCount === "number";
+  const entryCountLabel = showEntryCount
+    ? hasActiveFilters && mainAchievements.length !== totalEntryCount
+      ? `${mainAchievements.length} of ${totalEntryCount} entries`
+      : `${totalEntryCount} ${totalEntryCount === 1 ? "entry" : "entries"}`
+    : null;
 
   React.useLayoutEffect(() => {
     if (!pendingJumpKey) {
@@ -424,97 +445,124 @@ export default function LevelList({
         <aside
           className={`list__sidebar${sidebarCollapsed ? " is-collapsed" : ""}`}
         >
-          <ModeToggle mode={mode} setMode={setMode} />
+          <div className="list__sidebar-panel">
+            <div className="list__sidebar-scroll">
+              <ModeToggle mode={mode} setMode={setMode} />
+              <ScaleControls
+                idPrefix="sidebar"
+                className="hd__layout-group hd__layout-group--sidebar"
+                cardScale={cardScale}
+                setCardScale={setCardScale}
+                cardWidth={cardWidth}
+                setCardWidth={setCardWidth}
+                showScaleY
+                showScaleX
+              />
 
-          <ScaleControls
-            idPrefix="sidebar"
-            cardScale={cardScale}
-            setCardScale={setCardScale}
-            cardWidth={cardWidth}
-            setCardWidth={setCardWidth}
-          />
+              <div className="hd__sort-group list__sort-group">
+                <span className="hd__sort-lbl">SORT</span>
+                <div className="list__sort-controls">
+                  <SelectDropdown
+                    value={sort}
+                    options={SORT_OPTS}
+                    onChange={setSort}
+                    ariaLabel="Sort by"
+                    variant="hd-compact"
+                  />
+                  <SelectDropdown
+                    value={sortDir}
+                    options={SORT_DIR_OPTS}
+                    onChange={setSortDir}
+                    ariaLabel="Sort direction"
+                    variant="hd-compact"
+                  />
+                </div>
+                {projectionAvailable && (
+                  <label className="hd__toggle hd__toggle--inline">
+                    <input
+                      type="checkbox"
+                      checked={showProjectedRanks}
+                      onChange={(e) => setShowProjectedRanks(e.target.checked)}
+                    />
+                    <span className="hd__toggle-label">Projected ranks</span>
+                  </label>
+                )}
+              </div>
 
-          <div className="hd__sort-group list__sort-group">
-            <span className="hd__sort-lbl">SORT</span>
-            <div className="list__sort-controls">
-              <SelectDropdown
-                  value={sort}
-                  options={SORT_OPTS}
-                  onChange={setSort}
-                  ariaLabel="Sort by"
-                  variant="hd-compact"
-                />
-                <SelectDropdown
-                  value={sortDir}
-                  options={SORT_DIR_OPTS}
-                  onChange={setSortDir}
-                  ariaLabel="Sort direction"
-                  variant="hd-compact"
-                />
-            </div>
-            {projectionAvailable && (
-              <label className="hd__toggle hd__toggle--inline">
-                <input
-                  type="checkbox"
-                  checked={showProjectedRanks}
-                  onChange={(e) => setShowProjectedRanks(e.target.checked)}
-                />
-                <span className="hd__toggle-label">Projected ranks</span>
-              </label>
-            )}
-          </div>
-
-          <div className="hd__filters list__filters">
-            <span className="hd__fgroup-lbl">FILTER</span>
-            <div className="hd__chips">
-              {safeAllTags.map((t) => {
-                const state = activeTags.get(t);
-                const def = TAG_DEFINITIONS[t] || {};
-                return (
+              <div className="hd__filters list__filters">
+                <div className="sidebar__filter-head">
+                  <span className="hd__fgroup-lbl">FILTER</span>
                   <button
-                    key={t}
-                    className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""}${def.className ? ` ${def.className}` : ""}`}
-                    onClick={() => toggleTag(t)}
+                    type="button"
+                    className="sidebar__reset-btn"
+                    onClick={onResetFilters}
+                    disabled={!hasActiveFilters}
                   >
-                    <Tooltip text={def.tooltip}>
-                      {TAG_ICONS[t] && (
-                        <i className={`fas ${TAG_ICONS[t]}`} aria-hidden="true" />
-                      )}
-                      {def.text || t}
-                    </Tooltip>
+                    Reset
                   </button>
-                );
-              })}
+                </div>
+                <FilterTagChips
+                  tags={safeAllTags}
+                  activeTags={activeTags}
+                  toggleTag={toggleTag}
+                  className="hd__chips hd__chips--sidebar-grid"
+                />
+                {canShowAllTags && (
+                  <button
+                    type="button"
+                    className="sidebar__tags-toggle"
+                    onClick={() => setShowAllTags?.(!showAllTags)}
+                  >
+                    {showAllTags ? "Show list tags" : "Show all tags"}
+                  </button>
+                )}
+                <div className="sidebar__range-section">
+                  <RangeFilters
+                    dateFrom={dateFrom}
+                    dateTo={dateTo}
+                    onDateFromChange={setDateFrom}
+                    onDateToChange={setDateTo}
+                    showLength={mode !== "platformer"}
+                    showProgress={activeTags.get("Progress") === "include"}
+                    showHertz={activeTags.get("Low Hertz") === "include"}
+                    progressFrom={progressFrom}
+                    progressTo={progressTo}
+                    onProgressFromChange={setProgressFrom}
+                    onProgressToChange={setProgressTo}
+                    hzMin={hzMin}
+                    hzMax={hzMax}
+                    onHzMinChange={setHzMin}
+                    onHzMaxChange={setHzMax}
+                    lengthMin={lengthMin}
+                    lengthMax={lengthMax}
+                    onLengthMinChange={setLengthMin}
+                    onLengthMaxChange={setLengthMax}
+                  />
+                </div>
+              </div>
             </div>
-            <RangeFilters
-              showProgress={activeTags.get("Progress") === "include"}
-              showHertz={activeTags.get("Low Hertz") === "include"}
-              progressFrom={progressFrom}
-              progressTo={progressTo}
-              onProgressFromChange={setProgressFrom}
-              onProgressToChange={setProgressTo}
-              hzMin={hzMin}
-              hzMax={hzMax}
-              onHzMinChange={setHzMin}
-              onHzMaxChange={setHzMax}
-            />
+            <button
+              type="button"
+              className="sidebar__collapse-btn"
+              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+              title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+              aria-expanded={!sidebarCollapsed}
+            >
+              <i
+                className={`fas ${sidebarCollapsed ? "fa-chevron-left" : "fa-chevron-right"}`}
+                aria-hidden="true"
+              />
+              <span className="sidebar__collapse-btn-label">
+                {sidebarCollapsed ? "Show panel" : "Hide panel"}
+              </span>
+            </button>
           </div>
-          <button
-            type="button"
-            className="sidebar__collapse-btn"
-            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-            aria-expanded={!sidebarCollapsed}
-          >
-            <i
-              className={`fas ${sidebarCollapsed ? "fa-chevron-left" : "fa-chevron-right"}`}
-              aria-hidden="true"
-            />
-            <span className="sidebar__collapse-btn-label">
-              {sidebarCollapsed ? "Show panel" : "Hide panel"}
-            </span>
-          </button>
         </aside>
+        {showEntryCount ? (
+          <p className="list__count" aria-live="polite">
+            {entryCountLabel}
+          </p>
+        ) : null}
         {safeData.length === 0 ? (
           <div className="list__empty">No entries found.</div>
         ) : (

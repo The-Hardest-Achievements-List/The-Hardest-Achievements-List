@@ -367,6 +367,13 @@ export function isWatchableAchievementUrl(url) {
 }
 
 export function normalizeImageUrl(image) {
+    if (Array.isArray(image)) {
+        for (const item of image) {
+            const normalized = normalizeThumbnail(item)
+            if (normalized) return normalized
+        }
+        return null
+    }
     return normalizeThumbnail(image)
 }
 
@@ -414,14 +421,71 @@ export function normalizeThumbnail(thumbnail) {
     return trimmed
 }
 
+/** string | string[] | null → unique valid thumbnail URLs, in order. */
+export function getThumbnailSources(thumbnail) {
+    const items = Array.isArray(thumbnail) ? thumbnail : [thumbnail]
+    const urls = []
+    for (const item of items) {
+        const normalized = normalizeThumbnail(item)
+        if (normalized && !urls.includes(normalized)) urls.push(normalized)
+    }
+    return urls
+}
+
+/** Parse a length bound: seconds (`90`, `90s`), `m:ss` (`1:30`),
+ * `h:mm:ss`, or labeled (`1m 30s`, `2m`). Returns seconds or null. */
+export function parseLengthBound(value) {
+    if (value === '' || value == null) return null
+    const raw = String(value).trim().toLowerCase()
+    if (!raw) return null
+
+    if (raw.includes(':')) {
+        const parts = raw.split(':')
+        if (parts.length < 2 || parts.length > 3) return null
+        if (parts.some((part) => part === '' || !/^\d+(?:\.\d+)?$/.test(part))) {
+            return null
+        }
+        const nums = parts.map(Number)
+        if (nums.some((n) => !Number.isFinite(n) || n < 0)) return null
+
+        let hours = 0
+        let minutes = 0
+        let seconds = 0
+        if (nums.length === 3) {
+            ;[hours, minutes, seconds] = nums
+        } else {
+            ;[minutes, seconds] = nums
+        }
+        if (minutes >= 60 && nums.length === 3) return null
+        if (seconds >= 60) return null
+        return hours * 3600 + minutes * 60 + seconds
+    }
+
+    const labeled = raw.match(
+        /^(?:(\d+)\s*h(?:ours?)?)?\s*(?:(\d+)\s*m(?:in(?:ute)?s?)?)?\s*(?:(\d+(?:\.\d+)?)\s*s(?:ec(?:ond)?s?)?)?$/i,
+    )
+    if (labeled && (labeled[1] || labeled[2] || labeled[3])) {
+        const hours = labeled[1] ? Number(labeled[1]) : 0
+        const minutes = labeled[2] ? Number(labeled[2]) : 0
+        const seconds = labeled[3] ? Number(labeled[3]) : 0
+        if (![hours, minutes, seconds].every((n) => Number.isFinite(n) && n >= 0)) {
+            return null
+        }
+        return hours * 3600 + minutes * 60 + seconds
+    }
+
+    if (!/^\d+(?:\.\d+)?$/.test(raw)) return null
+    const seconds = Number(raw)
+    return Number.isFinite(seconds) && seconds >= 0 ? seconds : null
+}
+
 const memoizedGetThumbnailUrlSequence = memoize(function getThumbnailUrlSequenceImpl(thumbnail, showcaseVideo, playerVideo, levelID) {
     const urls = []
     const add = (url) => {
         if (url && !urls.includes(url)) urls.push(url)
     }
 
-    const explicit = normalizeThumbnail(thumbnail)
-    if (explicit) add(explicit)
+    getThumbnailSources(thumbnail).forEach(add)
 
     if (levelID) {
         add(`https://levelthumbs.prevter.me/thumbnail/${levelID}`)

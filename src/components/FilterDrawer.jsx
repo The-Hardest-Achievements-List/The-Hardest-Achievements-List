@@ -1,7 +1,7 @@
 import SelectDropdown from "./SelectDropdown";
-import { TAG_DEFINITIONS, TAG_ICONS } from "../utils/tags";
 import { SORT_OPTS, SORT_DIR_OPTS } from "../constants/sortOptions";
 import { ModeToggle, ScaleControls } from "./HeaderControls";
+import FilterTagChips from "./FilterTagChips";
 import RangeFilters from "./RangeFilters";
 
 export default function FilterDrawer({
@@ -24,6 +24,9 @@ export default function FilterDrawer({
   allTags,
   activeTags,
   toggleTag,
+  canShowAllTags = false,
+  showAllTags = false,
+  setShowAllTags,
   progressFrom = "",
   setProgressFrom,
   progressTo = "",
@@ -32,6 +35,16 @@ export default function FilterDrawer({
   setHzMin,
   hzMax = "",
   setHzMax,
+  lengthMin = "",
+  setLengthMin,
+  lengthMax = "",
+  setLengthMax,
+  dateFrom = "",
+  setDateFrom,
+  dateTo = "",
+  setDateTo,
+  hasActiveFilters = false,
+  onResetFilters,
 }) {
   return (
     <div className="flt-overlay" onClick={onClose}>
@@ -110,45 +123,56 @@ export default function FilterDrawer({
         </div>
 
         <div className="flt-section">
-          <span className="flt-lbl">FILTER</span>
-          <div className="hd__chips hd__chips--mobile">
-            {allTags.map((t) => {
-              const state = activeTags.get(t);
-              const def = TAG_DEFINITIONS[t] || {};
-              return (
-                <button
-                  key={t}
-                  className={`hd__chip${state === "include" ? " is-include" : ""}${state === "exclude" ? " is-exclude" : ""} ${def.className || ""}`}
-                  onClick={() => toggleTag(t)}
-                  title={
-                    def.tooltip ||
-                    (state === "include"
-                      ? "Include only"
-                      : state === "exclude"
-                        ? "Exclude"
-                        : "Not filtering")
-                  }
-                >
-                  {TAG_ICONS[t] && (
-                    <i className={`fas ${TAG_ICONS[t]}`} aria-hidden="true" />
-                  )}
-                  {def.text || t}
-                </button>
-              );
-            })}
+          <div className="sidebar__filter-head">
+            <span className="flt-lbl">FILTER</span>
+            <button
+              type="button"
+              className="sidebar__reset-btn"
+              onClick={onResetFilters}
+              disabled={!hasActiveFilters}
+            >
+              Reset
+            </button>
           </div>
-          <RangeFilters
-            showProgress={activeTags.get("Progress") === "include"}
-            showHertz={activeTags.get("Low Hertz") === "include"}
-            progressFrom={progressFrom}
-            progressTo={progressTo}
-            onProgressFromChange={setProgressFrom}
-            onProgressToChange={setProgressTo}
-            hzMin={hzMin}
-            hzMax={hzMax}
-            onHzMinChange={setHzMin}
-            onHzMaxChange={setHzMax}
+          <FilterTagChips
+            tags={allTags}
+            activeTags={activeTags}
+            toggleTag={toggleTag}
+            className="hd__chips hd__chips--mobile hd__chips--sidebar-grid"
+            useTooltip={false}
           />
+          {canShowAllTags && (
+            <button
+              type="button"
+              className="sidebar__tags-toggle"
+              onClick={() => setShowAllTags?.(!showAllTags)}
+            >
+              {showAllTags ? "Show list tags" : "Show all tags"}
+            </button>
+          )}
+          <div className="sidebar__range-section">
+            <RangeFilters
+              dateFrom={dateFrom}
+              dateTo={dateTo}
+              onDateFromChange={setDateFrom}
+              onDateToChange={setDateTo}
+              showLength={mode !== "platformer"}
+              showProgress={activeTags.get("Progress") === "include"}
+              showHertz={activeTags.get("Low Hertz") === "include"}
+              progressFrom={progressFrom}
+              progressTo={progressTo}
+              onProgressFromChange={setProgressFrom}
+              onProgressToChange={setProgressTo}
+              hzMin={hzMin}
+              hzMax={hzMax}
+              onHzMinChange={setHzMin}
+              onHzMaxChange={setHzMax}
+              lengthMin={lengthMin}
+              lengthMax={lengthMax}
+              onLengthMinChange={setLengthMin}
+              onLengthMaxChange={setLengthMax}
+            />
+          </div>
         </div>
       </div>
     </div>

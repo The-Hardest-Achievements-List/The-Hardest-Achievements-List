@@ -57,33 +57,39 @@ export function ScaleControls({
   setCardScale,
   cardWidth,
   setCardWidth,
+  showScaleY = true,
+  showScaleX = true,
 }) {
   return (
     <div className={className}>
-      <div className="hd__scale-control">
-        <label htmlFor={`${idPrefix}-card-scale-y`}>Scale Y</label>
-        <input
-          id={`${idPrefix}-card-scale-y`}
-          type="range"
-          min="0.5"
-          max="1.25"
-          step="0.05"
-          value={cardScale}
-          onChange={(e) => setCardScale(Number(e.target.value))}
-        />
-      </div>
-      <div className="hd__scale-control">
-        <label htmlFor={`${idPrefix}-card-scale-x`}>Scale X</label>
-        <input
-          id={`${idPrefix}-card-scale-x`}
-          type="range"
-          min="0.5"
-          max="1.0"
-          step="0.05"
-          value={cardWidth}
-          onChange={(e) => setCardWidth(Number(e.target.value))}
-        />
-      </div>
+      {showScaleY && (
+        <div className="hd__scale-control">
+          <label htmlFor={`${idPrefix}-card-scale-y`}>Scale Y</label>
+          <input
+            id={`${idPrefix}-card-scale-y`}
+            type="range"
+            min="0.5"
+            max="1.25"
+            step="0.05"
+            value={cardScale}
+            onChange={(e) => setCardScale(Number(e.target.value))}
+          />
+        </div>
+      )}
+      {showScaleX && (
+        <div className="hd__scale-control">
+          <label htmlFor={`${idPrefix}-card-scale-x`}>Scale X</label>
+          <input
+            id={`${idPrefix}-card-scale-x`}
+            type="range"
+            min="0.5"
+            max="1.0"
+            step="0.05"
+            value={cardWidth}
+            onChange={(e) => setCardWidth(Number(e.target.value))}
+          />
+        </div>
+      )}
     </div>
   );
 }

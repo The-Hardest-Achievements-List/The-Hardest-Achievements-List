@@ -243,6 +243,49 @@
     transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.home__editor-card--owner { --editor-color: #ff3900; }
+.home__editor-card--elder-moderator { --editor-color: #ff9933; }
+.home__editor-card--list-moderator { --editor-color: #2599ff; }
+.home__editor-card--developer { --editor-color: #6542ce; }
+.home__editor-card--list-helper { --editor-color: #4fddff; }
+.home__editor-card--server-moderator { --editor-color: #36e9b8; }
+.home__editor-card--trial-staff { --editor-color: #57f369; }
+.home__editor-card--integrity-moderator { --editor-color: #ffc963; }
+
+.home__editor-card--owner .home__editor-name,
+.home__editor-card--owner .home__editor-role { color: #ff3900; }
+
+.home__editor-card--elder-moderator .home__editor-name,
+.home__editor-card--elder-moderator .home__editor-role { color: #ff9933; }
+
+.home__editor-card--list-moderator .home__editor-name,
+.home__editor-card--list-moderator .home__editor-role { color: #2599ff; }
+
+.home__editor-card--developer .home__editor-name,
+.home__editor-card--developer .home__editor-role { color: #6542ce; }
+
+.home__editor-card--developer {
+    border-width: 1.5px;
+    border-color: color-mix(in srgb, var(--editor-color) 40%, transparent);
+}
+
+.home__editor-card--list-moderator:hover,
+.home__editor-card--developer:hover {
+    border-color: color-mix(in srgb, var(--editor-color) 65%, transparent);
+}
+
+.home__editor-card--list-helper .home__editor-name,
+.home__editor-card--list-helper .home__editor-role { color: #4fddff; }
+
+.home__editor-card--server-moderator .home__editor-name,
+.home__editor-card--server-moderator .home__editor-role { color: #36e9b8; }
+
+.home__editor-card--trial-staff .home__editor-name,
+.home__editor-card--trial-staff .home__editor-role { color: #57f369; }
+
+.home__editor-card--integrity-moderator .home__editor-name,
+.home__editor-card--integrity-moderator .home__editor-role { color: #ffc963; }
+
 .home__editor-card--link {
     text-decoration: none;
     color: inherit;
@@ -261,10 +304,97 @@
     transform: translateY(-2px);
 }
 
+.home__editor-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.home__editor-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    max-width: 84px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.home__editor-links::-webkit-scrollbar {
+    display: none;
+}
+
+.home__editor-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+    color: var(--ink-2);
+    text-decoration: none;
+    font-size: 11px;
+    flex: 0 0 auto;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home__editor-link--youtube {
+    color: #ff4444;
+}
+
+.home__editor-link--discord {
+    color: #5865f2;
+}
+
+.home__editor-card:hover .home__editor-link {
+    background: var(--bg);
+    border-color: var(--line-2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.home__editor-card:hover .home__editor-link--youtube {
+    color: #ff5555;
+}
+
+.home__editor-card:hover .home__editor-link--discord {
+    color: #7289ff;
+}
+
+.home__editor-link:hover {
+    color: #fff;
+    background: var(--bg-3);
+    border-color: var(--line-2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+}
+
+.home__editor-link--youtube:hover {
+    background: #cc0000;
+    border-color: #ff4444;
+}
+
+.home__editor-link--discord:hover {
+    background: #4752c4;
+    border-color: #5865f2;
+}
+
+.home__editor-link:focus-visible {
+    outline: 2px solid var(--ink-2);
+    outline-offset: 2px;
+}
+
 .home__editor-name {
     font-size: 14px;
     font-weight: 600;
-    color: var(--editor-color);
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .home__editor-card:hover .home__editor-name {
@@ -275,7 +405,7 @@
 .home__editor-role {
     font-size: 12px;
     font-weight: 500;
-    color: color-mix(in srgb, var(--editor-color) 78%, var(--ink-3));
+    opacity: 0.88;
 }
 
 .home__editor-card:hover .home__editor-role {
