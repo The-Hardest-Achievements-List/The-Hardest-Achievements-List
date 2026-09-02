@@ -16,7 +16,7 @@ function ThumbnailPane({
   fadeClassName = null,
   children = null,
 }) {
-  const { ref, imgRef, currentUrl, loadedUrl, onError, onLoad } =
+  const { ref, imgRef, currentUrl, loadedUrl, onError, onLoad, onDisplayError } =
     useLevelThumbnail({
       thumbnail,
       showcaseVideo,
@@ -50,7 +50,12 @@ function ThumbnailPane({
         />
       ) : null}
       {loadedUrl ? (
-        <img src={loadedUrl} alt={alt} decoding="async" />
+        <img
+          src={loadedUrl}
+          alt={alt}
+          decoding="async"
+          onError={onDisplayError}
+        />
       ) : null}
       {!thumbVisible && <div className="card__thumb-placeholder" />}
       {fadeClassName ? <div className={fadeClassName} /> : null}

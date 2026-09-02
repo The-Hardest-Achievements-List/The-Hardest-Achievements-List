@@ -35,6 +35,9 @@ const hydratePersistedCache = () => {
       if (!Array.isArray(entry) || entry.length < 2) continue;
       const [key, value] = entry;
       if (typeof key !== "string" || typeof value !== "string") continue;
+      // Never hydrate failure sentinels — a transient network failure must
+      // not permanently blank a card for the rest of the tab session.
+      if (value === EXHAUSTED_SENTINEL) continue;
       if (!resolvedThumbCache.has(key)) resolvedThumbCache.set(key, value);
     }
   } catch {
@@ -50,7 +53,11 @@ const schedulePersistCache = () => {
     try {
       sessionStorage.setItem(
         PERSIST_STORAGE_KEY,
-        JSON.stringify([...resolvedThumbCache.entries()]),
+        JSON.stringify(
+          [...resolvedThumbCache.entries()].filter(
+            ([, value]) => value !== EXHAUSTED_SENTINEL,
+          ),
+        ),
       );
     } catch {
       // Ignore quota errors.
@@ -197,6 +204,7 @@ export function useLevelThumbnail({
   const ref = useRef(null);
   const imgRef = useRef(null);
   const handledSrcRef = useRef(null);
+  const displayRecoveryRef = useRef(false);
   const currentUrlRef = useRef(null);
   const urlIndexRef = useRef(0);
   const sequenceLengthRef = useRef(0);
@@ -222,21 +230,13 @@ export function useLevelThumbnail({
     [cacheKey, sequence, enabled],
   );
 
-  const cachedFinalUrl =
-    cacheHit.loadedUrl && !getMaxResUpgradeUrl(cacheHit.loadedUrl)
-      ? cacheHit.loadedUrl
-      : null;
-  const cachedPendingUpgrade =
-    cacheHit.loadedUrl && getMaxResUpgradeUrl(cacheHit.loadedUrl)
-      ? cacheHit.loadedUrl
-      : null;
-
   const [urlIndex, setUrlIndex] = useState(cacheHit.urlIndex);
 
-  const [acceptedUrl, setAcceptedUrl] = useState(
-    cachedFinalUrl ?? cachedPendingUpgrade,
-  );
-  const [loadedUrl, setLoadedUrl] = useState(cachedFinalUrl);
+  // Cached URLs are always final decisions (the maxres probe ran before they
+  // were remembered), so hydrate them straight into the visible slot — no
+  // re-probing, which used to delay every remount of non-maxres videos.
+  const [acceptedUrl, setAcceptedUrl] = useState(cacheHit.loadedUrl);
+  const [loadedUrl, setLoadedUrl] = useState(cacheHit.loadedUrl);
   const [exhausted, setExhausted] = useState(cacheHit.exhausted);
   const [syncKey, setSyncKey] = useState(cacheKey);
 
@@ -244,19 +244,12 @@ export function useLevelThumbnail({
   if (syncKey !== cacheKey) {
     setSyncKey(cacheKey);
     setUrlIndex(cacheHit.urlIndex);
-    const nextFinal =
-      cacheHit.loadedUrl && !getMaxResUpgradeUrl(cacheHit.loadedUrl)
-        ? cacheHit.loadedUrl
-        : null;
-    const nextPending =
-      cacheHit.loadedUrl && getMaxResUpgradeUrl(cacheHit.loadedUrl)
-        ? cacheHit.loadedUrl
-        : null;
-    setAcceptedUrl(nextFinal ?? nextPending);
-    setLoadedUrl(nextFinal);
+    setAcceptedUrl(cacheHit.loadedUrl);
+    setLoadedUrl(cacheHit.loadedUrl);
     setExhausted(cacheHit.exhausted);
     handledSrcRef.current = cacheHit.loadedUrl;
     urlIndexRef.current = cacheHit.urlIndex;
+    displayRecoveryRef.current = false;
   }
 
   const displayUrl = loadedUrl;
@@ -383,6 +376,24 @@ export function useLevelThumbnail({
     [settleFromImage],
   );
 
+  // A resolved URL (often hydrated from the session cache) failed to render.
+  // Evict it and restart the fallback sequence once; a second failure gives up.
+  const onDisplayError = useCallback(() => {
+    resolvedThumbCache.delete(cacheKeyRef.current);
+    schedulePersistCache();
+    if (displayRecoveryRef.current) {
+      setExhausted(true);
+      return;
+    }
+    displayRecoveryRef.current = true;
+    handledSrcRef.current = null;
+    urlIndexRef.current = 0;
+    setUrlIndex(0);
+    setAcceptedUrl(null);
+    setLoadedUrl(null);
+    setExhausted(false);
+  }, []);
+
   useEffect(() => {
     if (!loaderUrl) return;
     const img = imgRef.current;
@@ -390,9 +401,23 @@ export function useLevelThumbnail({
     settleFromImage(img);
   }, [loaderUrl, settleFromImage]);
 
+  // Warm the maxres candidate in parallel with the loader fetch so the
+  // post-accept probe below resolves from cache instead of serializing
+  // two network round-trips before the first reveal.
+  useEffect(() => {
+    if (!loaderUrl || loadedUrl) return;
+    const upgradeUrl = getMaxResUpgradeUrl(loaderUrl);
+    if (!upgradeUrl) return;
+    const prefetch = new Image();
+    prefetch.decoding = "async";
+    prefetch.src = upgradeUrl;
+  }, [loaderUrl, loadedUrl]);
+
   // Resolve maxres BEFORE first paint so hq/mq (4:3) never flash then swap to 16:9.
   useEffect(() => {
-    if (!enabled || !acceptedUrl) return undefined;
+    // loadedUrl set means the final decision is already known (hydrated or
+    // previously resolved) — never re-probe it.
+    if (!enabled || !acceptedUrl || loadedUrl) return undefined;
 
     const upgradeUrl = getMaxResUpgradeUrl(acceptedUrl);
     if (!upgradeUrl) {
@@ -434,7 +459,7 @@ export function useLevelThumbnail({
       probe.onerror = null;
       probe.src = "";
     };
-  }, [enabled, acceptedUrl]);
+  }, [enabled, acceptedUrl, loadedUrl]);
 
   return {
     ref,
@@ -444,5 +469,6 @@ export function useLevelThumbnail({
     exhausted: isExhausted,
     onError,
     onLoad,
+    onDisplayError,
   };
 }

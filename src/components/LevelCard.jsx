@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   formatDate,
   formatDisplayVersion,
@@ -130,16 +130,14 @@ function LevelCard({
   const tags = React.useMemo(() => filterDisplayableTags(a.tags), [a.tags]);
   const pendingRemoval = tags.includes("Pending Removal");
   const isReplacement = Boolean(a.isReplacement);
-  const cardRef = useRef(null);
+
+  // State-driven (not ref-imperative): on cache-hydrated mounts the child's
+  // layout effect fires before this card's ref is attached, so writing
+  // --thumb-url through a ref silently no-ops and the left wash never shows.
+  const [primaryThumbUrl, setPrimaryThumbUrl] = useState(null);
 
   const handlePrimaryThumb = useCallback((url) => {
-    const el = cardRef.current;
-    if (!el) return;
-    if (url) {
-      el.style.setProperty("--thumb-url", `url("${url}")`);
-    } else {
-      el.style.removeProperty("--thumb-url");
-    }
+    setPrimaryThumbUrl(url || null);
   }, []);
 
   const handleCardClick = useCallback(() => {
@@ -160,8 +158,12 @@ function LevelCard({
 
   return (
     <article
-      ref={cardRef}
       className={`card${isPodium ? ` is-podium is-podium--${podiumPlace}` : ""}${isTimeline ? " is-timeline" : ""}${isDuplicate ? " is-duplicate" : ""}${pendingRemoval ? " is-pending-removal" : ""}${isReplacement ? " is-replacement" : ""}${showCornerNote ? " has-corner-note" : ""}${cornerActions ? " has-corner-variant" : ""}${showJumpButton ? " has-jump-tab" : ""}${isJumpHighlight ? " is-jump-highlight" : ""}`}
+      style={
+        primaryThumbUrl
+          ? { "--thumb-url": `url("${primaryThumbUrl}")` }
+          : undefined
+      }
       onClick={handleCardClick}
     >
       <div className="card__content">
