@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { getThumbnailSources } from "../utils/format";
 import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
 
@@ -24,37 +24,71 @@ function ThumbnailPane({
       enabled,
     });
 
+  // Only swap the visible frame after the URL has fully decoded.
+  // Keeps the previous frame during maxres upgrades / slow live CDN loads
+  // so we never paint an intrinsic-size flash.
+  const [paintSrc, setPaintSrc] = useState(null);
+
   useLayoutEffect(() => {
     onLoadedUrl?.(loadedUrl ?? null);
   }, [loadedUrl, onLoadedUrl]);
 
-  // Only reveal after accept/cache hit. Painting before decode lets the
-  // intrinsic image size flash uncropped (left edge) until load or remount.
-  const thumbVisible = Boolean(loadedUrl);
+  useEffect(() => {
+    if (!loadedUrl) {
+      setPaintSrc(null);
+      return undefined;
+    }
+
+    let cancelled = false;
+    const probe = new Image();
+    probe.decoding = "async";
+
+    const promote = () => {
+      if (!cancelled) setPaintSrc(loadedUrl);
+    };
+
+    probe.onload = () => {
+      if (typeof probe.decode === "function") {
+        probe.decode().then(promote).catch(promote);
+      } else {
+        promote();
+      }
+    };
+    probe.onerror = () => {
+      // Fall back to whatever the hook accepted; DOM img path still handles retries.
+      promote();
+    };
+    probe.src = loadedUrl;
+    if (probe.complete && probe.naturalWidth > 0) {
+      promote();
+    }
+
+    return () => {
+      cancelled = true;
+      probe.onload = null;
+      probe.onerror = null;
+    };
+  }, [loadedUrl]);
+
+  const thumbVisible = Boolean(paintSrc);
 
   return (
     <div ref={ref} className={className}>
+      {/* Hidden loader: drives fallbacks / acceptance in the hook. */}
       {currentUrl ? (
         <img
           ref={imgRef}
           src={currentUrl}
-          alt={alt}
+          alt=""
           decoding="async"
           onError={onError}
           onLoad={onLoad}
-          className={thumbVisible ? undefined : pendingClassName}
-          width="100%"
-          height="100%"
-        />
-      ) : loadedUrl ? (
-        <img
-          src={loadedUrl}
-          alt={alt}
-          decoding="async"
-          width="100%"
-          height="100%"
+          className={pendingClassName}
+          aria-hidden="true"
         />
       ) : null}
+      {/* Visible frame: only updated after decode, keeps prior frame while upgrading. */}
+      {paintSrc ? <img src={paintSrc} alt={alt} decoding="async" /> : null}
       {!thumbVisible && <div className="card__thumb-placeholder" />}
     </div>
   );
