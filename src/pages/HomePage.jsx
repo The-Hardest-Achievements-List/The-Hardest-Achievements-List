@@ -84,7 +84,7 @@ const EDITORS = [
     roles: ["List Moderator"],
     url: {
       youtube: "https://www.youtube.com/@SupremeSDB",
-      discord: null,
+      discord: "https://discord.com/users/1367867627279614155",
     },
   },
   {
