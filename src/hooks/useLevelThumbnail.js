@@ -222,8 +222,21 @@ export function useLevelThumbnail({
     [cacheKey, sequence, enabled],
   );
 
+  const cachedFinalUrl =
+    cacheHit.loadedUrl && !getMaxResUpgradeUrl(cacheHit.loadedUrl)
+      ? cacheHit.loadedUrl
+      : null;
+  const cachedPendingUpgrade =
+    cacheHit.loadedUrl && getMaxResUpgradeUrl(cacheHit.loadedUrl)
+      ? cacheHit.loadedUrl
+      : null;
+
   const [urlIndex, setUrlIndex] = useState(cacheHit.urlIndex);
-  const [loadedUrl, setLoadedUrl] = useState(cacheHit.loadedUrl);
+
+  const [acceptedUrl, setAcceptedUrl] = useState(
+    cachedFinalUrl ?? cachedPendingUpgrade,
+  );
+  const [loadedUrl, setLoadedUrl] = useState(cachedFinalUrl);
   const [exhausted, setExhausted] = useState(cacheHit.exhausted);
   const [syncKey, setSyncKey] = useState(cacheKey);
 
@@ -231,13 +244,22 @@ export function useLevelThumbnail({
   if (syncKey !== cacheKey) {
     setSyncKey(cacheKey);
     setUrlIndex(cacheHit.urlIndex);
-    setLoadedUrl(cacheHit.loadedUrl);
+    const nextFinal =
+      cacheHit.loadedUrl && !getMaxResUpgradeUrl(cacheHit.loadedUrl)
+        ? cacheHit.loadedUrl
+        : null;
+    const nextPending =
+      cacheHit.loadedUrl && getMaxResUpgradeUrl(cacheHit.loadedUrl)
+        ? cacheHit.loadedUrl
+        : null;
+    setAcceptedUrl(nextFinal ?? nextPending);
+    setLoadedUrl(nextFinal);
     setExhausted(cacheHit.exhausted);
     handledSrcRef.current = cacheHit.loadedUrl;
     urlIndexRef.current = cacheHit.urlIndex;
   }
 
-  const displayUrl = loadedUrl ?? cacheHit.loadedUrl;
+  const displayUrl = loadedUrl;
   const isExhausted = exhausted || cacheHit.exhausted;
 
   useEffect(() => {
@@ -269,6 +291,7 @@ export function useLevelThumbnail({
       !inView ||
       isExhausted ||
       displayUrl ||
+      acceptedUrl ||
       sequence.length === 0
     ) {
       setSlotReady(false);
@@ -291,10 +314,13 @@ export function useLevelThumbnail({
       setSlotReady(false);
       cancel();
     };
-  }, [enabled, inView, isExhausted, displayUrl, sequence, cacheKey]);
+  }, [enabled, inView, isExhausted, displayUrl, acceptedUrl, sequence, cacheKey]);
 
   const shouldLoad =
-    enabled && inView && !isExhausted && (slotReady || Boolean(displayUrl));
+    enabled &&
+    inView &&
+    !isExhausted &&
+    (Boolean(displayUrl) || (!acceptedUrl && slotReady));
   // Prefer an already-resolved URL (incl. persisted maxres upgrades not in sequence).
   const loaderUrl = shouldLoad
     ? (displayUrl ?? sequence[urlIndex] ?? null)
@@ -336,8 +362,7 @@ export function useLevelThumbnail({
       }
 
       handledSrcRef.current = src;
-      rememberResolved(cacheKeyRef.current, src);
-      setLoadedUrl(src);
+      setAcceptedUrl(src);
     },
     [failCurrent],
   );
@@ -366,24 +391,43 @@ export function useLevelThumbnail({
     settleFromImage(img);
   }, [loaderUrl, settleFromImage]);
 
-  // After a reliable YouTube size paints, quietly upgrade to maxres when available.
+  // Resolve maxres BEFORE first paint so hq/mq (4:3) never flash then swap to 16:9.
   useEffect(() => {
-    if (!enabled || !displayUrl) return undefined;
+    if (!enabled || !acceptedUrl) return undefined;
 
-    const upgradeUrl = getMaxResUpgradeUrl(displayUrl);
-    if (!upgradeUrl) return undefined;
+    const upgradeUrl = getMaxResUpgradeUrl(acceptedUrl);
+    if (!upgradeUrl) {
+      rememberResolved(cacheKeyRef.current, acceptedUrl);
+      setLoadedUrl(acceptedUrl);
+      return undefined;
+    }
 
     let cancelled = false;
     const probe = new Image();
     probe.decoding = "async";
+
+    const finish = (url) => {
+      if (cancelled) return;
+      rememberResolved(cacheKeyRef.current, url);
+      handledSrcRef.current = url;
+      setLoadedUrl(url);
+    };
+
     probe.onload = () => {
       if (cancelled) return;
-      if (!isAcceptableThumbnail(probe, upgradeUrl)) return;
-      rememberResolved(cacheKeyRef.current, upgradeUrl);
-      setLoadedUrl(upgradeUrl);
+      if (isAcceptableThumbnail(probe, upgradeUrl)) {
+        finish(upgradeUrl);
+        return;
+      }
+      finish(acceptedUrl);
     };
-    probe.onerror = () => {};
+    probe.onerror = () => {
+      finish(acceptedUrl);
+    };
     probe.src = upgradeUrl;
+    if (probe.complete && probe.naturalWidth > 0) {
+      probe.onload();
+    }
 
     return () => {
       cancelled = true;
@@ -391,7 +435,7 @@ export function useLevelThumbnail({
       probe.onerror = null;
       probe.src = "";
     };
-  }, [enabled, displayUrl]);
+  }, [enabled, acceptedUrl]);
 
   return {
     ref,

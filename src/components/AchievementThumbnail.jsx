@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import { getThumbnailSources } from "../utils/format";
 import { useLevelThumbnail } from "../hooks/useLevelThumbnail";
 
@@ -13,6 +13,8 @@ function ThumbnailPane({
   className,
   pendingClassName,
   onLoadedUrl,
+  fadeClassName = null,
+  children = null,
 }) {
   const { ref, imgRef, currentUrl, loadedUrl, onError, onLoad } =
     useLevelThumbnail({
@@ -24,72 +26,32 @@ function ThumbnailPane({
       enabled,
     });
 
-  // Only swap the visible frame after the URL has fully decoded.
-  // Keeps the previous frame during maxres upgrades / slow live CDN loads
-  // so we never paint an intrinsic-size flash.
-  const [paintSrc, setPaintSrc] = useState(null);
-
   useLayoutEffect(() => {
     onLoadedUrl?.(loadedUrl ?? null);
   }, [loadedUrl, onLoadedUrl]);
 
-  useEffect(() => {
-    if (!loadedUrl) {
-      setPaintSrc(null);
-      return undefined;
-    }
-
-    let cancelled = false;
-    const probe = new Image();
-    probe.decoding = "async";
-
-    const promote = () => {
-      if (!cancelled) setPaintSrc(loadedUrl);
-    };
-
-    probe.onload = () => {
-      if (typeof probe.decode === "function") {
-        probe.decode().then(promote).catch(promote);
-      } else {
-        promote();
-      }
-    };
-    probe.onerror = () => {
-      // Fall back to whatever the hook accepted; DOM img path still handles retries.
-      promote();
-    };
-    probe.src = loadedUrl;
-    if (probe.complete && probe.naturalWidth > 0) {
-      promote();
-    }
-
-    return () => {
-      cancelled = true;
-      probe.onload = null;
-      probe.onerror = null;
-    };
-  }, [loadedUrl]);
-
-  const thumbVisible = Boolean(paintSrc);
+  // Hook withholds loadedUrl until maxres (or fallback) is resolved, so a
+  // 4:3 hqdefault never paints and then jumps to 16:9.
+  const thumbVisible = Boolean(loadedUrl);
 
   return (
     <div ref={ref} className={className}>
-      {/* Hidden loader: drives fallbacks / acceptance in the hook. */}
       {currentUrl ? (
         <img
           ref={imgRef}
           src={currentUrl}
-          alt=""
+          alt={alt}
           decoding="async"
           onError={onError}
           onLoad={onLoad}
-          className={pendingClassName}
-          aria-hidden="true"
+          className={thumbVisible ? undefined : pendingClassName}
         />
+      ) : loadedUrl ? (
+        <img src={loadedUrl} alt={alt} decoding="async" />
       ) : null}
-      {/* Visible frame: only updated after decode, keeps prior frame while upgrading. */}
-      {paintSrc ? <img src={paintSrc} alt={alt} decoding="async" /> : null}
       {!thumbVisible && <div className="card__thumb-placeholder" />}
+      {fadeClassName ? <div className={fadeClassName} /> : null}
+      {children}
     </div>
   );
 }
@@ -107,23 +69,24 @@ export default function AchievementThumbnail({
   const sources = getThumbnailSources(achievement?.thumbnail);
   const isComposite = sources.length >= 2;
 
+  // Single-thumb: no inner pane — img sits directly in .card__thumb like before
+  // the composite refactor, so height / object-fit stay stable.
   if (!isComposite) {
     return (
-      <div className={className}>
-        <ThumbnailPane
-          className="card__thumb-pane"
-          thumbnail={achievement?.thumbnail}
-          showcaseVideo={achievement?.showcaseVideo}
-          video={achievement?.video}
-          levelID={achievement?.levelID}
-          lazy={lazy}
-          alt={alt}
-          pendingClassName={pendingClassName}
-          onLoadedUrl={onLoadedUrl}
-        />
-        <div className={fadeClassName} />
+      <ThumbnailPane
+        className={className}
+        thumbnail={achievement?.thumbnail}
+        showcaseVideo={achievement?.showcaseVideo}
+        video={achievement?.video}
+        levelID={achievement?.levelID}
+        lazy={lazy}
+        alt={alt}
+        pendingClassName={pendingClassName}
+        onLoadedUrl={onLoadedUrl}
+        fadeClassName={fadeClassName}
+      >
         {children}
-      </div>
+      </ThumbnailPane>
     );
   }
 
