@@ -63,71 +63,6 @@ Hypnosis 10-46%
 i n j u r y 59%
 Illusion of Chaos 55-91%
 Infernis 65-100%
-Acheron 1.1x 40-100%
-Acheron 2.1 58%, 100% in a row
-Aeternus 120hz Mobile 24-34%
-Aeternus 120hz Mobile 33-61% 14 deaths, 96.94% accuracy
-Aeternus 16-28%
-Aeternus 19-100% 33 deaths, 99.01% accuracy
-Aeternus 20-34%
-Aeternus 51 deaths, 98.66% accuracy
-andromeda 57%, 100% in a row
-Angelicide 21-61%
-Angelicide 41%
-Apocalyptic Trilogy (Unnerfed) 56-100%
-Artemis 13 40-100%
-Artemis 13 82%
-Ashley Wave Trials (True Unnerfed) 56-100%
-Avernus 120hz Mobile 47-91%
-Azure Flare (ItsHybrid) 57-100%
-Azure Flare (ItsHybrid) 59%
-BloodEngine (Apr. 2026) 46%
-BloodEngine 27-60%
-BloodEngine 38-76%
-BloodEngine 57-100%
-Bobbing bobee 57%
-Bocadillo FD Albondi 49%, 51%, 58% in a row
-Bonfire
-BOOBAWAMBA 67%, 86% in a row
-BYTELAW NEVER CLEAR
-Cautious (Old) 43-89%
-chloride hexahydrate
-CLUBSTEP XYZ 42-92%
-CLUBSTEP XYZ 47%
-cry me a cuber 91%
-Cyber Raptor 93%
-Defeated Circles 89%, 100% in a row
-Delirium 185hz Mobile
-Despair Code 35%
-Despair Code 8-46%
-DIABLO FATE Z (Old) 36-100%
-Dignity 15-90%
-Dignity 43-100%
-Dignity 64%
-Disquietudal Dance 39%; Im Deaf 2 deaths, 99.86% accuracy
-ECHO 86%
-Escalator 36-100%
-Escalator 4-73%
-Escalator 50%
-Eternal Night 38-100%
-Eternal Night 43%
-Eternal Silence 5-51%, 5-12% x3, 5-8%, (5-6% x2), 5-10%, 5-12%, 5-17%, 5-12% in a row
-Eviscerate 55%
-Eviscerate 65-100%
-Ex Vacuo 33-100%
-FAIRY KNIFE HELL (Quaint) 78-100%
-Flashbang 66%
-FOREST OF SPIKES
-Fronly Demise (Skylar)
-Fronly Demise (uzuden)
-Goober Rage Stage 60hz Mobile
-Hades 34%
-Hades 63-100%
-Heliopolis 16 deaths, 99.92% accuracy
-Hypnosis 10-46%
-i n j u r y 59%
-Illusion of Chaos 55-91%
-Infernis 65-100%
 IT MEANS EVERYTHING (Quivert) 54%
 IT MEANS EVERYTHING 74%
 kill yourself
@@ -150,9 +85,9 @@ Murk 29-100%
 NervHell 66%, 100% in a row
 Nullscapes 65%, (2%), 66% in a row
 ORBIT 61%, (1%), 99% in a row
-OUROBOROS (apuu, Jun. 2026) 41-100%
 OUROBOROS (apuu) 27-88%
 OUROBOROS (apuu) 52%
+OUROBOROS (apuu, Jun. 2026) 41-100%
 Phantasm IV 44%
 Quantum Dominator 59-100%
 rare 2.60%, 2.87%, 2.90%, 2.88%, 2.87% x2 in a row
