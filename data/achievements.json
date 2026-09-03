@@ -19,25 +19,6 @@
     ]
   },
   {
-    "name": "GRIEF 97%",
-    "player": "Doggie",
-    "levelID": null,
-    "date": "2026-06-13",
-    "length": 162,
-    "version": 2.2,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/Emd2tWP2FkI",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "2P"
-    ]
-  },
-  {
     "name": "KOCMOC UNLEASHED (Mar. 2026) 68%",
     "player": "Arshadow",
     "levelID": null,
@@ -91,6 +72,43 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "GRIEF 68%, 72% in a row",
+    "player": "Doggie",
+    "levelID": null,
+    "date": "2025-06-18",
+    "length": 288,
+    "version": 2.2,
+    "submitter": "tmtsps12",
+    "video": "https://youtu.be/apmslJgRMow?t=11678",
+    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "GRIEF 97%",
+    "player": "Doggie",
+    "levelID": null,
+    "date": "2026-06-13",
+    "length": 162,
+    "version": 2.2,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/Emd2tWP2FkI",
+    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "2P"
     ]
   },
   {
@@ -358,7 +376,7 @@
     ]
   },
   {
-    "name": "Artemis 13 (Aug. 2026)42-100%",
+    "name": "Artemis 13 (Aug. 2026) 42-100%",
     "player": "Zoink",
     "levelID": null,
     "date": "2026-08-12",
@@ -4430,6 +4448,27 @@
     "video": "https://youtu.be/nU5AQPzd2YA",
     "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120012581",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "FOREST OF SPIKES",
+    "player": "Brian Cheese",
+    "levelID": 145709435,
+    "date": "2026-07-26",
+    "length": 109,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WJYh3dW8Bfo",
+    "showcaseVideo": "https://youtu.be/szCliCZQItg",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
