@@ -91,8 +91,8 @@
     "tags": [
       "Level",
       "Consistency",
-      "2P",
-      "Tentative"
+      "Tentative",
+      "2P"
     ]
   },
   {
@@ -111,8 +111,8 @@
     "tags": [
       "Level",
       "Progress",
-      "2P",
-      "Tentative"
+      "Tentative",
+      "2P"
     ]
   },
   {
@@ -4468,8 +4468,6 @@
     "length": 109,
     "version": 2.2,
     "submitter": "Exiled_Shade",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/WJYh3dW8Bfo",
     "showcaseVideo": "https://youtu.be/szCliCZQItg",
     "thumbnail": null,
