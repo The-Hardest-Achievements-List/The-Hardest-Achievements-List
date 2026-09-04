@@ -4971,6 +4971,24 @@
     ]
   },
   {
+    "name": "Death Factory",
+    "player": "dewbbs",
+    "levelID": 95424590,
+    "date": "2025-12-13",
+    "length": 312,
+    "version": 2.2,
+    "submitter": "BlueGamer",
+    "video": "https://youtu.be/aH4VVYn2Tds",
+    "showcaseVideo": "https://youtu.be/qoPLznoNjQg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Demotivation Dance",
     "player": "Cursed",
     "levelID": 98446627,
