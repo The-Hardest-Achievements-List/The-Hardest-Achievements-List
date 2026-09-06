@@ -1036,6 +1036,29 @@
     ]
   },
   {
+    "name": "Sakupen circles (Old) 58-69%, Eternal Silence 25% in a row"
+    "player": "cc478",
+    "levelID": null,
+    "date": "2026-08-31",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/kG5bX-H90DI",
+    "showcaseVideo": null,
+    "thumbnail": [
+      "10887708",
+      "83476262",
+    ],
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Miscallenous"
+    ]
+  },
+  {
     "name": "silent flystep 4-65%",
     "player": "Chiikawa",
     "levelID": 139869759,
@@ -8611,6 +8634,27 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Wild Roses",
+    "player": "-",
+    "levelID": 145494348,
+    "date": "2026-07-23",
+    "length": null,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": null,
+    "showcaseVideo": "https://youtu.be/Xd93ChqJ0AE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Video currently pending.",
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
     ]
   },
   {
