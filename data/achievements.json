@@ -1062,7 +1062,10 @@
     "version": 2.2,
     "submitter": "fwoggy",
     "video": "https://youtu.be/kG5bX-H90DI",
-    "showcaseVideo": null,
+    "showcaseVideo": [
+      "https://youtu.be/4TFonU644Pg",
+      "https://youtu.be/CwCfTVxTtB0"
+    ],
     "thumbnail": [
       "https://levelthumbs.prevter.me/thumbnail/10887708",
       "https://levelthumbs.prevter.me/thumbnail/83476262"
@@ -3607,7 +3610,10 @@
     "version": 2.2,
     "submitter": "Tmtsps12",
     "video": "https://youtu.be/-ZUMz5QqO0Y?t=2883",
-    "showcaseVideo": null,
+    "showcaseVideo": [
+      "https://youtu.be/3zTp7cmsDXo",
+      "https://youtu.be/Wd0DIyujh2g"
+    ],
     "thumbnail": [
       "https://levelthumbs.prevter.me/thumbnail/27690100",
       "https://levelthumbs.prevter.me/thumbnail/115163708"

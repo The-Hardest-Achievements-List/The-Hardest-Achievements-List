@@ -590,6 +590,24 @@ export const normalizeDuplicateOfField = (value) => {
 };
 
 export const normalizeVideoField = (value) => {
+  if (Array.isArray(value)) {
+    const urls = [];
+    for (const item of value) {
+      const normalized = normalizeVideoField(item);
+      if (!normalized) continue;
+      if (Array.isArray(normalized)) {
+        for (const nested of normalized) {
+          if (nested && !urls.includes(nested)) urls.push(nested);
+        }
+        continue;
+      }
+      if (!urls.includes(normalized)) urls.push(normalized);
+    }
+    if (urls.length === 0) return null;
+    if (urls.length === 1) return urls[0];
+    return urls;
+  }
+
   const normalized = normalizeNonEmptyStringField(value);
   if (!normalized) return null;
   return normalizeYouTubeUrl(normalized);
@@ -735,6 +753,16 @@ export const normalizeEntry = (entry, fieldOrder, tagOrder) => {
       const normalized = normalizeVideoField(entry[key]);
       if (typeof entry[key] === "string" && normalized !== entry[key]) {
         videoChanges += 1;
+      } else if (Array.isArray(entry[key]) && Array.isArray(normalized)) {
+        for (let i = 0; i < entry[key].length; i += 1) {
+          if (
+            typeof entry[key][i] === "string" &&
+            typeof normalized[i] === "string" &&
+            normalized[i] !== entry[key][i]
+          ) {
+            videoChanges += 1;
+          }
+        }
       }
       result[key] = normalized;
       continue;
