@@ -228,7 +228,27 @@
     ]
   },
   {
-    "name": "Artemis 13 40-100%",
+    "name": "Artemis 13 63%, 67% in a row",
+    "player": "Zoink",
+    "levelID": null,
+    "date": "2026-08-30",
+    "length": 77,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/dIqcUnvKVZE?t=12528",
+    "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Artemis 13 (Aug. 2026) 40-100%",
     "player": "Zoink",
     "levelID": null,
     "date": "2026-08-28",
@@ -241,7 +261,7 @@
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
     "duplicateOf": [
-      "Artemis 13 (Aug. 2026)42-100%",
+      "Artemis 13 (Aug. 2026) 42-100%",
       "Artemis 13 (Aug. 2026) 32-93%"
     ],
     "notes": null,
@@ -251,7 +271,7 @@
     ]
   },
   {
-    "name": "Artemis 13 82%",
+    "name": "Artemis 13 (Aug. 2026) 82%",
     "player": "Zoink",
     "levelID": null,
     "date": "2026-08-27",
@@ -615,6 +635,26 @@
     ]
   },
   {
+    "name": "cry me a river 107%, 371% in a row",
+    "player": "klimk",
+    "levelID": 76403850,
+    "date": "2026-07-08",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1TqujqU_b9M",
+    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Cyber Raptor 93%",
     "player": "Lobster",
     "levelID": null,
@@ -697,16 +737,16 @@
     ]
   },
   {
-    "name": "Despair Code 8-46%",
+    "name": "Despair Code 14-49%",
     "player": "Infinny",
     "levelID": null,
     "date": "2026-08-20",
     "length": 10,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/YGvuMSYNo4A?t=8955",
+    "video": "https://youtu.be/shorts/NHo7CUzbSpc",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -854,7 +894,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/eYWaHv6WstQ",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/40ba41152f3666b8c0d75cf2d231905281c7aadf/images/thumbnails/Escalator.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -874,7 +914,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/wuh5wafLKvw",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/40ba41152f3666b8c0d75cf2d231905281c7aadf/images/thumbnails/Escalator.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -883,18 +923,18 @@
     ]
   },
   {
-    "name": "Escalator 50%",
+    "name": "Escalator 52%",
     "player": "teraaa",
     "levelID": null,
     "date": null,
-    "length": 51,
+    "length": 53,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/jQI4VsmXLNk?t=2794",
+    "video": "https://youtu.be/Thf3zFHVxvc",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/40ba41152f3666b8c0d75cf2d231905281c7aadf/images/thumbnails/Escalator.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1020,6 +1060,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Eyes in the Water 63%, 100% in a row",
+    "player": "KJ8ishere",
+    "levelID": 95851008,
+    "date": "2026-08-18",
+    "length": 155,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/xDss9LKp4tg",
+    "showcaseVideo": "https://youtu.be/m-K_rTnRrLA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
@@ -1411,6 +1472,27 @@
     ]
   },
   {
+    "name": "KOSETSU 53%, 100% in a row",
+    "player": "MeQ8cNv43s6A",
+    "levelID": 109439644,
+    "date": "2025-01-16",
+    "length": 110,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/x9fuvzKtfXE",
+    "showcaseVideo": "https://youtu.be/Sw7Aucy0Tjg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Kyouki 71%, 100% in a row",
     "player": "Meyrist",
     "levelID": 86018142,
@@ -1675,16 +1757,16 @@
     ]
   },
   {
-    "name": "Nullscapes 65%, (2%), 66% in a row",
-    "player": "Theitha",
+    "name": "Nullscapes 62%, (20%), 56%, 57% in a row",
+    "player": "Ninde",
     "levelID": 109780665,
-    "date": "2026-01-28",
-    "length": 117,
+    "date": "2026-08-28",
+    "length": 173,
     "version": 2.2,
-    "submitter": "marleywave",
+    "submitter": "Ninde",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/IeyIn6KH4ug",
+    "video": "https://youtu.be/rTzxAmM89Lg?t=7130",
     "showcaseVideo": "https://youtu.be/C-KDhWkXlvI",
     "thumbnail": null,
     "duplicateOf": null,
@@ -2506,6 +2588,48 @@
     ]
   },
   {
+    "name": "The Lightning Rod 51%, (0%), 100% in a row",
+    "player": "GuillExprex52",
+    "levelID": 93917076,
+    "date": "2025-10-27",
+    "length": 148,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yaNDmULgwhM",
+    "showcaseVideo": "https://youtu.be/DCbXHYwW7r0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "The Salt Factory 57%, 100% in a row",
+    "player": "Whizkid05",
+    "levelID": 113045735,
+    "date": "2026-01-08",
+    "length": 149,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rQFirVnSzH0",
+    "showcaseVideo": "https://youtu.be/6ufVM6bt2rY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Tremor 62%, 67% in a row",
     "player": "VoltrixAce",
     "levelID": 79823052,
@@ -2661,6 +2785,26 @@
     "video": "https://youtu.be/fPcc7B5CQ30",
     "showcaseVideo": "https://youtu.be/rcHE78QQSp8",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Tunnel%20of%20Serpent.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "UFO on Track of RAGE 49-100%",
+    "player": "NazCompgames",
+    "levelID": null,
+    "date": "2026-09-01",
+    "length": 97,
+    "version": 2.2,
+    "submitter": "NatalieMeow",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cS71u-YtNzA",
+    "showcaseVideo": "https://youtu.be/pT6y3CgRmbE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e3338d377d42383239fc22577bdebc43d4d15f10/images/thumbnails/UFO%20on%20Track%20of%20RAGE.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
