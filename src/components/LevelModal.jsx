@@ -6,6 +6,7 @@ import {
   isWatchableAchievementUrl,
   normalizeImageUrl,
   normalizeProofUrl,
+  normalizeShowcaseVideos,
   normalizeYouTubeUrl,
 } from "../utils/format";
 import {
@@ -44,6 +45,7 @@ export default function LevelModal({
   const notesText = getNotesFullText(a.notes);
   const imageUrl = normalizeImageUrl(a.image);
   const proofUrl = normalizeProofUrl(a.proof);
+  const showcaseVideos = normalizeShowcaseVideos(a.showcaseVideo);
 
   const [copiedValue, setCopiedValue] = useState(null);
   const officialRank =
@@ -244,7 +246,7 @@ export default function LevelModal({
             </div>
           )}
 
-          {(a.video || a.showcaseVideo) && (
+          {(a.video || showcaseVideos.length > 0) && (
             <div className="modal__embed-section">
               {a.video &&
                 (() => {
@@ -265,26 +267,33 @@ export default function LevelModal({
                     </div>
                   ) : null;
                 })()}
-              {a.showcaseVideo &&
-                (() => {
-                  const embedUrl = getYouTubeEmbedUrl(a.showcaseVideo);
-                  return embedUrl ? (
-                    <div
-                      key="showcase-video"
-                      style={{ marginTop: a.video ? "16px" : 0 }}
-                    >
-                      <span className="modal__embed-label">Level Showcase</span>
-                      <div className="modal__embed">
-                        <iframe
-                          src={embedUrl}
-                          title="Level Showcase"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      </div>
+              {showcaseVideos.map((url, index) => {
+                const embedUrl = getYouTubeEmbedUrl(url);
+                if (!embedUrl) return null;
+                const label =
+                  showcaseVideos.length > 1
+                    ? `Level Showcase ${index + 1}`
+                    : "Level Showcase";
+                return (
+                  <div
+                    key={`showcase-video-${index}-${url}`}
+                    className="modal__embed-block"
+                    style={{
+                      marginTop: a.video || index > 0 ? "16px" : 0,
+                    }}
+                  >
+                    <span className="modal__embed-label">{label}</span>
+                    <div className="modal__embed">
+                      <iframe
+                        src={embedUrl}
+                        title={label}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
                     </div>
-                  ) : null;
-                })()}
+                  </div>
+                );
+              })}
             </div>
           )}
 
@@ -328,16 +337,19 @@ export default function LevelModal({
                 View Proof ↗
               </a>
             )}
-            {a.showcaseVideo && (
+            {showcaseVideos.map((url, index) => (
               <a
-                href={normalizeYouTubeUrl(a.showcaseVideo)}
+                key={`showcase-link-${index}-${url}`}
+                href={normalizeYouTubeUrl(url)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal__link"
               >
-                Level Showcase ↗
+                {showcaseVideos.length > 1
+                  ? `Level Showcase ${index + 1} ↗`
+                  : "Level Showcase ↗"}
               </a>
-            )}
+            ))}
           </div>
         </div>
       </div>

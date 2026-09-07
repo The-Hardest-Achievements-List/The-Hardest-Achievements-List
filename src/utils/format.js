@@ -353,6 +353,13 @@ export function getYouTubeEmbedUrl(url) {
     return start != null ? `${base}?start=${start}` : base
 }
 
+/** Accepts a single URL string, an array of URLs, or null/undefined. */
+export function normalizeShowcaseVideos(showcaseVideo) {
+    if (showcaseVideo == null) return []
+    const values = Array.isArray(showcaseVideo) ? showcaseVideo : [showcaseVideo]
+    return values.filter((url) => typeof url === 'string' && url.trim())
+}
+
 export function isWatchableAchievementUrl(url) {
     if (!url || typeof url !== 'string') return false
     if (getYouTubeVideoId(url)) return true
@@ -492,12 +499,15 @@ const memoizedGetThumbnailUrlSequence = memoize(function getThumbnailUrlSequence
         add(`https://levelthumbs.prevter.me/thumbnail/${levelID}/small`)
     }
 
-    const showcaseVideoId = showcaseVideo ? getYouTubeVideoId(showcaseVideo) : null
+    const showcaseVideoIds = normalizeShowcaseVideos(showcaseVideo)
+        .map((url) => getYouTubeVideoId(url))
+        .filter(Boolean)
     const playerVideoId = playerVideo ? getYouTubeVideoId(playerVideo) : null
-    if (showcaseVideoId) {
-        getYouTubeThumbnailUrls(showcaseVideoId).forEach(add)
-    }
-    if (playerVideoId && playerVideoId !== showcaseVideoId) {
+
+    showcaseVideoIds.forEach((id) => {
+        getYouTubeThumbnailUrls(id).forEach(add)
+    })
+    if (playerVideoId && !showcaseVideoIds.includes(playerVideoId)) {
         getYouTubeThumbnailUrls(playerVideoId).forEach(add)
     }
 

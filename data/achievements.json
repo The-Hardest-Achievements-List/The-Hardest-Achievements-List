@@ -1054,26 +1054,24 @@
     ]
   },
   {
-    "name": "Sakupen circles (Old) 58-69%, Eternal Silence 25% in a row"
+    "name": "Sakupen circles (Old) 58-69%, Eternal Silence 25% in a row",
     "player": "cc478",
     "levelID": null,
     "date": "2026-08-31",
     "length": 42,
     "version": 2.2,
     "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": "https://youtu.be/kG5bX-H90DI",
     "showcaseVideo": null,
     "thumbnail": [
-      "10887708",
-      "83476262"
+      "https://levelthumbs.prevter.me/thumbnail/10887708",
+      "https://levelthumbs.prevter.me/thumbnail/83476262"
     ],
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Miscalleneous"
+      "Miscellaneous"
     ]
   },
   {
@@ -3601,14 +3599,14 @@
     ]
   },
   {
-    "name": "Slaughterhouse 25-100%; GRIEF 65-100% in a row",
+    "name": "Slaughterhouse 25-100%, GRIEF (Apr. 2025) 65-100% in a row",
     "player": "Doggie",
     "levelID": null,
     "date": "2025-04-21",
     "length": 87,
     "version": 2.2,
     "submitter": "Tmtsps12",
-    "video": "https://youtu.be/-ZUMz5QqO0Y",
+    "video": "https://youtu.be/-ZUMz5QqO0Y?t=2883",
     "showcaseVideo": null,
     "thumbnail": [
       "https://levelthumbs.prevter.me/thumbnail/27690100",
@@ -6240,14 +6238,14 @@
     ]
   },
   {
-    "name": "GRIEF 1.1x 69-92%",
+    "name": "GRIEF (May 2025) 1.1x 65-97% 3 deaths, 99.48% accuracy",
     "player": "Doggie",
     "levelID": null,
     "date": "2025-05-09",
     "length": 24,
     "version": 2.2,
     "submitter": "Tmtsps12",
-    "video": "https://youtu.be/bRPVDAmmzlw",
+    "video": "https://youtu.be/bRPVDAmmzlw?t=3130",
     "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/115163708",
     "duplicateOf": null,
@@ -6255,6 +6253,7 @@
     "tags": [
       "Level",
       "Progress",
+      "Noclip",
       "Speedhack",
       "2P"
     ]
@@ -6977,7 +6976,7 @@
     ]
   },
   {
-    "name": null,
+    "name": "i n j u r y (Aug. 2024) 74%",
     "player": "kywy",
     "levelID": null,
     "date": "2024-08-18",
@@ -8662,8 +8661,6 @@
     "length": null,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
     "video": null,
     "showcaseVideo": "https://youtu.be/Xd93ChqJ0AE",
     "thumbnail": null,

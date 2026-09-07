@@ -110,8 +110,14 @@ const acquireThumbnailSlot = () => {
   return { promise, cancel: release };
 };
 
+const serializeThumbArg = (value) => {
+  if (value == null) return "";
+  if (Array.isArray(value)) return value.join("\u0001");
+  return String(value);
+};
+
 const makeCacheKey = (thumbnail, showcaseVideo, video, levelID) =>
-  `${thumbnail ?? ""}\0${showcaseVideo ?? ""}\0${video ?? ""}\0${levelID ?? ""}`;
+  `${serializeThumbArg(thumbnail)}\0${serializeThumbArg(showcaseVideo)}\0${serializeThumbArg(video)}\0${levelID ?? ""}`;
 
 const rememberResolved = (key, value) => {
   if (resolvedThumbCache.has(key)) resolvedThumbCache.delete(key);
