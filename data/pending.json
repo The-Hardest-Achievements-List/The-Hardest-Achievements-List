@@ -1,5 +1,27 @@
 [
   {
+    "name": "Absolute End 144hz Mobile 45%",
+    "player": "MAXDASH",
+    "levelID": null,
+    "date": "2026-09-04",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "SumPerson",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/edbFXw91kR0",
+    "showcaseVideo": "https://youtu.be/Wnl00lA5SCE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/3a4d4df615054d02ad04474b08ca1a8b464dd973/images/thumbnails/Absolute%20End.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Low Hertz",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Acheron 1.1x 40-100%",
     "player": "xalval",
     "levelID": 73667628,
@@ -238,8 +260,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/dIqcUnvKVZE?t=12528",
-    "showcaseVideo": "https://youtu.be/HDMMEpCWncg",
-    "thumbnail": null,
+    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -394,26 +416,6 @@
     ]
   },
   {
-    "name": "BloodEngine 27-60%",
-    "player": "Karma",
-    "levelID": null,
-    "date": "2026-07-28",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "abbycartridges",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/0xQ6Ek8Ew8g",
-    "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "BloodEngine 38-76%",
     "player": "Karma",
     "levelID": null,
@@ -425,7 +427,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/0xQ6Ek8Ew8g",
     "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e91fb0e670d84266662e06cab4255c9720f2f57e/images/thumbnails/BloodEngine.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -445,7 +447,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/HbKik90cGSA",
     "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8463033cd440984f1539dd93d6cb6fbdb15ddb33/images/thumbnails/BloodEngine.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e91fb0e670d84266662e06cab4255c9720f2f57e/images/thumbnails/BloodEngine.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -465,7 +467,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/pFn2X7qsXGo",
     "showcaseVideo": "https://youtu.be/s6jVzTHknPI",
-    "thumbnail": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8a9dcf1155cd168434dfced6ed163a9bf10eac2b/images/thumbnails/Bobbing%20bobee.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -575,6 +577,26 @@
     ]
   },
   {
+    "name": "CHROMEDOLL 48%",
+    "player": "denni",
+    "levelID": null,
+    "date": "2026-09-02",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ScSPaf3hs24?t=4625",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "CLUBSTEP XYZ 42-92%",
     "player": "Streamy450",
     "levelID": null,
@@ -657,7 +679,7 @@
   {
     "name": "Cyber Raptor 93%",
     "player": "Lobster",
-    "levelID": null,
+    "levelID": 85174455,
     "date": "2026-06-05",
     "length": 660,
     "version": 2.2,
@@ -698,7 +720,7 @@
   {
     "name": "Delirium 185hz Mobile",
     "player": "ADR",
-    "levelID": 109218075,
+    "levelID": 68839068,
     "date": "2026-07-23",
     "length": 17,
     "version": 2.2,
@@ -737,7 +759,27 @@
     ]
   },
   {
-    "name": "Despair Code 14-49%",
+    "name": "Despair Code 35-80%",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-09-04",
+    "length": 9,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.youtube.com/shorts/CxxOt2V7s44?feature=share",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Despair Code 14-56%",
     "player": "Infinny",
     "levelID": null,
     "date": "2026-08-20",
@@ -746,7 +788,7 @@
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/shorts/NHo7CUzbSpc",
+    "video": "https://www.youtube.com/shorts/NHo7CUzbSpc?feature=share",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -848,7 +890,10 @@
     "estimateUpper": null,
     "video": "https://youtu.be/QkSExdZGmwI",
     "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/2ffb21dda7358b5d14d4db51e13ae37ea8dda4a5/images/thumbnails/Disquietudal%20Dance%2C%20Im%20Deaf.png",
+    "thumbnail": [
+      "https://levelthumbs.prevter.me/thumbnail/52648603",
+      "https://levelthumbs.prevter.me/thumbnail/75584822"
+    ],
     "duplicateOf": null,
     "notes": [
       "Disquietudal Dance is a level consisting of Diamond Dance (Sakupen Circles 37-49%) x16 in a row.",
@@ -983,16 +1028,16 @@
     ]
   },
   {
-    "name": "Eternal Silence 5-51%, 5-12% x3, 5-8%, (5-6% x2), 5-10%, 5-12%, 5-17%, 5-12% in a row",
-    "player": "Chiikawa",
+    "name": "Eternal Silence 4-8% 4-25% 4-12% 4-25% 4-12% 4-11% 4-8% 4-65% (4-7%) 4-12% in a row",
+    "player": "cc478",
     "levelID": 83476262,
-    "date": "2026-08-21",
-    "length": 117,
+    "date": "2026-09-04",
+    "length": 126,
     "version": 2.2,
-    "submitter": "Chiikawa",
+    "submitter": "cc478",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/zJiWTu3qnZE",
+    "video": "https://youtu.be/H94n5k_ymGw",
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
     "duplicateOf": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
@@ -1317,8 +1362,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/UC_ah_MioRs",
-    "showcaseVideo": null,
-    "thumbnail": null,
+    "showcaseVideo": "https://youtu.be/6HZ_4kKhWAM",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8a9dcf1155cd168434dfced6ed163a9bf10eac2b/images/thumbnails/Infernis.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1337,6 +1382,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/XQ0LYnTx6vY",
+    "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "IT MEANS EVERYTHING (Xplode) 41-100%",
+    "player": "Xplode",
+    "levelID": null,
+    "date": "2026-07-01",
+    "length": 41,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/E5JCMbHqxrI",
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": null,
     "duplicateOf": null,
@@ -2073,27 +2138,7 @@
     ]
   },
   {
-    "name": "SARY NEVER CLEAR (Optic Sunflow) 37-100%",
-    "player": "gmdkiwi",
-    "levelID": 609629,
-    "date": "2026-07-14",
-    "length": 47,
-    "version": 2.2,
-    "submitter": "raine",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/shorts/2dN79Ka4xxs",
-    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Shadow of The Past",
+    "name": "Shadow Of The Past",
     "player": "LennyFeus",
     "levelID": 143909846,
     "date": "2026-07-01",
@@ -2834,6 +2879,26 @@
     ]
   },
   {
+    "name": "Ultra RealistiK 47-100%",
+    "player": "marleywave",
+    "levelID": 143357580,
+    "date": "2026-09-01",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "abbycartridges",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NcHDho6L1ys",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/241b503788c351ae46cf8eea182244fcd1bc2256/images/thumbnails/Ultra%20RealistiK.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Verdudous 43%",
     "player": "Timy",
     "levelID": 86522520,
@@ -2874,26 +2939,6 @@
     ]
   },
   {
-    "name": "WarCora 47-100%",
-    "player": "eni",
-    "levelID": 89189775,
-    "date": "2026-08-14",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/E2oiV6R47MM",
-    "showcaseVideo": "https://youtu.be/IkwmfQLjq9k",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "water world 20-68%",
     "player": "niroi",
     "levelID": 142171089,
@@ -2904,6 +2949,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/brOnDDHF5EI",
+    "showcaseVideo": "https://youtu.be/NoiwMZrQsz0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+   {
+    "name": "water world 47%",
+    "player": "niroi",
+    "levelID": 142171089,
+    "date": "2026-09-05",
+    "length": 67,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/5EaHQ3musMQ",
     "showcaseVideo": "https://youtu.be/NoiwMZrQsz0",
     "thumbnail": null,
     "duplicateOf": null,
