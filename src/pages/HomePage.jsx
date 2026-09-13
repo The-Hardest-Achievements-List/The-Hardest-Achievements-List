@@ -9,6 +9,7 @@ const STAFF_ROLE_COLORS = {
   "List Moderator": "#2599ff",
   "Developer": "9580ff",
   "List Helper": "#4fddff",
+  "List & Website Helper": "#4fddff",
   "Server Moderator": "#36e9b8",
   "Trial Staff": "#57f369",
   "Integrity Moderator": "#ffc963",
@@ -20,6 +21,7 @@ const STAFF_ROLE_CLASS = {
   "List Moderator": "home__editor-card--list-moderator",
   "Developer": "home__editor-card--developer",
   "List Helper": "home__editor-card--list-helper",
+  "List & Website Helper": "home__editor-card--list-helper",
   "Server Moderator": "home__editor-card--server-moderator",
   "Trial Staff": "home__editor-card--trial-staff",
   "Integrity Moderator": "home__editor-card--integrity-moderator",
@@ -31,6 +33,7 @@ const STAFF_ROLE_PRIORITY = [
   "List Moderator",
   "Developer",
   "List Helper",
+  "List & Website Helper",
   "Server Moderator",
   "Trial Staff",
   "Integrity Moderator",
@@ -97,7 +100,7 @@ const EDITORS = [
   },
   {
     name: "Excryst",
-    roles: ["List Helper"],
+    roles: ["List & Website Helper"],
     url: {
       youtube: "https://www.youtube.com/@excryst",
       discord: "https://discord.com/users/997320515867922473",
