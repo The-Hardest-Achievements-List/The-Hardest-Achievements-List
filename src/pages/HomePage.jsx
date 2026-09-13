@@ -88,19 +88,19 @@ const EDITORS = [
     },
   },
   {
-    name: "Excryst",
-    roles: ["List Moderator", "Developer"],
-    url: {
-      youtube: "https://www.youtube.com/@excryst",
-      discord: "https://discord.com/users/997320515867922473",
-    },
-  },
-  {
     name: "Exiled_Shade",
     roles: ["List Helper"],
     url: {
       youtube: "https://www.youtube.com/@exiled_shadegd",
       discord: null,
+    },
+  },
+  {
+    name: "Excryst",
+    roles: ["List Helper"],
+    url: {
+      youtube: "https://www.youtube.com/@excryst",
+      discord: "https://discord.com/users/997320515867922473",
     },
   },
   {

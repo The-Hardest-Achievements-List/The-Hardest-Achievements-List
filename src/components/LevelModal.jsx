@@ -46,6 +46,10 @@ export default function LevelModal({
   const imageUrl = normalizeImageUrl(a.image);
   const proofUrl = normalizeProofUrl(a.proof);
   const showcaseVideos = normalizeShowcaseVideos(a.showcaseVideo);
+  const achievementVideoUrl =
+    a.video && isWatchableAchievementUrl(a.video)
+      ? normalizeYouTubeUrl(a.video)
+      : null;
 
   const [copiedValue, setCopiedValue] = useState(null);
   const officialRank =
@@ -307,22 +311,34 @@ export default function LevelModal({
           )}
 
           <div className="modal__links">
-            {a.video && isWatchableAchievementUrl(a.video) && (
-              <a
-                href={normalizeYouTubeUrl(a.video)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal__link modal__link--primary"
-              >
-                Watch Achievement ↗
-              </a>
+            {achievementVideoUrl && (
+              <>
+                <a
+                  href={achievementVideoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal__link modal__link--primary"
+                >
+                  Watch Achievement ↗
+                </a>
+                <button
+                  type="button"
+                  className="modal__link"
+                  onClick={() => handleCopy(achievementVideoUrl)}
+                  title="Copy stream timestamp link"
+                >
+                  {copiedValue === achievementVideoUrl
+                    ? "✓ Copied"
+                    : "Copy Link"}
+                </button>
+              </>
             )}
             {imageUrl && (
               <a
                 href={imageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`modal__link${!a.video || !isWatchableAchievementUrl(a.video) ? " modal__link--primary" : ""}`}
+                className={`modal__link${!achievementVideoUrl ? " modal__link--primary" : ""}`}
               >
                 View Image ↗
               </a>
@@ -332,24 +348,27 @@ export default function LevelModal({
                 href={proofUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`modal__link${(!a.video || !isWatchableAchievementUrl(a.video)) && !imageUrl ? " modal__link--primary" : ""}`}
+                className={`modal__link${!achievementVideoUrl && !imageUrl ? " modal__link--primary" : ""}`}
               >
                 View Proof ↗
               </a>
             )}
-            {showcaseVideos.map((url, index) => (
-              <a
-                key={`showcase-link-${index}-${url}`}
-                href={normalizeYouTubeUrl(url)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal__link"
-              >
-                {showcaseVideos.length > 1
-                  ? `Level Showcase ${index + 1} ↗`
-                  : "Level Showcase ↗"}
-              </a>
-            ))}
+            {showcaseVideos.map((url, index) => {
+              const showcaseUrl = normalizeYouTubeUrl(url);
+              return (
+                <a
+                  key={`showcase-link-${index}-${url}`}
+                  href={showcaseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal__link"
+                >
+                  {showcaseVideos.length > 1
+                    ? `Level Showcase ${index + 1} ↗`
+                    : "Level Showcase ↗"}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

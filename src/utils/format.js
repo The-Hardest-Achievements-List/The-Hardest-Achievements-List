@@ -260,30 +260,63 @@ export function formatLength(seconds) {
     return parts.join(' ')
 }
 
-export function getYouTubeVideoId(url) {
-    if (!url) return null
-    const patterns = [
-        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
-        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/live\/([a-zA-Z0-9_-]{11})/,
-        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,
-        /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/,
-        /^([a-zA-Z0-9_-]{11})$/
-    ]
-
-    for (const pattern of patterns) {
-        const match = url.match(pattern)
-        if (match) return match[1]
-    }
-
-    return null
-}
-
 function fixYouTubeUrlScheme(url) {
     return url
         .replace(/^https:\/(?!\/)/, 'https://')
         .replace(/^http:\/(?!\/)/, 'http://')
 }
 
+const YOUTUBE_ID_RE = /^[a-zA-Z0-9_-]{11}$/
+
+export function getYouTubeVideoId(url) {
+    if (!url || typeof url !== 'string') return null
+    const trimmed = url.trim()
+    if (!trimmed) return null
+    if (YOUTUBE_ID_RE.test(trimmed)) return trimmed
+
+    const fixed = fixYouTubeUrlScheme(trimmed)
+
+    try {
+        const parsed = new URL(fixed.startsWith('http') ? fixed : `https://${fixed}`)
+        const host = parsed.hostname.replace(/^www\./, '').toLowerCase()
+
+        if (host === 'youtu.be') {
+            const id = parsed.pathname.split('/').filter(Boolean)[0]
+            if (id && YOUTUBE_ID_RE.test(id)) return id
+        }
+
+        if (
+            host === 'youtube.com' ||
+            host === 'm.youtube.com' ||
+            host === 'music.youtube.com'
+        ) {
+            const fromQuery = parsed.searchParams.get('v')
+            if (fromQuery && YOUTUBE_ID_RE.test(fromQuery)) return fromQuery
+
+            const pathMatch = parsed.pathname.match(
+                /^\/(?:live|shorts|embed|v)\/([a-zA-Z0-9_-]{11})/,
+            )
+            if (pathMatch) return pathMatch[1]
+        }
+    } catch {
+        // fall through to regex for non-standard URLs
+    }
+
+    const patterns = [
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?(?:[^#]*&)?v=([a-zA-Z0-9_-]{11})/,
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/(?:live|shorts|embed|v)\/([a-zA-Z0-9_-]{11})/,
+        /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/,
+    ]
+
+    for (const pattern of patterns) {
+        const match = fixed.match(pattern)
+        if (match) return match[1]
+    }
+
+    return null
+}
+
+/** Canonical share URL; uses watch?v=&t= when timed so copied links keep the timestamp. */
 export function normalizeYouTubeUrl(url) {
     if (!url || typeof url !== 'string') return url
 
@@ -295,8 +328,10 @@ export function normalizeYouTubeUrl(url) {
 
     if (videoId) {
         const start = getYouTubeStartSeconds(fixed)
-        const base = `https://youtu.be/${videoId}`
-        return start != null ? `${base}?t=${start}` : base
+        if (start != null) {
+            return `https://www.youtube.com/watch?v=${videoId}&t=${start}`
+        }
+        return `https://youtu.be/${videoId}`
     }
 
     try {

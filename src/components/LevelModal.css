@@ -489,6 +489,11 @@
     transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
+button.modal__link {
+    cursor: pointer;
+    appearance: none;
+}
+
 .modal__link:hover {
     border-color: var(--ink-3);
     color: var(--ink);
