@@ -763,7 +763,7 @@
     "name": "Despair Code Consistency",
     "player": "Infinny",
     "levelID": null,
-    "date": "2026-09-05", 
+    "date": "2026-09-05",
     "length": 15,
     "version": 2.2,
     "submitter": "SupremeSDB",
@@ -1315,7 +1315,7 @@
     "name": "Heliopolis (Version 1) 22% x2, 29% in a row",
     "player": "garbag",
     "levelID": 148608820,
-    "date": "2026-04-12"
+    "date": "2026-04-12",
     "length": 103,
     "version": 2.2,
     "submitter": "fwoggy",
@@ -2243,7 +2243,7 @@
     "player": "cc478",
     "levelID": 149221498,
     "date": "2026-09-05",
-    "length": 31
+    "length": 31,
     "version": 2.2,
     "submitter": "nensa",
     "estimateLower": null,
@@ -2733,7 +2733,7 @@
       "Rated"
     ]
   },
-   {
+  {
     "name": "Sweeping Demon 2 85%",
     "player": "Taiago",
     "levelID": null,
@@ -3017,7 +3017,7 @@
       "Rated"
     ]
   },
-    {
+  {
     "name": "Ultra RealistiK 40-71%",
     "player": "marleywave",
     "levelID": 143357580,
@@ -3138,7 +3138,7 @@
       "Rated"
     ]
   },
-   {
+  {
     "name": "water world 47%",
     "player": "niroi",
     "levelID": 142171089,
