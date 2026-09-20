@@ -577,6 +577,27 @@
     ]
   },
   {
+    "name": "CHROMACAVE 97%, 100% in a row",
+    "player": "LennyFeus",
+    "levelID": 131497860,
+    "date": "2026-08-04",
+    "length": 153,
+    "version": 2.2,
+    "submitter": "NatalieMeow",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/815lbfdyncA",
+    "showcaseVideo": "https://youtu.be/815lbfdyncA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "CHROMEDOLL 48%",
     "player": "denni",
     "levelID": null,
@@ -736,6 +757,26 @@
       "Challenge",
       "Low Hertz",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Despair Code Consistency",
+    "player": "Infinny",
+    "levelID": null,
+    "date": "2026-09-05", 
+    "length": 15,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/SriG8X69M2E",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": "Percentages temporarily not listed due to the video being cropped to not show them.",
+    "tags": [
+      "Challenge",
+      "Progress"
     ]
   },
   {
@@ -1149,6 +1190,26 @@
     ]
   },
   {
+    "name": "FIBERGLASS 89%",
+    "player": "Duv",
+    "levelID": null,
+    "date": "2026-09-07",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gULznJ3aiH8",
+    "showcaseVideo": "https://youtu.be/SM5ukSRRhXg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Flashbang 66%",
     "player": "LordVadercraft",
     "levelID": null,
@@ -1166,46 +1227,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Fronly Demise (Skylar)",
-    "player": "Skylar",
-    "levelID": null,
-    "date": "2024-09-01",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "kittycatiscute",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/kqWSOP1hvM0",
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/91056029",
-    "duplicateOf": null,
-    "notes": "A buffed version of a nerfed version of Sakupen circles (Old) by sydno named \"Fronly Demise\".",
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "Fronly Demise (uzuden)",
-    "player": "uzuden",
-    "levelID": null,
-    "date": "2026-05-25",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/PtIT4z-XCrU",
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/91056029",
-    "duplicateOf": null,
-    "notes": "A buffed version of a nerfed version of Sakupen circles (Old) by sydno named \"Fronly Demise\".",
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -1268,6 +1289,46 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Heliopolis (Version 1) 18%, 21%, 18% x2 in a row",
+    "player": "garbag",
+    "levelID": 148608820,
+    "date": "2026-04-12",
+    "length": "TBA",
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Cve4A1LPxtg?t=118",
+    "showcaseVideo": "https://youtu.be/BipoaXc-ASQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Heliopolis (Version 1) 22% x2, 29% in a row",
+    "player": "garbag",
+    "levelID": 148608820,
+    "date": "2026-04-12"
+    "length": 103,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Cve4A1LPxtg",
+    "showcaseVideo": "https://youtu.be/BipoaXc-ASQ",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -1352,26 +1413,6 @@
     ]
   },
   {
-    "name": "Infernis 65-100%",
-    "player": "peekingurangle",
-    "levelID": null,
-    "date": "2026-08-24",
-    "length": 35,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/UC_ah_MioRs",
-    "showcaseVideo": "https://youtu.be/6HZ_4kKhWAM",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8a9dcf1155cd168434dfced6ed163a9bf10eac2b/images/thumbnails/Infernis.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "IT MEANS EVERYTHING (Quivert) 54%",
     "player": "Quivert",
     "levelID": 108239680,
@@ -1425,6 +1466,26 @@
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": null,
     "duplicateOf": "IT MEANS EVERYTHING 61%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Jevans Demise 64%",
+    "player": "Jevan",
+    "levelID": null,
+    "date": "2026-07-27",
+    "length": 53,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/P3cHJnwhelw",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -1512,6 +1573,26 @@
       "Progress",
       "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "KOCMOC publicrelease (Old) 14-71%",
+    "player": "St3vexgmd",
+    "levelID": 135007029,
+    "date": "2026-09-07",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r6HrhFedS30",
+    "showcaseVideo": "https://youtu.be/0Grvott58g0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -1621,7 +1702,7 @@
     ]
   },
   {
-    "name": "Leaves 48-100%",
+    "name": "Leaves (Jszl_GMD) 48-100%",
     "player": "Jszl_GMD",
     "levelID": 82602651,
     "date": "2026-03-02",
@@ -1678,6 +1759,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Lost in Time 2",
+    "player": "Zeronium",
+    "levelID": 148297431,
+    "date": "2026-09-06",
+    "length": 163,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/8i5GfTqb6oE",
+    "showcaseVideo": "https://youtu.be/8i5GfTqb6oE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -1904,16 +2005,16 @@
     ]
   },
   {
-    "name": "OUROBOROS (apuu) 52%",
+    "name": "OUROBOROS (apuu) 57%",
     "player": "apuu",
     "levelID": null,
-    "date": "2026-08-22",
-    "length": 40,
+    "date": "2026-09-06",
+    "length": 44,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/Gk1nEhZVP-4",
+    "video": "https://youtu.be/E9ThwCVx6No?t=4557",
     "showcaseVideo": "https://youtu.be/9VqusfNE5dk",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ac7d84093d47cfdb3b6363bd301d82f0879ddd9a/images/thumbnails/OUROBOROS%20(apuu).png",
     "duplicateOf": null,
@@ -2135,6 +2236,26 @@
       "Progress",
       "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Sakupen Clubstep 4-22%, (4-6%, 4-5%), 4-18% in a row",
+    "player": "cc478",
+    "levelID": 149221498,
+    "date": "2026-09-05",
+    "length": 31
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Ktt1OnCkGGg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -2612,6 +2733,24 @@
       "Rated"
     ]
   },
+   {
+    "name": "Sweeping Demon 2 85%",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-09-08",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/WP7LIbTE1-Q",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Tidal Wave 23-91%, 23-92% in a row",
     "player": "Bacon",
@@ -2878,6 +3017,26 @@
       "Rated"
     ]
   },
+    {
+    "name": "Ultra RealistiK 40-71%",
+    "player": "marleywave",
+    "levelID": 143357580,
+    "date": "2026-09-08",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NcHDho6L1ys",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/241b503788c351ae46cf8eea182244fcd1bc2256/images/thumbnails/Ultra%20RealistiK.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
   {
     "name": "Ultra RealistiK 47-100%",
     "player": "marleywave",
@@ -2956,6 +3115,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "walter white 66%, (0%), 100% in a row",
+    "player": "GeoDom85YT",
+    "levelID": 81011195,
+    "date": "2026-08-25",
+    "length": 209,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/SqBzcCnWwJY",
+    "showcaseVideo": "https://youtu.be/URBUxHzIVaY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
    {
