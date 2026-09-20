@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-09-20",
+    "currentName": "Ashley Wave Trials",
+    "newName": "Ashley Wave Trials",
+    "currentRank": 107,
+    "newRank": 104,
+    "below": "Sakupen circles (Old)",
+    "above": "Silent clubstep",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
+    "date": "2026-09-20",
+    "currentName": "Penumbral",
+    "newName": "Penumbral",
+    "currentRank": 97,
+    "newRank": 113,
+    "below": "Ultra Paracosm",
+    "above": "andromeda",
+    "variantAdded": null,
+    "variantRemoved": null
+  },
+  {
     "date": "2026-09-01",
     "currentName": null,
     "newName": "Bonfire",
