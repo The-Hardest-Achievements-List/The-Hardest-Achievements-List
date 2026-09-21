@@ -44,28 +44,6 @@
     ]
   },
   {
-    "name": "Acheron 2.1 58%, 100% in a row",
-    "player": "karkito",
-    "levelID": 73667628,
-    "date": "2026-05-18",
-    "length": 106,
-    "version": 2.1,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/BkJv3jfkIrU",
-    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated",
-      "Outdated Version"
-    ]
-  },
-  {
     "name": "Aeternus 120hz Mobile 24-34%",
     "player": "Silkizinho",
     "levelID": 102647436,
@@ -190,36 +168,16 @@
     ]
   },
   {
-    "name": "andromeda 57%, 100% in a row",
-    "player": "VERTOP",
-    "levelID": 114283297,
-    "date": "2025-09-30",
-    "length": 117,
+    "name": "Angelicide 6-59%%",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2026-08-22",
+    "length": 48,
     "version": 2.2,
     "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/yc3PcOfPZqo",
-    "showcaseVideo": "https://youtu.be/fFtQxxepyDo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "Angelicide 21-61%",
-    "player": "Druki",
-    "levelID": 120478542,
-    "date": "2026-08-22",
-    "length": 37,
-    "version": 2.2,
-    "submitter": "Excryst",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Lw7m0j2I5TY",
+    "video": "https://youtu.be/TaWJUvDdTT8",
     "showcaseVideo": "https://youtu.be/czV24THGlA4",
     "thumbnail": null,
     "duplicateOf": null,
@@ -250,29 +208,50 @@
     ]
   },
   {
-    "name": "Artemis 13 63%, 67% in a row",
-    "player": "Zoink",
+    "name": "ARE 47-100%",
+    "player": "BONN GD",
     "levelID": null,
-    "date": "2026-08-30",
-    "length": 77,
+    "date": "2026-09-11",
+    "length": 45,
     "version": 2.2,
-    "submitter": "fwoggy",
+    "submitter": "NatalieMeow",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/dIqcUnvKVZE?t=12528",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "video": "https://youtu.be/mjVDLgEvVhU",
+    "showcaseVideo": "https://youtu.be/LMsjqNrN17Q",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Consistency"
+      "Progress"
     ]
   },
   {
-    "name": "Artemis 13 (Aug. 2026) 40-100%",
+    "name": "Artemis 13",
     "player": "Zoink",
-    "levelID": null,
+    "levelID": 148598469,
+    "date": "2026-09-09",
+    "length": 76,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/FgjOM0ef1N8",
+    "showcaseVideo": "https://youtu.be/-7NPH-kt6pY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Artemis 13 (Unnerfed) 40-100%",
+    "player": "Zoink",
+    "levelID": 148599120,
     "date": "2026-08-28",
     "length": 42,
     "version": 2.2,
@@ -280,8 +259,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
+    "thumbnail": null,
     "duplicateOf": [
       "Artemis 13 (Aug. 2026) 42-100%",
       "Artemis 13 (Aug. 2026) 32-93%"
@@ -293,9 +272,9 @@
     ]
   },
   {
-    "name": "Artemis 13 (Aug. 2026) 82%",
+    "name": "Artemis 13 (Unnerfed) 82%",
     "player": "Zoink",
-    "levelID": null,
+    "levelID": 148599120,
     "date": "2026-08-27",
     "length": 58,
     "version": 2.2,
@@ -303,8 +282,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
+    "thumbnail": null,
     "duplicateOf": "Artemis 13 (Aug. 2026) 70%",
     "notes": null,
     "tags": [
@@ -473,26 +452,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Bocadillo FD Albondi 49%, 51%, 58% in a row",
-    "player": "nensa",
-    "levelID": 90069457,
-    "date": "2026-07-30",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "nensa",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/APXvn8dxQE4",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
     ]
   },
   {
@@ -920,7 +879,7 @@
     ]
   },
   {
-    "name": "Disquietudal Dance 39%; Im Deaf 2 deaths, 99.86% accuracy",
+    "name": "Disquietudal Dance 39%; Im Deaf 2 deaths, 99.86% accuracy in a row",
     "player": "Emp",
     "levelID": null,
     "date": "2026-05-13",
@@ -1444,7 +1403,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/E5JCMbHqxrI",
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/106165639",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1576,9 +1535,9 @@
     ]
   },
   {
-    "name": "KOCMOC publicrelease (Old) 14-71%",
+    "name": "KOCMOC publicrelease (Ver. 7) 14-71%",
     "player": "St3vexgmd",
-    "levelID": 135007029,
+    "levelID": 149267340,
     "date": "2026-09-07",
     "length": 40,
     "version": 2.2,
@@ -1587,7 +1546,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/r6HrhFedS30",
     "showcaseVideo": "https://youtu.be/0Grvott58g0",
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/69196070",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1822,17 +1781,17 @@
       "Progress"
     ]
   },
-  {
-    "name": "MAX NRG (May 2026) 29-85%",
+    {
+    "name": "MAX NRG 16-81%",
     "player": "SaturMan",
     "levelID": null,
-    "date": "2026-05-11",
-    "length": 50,
+    "date": "2026-09-11",
+    "length": 58,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/O4-7pvqIBR8",
+    "video": "https://youtu.be/ZGKXEGvFH20",
     "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
     "duplicateOf": null,
@@ -1863,16 +1822,16 @@
     ]
   },
   {
-    "name": "MAX NRG 49%",
+    "name": "MAX NRG 59%",
     "player": "SaturMan",
     "levelID": null,
-    "date": "2026-08-27",
-    "length": 49,
+    "date": "2026-09-11",
+    "length": 60,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/aegeLVHQ5Fo",
+    "video": "https://youtu.be/ZGKXEGvFH20",
     "showcaseVideo": "https://youtu.be/lDQyS9rEsV0",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/ee036b609f9aecd66b90725a7b75d765b5880667/images/thumbnails/MAX%20NRG.png",
     "duplicateOf": null,
@@ -1941,6 +1900,29 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Oblivion 120hz Mobile 82%",
+    "player": "Ryber",
+    "levelID": 71025973,
+    "date": "2026-08-02",
+    "length": 59,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/i6wKq7h6tnM",
+    "showcaseVideo": "https://youtu.be/ErP1x5pkYfw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
     ]
   },
   {
@@ -2062,6 +2044,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "poocubed 64%, 100% in a row",
+    "player": "vonic",
+    "levelID": 85133223,
+    "date": "2026-09-10",
+    "length": 163,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PwK93jdQblc",
+    "showcaseVideo": "https://youtu.be/WM1KcNGkP08",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
@@ -2305,7 +2308,7 @@
     "date": "2026-07-24",
     "length": null,
     "version": 2.2,
-    "submitter": "sayoriiCLUB",
+    "submitter": "zSayorii",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://x.com/HoverThereal/status/2080719576531107914",
@@ -2339,7 +2342,7 @@
     ]
   },
   {
-    "name": "Silent Circles (Snailboy1234) 27-62% 2 deaths,",
+    "name": "Silent Circles (Snailboy1234) 27-62% 2 deaths, 99.70% accuracy",
     "player": "Thebacon_gamer",
     "levelID": 94763739,
     "date": "2026-08-13",
@@ -2419,13 +2422,33 @@
     ]
   },
   {
+    "name": "Silent Clubstep DX",
+    "player": "nensa",
+    "levelID": 92088644,
+    "date": "2026-09-10",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2WkNMN76npk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "SILENT OPPENHEIMER 32-100%",
     "player": "Dezstro",
     "levelID": null,
     "date": "2026-08-24",
     "length": 84,
     "version": 2.2,
-    "submitter": "sayoriiCLUB",
+    "submitter": "zSayorii",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/XMoLUOoinak",
@@ -2590,26 +2613,6 @@
     ]
   },
   {
-    "name": "Snowbound 132%",
-    "player": "Zoink",
-    "levelID": 120289520,
-    "date": "2026-07-18",
-    "length": 187,
-    "version": 2.2,
-    "submitter": "Emp",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/1bhAareaao8?t=2230",
-    "showcaseVideo": "https://youtu.be/rR4wVg5R0GA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Society (Unnerfed) 15-35%",
     "player": "xXMasterXx",
     "levelID": 143160946,
@@ -2709,7 +2712,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Consistency",
+      "Rated"
     ]
   },
   {
@@ -2752,6 +2756,27 @@
     ]
   },
   {
+    "name": "Through The Gates 180%",
+    "player": "s3batr0nic",
+    "levelID": 49072489,
+    "date": "2026-08-26",
+    "length": 165,
+    "version": 2.2,
+    "submitter": "Muffy450",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/60IAO5ukXYo",
+    "showcaseVideo": "https://youtu.be/AcXRpf5XDq8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Tidal Wave 23-91%, 23-92% in a row",
     "player": "Bacon",
     "levelID": 86407629,
@@ -2769,48 +2794,6 @@
     "tags": [
       "Level",
       "Consistency"
-    ]
-  },
-  {
-    "name": "The Lightning Rod 51%, (0%), 100% in a row",
-    "player": "GuillExprex52",
-    "levelID": 93917076,
-    "date": "2025-10-27",
-    "length": 148,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/yaNDmULgwhM",
-    "showcaseVideo": "https://youtu.be/DCbXHYwW7r0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "The Salt Factory 57%, 100% in a row",
-    "player": "Whizkid05",
-    "levelID": 113045735,
-    "date": "2026-01-08",
-    "length": 149,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/rQFirVnSzH0",
-    "showcaseVideo": "https://youtu.be/6ufVM6bt2rY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -2977,26 +2960,6 @@
     ]
   },
   {
-    "name": "UFO on Track of RAGE 49-100%",
-    "player": "NazCompgames",
-    "levelID": null,
-    "date": "2026-09-01",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "NatalieMeow",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/cS71u-YtNzA",
-    "showcaseVideo": "https://youtu.be/pT6y3CgRmbE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/e3338d377d42383239fc22577bdebc43d4d15f10/images/thumbnails/UFO%20on%20Track%20of%20RAGE.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Ultra Paracosm 46%, 52% in a row",
     "player": "Zoink",
     "levelID": 138704906,
@@ -3098,26 +3061,6 @@
     ]
   },
   {
-    "name": "water world 20-68%",
-    "player": "niroi",
-    "levelID": 142171089,
-    "date": "2026-07-10",
-    "length": 55,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/brOnDDHF5EI",
-    "showcaseVideo": "https://youtu.be/NoiwMZrQsz0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "walter white 66%, (0%), 100% in a row",
     "player": "GeoDom85YT",
     "levelID": 81011195,
@@ -3136,6 +3079,46 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "WarCora 13-65%",
+    "player": "seregiusz",
+    "levelID": 89189775,
+    "date": "2026-09-11",
+    "length": 28,
+    "version": 2.2,
+    "submitter": "zSayorii",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/v9ioityy2RE",
+    "showcaseVideo": "https://youtu.be/IkwmfQLjq9k",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "water world 20-68%",
+    "player": "niroi",
+    "levelID": 142171089,
+    "date": "2026-07-10",
+    "length": 55,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/brOnDDHF5EI",
+    "showcaseVideo": "https://youtu.be/NoiwMZrQsz0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
