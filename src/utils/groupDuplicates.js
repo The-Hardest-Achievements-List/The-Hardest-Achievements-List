@@ -150,27 +150,15 @@ export function isReplacementEligibleParent(parent) {
 }
 
 /**
- * Level IDs must match when both are set. Null on either side skips the check.
- */
-export function sharesLevelIdForReplacement(parent, child) {
-  const parentId = parent?.levelID;
-  const childId = child?.levelID;
-  if (parentId == null || childId == null) return true;
-  return parentId === childId;
-}
-
-/**
  * A duplicateOf child is a "replacement" only when:
  * - parent is Pending Removal + Progress/Consistency
- * - level IDs match when present
  * - the pair is pending ↔ main (same-list stays a normal variant)
  */
 export function isReplacementDuplicate(parent, child) {
   if (!parent || !child) return false;
   if (!isDuplicateAchievement(child)) return false;
   if (!isCrossListReplacementPair(parent, child)) return false;
-  if (!isReplacementEligibleParent(parent)) return false;
-  return sharesLevelIdForReplacement(parent, child);
+  return isReplacementEligibleParent(parent);
 }
 
 function findParentInList(parentRef, list) {
