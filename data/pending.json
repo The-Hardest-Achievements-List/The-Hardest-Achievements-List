@@ -160,7 +160,7 @@
     "video": "https://youtu.be/qt9UEprkezg",
     "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
     "thumbnail": null,
-    "duplicateOf": "Aeternus 20%"\,
+    "duplicateOf": "Aeternus 20%",
     "notes": null,
     "tags": [
       "Level",
@@ -1350,7 +1350,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "Heliopolis (Ver. 1) 16 deaths, 99.92% accuracy",
     "player": "Bradenbowl",
     "levelID": 148608820,
@@ -1921,7 +1921,7 @@
       "Progress"
     ]
   },
-    {
+  {
     "name": "MAX NRG 16-81%",
     "player": "SaturMan",
     "levelID": null,
@@ -2277,7 +2277,7 @@
     "submitter": "gregtang47",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/IfMVzCg5gpQ"
+    "video": "https://youtu.be/IfMVzCg5gpQ",
     "showcaseVideo": "https://youtu.be/RPhy6t2bb04",
     "thumbnail": null,
     "duplicateOf": null,
@@ -3141,7 +3141,6 @@
       "Progress"
     ]
   },
-  
   {
     "name": "Tunnel of Serpent (May 2026) 4 deaths, 99.97% accuracy",
     "player": "serpentical",
