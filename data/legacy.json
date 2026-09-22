@@ -416,7 +416,12 @@
     "submitter": "jak",
     "video": "https://youtu.be/_eWcDxL6ZuY?t=332",
     "showcaseVideo": null,
-    "thumbnail": null,
+    "thumbnail": [
+      "https://levelthumbs.prevter.me/thumbnail/42584142",
+      "https://levelthumbs.prevter.me/thumbnail/59209010",
+      "https://levelthumbs.prevter.me/thumbnail/64658786",
+      "https://levelthumbs.prevter.me/thumbnail/26681070"
+    ]
     "duplicateOf": null,
     "notes": null,
     "tags": [
