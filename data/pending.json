@@ -1,5 +1,25 @@
 [
   {
+    "name": "480 mastery",
+    "player": "nensa",
+    "levelID": 148944423,
+    "date": "2026-09-16",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oX32vEHLgiA",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
     "name": "Absolute End 144hz Mobile 45%",
     "player": "MAXDASH",
     "levelID": null,
@@ -367,6 +387,46 @@
     "video": "https://youtu.be/PknC5na8x0k?t=18850",
     "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Banshee 30%",
+    "player": "hstorm",
+    "levelID": null,
+    "date": "2026-09-09",
+    "length": 27,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2LsMzZepMUA",
+    "showcaseVideo": "https://youtu.be/h14lmGH31_M",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Banshee.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Banshee 38-100%",
+    "player": "hstorm",
+    "levelID": null,
+    "date": "2026-09-16",
+    "length": 57,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/AEi26EQaW5Y",
+    "showcaseVideo": "https://youtu.be/h14lmGH31_M",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Banshee.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1452,6 +1512,26 @@
     ]
   },
   {
+    "name": "Infernis 41%",
+    "player": "playlino",
+    "levelID": null,
+    "date": "2026-09-17",
+    "length": 32,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/oEaosQ57qzg",
+    "showcaseVideo": "https://youtu.be/M53z6ey_91A",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Infernis.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "IT MEANS EVERYTHING (Quivert) 54%",
     "player": "Quivert",
     "levelID": 108239680,
@@ -1504,6 +1584,26 @@
     "video": "https://youtu.be/eKbmkBhYOPM",
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": "https://levelthumbs.prevter.me/106165639",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "IT MEANS EVERYTHING 14-100%",
+    "player": "Waltty",
+    "levelID": 106165639,
+    "date": "2026-09-18",
+    "length": 59,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/GiykgnJa6JQ",
+    "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -2463,6 +2563,26 @@
     ]
   },
   {
+    "name": "Silent Akbar 45%",
+    "player": "nagi2x",
+    "levelID": 29386571,
+    "date": "2026-09-17",
+    "length": 36,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9qkhOj70AdM",
+    "showcaseVideo": "https://youtu.be/HQjDjtGWnbg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Silent Circles (Snailboy1234) 27-42%, (27-29%), 27-47% in a row",
     "player": "Thebacon_gamer",
     "levelID": 94763739,
@@ -2601,6 +2721,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silent Infernostep",
+    "player": "breakcore17",
+    "levelID": 148688168,
+    "date": "2026-09-11",
+    "length": 49,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/xRHecBWQ3qk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
