@@ -1,0 +1,158 @@
+[
+    {
+        "name": "The Third Variant",
+        "player": null,
+        "levelID": 79576004,
+        "date": null,
+        "length": 29,
+        "version": 2.1,
+        "submitter": null,
+        "video": null,
+        "showcaseVideo": "https://youtu.be/-YjBxyDYor0",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": "2023-07-01",
+        "notes": "Hack-verified",
+        "tags": [
+            "Challenge",
+            "Hacked"
+        ]
+    },
+    {
+        "name": "the wiener",
+        "player": "Taiago",
+        "levelID": 91019161,
+        "date": "2023-05-09",
+        "length": 65,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/rgMruLorH1c",
+        "showcaseVideo": "https://youtu.be/qto2aIj3JQc",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified",
+            "Rated"
+        ]
+    },
+    {
+        "name": "Heaven And Hell",
+        "player": "Tuggy75",
+        "levelID": 167264,
+        "date": "2021-07-12",
+        "length": 81,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/kBatLhgBJ6Y",
+        "showcaseVideo": "https://youtu.be/dFqmBOQbzdA",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified",
+            "Formerly Rated"
+        ]
+    },
+    {
+        "name": "Beyond Hell",
+        "player": "fakeblast",
+        "levelID": 132184492,
+        "date": "2022-01-01",
+        "length": 81,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/Q6GCkukQabQ",
+        "showcaseVideo": "https://youtu.be/MsJ-OArn6QU",
+        "thumbnail": "https://levelthumbs.prevter.me/thumbnail/77016475",
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified",
+            "Outdated Version"
+        ]
+    },
+    {
+        "name": "Avaddon",
+        "player": "LordVadercraft",
+        "levelID": 81174074,
+        "date": "2022-06-20",
+        "length": 64,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/JpzpA6FhD28",
+        "showcaseVideo": "https://youtu.be/EYyMMDCeS4c",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified"
+        ]
+    },
+    {
+        "name": "Fever Dream",
+        "player": "BGram",
+        "levelID": 57571964,
+        "date": "2023-07-27",
+        "length": 64,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://www.youtube.com/watch?v=Mc3vZeM_VYw",
+        "showcaseVideo": "https://youtu.be/H7SFYpJxxNo",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified",
+            "Rated"
+        ]
+    },
+    {
+        "name": "Fever Dream 2018",
+        "player": "Dils thik",
+        "levelID": 92912051,
+        "date": "2020-06-27",
+        "length": 64,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/Ltz-W5CUolo",
+        "showcaseVideo": "https://youtu.be/1dT5e_KM32I",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified"
+        ]
+    },
+    {
+        "name": "Bodacious Circles",
+        "player": "Lucidium",
+        "levelID": 93915308,
+        "date": "2023-08-29",
+        "length": 50,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/X7Q4b570-o0",
+        "showcaseVideo": "https://youtu.be/UySA0J5iqik",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Verified"
+        ]
+    }
+]
