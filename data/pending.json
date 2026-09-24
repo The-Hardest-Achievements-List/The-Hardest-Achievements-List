@@ -208,6 +208,26 @@
     ]
   },
   {
+    "name": "Always Miss You",
+    "player": Ekskriptn",
+    "levelID": 148120101,
+    "date": "2026-06-06",
+    "length": 68,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r5TE8YczBgQ",
+    "showcaseVideo": "https://youtu.be/xdA10zstw0U",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Angelicide 6-59%",
     "player": "Druki",
     "levelID": 120478542,
@@ -1048,16 +1068,16 @@
     ]
   },
   {
-    "name": "Escalator 52%",
+    "name": "Escalator 60%",
     "player": "teraaa",
     "levelID": null,
     "date": null,
-    "length": 53,
+    "length": 59,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "Exiled_Shade",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/Thf3zFHVxvc",
+    "video": "https://youtu.be/0uRMYcd-a8M",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
@@ -1125,6 +1145,28 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "ETERNALtheory 144hz Mobile 92%",
+    "player": "Zafsa",
+    "levelID": 92196326,
+    "date": "2026-09-20",
+    "length": 83,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/HVqH5aREmD4",
+    "showcaseVideo": "https://youtu.be/a3xBOH7RsrU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Mobile"
     ]
   },
   {
@@ -2500,6 +2542,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "Sakupen Shadows",
+    "player": "Ellie",
+    "levelID": 149029798,
+    "date": "2026-09-19",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "Ellie",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/JEPwP5UVguo",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
