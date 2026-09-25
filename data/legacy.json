@@ -6731,7 +6731,7 @@
   },
   {
     "name": "Dreamopolis",
-    "player": "Sirplus",
+    "player": "Glow",
     "levelID": 8541165,
     "date": "2023-12-21",
     "length": 84,
@@ -14412,7 +14412,8 @@
     "tags": [
       "Level",
       "Verified",
-      "2P"
+      "2P",
+      "Rated"
     ]
   },
   {

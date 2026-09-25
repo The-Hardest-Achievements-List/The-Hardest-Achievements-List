@@ -191,6 +191,27 @@
     ]
   },
   {
+    "name": "Artemis 13",
+    "player": "Zoink",
+    "levelID": 148598469,
+    "date": "2026-09-09",
+    "length": 76,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/FgjOM0ef1N8",
+    "showcaseVideo": "https://youtu.be/-7NPH-kt6pY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Acheron 60hz 36-96%",
     "player": "Llqne",
     "levelID": 73667628,
@@ -4643,6 +4664,25 @@
     ]
   },
   {
+    "name": "Sacrifice",
+    "player": "Laniakea",
+    "levelID": 141052363,
+    "date": "2023-05-26",
+    "length": 150,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/Sth67PA8XBU",
+    "showcaseVideo": "https://youtu.be/RPhy6t2bb04",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Based After Based",
     "player": "DiamondSplash",
     "levelID": 110534288,
@@ -4735,6 +4775,25 @@
     "tags": [
       "Challenge",
       "Progress"
+    ]
+  },
+  {
+    "name": "cognitohazard",
+    "player": "Whizkid05",
+    "levelID": 130891319,
+    "date": "2025-02-19",
+    "length": 106,
+    "version": 2.2,
+    "submitter": "CoolSchnoodle",
+    "video": "https://youtu.be/T5g0r16X_ZA",
+    "showcaseVideo": "https://youtu.be/UF_zHxW0qo0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
@@ -6343,25 +6402,6 @@
     ]
   },
   {
-    "name": "cognitohazard",
-    "player": "Whizkid05",
-    "levelID": 130891319,
-    "date": "2025-02-19",
-    "length": 106,
-    "version": 2.2,
-    "submitter": "CoolSchnoodle",
-    "video": "https://youtu.be/T5g0r16X_ZA",
-    "showcaseVideo": "https://youtu.be/UF_zHxW0qo0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "Maniacal Chains",
     "player": "spcreat",
     "levelID": 48991380,
@@ -6409,25 +6449,6 @@
     "submitter": "Anceps",
     "video": "https://youtu.be/b2yHaIk5zio",
     "showcaseVideo": "https://youtu.be/tEm59VdSJGE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Sacrifice",
-    "player": "Laniakea",
-    "levelID": 141052363,
-    "date": "2023-05-26",
-    "length": 150,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/Sth67PA8XBU",
-    "showcaseVideo": "https://youtu.be/RPhy6t2bb04",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,

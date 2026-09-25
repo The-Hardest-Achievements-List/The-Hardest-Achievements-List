@@ -271,5 +271,43 @@
             "Verified",
             "Rated"
         ]
+    },
+    {
+        "name": " ",
+        "player": "mys",
+        "levelID": 86592424,
+        "date": "2022-12-10",
+        "length": 16,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/e1eiAvcQT_M",
+        "showcaseVideo": "https://youtu.be/e1eiAvcQT_M",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Challenge",
+            "Verified"
+        ]
+    },
+    {
+        "name": "Hell Ball Finale",
+        "player": "cring",
+        "levelID": 86047466,
+        "date": "2022-11-24",
+        "length": 24,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/sj3BGHe5qTc",
+        "showcaseVideo": "https://youtu.be/dU4jQbvlBlc",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Challenge",
+            "Verified"
+        ]
     }
 ]

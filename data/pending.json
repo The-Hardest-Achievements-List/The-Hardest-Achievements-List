@@ -209,7 +209,7 @@
   },
   {
     "name": "Always Miss You",
-    "player": Ekskriptn",
+    "player": "Ekskriptn",
     "levelID": 148120101,
     "date": "2026-06-06",
     "length": 68,
@@ -285,27 +285,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Artemis 13",
-    "player": "Zoink",
-    "levelID": 148598469,
-    "date": "2026-09-09",
-    "length": 76,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/FgjOM0ef1N8",
-    "showcaseVideo": "https://youtu.be/-7NPH-kt6pY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
     ]
   },
   {
