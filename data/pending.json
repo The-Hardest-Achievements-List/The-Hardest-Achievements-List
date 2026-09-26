@@ -148,16 +148,16 @@
     ]
   },
   {
-    "name": "Aeternus 20-34%",
+    "name": "Aeternus 21-36%",
     "player": "aden",
-    "levelID": 102647436,
-    "date": "2026-08-24",
+    "levelID": "wShock,
+    "date": "2026-09-22",
     "length": 10,
     "version": 2.2,
-    "submitter": "fwoggy",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/oISb1IaZUvQ",
+    "video": "https://youtu.be/kXXHeffwXTk",
     "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
     "thumbnail": null,
     "duplicateOf": null,
@@ -188,16 +188,16 @@
     ]
   },
   {
-    "name": "Aeternus 51 deaths, 98.66% accuracy",
-    "player": "aden",
+    "name": "Aeternus 46 deaths, 98.46% accuracy",
+    "player": "Chill Guy",
     "levelID": 102647436,
-    "date": "2026-06-21",
+    "date": "2026-09-23",
     "length": 74,
     "version": 2.2,
-    "submitter": "500Cigarettes",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/hS1ZDdNEJMY?t=2027",
+    "video": "https://youtu.be/XMQmWCfl7yA",
     "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
     "thumbnail": null,
     "duplicateOf": null,
@@ -374,16 +374,16 @@
     ]
   },
   {
-    "name": "Azure Flare (ItsHybrid) 69%",
+    "name": "Azure Flare",
     "player": "Diamond",
-    "levelID": null,
-    "date": "2026-07-17",
-    "length": 46,
+    "levelID": 149290595,
+    "date": "2026-09-21",
+    "length": 90,
     "version": 2.2,
-    "submitter": "Excryst",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/PknC5na8x0k?t=18850",
+    "video": "https://youtu.be/r6hQ5Se2i8U",
     "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
     "duplicateOf": null,
@@ -431,6 +431,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Blade of Justice 1118%",
+    "player": "mosk1712",
+    "levelID": 35448603,
+    "date": "2026-09-18".
+    "length": 1355,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/V2S5zka7nvQ",
+    "showcaseVideo": "https://youtu.be/vHij4M3TBfY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
     ]
   },
   {
@@ -1331,6 +1352,26 @@
     ]
   },
   {
+    "name": "FINAL FLIGHT 49% x2 in a row",
+    "player": "Axination",
+    "levelID": 104496896,
+    "date": "2026-09-24",
+    "length": 12,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Qjjz0ASC5A0",
+    "showcaseVideo": "https://youtu.be/-znBIHZDUfw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Flashbang 22-96%",
     "player": "LordVadercraft",
     "levelID": null,
@@ -1509,6 +1550,46 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "Heliopolis 16-80%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-09-21",
+    "length": 87,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cgxdJVm4FOg?t=8453",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Heliopolis 66%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-09-21",
+    "length": 91,
+    "version": 2.2,
+    "submitter": "BenjiWii",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/QQxqqF2xroc?t=11354",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2369,6 +2450,25 @@
     ]
   },
   {
+    "name": "Prismline",
+    "player": "Wain",
+    "levelID": 135148907,
+    "date": "2026-03-07",
+    "length": 92,
+    "version": 2.2,
+    "submitter": "QwidziT",
+    "video": "https://youtu.be/pIHOHz3i0Rw",
+    "showcaseVideo": "https://youtu.be/4P-A0_CfMXY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Quantum Dominator 59-100%",
     "player": "Theitha",
     "levelID": null,
@@ -2604,6 +2704,27 @@
     ]
   },
   {
+    "name": "Sevvend Clubstep 62%, 100% in a row",
+    "player": "Kot",
+    "levelID": 120255728,
+    "date": "2025-11-09",
+    "length": 115,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/uKfanoWnTWU",
+    "showcaseVideo": "https://youtu.be/PPZE1RM0JBA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Shadow Of The Past",
     "player": "LennyFeus",
     "levelID": 143909846,
@@ -2661,6 +2782,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  }, 
+  {
+    "name": "Silent Akbar 35-100%",
+    "player": "nagi2x",
+    "levelID": 29386571,
+    "date": "2026-09-24",
+    "length": 58,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/y-06-YyV6Ws",
+    "showcaseVideo": "https://youtu.be/HQjDjtGWnbg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2945,6 +3086,46 @@
     ]
   },
   {
+    "name": "Slaughterhouse (Unnerfed, Reapavon) 90%",
+    "player": "Reapavon",
+    "levelID": null,
+    "date": "2026-07-07",
+    "length": 81,
+    "version": 2.2,
+    "submitter": "Reapavon",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9oSM9ZSKChw",
+    "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Slaughterhouse (Unnerfed, Reapavon, Buffed) 78%",
+    "player": "Reapavon",
+    "levelID": null,
+    "date": "2026-09-13",
+    "length": 70,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Z7tkZ9WGGSw",
+    "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Slaughterhouse 1.1x 120hz Mobile 25-66%",
     "player": "vowtz",
     "levelID": 27690100,
@@ -3161,7 +3342,7 @@
     ]
   },
   {
-    "name": "Sweeping Demon 2 85%",
+    "name": "Sweeping Demon 2 86%",
     "player": "Taiago",
     "levelID": null,
     "date": "2026-09-08",
@@ -3171,7 +3352,7 @@
     "video": "https://youtu.be/WP7LIbTE1-Q",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": null,
+    "duplicateOf": "Sweeping Demon 2 (Apr. 2026) 86%",
     "notes": null,
     "tags": [
       "Level",
