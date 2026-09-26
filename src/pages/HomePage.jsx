@@ -100,7 +100,7 @@ const EDITORS = [
   },
   {
     name: "Statera",
-    roles: ["Trial Staff"],
+    roles: ["List Helper"],
     url: {
       youtube: "https://www.youtube.com/@stateragd",
       discord: null,
