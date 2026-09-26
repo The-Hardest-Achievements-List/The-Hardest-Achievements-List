@@ -91,19 +91,27 @@ const EDITORS = [
     },
   },
   {
-    name: "Exiled_Shade",
-    roles: ["List Helper"],
-    url: {
-      youtube: "https://www.youtube.com/@exiled_shadegd",
-      discord: null,
-    },
-  },
-  {
     name: "Excryst",
     roles: ["List & Website Helper"],
     url: {
       youtube: "https://www.youtube.com/@excryst",
       discord: "https://discord.com/users/997320515867922473",
+    },
+  },
+  {
+    name: "Statera",
+    roles: ["Trial Staff"],
+    url: {
+      youtube: "https://www.youtube.com/@stateragd",
+      discord: null,
+    },
+  },
+  {
+    name: "Exiled_Shade",
+    roles: ["Server Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@exiled_shadegd",
+      discord: null,
     },
   },
   {
@@ -119,14 +127,6 @@ const EDITORS = [
     roles: ["Server Moderator"],
     url: {
       youtube: "https://www.youtube.com/@aytch0008",
-      discord: null,
-    },
-  },
-  {
-    name: "Statera",
-    roles: ["Trial Staff"],
-    url: {
-      youtube: "https://www.youtube.com/@stateragd",
       discord: null,
     },
   },
