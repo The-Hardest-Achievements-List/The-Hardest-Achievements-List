@@ -309,5 +309,25 @@
             "Challenge",
             "Verified"
         ]
+    },
+    {
+        "name": "Levigo",
+        "player": "Kandai",
+        "levelID": 97086864,
+        "date": "2023-12-05",
+        "length": null,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/AROmUo7DNkE",
+        "showcaseVideo": "https://youtu.be/Qv-4pL7cioo",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "ADD LENGTH!!!",
+        "tags": [
+            "Level",
+            "Verified",
+            "Rated"
+        ]
     }
 ]
