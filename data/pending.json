@@ -150,7 +150,7 @@
   {
     "name": "Aeternus 21-36%",
     "player": "aden",
-    "levelID": "wShock,
+    "levelID": "wShock",
     "date": "2026-09-22",
     "length": 10,
     "version": 2.2,
@@ -437,7 +437,7 @@
     "name": "Blade of Justice 1118%",
     "player": "mosk1712",
     "levelID": 35448603,
-    "date": "2026-09-18".
+    "date": "2026-09-18",
     "length": 1355,
     "version": 2.2,
     "submitter": "anaphflora",
