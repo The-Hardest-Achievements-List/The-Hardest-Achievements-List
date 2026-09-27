@@ -83,7 +83,10 @@
   "foxyan17": "RU",
   "freedom": "KR",
   "fusion425": "US",
-  "fwoggy": "RU",
+  "fwoggy": [
+    "AU",
+    "RU"
+  ],
   "gdspeedcuber": "GB",
   "GGonop": "FI",
   "Glow": "PK",
