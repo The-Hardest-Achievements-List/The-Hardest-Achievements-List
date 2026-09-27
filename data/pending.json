@@ -149,8 +149,8 @@
   },
   {
     "name": "Aeternus 21-36%",
-    "player": "aden",
-    "levelID": "wShock",
+    "player": "wShock",
+    "levelID": 102647436,
     "date": "2026-09-22",
     "length": 10,
     "version": 2.2,
@@ -248,6 +248,23 @@
     ]
   },
   {
+    "name": "Angelicide 68-100%",
+    "player": "Druki",
+    "levelID": 120478542,
+    "date": "2026-08-22",
+    "length": 24,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/BJp_gvyZRlQ?t=7686",
+    "showcaseVideo": "https://youtu.be/czV24THGlA4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": 
+  },
+  {
     "name": "Apocalyptic Trilogy (Unnerfed) 56-100",
     "player": "Trick",
     "levelID": null,
@@ -341,7 +358,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/65-nfAi74kg",
-    "showcaseVideo": null,
+    "showcaseVideo": "https://youtu.be/Ck6heqr73Ss",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -384,8 +401,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/r6hQ5Se2i8U",
-    "showcaseVideo": "https://youtu.be/d1ZFtPZl69s",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/84c6aefe2ad077abe94a7a7c3dffd58fe9939342/images/thumbnails/Azure%20Flare%20(ItsHybrid).png",
+    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -394,16 +411,16 @@
     ]
   },
   {
-    "name": "Banshee 30%",
+    "name": "Banshee 34%",
     "player": "hstorm",
     "levelID": null,
-    "date": "2026-09-09",
-    "length": 27,
+    "date": "2026-09-18",
+    "length": 29,
     "version": 2.2,
-    "submitter": "anaphflora",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/2LsMzZepMUA",
+    "video": "https://youtu.be/ery1Rf3CSbw?t=9230",
     "showcaseVideo": "https://youtu.be/h14lmGH31_M",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Banshee.png",
     "duplicateOf": null,
@@ -597,6 +614,23 @@
     ]
   },
   {
+    "name": "Call Me Maybe 60hz",
+    "player": "TheAmazingHi",
+    "levelID": 80178903,
+    "date": "2026-07-27",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1OenACm8Xak",
+    "showcaseVideo": "https://youtu.be/mdFzeqRv7II",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": 
+  },
+  {
     "name": "Cautious (Old) 43-89%",
     "player": "pozhh",
     "levelID": 67894396,
@@ -769,6 +803,26 @@
     "estimateUpper": null,
     "video": "https://youtu.be/X0uqmrkzfHI",
     "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "CYBERPSYCHOSIS 78%",
+    "player": "GuillExprex52",
+    "levelID": 109814681,
+    "date": "2026-09-24",
+    "length": 61,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zT-lZSIt0Ps",
+    "showcaseVideo": "https://youtu.be/ldoiOnp3tFk",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1049,6 +1103,26 @@
     ]
   },
   {
+    "name": "Ephemeral Abyss 74-100%",
+    "player": "withet",
+    "levelID": 81037218,
+    "date": "2026-07-07",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/juCDq14Dvy8",
+    "showcaseVideo": "https://youtu.be/aDlLNIv2vmE
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Escalator 36-100%",
     "player": "teraaa",
     "levelID": null,
@@ -1089,16 +1163,16 @@
     ]
   },
   {
-    "name": "Escalator 60%",
+    "name": "Escalator 62%",
     "player": "teraaa",
     "levelID": null,
     "date": null,
-    "length": 59,
+    "length": 60,
     "version": 2.2,
-    "submitter": "Exiled_Shade",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/0uRMYcd-a8M",
+    "video": "https://youtu.be/d4xnClZTw7I?t=4717",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
@@ -2102,6 +2176,26 @@
     ]
   },
   {
+    "name": "Lotus Chamber",
+    "player": "kotyarachik",
+    "levelID": 85832332,
+    "date": "2026-09-26",
+    "length": 5,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/mEBpaS3Stoc",
+    "showcaseVideo": "https://youtu.be/JsRmtKC6KiE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Progress"
+    ]
+  },
+  {
     "name": "Maniacal Chains 190%",
     "player": "ScoffGD",
     "levelID": 48991380,
@@ -2905,6 +2999,46 @@
     ]
   },
   {
+    "name": "Silent Circles 27-54%",
+    "player": "PaperGuy",
+    "levelID": 12169905
+    "date": "2026-09-10",
+    "length": 24,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/JbWd8xY03JE?t=5642",
+    "showcaseVideo": "https://youtu.be/gJlP-V1DCfo",
+    "thumbnail": null,
+    "duplicateOf": "Silent Circles 27-53",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Silent Circles 42%, 38%, 26%, 40%, 42% in a row",
+    "player": "PaperGuy",
+    "levelID": 12169905,
+    "date": "2026-09-26",
+    "length": 129,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/h7ixdPudAjo",
+    "showcaseVideo": "https://youtu.be/gJlP-V1DCfo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Silent Circles 43%",
     "player": "PaperGuy",
     "levelID": 12169905,
@@ -3006,6 +3140,27 @@
     ]
   },
   {
+    "name": "silent jumpstep 5-7%; 5-13% 1 death, 99.90% accuracy; 5-10%, (5-5%), 5-8%, 5-7% in a row",
+    "player": "nensa",
+    "levelID": 147182322,
+    "date": "2026-09-05",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/q1IucFJODaM",
+    "showcaseVideo": "https://youtu.be/eTU8dfvPGaM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Noclip"
+    ]
+  },
+  {
     "name": "SILENT OPPENHEIMER 32-100%",
     "player": "Dezstro",
     "levelID": null,
@@ -3023,6 +3178,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silentium Dynamas",
+    "player": "turtl",
+    "levelID": 149551048,
+    "date": "2026-09-26",
+    "length": 81,
+    "version": 2.2,
+    "submitter": "Statera",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Y4EOxGXp5vo",
+    "showcaseVideo": "https://youtu.be/y79mUXgeehg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -3090,14 +3265,14 @@
     "player": "Reapavon",
     "levelID": null,
     "date": "2026-07-07",
-    "length": 81,
+    "length": 63,
     "version": 2.2,
     "submitter": "Reapavon",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/9oSM9ZSKChw",
     "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/70436808",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -3106,17 +3281,57 @@
     ]
   },
   {
-    "name": "Slaughterhouse (Unnerfed, Reapavon, Buffed) 78%",
+    "name": "Slaughterhouse (Unnerfed, Reapavon, Buffed) 45-100%",
     "player": "Reapavon",
     "levelID": null,
-    "date": "2026-09-13",
-    "length": 70,
+    "date": "2026-08-16",
+    "length": 38,
     "version": 2.2,
     "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/Z7tkZ9WGGSw",
+    "video": "https://www.tiktok.com/@reapavon/video/7674413578312617217 ",
     "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/77618325",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Slaughterhouse (Unnerfed, Reapavon, Buffed) 84%",
+    "player": "Reapavon",
+    "levelID": null,
+    "date": "2026-09-12",
+    "length": 58,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.tiktok.com/@reapavon/video/7684538122033515792",
+    "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/77618325",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Slaughterhouse (True Unnerfed) 26%",
+    "player": "Reapavon",
+    "levelID": 77618325,
+    "date": "2025-12-24",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.tiktok.com/@reapavon/video/7587228268038966545",
+    "showcaseVideo": "https://youtu.be/T4j0gw-FaJw",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -3418,6 +3633,26 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "tragic 61-100%",
+    "player": "ScoffGD",
+    "levelID": 148740644,
+    "date": "2026-09-26",
+    "length": 33,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Z0Zq_vpRKpE",
+    "showcaseVideo": "https://youtu.be/pXlS6uKZSYk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
