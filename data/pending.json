@@ -262,7 +262,10 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": 
+    "tags": [
+      "Level",
+      "Progress"
+    ]
   },
   {
     "name": "Apocalyptic Trilogy (Unnerfed) 56-100",
@@ -628,7 +631,11 @@
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
-    "tags": 
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Rated"
+    ]
   },
   {
     "name": "Cautious (Old) 43-89%",
@@ -1113,7 +1120,7 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/juCDq14Dvy8",
-    "showcaseVideo": "https://youtu.be/aDlLNIv2vmE
+    "showcaseVideo": "https://youtu.be/aDlLNIv2vmE",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -3001,7 +3008,7 @@
   {
     "name": "Silent Circles 27-54%",
     "player": "PaperGuy",
-    "levelID": 12169905
+    "levelID": 12169905,
     "date": "2026-09-10",
     "length": 24,
     "version": 2.2,
