@@ -412,15 +412,17 @@
     ]
   },
   {
-    "name": "Flamewall 73%, (0%), 100% in a row",
-    "player": "Cuatrocientos",
-    "levelID": 126242564,
-    "date": "2025-09-21",
-    "length": 714,
+    "name": "Tidal Wave 23-91%, 23-92% in a row",
+    "player": "Bacon",
+    "levelID": 86407629,
+    "date": "2026-08-05",
+    "length": 238,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/18ixmjwoG6Q",
-    "showcaseVideo": "https://youtu.be/GQlC5LOJisw",
+    "submitter": "gregtang47",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/PJ4cNuK5jZo",
+    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -449,6 +451,26 @@
     ]
   },
   {
+    "name": "Flamewall 73%, (0%), 100% in a row",
+    "player": "Cuatrocientos",
+    "levelID": 126242564,
+    "date": "2025-09-21",
+    "length": 714,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/18ixmjwoG6Q",
+    "showcaseVideo": "https://youtu.be/GQlC5LOJisw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Thinking Space II",
     "player": "Zoink",
     "levelID": 119544028,
@@ -465,6 +487,28 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "ORBIT 61%, (1%), 99% in a row",
+    "player": "Zoink",
+    "levelID": 133175713,
+    "date": "2026-01-29",
+    "length": 253,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/b-NzPLQDIWc?t=2493",
+    "showcaseVideo": "https://youtu.be/W70gXuSeCFc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
     ]
   },
   {
@@ -1542,6 +1586,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Silent Clubstep DX 25%",
+    "player": "nensa",
+    "levelID": 92088644,
+    "date": "2026-09-10",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2WkNMN76npk",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Silent clubstep (Old) 72%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Variant"
     ]
   },
   {
@@ -7100,6 +7165,26 @@
     "showcaseVideo": "https://youtu.be/5TKZ65gBS9A",
     "thumbnail": null,
     "duplicateOf": "Sakupen Circles",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+    "name": "Sakupen Shadows",
+    "player": "Ellie",
+    "levelID": 149029798,
+    "date": "2026-09-19",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "Ellie",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/JEPwP5UVguo",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
