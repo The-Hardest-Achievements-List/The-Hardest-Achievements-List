@@ -38,7 +38,7 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED 14-81%",
+    "name": "KOCMOC UNLEASHED (Jul. 2026) 14-81%",
     "player": "Arshadow",
     "levelID": null,
     "date": "2026-07-20",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED 69%",
+    "name": "KOCMOC UNLEASHED (Jul. 2026) 69%",
     "player": "Arshadow",
     "levelID": null,
     "date": "2026-07-22",
@@ -234,22 +234,45 @@
     ]
   },
   {
-    "name": "Sweeping Demon 2 (Apr. 2026) 86%",
-    "player": "Taiago",
-    "levelID": null,
-    "date": "2026-04-27",
-    "length": 65,
+    "name": "Heliopolis 66%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-09-21",
+    "length": 91,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/L8DeyBdD9oc",
-    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
+    "submitter": "BenjiWii",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/QQxqqF2xroc?t=11354",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
       "Progress",
-      "Pending Removal"
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Heliopolis 16-80%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-09-21",
+    "length": 87,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/cgxdJVm4FOg?t=8453",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
     ]
   },
   {
@@ -272,7 +295,7 @@
     ]
   },
   {
-    "name": "Heliopolis 24%, (0%), 47% in a row",
+    "name": "Heliopolis (Ver. 1) 24%, (0%), 47% in a row",
     "player": "Zoink",
     "levelID": 136530685,
     "date": "2026-05-15",
@@ -291,7 +314,7 @@
     ]
   },
   {
-    "name": "Vehemence 13-72%",
+    "name": "Vehemence (Apr. 2026) 13-72%",
     "player": "A6",
     "levelID": null,
     "date": "2026-04-26",
@@ -325,6 +348,48 @@
       "Level",
       "Progress",
       "2P"
+    ]
+  },
+  {
+    "name": "silent jumpstep 5-7%; 5-13% 1 death, 99.90% accuracy; 5-10%, (5-5%), 5-8%, 5-7% in a row",
+    "player": "nensa",
+    "levelID": 147182322,
+    "date": "2026-09-05",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/q1IucFJODaM",
+    "showcaseVideo": "https://youtu.be/eTU8dfvPGaM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Noclip"
+    ]
+  },
+  {
+    "name": "Eternal Silence 4-8% 4-25% 4-12% 4-25% 4-12% 4-11% 4-8% 4-65% (4-7%) 4-12% in a row",
+    "player": "cc478",
+    "levelID": 83476262,
+    "date": "2026-09-04",
+    "length": 126,
+    "version": 2.2,
+    "submitter": "cc478",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/H94n5k_ymGw",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
     ]
   },
   {
@@ -384,43 +449,23 @@
     ]
   },
   {
-    "name": "Artemis 13 (Aug. 2026) 32-93%",
+    "name": "Artemis 13 (Unnerfed) 40-100%",
     "player": "Zoink",
-    "levelID": null,
-    "date": "2026-08-05",
+    "levelID": 148599120,
+    "date": "2026-08-28",
     "length": 42,
     "version": 2.2,
     "submitter": "fwoggy",
-    "video": "https://youtu.be/VksaNKkDlms?t=4996",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
+    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
-      "Tentative",
-      "Pending Removal"
-    ]
-  },
-  {
-    "name": "Artemis 13 (Aug. 2026) 42-100%",
-    "player": "Zoink",
-    "levelID": null,
-    "date": "2026-08-12",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "video": "https://youtu.be/K-OTcQrbi6w?t=8725",
-    "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative",
-      "Pending Removal"
+      "Progress"
     ]
   },
   {
@@ -489,7 +534,7 @@
     "video": "https://youtu.be/f6W2fhSeR_4",
     "showcaseVideo": null,
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/7c766b0127cab5700ef384af0da676b4e48f970b/images/thumbnails/Yellowopolis%20(Old).png",
-    "duplicateOf": "Heliopolis 51%",
+    "duplicateOf": "Heliopolis (Ver. 1) 51%",
     "notes": null,
     "tags": [
       "Level",
@@ -507,7 +552,7 @@
     "video": "https://youtu.be/L4WET93RKt0",
     "showcaseVideo": null,
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/6c776ae92ebe15239d897d08abd1ce1902628baf/images/thumbnails/Yellowopolis.png",
-    "duplicateOf": "Heliopolis 51%",
+    "duplicateOf": "Heliopolis (Ver. 1) 51%",
     "notes": "Those who know...",
     "tags": [
       "Level",
@@ -531,26 +576,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
-    "player": "Chiikawa",
-    "levelID": 83476262,
-    "date": "2026-07-22",
-    "length": 57,
-    "version": 2.2,
-    "submitter": "Chiikawa",
-    "video": "https://youtu.be/VxZz26KgQdU",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "5 ship passes (6-9%) and 3 pyramid jumps passes (12%) out of 7 consecutive attempts.",
-    "tags": [
-      "Level",
-      "Consistency",
-      "Tentative",
-      "Pending Removal"
     ]
   },
   {
@@ -609,7 +634,7 @@
     ]
   },
   {
-    "name": "Vehemence 24-79%",
+    "name": "Vehemence (Apr. 2026) 24-79%",
     "player": "A6",
     "levelID": null,
     "date": "2026-04-21",
@@ -627,7 +652,7 @@
     ]
   },
   {
-    "name": "Vehemence 41%",
+    "name": "Vehemence (Apr. 2026) 41%",
     "player": "A6",
     "levelID": null,
     "date": "2026-04-28",
@@ -682,16 +707,16 @@
     ]
   },
   {
-    "name": "Artemis 13 (Aug. 2026) 70%",
+    "name": "Artemis 13 (Unnerfed) 70%",
     "player": "Zoink",
-    "levelID": null,
+    "levelID": 148599120,
     "date": "2026-08-03",
     "length": 51,
     "version": 2.2,
     "submitter": "fwoggy",
     "video": "https://youtu.be/oPqO8WbKAJo?t=6068",
     "showcaseVideo": "https://youtu.be/QJf5q1cIPuA",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Artemis%2013.png",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -791,6 +816,28 @@
     "tags": [
       "Level",
       "Consistency"
+    ]
+  },
+  {
+    "name": "BOOBAWAMBA 67%, 86% in a row",
+    "player": "wPopoff",
+    "levelID": 110816181,
+    "date": "2026-01-16",
+    "length": 243,
+    "version": 2.2,
+    "submitter": "NatalieMeow",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/szh-Z6eU3UU?t=4178",
+    "showcaseVideo": "https://youtu.be/qaz4M52CxWU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
     ]
   },
   {
@@ -1138,7 +1185,7 @@
     ]
   },
   {
-    "name": "Heliopolis 37-100%",
+    "name": "Heliopolis (Ver. 1) 37-100%",
     "player": "Zoink",
     "levelID": 136530685,
     "date": "2026-05-10",
@@ -1307,6 +1354,26 @@
     ]
   },
   {
+    "name": "cry me a river 107%, 371% in a row",
+    "player": "klimk",
+    "levelID": 76403850,
+    "date": "2026-07-08",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1TqujqU_b9M",
+    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Avernus 77%, 98% in a row",
     "player": "turtl",
     "levelID": 89496627,
@@ -1362,6 +1429,27 @@
     ]
   },
   {
+    "name": "Defeated Circles 89%, 100% in a row",
+    "player": "Vorten",
+    "levelID": 120012581,
+    "date": "2026-06-04",
+    "length": 112,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/S7azvS0TQts",
+    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "KOCMOC 224%",
     "player": "Netermind",
     "levelID": 87665224,
@@ -1397,6 +1485,26 @@
       "Level",
       "Verified",
       "Rated"
+    ]
+  },
+  {
+    "name": "Sakupen Clubstep 4-22%, (4-6%, 4-5%), 4-18% in a row",
+    "player": "cc478",
+    "levelID": 149221498,
+    "date": "2026-09-05",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "nensa",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Ktt1OnCkGGg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -1492,7 +1600,7 @@
     ]
   },
   {
-    "name": "Heliopolis 27-73%",
+    "name": "Heliopolis (Ver. 1) 27-73%",
     "player": "Zoink",
     "levelID": 136530685,
     "date": "2025-10-02",
@@ -1510,7 +1618,7 @@
     ]
   },
   {
-    "name": "Angelicide 48-95%",
+    "name": "Angelicide (May 2026) 48-95%",
     "player": "Druki",
     "levelID": 120478542,
     "date": "2026-05-17",
@@ -1691,6 +1799,25 @@
       "Progress"
     ]
   },
+    {
+    "name": "Exasperation 67%",
+    "player": "Zoink",
+    "levelID": 31325851,
+    "date": "2025-08-21",
+    "length": 221,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/vomRQRxmJpY",
+    "showcaseVideo": "https://youtu.be/DDaO-V12JGY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
   {
     "name": "Quanteuse processing",
     "player": "Zoink",
@@ -1805,25 +1932,6 @@
     ]
   },
   {
-    "name": "Exasperation 67%",
-    "player": "Zoink",
-    "levelID": 31325851,
-    "date": "2025-08-21",
-    "length": 221,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/vomRQRxmJpY",
-    "showcaseVideo": "https://youtu.be/DDaO-V12JGY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
-  },
-  {
     "name": "Azure Flare (VERTOP) 36-91%",
     "player": "VERTOP",
     "levelID": null,
@@ -1876,6 +1984,25 @@
     "tags": [
       "Level",
       "Verified"
+    ]
+  },
+  {
+    "name": "Exasperation 65-100%",
+    "player": "Zoink",
+    "levelID": 31325851,
+    "date": "2025-08-08",
+    "length": 80,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/OCyCMPj_RIQ",
+    "showcaseVideo": "https://youtu.be/DDaO-V12JGY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
     ]
   },
   {
@@ -2006,6 +2133,27 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 23%",
+    "player": "dewbbs",
+    "levelID": 102647436,
+    "date": "2026-09-12",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/qt9UEprkezg",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
     ]
   },
   {
@@ -2159,23 +2307,21 @@
     ]
   },
   {
-    "name": "Aeternus 20%",
-    "player": "dewbbs",
-    "levelID": 102647436,
-    "date": "2026-05-12",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/hMh2waoolfQ",
-    "showcaseVideo": "https://youtu.be/H0WIku2Yjg8",
+    "name": "Silent clubstep (Old) 2.1 14-100%",
+    "player": "noname228gg",
+    "levelID": 38692301,
+    "date": "2026-04-29",
+    "length": 73,
+    "version": 2.1,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/RqJk2Z3dPWI",
+    "showcaseVideo": "https://youtu.be/mTkrql917bE",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
-      "Tentative",
-      "Pending Removal"
+      "Progress"
     ]
   },
   {
@@ -2256,7 +2402,7 @@
     ]
   },
   {
-    "name": "Angelicide 53-100% 2 deaths, 99.98% accuracy",
+    "name": "Angelicide (Apr. 2026) 53-100% 2 deaths, 99.98% accuracy",
     "player": "Druki",
     "levelID": 120478542,
     "date": "2026-04-19",
@@ -2350,7 +2496,7 @@
     ]
   },
   {
-    "name": "Angelicide 37-82%",
+    "name": "Angelicide (May 2026) 37-82%",
     "player": "Druki",
     "levelID": 120478542,
     "date": "2026-05-24",
@@ -2368,7 +2514,7 @@
     ]
   },
   {
-    "name": "Angelicide 37-100% 7 deaths, 99.83% accuracy",
+    "name": "Angelicide (May 2026) 37-100% 7 deaths, 99.83% accuracy",
     "player": "Druki",
     "levelID": 120478542,
     "date": "2026-05-31",
@@ -2556,24 +2702,6 @@
     ]
   },
   {
-    "name": "Exasperation 65-100%",
-    "player": "Zoink",
-    "levelID": 31325851,
-    "date": "2025-08-08",
-    "length": 80,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/OCyCMPj_RIQ",
-    "showcaseVideo": "https://youtu.be/DDaO-V12JGY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Anathema",
     "player": "Whizkid05",
     "levelID": 112313819,
@@ -2743,6 +2871,27 @@
     ]
   },
   {
+    "name": "Silentman Adventures",
+    "player": "nickname",
+    "levelID": 147442928,
+    "date": "2026-08-21",
+    "length": 87,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/NE89R0tA8fU",
+    "showcaseVideo": "https://youtu.be/y3qMBVEbIuw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Aquamarine",
     "player": "seels",
     "levelID": 77331805,
@@ -2815,7 +2964,7 @@
     ]
   },
   {
-    "name": "Angelicide 10-48%",
+    "name": "Angelicide (May 2026) 10-48%",
     "player": "Druki",
     "levelID": 120478542,
     "date": "2026-05-24",
@@ -2829,7 +2978,8 @@
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Progress",
+      "Pending Removal"
     ]
   },
   {
@@ -2904,6 +3054,26 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Azure Flare",
+    "player": "Diamond",
+    "levelID": 149290595,
+    "date": "2026-09-21",
+    "length": 90,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r6hQ5Se2i8U",
+    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -3004,11 +3174,13 @@
     "name": "Angelicide 68-100%",
     "player": "Druki",
     "levelID": 120478542,
-    "date": "2025-10-20",
+    "date": "2026-08-22",
     "length": 24,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/Suh3Uyj6omM",
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/BJp_gvyZRlQ?t=7686",
     "showcaseVideo": "https://youtu.be/czV24THGlA4",
     "thumbnail": null,
     "duplicateOf": null,
@@ -3132,24 +3304,6 @@
       "Level",
       "Consistency",
       "Rated"
-    ]
-  },
-  {
-    "name": "Silent clubstep (Old) 2.1 14-100%",
-    "player": "noname228gg",
-    "levelID": 38692301,
-    "date": "2026-04-29",
-    "length": 73,
-    "version": 2.1,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/RqJk2Z3dPWI",
-    "showcaseVideo": "https://youtu.be/mTkrql917bE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -3421,10 +3575,10 @@
     ]
   },
   {
-    "name": "Angelicide 61% 4 deaths, 99.91% accuracy",
+    "name": "Angelicide (Jun. 2026) 61% 4 deaths, 99.91% accuracy",
     "player": "Druki",
     "levelID": 120478542,
-    "date": "2025-06-09",
+    "date": "2026-06-09",
     "length": 59,
     "version": 2.2,
     "submitter": "fwoggy",
@@ -4007,29 +4161,6 @@
       "Consistency",
       "Rated",
       "Tentative"
-    ]
-  },
-  {
-    "name": "cry me a river 180%, 169% in a row",
-    "player": "klimk",
-    "levelID": 76403850,
-    "date": "2025-07-03",
-    "length": 85,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/G7IXpEgBaQU",
-    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": [
-      "cry me a river is a level consisting of Slaughterhouse River's part (49-58%) x5 in a row",
-      "This achievement is equivalent to River x9, x8 in a row"
-    ],
-    "tags": [
-      "Challenge",
-      "Consistency",
-      "Tentative",
-      "Pending Removal"
     ]
   },
   {
@@ -5080,6 +5211,25 @@
     ]
   },
   {
+    "name": "Maniacal Chains",
+    "player": "spcreat",
+    "levelID": 48991380,
+    "date": "2026-04-09",
+    "length": 116,
+    "version": 2.2,
+    "submitter": "marleywave",
+    "video": "https://youtu.be/TzeMJeIu6bY",
+    "showcaseVideo": "https://youtu.be/EbGiIG8j2A0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "Death Factory",
     "player": "dewbbs",
     "levelID": 95424590,
@@ -5547,22 +5697,23 @@
     ]
   },
   {
-    "name": "Silent Circles 27-53%",
-    "player": "SeptaGon7",
+    "name": "Silent Circles 27-54%",
+    "player": "PaperGuy",
     "levelID": 12169905,
-    "date": "2026-05-20",
-    "length": 14,
+    "date": "2026-09-10",
+    "length": 24,
     "version": 2.2,
-    "submitter": "stax",
-    "video": "https://youtu.be/9cmj4l_3Oaw",
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/JbWd8xY03JE?t=5642",
     "showcaseVideo": "https://youtu.be/gJlP-V1DCfo",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
-      "Pending Removal"
+      "Progress"
     ]
   },
   {
@@ -5576,7 +5727,7 @@
     "video": "https://youtu.be/02CjrfNq8FQ",
     "showcaseVideo": null,
     "thumbnail": null,
-    "duplicateOf": "Silent Circles 27-53%",
+    "duplicateOf": "Silent Circles 27-54%",
     "notes": null,
     "tags": [
       "Level",
@@ -5594,6 +5745,25 @@
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/h2wmRMgACH4",
     "showcaseVideo": "https://youtu.be/TwPQH9N8X_k",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "KOCMOC",
+    "player": "Zoink",
+    "levelID": 87665224,
+    "date": "2023-05-12",
+    "length": 87,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/2CxE-UWCIG4",
+    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -6368,26 +6538,7 @@
     ]
   },
   {
-    "name": "KOCMOC",
-    "player": "Zoink",
-    "levelID": 87665224,
-    "date": "2023-05-12",
-    "length": 87,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/2CxE-UWCIG4",
-    "showcaseVideo": "https://youtu.be/ulaXL0SdzZk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Bassline Junkie",
+    "name": "BASSLINE JUNKIE",
     "player": "Karma",
     "levelID": 143300771,
     "date": "2026-05-23",
@@ -6402,25 +6553,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Maniacal Chains",
-    "player": "spcreat",
-    "levelID": 48991380,
-    "date": "2026-04-09",
-    "length": 116,
-    "version": 2.2,
-    "submitter": "marleywave",
-    "video": "https://youtu.be/TzeMJeIu6bY",
-    "showcaseVideo": "https://youtu.be/EbGiIG8j2A0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
     ]
   },
   {
@@ -6649,6 +6781,45 @@
       "Progress",
       "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Prismline",
+    "player": "Wain",
+    "levelID": 135148907,
+    "date": "2026-03-07",
+    "length": 92,
+    "version": 2.2,
+    "submitter": "QwidziT",
+    "video": "https://youtu.be/pIHOHz3i0Rw",
+    "showcaseVideo": "https://youtu.be/4P-A0_CfMXY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Legoshi Dance 41%",
+    "player": "foxyan17",
+    "levelID": 107008664,
+    "date": "2026-06-09",
+    "length": 34,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/ffZ6d46hKtE?t=85",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -8104,6 +8275,26 @@
     ]
   },
   {
+    "name": "Shadow Of The Past",
+    "player": "LennyFeus",
+    "levelID": 143909846,
+    "date": "2026-07-01",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LEyo0LJV8os",
+    "showcaseVideo": "https://youtu.be/ne0F1wfqq-4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "KOCMOC (Old)",
     "player": "Trick",
     "levelID": 91901757,
@@ -8779,6 +8970,45 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "CONVULSION",
+    "player": "Whizkid05",
+    "levelID": 113322063,
+    "date": "2024-12-23",
+    "length": 66,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/qeRKuyU3eGI",
+    "showcaseVideo": "https://youtu.be/xeaMqDAssQM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Always Miss You",
+    "player": "Ekskriptn",
+    "levelID": 148120101,
+    "date": "2026-06-06",
+    "length": 68,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r5TE8YczBgQ",
+    "showcaseVideo": "https://youtu.be/xdA10zstw0U",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
