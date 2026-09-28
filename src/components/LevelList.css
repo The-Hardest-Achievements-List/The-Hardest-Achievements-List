@@ -675,11 +675,29 @@
 }
 
 .list__count {
+    display: inline-block;
     margin: 0 0 12px;
+    padding: 0;
+    border: none;
+    background: none;
     font-family: var(--mono);
     font-size: 13px;
     color: var(--ink-3);
     line-height: 1.4;
+    cursor: pointer;
+    text-align: left;
+}
+
+.list__count:hover,
+.list__count:focus-visible {
+    color: var(--ink);
+    text-decoration: underline;
+    outline: none;
+}
+
+.list__count.is-copied {
+    color: var(--acc);
+    text-decoration: none;
 }
 
 .list__empty {

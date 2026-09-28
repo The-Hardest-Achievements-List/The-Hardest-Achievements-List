@@ -1166,9 +1166,19 @@ export default function App() {
             setSortDir={setSortDir}
             mode={mode}
             setMode={(m) => navigate(m, active)}
-            listKind={isMainList ? "main" : isPendingList ? "pending" : null}
+            listKind={
+              isMainList
+                ? "main"
+                : isPendingList
+                  ? "pending"
+                  : isLegacyList
+                    ? "legacy"
+                    : null
+            }
             totalEntryCount={
-              isMainList || isPendingList ? getMainListCount(rawData) : null
+              isMainList || isPendingList || isLegacyList
+                ? getMainListCount(rawData)
+                : null
             }
             otherList={filteredOtherList}
             showJumpToList={hasListContextFilter}

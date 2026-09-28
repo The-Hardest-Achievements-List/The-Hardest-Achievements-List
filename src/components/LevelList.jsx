@@ -82,6 +82,27 @@ function getAchievementListKey(achievement) {
   return `${achievement.name}::${achievement.player ?? ""}::${achievement.date ?? ""}`;
 }
 
+/** Flatten parent → variants in display order for clipboard copy. */
+function buildAchievementNamesCopyText(achievements) {
+  const lines = [];
+  for (const achievement of achievements) {
+    const name = achievement?.name;
+    if (typeof name === "string" && name.trim()) lines.push(name);
+    const duplicates = achievement?.duplicates;
+    if (!Array.isArray(duplicates)) continue;
+    for (const duplicate of duplicates) {
+      if (duplicate?.isReplacement) continue;
+      const duplicateName = duplicate?.name;
+      if (typeof duplicateName === "string" && duplicateName.trim()) {
+        lines.push(duplicateName);
+      }
+    }
+  }
+  return lines.join("\n");
+}
+
+const COPY_NAMES_FEEDBACK_MS = 500;
+
 function getDocumentTop(el) {
   if (!el) return 0;
   const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
@@ -254,6 +275,8 @@ export default function LevelList({
 }) {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const [highlightKey, setHighlightKey] = React.useState(null);
+  const [namesCopied, setNamesCopied] = React.useState(false);
+  const namesCopyTimerRef = React.useRef(0);
   const jumpHandledKeyRef = React.useRef(null);
   const safeData = Array.isArray(data) ? data : [];
   const { mainAchievements } = React.useMemo(
@@ -314,13 +337,56 @@ export default function LevelList({
     sumExtrasFrom(extraOffsets, 0);
   const visibleAchievements = mainAchievements.slice(start, end);
   const showEntryCount =
-    (listKind === "main" || listKind === "pending") &&
+    (listKind === "main" ||
+      listKind === "pending" ||
+      listKind === "legacy") &&
     typeof totalEntryCount === "number";
   const entryCountLabel = showEntryCount
     ? hasActiveFilters && mainAchievements.length !== totalEntryCount
       ? `${mainAchievements.length} of ${totalEntryCount} entries`
       : `${totalEntryCount} ${totalEntryCount === 1 ? "entry" : "entries"}`
     : null;
+
+  const handleCopyAchievementNames = React.useCallback(() => {
+    const text = buildAchievementNamesCopyText(mainAchievements);
+    if (!text) return;
+
+    const showCopied = () => {
+      setNamesCopied(true);
+      window.clearTimeout(namesCopyTimerRef.current);
+      namesCopyTimerRef.current = window.setTimeout(() => {
+        setNamesCopied(false);
+      }, COPY_NAMES_FEEDBACK_MS);
+    };
+
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(showCopied).catch(() => {});
+      return;
+    }
+
+    // Fallback for older browsers / insecure contexts.
+    try {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      showCopied();
+    } catch {
+      // Ignore copy failures — label stays unchanged.
+    }
+  }, [mainAchievements]);
+
+  React.useEffect(
+    () => () => {
+      window.clearTimeout(namesCopyTimerRef.current);
+    },
+    [],
+  );
 
   React.useLayoutEffect(() => {
     if (!pendingJumpKey) {
@@ -559,9 +625,15 @@ export default function LevelList({
           </div>
         </aside>
         {showEntryCount ? (
-          <p className="list__count" aria-live="polite">
-            {entryCountLabel}
-          </p>
+          <button
+            type="button"
+            className={`list__count${namesCopied ? " is-copied" : ""}`}
+            onClick={handleCopyAchievementNames}
+            title="Copy achievement names (filtered list, variants under parents; replacements excluded)"
+            aria-live="polite"
+          >
+            {namesCopied ? "Copied" : entryCountLabel}
+          </button>
         ) : null}
         {safeData.length === 0 ? (
           <div className="list__empty">No entries found.</div>
