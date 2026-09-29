@@ -7412,6 +7412,24 @@
     ]
   },
   {
+    "name": "lava",
+    "player": "seels",
+    "levelID": 117687187,
+    "date": "2025-04-20",
+    "length": 14,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/RX39jEns6vM",
+    "showcaseVideo": "https://youtu.be/p71uiCl3aHI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
     "name": "EXPIRATION DATE",
     "player": "Quad",
     "levelID": 145704767,
