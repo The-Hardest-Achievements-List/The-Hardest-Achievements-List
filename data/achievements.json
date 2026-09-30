@@ -2202,14 +2202,14 @@
     ]
   },
   {
-    "name": "SARY NEVER CLEAR (Optic Sunflow) 88%",
-    "player": "noname228gg",
+    "name": "SARY NEVER CLEAR (Optic Sunflow) 90%",
+    "player": "Anro",
     "levelID": 609629,
-    "date": "2025-12-25",
+    "date": "2026-09-28",
     "length": 69,
     "version": 2.2,
-    "submitter": "hyperboll",
-    "video": "https://youtu.be/oZo5QhoK66U",
+    "submitter": "anaphflora",
+    "video": "https://youtu.be/ZiwownRl8KA",
     "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
     "thumbnail": null,
     "duplicateOf": null,
@@ -4503,6 +4503,27 @@
     "tags": [
       "Level",
       "Verified"
+    ]
+  },
+  {
+    "name": "Firework (Unnerfed, FashRod)",
+    "player": "FashRod",
+    "levelID": 122481363,
+    "date": "2025-07-01",
+    "length": 127,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/dwtEmre1QfE",
+    "showcaseVideo": "https://youtu.be/2zdkj3begOE",
+    "thumbnail": null,
+    "duplicateOf": "Firework (Unnerfed),
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
     ]
   },
   {
