@@ -190,25 +190,6 @@
     ]
   },
   {
-    "name": "Society",
-    "player": "wPopoff",
-    "levelID": 127323087,
-    "date": "2026-06-21",
-    "length": 135,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/3CoEaH1CM7o",
-    "showcaseVideo": "https://youtu.be/NykJS4DCSI0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "Heliopolis 85%",
     "player": "Zoink",
     "levelID": 136530685,
@@ -227,6 +208,25 @@
       "Level",
       "Progress",
       "Tentative"
+    ]
+  },
+  {
+    "name": "Society",
+    "player": "wPopoff",
+    "levelID": 127323087,
+    "date": "2026-06-21",
+    "length": 135,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/3CoEaH1CM7o",
+    "showcaseVideo": "https://youtu.be/NykJS4DCSI0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
