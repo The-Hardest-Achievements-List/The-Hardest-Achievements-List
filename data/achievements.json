@@ -209,6 +209,27 @@
     ]
   },
   {
+    "name": "Heliopolis 85%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-10-01",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gO1nQECPU2I",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Artemis 13",
     "player": "Zoink",
     "levelID": 148598469,
@@ -248,27 +269,6 @@
       "Low Hertz",
       "Progress",
       "Rated",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Heliopolis 66%",
-    "player": "Zoink",
-    "levelID": 136530685,
-    "date": "2026-09-21",
-    "length": 91,
-    "version": 2.2,
-    "submitter": "BenjiWii",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/QQxqqF2xroc?t=11354",
-    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
       "Tentative"
     ]
   },
