@@ -91,6 +91,14 @@ const EDITORS = [
     },
   },
   {
+    name: "raine",
+    roles: ["List Moderator"],
+    url: {
+      youtube: "https://www.youtube.com/@rtwnr",
+      discord: null,
+    },
+  },
+  {
     name: "Excryst",
     roles: ["List & Website Helper"],
     url: {
@@ -111,14 +119,6 @@ const EDITORS = [
     roles: ["Server Moderator"],
     url: {
       youtube: "https://www.youtube.com/@exiled_shadegd",
-      discord: null,
-    },
-  },
-  {
-    name: "raine",
-    roles: ["Server Moderator"],
-    url: {
-      youtube: "https://www.youtube.com/@rtwnr",
       discord: null,
     },
   },
