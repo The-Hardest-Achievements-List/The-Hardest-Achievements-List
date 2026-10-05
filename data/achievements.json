@@ -96,21 +96,21 @@
     ]
   },
   {
-    "name": "GRIEF 97%",
+    "name": "GRIEF",
     "player": "Doggie",
-    "levelID": null,
-    "date": "2026-06-13",
-    "length": 162,
+    "levelID": 149992717,
+    "date": "2026-10-05",
+    "length": 167,
     "version": 2.2,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/Emd2tWP2FkI",
+    "submitter": "Quinnsapian",
+    "video": "https://www.youtube.com/watch?v=fV9rheIAddk&t=1944",
     "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/GRIEF%20madness.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress",
+      "Verified",
       "Tentative",
       "2P"
     ]
