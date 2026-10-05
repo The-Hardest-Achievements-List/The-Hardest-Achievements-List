@@ -330,25 +330,6 @@
     ]
   },
   {
-    "name": "GRIEF (Jan. 2026) 25-100%",
-    "player": "Doggie",
-    "levelID": null,
-    "date": "2026-01-27",
-    "length": 117,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/fwAdUZ_TabE?t=1449",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "2P"
-    ]
-  },
-  {
     "name": "silent jumpstep 5-7%; 5-13% 1 death, 99.90% accuracy; 5-10%, (5-5%), 5-8%, 5-7% in a row",
     "player": "nensa",
     "levelID": 147182322,
@@ -371,7 +352,7 @@
     ]
   },
   {
-    "name": "Eternal Silence 4-8% 4-25% 4-12% 4-25% 4-12% 4-11% 4-8% 4-65% (4-7%) 4-12% in a row",
+    "name": "Eternal Silence 4-8%, 4-25%, 4-12%, 4-25%, 4-12%, 4-11%, 4-8%, 4-65%, (4-7%), 4-12% in a row",
     "player": "cc478",
     "levelID": 83476262,
     "date": "2026-09-04",
@@ -383,7 +364,7 @@
     "video": "https://youtu.be/H94n5k_ymGw",
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
-    "duplicateOf": "Eternal Silence 5-25%, 5-14%, 5-12%, (5-6%), 5-17%, (5-6%), 5-12% in a row",
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
