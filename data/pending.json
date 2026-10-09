@@ -564,8 +564,8 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/ScSPaf3hs24?t=4625",
-    "showcaseVideo": null,
-    "thumbnail": null,
+    "showcaseVideo": "https://youtu.be/ezK90juCpYo",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/a6a121a9d46e6cc96c578c771f0b3bd49be11f2c/images/thumbnails/CHROMEDOLL.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -695,7 +695,7 @@
     ]
   },
   {
-    "name": "Despair Code Consistency",
+    "name": "Despair Code 14-29 x2, 14-33 in a row",
     "player": "Infinny",
     "levelID": null,
     "date": "2026-09-05",
@@ -1207,26 +1207,6 @@
     ]
   },
   {
-    "name": "FINAL FLIGHT 49% x2 in a row",
-    "player": "Axination",
-    "levelID": 104496896,
-    "date": "2026-09-24",
-    "length": 12,
-    "version": 2.2,
-    "submitter": "-",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Qjjz0ASC5A0",
-    "showcaseVideo": "https://youtu.be/-znBIHZDUfw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Flashbang 22-96%",
     "player": "LordVadercraft",
     "levelID": null,
@@ -1387,26 +1367,6 @@
     ]
   },
   {
-    "name": "Hypnosis 10-46%",
-    "player": "OverGD",
-    "levelID": 72829529,
-    "date": "2026-03-22",
-    "length": 11,
-    "version": 2.2,
-    "submitter": "Cinder",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/xJ2zOpf-KL0?t=1017",
-    "showcaseVideo": "https://youtu.be/LiS1LQC5hzo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Progress"
-    ]
-  },
-  {
     "name": "i n j u r y 59%",
     "player": "kywy",
     "levelID": null,
@@ -1428,7 +1388,7 @@
   },
   {
     "name": "Illusion of Chaos 55-91%",
-    "player": "-",
+    "player": "Ayrelia",
     "levelID": 117897179,
     "date": "2026-08-16",
     "length": 8,
@@ -1436,7 +1396,7 @@
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": null,
+    "video": "https://youtu.be/MgSFL860NAE",
     "showcaseVideo": "https://youtu.be/LOUUz-afIi8",
     "thumbnail": null,
     "duplicateOf": null,
@@ -3378,46 +3338,6 @@
       "Level",
       "Consistency",
       "Rated"
-    ]
-  },
-  {
-    "name": "WarCora 13-65%",
-    "player": "seregiusz",
-    "levelID": 89189775,
-    "date": "2026-09-11",
-    "length": 28,
-    "version": 2.2,
-    "submitter": "zSayorii",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/v9ioityy2RE",
-    "showcaseVideo": "https://youtu.be/IkwmfQLjq9k",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "WarCora 45%",
-    "player": "seregiusz",
-    "levelID": 89189775,
-    "date": "2026-09-14",
-    "length": 24,
-    "version": 2.2,
-    "submitter": "zSayorii",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/hMu-VQrZVQw",
-    "showcaseVideo": "https://youtu.be/IkwmfQLjq9k",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
