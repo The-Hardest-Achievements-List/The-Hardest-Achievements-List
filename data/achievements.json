@@ -789,14 +789,14 @@
   {
     "name": "GRIEF madness 85%",
     "player": "Doggie",
-    "levelID": 149992717,
+    "levelID": null,
     "date": "2024-11-01",
     "length": 138,
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/YHH5CFQidU4",
     "showcaseVideo": null,
-    "thumbnail": null,
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/149992717",
     "duplicateOf": null,
     "notes": null,
     "tags": [
