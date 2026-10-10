@@ -188,6 +188,26 @@
     ]
   },
   {
+    "name": "Aeternus 67-94%",
+    "player": "Bacon",
+    "levelID": 102647436,
+    "date": "2026-09-30",
+    "length": 20,
+    "version": 2.2,
+    "submitter": "Silkizinho",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Qckw6uNj6Es",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Angelicide 6-59%",
     "player": "Druki",
     "levelID": 120478542,
@@ -634,23 +654,23 @@
     ]
   },
   {
-    "name": "Cyber Raptor 93%",
+    "name": "Cyber Raptor",
     "player": "Lobster",
     "levelID": 85174455,
-    "date": "2026-06-05",
-    "length": 660,
+    "date": "2026-09-27",
+    "length": 708,
     "version": 2.2,
     "submitter": "TYATYAPKA",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/X0uqmrkzfHI",
+    "video": "https://youtu.be/zxojmwuEBo0",
     "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      "Progress"
+      "Verified"
     ]
   },
   {
@@ -735,17 +755,17 @@
     ]
   },
   {
-    "name": "Despair Code 35-80%",
+    "name": "Despair Code 35-100%",
     "player": "Infinny",
     "levelID": null,
-    "date": "2026-09-04",
-    "length": 9,
+    "date": "2026-09-28",
+    "length": 15,
     "version": 2.2,
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://www.youtube.com/shorts/CxxOt2V7s44?feature=share",
-    "showcaseVideo": null,
+    "showcaseVideo": "https://youtu.be/kXueAD_M1f8",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -852,6 +872,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "DIOOZ GOD",
+    "player": "noobguy1",
+    "levelID": 149618395,
+    "date": "2026-09-27",
+    "length": 3,
+    "version": 2.2,
+    "submitter": "bananas",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/34NmzfO_LWc",
+    "showcaseVideo": "https://youtu.be/x3iOhnuxfGk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
     ]
   },
   {
@@ -1367,6 +1407,26 @@
     ]
   },
   {
+    "name": "Herr Machine 35-100%, (29-31%), 29-100% in a row",
+    "player": "lanx",
+    "levelID": 142529115,
+    "date": "2026-09-26",
+    "length": 144,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/e_wIioi0JNc",
+    "showcaseVideo": "https://youtu.be/VgbZTWyu4bI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "i n j u r y 59%",
     "player": "kywy",
     "levelID": null,
@@ -1407,6 +1467,26 @@
     ]
   },
   {
+    "name": "Infernis 37-81%",
+    "player": "playlino",
+    "levelID": null,
+    "date": "2026-09-27",
+    "length": 41,
+    "version": 2.2,
+    "submitter": "playlino",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/EDL7WV2bBmk",
+    "showcaseVideo": "https://youtu.be/6HZ_4kKhWAM",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Infernis.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Infernis 41%",
     "player": "playlino",
     "levelID": null,
@@ -1416,8 +1496,8 @@
     "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/oEaosQ57qzg",
-    "showcaseVideo": "https://youtu.be/M53z6ey_91A",
+    "video": "https://youtu.be/EDL7WV2bBmk",
+    "showcaseVideo": "https://youtu.be/6HZ_4kKhWAM",
     "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Infernis.png?raw=true",
     "duplicateOf": null,
     "notes": null,
@@ -1627,26 +1707,6 @@
       "Progress",
       "Rated",
       "Mobile"
-    ]
-  },
-  {
-    "name": "KOCMOC publicrelease (Ver. 4) 14-71%",
-    "player": "St3vexgmd",
-    "levelID": 149267340,
-    "date": "2026-09-07",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/r6HrhFedS30",
-    "showcaseVideo": "https://youtu.be/0Grvott58g0",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/69196070",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -2357,6 +2417,26 @@
     ]
   },
   {
+    "name": "Sakupen Clubstep 4-23%",
+    "player": "cc478",
+    "levelID": 149221498,
+    "date": "2026-09-05",
+    "length": 15,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Ktt1OnCkGGg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Sevvend Clubstep 62%, 100% in a row",
     "player": "Kot",
     "levelID": 120255728,
@@ -2598,6 +2678,27 @@
     ]
   },
   {
+    "name": "Silent clubstep (Old) Mobile 9-18%",
+    "player": "Emp",
+    "levelID": 38692301,
+    "date": "2026-09-12",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/Empernaduh/status/2098843001116143971",
+    "showcaseVideo": "https://youtu.be/mTkrql917bE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Mobile"
+    ]
+  },
+  {
     "name": "Silent clubstep (Old) Mobile 9-18% x2 in a row",
     "player": "Emp",
     "levelID": 38692301,
@@ -2616,6 +2717,26 @@
       "Level",
       "Consistency",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Silent DeStep 15%",
+    "player": "Emp",
+    "levelID": 83282566,
+    "date": "2026-09-30",
+    "length": 15,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/S_lhdd0dFBE",
+    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2870,23 +2991,24 @@
     ]
   },
   {
-    "name": "Society (Unnerfed) 15-35%",
-    "player": "xXMasterXx",
-    "levelID": 143160946,
-    "date": "2026-05-10",
-    "length": 24,
+    "name": "Sodium Oxybutyrate 60hz Mobile",
+    "player": "babapro",
+    "levelID": 117982339,
+    "date": "2026-09-27",
+    "length": 6,
     "version": 2.2,
-    "submitter": "zmercha",
+    "submitter": "zSayorii",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/6IHYgSM-Mxk",
-    "showcaseVideo": "https://youtu.be/NBTRzspE",
+    "video": "https://youtu.be/K9SGQZ_-95k",
+    "showcaseVideo": "https://youtu.be/8kXWQ_y2w00",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
-      "Level",
-      "Progress"
+      "Challenge",
+      "Low Hertz",
+      "Mobile"
     ]
   },
   {
@@ -3260,23 +3382,63 @@
     ]
   },
   {
-    "name": "Ultra RealistiK 40-71%",
+    "name": "Ultra RealistiK 39%",
     "player": "marleywave",
     "levelID": 143357580,
-    "date": "2026-09-08",
-    "length": 14,
+    "date": "2026-09-28",
+    "length": 22,
     "version": 2.2,
     "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/NcHDho6L1ys",
-    "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/241b503788c351ae46cf8eea182244fcd1bc2256/images/thumbnails/Ultra%20RealistiK.png",
+    "video": "https://youtu.be/30Cmf9vjYh8",
+    "showcaseVideo": "null,
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Ultra RealistiK 33-56%",
+    "player": "marleywave",
+    "levelID": 143357580,
+    "date": "2026-10-01",
+    "length": 11,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/sJ_34YAmfAo",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Ultra RealistiK 40-100% 1 death, 99.92% accuracy",
+    "player": "marleywave",
+    "levelID": 143357580,
+    "date": "2026-10-01",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/YFgkFkWXq2g",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
     ]
   },
   {
@@ -3291,7 +3453,7 @@
     "estimateUpper": null,
     "video": "https://youtu.be/NcHDho6L1ys",
     "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/241b503788c351ae46cf8eea182244fcd1bc2256/images/thumbnails/Ultra%20RealistiK.png",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -3317,27 +3479,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "walter white 66%, (0%), 100% in a row",
-    "player": "GeoDom85YT",
-    "levelID": 81011195,
-    "date": "2026-08-25",
-    "length": 209,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/SqBzcCnWwJY",
-    "showcaseVideo": "https://youtu.be/URBUxHzIVaY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
