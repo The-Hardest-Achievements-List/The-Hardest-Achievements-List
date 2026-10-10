@@ -131,6 +131,14 @@ const EDITORS = [
     },
   },
   {
+    name: "fwoggy",
+    roles: ["Trial Staff"],
+    url: {
+      youtube: "https://www.youtube.com/@fwoggymcfs",
+      discord: null,
+    },
+  },
+  {
     name: "NucDev",
     roles: ["Integrity Moderator"],
     url: {
