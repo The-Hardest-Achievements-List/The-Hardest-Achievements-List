@@ -331,6 +331,26 @@
     ]
   },
   {
+    "name": "Azure Flare (polar) 46-96%",
+    "player": "polar",
+    "levelID": 123782119,
+    "date": "2026-07-12",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yt4dsxzyy8s",
+    "showcaseVideo": "https://youtu.be/CLsshJU4PTw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Banshee 34%",
     "player": "hstorm",
     "levelID": null,
@@ -1795,26 +1815,6 @@
     ]
   },
   {
-    "name": "Leaves (Jszl_GMD) 48-100%",
-    "player": "Jszl_GMD",
-    "levelID": 82602651,
-    "date": "2026-03-02",
-    "length": 39,
-    "version": 2.2,
-    "submitter": "notagood_username",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/LSfUd_OQ-jo",
-    "showcaseVideo": "https://youtu.be/nVPNZIu0nhY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "LIMBO (Unnerfed) 90%",
     "player": "BGram",
     "levelID": null,
@@ -3114,6 +3114,26 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Sweeping Demon 2 64%, 72% in a row",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-10-02",
+    "length": 105,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Rj_UVWPf0J4?t=3929",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Sweeping%20Demon%202.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
