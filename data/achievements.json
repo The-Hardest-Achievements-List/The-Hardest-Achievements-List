@@ -78,14 +78,14 @@
   {
     "name": "GRIEF 68%, 72% in a row",
     "player": "Doggie",
-    "levelID": null,
+    "levelID": 149992717,
     "date": "2026-06-18",
     "length": 288,
     "version": 2.2,
     "submitter": "Tmtsps12",
     "video": "https://youtu.be/apmslJgRMow?t=11678",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png",
+    "showcaseVideo": "https://youtu.be/5yER15qt5zk",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -104,8 +104,8 @@
     "version": 2.2,
     "submitter": "Quinnsapian",
     "video": "https://www.youtube.com/watch?v=fV9rheIAddk&t=1944",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/GRIEF%20madness.png",
+    "showcaseVideo": "https://youtu.be/5yER15qt5zk",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -139,14 +139,14 @@
     "name": "Sweeping Demon 2 87%",
     "player": "Taiago",
     "levelID": null,
-    "date": "2026-10-10",
+    "date": "2026-09-10",
     "length": 65,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "video": "https://www.youtube.com/watch?v=asjSeDF7x5Y",
+    "video": "asjSeDF7x5Y"",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": "Sweeping Demon 2 (Apr. 2026) 86%",
+    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -161,8 +161,8 @@
     "length": 48,
     "version": 2.2,
     "submitter": "SupremeSDB",
-    "video": "https://youtu.be/IKQwBwYEoqE",
-    "showcaseVideo": "https://youtu.be/6u-uMoGeKtg",
+    "video": "https://youtu.be/6u-uMoGeKtg",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
     "duplicateOf": null,
     "notes": null,
@@ -331,12 +331,12 @@
   },
   {
     "name": "silent jumpstep 5-7%; 5-13% 1 death, 99.90% accuracy; 5-10%, (5-5%), 5-8%, 5-7% in a row",
-    "player": "nensa",
+    "player": "-",
     "levelID": 147182322,
     "date": "2026-09-05",
     "length": 18,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/q1IucFJODaM",
@@ -494,12 +494,12 @@
   },
   {
     "name": "silent jumpstep 5-16% 2 deaths, 99.69% accuracy",
-    "player": "nensa",
+    "player": "-",
     "levelID": 147182322,
     "date": "2026-08-20",
     "length": 12,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/I_PnvElOwWk",
     "showcaseVideo": "https://youtu.be/eTU8dfvPGaM",
     "thumbnail": null,
@@ -603,13 +603,13 @@
     ]
   },
   {
-    "name": "Silent DeStep (nensa) 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
-    "player": "nensa",
+    "name": "Silent DeStep (-) 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
+    "player": "-",
     "levelID": 83282566,
     "date": "2026-08-12",
     "length": 56,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/Hsqpwo2pa8o",
     "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
     "thumbnail": null,
@@ -641,12 +641,12 @@
   },
   {
     "name": "silent jumpstep (Old) 11-25% 1 death, 99.96% accuracy",
-    "player": "nensa",
+    "player": "-",
     "levelID": 147371830,
     "date": "2026-08-17",
     "length": 15,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/yjj_hfV2zP8",
     "showcaseVideo": "https://youtu.be/_-U1o4x0J-c",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/147182322",
@@ -796,7 +796,7 @@
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/YHH5CFQidU4",
     "showcaseVideo": null,
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/GRIEF%20madness.png",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/149992717",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -990,7 +990,7 @@
     "length": 86,
     "version": 2.2,
     "submitter": "raine",
-    "video": "https://youtu.be/bRY7fFGqNBI?t=3750",
+    "video": "https://youtu.be/3KTQGAEwG3M",
     "showcaseVideo": "https://youtu.be/UCr5JNvdy4c",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/KOCMOC%20UNLEASHED%20(Nerfed).png",
     "duplicateOf": null,
@@ -1192,7 +1192,7 @@
   },
   {
     "name": "silent jumpstep (Old) 4-16% 1 death, 99.88% accuracy",
-    "player": "nensa",
+    "player": "-",
     "levelID": 147371830,
     "date": "2026-08-17",
     "length": 11,
@@ -1309,7 +1309,7 @@
     "date": "2025-08-25",
     "length": 42,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/WBBPfgnuGaw",
     "showcaseVideo": "https://youtu.be/TPnljyNS7Dg",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/125131485",
@@ -1518,7 +1518,7 @@
     "date": "2026-09-05",
     "length": 31,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/Ktt1OnCkGGg",
@@ -1551,12 +1551,12 @@
   },
   {
     "name": "Silent Clubstep DX 25%",
-    "player": "nensa",
+    "player": "-",
     "levelID": 92088644,
     "date": "2026-09-10",
     "length": 23,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/2WkNMN76npk",
@@ -1608,6 +1608,24 @@
     ]
   },
   {
+    "name": "Blindscapes",
+    "player": "benbot",
+    "levelID": 129447957,
+    "date": "2026-08-25",
+    "length": 86,
+    "version": 2.2,
+    "submitter": "Cinder",
+    "video": "https://youtu.be/WEqfWmmgK_8",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Nullscapes",
+    "notes": "Extremely dark Nullscapes with a small light following your robot.",
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Nullscapes",
     "player": "Zoink",
     "levelID": 109780665,
@@ -1624,24 +1642,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "Blindscapes",
-    "player": "benbot",
-    "levelID": 129447957,
-    "date": "2026-08-25",
-    "length": 86,
-    "version": 2.2,
-    "submitter": "Cinder",
-    "video": "https://youtu.be/WEqfWmmgK_8",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Nullscapes",
-    "notes": "Extremely dark Nullscapes with a small light following your robot.",
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -1845,7 +1845,7 @@
       "Progress"
     ]
   },
-  {
+    {
     "name": "Exasperation 67%",
     "player": "Zoink",
     "levelID": 31325851,
@@ -1998,14 +1998,14 @@
   {
     "name": "GRIEF (Triplash Buffed) 25-64%",
     "player": "Doggie",
-    "levelID": null,
+    "levelID": 149992717,
     "date": "2026-02-17",
     "length": 66,
     "version": 2.2,
     "submitter": "BenjiWii",
     "video": "https://youtu.be/pwh6xknCu_w?t=3607",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png",
+    "showcaseVideo": "https://youtu.be/5yER15qt5zk",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": "A buffed version of GRIEF created by Doggie in his livestream titled 'SUPERBUFFING GRIEF 🔴 NOT VERIFYING 🔴 FOR FUN 🔴 NOT VERIFYING 🔴 OKAY MAYBE VERIFYING', at this point in the livestream he had buffed Triplash's part of the level (26-35%) to be significantly harder.",
     "tags": [
@@ -2071,8 +2071,8 @@
     ]
   },
   {
-    "name": "Silent DeStep (nensa) 45%",
-    "player": "nensa",
+    "name": "Silent DeStep (-) 45%",
+    "player": "-",
     "levelID": 83282566,
     "date": "2026-07-23",
     "length": 41,
@@ -2147,12 +2147,12 @@
   },
   {
     "name": "Eternal Silence (High Detail) 25%",
-    "player": "nensa",
+    "player": "-",
     "levelID": 83476262,
     "date": "2026-04-04",
     "length": 22,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/77XTJygWKQ4",
     "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
     "thumbnail": null,
@@ -2239,45 +2239,7 @@
       "Noclip"
     ]
   },
-  {
-    "name": "brownupen circles 67%",
-    "player": "ad3usgmd",
-    "levelID": 102356371,
-    "date": "2026-05-10",
-    "length": 36,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/lOIIYvJ31M0",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Sakupen circles (Old)",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Variant"
-    ]
-  },
-  {
-    "name": "brownupen circles 58-100%",
-    "player": "ad3usgmd",
-    "levelID": 102356371,
-    "date": "2026-05-05",
-    "length": 22,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/-3qjjcioCL8",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Sakupen circles (Old)",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Variant"
-    ]
-  },
-  {
+    {
     "name": "Ashley Wave Trials",
     "player": "Zoink",
     "levelID": 123119196,
@@ -2447,7 +2409,7 @@
       "Variant"
     ]
   },
-  {
+    {
     "name": "Penumbral",
     "player": "w3rty",
     "levelID": 134942736,
@@ -2713,6 +2675,44 @@
     ]
   },
   {
+    "name": "brownupen circles 67%",
+    "player": "ad3usgmd",
+    "levelID": 102356371,
+    "date": "2026-05-10",
+    "length": 36,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/lOIIYvJ31M0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen circles (Old)",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Variant"
+    ]
+  },
+  {
+    "name": "brownupen circles 58-100%",
+    "player": "ad3usgmd",
+    "levelID": 102356371,
+    "date": "2026-05-05",
+    "length": 22,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/-3qjjcioCL8",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen circles (Old)",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Variant"
+    ]
+  },
+  {
     "name": "KILLSTEALER",
     "player": "kloone",
     "levelID": 138781722,
@@ -2806,25 +2806,6 @@
     ]
   },
   {
-    "name": "Acheron 2.1",
-    "player": "Zoink",
-    "levelID": 73667628,
-    "date": "2022-08-22",
-    "length": 67,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/sBKR6aUorzA",
-    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Outdated Version"
-    ]
-  },
-  {
     "name": "Acheron 97 challenge 2.1",
     "player": "wPopoff",
     "levelID": 124037650,
@@ -2860,6 +2841,25 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Acheron 2.1",
+    "player": "Zoink",
+    "levelID": 73667628,
+    "date": "2022-08-22",
+    "length": 67,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/sBKR6aUorzA",
+    "showcaseVideo": "https://youtu.be/YQElFvT5ynk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Outdated Version"
     ]
   },
   {
@@ -3086,45 +3086,6 @@
     ]
   },
   {
-    "name": "Azure Flare",
-    "player": "Diamond",
-    "levelID": 149290595,
-    "date": "2026-09-21",
-    "length": 90,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/r6hQ5Se2i8U",
-    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Avernus",
-    "player": "Zoink",
-    "levelID": 89496627,
-    "date": "2023-03-22",
-    "length": 78,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/16Zh8jssanc",
-    "showcaseVideo": "https://youtu.be/JL30R7f-iBE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "avenus copy",
     "player": "serpentical",
     "levelID": 131075784,
@@ -3160,6 +3121,45 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Azure Flare",
+    "player": "Diamond",
+    "levelID": 149290595,
+    "date": "2026-09-21",
+    "length": 90,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/r6hQ5Se2i8U",
+    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
+    "name": "Avernus",
+    "player": "Zoink",
+    "levelID": 89496627,
+    "date": "2023-03-22",
+    "length": 78,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/16Zh8jssanc",
+    "showcaseVideo": "https://youtu.be/JL30R7f-iBE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
@@ -3836,7 +3836,7 @@
     "date": "2024-12-23",
     "length": 180,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/HkZFGcPWwQw",
     "showcaseVideo": "https://youtu.be/_pEXSsmXePU",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/60284876",
@@ -3850,7 +3850,7 @@
   {
     "name": "Slaughterhouse 25-100%, GRIEF (Apr. 2025) 65-100% in a row",
     "player": "Doggie",
-    "levelID": null,
+    "levelID": 149992717,
     "date": "2025-04-21",
     "length": 87,
     "version": 2.2,
@@ -3858,11 +3858,11 @@
     "video": "https://youtu.be/-ZUMz5QqO0Y?t=2883",
     "showcaseVideo": [
       "https://youtu.be/3zTp7cmsDXo",
-      "https://youtu.be/Wd0DIyujh2g"
+      "https://youtu.be/5yER15qt5zk"
     ],
     "thumbnail": [
       "https://levelthumbs.prevter.me/thumbnail/27690100",
-      "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png"
+      "https://levelthumbs.prevter.me/thumbnail/149992717"
     ],
     "duplicateOf": null,
     "notes": null,
@@ -3918,7 +3918,7 @@
     "date": "2025-09-23",
     "length": 14,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/Rz7Um6lxYYU",
     "showcaseVideo": "https://youtu.be/RX9mJmScTd8",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/126279500",
@@ -4452,24 +4452,6 @@
     ]
   },
   {
-    "name": "Firework (Unnerfed)",
-    "player": "Openix",
-    "levelID": 97139950,
-    "date": "2023-12-06",
-    "length": 127,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/8zU6VTSuOgU",
-    "showcaseVideo": "https://youtu.be/2zdkj3begOE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
     "name": "Firework Ice Nation",
     "player": "Midgatal",
     "levelID": 75277673,
@@ -4486,6 +4468,24 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Firework (Unnerfed)",
+    "player": "Openix",
+    "levelID": 97139950,
+    "date": "2023-12-06",
+    "length": 127,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/8zU6VTSuOgU",
+    "showcaseVideo": "https://youtu.be/2zdkj3begOE",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
     ]
   },
   {
@@ -4629,7 +4629,7 @@
     "date": "2025-10-23",
     "length": 45,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/CweiVNgo9IY",
     "showcaseVideo": "https://youtu.be/8GL1FXb4W4U",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/127534241",
@@ -5393,25 +5393,6 @@
     ]
   },
   {
-    "name": "Slaughterhouse",
-    "player": "Doggie",
-    "levelID": 27690100,
-    "date": "2021-12-21",
-    "length": 70,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/kpcF1-QAHQc",
-    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "christmashouse",
     "player": "Zoink",
     "levelID": 84117769,
@@ -5428,6 +5409,25 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Slaughterhouse",
+    "player": "Doggie",
+    "levelID": 27690100,
+    "date": "2021-12-21",
+    "length": 70,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/kpcF1-QAHQc",
+    "showcaseVideo": "https://youtu.be/3zTp7cmsDXo",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
@@ -6068,25 +6068,6 @@
     ]
   },
   {
-    "name": "VSC 2.1",
-    "player": "Yossarian",
-    "levelID": 60805571,
-    "date": "2021-09-21",
-    "length": 16,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/ewlMbTR-c_w",
-    "showcaseVideo": "https://youtu.be/GbtLlQQezTA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified",
-      "Outdated Version"
-    ]
-  },
-  {
     "name": "VSC Madness",
     "player": "-",
     "levelID": 126120741,
@@ -6144,6 +6125,25 @@
     ]
   },
   {
+    "name": "VSC 2.1",
+    "player": "Yossarian",
+    "levelID": 60805571,
+    "date": "2021-09-21",
+    "length": 16,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/ewlMbTR-c_w",
+    "showcaseVideo": "https://youtu.be/GbtLlQQezTA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified",
+      "Outdated Version"
+    ]
+  },
+  {
     "name": "VSC red",
     "player": "-",
     "levelID": 126120613,
@@ -6182,25 +6182,6 @@
     ]
   },
   {
-    "name": "VSC layout",
-    "player": "-",
-    "levelID": 60811038,
-    "date": "2022-11-09",
-    "length": 16,
-    "version": 2.1,
-    "submitter": "Excryst",
-    "video": "https://youtu.be/SGT-I-lGIIA",
-    "showcaseVideo": "https://youtu.be/ZFjjdfEqwhQ",
-    "thumbnail": null,
-    "duplicateOf": "VSC 2.1",
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified",
-      "Variant"
-    ]
-  },
-  {
     "name": "VSC 1.1x 2 deaths, 99.84% accuracy",
     "player": "-",
     "levelID": 60805571,
@@ -6218,6 +6199,25 @@
       "Progress",
       "Noclip",
       "Speedhack"
+    ]
+  },
+  {
+    "name": "VSC layout",
+    "player": "-",
+    "levelID": 60811038,
+    "date": "2022-11-09",
+    "length": 16,
+    "version": 2.1,
+    "submitter": "Excryst",
+    "video": "https://youtu.be/SGT-I-lGIIA",
+    "showcaseVideo": "https://youtu.be/ZFjjdfEqwhQ",
+    "thumbnail": null,
+    "duplicateOf": "VSC 2.1",
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified",
+      "Variant"
     ]
   },
   {
@@ -6590,14 +6590,14 @@
   {
     "name": "GRIEF (May 2025) 1.1x 65-97% 3 deaths, 99.49% accuracy",
     "player": "Doggie",
-    "levelID": null,
+    "levelID": 149992717,
     "date": "2025-05-09",
     "length": 24,
     "version": 2.2,
     "submitter": "Tmtsps12",
     "video": "https://youtu.be/bRPVDAmmzlw?t=3130",
-    "showcaseVideo": "https://youtu.be/Wd0DIyujh2g",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/GRIEF%20madness.png",
+    "showcaseVideo": "https://youtu.be/5yER15qt5zk",
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -6950,25 +6950,6 @@
     ]
   },
   {
-    "name": "Sakupen Circles",
-    "player": "Diamond",
-    "levelID": 76962930,
-    "date": "2021-12-29",
-    "length": 50,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/ofG2mJi9kEA",
-    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "Sakupen Denouement",
     "player": "ad3usgmd",
     "levelID": 133261698,
@@ -7042,6 +7023,25 @@
       "Level",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "Sakupen Circles",
+    "player": "Diamond",
+    "levelID": 76962930,
+    "date": "2021-12-29",
+    "length": 50,
+    "version": 2.1,
+    "submitter": "Anceps",
+    "video": "https://youtu.be/ofG2mJi9kEA",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
@@ -7536,7 +7536,7 @@
     "date": "2025-07-22",
     "length": 5,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/--xEEzM5tT8",
     "showcaseVideo": "https://youtu.be/uHW6Y7z1-us",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/119160569",
@@ -7604,12 +7604,12 @@
   },
   {
     "name": "CorroZ 47%",
-    "player": "nensa",
+    "player": "-",
     "levelID": 86191664,
     "date": "2025-07-06",
     "length": 17,
     "version": 2.2,
-    "submitter": "nensa",
+    "submitter": "-",
     "video": "https://youtu.be/DSsVuOb4BuQ",
     "showcaseVideo": "https://youtu.be/621lY0seDOQ",
     "thumbnail": null,
@@ -7784,25 +7784,6 @@
     ]
   },
   {
-    "name": "Element 111 Rg (-)",
-    "player": "-",
-    "levelID": 106084668,
-    "date": "2024-03-19",
-    "length": 97,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/mXoaMklDNmg",
-    "showcaseVideo": "https://youtu.be/ENc_q7C7W04",
-    "thumbnail": null,
-    "duplicateOf": "Element 111 Rg",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Variant"
-    ]
-  },
-  {
     "name": "Sakupen Silhouette 54-100%",
     "player": "ad3usgmd",
     "levelID": 92199224,
@@ -7861,24 +7842,6 @@
     ]
   },
   {
-    "name": "VSC",
-    "player": "The_Bat0",
-    "levelID": 60805571,
-    "date": "2024-04-09",
-    "length": 16,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/zCygYn5kiTw",
-    "showcaseVideo": "https://youtu.be/khbJn4mHEfA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
     "name": "VSC Out",
     "player": "-",
     "levelID": 126120756,
@@ -7933,6 +7896,24 @@
       "Challenge",
       "Verified",
       "Variant"
+    ]
+  },
+  {
+    "name": "VSC",
+    "player": "The_Bat0",
+    "levelID": 60805571,
+    "date": "2024-04-09",
+    "length": 16,
+    "version": 2.2,
+    "submitter": "kyle1saurus",
+    "video": "https://youtu.be/zCygYn5kiTw",
+    "showcaseVideo": "https://youtu.be/khbJn4mHEfA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
     ]
   },
   {
@@ -8684,6 +8665,25 @@
     ]
   },
   {
+    "name": "Element 111 Rg (-)",
+    "player": "-",
+    "levelID": 106084668,
+    "date": "2024-03-19",
+    "length": 97,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/mXoaMklDNmg",
+    "showcaseVideo": "https://youtu.be/ENc_q7C7W04",
+    "thumbnail": null,
+    "duplicateOf": "Element 111 Rg",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+  {
     "name": "MUD 63%",
     "player": "Cryonix",
     "levelID": null,
@@ -8739,7 +8739,7 @@
   },
   {
     "name": "Silent Circles redux 57%",
-    "player": "nensa",
+    "player": "-",
     "levelID": 63951460,
     "date": "2026-05-31",
     "length": 39,
@@ -9102,6 +9102,44 @@
     ]
   },
   {
+    "name": "naksugwork",
+    "player": "Midgatal",
+    "levelID": 133304117,
+    "date": "2026-02-03",
+    "length": 127,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/BmRoiqUzxXw",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Firework",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+  {
+    "name": "Redwork",
+    "player": "abstract",
+    "levelID": 113640015,
+    "date": "2024-12-30",
+    "length": 127,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/sHFY_vOMLCo",
+    "showcaseVideo": "https://youtu.be/RHmVk0pUIPI",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/113640015",
+    "duplicateOf": "Firework",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+  {
     "name": "Always Miss You",
     "player": "Ekskriptn",
     "levelID": 148120101,
@@ -9138,44 +9176,6 @@
       "Level",
       "Verified",
       "Rated"
-    ]
-  },
-  {
-    "name": "naksugwork",
-    "player": "Midgatal",
-    "levelID": 133304117,
-    "date": "2026-02-03",
-    "length": 127,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/BmRoiqUzxXw",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": "Firework",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Variant"
-    ]
-  },
-  {
-    "name": "Redwork",
-    "player": "abstract",
-    "levelID": 113640015,
-    "date": "2024-12-30",
-    "length": 127,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/sHFY_vOMLCo",
-    "showcaseVideo": "https://youtu.be/RHmVk0pUIPI",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/113640015",
-    "duplicateOf": "Firework",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Variant"
     ]
   }
 ]
