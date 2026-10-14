@@ -194,7 +194,7 @@
     "date": "2026-09-30",
     "length": 23,
     "version": 2.2,
-    "submitter": "Silkizinho",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://www.youtube.com/watch?v=_7Z0krouF-w",
@@ -755,16 +755,16 @@
     ]
   },
   {
-    "name": "Despair Code 35%",
+    "name": "Despair Code 42%",
     "player": "Infinny",
     "levelID": null,
-    "date": "2026-08-20",
-    "length": 8,
+    "date": "2026-10-05",
+    "length": 10,
     "version": 2.2,
     "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/YGvuMSYNo4A?t=6594",
+    "video": "https://youtu.be/2O050SWqEK8",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": "Despair Code 33%",
@@ -1044,6 +1044,26 @@
     ]
   },
   {
+    "name": "Escalator 6 deaths, 99.79% accuracy",
+    "player": "teraaa",
+    "levelID": null,
+    "date": null,
+    "length": 102,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/KQBqnd-qFQ4?t=2760",
+    "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
     "name": "Escalator 62%",
     "player": "teraaa",
     "levelID": null,
@@ -1166,16 +1186,16 @@
     ]
   },
   {
-    "name": "Ex Vacuo 40%",
+    "name": "Ex Vacuo 45%",
     "player": "agonom",
     "levelID": null,
-    "date": "2026-09-06",
-    "length": 51,
+    "date": "2026-10-03",
+    "length": 59,
     "version": 2.2,
     "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/U4JypjeB1gI",
+    "video": "https://youtu.be/qOKlIGaW1no",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -1447,6 +1467,26 @@
     ]
   },
   {
+    "name": "i n j u r y (Layout)",
+    "player": "Cryostaz",
+    "levelID": 113434338,
+    "date": "2026-10-06",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/O8_JenY0LHI",
+    "showcaseVideo": "https://youtu.be/acvJmw38ZjU",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/i%20n%20j%20u%20r%20y%20(Layout).png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "i n j u r y 59%",
     "player": "kywy",
     "levelID": null,
@@ -1547,6 +1587,26 @@
     ]
   },
   {
+    "name": "IT MEANS EVERYTHING (Xplode) 27-79%%",
+    "player": "Xplode",
+    "levelID": null,
+    "date": "2026-10-04",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/O0KW-nFyptI",
+    "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/106165639",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "IT MEANS EVERYTHING (Xplode) 41-100%",
     "player": "Xplode",
     "levelID": null,
@@ -1607,16 +1667,16 @@
     ]
   },
   {
-    "name": "IT MEANS EVERYTHING 74%",
+    "name": "IT MEANS EVERYTHING 95%",
     "player": "Waltty",
     "levelID": 106165639,
-    "date": "2026-05-29",
-    "length": 52,
+    "date": "2026-10-04",
+    "length": 66,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "zSayorii",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/HUvZzy00Rek",
+    "video": "https://youtu.be/EVYaQ0dUnhs",
     "showcaseVideo": "https://youtu.be/9nSkkXZ628E",
     "thumbnail": null,
     "duplicateOf": "IT MEANS EVERYTHING 61%",
@@ -2181,16 +2241,16 @@
     ]
   },
   {
-    "name": "Phantasm IV 44%",
+    "name": "Phantasm IV 74%",
     "player": "T4G",
     "levelID": null,
-    "date": "2026-08-02",
-    "length": 66,
+    "date": "2026-10-09",
+    "length": 97,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/kmwc4IS6uik",
+    "video": "https://youtu.be/tmjhQ9_7TBc",
     "showcaseVideo": "https://youtu.be/OyZmhOfyBzI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/0cb3652af8773aee9d648b25b992488178660d48/images/thumbnails/Phantasm%20IV.png",
     "duplicateOf": null,
@@ -2219,6 +2279,47 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Prismline 87%, 88% in a row",
+    "player": "karkitos",
+    "levelID": 135148907,
+    "date": "2026-10-02",
+    "length": 161,
+    "version": 2.2,
+    "submitter": "anduval",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/j97ivtob7xk",
+    "showcaseVideo": "https://youtu.be/4P-A0_CfMXY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Puff",
+    "player": "Conical",
+    "levelID": 143164600,
+    "date": "2026-06-21",
+    "length": 15,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/zGN6snSydl4",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
     ]
   },
   {
@@ -2417,6 +2518,29 @@
     ]
   },
   {
+    "name": "Sakupen Circles 37-100%, Slaughterhouse 25-75% in a row",
+    "player": "Juls",
+    "levelID": null,
+    "date": "2026-10-03",
+    "length": 53,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/5eTh4sVPRMM?t=4143",
+    "showcaseVideo": null,
+    "thumbnail": [
+      "https://levelthumbs.prevter.me/thumbnail/76962930",
+      "https://levelthumbs.prevter.me/thumbnail/27690100"
+    ],
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Miscalleneous"
+    ]
+  },
+  {
     "name": "Sakupen Clubstep 4-23%",
     "player": "cc478",
     "levelID": 149221498,
@@ -2428,6 +2552,46 @@
     "estimateUpper": null,
     "video": "https://youtu.be/Ktt1OnCkGGg",
     "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "SARY NEVER CLEAR (Optic Sunflow) 38-100%",
+    "player": "Anro",
+    "levelID": 609629,
+    "date": "2026-10-04",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/0e2fyD6hQ7M",
+    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "SARY NEVER CLEAR (Optic Sunflow, gmdkiwi) 37-100%",
+    "player": "gmdkiwi",
+    "levelID": 609629,
+    "date": "2026-07-14",
+    "length": 45,
+    "version": 2.2,
+    "submitter": "raine",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2dN79Ka4xxs",
+    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -2866,7 +3030,7 @@
     "date": "2026-10-04",
     "length": 44,
     "version": 2.2,
-    "submitter": "Reapavon",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://www.youtube.com/watch?v=XMfhPWO-Zpo",
@@ -3117,6 +3281,26 @@
     ]
   },
   {
+    "name": "SupaDupaSonic 85%",
+    "player": "beggo",
+    "levelID": null,
+    "date": "2026-09-30",
+    "length": 85,
+    "version": 2.2,
+    "submitter": "zSayorii",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/WE6L4eBnr2o",
+    "showcaseVideo": "https://youtu.be/IPUa-I-9KvY",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/b64c7a93e311c23b3db130490cf67aa0649c7c8e/images/thumbnails/SupaDupaSonic.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Sweeping Demon 2 64%, 72% in a row",
     "player": "Taiago",
     "levelID": null,
@@ -3281,16 +3465,16 @@
     ]
   },
   {
-    "name": "Tunnel of Serpent (Jul. 2026) 60%",
+    "name": "Tunnel of Serpent 60%",
     "player": "serpentical",
     "levelID": null,
-    "date": "2026-07-14",
+    "date": "2026-10-05",
     "length": 48,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/NtMZGXKdHxY",
+    "video": "https://youtu.be/o3grLmF_ri0",
     "showcaseVideo": "https://youtu.be/rcHE78QQSp8",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Tunnel%20of%20Serpent.png",
     "duplicateOf": null,
@@ -3442,36 +3626,16 @@
     ]
   },
   {
-    "name": "Ultra RealistiK 40-100% 1 death, 99.92% accuracy",
+    "name": "Ultra RealistiK 40-100%",
     "player": "marleywave",
     "levelID": 143357580,
-    "date": "2026-10-01",
+    "date": "2026-10-04",
     "length": 37,
     "version": 2.2,
-    "submitter": "anaphflora",
+    "submitter": "SupremeSDB",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/YFgkFkWXq2g",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Noclip"
-    ]
-  },
-  {
-    "name": "Ultra RealistiK 47-100%",
-    "player": "marleywave",
-    "levelID": 143357580,
-    "date": "2026-09-01",
-    "length": 34,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/NcHDho6L1ys",
+    "video": "https://youtu.be/GtptgKVvz0w",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
