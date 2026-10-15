@@ -248,16 +248,16 @@
     ]
   },
   {
-    "name": "ARE 47-100%",
+    "name": "ARE 36-100%",
     "player": "BONN GD",
     "levelID": null,
-    "date": "2026-09-11",
-    "length": 45,
+    "date": "2026-10-14",
+    "length": 55,
     "version": 2.2,
     "submitter": "NatalieMeow",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/mjVDLgEvVhU",
+    "video": "https://youtu.be/1oydiX_eRCY",
     "showcaseVideo": "https://youtu.be/LMsjqNrN17Q",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/999672023f1328b154d8a0dd4746d773b7e8edb6/images/thumbnails/ARE.png",
     "duplicateOf": null,
@@ -351,16 +351,16 @@
     ]
   },
   {
-    "name": "Banshee 34%",
+    "name": "Banshee 46%",
     "player": "hstorm",
     "levelID": null,
-    "date": "2026-09-18",
-    "length": 29,
+    "date": "2026-10-12",
+    "length": 42,
     "version": 2.2,
-    "submitter": "SupremeSDB",
+    "submitter": "fwoggy",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/ery1Rf3CSbw?t=9230",
+    "video": "https://youtu.be/8qTSCFAD2JI",
     "showcaseVideo": "https://youtu.be/h14lmGH31_M",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Banshee.png",
     "duplicateOf": null,
@@ -530,26 +530,6 @@
       "Level",
       "Low Hertz",
       "Rated"
-    ]
-  },
-  {
-    "name": "Cautious (Old) 43-89%",
-    "player": "pozhh",
-    "levelID": 67894396,
-    "date": "2025-12-28",
-    "length": 46,
-    "version": 2.2,
-    "submitter": "QwidziT",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/T6_Qn1rAPB8",
-    "showcaseVideo": "https://youtu.be/4sHsPbM_kdI",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
@@ -1104,6 +1084,26 @@
     ]
   },
   {
+    "name": "Eternal Silence 1.3x 4-9%",
+    "player": "blooklength",
+    "levelID": 83476262,
+    "date": "2026-10-14",
+    "length": 3,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9MJguEqO4nQ?t=64",
+    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Speedhack"
+    ]
+  },
+  {
     "name": "ETERNALtheory 144hz Mobile 92%",
     "player": "Zafsa",
     "levelID": 92196326,
@@ -1467,6 +1467,26 @@
     ]
   },
   {
+    "name": "hover challenge",
+    "player": "-",
+    "levelID": 149912885,
+    "date": "2026-10-10",
+    "length": 4,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/kyLcjZpQSrQ",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
     "name": "i n j u r y (Layout)",
     "player": "Cryostaz",
     "levelID": 113434338,
@@ -1559,6 +1579,26 @@
     "video": "https://youtu.be/EDL7WV2bBmk",
     "showcaseVideo": "https://youtu.be/6HZ_4kKhWAM",
     "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Infernis.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "innards (xarve) 16-86%",
+    "player": "xarve",
+    "levelID": null,
+    "date": "2026-10-12",
+    "length": 58,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Wv4RCXEOBZ0",
+    "showcaseVideo": null,
+    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -1809,6 +1849,26 @@
       "Low Hertz",
       "Progress",
       "Mobile"
+    ]
+  },
+  {
+    "name": "KOCMOC UNLEASHED 66-100%",
+    "player": "Arshadow",
+    "levelID": null,
+    "date": "2026-10-09",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/GCjDwGYpn6c?t=4918",
+    "showcaseVideo": "https://youtu.be/2Oe-y4lK2kQ",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/KOCMOC%20UNLEASHED.png?raw=true",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
@@ -2138,7 +2198,30 @@
     ]
   },
   {
-    "name": "Oblivion 120hz Mobile 82%",
+    "name": "Oblivion 120hz Mobile 84%",
+    "player": "Ryber",
+    "levelID": 71025973,
+    "date": "2026-10-13",
+    "length": 60,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/6EIoPvelpGo",
+    "showcaseVideo": "https://youtu.be/ErP1x5pkYfw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Progress",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Oblivion 90hz Mobile 82%",
     "player": "Ryber",
     "levelID": 71025973,
     "date": "2026-08-02",
@@ -2404,6 +2487,111 @@
     ]
   },
   {
+    "player": "Sakupen Circles (CriedEx, Emp)",
+    "levelID": 104202927,
+    "date": "2025-04-02",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "ddlghl",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/pIgLrWfQ5nw",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 1.2x 35-70%",
+    "player": "Ellie",
+    "levelID": 76962930,
+    "date": "2026-10-14",
+    "length": 13,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/diamond_dance_/status/2110466701250957594",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Speedhack"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 1.3x 35-100% 5 deaths, 99.64% accuracy",
+    "player": "blooklength",
+    "levelID": 76962930,
+    "date": "2026-10-14",
+    "length": 22,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9MJguEqO4nQ?t=15",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Rated",
+      "Noclip",
+      "Speedhack"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 1.3x 35-56%, 35-47% in a row",
+    "player": "blooklength",
+    "levelID": 76962930,
+    "date": "2026-10-14",
+    "length": 10,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9MJguEqO4nQ",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Speedhack"
+    ]
+  },
+  {
+    "name": "Sakupen Circles 1.3x 35-61%",
+    "player": "blooklength",
+    "levelID": 76962930,
+    "date": "2026-10-13",
+    "length": 9,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/9MJguEqO4nQ",
+    "showcaseVideo": "https://youtu.be/b66_Oe4Xo1w",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Rated",
+      "Speedhack"
+    ]
+  },
+  {
     "name": "Sakupen circles (Old) 120hz Mobile 13 deaths, 99.32% accuracy",
     "player": "ROZE",
     "levelID": 10887708,
@@ -2561,6 +2749,26 @@
     ]
   },
   {
+    "name": "Sakupen Clubstep 4-22%, (4-6%, 4-5%), 4-18%, 4-8% in a row",
+    "player": "cc478",
+    "levelID": 149221498,
+    "date": "2026-09-05",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Ktt1OnCkGGg",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": "Sakupen Clubstep 4-22%, (4-6%, 4-5%), 4-18% in a row",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "SARY NEVER CLEAR (Optic Sunflow) 38-100%",
     "player": "Anro",
     "levelID": 609629,
@@ -2593,7 +2801,25 @@
     "video": "https://youtu.be/2dN79Ka4xxs",
     "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
     "thumbnail": null,
-    "duplicateOf": null,
+    "duplicateOf": "SARY NEVER CLEAR (Optic Sunflow) 38-100%",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "SARY NEVER CLEAR (Optic Sunflow) 91%",
+    "player": "Anro",
+    "levelID": 609629,
+    "date": "2026-10-14",
+    "length": 70,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/-LgepnwPHnQ",
+    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
+    "thumbnail": null,
+    "duplicateOf": "SARY NEVER CLEAR (Optic Sunflow) 90%",
     "notes": null,
     "tags": [
       "Level",
@@ -2984,6 +3210,47 @@
     ]
   },
   {
+    "name": "SKC Enhanced",
+    "player": "Ellie",
+    "levelID": 96099821,
+    "date": "2026-10-14",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/AMTafO0atzY",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  }, 
+  {
+    "name": "SKC Enhanced 239%",
+    "player": "Ellie",
+    "levelID": 96099821,
+    "date": "2026-10-14",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/AMTafO0atzY",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
     "name": "Slaughterhouse (Doritos1055) 49-100%",
     "player": "Doritos1055",
     "levelID": null,
@@ -3321,6 +3588,28 @@
     ]
   },
   {
+    "name": "Terminal Rampancy 60hz Mobile",
+    "player": "Blinkkous",
+    "levelID": 90057148,
+    "date": "2026-10-10",
+    "length": 97,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/Q8VO6AOvzBQ",
+    "showcaseVideo": "https://youtu.be/H-9x_xi9UeY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Low Hertz",
+      "Rated",
+      "Mobile"
+    ]
+  },
+  {
     "name": "The King Von Trial",
     "player": "-",
     "levelID": 122518707,
@@ -3359,6 +3648,47 @@
       "Level",
       "Consistency",
       "Rated"
+    ]
+  },
+  {
+    "name": "Tidal Wave 29-100%, (22-24%), 22-100% in a row",
+    "player": "Weyoll3",
+    "levelID": 86407629,
+    "date": "2026-10-10",
+    "length": 271,
+    "version": 2.2,
+    "submitter": "Weyoll3",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.twitch.tv/videos/2896123517?t=01h04m50s",
+    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
+    "thumbnail": null,
+    "duplicateOf": "Tidal Wave 23-91%, 23-92% in a row",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "tragic 49-83%",
+    "player": "ScoffGD",
+    "levelID": 148740644,
+    "date": "2026-10-10",
+    "length": 23,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LOwUDACXy18?t=3906",
+    "showcaseVideo": "https://youtu.be/pXlS6uKZSYk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
     ]
   },
   {
