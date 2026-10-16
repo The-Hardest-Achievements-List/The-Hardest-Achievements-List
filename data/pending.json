@@ -64,28 +64,6 @@
     ]
   },
   {
-    "name": "Aeternus 120hz Mobile 24-34%",
-    "player": "Silkizinho",
-    "levelID": 102647436,
-    "date": "2026-07-17",
-    "length": 8,
-    "version": 2.2,
-    "submitter": "bmc",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VPEfaCBV-3I",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Low Hertz",
-      "Progress",
-      "Mobile"
-    ]
-  },
-  {
     "name": "Aeternus 120hz Mobile 33-61% 14 deaths, 96.94% accuracy",
     "player": "vowtz",
     "levelID": 102647436,
@@ -188,26 +166,6 @@
     ]
   },
   {
-    "name": "Aeternus 67-100%",
-    "player": "Bacon",
-    "levelID": 102647436,
-    "date": "2026-09-30",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.youtube.com/watch?v=_7Z0krouF-w",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Angelicide 6-59%",
     "player": "Druki",
     "levelID": 120478542,
@@ -261,26 +219,6 @@
     "showcaseVideo": "https://youtu.be/LMsjqNrN17Q",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/999672023f1328b154d8a0dd4746d773b7e8edb6/images/thumbnails/ARE.png",
     "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Artemis 13 (Unnerfed) 82%",
-    "player": "Zoink",
-    "levelID": 148599120,
-    "date": "2026-08-27",
-    "length": 58,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
-    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
-    "thumbnail": null,
-    "duplicateOf": "Artemis 13 (Unnerfed) 70%",
     "notes": null,
     "tags": [
       "Level",
@@ -553,27 +491,6 @@
     ]
   },
   {
-    "name": "CHROMACAVE 97%, 100% in a row",
-    "player": "LennyFeus",
-    "levelID": 131497860,
-    "date": "2026-08-04",
-    "length": 153,
-    "version": 2.2,
-    "submitter": "NatalieMeow",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/815lbfdyncA",
-    "showcaseVideo": "https://youtu.be/815lbfdyncA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "CHROMEDOLL 48%",
     "player": "denni",
     "levelID": null,
@@ -651,26 +568,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Cyber Raptor",
-    "player": "Lobster",
-    "levelID": 85174455,
-    "date": "2026-09-27",
-    "length": 708,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/zxojmwuEBo0",
-    "showcaseVideo": "https://youtu.be/zolzjLY7Mxs",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
     ]
   },
   {
@@ -1064,26 +961,6 @@
     ]
   },
   {
-    "name": "Eternal Silence 1.3x 4-9%",
-    "player": "blooklength",
-    "levelID": 83476262,
-    "date": "2026-10-14",
-    "length": 3,
-    "version": 2.2,
-    "submitter": "blooklength",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/9MJguEqO4nQ?t=64",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Speedhack"
-    ]
-  },
-  {
     "name": "Eternal Silence 1.3x 9-25% 2 deaths, 98.28% accuracy",
     "player": "blooklength",
     "levelID": 83476262,
@@ -1441,26 +1318,6 @@
     "showcaseVideo": "https://youtu.be/BipoaXc-ASQ",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/cc5271beef9f869dbd2cff88c85d246abbf4fc55/images/thumbnails/Heliopolis%20(Ver.%201).png",
     "duplicateOf": "Heliopolis (Ver. 1) 24%, (0%), 47% in a row",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "Herr Machine 35-100%, (29-31%), 29-100% in a row",
-    "player": "lanx",
-    "levelID": 142529115,
-    "date": "2026-09-26",
-    "length": 144,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/e_wIioi0JNc",
-    "showcaseVideo": "https://youtu.be/VgbZTWyu4bI",
-    "thumbnail": null,
-    "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
@@ -2016,27 +1873,6 @@
     ]
   },
   {
-    "name": "Maniacal Chains 190%",
-    "player": "ScoffGD",
-    "levelID": 48991380,
-    "date": "2026-08-13",
-    "length": 222,
-    "version": 2.2,
-    "submitter": "peppersway",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "48991380",
-    "showcaseVideo": "https://youtu.be/FrrV0cOxGmM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "MAX NRG (Feb. 2026) 66%",
     "player": "SaturMan",
     "levelID": null,
@@ -2168,27 +2004,6 @@
     "estimateUpper": null,
     "video": "https://youtu.be/FLF_eUplF5g?t=3833",
     "showcaseVideo": "https://youtu.be/gPDNGPm7aEE",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Nullscapes 62%, (20%), 56%, 57% in a row",
-    "player": "Ninde",
-    "levelID": 109780665,
-    "date": "2026-08-28",
-    "length": 173,
-    "version": 2.2,
-    "submitter": "Ninde",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/rTzxAmM89Lg?t=7130",
-    "showcaseVideo": "https://youtu.be/C-KDhWkXlvI",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -2366,47 +2181,6 @@
     ]
   },
   {
-    "name": "Prismline 87%, 88% in a row",
-    "player": "karkitos",
-    "levelID": 135148907,
-    "date": "2026-10-02",
-    "length": 161,
-    "version": 2.2,
-    "submitter": "anduval",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/j97ivtob7xk",
-    "showcaseVideo": "https://youtu.be/4P-A0_CfMXY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Puff",
-    "player": "Conical",
-    "levelID": 143164600,
-    "date": "2026-06-21",
-    "length": 15,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/zGN6snSydl4",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
     "name": "Quantum Dominator 59-100%",
     "player": "Theitha",
     "levelID": null,
@@ -2485,27 +2259,6 @@
       "Level",
       "Consistency",
       "Rated"
-    ]
-  },
-  {
-    "name": "Sakupen Circles (CriedEx, Emp)",
-    "player": "Emp",
-    "levelID": 104202927,
-    "date": "2025-04-02",
-    "length": 50,
-    "version": 2.2,
-    "submitter": "ddlghl",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/pIgLrWfQ5nw",
-    "showcaseVideo": null,
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120000106",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Variant"
     ]
   },
   {
@@ -2808,45 +2561,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "SARY NEVER CLEAR (Optic Sunflow) 91%",
-    "player": "Anro",
-    "levelID": 609629,
-    "date": "2026-10-14",
-    "length": 70,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/-LgepnwPHnQ",
-    "showcaseVideo": "https://youtu.be/a-xQc7_GnA8",
-    "thumbnail": null,
-    "duplicateOf": "SARY NEVER CLEAR (Optic Sunflow) 90%",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Sevvend Clubstep 62%, 100% in a row",
-    "player": "Kot",
-    "levelID": 120255728,
-    "date": "2025-11-09",
-    "length": 115,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/uKfanoWnTWU",
-    "showcaseVideo": "https://youtu.be/PPZE1RM0JBA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -3192,26 +2906,6 @@
     ]
   },
   {
-    "name": "Silentman Adventures 77%, (1%, 2%), 100% in a row",
-    "player": "nickname",
-    "levelID": 147442928,
-    "date": "2026-08-21",
-    "length": 157,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/NE89R0tA8fU",
-    "showcaseVideo": "https://youtu.be/y3qMBVEbIuw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "SKC Enhanced",
     "player": "Ellie",
     "levelID": 96099821,
@@ -3303,26 +2997,6 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://www.youtube.com/watch?v=XMfhPWO-Zpo",
-    "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/77618325",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Slaughterhouse (Unnerfed, Reapavon, Buffed) 84%",
-    "player": "Reapavon",
-    "levelID": null,
-    "date": "2026-09-12",
-    "length": 58,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.tiktok.com/@reapavon/video/7684538122033515792",
     "showcaseVideo": "https://youtu.be/6FCwxlspzuI",
     "thumbnail": "https://levelthumbs.prevter.me/thumbnail/77618325",
     "duplicateOf": null,
@@ -3508,27 +3182,6 @@
     ]
   },
   {
-    "name": "Spectre 68%, 100% in a row",
-    "player": "PoCle",
-    "levelID": 110815379,
-    "date": "2026-07-05",
-    "length": 228,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/tByz21ieArA",
-    "showcaseVideo": "https://youtu.be/2DMRbNGAdGU",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "Subsuming Vortex 35-73%, 35-83%, 35-70% in a row",
     "player": "beto",
     "levelID": 127997391,
@@ -3567,26 +3220,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Sweeping Demon 2 64%, 72% in a row",
-    "player": "Taiago",
-    "levelID": null,
-    "date": "2026-10-02",
-    "length": 105,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Rj_UVWPf0J4?t=3929",
-    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Sweeping%20Demon%202.png?raw=true",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
     ]
   },
   {
@@ -3629,48 +3262,6 @@
     "tags": [
       "Level",
       "Verified"
-    ]
-  },
-  {
-    "name": "Through The Gates 180%",
-    "player": "s3batr0nic",
-    "levelID": 49072489,
-    "date": "2026-08-26",
-    "length": 165,
-    "version": 2.2,
-    "submitter": "Muffy450",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/60IAO5ukXYo",
-    "showcaseVideo": "https://youtu.be/AcXRpf5XDq8",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Tidal Wave 29-100%, (22-24%), 22-100% in a row",
-    "player": "Weyoll3",
-    "levelID": 86407629,
-    "date": "2026-10-10",
-    "length": 271,
-    "version": 2.2,
-    "submitter": "Weyoll3",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.twitch.tv/videos/2896123517?t=01h04m50s",
-    "showcaseVideo": "https://youtu.be/PFHlkdz9UqM",
-    "thumbnail": null,
-    "duplicateOf": "Tidal Wave 23-91%, 23-92% in a row",
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -3794,26 +3385,6 @@
       "Progress",
       "Rated",
       "Mobile"
-    ]
-  },
-  {
-    "name": "Tunnel of Serpent 60%",
-    "player": "serpentical",
-    "levelID": null,
-    "date": "2026-10-05",
-    "length": 48,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/o3grLmF_ri0",
-    "showcaseVideo": "https://youtu.be/rcHE78QQSp8",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Tunnel%20of%20Serpent.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
