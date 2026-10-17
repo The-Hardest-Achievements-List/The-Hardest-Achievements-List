@@ -963,6 +963,49 @@
     ]
   },
   {
+    "name": "Ultra Paracosm 46%, 52% in a row",
+    "player": "Zoink",
+    "levelID": 138704906,
+    "date": "2026-07-22",
+    "length": 71,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/eAqU81A5944?t=1085",
+    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
+    "name": "Ultra Paracosm 46%, 52% in a row",
+    "player": "Zoink",
+    "levelID": 138704906,
+    "date": "2026-07-22",
+    "length": 71,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/eAqU81A5944?t=1085",
+    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Subsuming Vortex 80%, 71% in a row",
     "player": "Zoink",
     "levelID": 127997391,
@@ -7560,6 +7603,27 @@
       "Variant"
     ]
   },
+  {
+    "name": "SKC Enhanced",
+    "player": "Ellie",
+    "levelID": 96099821,
+    "date": "2026-10-14",
+    "length": 50,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/AMTafO0atzY",
+    "showcaseVideo": null,
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/8e23d8e3577188023706816541458f4a570c61bc/images/thumbnails/SKC%20Enhanced.png",
+    "duplicateOf": "Sakupen Circles",
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Variant"
+    ]
+  }, 
   {
     "name": "wocky circles",
     "player": "ROZE",
