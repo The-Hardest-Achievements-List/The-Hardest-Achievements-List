@@ -959,26 +959,6 @@
     "notes": null,
     "tags": [
       "Level",
-      "Consistency"
-    ]
-  },
-  {
-    "name": "Ultra Paracosm 46%, 52% in a row",
-    "player": "Zoink",
-    "levelID": 138704906,
-    "date": "2026-07-22",
-    "length": 71,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/eAqU81A5944?t=1085",
-    "showcaseVideo": "https://youtu.be/xy-e6dzd8TY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
       "Consistency",
       "Rated"
     ]
