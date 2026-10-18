@@ -215,11 +215,11 @@
     "name": "Sweeping Demon 2 (Jul. 2026) 34-100%",
     "player": "Taiago",
     "levelID": null,
-    "date": "2026-07-30",
+    "date": "2026-10-18",
     "length": 40,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/GL3t9xNqkC0",
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/4tW9dC2c3l0?t=1550",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
     "duplicateOf": null,
@@ -811,7 +811,7 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED (Nerfed II) 14-93%",
+    "name": "KOCMOC UNLEASHED (Nerfed Ver. 2) 14-93%",
     "player": "Arshadow",
     "levelID": null,
     "date": "2026-02-19",
@@ -1371,7 +1371,7 @@
     ]
   },
   {
-    "name": "KOCMOC Unleashed (Nerfed II) 73%",
+    "name": "KOCMOC Unleashed (Nerfed Ver. 2) 73%",
     "player": "Arshadow",
     "levelID": null,
     "date": "2026-02-19",
@@ -1505,6 +1505,27 @@
     ]
   },
   {
+    "name": "Defeated Circles 89%, 100% in a row",
+    "player": "Vorten",
+    "levelID": 120012581,
+    "date": "2026-06-04",
+    "length": 112,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/S7azvS0TQts",
+    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "cry me a river 107%, 371% in a row",
     "player": "klimk",
     "levelID": 76403850,
@@ -1620,27 +1641,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Defeated Circles 89%, 100% in a row",
-    "player": "Vorten",
-    "levelID": 120012581,
-    "date": "2026-06-04",
-    "length": 112,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/S7azvS0TQts",
-    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
     ]
   },
   {
@@ -2112,6 +2112,27 @@
     ]
   },
   {
+    "name": "Aeternus 23%",
+    "player": "dewbbs",
+    "levelID": 102647436,
+    "date": "2026-09-12",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/qt9UEprkezg",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "BOOBAWAMBA",
     "player": "EastShark1",
     "levelID": 110816181,
@@ -2413,27 +2434,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "Aeternus 23%",
-    "player": "dewbbs",
-    "levelID": 102647436,
-    "date": "2026-09-12",
-    "length": 18,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/qt9UEprkezg",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
     ]
   },
   {
@@ -4658,7 +4658,7 @@
     ]
   },
   {
-    "name": "KOCMOC UNLEASHED (Layout Aug. 2024) 48-89%",
+    "name": "KOCMOC UNLEASHED (Layout, Aug. 2024) 48-89%",
     "player": "Arshadow",
     "levelID": 124702724,
     "date": "2024-08-31",
