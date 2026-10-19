@@ -1,24 +1,5 @@
 [
   {
-    "name": "Society 67%, 61-100%, (1% x2), 100% in a row",
-    "player": "wPopoff",
-    "levelID": 127323087,
-    "date": "2026-06-21",
-    "length": 281,
-    "version": 2.2,
-    "submitter": "TYATYAPKA",
-    "video": "https://youtu.be/0xQia-RHC0E?t=5973",
-    "showcaseVideo": "https://youtu.be/NykJS4DCSI0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Rated"
-    ]
-  },
-  {
     "name": "KOCMOC UNLEASHED (Mar. 2026) 68%",
     "player": "Arshadow",
     "levelID": null,
@@ -157,6 +138,26 @@
     ]
   },
   {
+    "name": "Society 67%, 61-100%, (1% x2), 100% in a row",
+    "player": "wPopoff",
+    "levelID": 127323087,
+    "date": "2026-06-21",
+    "length": 281,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "video": "https://youtu.be/0xQia-RHC0E?t=5973",
+    "showcaseVideo": "https://youtu.be/NykJS4DCSI0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Thinking Space II 85%, (5%, 3%), 86% in a row",
     "player": "wPopoff",
     "levelID": 119544028,
@@ -172,7 +173,8 @@
     "tags": [
       "Level",
       "Consistency",
-      "Rated"
+      "Rated",
+      "Tentative"
     ]
   },
   {
@@ -186,42 +188,6 @@
     "video": "https://youtu.be/asjSeDF7x5Y",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Sweeping Demon 2 21-94%",
-    "player": "Taiago",
-    "levelID": null,
-    "date": "2026-08-29",
-    "length": 48,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/6u-uMoGeKtg",
-    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
-    "name": "Sweeping Demon 2 34-100%",
-    "player": "Taiago",
-    "levelID": null,
-    "date": "2026-10-18",
-    "length": 40,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/ajnT45rOBYo?t=82",
-    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
-    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -243,6 +209,44 @@
     "video": "https://youtu.be/gO1nQECPU2I",
     "showcaseVideo": "https://youtu.be/jLTFdCzq650",
     "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Sweeping Demon 2 21-94%",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-08-29",
+    "length": 48,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/6u-uMoGeKtg",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Sweeping Demon 2 34-100%",
+    "player": "Taiago",
+    "levelID": null,
+    "date": "2026-10-18",
+    "length": 40,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "video": "https://youtu.be/ajnT45rOBYo?t=82",
+    "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
+    "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/main/images/thumbnails/Sweeping%20Demon%202.png",
     "duplicateOf": null,
     "notes": null,
     "tags": [
@@ -493,6 +497,27 @@
     ]
   },
   {
+    "name": "Artemis 13 (Unnerfed) 40-100%",
+    "player": "Zoink",
+    "levelID": 148599120,
+    "date": "2026-08-28",
+    "length": 42,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
+    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Thinking Space II",
     "player": "Zoink",
     "levelID": 119544028,
@@ -550,26 +575,6 @@
       "Consistency",
       "Rated",
       "Tentative"
-    ]
-  },
-  {
-    "name": "Artemis 13 (Unnerfed) 40-100%",
-    "player": "Zoink",
-    "levelID": 148599120,
-    "date": "2026-08-28",
-    "length": 42,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/VvPE-7Mk3O8?t=5221",
-    "showcaseVideo": "https://youtu.be/QEvRr_wlecw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
