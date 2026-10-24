@@ -329,5 +329,43 @@
             "Verified",
             "Rated"
         ]
+    },
+    {
+        "name": "Im Deaf",
+        "player": "Kandai",
+        "levelID": 97086864,
+        "date": "2023-12-05",
+        "length": null,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://youtu.be/pWwF57-n6EY",
+        "showcaseVideo": "",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "ADD LENGTH!!!",
+        "tags": [
+            "Challenge",
+            "Verified"
+        ]
+    },
+    {
+        "name": "i n j u r y 85%",
+        "player": "kywy",
+        "levelID": null,
+        "date": "2023-02-22",
+        "length": 27,
+        "version": 2.1,
+        "submitter": null,
+        "video": "https://www.youtube.com/watch?v=vNxSw5azrUQ",
+        "showcaseVideo": "https://youtu.be/44L7NaTxHUQ",
+        "thumbnail": null,
+        "duplicateOf": null,
+        "dateRemoved": null,
+        "notes": "",
+        "tags": [
+            "Level",
+            "Progress"
+        ]
     }
 ]
