@@ -1806,6 +1806,27 @@
     ]
   },
   {
+    "name": "Aeternus 52-100 4 deaths, 99.64% accuracy",
+    "player": "Bacon",
+    "levelID": 102647436,
+    "date": "2026-10-17",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "lunetell",
+    "video": "https://youtu.be/s_ihtScNWL4?si=UJru4Gkfhf9El-mj",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ],
+    "estimateLower": null,
+    "estimateUpper": null
+  },
+  {
     "name": "Nullscapes",
     "player": "Zoink",
     "levelID": 109780665,
