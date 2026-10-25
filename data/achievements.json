@@ -1766,6 +1766,27 @@
     ]
   },
   {
+    "name": "Aeternus 60-100%",
+    "player": "Bacon",
+    "levelID": 102647436,
+    "date": "2026-10-23",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "ad3usgmd",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/m0gtnrgfoN0",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "SARY NEVER CLEAR (Optic Sunflow, Anro)",
     "player": "Anro",
     "levelID": 150967946,
@@ -1785,35 +1806,14 @@
     ]
   },
   {
-    "name": "Aeternus 60-100%",
-    "player": "Bacon",
-    "levelID": 102647436,
-    "date": "2026-10-23",
-    "length": 30,
-    "version": 2.2,
-    "submitter": "ad3usgmd",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.youtube.com/watch?v=m0gtnrgfoN0",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Aeternus 52-100% 4 deaths, 99.64% accuracy",
+    "name": "Aeternus 51-92% 2 deaths, 99.% accuracy",
     "player": "Bacon",
     "levelID": 102647436,
     "date": "2026-10-17",
     "length": 37,
     "version": 2.2,
     "submitter": "lunetell",
-    "video": "https://youtu.be/s_ihtScNWL4?si=UJru4Gkfhf9El-mj",
+    "video": "https://youtu.be/s_ihtScNWL4",
     "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
     "thumbnail": null,
     "duplicateOf": null,
