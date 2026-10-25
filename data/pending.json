@@ -165,6 +165,27 @@
       "Noclip"
     ]
   },
+   {
+    "name": "Aeternus 51-92% 2 deaths, 99.% accuracy",
+    "player": "Bacon",
+    "levelID": 102647436,
+    "date": "2026-10-17",
+    "length": 37,
+    "version": 2.2,
+    "submitter": "lunetell",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/s_ihtScNWL4",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ],
+  },
   {
     "name": "Angelicide 6-59%",
     "player": "Druki",
