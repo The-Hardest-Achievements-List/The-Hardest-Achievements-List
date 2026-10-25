@@ -1785,6 +1785,27 @@
     ]
   },
   {
+    "name": "Aeternus 60-100%",
+    "player": "Bacon",
+    "levelID": 102647436,
+    "date": "2026-10-23",
+    "length": 30,
+    "version": 2.2,
+    "submitter": "ad3usgmd",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://www.youtube.com/watch?v=m0gtnrgfoN0",
+    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Nullscapes",
     "player": "Zoink",
     "levelID": 109780665,
@@ -2193,27 +2214,6 @@
       "Level",
       "Verified",
       "Rated",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Aeternus 67-100%",
-    "player": "Bacon",
-    "levelID": 102647436,
-    "date": "2026-09-30",
-    "length": 23,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://www.youtube.com/watch?v=_7Z0krouF-w",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
       "Tentative"
     ]
   },
@@ -5016,7 +5016,7 @@
       "Verified",
       "Rated"
     ]
-  },  
+  },
   {
     "name": "Cyber Raptor",
     "player": "Lobster",
@@ -7610,7 +7610,7 @@
       "Verified",
       "Variant"
     ]
-  }, 
+  },
   {
     "name": "wocky circles",
     "player": "ROZE",
