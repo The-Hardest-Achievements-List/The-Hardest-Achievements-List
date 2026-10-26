@@ -8146,24 +8146,6 @@
     ]
   },
   {
-    "name": "leaky faucet",
-    "player": "seels",
-    "levelID": 98235192,
-    "date": "2024-01-26",
-    "length": 14,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/pwMc6S7mUF8?t=12",
-    "showcaseVideo": "https://youtu.be/1f460nBGjvA",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
     "name": "Sonic Wave Infinity 120hz",
     "player": "AGSEcho",
     "levelID": 69685815,
