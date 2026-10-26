@@ -8018,6 +8018,26 @@
     ]
   },
   {
+    "name": "Lust",
+    "player": "DenseCabbage",
+    "levelID": 139465319,
+    "date": "2026-04-27",
+    "length": 20,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/yQ86-0ftVOc",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Verified"
+    ]
+  },
+  {
     "name": "Puff",
     "player": "Conical",
     "levelID": 143164600,
