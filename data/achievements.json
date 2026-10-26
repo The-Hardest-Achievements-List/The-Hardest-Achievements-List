@@ -3386,6 +3386,25 @@
     ]
   },
   {
+    "name": "FOREST OF SPIKES",
+    "player": "Brian Cheese",
+    "levelID": 145709435,
+    "date": "2026-07-26",
+    "length": 109,
+    "version": 2.2,
+    "submitter": "Exiled_Shade",
+    "video": "https://youtu.be/WJYh3dW8Bfo",
+    "showcaseVideo": "https://youtu.be/szCliCZQItg",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
+    ]
+  },
+  {
     "name": "avenus copy",
     "player": "serpentical",
     "levelID": 131075784,
@@ -4996,25 +5015,6 @@
       "Level",
       "Verified",
       "Tentative"
-    ]
-  },
-  {
-    "name": "FOREST OF SPIKES",
-    "player": "Brian Cheese",
-    "levelID": 145709435,
-    "date": "2026-07-26",
-    "length": 109,
-    "version": 2.2,
-    "submitter": "Exiled_Shade",
-    "video": "https://youtu.be/WJYh3dW8Bfo",
-    "showcaseVideo": "https://youtu.be/szCliCZQItg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
     ]
   },
   {
