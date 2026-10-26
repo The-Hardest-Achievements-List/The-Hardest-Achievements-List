@@ -9527,6 +9527,26 @@
     ]
   },
   {
+    "name": "Shadow Of The Past",
+    "player": "LennyFeus",
+    "levelID": 143909846,
+    "date": "2026-07-01",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/LEyo0LJV8os",
+    "showcaseVideo": "https://youtu.be/ne0F1wfqq-4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "ace",
     "player": "Aidsen",
     "levelID": 138215607,
