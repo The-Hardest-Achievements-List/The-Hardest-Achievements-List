@@ -1359,21 +1359,22 @@
   {
     "name": "Escalator 83%",
     "player": "teraaa",
-    "levelID": null,
+    "levelID": nyll,
     "date": "2026-10-19",
     "length": 76,
     "version": 2.2,
-    "submitter": “TYATYAPKA",
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
     "video": "https://youtu.be/xkBIaHQ9Gmo",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
-    "thumbnail": “https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
+    "thumbnail": "https://github.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/blob/main/images/thumbnails/Escalator.png?raw=true",
     "duplicateOf": null,
     "notes": null,
     "tags": [
       "Level",
-      “Progress",
-      "Tentative"
-    ]
+      "Progress",
+      "Tentative
   },
   {
     "name": "Green Bullet",
