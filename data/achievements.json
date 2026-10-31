@@ -2633,33 +2633,14 @@
     ]
   },
   {
-    "name": "Aeternus 42-60% 1 death, 99.97% accuracy",
+    "name": "Aeternus 42-60%",
     "player": "FlinGuSPluNkuS",
     "levelID": 102647436,
-    "date": "2026-05-23",
+    "date": "2026-10-30",
     "length": 14,
     "version": 2.2,
-    "submitter": "FlinGuSPluNkuS",
-    "video": "https://youtu.be/gsZ-RRTeKLA",
-    "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Aeternus 42-59%",
-    "player": "aden",
-    "levelID": 102647436,
-    "date": "2026-05-20",
-    "length": 13,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "video": "https://youtu.be/G_ZvIM2LvaY",
+    "submitter": "Silkizinho",
+    "video": "https://youtu.be/e4coQ9ANqik",
     "showcaseVideo": "https://youtu.be/NaEUpIXN6vk",
     "thumbnail": null,
     "duplicateOf": null,
@@ -9395,25 +9376,6 @@
     ]
   },
   {
-    "name": "KOSETSU",
-    "player": "Taiago",
-    "levelID": 109439644,
-    "date": "2024-08-24",
-    "length": 72,
-    "version": 2.2,
-    "submitter": "kyle1saurus",
-    "video": "https://youtu.be/hZ8vFX8z_BU",
-    "showcaseVideo": "https://youtu.be/Sw7Aucy0Tjg",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "Despair Code (May 2026) 35-100%",
     "player": "Infinny",
     "levelID": null,
@@ -9442,25 +9404,6 @@
     "submitter": "TYATYAPKA",
     "video": "https://youtu.be/qeRKuyU3eGI",
     "showcaseVideo": "https://youtu.be/xeaMqDAssQM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
-    "name": "Through The Gates",
-    "player": "Zoink",
-    "levelID": 49072489,
-    "date": "2023-10-12",
-    "length": 98,
-    "version": 2.1,
-    "submitter": "Anceps",
-    "video": "https://youtu.be/4yHA6jux5UI",
-    "showcaseVideo": "https://youtu.be/AcXRpf5XDq8",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
