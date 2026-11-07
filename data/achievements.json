@@ -98,6 +98,27 @@
     ]
   },
   {
+    "name": "Heliopolis 85%",
+    "player": "Zoink",
+    "levelID": 136530685,
+    "date": "2026-10-01",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/gO1nQECPU2I",
+    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
     "name": "GRIEF",
     "player": "Doggie",
     "levelID": 149992717,
@@ -188,27 +209,6 @@
     "video": "https://youtu.be/asjSeDF7x5Y",
     "showcaseVideo": "https://youtu.be/IKQwBwYEoqE",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/refs/heads/main/images/thumbnails/Sweeping%20Demon%202.png",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Heliopolis 85%",
-    "player": "Zoink",
-    "levelID": 136530685,
-    "date": "2026-10-01",
-    "length": 117,
-    "version": 2.2,
-    "submitter": "fwoggy",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/gO1nQECPU2I",
-    "showcaseVideo": "https://youtu.be/jLTFdCzq650",
-    "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
     "tags": [
