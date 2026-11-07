@@ -1572,6 +1572,27 @@
     ]
   },
   {
+    "name": "Azure Flare 70%, 84% in a row",
+    "player": "Ellie",
+    "levelID": 149290595,
+    "date": "2026-11-06",
+    "length": 139,
+    "version": 2.2,
+    "submitter": "Ellie",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2w4BJ4L4cck",
+    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
+    ]
+  },
+  {
     "name": "Avernus 77%, 98% in a row",
     "player": "turtl",
     "levelID": 89496627,
