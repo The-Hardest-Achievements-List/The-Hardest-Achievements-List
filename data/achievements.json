@@ -5615,6 +5615,26 @@
     ]
   },
   {
+    "name": "voicesinmyhead",
+    "player": "kloone",
+    "levelID": 151855184,
+    "date": "2026-11-06",
+    "length": 140,
+    "version": 2.2,
+    "submitter": "TYATYAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/hF7CrUV-Jvo?t=154",
+    "showcaseVideo": "https://youtu.be/03TOVP5cqBU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Death Factory",
     "player": "dewbbs",
     "levelID": 95424590,
