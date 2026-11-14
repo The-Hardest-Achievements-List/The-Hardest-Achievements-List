@@ -537,7 +537,28 @@
     ]
   },
   {
-    "name": "Silent Acropolis (The Purgatory; Aug. 2nd, 2026) 99%",
+    "name": "Silent Acropolis (The Purgatory) 83%",
+    "player": "Hover",
+    "levelID": null,
+    "date": "2026-11-14",
+    "length": 61,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/8QAIb3AGzuY?t=2913",
+    "showcaseVideo": "https://youtu.be/yJCMeyWPmoA",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/111237270",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress",
+      "Tentative"
+    ]
+  },
+  {
+    "name": "Silent Acropolis (The Purgatory, Aug. 2026) 99%",
     "player": "Hover",
     "levelID": null,
     "date": "2026-08-02",
