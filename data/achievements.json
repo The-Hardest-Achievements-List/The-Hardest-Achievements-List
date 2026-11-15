@@ -395,28 +395,6 @@
     ]
   },
   {
-    "name": "silent jumpstep 5-7%; 5-13% 1 death, 99.90% accuracy; 5-10%, (5-5%), 5-8%, 5-7% in a row",
-    "player": "-",
-    "levelID": 147182322,
-    "date": "2026-09-05",
-    "length": 18,
-    "version": 2.2,
-    "submitter": "-",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/q1IucFJODaM",
-    "showcaseVideo": "https://youtu.be/eTU8dfvPGaM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Noclip",
-      "Tentative"
-    ]
-  },
-  {
     "name": "Eternal Silence 4-8%, 4-25%, 4-12%, 4-25%, 4-12%, 4-11%, 4-8%, 4-65%, (4-7%), 4-12% in a row",
     "player": "cc478",
     "levelID": 83476262,
@@ -599,24 +577,6 @@
     ]
   },
   {
-    "name": "silent jumpstep 5-16% 2 deaths, 99.69% accuracy",
-    "player": "-",
-    "levelID": 147182322,
-    "date": "2026-08-20",
-    "length": 12,
-    "version": 2.2,
-    "submitter": "-",
-    "video": "https://youtu.be/I_PnvElOwWk",
-    "showcaseVideo": "https://youtu.be/eTU8dfvPGaM",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Noclip"
-    ]
-  },
-  {
     "name": "Amethyst",
     "player": "wPopoff",
     "levelID": 119550490,
@@ -709,24 +669,6 @@
     ]
   },
   {
-    "name": "Silent DeStep (-) 4-14%, 4-10%, 4-14%, 4-12%, 4-10, 4-9%, (4-6%), 4-12%, (4-6%), 4-11%, 4-9% in a row",
-    "player": "-",
-    "levelID": 83282566,
-    "date": "2026-08-12",
-    "length": 56,
-    "version": 2.2,
-    "submitter": "-",
-    "video": "https://youtu.be/Hsqpwo2pa8o",
-    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Sakupen circles (Old) 1 death, 99.97% accuracy; 100% in a row",
     "player": "Bacon",
     "levelID": 10887708,
@@ -742,24 +684,6 @@
     "tags": [
       "Level",
       "Consistency",
-      "Noclip"
-    ]
-  },
-  {
-    "name": "silent jumpstep (Old) 11-25% 1 death, 99.96% accuracy",
-    "player": "-",
-    "levelID": 147371830,
-    "date": "2026-08-17",
-    "length": 15,
-    "version": 2.2,
-    "submitter": "-",
-    "video": "https://youtu.be/yjj_hfV2zP8",
-    "showcaseVideo": "https://youtu.be/_-U1o4x0J-c",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/147182322",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
       "Noclip"
     ]
   },
@@ -1320,24 +1244,6 @@
     "tags": [
       "Level",
       "Progress"
-    ]
-  },
-  {
-    "name": "silent jumpstep (Old) 4-16% 1 death, 99.88% accuracy",
-    "player": "-",
-    "levelID": 147371830,
-    "date": "2026-08-17",
-    "length": 11,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/yjj_hfV2zP8",
-    "showcaseVideo": "https://youtu.be/_-U1o4x0J-c",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/147182322",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Noclip"
     ]
   },
   {
@@ -2414,24 +2320,6 @@
     ]
   },
   {
-    "name": "Silent DeStep (-) 45%",
-    "player": "-",
-    "levelID": 83282566,
-    "date": "2026-07-23",
-    "length": 41,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "video": "https://youtu.be/Gig-gQz03x4",
-    "showcaseVideo": "https://youtu.be/pL0nD1U4GPY",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": "Silent clubstep (Old) with DeCode decoration.",
-    "tags": [
-      "Level",
-      "Progress"
-    ]
-  },
-  {
     "name": "Silent clubstep (Old) 4 deaths, 99.98% accuracy",
     "player": "noname228gg",
     "levelID": 38692301,
@@ -2486,24 +2374,6 @@
       "Challenge",
       "Verified",
       "Tentative"
-    ]
-  },
-  {
-    "name": "Eternal Silence (High Detail) 25%",
-    "player": "-",
-    "levelID": 83476262,
-    "date": "2026-04-04",
-    "length": 22,
-    "version": 2.2,
-    "submitter": "-",
-    "video": "https://youtu.be/77XTJygWKQ4",
-    "showcaseVideo": "https://youtu.be/CwCfTVxTtB0",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Progress"
     ]
   },
   {
