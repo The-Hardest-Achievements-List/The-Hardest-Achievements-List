@@ -1,25 +1,5 @@
 [
   {
-    "name": "480 mastery",
-    "player": "-",
-    "levelID": 150485449,
-    "date": "2026-09-16",
-    "length": 8,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/oX32vEHLgiA",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
     "name": "56 is dead 12%",
     "player": "FlinGuSPluNkuS",
     "levelID": 151046468,
@@ -183,6 +163,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "Aeternus 41% 4 deaths, 99.89% accuracy",
+    "player": "Chill Guy",
+    "levelID": 102647436,
+    "date": "2026-10-30",
+    "length": 31,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/SL6X3qH1m0Q",
+    "showcaseVideo": "https://youtu.be/ohpqB72CrCM",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
     ]
   },
   {
@@ -367,6 +367,66 @@
       "Progress",
       "Rated",
       "Mobile"
+    ]
+  },
+  {
+    "name": "Azure Flare (2024) 12-25%",
+    "player": "blooklength",
+    "levelID": 112752025,
+    "date": "2026-11-03",
+    "length": 8,
+    "version": 2.2,
+    "submitter": "blooklength",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/4w5G284fanM?t=3",
+    "showcaseVideo": "https://youtu.be/S3Q00qXxBJc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
+    "name": "Azure Flare (2024) 12-45% 12 deaths, 99.10% accuracy",
+    "player": "blooklength",
+    "levelID": 112752025,
+    "date": "2026-11-02",
+    "length": 18,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/blooklength/status/2117402615658999990",
+    "showcaseVideo": "https://youtu.be/S3Q00qXxBJc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
+    ]
+  },
+  {
+    "name": "Azure Flare (2024) 12-60% 18 deaths, 97.92% accuracy",
+    "player": "blooklength",
+    "levelID": 112752025,
+    "date": "2026-11-01",
+    "length": 26,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://x.com/blooklength/status/2116990483537006892",
+    "showcaseVideo": "https://youtu.be/S3Q00qXxBJc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Noclip"
     ]
   },
   {
@@ -1085,16 +1145,16 @@
     ]
   },
   {
-    "name": "Escalator 36-100%",
+    "name": "Escalator 23-100%",
     "player": "teraaa",
     "levelID": null,
-    "date": "2026-07-25",
-    "length": 61,
+    "date": "2026-10-29",
+    "length": 71,
     "version": 2.2,
-    "submitter": "TYATYAPKA",
+    "submitter": "anaphflora",
     "estimateLower": null,
     "estimateUpper": null,
-    "video": "https://youtu.be/eYWaHv6WstQ",
+    "video": "https://youtu.be/E4qgNtl51jc",
     "showcaseVideo": "https://youtu.be/M5L-jkN8YoI",
     "thumbnail": "https://raw.githubusercontent.com/The-Hardest-Achievements-List/The-Hardest-Achievements-List/62179da1e4dc4242673f84c10ed37922b0379a20/images/thumbnails/Escalator.png",
     "duplicateOf": null,
@@ -1329,7 +1389,27 @@
     ]
   },
   {
-    "name": "FIBERGLASS 8-100%",
+    "name": "FAIRY KNIFE HELL 52-100%",
+    "player": "Zachi",
+    "levelID": 111680151,
+    "date": "2026-10-29",
+    "length": 100,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/-45S5pPUkOg",
+    "showcaseVideo": "https://youtu.be/mD8bMlCV8Jc",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Fiberglass 8-100%",
     "player": "Duv",
     "levelID": null,
     "date": "2026-10-27",
@@ -1349,7 +1429,7 @@
     ]
   },
   {
-    "name": "FIBERGLASS 97%",
+    "name": "Fiberglass 97%",
     "player": "Duv",
     "levelID": null,
     "date": "2026-10-24",
@@ -1417,7 +1497,27 @@
     "version": 2.2,
     "submitter": "kyle1saurus",
     "video": "https://youtu.be/EWClI25OwaE",
-    "showcaseVideo": "https://youtu.be/_dP3TZhrOZY",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "Forsaken Frost 70%",
+    "player": "Viwi",
+    "levelID": null,
+    "date": "2026-10-31",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/95p84FdBX1g",
+    "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -1549,26 +1649,6 @@
     ]
   },
   {
-    "name": "hover challenge",
-    "player": "-",
-    "levelID": 149912885,
-    "date": "2026-10-10",
-    "length": 4,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/kyLcjZpQSrQ",
-    "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Verified"
-    ]
-  },
-  {
     "name": "i n j u r y (Layout)",
     "player": "Cryostaz",
     "levelID": 113434338,
@@ -1679,6 +1759,26 @@
     "estimateLower": null,
     "estimateUpper": null,
     "video": "https://youtu.be/Wv4RCXEOBZ0",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
+    "name": "unnerfed innards 35-100%",
+    "player": "xarve",
+    "levelID": null,
+    "date": "2026-10-30",
+    "length": 47,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/c2hhcDrbQes",
     "showcaseVideo": null,
     "thumbnail": null,
     "duplicateOf": null,
@@ -2424,6 +2524,26 @@
     ]
   },
   {
+    "name": "PigStep 72%",
+    "player": "Krowsong",
+    "levelID": 104984889,
+    "date": "2026-10-30",
+    "length": 98,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/mynFJNQH8VE",
+    "showcaseVideo": "https://youtu.be/15wb7RLledU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "poocubed 64%, 100% in a row",
     "player": "vonic",
     "levelID": 85133223,
@@ -2502,6 +2622,26 @@
     "tags": [
       "Level",
       "Progress"
+    ]
+  },
+  {
+    "name": "RIVEREVER 186%",
+    "player": "privarskii",
+    "levelID": 109889043,
+    "date": "2026-11-03",
+    "length": 84,
+    "version": 2.2,
+    "submitter": "TYATAPKA",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rG1yfQ9jQK4",
+    "showcaseVideo": "https://youtu.be/fBM8NH4_BFs",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
     ]
   },
   {
@@ -3486,6 +3626,26 @@
     ]
   },
   {
+    "name": "Sonic Wave Apeiron 81%",
+    "player": "Sunix",
+    "levelID": null,
+    "date": "2026-10-30",
+    "length": 103,
+    "version": 2.2,
+    "submitter": "Excryst",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/rTownsoDo5U?t=3555",
+    "showcaseVideo": null,
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Progress"
+    ]
+  },
+  {
     "name": "Sonic Wave Infinity (Jevan) 24-70%",
     "player": "Jevan",
     "levelID": null,
@@ -3600,26 +3760,6 @@
     "estimateUpper": null,
     "video": "https://youtu.be/fSnUfyvAo0o",
     "showcaseVideo": null,
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified"
-    ]
-  },
-  {
-    "name": "The King Von Trial",
-    "player": "-",
-    "levelID": 122518707,
-    "date": "2026-09-15",
-    "length": 43,
-    "version": 2.2,
-    "submitter": "anaphflora",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/Fp3a64DEsqY",
-    "showcaseVideo": "https://youtu.be/KeTBSIkbD1o",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
