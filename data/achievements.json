@@ -4991,6 +4991,26 @@
     ]
   },
   {
+    "name": "Fiberglass",
+    "player": "Duv",
+    "levelID": 152421515,
+    "date": "2026-11-14",
+    "length": 64,
+    "version": 2.2,
+    "submitter": "fwoggy",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/VCp8bv8AM54",
+    "showcaseVideo": "https://youtu.be/hNu-pk47vQU",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified"
+    ]
+  },
+  {
     "name": "Eternal Night 43%",
     "player": "Al3xTT",
     "levelID": 73011766,
