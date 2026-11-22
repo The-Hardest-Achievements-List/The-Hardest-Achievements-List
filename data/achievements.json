@@ -1458,6 +1458,27 @@
     ]
   },
   {
+    "name": "Azure Flare 70%, 84% in a row",
+    "player": "Ellie",
+    "levelID": 149290595,
+    "date": "2026-11-06",
+    "length": 139,
+    "version": 2.2,
+    "submitter": "Ellie",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/2w4BJ4L4cck",
+    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Tentative"
+    ]
+  },
+  {
     "name": "cry me a river 107%, 371% in a row",
     "player": "klimk",
     "levelID": 76403850,
@@ -1489,27 +1510,6 @@
     "estimateUpper": null,
     "video": "https://youtu.be/NE89R0tA8fU",
     "showcaseVideo": "https://youtu.be/y3qMBVEbIuw",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Consistency",
-      "Tentative"
-    ]
-  },
-  {
-    "name": "Azure Flare 70%, 84% in a row",
-    "player": "Ellie",
-    "levelID": 149290595,
-    "date": "2026-11-06",
-    "length": 139,
-    "version": 2.2,
-    "submitter": "Ellie",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/2w4BJ4L4cck",
-    "showcaseVideo": "https://youtu.be/SQAIs95FdG4",
     "thumbnail": null,
     "duplicateOf": null,
     "notes": null,
@@ -3241,25 +3241,6 @@
     ]
   },
   {
-    "name": "Defeated Circles",
-    "player": "Zoink",
-    "levelID": 120012581,
-    "date": "2025-05-31",
-    "length": 60,
-    "version": 2.2,
-    "submitter": "Arcadie",
-    "video": "https://youtu.be/nU5AQPzd2YA",
-    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
-    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120012581",
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Level",
-      "Verified",
-      "Rated"
-    ]
-  },
-  {
     "name": "Azure Flare",
     "player": "Diamond",
     "levelID": 149290595,
@@ -3278,6 +3259,25 @@
       "Level",
       "Verified",
       "Tentative"
+    ]
+  },
+  {
+    "name": "Defeated Circles",
+    "player": "Zoink",
+    "levelID": 120012581,
+    "date": "2025-05-31",
+    "length": 60,
+    "version": 2.2,
+    "submitter": "Arcadie",
+    "video": "https://youtu.be/nU5AQPzd2YA",
+    "showcaseVideo": "https://youtu.be/E1EaZErQzbA",
+    "thumbnail": "https://levelthumbs.prevter.me/thumbnail/120012581",
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Verified",
+      "Rated"
     ]
   },
   {
