@@ -1479,26 +1479,6 @@
     ]
   },
   {
-    "name": "cry me a river 107%, 371% in a row",
-    "player": "klimk",
-    "levelID": 76403850,
-    "date": "2026-07-08",
-    "length": 117,
-    "version": 2.2,
-    "submitter": "SupremeSDB",
-    "estimateLower": null,
-    "estimateUpper": null,
-    "video": "https://youtu.be/1TqujqU_b9M",
-    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
-    "thumbnail": null,
-    "duplicateOf": null,
-    "notes": null,
-    "tags": [
-      "Challenge",
-      "Consistency"
-    ]
-  },
-  {
     "name": "Silentman Adventures 77%, (1%, 2%), 100% in a row",
     "player": "nickname",
     "levelID": 147442928,
@@ -1517,6 +1497,26 @@
       "Level",
       "Consistency",
       "Tentative"
+    ]
+  },
+  {
+    "name": "cry me a river 107%, 371% in a row",
+    "player": "klimk",
+    "levelID": 76403850,
+    "date": "2026-07-08",
+    "length": 117,
+    "version": 2.2,
+    "submitter": "SupremeSDB",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/1TqujqU_b9M",
+    "showcaseVideo": "https://youtu.be/b4d_gNixDZI",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Challenge",
+      "Consistency"
     ]
   },
   {
