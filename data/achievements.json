@@ -3567,6 +3567,47 @@
     ]
   },
   {
+    "name": "Kyouki 71%, 100% in a row",
+    "player": "Meyrist",
+    "levelID": 86018142,
+    "date": "2026-04-09",
+    "length": 175,
+    "version": 2.2,
+    "submitter": "anaphflora",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/iUK5w4V0BhA?t=1063",
+    "showcaseVideo": "https://youtu.be/RBeyMGug3J0",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency"
+    ]
+  },
+  {
+    "name": "Sacrifice 62%, 100% in a row",
+    "player": "wPopoff",
+    "levelID": 141052363,
+    "date": "2026-09-14",
+    "length": 241,
+    "version": 2.2,
+    "submitter": "gregtang47",
+    "estimateLower": null,
+    "estimateUpper": null,
+    "video": "https://youtu.be/IfMVzCg5gpQ",
+    "showcaseVideo": "https://youtu.be/RPhy6t2bb04",
+    "thumbnail": null,
+    "duplicateOf": null,
+    "notes": null,
+    "tags": [
+      "Level",
+      "Consistency",
+      "Rated"
+    ]
+  },
+  {
     "name": "Maniacal Chains 190%",
     "player": "ScoffGD",
     "levelID": 48991380,
